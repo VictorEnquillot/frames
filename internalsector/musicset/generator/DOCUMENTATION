@@ -1,0 +1,104 @@
+https://en.wikipedia.org/wiki/ID3cite_note-storage-2
+http://www.mp3-tech.org/programmer/frame_header.html
+http://id3.org/id3v2.3.0
+https://en.wikipedia.org/wiki/MP3
+
+== Mp3 ==
+Mp3 : MPEG Audio Layer III 
+ 
+Mp3_file : ID3 + Frames sequence
+
+Mp3 Version 1, 2 and 2.5
+ 
+== ID3 == 
+
+A "tag" in an audio file is a section of the file that contains metadata such as the title, artist, album, track number or other information about the file's contents. The MP3 standards do not define tag formats for MP3 files, nor is there a standard container format that would support metadata and obviate the need for tags.
+
+ID3 is a metadata container most often used in conjunction with the MP3 audio file format. It allows information such as the title, artist, album, track number, and other information about the file to be stored in the file itself.
+ 
+There are two unrelated versions of ID3: ID3v1 and ID3v2.
+ 
+The method, now known as ID3v1, quickly became the de facto standard for storing metadata in MP3s
+ 
+The ID3v1 tag occupies 128 bytes, beginning with the string TAG.
+ 
+This tag allows 30 bytes each for the title, artist, album, and a "comment", four bytes for the year, and a byte to identify the genre of the song from a predefined list of 80 values (Winamp later extended this list to 148 values).
+ .. ID3V2
+
+ID3v1.1  : There is a small change proposed in ID3v1.1 structure. The last byte of the Comment field may be used to specify the track number of a song in an album. It should contain a null character (ASCII 0) if the information is unknown. 
+
+ layout_tag = string_1 string_3 string_4 string_6 string_30 string_60
+
+
+ID3v2 : ID3v2.3 and ID3v2.4 
+The ID3v2 standards provide a way to deliver metadata that is predominantly human-readable, textual data. However, in this form the information is not easily accessible to the visually impaired. 
+
+
+== Frame ==
+=== elementary stream ===
+
+A sequence of frames is called an elementary stream. Frames are not independent items ("byte reservoir") and therefore cannot be extracted on arbitrary frame boundaries. 
+
+Each frame is a datablock with its own header and audio information. 
+In the case of Layer I or Layer II, frames are totally independent from each other, so you can cut any part of an MPEG audio file and play it correctly. The player will then play the music starting from the first full valid frame it will find. 
+
+However, in the case of Layer III, frames are not always independant. Due to the possible use of the "byte reservoir", wich is a kind of internal buffer, frames are often dependent of each other. In the worst case, 9 input frames may be needed before beeing able to decode one single frame. 
+
+ 
+Frame : Header + Data
+
+=== Header ===
+ 
+The frame header itself is 32 bits (4 bytes) length. 
+
+The first twelve bits (or first eleven bits in the case of the MPEG 2.5 extension) of a frame header are always set to 1 and are called "frame sync". 
+
+Frames may also feature an optional CRC checksum. It is 16 bits long and, if it exists, immediately follows the frame header. After the CRC comes the audio data. By re-calculating the CRC and comparing its value to the sored one, you can check if the frame has been altered during transmission of the bitstream. 
+
+frame_header_1     sync : 12bits
+frame_header_2     sync : 12bits
+frame_header_2_5   sync : 11bits
+
+=== Data ===
+
+#The data stream can contain an optional checksum, but the checksum only protects the mp3_header data, not the audio data.
+
+#An MP3 file is made up of multiple MP3 frames, which consist of a mp3_header and a data block. 
+
+
+
+The MP3 Data blocks contain the (compressed) audio information in terms of frequencies and amplitudes. 
+
+#The diagram shows that the MP3 Mp3_Header consists of a sync word, which is used to identify the beginning of a valid frame. This is followed by a bit indicating that this is the MPEG standard and two bits that indicate that layer 3 is used; hence MPEG-1 Audio Layer 3 or MP3. After this, the values will differ, depending on the MP3 file. ISO/IEC 11172-3 defines the range of values for each section of the mp3_header along with the specification of the mp3_header. Most MP3 files today contain ID3 metadata (tag), which precedes or follows the MP3 frames; as noted in the diagram.
+
+Starts at bit 32 (33-th)
+
+
+== How to calculate frame length ==
+
+ http://mpgedit.org/mpgedit/mpeg_format/mpeghdr.htm
+
+Frame size :  number of samples contained in a frame = 384 samples for Layer I
+Frame size :  number of samples contained in a frame = 1152 samples for Layer II and III
+
+Sample = ???
+
+Frame length is length of a frame when compressed. 
+It is calculated in slots. 
+One slot is 4 bytes long for Layer I
+One slot is 1 byte long for Layer II and III.
+
+Warning : frame length may change from frame to frame due to padding or bitrate switching.
+
+Read the BitRate, SampleRate and Padding of the frame header.
+
+For Layer I files us this formula:
+
+FrameLengthInBytes = (12 * BitRate / SampleRate + Padding) * 4
+
+For Layer II & III files use this formula:
+
+FrameLengthInBytes = 144 * BitRate / SampleRate + Padding
+
+Example:
+Layer III, BitRate=128000, SampleRate=441000, Padding=0 ==>  FrameSize=417 bytes 

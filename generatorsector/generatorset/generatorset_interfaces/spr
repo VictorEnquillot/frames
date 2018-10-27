@@ -1,0 +1,17 @@
+  | Group_for_symbol_body_top_symbol_t.Sprintf_for_symbol_fullname ->
+(*  Format.sprintf "%s \"%s\"" (longname sym_geo) (string_off sym_geo) *)
+
+      let sym_ca1 = Camlline_for_symbol_uno_top_symbol_v.sprintf_for_symbol_fullname in
+
+      [
+       Camlline_symbol_v.camlline_symbol_of_camlline_for_symbol_uno_top_symbol sym_ca1;
+     ] 
+
+  | Group_for_symbol_body_top_symbol_t.Sprintf_for_symbol_longname ->
+(*  Format.sprintf "Geometry_symbol_t.%s" (String.capitalize (name sym_geo)) *)
+
+      let sym_ca1 = Camlline_for_symbol_uno_top_symbol_v.sprintf_for_symbol_longname in
+
+      [
+       Camlline_symbol_v.camlline_symbol_of_camlline_for_symbol_uno_top_symbol sym_ca1;
+     ] 

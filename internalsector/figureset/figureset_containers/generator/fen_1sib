@@ -1,0 +1,45 @@
+(** {6 Fence Tag off Tag} *)
+
+let fence_list tag_ttt =
+  let soi_ttt = Tag_v.sole_index_off_tag tag_ttt in
+  let sym_ttt = Tag_v.entity_off_tag tag_ttt in
+  match sym_ttt with
+  | This_symbol_t.Sibling_1_symbol sym_sib_1 ->
+      let tag_sib_1 = Tag_v.make sym_sib_1 soi_ttt in
+      Sibling_1_container_v.fence_list tag_sib_1
+;;
+
+let fence_tuple tag_ttt =
+  let soi_ttt = Tag_v.sole_index_off_tag tag_ttt in
+  let sym_ttt = Tag_v.entity_off_tag tag_ttt in
+  match sym_ttt with
+  | This_symbol_t.Sibling_1_symbol sym_sib_1 ->
+      let tag_sib_1 = Tag_v.make sym_sib_1 soi_ttt in
+      Sibling_1_container_v.fence_tuple tag_sib_1
+;;
+
+let fence_tuple_list tag_ttt =
+  let fen_l = fence_list tag_ttt in
+  Tuple_list_v.make fen_l
+;;
+
+(** {6 Deepfence Tag off Tag} *)
+
+let deepfence_list tag_ttt =
+  let soi_ttt = Tag_v.sole_index_off_tag tag_ttt in
+  let sym_ttt = Tag_v.entity_off_tag tag_ttt in
+  match sym_ttt with
+  | This_symbol_t.Sibling_1_symbol sym_sib_1 ->
+      let tag_sib_1 = Tag_v.make sym_sib_1 soi_ttt in
+      Sibling_1_container_v.deepfence_list tag_sib_1
+;;
+
+let deepfence_tuple tag_ttt =
+  let dfe_l = deepfence_list tag_ttt in
+  Tuple_v.tuple_of_list dfe_l
+;;
+
+let deepfence_tuple_list tag_ttt =
+  let dfe_l = deepfence_list tag_ttt in
+  Tuple_list_v.make dfe_l
+;;

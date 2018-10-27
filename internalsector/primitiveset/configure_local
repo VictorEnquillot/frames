@@ -1,0 +1,2 @@
+SUB_DIRECTORIES="primitiveset_databases primitiveset_formulas primitiveset_symbols primitiveset_tags primitiveset_values"
+CURRENT_AND_TEST=". unitary_tests"

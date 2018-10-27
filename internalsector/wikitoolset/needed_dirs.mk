@@ -1,0 +1,3 @@
+NEEDED_DIRS := \
+	$(WIKITOOLSET_VALUES_DIR) \
+  

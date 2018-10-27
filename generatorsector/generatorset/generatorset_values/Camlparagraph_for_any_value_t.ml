@@ -1,0 +1,4 @@
+type camlparagraph_for_any_value =
+  | Camlparagraph_for_any_comment_value of Camlparagraph_for_any_comment_value_t.camlparagraph_for_any_comment_value
+  | Camlparagraph_for_any_function_value of Camlparagraph_for_any_function_value_t.camlparagraph_for_any_function_value
+;;

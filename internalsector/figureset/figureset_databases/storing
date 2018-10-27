@@ -1,0 +1,45 @@
+(** {6 Storing} *)
+
+let store_creation_module_n_symbol nam_mod tag =
+  let (sym, soi) = tag in
+  Figure_creation_module_name_by_sole_index_register_v.store soi nam_mod; 
+  Figure_symbol_by_sole_index_register_v.store soi sym;
+;;
+
+let store_root tag_fdo =
+  let nam_mod = Management_v.current_module_name (documentation ()) in
+  let tag_fig_dom = Tag_v.map_entity (* Coerce Up *)
+      Figure_symbol_v.figure_symbol_of_figure_domain_symbol
+      tag_fdo
+  in
+  store_creation_module_n_symbol nam_mod tag_fig_dom;
+;;
+
+let store_nonroot_nodes tag_fig_t =
+  let nam_mod = Management_v.current_module_name (documentation ()) in
+
+  let tag_son_l = Tree_v.noroot_node_list_off_tree tag_fig_t in
+  List.iter (store_creation_module_n_symbol nam_mod) tag_son_l
+;;
+
+let store_all tag_fdb =
+  let tag_fig_t = build tag_fdb in
+  let tag_fig_dom = Tag_v.map_entity (* Coerce Up *)
+      Figure_symbol_v.figure_symbol_of_figure_domain_symbol
+      tag_fdb
+  in
+  Figure_tag_tree_by_figure_tag_register_v.store tag_fig_dom tag_fig_t;
+  
+(* Storing Tree Root*)
+  store_root tag_fdb;
+
+(* Storing Tree Nodes *)
+  store_nonroot_nodes tag_fig_t;
+  
+;;
+
+let build_n_store tag_fdb =
+  let tag_fig_t = build tag_fdb in
+  store_all tag_fdb;
+  tag_fig_t
+;;

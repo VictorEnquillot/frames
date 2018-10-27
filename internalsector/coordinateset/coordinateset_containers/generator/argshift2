@@ -1,0 +1,23 @@
+args=$*
+argnumber=$#
+
+script=`basename $0`
+
+this=$1
+shift;ttt=$1
+shift;sibling_1=$1
+shift;sib_1=$1
+shift;sibling_2=$1
+shift;sib_2=$1
+shift;sibling_3=$1
+shift;sib_3=$1
+shift;conee_up=$1
+shift;cnn_1=$1
+
+last=10
+
+if [ $argnumber -ne $last ] 
+then 
+    echo "number of arguments is $argnumber instead of $last for $script ${this}"
+    exit
+fi

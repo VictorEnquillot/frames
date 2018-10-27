@@ -1,0 +1,198 @@
+  Tree_t.Inner
+   (Input_symbol_t.Input_file
+     "/keep/sources/ocaml_top/setup/frames/inputset/files/Point_homothety.inp",
+   [Tree_t.Inner
+     (Input_symbol_t.Input_command_symbol
+       Input_command_symbol_t.Input_command_define,
+     [Tree_t.Leaf
+       (Input_symbol_t.Input_variable_symbol
+         (Input_variable_symbol_t.Input_variable_name "Con_db1"));
+      Tree_t.Inner
+       (Input_symbol_t.Input_keyword_symbol
+         Input_keyword_symbol_t.Input_keyword_context,
+       [Tree_t.Inner
+         (Input_symbol_t.Input_keyword_symbol
+           Input_keyword_symbol_t.Input_keyword_database,
+         [Tree_t.Leaf
+           (Input_symbol_t.Input_basic_symbol
+             (Input_basic_symbol_t.Input_basic_string "db1"))]);
+        Tree_t.Inner
+         (Input_symbol_t.Input_keyword_symbol
+           Input_keyword_symbol_t.Input_keyword_domain,
+         [Tree_t.Leaf
+           (Input_symbol_t.Input_basic_symbol
+             (Input_basic_symbol_t.Input_basic_string "figure"))])]);
+      Tree_t.Leaf
+       (Input_symbol_t.Input_keyword_symbol
+         Input_keyword_symbol_t.Input_keyword_end)]);
+    Tree_t.Inner
+     (Input_symbol_t.Input_command_symbol
+       Input_command_symbol_t.Input_command_define,
+     [Tree_t.Leaf
+       (Input_symbol_t.Input_variable_symbol
+         (Input_variable_symbol_t.Input_variable_name "Con_hom"));
+      Tree_t.Inner
+       (Input_symbol_t.Input_keyword_symbol
+         Input_keyword_symbol_t.Input_keyword_context,
+       [Tree_t.Inner
+         (Input_symbol_t.Input_keyword_symbol
+           Input_keyword_symbol_t.Input_keyword_created_by,
+         [Tree_t.Leaf
+           (Input_symbol_t.Input_basic_symbol
+             (Input_basic_symbol_t.Input_basic_string "Hom_b_2"))]);
+        Tree_t.Inner
+         (Input_symbol_t.Input_keyword_symbol
+           Input_keyword_symbol_t.Input_keyword_domain,
+         [Tree_t.Leaf
+           (Input_symbol_t.Input_basic_symbol
+             (Input_basic_symbol_t.Input_basic_string "figure"))])]);
+      Tree_t.Leaf
+       (Input_symbol_t.Input_keyword_symbol
+         Input_keyword_symbol_t.Input_keyword_end)]);
+    Tree_t.Inner
+     (Input_symbol_t.Input_command_symbol
+       Input_command_symbol_t.Input_command_define,
+     [Tree_t.Leaf
+       (Input_symbol_t.Input_variable_symbol
+         (Input_variable_symbol_t.Input_variable_name "Cen_b"));
+      Tree_t.Inner
+       (Input_symbol_t.Input_keyword_symbol
+         Input_keyword_symbol_t.Input_keyword_external,
+       [Tree_t.Inner
+         (Input_symbol_t.Input_keyword_symbol
+           Input_keyword_symbol_t.Input_keyword_type,
+         [Tree_t.Leaf
+           (Input_symbol_t.Input_constant_symbol
+             (Input_constant_symbol_t.Input_constant_string "figure"));
+          Tree_t.Leaf
+           (Input_symbol_t.Input_constant_symbol
+             (Input_constant_symbol_t.Input_constant_string "point"));
+          Tree_t.Leaf
+           (Input_symbol_t.Input_constant_symbol
+             (Input_constant_symbol_t.Input_constant_string "constructor"))]);
+        Tree_t.Inner
+         (Input_symbol_t.Input_keyword_symbol
+           Input_keyword_symbol_t.Input_keyword_name,
+         [Tree_t.Leaf
+           (Input_symbol_t.Input_basic_symbol
+             (Input_basic_symbol_t.Input_basic_string "BC_B"))]);
+        Tree_t.Inner
+         (Input_symbol_t.Input_keyword_symbol
+           Input_keyword_symbol_t.Input_keyword_context,
+         [Tree_t.Leaf
+           (Input_symbol_t.Input_basic_symbol
+             (Input_basic_symbol_t.Input_basic_string "Con_db1"))])]);
+      Tree_t.Leaf
+       (Input_symbol_t.Input_keyword_symbol
+         Input_keyword_symbol_t.Input_keyword_end)]);
+    Tree_t.Inner
+     (Input_symbol_t.Input_command_symbol
+       Input_command_symbol_t.Input_command_define,
+     [Tree_t.Leaf
+       (Input_symbol_t.Input_variable_symbol
+         (Input_variable_symbol_t.Input_variable_name "Poi_a"));
+      Tree_t.Inner
+       (Input_symbol_t.Input_keyword_symbol
+         Input_keyword_symbol_t.Input_keyword_external,
+       [Tree_t.Inner
+         (Input_symbol_t.Input_keyword_symbol
+           Input_keyword_symbol_t.Input_keyword_type,
+         [Tree_t.Leaf
+           (Input_symbol_t.Input_constant_symbol
+             (Input_constant_symbol_t.Input_constant_string "figure"));
+          Tree_t.Leaf
+           (Input_symbol_t.Input_constant_symbol
+             (Input_constant_symbol_t.Input_constant_string "point"));
+          Tree_t.Leaf
+           (Input_symbol_t.Input_constant_symbol
+             (Input_constant_symbol_t.Input_constant_string "constructor"))]);
+        Tree_t.Inner
+         (Input_symbol_t.Input_keyword_symbol
+           Input_keyword_symbol_t.Input_keyword_name,
+         [Tree_t.Leaf
+           (Input_symbol_t.Input_basic_symbol
+             (Input_basic_symbol_t.Input_basic_string "T_A"))]);
+        Tree_t.Inner
+         (Input_symbol_t.Input_keyword_symbol
+           Input_keyword_symbol_t.Input_keyword_context,
+         [Tree_t.Leaf
+           (Input_symbol_t.Input_basic_symbol
+             (Input_basic_symbol_t.Input_basic_string "Con_db1"))])]);
+      Tree_t.Leaf
+       (Input_symbol_t.Input_keyword_symbol
+         Input_keyword_symbol_t.Input_keyword_end)]);
+    Tree_t.Inner
+     (Input_symbol_t.Input_command_symbol
+       Input_command_symbol_t.Input_command_define,
+     [Tree_t.Leaf
+       (Input_symbol_t.Input_variable_symbol
+         (Input_variable_symbol_t.Input_variable_name "Hom_b_2"));
+      Tree_t.Inner
+       (Input_symbol_t.Input_keyword_symbol
+         Input_keyword_symbol_t.Input_keyword_operator,
+       [Tree_t.Inner
+         (Input_symbol_t.Input_keyword_symbol
+           Input_keyword_symbol_t.Input_keyword_type,
+         [Tree_t.Leaf
+           (Input_symbol_t.Input_constant_symbol
+             (Input_constant_symbol_t.Input_constant_string "operator"));
+          Tree_t.Leaf
+           (Input_symbol_t.Input_constant_symbol
+             (Input_constant_symbol_t.Input_constant_string "homothety"))]);
+        Tree_t.Inner
+         (Input_symbol_t.Input_keyword_symbol
+           Input_keyword_symbol_t.Input_keyword_center,
+         [Tree_t.Leaf
+           (Input_symbol_t.Input_basic_symbol
+             (Input_basic_symbol_t.Input_basic_string "Cen_b"))]);
+        Tree_t.Inner
+         (Input_symbol_t.Input_keyword_symbol
+           Input_keyword_symbol_t.Input_keyword_scale_factor,
+         [Tree_t.Leaf
+           (Input_symbol_t.Input_basic_symbol
+             (Input_basic_symbol_t.Input_basic_float "2.0"))])]);
+      Tree_t.Leaf
+       (Input_symbol_t.Input_keyword_symbol
+         Input_keyword_symbol_t.Input_keyword_end)]);
+    Tree_t.Inner
+     (Input_symbol_t.Input_command_symbol
+       Input_command_symbol_t.Input_command_define,
+     [Tree_t.Leaf
+       (Input_symbol_t.Input_variable_symbol
+         (Input_variable_symbol_t.Input_variable_name "Poi_h"));
+      Tree_t.Inner
+       (Input_symbol_t.Input_keyword_symbol
+         Input_keyword_symbol_t.Input_keyword_target,
+       [Tree_t.Inner
+         (Input_symbol_t.Input_keyword_symbol
+           Input_keyword_symbol_t.Input_keyword_type,
+         [Tree_t.Leaf
+           (Input_symbol_t.Input_constant_symbol
+             (Input_constant_symbol_t.Input_constant_string "property"));
+          Tree_t.Leaf
+           (Input_symbol_t.Input_constant_symbol
+             (Input_constant_symbol_t.Input_constant_string "target"));
+          Tree_t.Leaf
+           (Input_symbol_t.Input_constant_symbol
+             (Input_constant_symbol_t.Input_constant_string "transformed"));
+          Tree_t.Leaf
+           (Input_symbol_t.Input_constant_symbol
+             (Input_constant_symbol_t.Input_constant_string "figure"))]);
+        Tree_t.Inner
+         (Input_symbol_t.Input_keyword_symbol
+           Input_keyword_symbol_t.Input_keyword_operator,
+         [Tree_t.Leaf
+           (Input_symbol_t.Input_basic_symbol
+             (Input_basic_symbol_t.Input_basic_string "Hom_b_2"))]);
+        Tree_t.Inner
+         (Input_symbol_t.Input_keyword_symbol
+           Input_keyword_symbol_t.Input_keyword_operand,
+         [Tree_t.Leaf
+           (Input_symbol_t.Input_basic_symbol
+             (Input_basic_symbol_t.Input_basic_string "Poi_a"))])]);
+      Tree_t.Leaf
+       (Input_symbol_t.Input_keyword_symbol
+         Input_keyword_symbol_t.Input_keyword_end)]);
+    Tree_t.Leaf
+     (Input_symbol_t.Input_command_symbol
+       Input_command_symbol_t.Input_command_stop)])

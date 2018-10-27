@@ -1,0 +1,77 @@
+builders ar = singlet string
+builders brm1 = list string
+builders cap2 = list string
+builders clm1 = list string
+builders cup1 = list string
+builders cup2 = list string
+builders fep2 = list string
+builders fep3 = list string
+builders fm1 = list string
+builders he = list string
+builders hm1 = list string
+builders hp1 = list string
+builders im1 = list string
+builders kp1 = list string
+builders kr = list string
+builders lip1 = list string
+builders mgp2 = list string
+builders nap1 = list string
+builders ne = list string
+builders nip1 = list string
+builders nip3 = list string
+builders om2 = list string
+builders sm2 = list string
+builders znp2 = list string
+builders xe = list string
+
+# block
+builders z_becl2_z = list string
+builders z_ccl2_z = list string
+builders z_krf2_z = list string
+builders z_cho2m1_z = list string
+builders z_cnm1_z = list string
+builders z_co2_z = list string
+builders z_co2m1_s_ch2_s_nh3p1_z = list string
+
+builders z_co_z = list string
+builders z_cs_z = list string
+builders z_fh_z = list string
+builders z_no_z = list string
+
+builders z_coh2_z = list string
+builders z_coh_s_oh_z = list string
+
+builders z_hgcl2_z = list string
+builders z_i3m1_z = list string
+builders z_nh3_z = list string
+builders z_nh4p1_z = list string 
+builders z_no2m1_z = list string
+builders z_nop1_z = list string
+builders z_o3_z = list string
+
+builders z_of2_z = list string
+builders z_oh2_z = list string 
+builders z_ohm1_z = list string 
+builders z_sh2_z = list string
+
+builders z_so2_z = list string
+builders z_xecl2_z = list string
+builders z_xef2_z = list string
+builders z_zo2_s_zo_z = list string
+
+# fragment
+builders z_ch2_d_ch2_z = list string
+builders z_ch2_s_ch2_z = list string
+builders z_ch3_s_ch2_s_ch3_z = list string
+builders z_ch3_s_ch3_z = list string
+builders z_ch3_s_ch_le_s_ch3_z_ri_s_nh2_z = list string
+builders z_ch3_s_co2m1_z = list string
+builders z_ch3_s_co_s_oh_z = list string
+builders z_ch3_s_oh_z = list string
+builders z_ch3_s_r2_ch2_s_2r_s_ch3_z = list string
+builders z_ch4_z = list string
+builders z_ch_t_ch_z = list string
+builders z_oh_s_co_s_ch2_s_nh2_z = list string
+
+# forked
+builders zerotied_forked_constructor:ofstring = list string 

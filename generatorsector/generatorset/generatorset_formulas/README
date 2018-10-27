@@ -1,0 +1,126 @@
+= The Formula World =
+
+* Camlfile 
+   it is the Top Entity (Target) to be produced by Generator.
+
+** Camlfile_formula : Item_tag list
+
+== Item_formula : Camlparagraph_tag list ==
+
+ Item_all_topsons_for_symbol             camlline idx = group idx
+                                          
+  | Listing_for_symbol
+  | Making_for_symbol
+  | Naming_for_symbol
+  | String_offing_for_symbol
+  | Typing_for_symbol
+
+ Item_each_grandson_leaf_for_symbol      camlline idx = camlparagraph idx
+
+  | Abbreviating_grandson_for_symbol     
+
+ Item_each_grandson_notleaf_for_symbol   camlline idx = camlparagraph idx 
+
+  | Extracting_grandson_for_symbol
+  | Querying_grandson_for_symbol
+  | Upgrading_grandson_for_symbol
+
+ Item_each_topson_leaf_for_symbol        camlline idx = camlparagraph idx
+
+  | Abbreviating_topson_for_symbol
+
+ Item_each_topson_notleaf_for_symbol    camlline idx = camlparagraph idx
+
+  | Extracting_topson_for_symbol
+  | Querying_topson_for_symbol
+  | Upgrading_topson_for_symbol
+
+ Item_only_top_for_symbol               
+  | Longnaming_for_symbol
+  | Fullnaming_for_symbol
+
+** Camlparagraph_formula : Camlline_tag list
+*** Camlparagraph_formula_constrained : (Comment_tag, Camlline_tag capped_list
+
+** Camlline_formula : ((Entity, Category, Camlfilecontent) triplet ) list
+
+
+             [ Camlfile ] 
+              Target_value :          
+                 (Entity, Category, Camlfilecontent, Camlfileusage)
+atom_symbol_v.mli atom     symbol    v                mli
+ 
+                |
+                v
+      [ Item ] ... [ Item ]
+         |
+         | |---- Database (atom_twotied) : Constructor list
+         | |-----Translate Constructor Path in CT and Item Tag 
+         | |               to Paragraph Symbol
+         | |-----item_tag 
+         v v
+ [ Paragraph ] tree
+         |
+         v
+ [ Line ] ... [ Line ]        
+    |
+    v
+ [ Ecc ] ... [ Ecc ]
+
+
+Special cases : 
+- the Top Entity which has no Upgrading.
+
+== Camlparagraph ==
+
+let name = function 
+
+   | Entity_proper_symbol_t.Entity_proper_son_symbol sym_eps ->
+       Entity_proper_son_symbol_v.name sym_eps
+   | Entity_proper_symbol_t.Entity_proper_top_symbol sym_ept ->
+       Entity_proper_top_symbol_v.name sym_ept
+
+   | Entity_proper_symbol_t.Currententity s -> "currententity"
+   | Entity_proper_symbol_t.Selfentity s -> "selfentity"
+
+   | Entity_proper_symbol_t.Entity_proper_empty -> "entity_proper_empty"
+ ;;
+
+
+Section_header 
+  [
+   Group_header 
+    [
+     Camlline
+    ] 
+  ]
+
+Section_body 
+  [
+ Topson_notleaf # 1            
+   Group_body
+    [
+     Camlline;
+     Camlline;
+    ] 
+
+ Topson_notleaf # 2            
+   Group_body
+    [
+     Camlline;
+     Camlline;
+    ] 
+
+ Topson_leaf_ofstring # 1            
+   Group_body
+    [
+     Camlline;
+    ] 
+
+ Topson_leaf_bare # 1            
+   Group_body
+    [
+     Camlline;
+    ] 
+  ]
+

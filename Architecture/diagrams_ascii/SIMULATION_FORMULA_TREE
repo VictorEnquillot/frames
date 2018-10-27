@@ -1,0 +1,23 @@
+Simulation Symbol Formula : regional_model_symbol array
+Regional_model Symbol Formula : System_physical_region + System_model  
+System_physical_region Symbol Formula : System_physical + Selection_criterion
+Physical_property Symbol Formula : 
+
+
+                                                              Simulation
+                                                                  |
+                                                         regional_model_symbol array
+                                                                  |
+                                           ------------------------------------
+                                           |                                  |                 |
+                                System Physical_Region                  System_Model    
+                                           |                                  |
+                        ------------------------------------                  |
+                        |                                  |                  |
+                      Region                      Selection_Criterion         |         
+                        |                                                     |
+           |---------------------|                              ---------------------------
+           |                     |                              |                         |
+   External_Field         Molecular System                 Wavefunction              Force_Field
+                                 |                              |
+

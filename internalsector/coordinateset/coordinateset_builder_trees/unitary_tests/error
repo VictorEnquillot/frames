@@ -1,0 +1,4 @@
+Error: Error while linking /keep/sources/ocaml_top/setup/frames/elementaryset/elementaryset_databases/elementaryset_databases.cma(Coordinate_tuple_symbol_from_database_db1_element_vertex_tag_translator_v):
+Reference to undefined global `Database_db1_element_vertex_tag_v'
+
+Byt_executable.mk: file >/keep/sources/ocaml_top/setup/frames/elementaryset/elementaryset_values/unitary_tests/runtest.byt< built

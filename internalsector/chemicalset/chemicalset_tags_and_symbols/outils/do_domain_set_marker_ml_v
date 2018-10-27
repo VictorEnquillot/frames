@@ -1,0 +1,171 @@
+# ls -C1 *symbol_t.ml | sed -e 's/_symbol_t.ml/ \\/' -e '/set/d'
+
+module_extension="v.ml"
+
+. ${UTI}/do_capitalize_first
+. ${UTI}/do_argumentset_abbreviation
+. ${UTI}/do_category_module_abbreviation 
+. ${UTI}/do_category_name_abbreviation 
+. ${UTI}/do_category_type_abbreviation 
+. ${UTI}/do_category_argument_abbreviation
+. ${UTI}/do_category_value_abbreviation
+. ${UTI}/do_category_off_category_extended
+. ${UTI}/do_domain_name
+. ${UTI}/do_domain_name_module_abbreviation 
+
+
+. do_module_abbreviation_all
+. do_argument_abbreviation_all
+
+# -----------------  domain  --------------------------------
+
+domain_name=`domain_name`
+
+# ----------------- Usage category is marker ------------------------------
+
+if [ "$1" != "marker" ]
+then
+	echo "Usage :"
+	echo " $0 marker > ${domain_name}_marker_${module_extension}"
+	exit
+fi
+
+category=$1
+Category=`capitalize_first ${category}`
+
+# -------------------- Entityset is Domain ----------------------------
+
+# set -x 
+
+entityset=${domain_name}
+Entityset=`capitalize_first ${entityset}`
+
+#echo "entityset=$entityset"
+
+# -------------------- Caml Code ----------------------------
+
+caa=`category_argument_abbreviation ${category}`
+cta=`category_type_abbreviation ${category}`
+cva=`category_value_abbreviation ${category}`
+cna=`category_name_abbreviation ${category}`
+Caa=`capitalize_first ${caa}`
+cma=`category_module_abbreviation ${category}`
+Cma=`capitalize_first ${cma}`
+
+echo "(** {3 A ${Category} for a ${Entityset}.} *)"
+echo ""
+
+# ------------------------ Modules -----------------------------
+
+echo "(** {6 Modules.} *)"
+echo ""
+
+esa=`argument_abbreviation ${entityset}`
+Esa=`capitalize_first ${esa}`
+ema=`module_abbreviation ${entityset}`
+Ema=`capitalize_first ${ema}`
+
+echo "module ${Caa}_${cva} = ${Category}_v"
+for c in "symbol" "index" 
+do
+	caa=`category_argument_abbreviation ${c}`
+	cta=`category_type_abbreviation ${c}`
+	cva=`category_value_abbreviation ${c}`
+	cna=`category_name_abbreviation ${c}`
+	echo "module ${Ema}${cna}_${cta} = ${Entityset}_${c}_${cta}"
+	echo "module ${Ema}${cna}_${cva} = ${Entityset}_${c}_${cva}"
+done
+
+# ------------------------ Making -----------------------------
+
+echo ""
+echo "(** {6 Making.} *)"
+
+caa=`category_argument_abbreviation ${category}`
+cta=`category_type_abbreviation ${category}`
+cva=`category_value_abbreviation ${category}`
+cna=`category_name_abbreviation ${category}`
+Caa=`capitalize_first ${caa}`
+
+asa=`argumentset_abbreviation ${domain_name}`
+Asa=`capitalize_first ${asa}`
+
+echo ""
+echo "let make = ${Caa}_${cva}.make;;"
+echo ""
+
+# ------------------------ Converting -----------------------------
+echo "(** {6 Converting.} *)"
+echo ""
+
+caa=`category_argument_abbreviation ${category}`
+
+echo "let name ${caa}_${asa} ="
+echo -n "  ${Cma}_${cva}.name"
+for c in "symbol" "index" 
+do
+	caa=`category_argument_abbreviation ${c}`
+	cta=`category_type_abbreviation ${c}`
+	cva=`category_value_abbreviation ${c}`
+	cna=`category_name_abbreviation ${c}`
+	echo -n " ${Ema}${cna}_${cva}.name"
+done
+
+eaa=`argument_abbreviation ${entityset}`
+caa=`category_argument_abbreviation ${category}`
+echo " ${caa}_${eaa}"
+echo ";;"
+echo ""
+
+caa=`category_argument_abbreviation ${category}`
+
+echo "let print ppf ${caa}_${asa} ="
+echo -n "  ${Cma}_${cva}.print"
+for c in "symbol" "index" 
+do
+	caa=`category_argument_abbreviation ${c}`
+	cta=`category_type_abbreviation ${c}`
+	cva=`category_value_abbreviation ${c}`
+	cna=`category_name_abbreviation ${c}`
+	echo -n " ${Ema}${cna}_${cva}.print"
+done
+
+caa=`category_argument_abbreviation ${category}`
+echo " ppf ${caa}_${eaa}"
+echo ";;"
+echo ""
+
+# ------------------------ Updating -----------------------------
+echo "(** {6 Updating.} *)"
+echo ""
+caa=`category_argument_abbreviation ${category}`
+
+esa=`argument_abbreviation ${entityset}`
+Esa=`capitalize_first ${esa}`
+ema=`module_abbreviation ${entityset}`
+Ema=`capitalize_first ${ema}`
+cna=`category_name_abbreviation ${category}`
+
+#echo "esa=$esa"
+#echo "ema=$ema"
+#echo "cna=$cna"
+
+for e in `do_modelset_elementset`
+do
+	E=`capitalize_first ${e}`
+	eaa=`argument_abbreviation ${e}`
+
+	echo "let ${entityset}_${category}_of_${e}_${category} ${caa}_${eaa} ="
+	echo "  let smb_${eaa} = Mrk_v.symbol_off_marker ${caa}_${eaa} in"
+	echo "  let idx_${eaa} = Mrk_v.index_off_marker ${caa}_${eaa} in"
+	echo "  let smb_${esa} = ${Ema}s_t.${E}_symbol smb_${eaa} in"
+	echo "  let idx_${esa} = ${Ema}i_t.${E}_index idx_${eaa} in"
+	echo "  make smb_${esa} idx_${esa}"
+	echo ";;"
+	echo ""	
+done
+echo ""
+. ${UTI}/do_created
+echo ""
+
+exit

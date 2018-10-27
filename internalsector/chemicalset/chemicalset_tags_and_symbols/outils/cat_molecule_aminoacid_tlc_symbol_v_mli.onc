@@ -1,0 +1,3 @@
+val read : Scanf.Scanning.scanbuf -> 
+  Molecule_aminoacid_tlc_symbol_t.molecule_aminoacid_tlc_symbol
+;;

@@ -1,0 +1,6 @@
+let sym_enp = Entity_proper_symbol_v.top_has_no_leaf_son nam_enp;;
+let idx_enp = Entity_proper_symbol_v.list_index_of_entity_proper_symbol sym_enp;;
+let soi_enp = Sole_index_v.make idx_enp soi_cat;;
+let gss_enp = Generatorset_symbol_v.generatorset_symbol_of_entity_proper_symbol sym_enp;;
+Generatorset_symbol_by_sole_index_production_provider_v.store soi_enp gss_enp;;
+let tag_enp = Tag_v.make sym_enp soi_enp;;

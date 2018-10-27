@@ -1,0 +1,9 @@
+an Mp3 file structure 
+
+Frame :
+  Header
+  Data
+
+
+Header :
+  

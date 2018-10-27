@@ -1,0 +1,7 @@
+(** {6 Iterating.} *)
+
+let map tag_gst = List.map tag_gst;;
+let iter tag_gst = List.iter tag_gst ;;
+
+let map2 tag_gst_1 tag_gst_2 = List.map2 tag_gst_1 tag_gst_2;;
+let iter2 tag_gst_1 tag_gst_2 = List.iter tag_gst_1 tag_gst_2;;

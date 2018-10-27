@@ -1,0 +1,2 @@
+type camlline_uno_function_symbol_with_failure_not_a_topson_leaf_et_symbol_arrow_formula = Entity_tag_t.entity_tag list
+;;

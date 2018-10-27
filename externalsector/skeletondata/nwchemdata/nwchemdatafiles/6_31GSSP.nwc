@@ -1,0 +1,51 @@
+v1.2.2
+
+#  6-311G** Polarization  EMSL  Basis Set Exchange Library  4/1/15 7:36 AM
+# Elements                             References
+# --------                             ----------
+# H - Ar:  R. Krishnan, J.S. Binkley, R. Seeger, J.A. Pople, J. Chem. Phys. 72,
+#          650 (1980)
+#   
+
+
+BASIS "ao basis" PRINT
+#BASIS SET: (1p)
+H    P
+      0.7500000              1.0000000        
+#BASIS SET: (1p)
+He    P
+      0.7500000              1.0000000        
+#BASIS SET: (1d)
+Li    D
+      0.2000000              1.0000000        
+#BASIS SET: (1d)
+Be    D
+      0.2550000              1.0000000        
+#BASIS SET: (1d)
+B    D
+      0.4010000              1.0000000        
+#BASIS SET: (1d)
+C    D
+      0.6260000              1.0000000        
+#BASIS SET: (1d)
+N    D
+      0.9130000              1.0000000        
+#BASIS SET: (1d)
+O    D
+      1.2920000              1.0000000        
+#BASIS SET: (1d)
+F    D
+      1.7500000              1.0000000        
+#BASIS SET: (1d)
+Ne    D
+      2.3040000              1.0000000        
+END
+
+
+			
+			
+	
+	
+		
+
+Options:Help:Feedback

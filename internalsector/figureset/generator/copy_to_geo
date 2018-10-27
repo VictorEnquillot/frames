@@ -1,0 +1,3 @@
+echo "doing ${1} from KEEP"
+cp KEEP/${1}_symbols.set geometryset_symbols.set
+cp KEEP/${1}_formulas.set geometryset_formulas.set

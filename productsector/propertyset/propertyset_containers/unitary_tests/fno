@@ -1,0 +1,4 @@
+let nof_inp = "Point_homothety_n_translation.inp";;
+let fno_inp = Input_fullnameoffile_by_input_nameoffile_provider_v.provide nof_inp;;
+Parameters_general_register_v.store "input-file" fno_inp;;
+

@@ -1,0 +1,34 @@
+set debug 
+      module "none"
+      function "none"
+      end -- debug
+    end -- set 
+
+define I_plus
+       end -- define
+
+define F_plus
+       end -- define
+
+define I_minus
+       end -- define
+
+define F_minus
+       end -- define
+
+define R_value
+       end -- define
+
+-(-
+
+define R_name
+       end -- define
+
+define R 
+             R_name 
+             R_value
+       	     end -- float_value
+       end -- define
+   
+-)-
+stop

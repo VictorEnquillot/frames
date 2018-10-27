@@ -1,0 +1,4 @@
+type camlparagraph_for_formula_let_formula =
+  | Camlparagraph_for_formula_let_argument_formula of Camlparagraph_for_formula_let_argument_formula_t.camlparagraph_for_formula_let_argument_formula
+  | Camlparagraph_for_formula_let_match_formula of Camlparagraph_for_formula_let_match_formula_t.camlparagraph_for_formula_let_match_formula
+;;

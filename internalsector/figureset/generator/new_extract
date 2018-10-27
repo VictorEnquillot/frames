@@ -1,0 +1,18 @@
+let extract_without_trace tag_fff =
+
+;;
+
+let extract_with_trace tag_fff =
+  let nam_cod = Management_v.current_module_name (documentation ()) in
+  Management_v.entering_of_current_module_name nam_cod;
+
+  let result = extract_without_trace tag_fff in
+
+  Management_v.exiting_of_current_module_name nam_cod;
+  result
+;;
+
+let extract tag_fff =
+  if Parameters_fffureset_general_provider_v.provide "trace-extract" = "true"
+  then extract_with_trace tag_fff
+  else extract_without_trace tag_fff

@@ -1,0 +1,3 @@
+NEEDED_DIRS := \
+        $(GLOBALSET_VALUES_DIR) \
+ 

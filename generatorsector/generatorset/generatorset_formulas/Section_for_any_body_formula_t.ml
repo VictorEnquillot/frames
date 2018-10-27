@@ -1,0 +1,5 @@
+type section_for_any_body_formula =
+  | Section_for_any_body_son_formula of Section_for_any_body_son_formula_t.section_for_any_body_son_formula
+  | Section_for_any_body_top_formula of Section_for_any_body_top_formula_t.section_for_any_body_top_formula
+  | Section_for_any_body_top_main_formula of Section_for_any_body_top_main_formula_t.section_for_any_body_top_main_formula
+;;

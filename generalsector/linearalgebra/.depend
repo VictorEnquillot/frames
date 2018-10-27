@@ -1,0 +1,140 @@
+Radius_p.cmi:
+Float_triplet_v.cmi: Float_triplet_t.cmo
+Float_sextuor_v.cmi: Float_triplet_t.cmo Float_sextuor_t.cmo
+Nonuplet_v.cmi: Nonuplet_t.cmo Float_triplet_t.cmo
+Vector_v.cmi: Vector_t.cmo
+Vector_3d_v.cmi: Vector_3d_t.cmo Float_triplet_t.cmo Float_sextuor_t.cmo
+Basis_v.cmi: Basis_t.cmo
+Basis_3d_v.cmi: Vector_3d_t.cmo Basis_3d_t.cmo
+Point_v.cmi: Vector_t.cmo Point_t.cmo
+Point_3d_v.cmi: Vector_3d_t.cmo Point_3d_t.cmo Float_triplet_t.cmo
+Referential_v.cmi: Vector_t.cmo Referential_t.cmo Point_t.cmo \
+    Euler_angles_t.cmo Basis_t.cmo
+Coordinate_v.cmi: Coordinate_t.cmo
+Tensor_3_3_v.cmi: Tensor_3_3_t.cmo Float_triplet_t.cmo
+Matrix_v.cmi: Vector_t.cmo Matrix_t.cmo
+Determinant_p.cmi: Matrix_t.cmo
+Matrix_3_3_v.cmi: Matrix_3_3_t.cmo
+Angle_p.cmi:
+Euler_angles_v.cmi: Tensor_3_3_t.cmo Euler_angles_t.cmo
+Complex_v.cmi: Radius_p.cmi Complex_t.cmo Angle_p.cmi
+Radius_p.cmo: Radius_p.cmi
+Radius_p.cmx: Radius_p.cmi
+Float_triplet_t.cmo:
+Float_triplet_t.cmx:
+Float_sextuor_t.cmo:
+Float_sextuor_t.cmx:
+Nonuplet_t.cmo:
+Nonuplet_t.cmx:
+Vector_t.cmo:
+Vector_t.cmx:
+Vector_3d_t.cmo:
+Vector_3d_t.cmx:
+Basis_t.cmo: Vector_t.cmo
+Basis_t.cmx: Vector_t.cmx
+Basis_3d_t.cmo: Vector_3d_t.cmo
+Basis_3d_t.cmx: Vector_3d_t.cmx
+Point_t.cmo: Vector_t.cmo
+Point_t.cmx: Vector_t.cmx
+Point_3d_t.cmo: Vector_3d_t.cmo
+Point_3d_t.cmx: Vector_3d_t.cmx
+Referential_t.cmo: Point_t.cmo Basis_t.cmo
+Referential_t.cmx: Point_t.cmx Basis_t.cmx
+Referential_3d_t.cmo: Point_3d_t.cmo Basis_3d_t.cmo
+Referential_3d_t.cmx: Point_3d_t.cmx Basis_3d_t.cmx
+Coordinate_t.cmo:
+Coordinate_t.cmx:
+Matrix_t.cmo: Vector_t.cmo
+Matrix_t.cmx: Vector_t.cmx
+Matrix_3_3_t.cmo: Vector_3d_t.cmo
+Matrix_3_3_t.cmx: Vector_3d_t.cmx
+Tensor_3_3_t.cmo: Float_triplet_t.cmo
+Tensor_3_3_t.cmx: Float_triplet_t.cmx
+Euler_angles_t.cmo:
+Euler_angles_t.cmx:
+Float_triplet_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    Float_triplet_v.cmi
+Float_triplet_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    Float_triplet_v.cmi
+Float_sextuor_v.cmo: Float_triplet_v.cmi Float_sextuor_v.cmi
+Float_sextuor_v.cmx: Float_triplet_v.cmx Float_sextuor_v.cmi
+Nonuplet_v.cmo: Float_triplet_v.cmi Nonuplet_v.cmi
+Nonuplet_v.cmx: Float_triplet_v.cmx Nonuplet_v.cmi
+Array1_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo
+Array1_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx
+Vector_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmi \
+    Vector_v.cmi
+Vector_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmx \
+    Vector_v.cmi
+Vector_3d_v.cmo: Float_triplet_v.cmi Vector_3d_v.cmi
+Vector_3d_v.cmx: Float_triplet_v.cmx Vector_3d_v.cmi
+Basis_v.cmo: Vector_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi \
+    Basis_v.cmi
+Basis_v.cmx: Vector_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmx \
+    Basis_v.cmi
+Basis_3d_v.cmo: Vector_3d_v.cmi Basis_3d_v.cmi
+Basis_3d_v.cmx: Vector_3d_v.cmx Basis_3d_v.cmi
+Point_v.cmo: Vector_v.cmi Point_v.cmi
+Point_v.cmx: Vector_v.cmx Point_v.cmi
+Point_3d_v.cmo: Vector_3d_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    Point_3d_t.cmo Point_3d_v.cmi
+Point_3d_v.cmx: Vector_3d_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    Point_3d_t.cmx Point_3d_v.cmi
+Referential_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    Referential_t.cmo Point_v.cmi Basis_v.cmi Referential_v.cmi
+Referential_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    Referential_t.cmx Point_v.cmx Basis_v.cmx Referential_v.cmi
+Coordinate_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    Coordinate_t.cmo Coordinate_v.cmi
+Coordinate_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    Coordinate_t.cmx Coordinate_v.cmi
+Tensor_3_3_v.cmo: Float_triplet_v.cmi Tensor_3_3_v.cmi
+Tensor_3_3_v.cmx: Float_triplet_v.cmx Tensor_3_3_v.cmi
+Array2_v.cmo:
+Array2_v.cmx:
+Matrix_v.cmo: Vector_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_v.cmi \
+    Matrix_v.cmi
+Matrix_v.cmx: Vector_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_v.cmx \
+    Matrix_v.cmi
+Determinant_p.cmo: Matrix_v.cmi Matrix_t.cmo Determinant_p.cmi
+Determinant_p.cmx: Matrix_v.cmx Matrix_t.cmx Determinant_p.cmi
+Matrix_3_3_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    Matrix_3_3_v.cmi
+Matrix_3_3_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    Matrix_3_3_v.cmi
+Angle_p.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Constants_v.cmo \
+    Angle_p.cmi
+Angle_p.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Constants_v.cmx \
+    Angle_p.cmi
+Euler_angles_v.cmo: Tensor_3_3_v.cmi Euler_angles_t.cmo Euler_angles_v.cmi
+Euler_angles_v.cmx: Tensor_3_3_v.cmx Euler_angles_t.cmx Euler_angles_v.cmi
+Complex_t.cmo: Radius_p.cmi Angle_p.cmi
+Complex_t.cmx: Radius_p.cmx Angle_p.cmx
+Complex_v.cmo: Radius_p.cmi Complex_t.cmo Angle_p.cmi Complex_v.cmi
+Complex_v.cmx: Radius_p.cmx Complex_t.cmx Angle_p.cmx Complex_v.cmi

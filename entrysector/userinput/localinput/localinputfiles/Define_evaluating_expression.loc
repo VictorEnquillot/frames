@@ -1,0 +1,6 @@
+define X 
+       by evaluating 
+             ( (R_value * 4.5) + cos (Pi / 2) )
+          end -- by
+       end -- define
+

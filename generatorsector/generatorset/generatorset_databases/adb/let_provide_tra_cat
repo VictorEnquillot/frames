@@ -1,0 +1,19 @@
+let provide tra_cat =
+  if tra_cat = []
+  then
+    Error_messages_v.print_fatal_error nam_cod "provide"
+      "trail tra_cat were NOT empty" "tra_cat IS empty" "Check"
+  else
+    if not (Trail_v.has_of_head_key_off_trail "category" tra_cat) 
+    then 
+      Error_messages_v.print_fatal_error nam_cod "provide" "category trail" 
+	(Format.sprintf "%s instead" (Trail_v.name tra_cat) ) "Check"
+    else
+      begin
+	if Register_v.is_stored 
+	    righthandside_string_list_by_category_trail_register 
+	    tra_cat
+	then retrieve tra_cat
+	else build_n_store tra_cat
+      end
+;;

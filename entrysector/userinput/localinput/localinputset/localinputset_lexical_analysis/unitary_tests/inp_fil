@@ -1,0 +1,5 @@
+(* Input file *)
+
+let nof_inp = "Point_a_a_tag.inp";;
+let fno_inp = Input_file_fullnameoffile_by_nameoffile_provider_v.provide nof_inp;;
+Parameters_figureset_general_register_v.store "input-file" fno_inp;;

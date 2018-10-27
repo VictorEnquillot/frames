@@ -1,0 +1,37 @@
+html_lexeme_v.cmi: html_tag_t.cmo html_lexeme_t.cmo html_attribute_t.cmo \
+    html_attribute_parameter_t.cmo
+html_lexer_v.cmi: html_tag_t.cmo html_lexeme_t.cmo html_attribute_t.cmo
+read_record_list_v.cmi: html_lexeme_t.cmo
+tools_v.cmi:
+html_attribute_parameter_t.cmo:
+html_attribute_parameter_t.cmx:
+html_attribute_parameter_v.cmo:
+html_attribute_parameter_v.cmx:
+html_attribute_t.cmo:
+html_attribute_t.cmx:
+html_attribute_v.cmo: html_attribute_t.cmo
+html_attribute_v.cmx: html_attribute_t.cmx
+html_lexeme_t.cmo: html_tag_t.cmo html_attribute_t.cmo \
+    html_attribute_parameter_t.cmo
+html_lexeme_t.cmx: html_tag_t.cmx html_attribute_t.cmx \
+    html_attribute_parameter_t.cmx
+html_lexeme_v.cmo: tools_v.cmi html_tag_v.cmo html_lexeme_t.cmo \
+    html_attribute_v.cmo html_attribute_parameter_v.cmo html_lexeme_v.cmi
+html_lexeme_v.cmx: tools_v.cmx html_tag_v.cmx html_lexeme_t.cmx \
+    html_attribute_v.cmx html_attribute_parameter_v.cmx html_lexeme_v.cmi
+html_parser_v.cmo: tools_v.cmi html_lexeme_v.cmi html_lexeme_t.cmo
+html_parser_v.cmx: tools_v.cmx html_lexeme_v.cmx html_lexeme_t.cmx
+html_tag_t.cmo:
+html_tag_t.cmx:
+html_tag_v.cmo: html_tag_t.cmo
+html_tag_v.cmx: html_tag_t.cmx
+html_tree_t.cmo: html_tag_t.cmo html_attribute_t.cmo
+html_tree_t.cmx: html_tag_t.cmx html_attribute_t.cmx
+html_tree_v.cmo: html_tree_t.cmo
+html_tree_v.cmx: html_tree_t.cmx
+read_record_list_v.cmo: tools_v.cmi html_lexeme_v.cmi html_lexeme_t.cmo \
+    read_record_list_v.cmi
+read_record_list_v.cmx: tools_v.cmx html_lexeme_v.cmx html_lexeme_t.cmx \
+    read_record_list_v.cmi
+tools_v.cmo: tools_v.cmi
+tools_v.cmx: tools_v.cmi

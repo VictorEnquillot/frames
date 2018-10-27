@@ -1,0 +1,18 @@
+      Error_messages_v.print_fatal_error nam_cod "build"
+
+	(Format.sprintf "Camlparagraph Symbol @.      >%s< exists at Left of Doublet_list" (Camlparagraph_symbol_v.name sym_cap))
+
+	(Format.sprintf "Doublet_list is:@.      %s" 
+	   (Doublet_list_v.name_with_separator 
+              (List_v.name_with_separator 
+		 (List_v.name_with_separator 
+		    Entity_symbol_v.fullname "; "
+		 ) 
+              "; "
+	      ) 
+ 	      Camlparagraph_symbol_v.fullname 
+              ";\n      "
+              pat_sym_ent_l_sym_cap_dol
+           ) )
+
+	"Check"

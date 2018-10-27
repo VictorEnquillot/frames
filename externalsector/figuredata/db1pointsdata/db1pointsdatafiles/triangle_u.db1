@@ -1,0 +1,7 @@
+coordinates_units_length  angstrom 
+coordinates_kind  cartesian
+figure_kind triangle 
+figure_name U
+vertex U_A       0. 0. -3.
+vertex U_B       0. 1. -3.
+vertex U_C       1. 0. -3.

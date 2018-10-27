@@ -1,0 +1,63 @@
+(** {6 Builder Tag of Container} *)
+
+let builder_tag_trio_off_this_container con_ttt =
+  con_ttt
+;;
+
+let builder_tag_tuple_off_this_container con_ttt =
+  Tuple_t.trio con_ttt
+;;
+
+let builder_tag_list_off_this_container con_ttt =
+  Trio_v.list_off_trio con_ttt
+;;
+
+(** {6 Builder Sibling Tag of Container} *)
+
+let builder_bui_1_tag_off_this_container con_ttt =
+  Trio_v.left_off_trio con_ttt
+;;
+
+let builder_bui_2_tag_off_this_container con_ttt =
+  Trio_v.middle_off_trio con_ttt
+;;
+
+let builder_bui_3_tag_off_this_container con_ttt =
+  Trio_v.right_off_trio con_ttt
+;;
+
+(** {6 Closure Units Tag} *)
+
+let units_tag_trio_off_this_container con_ttt =
+  let tag_bbb_t = builder_tag_trio_off_this_container con_ttt in
+  let con_bbb_t = Trio_v.map Builder_container_v.retrieve tag_bbb_t in
+  Trio_v.map Builder_container_v.units_tag_off_builder_container con_bbb_t
+;;
+
+let units_tag_tuple_off_this_container con_ttt =
+  let tag_uni_t = units_tag_trio_off_this_container con_ttt in
+  Tuple_t.Trio tag_uni_t
+;;
+
+let units_tag_list_off_this_container con_ttt =
+  let tag_uni_t = units_tag_trio_off_this_container con_ttt in
+  Trio_v.list_off_trio tag_uni_t
+;;
+
+let units_tag_bui_1_off_this_container con_ctc =
+  let tag_bui_1 = builder_bui_1_tag_off_this_container con_ctc in
+  let con_bui_1 = Builder_container_v.retrieve tag_bui_1 in
+  Builder_container_v.units_tag_off_builder_container con_bui_1
+;;
+
+let units_tag_bui_2_off_this_container con_ctc =
+  let tag_bui_2 = builder_bui_2_tag_off_this_container con_ctc in
+  let con_bui_2 = Builder_container_v.retrieve tag_bui_2 in
+  Builder_container_v.units_tag_off_builder_container con_bui_2
+;;
+
+let units_tag_bui_3_off_this_container con_ctc =
+  let tag_bui_3 = builder_bui_3_tag_off_this_container con_ctc in
+  let con_bui_3 = Builder_container_v.retrieve tag_bui_3 in
+  Builder_container_v.units_tag_off_builder_container con_bui_3
+;;

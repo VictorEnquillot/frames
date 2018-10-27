@@ -1,0 +1,2 @@
+
+type section_for_symbol_header_current_top_tag = Section_for_symbol_header_current_top_symbol_t.section_for_symbol_header_current_top_symbol Tag_t.tag;;

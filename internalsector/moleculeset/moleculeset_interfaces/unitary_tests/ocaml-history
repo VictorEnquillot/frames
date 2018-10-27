@@ -1,0 +1,19 @@
+#use "atom_mark_list_by_block_tag_provider_v.ml";;
+#load "../../chemicalset_tags/chemicalset_tags.cma"
+;;
+#load "../../chemicalset_tags/chemicalset_symbols.cma";;
+#load "../../chemicalset_tags/chemicalset_marks.cma";;
+#load "../..//chemicalset_marks.cma";;
+#load "../../chemicalset_symbols/chemicalset_symbols.cma";;
+#load "../../chemicalset_tagss/chemicalset_tags.cma";;
+#load "../../chemicalset_tags/chemicalset_tags.cma";;
+#use "atom_mark_list_by_block_tag_provider_v.ml";;
+#load "../../../generatorset_databases/generatorset_databases.cma";;
+ #use "tatom_mark_list_by_block_tag_provider_v.ml";;
+Atom_mark_list_by_block_tag_provider_v.provide tag_blo;;
+let nam_blo = Block_symbol_v.name sym_blo;;
+let nam_ent_n_nam = ("block", nam_blo);;
+let wor_l = (* Ex.: ["n_sss:tpl_c"; "h_s:tpl_l"; "h_s:tpl_r"] *) 
+    Word_list_by_entity_name_n_name_provider_v.provide 
+      nam_ent_n_nam;;
+ #use "tatom_mark_list_by_block_tag_provider_v.ml";;

@@ -1,0 +1,9 @@
+Register_v.delete  Common_symbol_by_sole_index_register_v.register;;
+Register_v.delete  Debug_by_module_name_register_v.register;;
+Register_v.delete  Frames_entity_string_quatuor_by_input_entity_variable_name_register_v.register;;
+Register_v.delete  Input_entity_creation_module_name_by_sole_index_register_v.register;;
+Register_v.delete  Input_entity_symbol_by_sole_index_register_v.register;;
+Register_v.delete  Input_entity_tag_by_input_entity_variable_name_register_v.register;;
+Register_v.delete  Input_entity_tag_tree_by_input_entity_tag_register_v.register;;
+Register_v.delete  Parameters_figureset_general_register_v.register;;
+Register_v.delete  Property_entity_string_trio_by_input_entity_variable_name_register_v.register;;

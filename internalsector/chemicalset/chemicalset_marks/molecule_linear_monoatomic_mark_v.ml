@@ -1,0 +1,177 @@
+(** {3 The functionalities for a Mark for a Molecule_linear_monoatomic.} *)
+
+let nam_cod = "molecule_linear_monoatomic_mark_v.ml";;
+
+
+(** {6 Aliasing} *)
+
+
+
+(** {6 Naming} *)
+
+
+let name mark_mlm =
+  Mark_v.name Molecule_linear_monoatomic_symbol_v.name mark_mlm
+;;
+
+
+(** {6 Upgrading} *)
+
+
+let molecule_linear_monoatomic_mark_of_block_none_none_ax0e0_monoatomic_mark mark_nam = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.molecule_linear_monoatomic_symbol_of_block_none_none_ax0e0_monoatomic_symbol mark_nam
+;;
+
+let molecule_linear_monoatomic_mark_of_atom_zerotied_mark mark_at0 = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.molecule_linear_monoatomic_symbol_of_atom_zerotied_symbol mark_at0
+;;
+
+let molecule_linear_monoatomic_mark_of_atom_zerotied_anion_mark mark_a0a = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.molecule_linear_monoatomic_symbol_of_atom_zerotied_anion_symbol mark_a0a
+;;
+
+let molecule_linear_monoatomic_mark_of_atom_zerotied_anion_minusone_mark mark_0a1 = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.molecule_linear_monoatomic_symbol_of_atom_zerotied_anion_minusone_symbol mark_0a1
+;;
+
+let molecule_linear_monoatomic_mark_of_atom_zerotied_anion_minustwo_mark mark_0a2 = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.molecule_linear_monoatomic_symbol_of_atom_zerotied_anion_minustwo_symbol mark_0a2
+;;
+
+let molecule_linear_monoatomic_mark_of_atom_zerotied_cation_mark mark_a0c = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.molecule_linear_monoatomic_symbol_of_atom_zerotied_cation_symbol mark_a0c
+;;
+
+let molecule_linear_monoatomic_mark_of_atom_zerotied_cation_plusone_mark mark_0c1 = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.molecule_linear_monoatomic_symbol_of_atom_zerotied_cation_plusone_symbol mark_0c1
+;;
+
+let molecule_linear_monoatomic_mark_of_atom_zerotied_cation_plustwo_mark mark_0c2 = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.molecule_linear_monoatomic_symbol_of_atom_zerotied_cation_plustwo_symbol mark_0c2
+;;
+
+let molecule_linear_monoatomic_mark_of_atom_zerotied_cation_plusthree_mark mark_0c3 = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.molecule_linear_monoatomic_symbol_of_atom_zerotied_cation_plusthree_symbol mark_0c3
+;;
+
+let molecule_linear_monoatomic_mark_of_atom_zerotied_raregas_mark mark_a0r = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.molecule_linear_monoatomic_symbol_of_atom_zerotied_raregas_symbol mark_a0r
+;;
+
+let molecule_linear_monoatomic_mark_of_atom_zerotied_halfbridge_mark mark_a0h = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.molecule_linear_monoatomic_symbol_of_atom_zerotied_halfbridge_symbol mark_a0h
+;;
+
+
+(** {6 Abbreviating} *)
+
+
+
+(** {6 Making} *)
+
+
+let make sym_mlm soi_mlm =
+  Mark_v.make sym_mlm soi_mlm
+;;
+
+
+(** {6 Extracting} *)
+
+
+let block_none_none_ax0e0_monoatomic_mark_off_molecule_linear_monoatomic_mark mark_mlm = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.block_none_none_ax0e0_monoatomic_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let atom_zerotied_mark_off_molecule_linear_monoatomic_mark mark_mlm = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.atom_zerotied_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let atom_zerotied_anion_mark_off_molecule_linear_monoatomic_mark mark_mlm = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.atom_zerotied_anion_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let atom_zerotied_anion_minusone_mark_off_molecule_linear_monoatomic_mark mark_mlm = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.atom_zerotied_anion_minusone_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let atom_zerotied_anion_minustwo_mark_off_molecule_linear_monoatomic_mark mark_mlm = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.atom_zerotied_anion_minustwo_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let atom_zerotied_cation_mark_off_molecule_linear_monoatomic_mark mark_mlm = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.atom_zerotied_cation_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let atom_zerotied_cation_plusone_mark_off_molecule_linear_monoatomic_mark mark_mlm = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.atom_zerotied_cation_plusone_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let atom_zerotied_cation_plustwo_mark_off_molecule_linear_monoatomic_mark mark_mlm = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.atom_zerotied_cation_plustwo_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let atom_zerotied_cation_plusthree_mark_off_molecule_linear_monoatomic_mark mark_mlm = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.atom_zerotied_cation_plusthree_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let atom_zerotied_raregas_mark_off_molecule_linear_monoatomic_mark mark_mlm = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.atom_zerotied_raregas_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let atom_zerotied_halfbridge_mark_off_molecule_linear_monoatomic_mark mark_mlm = 
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.atom_zerotied_halfbridge_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+
+(** {6 Querying} *)
+
+
+let is_block_none_none_ax0e0_monoatomic_mark_off_molecule_linear_monoatomic_mark mark_mlm =
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.is_block_none_none_ax0e0_monoatomic_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let is_atom_zerotied_mark_off_molecule_linear_monoatomic_mark mark_mlm =
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.is_atom_zerotied_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let is_atom_zerotied_anion_mark_off_molecule_linear_monoatomic_mark mark_mlm =
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.is_atom_zerotied_anion_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let is_atom_zerotied_anion_minusone_mark_off_molecule_linear_monoatomic_mark mark_mlm =
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.is_atom_zerotied_anion_minusone_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let is_atom_zerotied_anion_minustwo_mark_off_molecule_linear_monoatomic_mark mark_mlm =
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.is_atom_zerotied_anion_minustwo_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let is_atom_zerotied_cation_mark_off_molecule_linear_monoatomic_mark mark_mlm =
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.is_atom_zerotied_cation_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let is_atom_zerotied_cation_plusone_mark_off_molecule_linear_monoatomic_mark mark_mlm =
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.is_atom_zerotied_cation_plusone_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let is_atom_zerotied_cation_plustwo_mark_off_molecule_linear_monoatomic_mark mark_mlm =
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.is_atom_zerotied_cation_plustwo_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let is_atom_zerotied_cation_plusthree_mark_off_molecule_linear_monoatomic_mark mark_mlm =
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.is_atom_zerotied_cation_plusthree_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let is_atom_zerotied_raregas_mark_off_molecule_linear_monoatomic_mark mark_mlm =
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.is_atom_zerotied_raregas_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+let is_atom_zerotied_halfbridge_mark_off_molecule_linear_monoatomic_mark mark_mlm =
+  Mark_v.map_left Molecule_linear_monoatomic_symbol_v.is_atom_zerotied_halfbridge_symbol_off_molecule_linear_monoatomic_symbol mark_mlm
+;;
+
+
+(** created by ./generator molecule_linear_monoatomic implementation mark at 15:12 13 Mar 2012. *)
+
+
+

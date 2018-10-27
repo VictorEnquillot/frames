@@ -1,0 +1,10 @@
+(** {6 Typing} *)
+
+type section_for_symbol_header_formula =
+  | Section_for_symbol_header_constant_formula of Section_for_symbol_header_constant_formula_t.section_for_symbol_header_constant_formula
+  | Section_for_symbol_header_current_son_top_formula of Section_for_symbol_header_current_son_top_formula_t.section_for_symbol_header_current_son_top_formula
+  | Section_for_symbol_header_current_top_formula of Section_for_symbol_header_current_top_formula_t.section_for_symbol_header_current_top_formula
+  | Section_for_symbol_header_son_formula of Section_for_symbol_header_son_formula_t.section_for_symbol_header_son_formula
+  | Section_for_symbol_header_son_top_formula of Section_for_symbol_header_son_top_formula_t.section_for_symbol_header_son_top_formula
+;;
+

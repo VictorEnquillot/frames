@@ -1,0 +1,4 @@
+type camlline_for_tag_datastructure_formula =
+  | Camlline_for_tag_datastructure_camltype_formula of Camlline_for_tag_datastructure_camltype_formula_t.camlline_for_tag_datastructure_camltype_formula
+  | Camlline_for_tag_datastructure_function_formula of Camlline_for_tag_datastructure_function_formula_t.camlline_for_tag_datastructure_function_formula
+;;

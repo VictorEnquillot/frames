@@ -1,0 +1,9 @@
+ =
+     domain_name = figure 
+     target_name = triangle_perimeter_ratio
+     target_title = "triangles equilateral and scalene right surface ratio" 
+     property_file = triangle_perimeter_ratio.out
+     property_units = meter 
+     property_name = triangle_perimeter_ratio 
+     model_list = { triangle_equilateral triangle_scalene_right }
+   end # target

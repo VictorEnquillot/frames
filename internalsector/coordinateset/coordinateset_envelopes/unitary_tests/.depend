@@ -1,0 +1,50 @@
+Coordinate_envelope_u_point_a_rho.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Uno_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_classical_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_actual_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_actual_length_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tuple_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tag_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_measure_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_builder_trees/Coordinate_tag_all_list_by_basicname_databox_n_basicname_database_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_symbols/Coordinate_symbol_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_symbols/Coordinate_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_symbols/Coordinate_set_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_symbols/Coordinate_set_fence_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_symbols/Coordinate_set_fence_heterogeneous_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_symbols/Coordinate_set_fence_heterogeneous_spherical_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_symbols/Coordinate_set_fence_heterogeneous_spherical_rho_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelope_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_v.cmo
+Coordinate_envelope_u_point_a_rho.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Uno_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_classical_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_actual_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_actual_length_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tuple_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tag_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_measure_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_builder_trees/Coordinate_tag_all_list_by_basicname_databox_n_basicname_database_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_symbols/Coordinate_symbol_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_symbols/Coordinate_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_symbols/Coordinate_set_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_symbols/Coordinate_set_fence_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_symbols/Coordinate_set_fence_heterogeneous_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_symbols/Coordinate_set_fence_heterogeneous_spherical_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_symbols/Coordinate_set_fence_heterogeneous_spherical_rho_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelope_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_v.cmx

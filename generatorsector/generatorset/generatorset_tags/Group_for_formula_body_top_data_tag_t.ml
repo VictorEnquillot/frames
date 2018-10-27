@@ -1,0 +1,2 @@
+
+type group_for_formula_body_top_data_tag = Group_for_formula_body_top_data_symbol_t.group_for_formula_body_top_data_symbol Tag_t.tag;;

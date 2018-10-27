@@ -1,0 +1,12 @@
+define Tra_bc
+       operator 
+         type [ "operator" "set" "body" "creation" "transformation" "constructor" ]
+         operation "translation"
+         ondomain "figure"  
+         cofactor 
+           cofactor_entity Seg_bc
+           end -- cofactor	
+         end -- operator
+       end -- define
+
+stop

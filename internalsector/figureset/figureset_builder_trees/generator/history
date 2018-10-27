@@ -1,0 +1,134 @@
+msrf by_databox_name                              by_basicname_databox *ml *mk
+msrf "basicname_databox_provider_v.provide nam_" "basicname_databox_provider_v.provide bna_" *ml *mk
+ 
+ms "(nam_fbo, nam_fba, nam_fcd, nam_sec)" "(bna_dbo, bna_dba, bna_dom, bna_sec)" *ml
+ms "(nam_fbo, nam_fba, nam_dom, nam_sec)" "(bna_dbo, bna_dba, bna_dom, bna_sec)" *ml
+ms "(nam_dba, nam_dom, nam_sec)" "(bna_dba, bna_dom, bna_sec)" *ml
+
+ms "(nam_dbo, nam_dba)" "(bna_dbo, bna_dba)"  *ml
+
+ms "(nam_fbo, nam_fba)" "(bna_dbo, bna_dba)"  *ml
+ms "(nam_dom, nam_sec)" "(bna_dom, bna_sec)"  *ml
+
+mw nam_fba  nam_dba *ml
+mw bna_fba  bna_dba *ml
+mw soi_fba  soi_dba *ml
+mw nam_fbo  nam_dbo *ml
+mw bna_fbo  bna_dbo *ml
+mw soi_fbo  soi_dbo *ml
+
+mw nam_fcs nam_sec *ml
+mw ord_fcs ord_sec *ml
+mw soi_fcs soi_sec *ml
+mw tag_fcs tag_sec *ml
+
+
+mw ord_fcd ord_dom *ml
+mw tag_fcd tag_dom *ml
+mw nam_fcd nam_dom *ml
+
+mw sym_nwc  sym_fig *ml
+mw sym_ncd  sym_fcd *ml
+mw sym_ncs  sym_fcs *ml
+
+mw sym_fig_fcd  sym_fig_fcd *ml
+mw tag_fig_fcd  tag_fig_fcd *ml
+mw sym_nwc_ncs  sym_fig_fcs *ml
+mw tag_nwc_ncs  tag_fig_fcs *ml
+
+ms _ele_ _coo_ *ml
+
+ms "let nam_sec = Figure_context_sector_name_by_unit_provider_v.provide ()"  "let bna_sec = Figure_context_sector_name_by_unit_provider_v.provide ()" *ml
+
+ms "let nam_fcs = Figure_context_sector_name_by_unit_provider_v" "let bna_sec = Figure_basicname_sector_by_unit_provider_v" *ml
+
+ms "let nam_sec = Figure_basicname_sector_by_unit_provider_v.provide" "let bna_sec = Figure_basicname_sector_by_unit_provider_v.provide" *ml
+
+ms "by_basicname_sector_provider_v.provide nam_sec" "by_basicname_sector_provider_v.provide bna_sec" *ml
+
+ms "let nam_dom = Figure_context_domain_name_by_unit_provider_v.provide ()"  "let bna_dom = Figure_context_domain_name_by_unit_provider_v.provide ()" *ml
+
+ms "let nam_dom = Figure_basicname_domain_by_unit_provider_v" "let bna_dom = Figure_basicname_domain_by_unit_provider_v" *ml 
+
+msrf Figure_context_sector_name_by_unit Figure_basicname_sector_by_unit *ml *mk
+
+
+ms "let build nam_" "let build bna_" *ml
+
+ms "let build bna_nbo =" "let build bna_dbo =" *ml
+
+ms "provide nam_" "provide bna_" *ml
+
+ms "by_basicname_sector_provider_v.provide nam_sec" "by_basicname_sector_provider_v.provide bna_sec" *ml
+ms "by_basicname_domain_provider_v.provide nam_dom" "by_basicname_domain_provider_v.provide bna_dom" *ml
+ms "by_basicname_database_provider_v.provide nam_dba" "by_basicname_database_provider_v.provide bna_dba" *ml
+ms "by_basicname_databox_provider_v.provide nam_dbo" "by_basicname_databox_provider_v.provide bna_dbo" *ml
+
+ms "let nam_dba = Figure_basicname_database_" "let bna_dba = Figure_basicname_database_" *ml
+ms "let nam_dbo = Figure_basicname_databox_" "let bna_dbo = Figure_basicname_databox_" *ml
+
+ms "string Duo_t.duo" "Basicname_t.basicname Duo_t.duo" *ml 
+ms "Duo_v.name (fun s->s)" "Duo_v.name Basicname_v.name" *ml 
+ms "(fun s->s)" "Basicname_v.name" *register_v.ml 
+
+
+ms Domain_name_n_sector_name_by_fullnameofdirectory_provider_v Basicname_duo_by_fullnameofdirectory_provider_v *ml
+msrf Basicname_database_name       Basicname_database *ml *mk
+msrf Basicname_databox_name_by     Basicname_databox_by *ml *mk
+msrf Basicname_databox_by_any_sole_index_provider  Figure_basicname_databox_by_any_sole_index_provider *ml *mk
+
+msrf Database_name_by             Basicname_database_name_by *ml *mk
+msrf Databox_name_by              Basicname_databox_name_by *ml *mk
+msrf Databox_name_n_database_name Basicname_databox_n_basicname_database *ml *mk
+msrf Databox_name_n_database_name_by Basicname_databox_n_basicname_database_by *ml *mk
+
+msrf _context_sector_name_   _basicname_sector_ *ml *mk
+msrf _context_domain_name_   _basicname_domain_ *ml *mk
+msrf _context_database_name_ _basicname_database_ *ml *mk
+msrf _context_databox_name_  _basicname_databox_ *ml *mk
+msrf _context_name_trio_     _basicname_trio_ *ml *mk
+msrf _context_name_quatuor_  _basicname_quatuor_ *ml *mk
+
+msrf Figure_context_basicname_ Figure_basicname_ *ml *mk
+msrf Context_name_trio_by_fullnameofdirectory  Basicname_trio_by_fullnameofdirectory *ml *mk
+
+
+msrf by_databox_name_n_database_name_   by_basicname_databox_n_basicname_database_  *ml *mk
+
+msrf by_figure_context_name       by_figure_basicname  *ml *mk
+msrf by_figure_context_name       by_figure_basicname *ml *mk
+msrf by_database_name                 by_basicname_database  *ml *mk
+msrf by_databox_name                  by_basicname_databox  *ml *mk
+msrf by_databox_name_n_database_name  by_basicname_databox_n_basicname_database  *ml *mk
+msrf by_domain_name_n_sector_name     by_basicname_domain_n_basicname_sector  *ml *mk
+msrf by_domain_name_provider     by_basicname_domain_provider  *ml *mk
+msrf by_sector_name_                  by_basicname_sector_ *ml *mk
+msrf by_basicname_databox_n_database_name_   by_basicname_databox_n_basicname_database_  *ml *mk
+
+msrf _context_basicname_domain _basicname_domain *ml *mk
+msrf _context_database_name_by _basicname_database_by *ml *mk
+msrf _context_databox_name_by_ _basicname_databox_by_ *ml *mk 
+msrf _context_domain_name      _basicname_domain *ml *mk
+msrf _context_name_quatuor     _basicname_quatuor *ml *mk
+msrf _context_name_quatuor     _basicname_quatuor *ml *mk
+msrf _context_sector_name      _basicname_sector *ml *mk
+msrf _context_sector_name_by   _basicname_by *ml *mk
+
+msrf _context_name_ _basicname_ *ml *mk
+ms Figure_basicname_databox_by_any_sole_index_provider_v Basicname_databox_by_any_sole_index_provider_v *ml
+dlw Figure_basicname_databox_by_any_sole_index_provider_v *mk
+kef Figure_basicname_databox_by_any_sole_index_provider_v.ml
+
+ms Check_consistency_by_figure_basicname_quatuor_provider_v Check_consistency_by_basicname_quatuor_provider_v *ml
+dlw  Check_consistency_by_figure_basicname_quatuor_provider_v  *mk
+kef  Check_consistency_by_figure_basicname_quatuor_provider_v.ml
+
+ms Figure_parser_v.figure_symbol_tree_root_databox_of_databox_name  Figure_parser_v.figure_symbol_tree_root_databox_of_basicname_databox *ml
+
+
+msrf Figure_symbol_subtree_by_nwchemdata_context_basicname_databox_provider_v Figure_symbol_subtree_by_nwchemdata_context_databox_tag_provider_v *ml *mk
+
+let bna_dbo = Basicname_v.basicname_databox_of_string nam_dbo;;
+let bna_dba = Basicname_v.basicname_database_of_string nam_dba;;
+
+msrf Figure_symbol_subtree_by_db1pointsdata_context_databox_name Figure_symbol_subtree_by_basicname_databox_n_basicname_database *ml *mk

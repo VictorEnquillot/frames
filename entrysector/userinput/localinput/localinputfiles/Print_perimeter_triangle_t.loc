@@ -1,0 +1,40 @@
+define Con_db1 
+       context
+	 database "db1points"
+         domain "figure"
+	 end -- context
+       end -- define
+
+define Ope_per
+       operator 
+       type [ "operator" "set" "body" "creation" "tomeasure" "constructor" ]
+         end -- operator
+       end -- define
+
+define Tri_t 
+       external 
+       type [ "figure" "set" "body" "triangle" "isosceles" "acute" "constructor"]
+         external_name "T"
+         external_context Con_db1
+         end -- external
+       end -- define
+
+define Perimeter_t
+       target 
+       type [ "property" "operand" "body" "target" "measured" "constructor" ]
+         target_operator Ope_per
+         target_operand Tri_t
+         end -- target
+       end -- define
+
+define Uni_len
+       external 
+         type [ "units" "length" "bohr" ]
+         end -- external
+       end -- define
+
+print Perimeter_t
+      units [ Uni_len ]
+      end -- print
+
+stop

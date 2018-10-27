@@ -1,0 +1,8 @@
+digraph dgn_lexeme_fence {
+  size="14,14";
+  node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+  edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+  Title [label = "The Constructor Tree Fence\nfor Nwchem_lexeme Domain" shape="record" color=lightblue, style=filled];
+  "nwchem\nlexeme\nfence" -> {"nwchem\nlexeme\nfence\nfloat\nof string" "nwchem\nlexeme\nfence\nstring\nof string"};
+   }

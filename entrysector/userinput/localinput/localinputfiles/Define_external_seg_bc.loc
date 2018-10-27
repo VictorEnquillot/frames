@@ -1,0 +1,8 @@
+define Seg_bc
+       external 
+         type [ "figure" "set" "body" "segment" "constructor" ]
+         external_name "BC"
+         external_context Con_db1
+         end -- external
+       end -- define
+stop   

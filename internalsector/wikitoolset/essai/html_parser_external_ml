@@ -1,0 +1,37 @@
+type css_class = Css_class of string
+
+type attribut =
+  | Href of string
+  | Hcolor of string
+  | Class of css_class list
+  | Size of int
+;;
+
+type html_tree =
+  | Empty
+  | Html of attribut list * html_tree list
+  | Head of attribut list * html_tree list
+  | Body of attribut list * html_tree list
+  | P of attribut list * html_tree list
+  | B of attribut list * html_tree list
+  | I of attribut list * html_tree list
+  | U of attribut list * html_tree list
+  | Font of attribut list * html_tree list
+  | A of attribut list * html_tree list
+  | H1 of attribut list * html_tree list
+  | H2 of attribut list * html_tree list
+  | H3 of attribut list * html_tree list
+  | H4 of attribut list * html_tree list
+  | H5 of attribut list * html_tree list
+  | Center of attribut list * html_tree list
+  | Title of attribut list * html_tree list
+  | Div of attribut list * html_tree list
+  | Span of attribut list * html_tree list
+  | Li of attribut list * html_tree list
+  | Lu of attribut list * html_tree list
+  | Ol of attribut list * html_tree list
+  | Table of attribut list * html_tree list
+  | Tr of attribut list * html_tree list
+  | Td of attribut list * html_tree list
+  | Words of string list
+;;

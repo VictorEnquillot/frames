@@ -1,0 +1,23 @@
+open Localinput_parser_v;;
+let nam_mod = "Localinput_parser_v";;
+
+let nam_ibo_l = Inputbox_name_list_by_unit_provider_v.provide ();;
+let nam_ibo = "Define_target_point_t_a";;
+
+test_number 1 (
+List.mem nam_ibo nam_ibo_l
+);;
+
+let sym_lex_l = Localinput_lexer_lexical_analysis_v.localinput_lexer_symbol_list_of_inputbox_name nam_ibo;;
+
+let sym_lex_s =
+    Localinput_parser_tools_v.localinput_lexer_symbol_stack_of_inputbox_name 
+      nam_ibo;;
+
+let fno_ibo = Localinput_lexer_symbol_v.string_off (Stack.pop sym_lex_s);;
+
+test_number 2 (
+(fno_ibo : string ) =
+  "/home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputfiles/Define_target_point_t_a.loc"
+);;
+

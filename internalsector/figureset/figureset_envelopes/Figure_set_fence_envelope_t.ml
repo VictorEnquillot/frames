@@ -1,0 +1,1 @@
+type figure_set_fence_envelope = Coordinate_envelopee_tuple_t.coordinate_envelopee_tuple list;;

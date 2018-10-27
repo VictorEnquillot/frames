@@ -1,0 +1,12 @@
+    flevel=`constructor_level ${f}`
+    case $flevel in
+	 1 ) 
+	 	    echo " "
+		    	        ;;
+	0)			
+	    echo " "		
+	    ;;	 
+	*) echo " Error: in X for >$f< level = $level";
+	exit
+	;;
+    esac   	

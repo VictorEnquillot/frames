@@ -1,0 +1,69 @@
+# input for a Run
+# 1st Model
+   model =
+     model_name = triangle_equilateral_t
+     model_title = "a triangle equilateral"
+     database_name = db1
+     entity_what = triangle_isosceles_equilateral
+     entity_name = T
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+# 2nd model
+   model =
+     model_name = triangle_scalene_right_u
+     model_title = "a triangle scalene right" 
+     database_name = db1
+     entity_what = triangle_scalene_right
+     entity_name = u
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+   property =
+     property_name = perimeter_t
+     property_units_list = { meter } 
+     property_model_input = triangle_equilateral_t
+     property_what = perimeter
+     property_file = triangle_equilateral_perimeter.out 
+   end # property
+
+   property =
+     property_name = perimeter_u
+     property_units_list = { meter } 
+     property_model_input = triangle_scalene_right_u
+     property_what = perimeter
+     property_file = triangle_scalene_right_perimeter.out 
+   end # property
+
+   property =
+     property_name = surface_t
+     property_what = surface
+     property_units_list = { meter } 
+     property_model_input = triangle_equilateral_t
+     property_file = triangle_equilateral_surface.out 
+   end # property
+
+# 1st target
+   target = 
+     domain_name = figure
+     target_name = triangle_equilateral_perimeter
+     target_title = "triangle equilateral perimeter"
+     target_property = perimeter_t
+   end # target
+
+# 2nd target
+   target = 
+     domain_name = figure
+     target_name = triangle_equilateral_surface
+     target_title = "triangle equilateral surface" 
+     target_property = surface_t
+   end # target
+
+# domain
+   domain =
+    domain_name = figure
+    target_list = { triangle_equilateral_perimeter  triangle_equilateral_surface }
+   end # domain
+  

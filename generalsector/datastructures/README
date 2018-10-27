@@ -1,0 +1,11 @@
+This directory contains basic data structures like 
+  doublet duo triplet trio  
+  list
+
+and also 
+  index to index them 
+
+  bond         which generalizes the concept of pair.
+  designator   which abstracts the concept and factorizes functionnalities.
+  entity_state which factorizes all kind of states.
+ 

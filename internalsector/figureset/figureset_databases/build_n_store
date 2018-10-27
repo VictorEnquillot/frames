@@ -1,0 +1,27 @@
+let build_n_store tag_fff =
+  let soi_fff = Tag_v.sole_index_off_tag tag_fff in
+  let nam_mod = Management_v.current_module_name (documentation ()) in 
+  Creation_module_name_by_sole_index_register_v.store soi_fff nam_mod;
+
+  let tag_sss_l = build tag_fff in
+
+  let tag_fat = Tag_v.map_entity                  (* coerce up *)
+      Database_entity_symbol_v.database_entity_symbol_of_fatherent_symbol
+      tag_fff
+  in
+
+  let tag_son_l = List.map 
+      (Tag_v.map_entity                           (* coerce up *)
+	 Database_entity_symbol_v.database_entity_symbol_of_sonent_symbol)
+      tag_sss_l
+  in
+
+  Son_database_entity_tag_list_by_father_database_entity_tag_register_v.store tag_fat tag_son_l;
+
+  let sym_son_l = List.map Tag_v.entity_off_tag tag_son_l in
+  let soi_son_l = List.map Tag_v.sole_index_off_tag tag_son_l in
+
+  List.iter2 Database_entity_symbol_by_sole_index_register_v.store soi_son_l sym_son_l;
+
+  tag_sss_l
+;;

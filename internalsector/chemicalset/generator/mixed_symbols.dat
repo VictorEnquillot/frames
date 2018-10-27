@@ -1,0 +1,93 @@
+constructors chemical                                            =   closed   semi_closed   opened
+
+
+# .closed
+constructors   closed                                            =   closed_atom   closed_block   closed_segment   closed_grouping
+
+
+
+# ..closed_atom
+constructors   closed_atom                                       =   closed_atom_constructor:ofstring
+
+
+# ..closed_block
+constructors   closed_block                                      =   closed_block_constructor:ofstring
+
+
+# ..closed_segment
+constructors   closed_segment                                    =   closed_segment_constructor:ofstring
+
+
+# ..closed_grouping (molecule)
+constructors   closed_grouping                                   =   closed_grouping_constructor:ofstring
+
+
+
+
+# .semi_closed
+constructors   semi_closed                                       =   semi_closed_left   semi_closed_right
+
+# .semi_closed_left
+constructors   semi_closed_left                                  =   semi_closed_left_block   semi_closed_left_segment    semi_closed_left_fragment
+
+# .semi_closed_left_block
+constructors   semi_closed_left_block                            =   z_ch3_s   z_ch2_d   z_ch2_ss   z_ch_t   z_ch_sd  
+
+# .semi_closed_left_segment ( o|...-|- )
+constructors   semi_closed_left_segment                          =   z_nh2_s_ch2_s 
+
+# .semi_closed_left_fragment ( o|...-|< )
+constructors   semi_closed_left_fragment                         =   z_nh2_s_c_sd   
+
+
+
+# .semi_closed_right
+constructors   semi_closed_right                                 =   semi_closed_right_block   semi_closed_right_segment   semi_closed_right_grouping
+
+# .semi_closed_right_block
+constructors   semi_closed_right_block                           =   s_ch3_z   d_ch2_z   t_ch_z
+
+# .semi_closed_right_grouping 
+constructors   semi_closed_right_grouping                        =   semi_closed_right_grouping_constructor:ofstring
+
+
+# .opened
+constructors   opened                                            =   opened_atom   opened_linear  opened_forked 
+
+# ..opened_atom
+constructors   opened_atom                                       =   s_c_sss   s_c_c   s_o_s   c_o_c   z_o_d  
+
+# ..opened_linear
+constructors   opened_linear                                     =   opened_linear_block   opened_linear_segment
+
+# ..opened_linear_block
+constructors   opened_linear_block                               =   s_ch2_s   s_ch2_d   s_ch2_t   s_co_c   c_nh_s
+
+# ..opened_linear_segment
+constructors   opened_linear_segment                             =   s_ch2_s_nh_c_co_s   s_co_c_nh_s_ch2_s
+
+
+
+
+# ..opened_forked
+constructors   opened_forked                                     =   opened_forked_block   opened_forked_fragment
+
+# ...opened_forked_block ( -|< )
+constructors   opened_forked_block                               =   s_c_sd   s_ch_ss
+
+
+# ...opened_forked_fragment ( -|...-|< )
+constructors   opened_forked_fragment                            =   s_co_c_nh_s_ch_ss
+
+
+
+
+description z_ch3_s_oh_z                                         = methanol         
+description z_ch3_s_ch2_s_ch3_z                                  = propane  
+description z_nh2_s_c_sd                                         = guanidine_head
+description c_r5ch_c5r_bc                                        = benzene_c5_ring
+description s_ch2_s_nh_c_co_s                                    = capeptide -CaNhCo-
+description s_co_c_nh_s_ch2_s                                    = peptideca -CoNhCa
+description s_co_c_nh_s_ch_ss                                    = peptideca -CoNhCa<
+description z_nh2_s_ch_ss                                        = peptideca nterminal neutral 
+description z_nh3p1_s_ch_ss                                      = peptideca nterminal cation 

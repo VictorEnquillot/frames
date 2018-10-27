@@ -1,0 +1,49 @@
+modify_word.pl Eas_vdot_longname_aas Es_any_vdot_longname_ac_as *ml
+modify_word.pl Eas_pppf_aas  Es_any_vdot_print_ppf_ac_as *ml
+modify_word.pl Eas_vdot_longname_aas Es_any_vdot_longname_ac_as *ml
+modify_word.pl Eas_vdot_make_aas Es_any_vdot_make_ac_as *ml
+modify_word.pl Eas_vdot_name_aas Es_any_vdot_name_ac_as *ml
+modify_word.pl Eas_vdot_string_off_aas Es_any_vdot_string_off_ac_as *ml
+modify_word.pl Format_sprintf_longname_ass_string_off_ass Format_sprintf_longname_ac_as_string_off_ac_as *ml
+modify_word.pl Pipe_datastructure_ass_arrow Pipe_datastructure_ac_as_arrow *ml 
+modify_word.pl eas_vdot_longname_aas es_any_vdot_longname_ac_as *ml
+modify_word.pl eas_pppf_aas  es_any_vdot_print_ppf_ac_as *ml
+modify_word.pl eas_vdot_longname_aas es_any_vdot_longname_ac_as *ml
+modify_word.pl eas_vdot_make_aas es_any_vdot_make_ac_as *ml
+modify_word.pl eas_vdot_name_aas es_any_vdot_name_ac_as *ml
+modify_word.pl eas_vdot_string_off_aas es_any_vdot_string_off_ac_as *ml
+modify_word.pl format_sprintf_longname_ass_string_off_ass format_sprintf_longname_ac_as_string_off_ac_as *ml
+modify_word.pl pipe_datastructure_ass_arrow pipe_datastructure_ac_as_arrow *ml
+
+modify_word.pl is_aas_vdot_longname_aas is_es_any_vdot_longname_ac_as *ml
+modify_word.pl is_aas_pppf_aas is_es_any_vdot_print_ppf_ac_as *ml
+modify_word.pl is_eas_vdot_longname_aas is_es_any_vdot_longname_ac_as *ml
+modify_word.pl is_aas_vdot_make_aas is_es_any_vdot_make_ac_as *ml
+modify_word.pl is_aas_vdot_name_aas is_es_any_vdot_name_ac_as *ml
+modify_word.pl is_eas_vdot_string_off_aas is_es_any_vdot_string_off_ac_as *ml
+modify_word.pl is_format_sprintf_longname_ass_string_off_ass is_format_sprintf_longname_ac_as_string_off_ac_as *ml
+modify_word.pl is_pipe_datastructure_ass_arrow is_pipe_datastructure_ac_as_arrow *ml
+
+modify_word.pl Let_fullname_ass_equal Let_fullname_ac_as_equal *ml
+modify_word.pl let_fullname_ass_equal let_fullname_ac_as_equal *ml
+modify_word.pl is_let_fullname_ass_equal is_let_fullname_ac_as_equal *ml
+
+modify_word.pl Let_make_soi_at_nam_at_s_equal Let_make_soi_at_nam_at_s_equal *ml
+modify_string.pl _Ess _Es_symbol *ml 
+modify_string.pl _Est _Et_symbol *ml 
+modify_string.pl Ess_ Es_symbol_ *ml 
+modify_string.pl Est_ Et_symbol_ *ml 
+
+modify_word.pl let_make_soi_at_nam_at_s_equal let_make_soi_at_nam_at_s_equal *ml
+modify_string.pl _ess _es_symbol *ml 
+modify_string.pl _est _et_symbol *ml 
+modify_string.pl ess_ es_symbol_ *ml 
+modify_string.pl est_ et_symbol_ *ml 
+ 
+modify_string.pl Esc_ Ec_symbol_ *ml 
+modify_string.pl _Esc _Ec_symbol *ml 
+modify_string.pl esc_ ec_symbol_ *ml 
+modify_string.pl _esc _ec_symbol *ml 
+
+modify_word.pl Let_name_for_a_equal Let_name_for_at_equal *ml
+modify_word.pl let_name_for_a_equal let_name_for_at_equal *ml

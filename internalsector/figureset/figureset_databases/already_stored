@@ -1,0 +1,23 @@
+let error_message_already_stored_value_of_key_of_value key val_ =
+  let nam_fun = "already_stored_message" in
+  
+  let val__old = retrieve key in
+  if val_ <> val__old
+  then 
+    Error_messages_v.print_fatal_error nam_mod nam_fun
+      (Format.sprintf "for key >%s<@.    already stored value :@.   %s@.    equal new one :"
+         (name_of_key key) 
+         (name_of_value val__old)
+      )
+      (Format.sprintf "for new one :@.   %s@.Register stores:@.  %s" 
+         (name_of_value val_)
+         (dump ())
+      )
+      "Check or re-run if it is a test"
+  else 
+    Error_messages_v.print_warning nam_mod nam_fun
+      (Format.sprintf "for key >%s<@.    the same value has already been stored:@.   %s@."
+         (name_of_key key) 
+         (name_of_value val__old)
+      )
+;;

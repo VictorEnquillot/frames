@@ -1,0 +1,29 @@
+FROM_FILES_V_ML := \
+Measure_by_parameter_set_fence_tag_provider_u_any.ml \
+Measure_list_by_parameter_set_body_tuple_tag_provider_u_any.ml \
+Parameter_envelopee_u_any.ml \
+Parameter_envelope_u_any.ml \
+Parameter_set_fence_envelope_u_any.ml \
+Readee_by_parameter_set_fence_tag_provider_u_any.ml \
+Readee_list_by_parameter_set_body_tuple_tag_provider_u_any.ml \
+
+FROM_FILES_U_ML := \
+Elementary_body_parameter_tuple_aopef_envelope_u_cc_pvtz.ml \
+Elementary_body_parameter_tuple_aopef_envelope_u_test_ao.ml \
+Elementary_border_parameter_aopef_coefficient_envelope_u_cc_ptvz.ml \
+Elementary_border_parameter_aopef_coefficient_envelope_u_cc_pvtz.ml \
+Elementary_border_parameter_aopef_coefficient_envelope_u_test_ao.ml \
+Elementary_border_parameter_aopef_envelope_u_test_ao.ml \
+Elementary_border_parameter_aopef_exponent_envelope_u_cc_pvtz.ml \
+Elementary_border_parameter_aopef_exponent_envelope_u_test_ao.ml \
+Elementary_parameter_envelope_u_cc_pvtz.ml \
+Elementary_parameter_tuple_aopef_envelope_u_cc_pvtz.ml \
+Nwchemdata_set_body_node_aoset_numericalvalues_tag_by_parameter_set_body_tuple_aopef_tag_provider_u_cc_pvtz.ml \
+Parameter_envelope_u_point_a_rho.ml \
+Parameter_envelope_u_point_a_tuple.ml \
+Parameter_envelope_u_segment_bc.ml \
+
+UNITARY_TESTS_FILES_ML := \
+$(FROM_FILES_V_ML) \
+$(FROM_FILES_U_ML) \
+

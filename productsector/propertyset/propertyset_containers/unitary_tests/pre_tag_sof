@@ -1,0 +1,9 @@
+let pre_tag_sof sof tag = 
+  let sym = Tag_v.entity_off_tag tag in
+  (Property_symbol_v.is_property_operator_tounit_print_constructor sym) 
+    &&
+  (Property_symbol_v.string_off sym = sof)
+;;
+
+let pre_tag_let_sof sof (s, i) = 
+  Localinput_fence_variable_name_entity_target_symbol_v.localinput_fence_variable_name_entity_target_constructor sof = s;;

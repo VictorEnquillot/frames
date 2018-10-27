@@ -1,0 +1,35 @@
+define Con_ao 
+       context
+         domain "skeleton"
+         database "nwchem"
+         databox "cc_pVTZ"
+         end -- context
+       end -- define
+
+define Aopef_hep21	
+       external 
+         type [ "skeleton" "set" "fence" "centered" "aopef" "constructor" ]
+         external_name "he p 2 1"
+         external_context Con_ao
+         end -- external
+       end -- define
+
+define Uni_len 
+       external 
+         type [ "units" "length" "bohr" ]
+         external_context Con_ao
+         end -- external
+       end -- define
+
+define Uni_ang 
+       external 
+         type [ "units" "angle" "radian" ]
+         external_context Con_ao
+         end -- external
+       end -- define
+
+print Aopef_hep21 
+      units [ Uni_len Uni_ang ]
+      end -- print
+
+stop

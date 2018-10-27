@@ -1,0 +1,4 @@
+NEEDED_DIRS := \
+        $(DATASTRUCTURES_DIR) \
+        $(MUSICSET_SYMBOLS_DIR) \
+ 

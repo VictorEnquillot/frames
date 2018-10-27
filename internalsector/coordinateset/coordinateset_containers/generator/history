@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Elementary_border are Coordinate or Coordinate : Elementary_entities 
+
+cp $FELE/Elementary_border_*coordinate*container*ml .
+cp $FELE/Elementary_body_coordinate_tuple*container*ml .
+
+modify_string.pl Elementary_fence_units Units *ml
+modify_string.pl elementary_fence_units units *ml
+modify_string.pl Elementary_symbol_v Coordinate_symbol_v *ml
+modify_string.pl elementary_symbol coordinate_symbol *ml
+modify_string.pl Elementary_border_coordinate Coordinate_fence *ml
+modify_string.pl elementary_border_coordinate coordinate_fence *ml
+
+modify_string.pl coordinate_aopef  coordinate_fence_aopef *ml
+modify_string.pl coordinate_ecppef  coordinate_fence_ecppef *ml
+modify_strings_and_rename_files.sh Coordinate_aopef   Coordinate_fence_aopef *ml *mk
+modify_strings_and_rename_files.sh Coordinate_ecppef  Coordinate_fence_ecppef *ml *mk
+
+modify_strings_and_rename_files.sh Elementary_border_coordinate Coordinate_set_fence *ml
+modify_strings_and_rename_files.sh Elementary_body_coordinate Coordinate_set_body *ml
+modify_string.pl Son_elementary_tag_list_by_father_elementary_tag Coordinate_son_tag_list_by_coordinate_father_tag *ml
+modify_string.pl _tag_t.units _t.units *ml
+modify_string.pl length_tag_v length_v *ml
+modify_string.pl "_tag Uno" " Uno" *ml
+
+
+modify_word.pl FELE FPAR *ml
+modify_word.pl nam_cod nam_mod *ml
+
+
+ms PARAMETER COORDINATE *mk

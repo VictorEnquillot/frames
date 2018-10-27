@@ -1,0 +1,56 @@
+
+(********************************************************************************* 
+
+      Improve when Testing Tag is not the same as when Running 
+
+  let soi_cap = Tag_v.sole_index_off_tag tag_cap in
+  let ord_cap = List.hd soi_cap in
+  let idx_cap = ord_cap -1 in
+
+  let sym_cap_x = try List.nth sym_cap_l idx_cap 
+  with Failure "nth" ->
+    let sym_ite = Tag_v.symbol_off_tag tag_ite in
+    if Item_symbol_v.is_abbreviating sym_ite
+    then
+      begin
+	Error_messages_v.print_fatal_error nam_cod "build"
+	  (Format.sprintf "For Item Abbreviating Camlparagraph Symbol list :\
+	   @.    >%s<@.    would have only 1 element" 
+	     (List_v.name_with_separator Camlparagraph_symbol_v.string_off "; " sym_cap_l))
+	  (Format.sprintf "Camlparagraph Tag %s with Sole_index %s starting with %i and not with 1" 
+	     (Camlparagraph_tag_v.name tag_cap) (Sole_index_v.name soi_cap) ord_cap )
+	  "Check Camlparagraph Symbol definition in input file"
+      end
+
+    else
+
+      begin
+	Error_messages_v.print_fatal_error nam_cod "build"
+	  (Format.sprintf "Camlparagraph Symbol list :\
+	   @.    >%s<@.    would have at least %i elements as suggested by Sole_index first element : %s" 
+	     (List_v.name_with_separator Camlparagraph_symbol_v.string_off "; " sym_cap_l) 
+	     ord_cap (Sole_index_v.name soi_cap))
+	  (Format.sprintf "Camlparagraph Symbol list has %i elements" 
+	     (List.length sym_cap_l))
+	  "Check Sole index definition in input file"
+      end
+	
+  in
+  let sym_cap_i = Tag_v.symbol_off_tag tag_cap in
+  
+  if sym_cap_i <> sym_cap_x
+  then Error_messages_v.print_fatal_error nam_cod "build"
+      (Format.sprintf "Camlparagraph Symbol from tag_cap were:\
+       @.    >%s<" 
+	 (Camlparagraph_symbol_v.longname sym_cap_i))
+      (Format.sprintf "Camlparagraph Symbol extracted from Symbol list is:\
+       @.    >%s< from Sole Index >%s<\
+       @.    list of Camlparagraph Symbol is@.%s " 
+	 (Camlparagraph_symbol_v.longname sym_cap_x) (Sole_index_v.name soi_cap)
+	 (List_v.name_with_separator Camlparagraph_symbol_v.longname ";\n" sym_cap_l)
+      )
+      "Check Camlparagraph Symbol definition in Test"
+
+  else List.nth pat_sym_ent_ll idx_cap
+*****************************************)
+

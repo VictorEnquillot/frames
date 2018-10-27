@@ -1,0 +1,472 @@
+== Notations ==
+
+  [a; b; ...; x]  is the list a, b, ..., x
+
+== Trees ==
+
+A tree is "an acyclic connected graph where each node has zero or more children nodes and at most one parent node. Furthermore, the children of each node have a specific order." ( http://en.wikipedia.org/wiki/Tree_%28data_structure%29 )
+
+Definitions :
+a. Any node has at most one Father node.
+b. The topmost node in a tree is called the Root.
+An Ancestor of a node A is a node obtained by applying the relation "is the Father of".
+A Path of a node A is the list of all its ancestors including A.
+Any node may have several children nodes.
+A Leaf has no child.
+An Inner node has at least one child node.
+A tree may have several leaves
+A Subtree of a tree T is a tree consisting of a node in T and all of its descendants in T. 
+The Subtree corresponding to the Root is the entire tree.
+The Depth of a node is the length of its Path
+An Edge is a couple associating a Node and its Father.
+Two nodes are Siblings if they have the same Father.
+
+==== Tree Sole Index (SI) ====
+
+
+                        A
+                       [1]
+                    /   |   \
+                  B     B    C
+                [1;1] [2;1] [3;1]
+               /  |  \
+              S   X   S           
+         [1;1;1] [2;1;1] [3;1;1]
+ 
+It is a list of integer (noted [i; j; ..; k]) associated with each node of a tree such that :
+
+1. the canonical index of the Root is [1]
+2. o is the ordinal index of a node as a member of a son list, defined by some order relation between nodes.
+2. the canonical index of a node is obtained by prepending ( "::" operator) its ordinal index o to the canonical index i of its father :
+ 
+thus, in a tree T, if co is the o-th sibling among the chilren of node n and tci(n) the canonical index of n in T :
+
+  if tci(n) = [i; j; ...; m] 
+  
+  then tci(co) = o :: [i; j; ...; m]  
+  or   tci(co) = [o; i; j; ...; m]
+
+Properties :
+1. the mapping : node <-> canonical index is bijective.
+2. the depth of a path from a node to the root of the tree is the length of its index.
+3. the canonical index of a node is a suffix of the canonical index of any of its descendents.
+
+The SIs form a tree isomorphic to the tree it is built from, where all nodes are distinct.
+Therefore given a SI the corresponding node can be obtained.
+
+A SI is an abstract path.
+ 
+ V = Hash (SI)
+
+==============================================================================================
+== Entity Triangle ==
+
+Bad design :
+
+type triangle = Point * Vector;;
+
+type triangle = string * kind * point * vector;;
+
+type triangle = {
+   name : string;
+   kind : kind;
+   point : point;
+   vector : vector
+};;
+
+=== Triangle Symbol ===
+
+* see frames/generatorset/README#Symbol
+
+type triangle_symbol =
+  | Equilateral
+  | Isoceles of isoceles
+  | Scalene of scalene
+
+and isoceles =
+  | Isoceles_right
+  | Isoceles_oblique of isoceles_oblique
+
+and isoceles_oblique	
+  | Isoceles_oblique_obtuse
+  | Isoceles_oblique_acute
+
+and scalene
+  | Scalene_right
+  | Scalene_oblique of scalene_oblique
+
+and scalene_oblique =
+  | Scalene_oblique_obtuse
+  | Scalene_oblique_acute
+;;
+
+This type splits the Set of Triangles into 7 disjoint subsets.
+
+Note : A hierachical type is a tree for the relation "is a subtype of" but not a container tree for which the relation is "is contained in" 
+
+( file triangle_symbol_t.ml )
+( file triangle_isoceles_symbol_t.ml )
+
+This type splits the Set of Triangles into 7 disjoint subsets.
+
+=== Wrong design Symbols ===
+
+type triangle_symbol =
+  | Equilateral
+  | Isoceles
+  | Obtuse
+  | Acute
+  | Right	    
+
+and isoceles_right = Isoceles * Right
+and Isoceles_obtuse = Isoceles * Obtuse
+and Isoceles_acute = Isoceles * Acute
+
+and Scalene_right = Scalene * Right
+and Scalene_obtuse = Scalene * Obtuse
+and Scalene_acute = Scalene * Acute
+;;
+
+type point_symbol = 
+  | One_dimension_point
+  | Two_dimension_point
+  | Three_dimension_point
+  | Huge_dimension_point
+;;
+
+type vector_symbol = 
+  | One_dimension_vector
+  | Two_dimension_vector
+  | Three_dimension_vector
+  | Huge_dimension_vector
+;;
+
+Therefore we propose the following design for triangle_formula : 
+
+type triangle_formula = (point_symbol, vector_symbol) doublet;;
+
+This tells that any value computed for a Triangle should use that of a point (its summit) and a vector (its basis).
+
+Remark :
+It should be remarked that such a design defines a unique triangle : each vertex point could not be confused with the two others. The summit is not confused with the basis points and the basis is made of two individuated points the origin and the end of the vector (see below).
+
+=== Symbol Constructor Tree (SCT) ===
+
+The Constructor tree of an entity E is the tree having E as Root and defined by the relation
+
+ "is a subtype of"
+  
+The SCT for a Triangle Symbol is :
+
+
+                              triangle_symbol
+                   -------------------------------------------
+                  /                   |                       \
+       Equilateral                Isoceles                    Scalene
+                             ------------                    -----------
+                            /            \                  /           \
+                   Isoceles_right Isoceles_oblique   Scalene_right Scalene_oblique
+                                       /         \                    /   \
+                           Isoceles_oblique_obtuse\  Scalene_oblique_obtuse\ 
+                                Isoceles_oblique_acute   Scalene_oblique_acute
+
+
+=== Value Production Tree (VPT) === 
+
+The production_tree of a value of an entity E is the tree having E as Root and whose children Ci are some values of the arguments of the unique building function of E.
+
+In other words the edges of PT(E) is defined by the relation
+
+  "a value of E needs a value of Ci to be computed" 
+
+N.B. : an entity may have several values in the same calculation. 
+
+Or B belongs to the Formula of E. 
+
+A path in PT (or path) is a tree-canonical-indexed list of node symbols related by the "is_needed_by relation" 
+
+                   Triangle_value
+                     /        \                  
+             Point_value      Vector_value
+                / | \           /      \
+            Float Float Float  /        \
+                         Point_value  Point_value
+                          / | \            / | \
+                    Float Float Float  Float Float Float
+
+type triangle_value = point_value * vector_value;;
+type vector_value = point_value * point_value;;
+type point_value = coordinate_value list;;
+type coordinate_value = float * unit;;
+type unit = Unit of string;;
+ 
+=== Data Tree (DT) ===
+Data values are not calculated, they are extracted from pre-existing values.
+
+     x y z   x y z   x y z
+    
+       A       B      C
+
+          triangle
+ 
+          database 
+
+=== Tag ===
+
+A Tag of an entity E couples its Symbol with its tree-canonical-index (SI).
+
+type triangle_tag = triangle_symbol * tree_canonical_index;;
+
+For example (Triangle_symbol, [1]) for Triangle ABC
+
+=== Path ===
+
+The Path of an entity E is its path in the PT it belongs to, the nodes of which are the tags of the entities
+
+The Path of the triangle is
+
+   the list [(triangle_symbol, [1])]
+
+The Path of the summit is
+
+   the list [(point_symbol, [1; 1]), (triangle_symbol, [1])]
+
+The Path of the basis is
+
+   the list [(vector_symbol, [2; 1]), (triangle_symbol, [1])]
+
+The Path of the origin of the basis is
+
+   the list [(point_symbol, [1; 2; 1]); (vector_symbol, [2; 1]); (triangle_symbol, [1])]
+
+The Path of the end of the basis is
+
+   the list [(point_symbol, [2; 2; 1]); (vector_symbol, [2; 1]); (triangle_symbol, [1])]
+
+=== Formula ===
+
+It is designed by the programmer.
+A Formula for an Entity E tells what entity are included in E value.  is a Datastructure made off the Symbols of the Entity Sons.
+
+Remark : May be a Datastructure (only a list ?) of Tags, it has enough information to build the path of the sons from it and the path of the father. 
+
+
+
+type triangle_formula = point_tag * vector_tag
+
+type vector_formula = point_tag * point_tag
+
+type point_formula = coordinate_tag list;;
+
+type coordinate = float;;
+
+A coordinate has NO formula : it is a leaf of the Production tree (PT).
+
+To produce the Formula of a Triangle, a Vector, a Point :
+1. build its database key from its path
+2. get its formula from the Database 
+
+=== The Value ===
+
+type triangle_value = point_value * vector_value;;
+type vector_value = point_value * point_value;;
+type point_value = coordinate_value list;;
+type coordinate_value = float * unit;;
+type unit = Unit of string;;
+
+The values of the Coordinates are taken from a Database, using
+as Key the "path" of each data.
+
+=== The Provider for values ===
+
+For any Entity the provider provides the entity_value from its tag :
+
+  entity_value = triangle_provide entity_tag
+
+in the provide function the build function is a mapping.
+
+=== The Provider for data ===
+
+Data are the leaves of the PT.
+
+map : ('a -> 'b) -> 'a datastructure -> 'b datastructure
+
+== Alien Database ==
+
+=== ADB1 ===
+triangle T
+vertex   A       1. 1. 0.
+vertex   B       0. 0. 0.
+vertex   C       2. 0. 0.
+
+triangle U
+vertex   A       1. -1. 0.
+vertex   B       0. 0. 0.
+vertex   C       2. 0. 0.
+
+            
+1. read the full Alien database file Adi in a string list F
+2. split F into n lists of string list each containing the information for a Triangle.
+(Triangles [T1; ...; Tn])
+3. store each data Ti with KTi = "ti Adi"
+4. split Ti into a list of data Vi.
+5. store each data Vi with KTi = "vi ti Adi"
+6. extract each Xi, Yi, Zi from each Vi.
+7. store (Xi,Yi,Zi) with KVi = "xyz vi ti Adi"
+8. define space dimension
+
+The provider_data module implements this.
+
+
+Translate the path from Code World into Database key.
+-------------------------------
+ pth         |  adi key
+------------------------------
+ [1]        -> "T ADB1"
+ [1; 1]     -> "A T ADB1"
+ [1; 2; 1]  -> "B T ADB1"
+ [2; 2; 1]  -> "C T ADB1"
+
+The provider_value module implements this.
+
+
+=== ADB2 ===
+
+triangle T
+summit   A
+basis    B C
+
+vertex A       1. 1. 0.
+vertex B       0. 0. 0.
+vertex C       2. 0. 0.
+
+triangle U
+summit   A
+basis    B C
+
+vertex A       1. -1. 0.
+vertex B       0. 0. 0.
+vertex C       2. 0. 0.
+
+
+The Database Tree of string lists
+
+           Triangle
+
+  etc ...
+--------------------------------caml program --------
+     X Y Z   X Y Z   X Y Z 
+
+     | | |   | | |   | | |  
+     traduction Tag -> Key      interface in Caml 
+     | | |   | | |   | | |  
+
+--------------------------------database ------------
+     x y z   x y z   x y z 
+    
+       A       B      C
+
+          triangle
+ 
+          database 
+
+===== ====
+DATABASE Maziar
+NAME T
+POINT X   Y   Z 
+A    x1  y1  z1
+B    x2  y2  z2
+C    x3  y3  z3
+
+
+
+=== Translation ===
+
+The path (pth) of the Code World is translated to the Alien Database Key (ADK) of the Data World.
+
+adk = translate pth 
+
+------------------------------
+Construire les idées 
+
+mind mapping (free mind?)
+
+=== Information flow ===
+
+ tags from top to bottom
+ value from bottom to top
+
+------------------------------
+                        Value
+                          |
+                       Formula
+                          |
+                      Interface
+                          |
+                  ------------------
+                  |                |  
+                Tags           Database
+                  |
+               Symbols          
+                                Formulas for a Triangle
+
+                                    ------------
+                                    | Triangle |
+                                    ------------
+                                         |
+                                 --------*---------
+                                 | Point | Vector |
+                                 ------------------
+                                     |        |
+-------------------------------------*--     -*---------------
+| Coordinate | Coordinate | Coordinate |     | Point | Point |
+----------------------------------------     -----------------
+      |            |            |                |       |
+      |      ------------------------------------*---    |  
+      |      | Coordinate | Coordinate | Coordinate |    |
+      |      ----------------------------------------    |
+      |            |            |            |           |
+      |            |      -------------------------------*-------  
+      |            |      | Coordinate | Coordinate | Coordinate |  
+      |            |      ----------------------------------------  
+      |            |            |            |           |
+ 
+                The Symbol Tree for Figureset Domain
+
+
+                       Figureset
+                           |
+             -----------------------------
+             |         |       |         |
+         Triangle | Vector | Point | Coordinate
+
+
+                      Triangle 
+                          |
+    -----------------------------------------------------
+    |                     |                             |
+Equilateral            Isoceles                      Scalene 
+                          |                             |
+                  -----------------              ------------------
+                  |               |             |                 |
+          Isoceles_right  Isoceles_oblique  Scalene_right  Scalene_oblique  
+                                  |
+                          -----------------
+                          |               |
+             Isoceles_oblique_acute Isoceles_oblique_obtuse
+
+
+ Vector and  Point are leaves 
+
+                     Coordinate
+                         |
+    ---------------------------------------------
+    |            |              |               |
+Cartesian   Cylindrical       Polar         Spherical
+    |            |              |               |
+---------   -----------      -------     --------------
+|   |   |   |    |     |    |   |   |    |      |     | 
+X | Y | Z  Rho | Phi | Zed  Rho | Theta  Rho | Phi | Psi
+
+
+

@@ -1,0 +1,191 @@
+description protein = a pure example for a description
+
+#
+# should be 
+# type block = capped_list atom_multitied:tag atom_onetied:tag 
+# type fragment = list block:tag 
+# type molecule = capped_list fragment_head:tag grouping:tag
+# type cluster = list molecule:tag # Local (Frames) Formula Database for Chemicalset
+#
+# in bond _b_ b : s, c, d, t
+# halfbridge atom  : x
+# halfbridge block : y
+# atomic charge is mn or pn
+# A is element (? or more ?) + atomic charge (Ex.: Np1, Om2)
+
+# An Atom content is reduced to an Atom Tag or Mark   
+#
+# atom zerotied  : A
+# atom onetied   : A_b
+# atom twotied   : A_bb
+# atom threetied : A_bbb
+# atom fourtied  : A_bbbb
+
+# block    :   B     =   A...A       
+# block    : b_B     = b_A...A       
+# block    :   B_b   =   A...A_b       
+# block    : b_B_b   = b_A...A_b     
+# block    : b_B_bb  = b_A...A_bb    
+# block    : b_B_bbb = b_A...A_bbb  
+
+# segment  :   S     =   B_b..._b_B_b
+# segment  : b_S     = b_B_b..._b_B_b
+
+# fragment :   F     =   B_b..._b_B
+# fragment :   F_bb  =   B_b..._b_B_bb
+# fragment :   F_bbb =   B_b..._b_B_bbb
+# fragment : b_F_bb  = b_B_b..._b_B_bb  
+# fragment : b_F_bbb = b_B_b..._b_B_bbb  
+
+# grouping : b_G     = b_F 
+# grouping : b_G     = b_F_bb (b_G b_G)
+# grouping : b_G     = b_F_bbb (b_G b_G b_G)
+
+# molecule : M = A
+# molecule : M = B
+# molecule : M = F
+# molecule : M = F_bb (b_G b_G)
+# molecule : M = F_bbb (b_G b_G b_G)
+
+# block 
+
+builders d_c_d = c_dd
+builders d_c_ss = c_dss
+builders s_c_ds = c_dss 
+builders s_c_sd  = c_dss
+builders s_c_sss = c_ssss
+builders z_c_ssss = c_ssss 
+builders s_c_t = c_ts 
+
+builders z_he_z    = he
+builders z_ne_z    = ne
+builders z_fm1_z   = fm1
+builders z_hm1_z   = hm1
+builders z_clm1_z  = clm1
+builders z_brm1_z  = brm1
+builders z_im1_z   = im1
+
+builders s_be_s  = be_ss
+builders s_bf_s  = b_sss  s_f_s
+
+builders d_nh_z  = n_sd   h_s
+
+builders z_coh_s = c_ssd  o_d h_s 
+builders s_ch2_s = c_ssss h_s h_s
+builders s_ch_d  = c_dss  h_s
+builders s_ch_ss = c_ssss h_s
+
+builders s_nh2_z  = n_sss h_s h_s
+builders s_nhp1_c = n_ssc h_s
+builders c_hba_z  = hba_c 
+builders c_hbb_z  = hbb_c 
+builders s_hba_z  = hba_s 
+builders s_hbb_z  = hbb_s 
+
+# builders s_clf_s =
+# builders s_co_c =
+# builders s_im1_s =
+# builders s_n_ss =
+# builders s_nh_s =
+# builders s_o_s =
+# builders s_sf2_s =
+# builders z_becl2_z =
+# builders z_becl_s =
+# builders z_ccl2_z =
+# builders z_ccl_s =
+# builders z_ch2_d =
+builders z_ch3_s = c_ssss h_s h_s h_s
+# builders z_ch4_z =
+# builders z_ch_t =
+# builders z_co_z =
+# builders z_coh2_z =
+# builders z_coh_s =
+# builders z_h_s =
+# builders z_i2m1_s =
+# builders z_i3m1_z =
+# builders z_n_t =
+# builders z_nh2_c =
+# builders z_nh2_s =
+# builders z_nh3_z =
+builders z_nh3p1_s = n_ssss h_s h_s h_s  
+# builders z_of2_z = 
+# builders z_of_s =  n_ssss h_s h_s h_s
+
+# builders 
+
+# builders fragment
+
+builders c_chr5_c              = list c_ch_c c_ch_c c_ch_c c_ch_c c_ch_c 
+builders n_nh2_s_c_sd          = list n_nh2_s s_c_sd
+builders s_nh2_z               = singlet s_nh2_z
+builders d_nh_z                = singlet d_nh_z
+
+builders s_ch2r3_s_chx_s       = list s_ch2_s s_ch2_s s_ch2_s s_chx_s 
+builders s_ch2r3_s_nhp1_c_c_ss = list s_ch2_s s_ch2_s s_ch2_s s_nph1_c c_c_ss
+builders z_oh_s_c_cc           = list z_oh_s s_c_cc
+builders c_chr5_c_hba_z        = list c_ch_c c_ch_c c_ch_c c_ch_c c_ch_c c_hba_z
+builders c_pyrrole_cc          = list c_ch_c c_nh_c c_c_cc
+builders f_glycine             = list z_oh_s s_co_c c_nh_s s_ch2_z
+builders f_glycine_cis         = list z_oh_s s_co_v v_nh_s s_ch2_z
+builders f_glycine_trans       = list z_oh_s s_co_u u_nh_s s_ch2_z
+
+builders f_c_hba               = singlet c_hba_z
+builders f_c_hbb               = singlet c_hbb_z
+
+# grouping   :  fragment_symbol ending with two links + (grouping mark list)
+
+builders g_c_hba               = singlet f_c_hba
+builders g_c_hbb               = singlet f_c_hbb
+
+builders benzole_trp           = capped_list c_benzole_trp_cc      g_c_hba        g_c_hbb
+builders g_guanidine           = capped_list s_nh_d_c_ss           s_nh2_z        s_nh2_z
+builders indole_trp            = capped_list c_pyrrole_cc          g_c_hbb        g_benzole_trp
+builders sidegroup_arginine    = capped_list s_ch2r3_s_nhp1_c_c_ss s_nh2_z        s_nh2_z 
+builders sidegroup_valine      = capped_list s_ch_ss:tet_o         s_ch3_z  s_ch3_z 
+builders sidegroup_threonine   = capped_list s_ch_ss:tet_o         s_oh_z   s_ch3_z 
+builders sidegroup_threonine_r = capped_list s_ch_ss:tet_o         s_ch3_z  oh_z 
+builders sidegroup_tryptophan  = capped_list s_ch2_s_ch_cc         f_pyrrole_trp  f_c_hba
+
+# builders                     = fragment_head  + (grouping mark list)
+# builders cycle               = fragment_open  + (grouping mark list)
+
+# molecule   :  capped_list fragment_head  grouping
+
+builders carbonmonoxide        = capped_list  z_co_z 
+builders dihydrogen            = capped_list  z_hh_z 
+builders dinitrogen            = capped_list  z_nn_z 
+builders dioxygen              = capped_list  z_oo_z 
+builders hydrogenchloride      = capped_list  z_clh_z 
+builders hydrogenfluoride      = capped_list  z_fh_z 
+builders hydrogensulfide       = capped_list  z_sh_z 
+
+builders water                 = capped_list  z_ohh_z 
+
+builders propane               = capped_list  z_ch3_s_ch2_s_ch3_z 
+builders butane                = capped_list  z_ch3_s_ch2_s_ch2_s_ch3_z 
+builders nitromethane          = capped_list  z_noo_s_ch3_z 
+
+builders benzene               = capped_list  c_ch_cc               c_hba_z    c_chr5_c_hba_z
+builders phenol                = capped_list  z_oh_s_c_cc           c_hba_z    c_chr5_c_hba_z 
+
+builders guanidine             = capped_list  z_nh2_s_c_sd   s_nh2_z    d_nh_z
+
+builders glycine               = list z_oh_s_co_c_nh_s_ch2_z
+builders glycine_cis           = list z_oh_s_co_v_nh_s_ch2_z
+builders glycine_trans         = list z_oh_s_co_u_nh_s_ch2_z
+
+description benzole_trp        = 6C-ring in tryptophan
+description benzene            = hba chr6 hba  correct ? linear builders molecule
+description s_ch2r3_s_chx_s    = TriMetheneMethine Proline sidegroup
+
+
+builders fragment_buried_fromid  = duo string string
+builders fragment_closed_fromid  = duo string string
+builders fragment_head_fromid    = duo string string
+builders fragment_leaf_fromid    = duo string string
+builders grouping_fromid         = duo string string
+builders molecule_forked_fromid  = duo string string
+builders molecule_polymer_fromid = duo string string
+builders polypeptide_fromid      = duo string string
+
+description x_fromid = duo database_name molecule_name

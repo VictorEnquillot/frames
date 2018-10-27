@@ -1,0 +1,74 @@
+open Make_test_v;;
+
+testing "Nwchemdata_as_context_databox_tag_by_databox_name_provider_v with
+    Nwchemdata_as_context_databox_tag_by_databox_name_provider_u_any.ml";;
+
+(* Deleting Registers *)
+Register_v.delete Databox_name_n_database_name_by_nwchemdata_context_databox_tag_register_v.register;;
+Register_v.delete Nwchemdata_creation_module_name_by_sole_index_register_v.register;;
+Register_v.delete Nwchemdata_set_fence_by_nwchemdata_tag_register_v.register;;
+Register_v.delete Nwchemdata_son_tag_list_by_nwchemdata_father_tag_register_v.register;;
+Register_v.delete Nwchemdata_symbol_by_sole_index_register_v.register;;
+Register_v.delete Nwchemdata_symbol_subtree_by_databox_name_register_v.register;;
+Register_v.delete Nwchemdata_tag_all_list_by_databox_name_register_v.register;;
+Register_v.delete Nwchemdata_tag_all_list_by_nwchemdata_context_databox_tag_register_v.register;;
+Register_v.delete Nwchemdata_tag_subtree_by_nwchemdata_tag_register_v.register;;
+Register_v.delete Nwchemdata_tag_tree_by_databox_name_register_v.register;;
+
+
+
+(* Tracing *)
+
+
+(* toplevel 
+   #use "Nwchemdata_as_context_databox_tag_by_databox_name_provider_u_any.ml";; 
+
+*)
+
+
+open Nwchemdata_as_context_databox_tag_by_databox_name_provider_v;;
+
+let (nam_nba, nam_dom, nam_sec) = 
+  Nwchemdata_context_name_trio_by_unit_provider_v.provide () 
+;;
+
+test_number 1 (
+((nam_nba, nam_dom, nam_sec) : string Trio_t.trio ) = 
+("nwchem", "skeleton", "external") 
+);;
+
+let nam_nbo = "cc_pVTZ";;
+
+let soi_nbo = 
+  Context_sole_index_by_context_name_quatuor_provider_v.provide 
+    (nam_nbo, nam_nba, nam_dom, nam_sec) ;;
+
+test_number 2 (
+(soi_nbo : Sole_index_t.sole_index ) = 
+[13; 5; 20; 2]
+);;
+
+let sym_nwc_nbo = Nwchemdata_symbol_v.nwchemdata_context_databox_constructor nam_nbo;;
+
+test_number 3 (
+(sym_nwc_nbo : Nwchemdata_symbol_t.nwchemdata_symbol ) =
+  Nwchemdata_symbol_t.Nwchemdata_context_symbol
+   (Nwchemdata_context_symbol_t.Nwchemdata_context_databox_symbol
+     (Nwchemdata_context_databox_symbol_t.Nwchemdata_context_databox_constructor
+       "cc_pVTZ"))
+);;
+
+let tag_nwc_nbo = Tag_v.make sym_nwc_nbo soi_nbo;;
+
+test_number 4 (
+( tag_nwc_nbo : Nwchemdata_symbol_t.nwchemdata_symbol Tag_t.tag ) =
+  (Nwchemdata_symbol_t.Nwchemdata_context_symbol
+    (Nwchemdata_context_symbol_t.Nwchemdata_context_databox_symbol
+      (Nwchemdata_context_databox_symbol_t.Nwchemdata_context_databox_constructor
+        "cc_pVTZ")),
+   [13; 5; 20; 2])
+);;
+
+test_number 5 (
+tag_nwc_nbo = provide nam_nbo
+);;

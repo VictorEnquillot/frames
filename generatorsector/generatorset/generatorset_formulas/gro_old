@@ -1,0 +1,14 @@
+
+  let idx_gro = Sole_index_v.father_index_off_sole_index soi_cal in
+  let sym_ent_tos_l = Tools_ignr_v.entity_topson_symbol_list_of_dectup dec_ccc in
+  let sym_ent_son = 
+    try List.nth sym_ent_tos_l (idx_gro-1) 
+    with | Failure "nth" ->
+      Error_messages_v.print_fatal_error nam_cod "make"
+	"Number of Son Camlline_symbol > 0"
+	(Format.sprintf "None of them for Camlline >%s< when idx_gro = %i" 
+	   (Camlline_for_formula_duo_son_top_symbol_v.name sym_ccc) idx_gro
+	)
+	"Check"
+  in
+

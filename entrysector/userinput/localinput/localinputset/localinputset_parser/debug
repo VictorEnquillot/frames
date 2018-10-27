@@ -1,0 +1,3 @@
+  Input_parser_tools_v.debug_what "input" nam_mod nam_fun (Stack.top sym_lex_s);
+
+    Input_parser_tools_v.debug_what "pop" nam_mod nam_fun sym_lex_cur;

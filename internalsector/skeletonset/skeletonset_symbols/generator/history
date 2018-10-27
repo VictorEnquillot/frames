@@ -1,0 +1,26 @@
+msrf keleton_as_body keleton_as_set_body *ml *mk
+msrf keleton_as_fence keleton_as_set_fence *ml *mk
+msrf keleton_body keleton_set_body *ml *mk
+msrf keleton_fence keleton_set_fence *ml *mk
+
+msrf keleton_as_body keleton_as_set_body *dat
+msrf keleton_as_fence keleton_as_set_fence *dat
+msrf keleton_body keleton_set_body *dat
+msrf keleton_fence keleton_set_fence *datlocate efp | grep symbol_t.ml | grep -v symbol_t.mli | grep frames_2_sep_2011 | grep -v top_17_sep_2012 | grep -v markers/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/prototypeset_tags/cefp_basisset_symbol_t.ml
+
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/prototypeset_tags/cefp_cluster_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/prototypeset_tags/cefp_pack_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/prototypeset_tags/cefp_single_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/prototypeset_tags/efp_expanded_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/prototypeset_tags/efp_single_symbol_t.ml
+
+
+locate xfp | grep symbol_t.ml | grep -v symbol_t.mli | grep frames_2_sep_2011 | grep -v top_17_sep_2012 | grep -v markers
+
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/xfp_expanded_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/xfp_single_symbol_t.ml
+
+
+
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/values/prototypeset_values/README
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/paths/primitiveset_paths/README

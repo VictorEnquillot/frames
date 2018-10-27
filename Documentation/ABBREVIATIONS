@@ -1,0 +1,48 @@
+   Xyz_symbols  sxyz
+
+   xyzdata      xyzd
+   xyzfiles     xyzf
+   xyzset       xyzs
+
+   "Abbreviation : coe  = elementary_border_parameter_aopef_coefficient";
+   "Abbreviation : exp  = elementary_border_parameter_aopef_exponent";
+   "Abbreviation :        Categories";
+   "Abbreviation : con = container"; 
+   "Abbreviation : env = envelope"; 
+   "Abbreviation : sym = symbol"; 
+   "Abbreviation : tag = tag"; 
+   "Abbreviation :        Regular"; 
+   "Abbreviation : anv  = aoset_numerical_values";
+   "Abbreviation : nwc  = nwchem";
+   "Abbreviation : nbn  = nwchem_body_node";
+   "Abbreviation : nbo  = nwchem_context_databox";
+   "Abbreviation :        Entities";
+   "Abbreviation : nam_dom = domain name";
+   "Abbreviation : nam_dba = database name";
+   "Abbreviation : nam_dfi = databox name";
+   "Abbreviation : cna = context_name";
+   "Abbreviation : db1 = db1figure";
+   "Abbreviation : dba = db1figure_context_database";
+   "Abbreviation : dbo = db1figure_context_databox";
+   "Abbreviation : dcd = db1figure_context_domain";
+   "Abbreviation : ddd = db1figure_context_domaindata";
+   "Abbreviation : ddn = db1figure_database_name";
+   "Abbreviation : ddn = db1figure_domaindata_name";
+   "Abbreviation : dfk = db1figure_fence_token_figure_kind";
+   "Abbreviation : dsf = db1figure_body_sequence_float";
+   "Abbreviation : dua = db1figure_fence_token_figure_units_angle";
+   "Abbreviation : dul = db1figure_fence_token_figure_units_length";
+   "Abbreviation : ele  = elementary";
+   "Abbreviation : ebo  = elementary_context_databox";
+   "Abbreviation : eta  = elementary_body_parameter_tuple_aopef";
+   "Abbreviation : ept  = elementary_body_parameter_tuple";
+   "Abbreviation :        Datastructure suffixes";
+   "Abbreviation : l    = list";
+   "Abbreviation : ll   = list list";
+   "Abbreviation : d    = doublet or duo";
+   "Abbreviation : dl   = doublet_list or duo_list";
+   "Abbreviation : t    = tree or tuple or trio or triplet";
+   "Abbreviation : tl   = tree_list or tuple_list or trio_list or triplet_list";
+   "Abbreviation : st   = subtree";
+   "Abbreviation : stl  = subtree list";
+   "Abbreviation : stll = subtree list list";

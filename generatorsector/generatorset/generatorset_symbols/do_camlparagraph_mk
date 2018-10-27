@@ -1,0 +1,4 @@
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/files_mli.mk a
+echo "CAMLPARAGRAPH_T_MLI := \\" > files_camlparagraph_t_mli.mk
+grep Camlparagraph a >> files_camlparagraph_t_mli.mk
+echo "" >> files_camlparagraph_t_mli.mk

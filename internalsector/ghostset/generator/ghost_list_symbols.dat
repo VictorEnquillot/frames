@@ -1,0 +1,35 @@
+constructors ghost                    =   ghost_list  fake_list
+
+constructors ghost_list               =   coordinate   point   triangle   vector   fake
+
+# triangle
+constructors triangle                  =   triangle_isoceles   triangle_scalene
+constructors triangle_isoceles         =   triangle_isoceles_equilateral   triangle_isoceles_right   triangle_isoceles_acute   triangle_isoceles_obtuse
+constructors triangle_scalene          =   triangle_scalene_right   triangle_scalene_acute   triangle_scalene_obtuse
+
+constructors fake                      =   fake_son 
+
+constructors fake_son                  =   fake_son_constructor
+
+# vector
+
+constructors vector                    =   vector_constructor
+
+# point                         
+
+constructors point                     =   point_constructor:ofstring
+
+# coordinate
+constructors coordinate                =   coordinate_cartesian   coordinate_cylindrical   coordinate_polar   coordinate_spherical 
+
+constructors coordinate_cartesian      =   x:ofstring   y:ofstring   z:ofstring 
+constructors coordinate_cylindrical    =   cylindrical_rho   cylindrical_phi   cylindrical_zed
+constructors coordinate_spherical      =   spherical_rho   spherical_phi   spherical_theta   
+constructors coordinate_polar          =   polar_rho   polar_theta   
+
+description spherical_rho      = distance to origin
+description spherical_phi      = angular coordinate in xy plane
+description spherical_psi      = angular coordinate to z axis
+description cylindrical_rho    = distance to z axis
+description cylindrical_phi    = angular coordinate in xy plane
+description cylindrical_zed    = projection on z axis

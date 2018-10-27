@@ -1,0 +1,11 @@
+  | Item_for_formula_only_top_symbol_t.Typing_for_formula ->
+(* camlparagraph_for_any_comment : item_title *)
+(* camlparagraph_for_formula_symbol : camlparagraph_for_formula_type *)
+
+    let sym_ca1 = Camlparagraph_for_any_comment_symbol_v.item_title in
+    let sym_ca2 = Camlparagraph_for_formula_symbol_v.camlparagraph_for_formula_type in
+
+      [
+       Camlparagraph_symbol_v.camlparagraph_symbol_of_camlparagraph_for_any_comment_symbol sym_ca1;
+       Camlparagraph_symbol_v.camlparagraph_symbol_of_camlparagraph_for_formula_symbol sym_ca2;
+     ]

@@ -1,0 +1,77 @@
+# input for a Run
+# 1st Model
+   model =
+     model_name = triangle_equilateral
+     model_title = "a triangle equilateral"
+     database_name = db1
+     entity_what = triangle_isosceles_equilateral
+     entity_name = T
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+# 2nd Model
+   model =
+     model_name = center_a
+     model_title = "a point for an homothety"
+     database_name = db1
+     entity_what = point
+     entity_name = a
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+# 3rd Model
+   model =
+     model_name = vector_bc
+     model_title = "a vector for a translation"
+     database_name = db1
+     entity_what = vector
+     entity_name = bc
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+# Property 
+
+#  property =
+#     property_name = triangle_homothety 
+#     property_units_length = meter 
+#     property_file = triangle_equilateral_homothety.out 
+#  end # property 
+ 
+   homothety =
+     homothety_name = homothety_a_2
+     homothety_center = center_a
+     homothety_ratio = 2. 
+   end # homothety
+
+# 1st target
+   target = 
+     domain_name = figure
+     target_name = triangle_equilateral_homothety
+     target_title = "triangle equilateral homothety" 
+     property_name = triangle_homothety 
+     property_what = homothety_a_2
+     property_units_list = { meter radian } 
+     property_file = triangle_equilateral_homothety.out 
+     property_entity_name = Th
+   end # target
+
+# 2st target
+   target = 
+     domain_name = figure
+     target_name = triangle_equilateral_translation
+     target_title = "triangle equilateral translation" 
+     property_file = triangle_equilateral_translation.out 
+     property_name = triangle_translation 
+     property_units_list = { meter } 
+     property_what = translation_bc
+     property_entity_name = Tbc
+   end # target
+
+# domain
+   domain =
+    domain_name = figure
+    target_list = { triangle_equilateral_homothety triangle_equilateral_translation }
+   end # domain

@@ -1,0 +1,7 @@
+  let sym_lvk = 
+    Localinput_set_fence_variable_kind_symbol_by_variable_name_n_inputbox_name_provide_v.provide 
+      (nam_ibo, nam_var)
+  in
+  if Localinput_set_fence_variable_kind_symbol_v.is_localinput_set_fence_variable_kind_context_constructor sym_lvk
+  then
+    begin

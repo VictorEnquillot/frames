@@ -1,0 +1,72 @@
+
+LIB = tools
+
+SETUP_DIR = ../../..
+
+#setup
+MAKEFILES_DIR = $(SETUP_DIR)/Mk
+FRAMES_DIR = $(SETUP_DIR)/frames
+GENERAL_DIR = $(FRAMES_DIR)/general
+
+# general dir
+UNITS_DIR = $(GENERAL_DIR)/units
+TOOLS_DIR = $(GENERAL_DIR)/tools
+LINEAR_ALGEBRA_DIR = $(GENERAL_DIR)/linear_algebra
+
+# general lib
+UNITS_LIB = $(UNITS_DIR)/units
+TOOLS_LIB = $(TOOLS_DIR)/tools
+LINEAR_ALGEBRA_LIB = $(LINEAR_ALGEBRA_DIR)/linear_algebra
+
+# paths
+
+# test
+SUBDIRS = test
+
+# needed libs
+NEEDED_DIRS = 
+LIBS =  
+NEEDED_LIBS = $(LIBS:%=%.cma)
+
+# Include the generic configuration for Caml applications.
+include $(MAKEFILES_DIR)/Config.mk
+
+# CAMLINTFILES (*.mli) from include 
+include ocaml_files_mli.mk
+
+# Implementation files
+CAMLIMPFILES = $(CAMLINTFILES:.mli=.ml)
+
+# -I ../dir ...
+CAML_INCLUDED_DIRS = \
+
+CAMLFILES = $(CAMLINTFILES) $(CAMLIMPFILES)
+
+BYTOBJS = $(CAMLIMPFILES:.ml=.cmo)
+
+WITH_BYT_LIBS = $(WITHBYTUNIX) $(WITHBYTSTR) $(NEEDED_LIBS)
+
+.PHONY: neededlibs bytlib
+
+all:: bytlib
+
+neededlibs:
+	for i in $(NEEDED_DIRS) ; do \
+	 (cd $$i; $(MAKE) $@); \
+	done;
+
+bytlib: neededlibs $(LIB).cma
+
+$(LIB).cma: $(BYTOBJS) 	
+	$(CAMLBYTLIBR) -o $(LIB).cma $(WITH_BYT_LIBS) $(BYTOBJS)
+
+all clean depend::
+	for i in $(SUBDIRS); do \
+	  (cd $$i; $(MAKE) $@); \
+	done
+
+local-clean:
+	$(RM) *.cm* *.o *.a
+
+# Include the generic setup for Caml applications.
+include $(MAKEFILES_DIR)/Caml.mk

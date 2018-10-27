@@ -1,0 +1,48 @@
+        digraph Frames {
+                size="40,15";
+                node [fontsize=50];
+                edge [arrowhead = "vee", arrowsize = "2.0", style="solid", taillabel = ""];
+
+  Title [
+  	label = "The Containers\nSector : Product\nDomain : Property\nInputbase : Local", fontsize=80, shape=box, fontname=Courier, color=yellow, style=filled
+  ];
+
+
+  "Property\nTarget\nImplicit\nTounit" [color = blue2, style="setlinewidth(5)"];
+  "Property\nOperand\nTarget\nMeasured" [color = blue2, style="setlinewidth(5)"];
+  "Property\nOperand\nTarget\nCalculated" [color = blue2, style="setlinewidth(5)"];
+  "Property\nOperand\nTarget\nCreated" [color = blue2, style="setlinewidth(5)"];
+  "Property\nOperand" [color = blue2, style="setlinewidth(5)"];
+  "Property\nOperand " [color = blue2, style="setlinewidth(5)"];
+  "Property\nOperand  " [color = blue2, style="setlinewidth(5)"];
+  "Property\nOperand   " [color = blue2, style="setlinewidth(5)"];
+
+
+		"Operator\nCreation\nTobasic" [shape = diamond, color = green, style="setlinewidth(5)"];     
+		"Operator\nCreation\nTooperand" [shape = diamond, color = green, style="setlinewidth(5)"];     
+		"Operator\nCreation\nTomeasure" [shape = diamond, color = green, style="setlinewidth(5)"];
+		"Operator\nTounit" [shape = diamond, color = green, style="setlinewidth(5)"];
+
+
+		Title -> "Property\nTarget\nImplicit\nTounit" [style="invis"];
+		Title -> "Property\nOperand\nTarget\nCreated" [style="invis"];
+		Title -> "Property\nOperand\nTarget\nCalculated" [style="invis"];
+		Title -> "Property\nOperand\nTarget\nMeasured"  [style="invis"];
+
+		"Property\nTarget\nImplicit\nTounit" -> "Operator\nTounit";
+		"Property\nTarget\nImplicit\nTounit" -> "Property\nOperand";
+
+		"Property\nOperand\nTarget\nCreated" -> "Operator\nCreation\nTooperand";
+		"Property\nOperand\nTarget\nCreated" -> "Property\nOperand ";
+
+		"Property\nOperand\nTarget\nCalculated" -> "Operator\nCreation\nTobasic";
+		"Property\nOperand\nTarget\nCalculated" -> "Property\nOperand  ";
+
+		"Property\nOperand\nTarget\nMeasured" -> "Operator\nCreation\nTomeasure";
+		"Property\nOperand\nTarget\nMeasured" -> "Property\nOperand   ";
+
+
+
+
+		}
+

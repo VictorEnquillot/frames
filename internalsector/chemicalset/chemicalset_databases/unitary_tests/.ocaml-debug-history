@@ -1,0 +1,40 @@
+r
+dir ../
+r
+g 19394
+n
+bt
+r
+g 19394
+up
+r
+g 192557
+dir ../
+r
+dir ../
+up
+n
+up
+g 192557
+up
+dir ../
+r
+g 192557
+dir ../
+r
+g 209650
+bt
+dir ../
+bt
+r
+b
+bt
+b
+up
+dir ../../
+up
+dir ../
+r
+bt
+b
+bt

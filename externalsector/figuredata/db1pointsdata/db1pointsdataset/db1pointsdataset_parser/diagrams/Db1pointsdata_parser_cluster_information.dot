@@ -1,0 +1,61 @@
+digraph dgn {
+    size="14,14";
+
+    edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+    node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+    Title [label = "BNF Tree\nfor Db1pointsdata\nCluster_information\n" fontsize=24, shape="record", color=lightblue, style=filled];
+
+
+ "triangle | segment | point" [color=green];
+ "word_uppercase" [color=green] ;
+ "[" [color=green];
+ "<cell_coordinate_units_angle>" [color=yellow];
+ "]" [color=green];
+ "cartesian | cylindrical | polar | spherical" [color=green];
+ "coordinates_kind" [color=lightblue];
+ "coordinates_units_angle" [color=lightblue];
+ ">units_angle<" [color=grey];
+ "coordinates_units_length" [color=lightblue];
+ ">units_length<" [color=grey];
+ "degree | radian" [color=green];
+ "angstrom | bohr | meter" [color=green];
+ "figure_kind" [color=lightblue];
+ ">figure_kind<" [color=grey];
+ "figure_name" [color=lightblue];
+ ">figure_name<" [color=grey];
+
+ "<cluster_information>"                -> { "<bundle_coordinates>" "<bundle_figure>"};
+
+ "<bundle_coordinates>"                 -> { "<cell_coordinate_units_length>" 
+                                            "[" "<cell_coordinate_units_angle>" "]" 
+                                            "<cell_coordinate_kind>" 
+                                           };
+					     
+ "<bundle_figure>"                      -> {"<cell_figure_kind>" 
+                                            "<cell_figure_name>" 
+					    };
+
+ "<cell_coordinate_units_angle>"        -> { "coordinates_units_angle" ">units_angle<"};
+
+ "<cell_coordinate_units_length>"       -> { "coordinates_units_length" ">units_length<"};
+
+ "<cell_coordinate_kind>"               -> { "coordinates_kind"  ">coordinates_kind_name<" };
+
+ ">coordinates_kind_name<"              -> { "cartesian | cylindrical | polar | spherical"}; 
+
+ ">units_angle<"                        -> { "degree | radian"};
+
+ ">units_length<"                       -> { "angstrom | bohr | meter"};
+
+
+ "<cell_figure_kind>"                   -> { "figure_kind" ">figure_kind<"};
+
+ ">figure_kind<"                        -> { "triangle | segment | point" };
+
+ "<cell_figure_name>"                   -> { "figure_name" ">figure_name<"};
+
+ ">figure_name<"                        -> { "word_uppercase" };                    
+
+}

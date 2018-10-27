@@ -1,0 +1,37 @@
+constructors figure                     =   parameter 
+
+constructors parameter                  =   parameter_context   parameter_set
+
+constructors parameter_context          =   parameter_context_database   parameter_context_databox   parameter_context_domain   parameter_context_sector   
+
+constructors parameter_context_database =   parameter_context_database_constructor:ofstring
+constructors parameter_context_databox  =   parameter_context_databox_constructor:ofstring
+constructors parameter_context_domain   =   parameter_context_domain_constructor:ofstring
+constructors parameter_context_sector   =   parameter_context_sector_constructor:ofstring
+
+constructors parameter_set              =   parameter_set_body   parameter_set_fence
+
+constructors parameter_set_body         =   parameter_set_body_tuple
+
+constructors parameter_set_body_tuple   =   parameter_set_body_tuple_aopef   parameter_set_body_tuple_ecppef
+
+constructors parameter_set_body_tuple_aopef      =   parameter_set_body_tuple_aopef_constructor:ofstring
+
+constructors parameter_set_body_tuple_ecppef     =   parameter_set_body_tuple_ecppef_constructor:ofstring
+
+
+constructors parameter_set_fence                      =   parameter_set_fence_aopef   parameter_set_fence_ecppef
+
+constructors parameter_set_fence_aopef                =   parameter_set_fence_aopef_coefficient   parameter_set_fence_aopef_exponent
+
+constructors parameter_set_fence_aopef_coefficient    =   parameter_set_fence_aopef_coefficient_constructor:ofstring
+
+constructors parameter_set_fence_aopef_exponent       =   parameter_set_fence_aopef_exponent_constructor:ofstring
+
+constructors parameter_set_fence_ecppef               =   parameter_set_fence_ecppef_coefficient   parameter_set_fence_ecppef_exponent
+
+constructors parameter_set_fence_ecppef_coefficient   =   parameter_set_fence_ecppef_coefficient_constructor:ofstring
+
+constructors parameter_set_fence_ecppef_exponent      =   parameter_set_fence_ecppef_exponent_constructor:ofstring
+
+

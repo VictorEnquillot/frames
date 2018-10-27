@@ -1,0 +1,15 @@
+constructors figure                    =   point   triangle   vector
+
+# triangle
+constructors triangle                  =   triangle_isosceles   triangle_scalene
+constructors triangle_isosceles         =   triangle_isosceles_equilateral:ofstring   triangle_isosceles_right:ofstring   triangle_isosceles_acute:ofstring  triangle_isosceles_obtuse:ofstring
+constructors triangle_scalene          =   triangle_scalene_right:ofstring   triangle_scalene_acute:ofstring   triangle_scalene_obtuse:ofstring
+
+# vector
+
+constructors vector                    =   vector_constructor:ofstring
+
+# point                         
+
+constructors point                     =   point_constructor:ofstring
+

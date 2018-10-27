@@ -1,0 +1,1 @@
+let idx_cof = List_v.index_of_element_of_list sym_cof (Contentfile_symbol_list_by_entity_proper_tag_provider_v.provide tag_enp) +1 ;;

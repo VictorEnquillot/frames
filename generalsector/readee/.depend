@@ -1,0 +1,98 @@
+Readee_measure_t.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_t.cmo
+Readee_measure_t.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_t.cmx
+Readee_color_t.cmo:
+Readee_color_t.cmx:
+Readee_basic_boolean_t.cmo:
+Readee_basic_boolean_t.cmx:
+Readee_basic_float_t.cmo:
+Readee_basic_float_t.cmx:
+Readee_basic_integer_t.cmo:
+Readee_basic_integer_t.cmx:
+Readee_basic_string_t.cmo:
+Readee_basic_string_t.cmx:
+Readee_basic_t.cmo: Readee_basic_string_t.cmo Readee_basic_integer_t.cmo \
+    Readee_basic_float_t.cmo Readee_basic_boolean_t.cmo
+Readee_basic_t.cmx: Readee_basic_string_t.cmx Readee_basic_integer_t.cmx \
+    Readee_basic_float_t.cmx Readee_basic_boolean_t.cmx
+Readee_t.cmo: Readee_measure_t.cmo Readee_color_t.cmo Readee_basic_t.cmo
+Readee_t.cmx: Readee_measure_t.cmx Readee_color_t.cmx Readee_basic_t.cmx
+Closure_t.cmo: Readee_t.cmo
+Closure_t.cmx: Readee_t.cmx
+Readee_measure_v.cmo: Readee_measure_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Readee_measure_v.cmx: Readee_measure_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Readee_color_v.cmo: Readee_color_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Readee_color_v.cmx: Readee_color_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Readee_basic_boolean_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi \
+    Readee_basic_boolean_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Readee_basic_boolean_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx \
+    Readee_basic_boolean_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Readee_basic_float_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi \
+    Readee_basic_float_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Readee_basic_float_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx \
+    Readee_basic_float_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Readee_basic_integer_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi \
+    Readee_basic_integer_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Readee_basic_integer_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx \
+    Readee_basic_integer_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Readee_basic_string_v.cmo: Readee_basic_string_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Readee_basic_string_v.cmx: Readee_basic_string_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Readee_basic_v.cmo: Readee_basic_t.cmo Readee_basic_string_v.cmo \
+    Readee_basic_integer_v.cmo Readee_basic_float_v.cmo \
+    Readee_basic_boolean_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Readee_basic_v.cmx: Readee_basic_t.cmx Readee_basic_string_v.cmx \
+    Readee_basic_integer_v.cmx Readee_basic_float_v.cmx \
+    Readee_basic_boolean_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Readee_v.cmo: Readee_t.cmo Readee_measure_v.cmo Readee_color_v.cmo \
+    Readee_basic_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Readee_v.cmx: Readee_t.cmx Readee_measure_v.cmx Readee_color_v.cmx \
+    Readee_basic_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Closure_v.cmo: Readee_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmi
+Closure_v.cmx: Readee_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmx

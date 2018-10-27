@@ -1,0 +1,3 @@
+type camlline_for_tag_duo_value =
+ | Camlline_for_tag_duo_current_top_value of Camlline_for_tag_duo_current_top_value_t.camlline_for_tag_duo_current_top_value
+;;

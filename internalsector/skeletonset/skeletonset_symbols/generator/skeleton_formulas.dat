@@ -1,0 +1,15 @@
+     builders skeleton_context_database_constructor:ofstring = datastructure entity 
+     builders skeleton_context_databox_constructor:ofstring = datastructure entity;
+     builders skeleton_context_domain_constructor:ofstring = datastructure entity;
+     builders skeleton_context_sector_constructor:ofstring = datastructure entity;
+     builders skeleton_set_body_centered_aopefset_anycenter_constructor:ofstring = datastructure entity;
+     builders skeleton_set_body_centered_aopefset_onecenter_constructor:ofstring = datastructure entity;
+     builders skeleton_set_body_centered_aopefset_shellordinal_constructor:ofstring = datastructure entity
+     builders skeleton_set_body_centered_aopefset_shellsymmetry_constructor:ofstring = datastructure entity;
+     builders skeleton_set_body_centered_ecppefset_constructor:ofstring = datastructure entity;
+     builders skeleton_set_body_periodic_blochwaveset_constructor:ofstring = datastructure entity;
+     builders skeleton_set_body_periodic_waveletset_constructor:ofstring = datastructure entity;
+     builders skeleton_set_fence_centered_aopef_constructor:ofstring = datastructure entity;
+     builders skeleton_set_fence_centered_ecppef_constructor:ofstring = datastructure entity
+     builders skeleton_set_fence_periodic_blochwave_constructor:ofstring = datastructure entity;
+     builders skeleton_set_fence_periodic_wavelet_constructor:ofstring = datastructure entity

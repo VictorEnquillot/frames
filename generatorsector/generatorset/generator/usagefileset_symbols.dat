@@ -1,0 +1,7 @@
+constructors generatorset               = usagefile
+
+constructors usagefile                 = usagefile_for_symbol usagefile_for_formula
+
+constructors usagefile_for_symbol      = implementation_for_symbol interface_for_symbol 
+
+constructors usagefile_for_formula      = implementation_for_formula interface_for_formula 

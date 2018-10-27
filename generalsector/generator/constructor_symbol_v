@@ -1,0 +1,414 @@
+(** {3 The functionalities for a Symbol for a Constructor.}  *)
+
+let nam_mod = "Constructor_symbol_v";;
+
+(** {3 Modules.} *)
+
+module Cns_t = Constructor_symbol_t
+module Edp_v = Entity_data_provider_v
+module End_v = Entity_data_v
+module Ens_v = Entity_symbol_v
+module Lst_v = List_v
+module Str_v = String_v
+
+(** {6 Querying.} *)
+
+let print_fatal_error nam_fun nam_exp nam_fnd nam_cur =
+  Format.fprintf
+    Format.err_formatter
+    "@.@[<hov>%s.%s: --- Fatal Error ---\
+     @.    expecting %s.\
+     @.    and found %s.\
+     @.cure :\
+     @.     %s.@]@."
+     nam_mod nam_fun nam_exp nam_fnd nam_cur;
+     assert false;
+;;
+
+let is_datastructure_node_pure_constructor_symbol_of_constructorname str =
+  let wrd = Scanf.sscanf str "%s " (fun s -> s) in
+  match wrd with 
+    | "doublet" | "triplet" | "tree" -> true
+    | _ -> false
+;;
+
+let is_barebasic_pure_constructor_symbol_of_constructorname = function
+  | "bool" | "float" | "index" | "integer" | "ordinal" -> true
+  | _ -> false
+;;
+
+let is_basicnamed_node_constructor_symbol_of_constructorname str =
+  let wrd = Scanf.sscanf str "%s " (fun s -> s) in
+  is_barebasic_pure_constructor_symbol_of_constructorname wrd
+;;
+
+let is_entity_constructor_symbol_of_constructorname nam_ent =
+  End_v.is_entityname_of_string nam_ent
+;;
+
+let is_several_constructor_symbol_of_constructorname nam_ent =
+  if is_entity_constructor_symbol_of_constructorname nam_ent
+  then
+    begin
+      let dat_ent = Edp_v.provide nam_ent in
+      List.length dat_ent > 1
+    end
+  else false
+;;
+
+let is_one_constructor_symbol_of_constructorname nam_ent =
+  if is_entity_constructor_symbol_of_constructorname nam_ent
+  then
+    begin
+      let dat_ent = Edp_v.provide nam_ent in
+      List.length dat_ent = 1
+    end
+  else false
+;;
+
+let is_datastructure_one_constructor_symbol_of_constructorname nam_ent =
+  if is_one_constructor_symbol_of_constructorname nam_ent
+  then
+    begin
+      let dat_ent = Edp_v.provide nam_ent in
+      let str = List.hd dat_ent in
+      is_datastructure_node_pure_constructor_symbol_of_constructorname str
+    end
+  else false
+;;
+
+let is_basicnamed_one_constructor_symbol_of_constructorname nam_ent =
+  if is_one_constructor_symbol_of_constructorname nam_ent
+  then
+    begin
+      let dat_ent = Edp_v.provide nam_ent in
+      let str = List.hd dat_ent in
+      is_barebasic_pure_constructor_symbol_of_constructorname str
+    end
+  else false
+;;
+
+let is_pure_constructor_symbol_of_constructorname nam_ent =
+  not (is_entity_constructor_symbol_of_constructorname nam_ent)
+;;
+
+let is_node_pure_constructor_symbol_of_constructorname nam_ent =
+  (is_pure_constructor_symbol_of_constructorname nam_ent)
+    && 
+  (is_datastructure_node_pure_constructor_symbol_of_constructorname nam_ent)
+;;
+
+let is_leaf_pure_constructor_symbol_of_constructorname nam_ent =
+  (is_pure_constructor_symbol_of_constructorname nam_ent)
+    && 
+  (not (is_datastructure_node_pure_constructor_symbol_of_constructorname nam_ent))
+;;
+
+let is_bare_leaf_pure_constructor_symbol_of_constructorname nam_ent =
+  if is_leaf_pure_constructor_symbol_of_constructorname nam_ent
+  then not (is_barebasic_pure_constructor_symbol_of_constructorname nam_ent)
+  else false
+;;
+
+let is_node_one_constructor_symbol_of_constructorname nam_ent =
+  if is_one_constructor_symbol_of_constructorname nam_ent
+  then
+    begin
+      let dat_ent = Edp_v.provide nam_ent in
+      let str_son = List.hd dat_ent in
+      is_bare_leaf_pure_constructor_symbol_of_constructorname str_son
+    end
+  else false
+;;
+
+(** {6 Upgrading.} *)
+
+let pure_constructor_symbol_of_leaf_pure_constructor_symbol smb_lpc =
+  Cns_t.Leaf_pure_constructor_symbol smb_lpc
+;;
+
+let constructor_symbol_of_entity_constructor_symbol smb_bst =
+  Cns_t.Entity_constructor_symbol smb_bst 
+;;
+
+let constructor_symbol_of_pure_constructor_symbol smb_lcn =
+  Cns_t.Pure_constructor_symbol smb_lcn 
+;;
+
+let entity_constructor_symbol_of_one_constructor_symbol smb_nsc =
+  Cns_t.One_constructor_symbol smb_nsc
+;;
+
+let one_constructor_symbol_of_datastructure_one_constructor_symbol smb_dst =
+  Cns_t.Datastructure_one_constructor_symbol smb_dst
+;;
+
+let constructor_symbol_of_entity_constructor_symbol smb_ncn =
+  Cns_t.Entity_constructor_symbol smb_ncn
+;;
+
+let one_constructor_symbol_of_basicnamed_one_constructor_symbol smb_bnc =
+  Cns_t.Basicnamed_one_constructor_symbol smb_bnc
+;;
+
+let pure_constructor_symbol_of_node_pure_constructor_symbol smb_npc =
+  Cns_t.Node_pure_constructor_symbol smb_npc
+;;
+
+let entity_constructor_symbol_of_one_constructor_symbol smb_onc =
+  Cns_t.One_constructor_symbol smb_onc
+;;
+
+let constructor_symbol_of_one_constructor_symbol smb_nsc =
+  let smb_ncn =
+    entity_constructor_symbol_of_one_constructor_symbol smb_nsc in
+  constructor_symbol_of_entity_constructor_symbol smb_ncn
+;;
+
+(** {9 Basicnamed.} *)
+
+let entity_constructor_symbol_of_basicnamed_one_constructor_symbol smb_bnc =
+  let smb_snc=   
+    one_constructor_symbol_of_basicnamed_one_constructor_symbol 
+      smb_bnc in
+  entity_constructor_symbol_of_one_constructor_symbol smb_snc 
+;;
+
+let entity_constructor_symbol_of_basicnamed_one_constructor_symbol smb_bnc =
+  let smb_nsc =
+    one_constructor_symbol_of_basicnamed_one_constructor_symbol 
+      smb_bnc in
+  entity_constructor_symbol_of_one_constructor_symbol smb_nsc
+;;
+
+let constructor_symbol_of_basicnamed_one_constructor_symbol smb_bnc =
+  let smb_ncn = 
+    entity_constructor_symbol_of_basicnamed_one_constructor_symbol 
+      smb_bnc in
+  constructor_symbol_of_entity_constructor_symbol smb_ncn
+;;
+
+let constructor_symbol_of_node_pure_constructor_symbol smb_npc =
+  let smb_pcn =
+    pure_constructor_symbol_of_node_pure_constructor_symbol 
+      smb_npc in
+  constructor_symbol_of_pure_constructor_symbol smb_pcn
+;;
+
+(** {9 Datastructure.} *)
+
+let node_pure_constructor_symbol_of_datastructure_node_pure_constructor_symbol smb_dnp =
+  Cns_t.Datastructure_node_pure_constructor_symbol smb_dnp
+;;
+
+let constructor_symbol_of_datastructure_node_pure_constructor_symbol smb_dnp =
+  let smb_npc = 
+    node_pure_constructor_symbol_of_datastructure_node_pure_constructor_symbol 
+      smb_dnp in
+  constructor_symbol_of_node_pure_constructor_symbol smb_npc
+;;
+
+(** {6 Making.} *)
+
+let make_of_datastructure_node_pure_constructor_symbol_string str =
+(* str = "doublet machin string integer" *)
+  let (wrd, nam_ent) = 
+    Scanf.sscanf str "%s %s" (fun w e -> (w,e) )
+  in
+  match wrd with 
+  | "doublet" -> 
+      constructor_symbol_of_datastructure_node_pure_constructor_symbol 
+	(Cns_t.Doublet_node_pure_constructor_symbol nam_ent)
+  | "triplet" -> 
+      constructor_symbol_of_datastructure_node_pure_constructor_symbol 
+	(Cns_t.Triplet_node_pure_constructor_symbol nam_ent)
+  | "tree" -> 
+      constructor_symbol_of_datastructure_node_pure_constructor_symbol 
+	(Cns_t.Tree_node_pure_constructor_symbol nam_ent)
+  | str -> 
+      print_fatal_error 
+	"make_datastructure_node_pure_constructor_symbol" 
+	"datastructure" str "check"
+;;
+
+let make_of_datastructure_one_constructor_symbol_string str =
+  constructor_symbol_of_one_constructor_symbol
+  (Cns_t.Datastructure_one_constructor_symbol str)
+;;
+
+let constructor_symbol_of_leaf_pure_constructor_symbol smb_lpc =
+  let smb_pcn = 
+    pure_constructor_symbol_of_leaf_pure_constructor_symbol 
+      smb_lpc in
+  constructor_symbol_of_pure_constructor_symbol smb_pcn
+;;
+
+let make_of_bare_leaf_pure_constructor_symbol_string str =
+  constructor_symbol_of_leaf_pure_constructor_symbol 
+    (Cns_t.Bare_leaf_pure_constructor_symbol str)
+;;
+
+let make_of_barebasic_pure_constructor_symbol_string str =
+  constructor_symbol_of_leaf_pure_constructor_symbol 
+    (Cns_t.Barebasic_leaf_pure_constructor_symbol str)
+;;
+
+let make_of_basicnamed_one_constructor_symbol_string str =
+  constructor_symbol_of_one_constructor_symbol 
+  (Cns_t.Basicnamed_one_constructor_symbol str)
+;;
+
+let make_of_node_one_constructor_symbol_string str =
+  constructor_symbol_of_one_constructor_symbol 
+  (Cns_t.Node_one_constructor_symbol str)
+;;
+
+let make_of_several_constructor_symbol_string str =
+  constructor_symbol_of_entity_constructor_symbol 
+    (Cns_t.Several_constructor_symbol str)
+;;
+
+let make = function
+  | s when 
+      (is_several_constructor_symbol_of_constructorname s) ->
+       make_of_several_constructor_symbol_string s
+  | s when 
+      (is_datastructure_one_constructor_symbol_of_constructorname s) ->
+       make_of_datastructure_one_constructor_symbol_string s
+  | s when 
+      (is_basicnamed_one_constructor_symbol_of_constructorname s) ->
+       make_of_basicnamed_one_constructor_symbol_string s
+  | s when 
+      (is_node_one_constructor_symbol_of_constructorname s) ->
+       make_of_node_one_constructor_symbol_string s
+  | s when 
+      (is_bare_leaf_pure_constructor_symbol_of_constructorname s) ->
+      make_of_bare_leaf_pure_constructor_symbol_string s
+  | s when 
+      (is_datastructure_node_pure_constructor_symbol_of_constructorname s) ->
+       make_of_datastructure_node_pure_constructor_symbol_string s
+  | s when 
+      (is_barebasic_pure_constructor_symbol_of_constructorname s) ->
+      make_of_barebasic_pure_constructor_symbol_string s
+  | s ->
+      print_fatal_error 
+	"make" 
+	"constructor" s "check"
+;;
+
+(** {6 Displaying.} *)
+
+let name_datastructure_node_pure_constructor_symbol = function
+  | Cns_t.Doublet_node_pure_constructor_symbol str -> str
+  | Cns_t.Triplet_node_pure_constructor_symbol str -> str
+  | Cns_t.Tree_node_pure_constructor_symbol str -> str
+;;
+
+let name_leaf_pure_constructor_symbol = function
+  | Cns_t.Bare_leaf_pure_constructor_symbol str -> str
+  | Cns_t.Barebasic_leaf_pure_constructor_symbol str -> str 
+;;
+
+let name_node_pure_constructor_symbol = function
+  | Cns_t.Datastructure_node_pure_constructor_symbol smb_dnc ->
+      name_datastructure_node_pure_constructor_symbol smb_dnc
+;;
+
+let name_pure_constructor_symbol = function
+  | Cns_t.Leaf_pure_constructor_symbol smb_lpc ->
+      name_leaf_pure_constructor_symbol smb_lpc
+  | Cns_t.Node_pure_constructor_symbol smb_npc ->
+      name_node_pure_constructor_symbol smb_npc
+;;
+
+let name_one_constructor_symbol = function
+  | Cns_t.Datastructure_one_constructor_symbol str -> str 
+  | Cns_t.Basicnamed_one_constructor_symbol str -> str
+  | Cns_t.Node_one_constructor_symbol str -> str
+;;
+
+let name_entity_constructor_symbol = function
+  | Cns_t.Several_constructor_symbol str -> str
+  | Cns_t.One_constructor_symbol smb_snc ->
+      name_one_constructor_symbol smb_snc
+;;
+
+let name = function
+  | Cns_t.Entity_constructor_symbol smb_ecn ->
+      name_entity_constructor_symbol smb_ecn
+  | Cns_t.Pure_constructor_symbol smb_pcn ->
+      name_pure_constructor_symbol smb_pcn
+;;
+
+let key smb_cns =
+  Key_v.make "constructor" (name smb_cns)
+;;
+
+(** {6 Extracting.} *)
+
+let entity_symbol_off_one_constructor_symbol = function
+  | Cns_t.Datastructure_one_constructor_symbol str
+  | Cns_t.Node_one_constructor_symbol str ->
+      Ens_v.make str
+
+  | _ -> failwith "Not_entity:Cns_v.entity_symbol_off_one_constructor_symbol"
+;;
+
+let entity_symbol_off_entity_constructor_symbol = function
+  | Cns_t.Several_constructor_symbol str -> 
+      Ens_v.make str
+
+  | Cns_t.One_constructor_symbol smb_ocn ->
+      try entity_symbol_off_one_constructor_symbol smb_ocn
+      with Failure "Not_entity:Cns_v.entity_symbol_off_one_constructor_symbol" ->
+	failwith "Not_entity:Cns_v.entity_symbol_off_entity_constructor_symbol"
+(*
+	print_fatal_error 
+	  "entity_symbol_off_entity_constructor_symbol"
+          "constructor beeing entity" 
+          (">" ^(name (Cns_t.Entity_constructor_symbol smb_cns))^">") "check"
+*)
+;;
+
+let entity_constructor_symbol_off_constructor_symbol = function
+  | Cns_t.Entity_constructor_symbol smb_ecn -> smb_ecn
+  | _ -> failwith "Not_entity_constructor_symbol:Cns_v.entity_constructor_symbol"
+;;
+
+let entity_symbol_off_constructor_symbol smb_cns =
+  let smb_ecn =
+    try entity_constructor_symbol_off_constructor_symbol smb_cns
+    with Failure "Not_entity_constructor_symbol:Cns_v.entity_constructor_symbol" ->
+failwith "Not_entity:Cns_v.entity_symbol_off_constructor_symbol" 
+(*
+      print_fatal_error 
+	"entity_symbol_off_constructor_symbol"
+        "constructor beeing entity" 
+        (">" ^ (name smb_cns)^ "<") "check"
+*)
+  in
+  entity_symbol_off_entity_constructor_symbol smb_ecn
+;;
+
+(** {6 Abbreviating.} *)
+
+let argument_abbreviation smb_cnt =
+  let str = name smb_cnt in
+  let rvs = Str_v.reverse_string str in
+  let abb = Str_v.first_characters_string_of_underscored_string str in
+  match String.length abb with
+    | 1 -> abb ^ (Str_v.reverse_string (String.sub rvs 0 2))
+    | 2 -> abb ^ (String.sub rvs 0 1)
+    | _ -> abb
+;;
+(** xaa_yaa_zaa -> xyz  *)
+
+let module_abbreviation smb_cnt =
+  let str = name smb_cnt in
+  let abb = Str_v.first_characters_string_of_underscored_string str in
+  match String.length abb with
+    | 1 -> (String.capitalize abb) ^ (String.sub str 1 1)
+    | _ -> (String.capitalize abb) 
+;;
+(** xaa_yaa_zaa -> Xyz  *)
+

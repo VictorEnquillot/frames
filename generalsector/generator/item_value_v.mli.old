@@ -1,0 +1,36 @@
+(** {3 The functionalities for a Value for a Item.}  *)
+
+(** {6 Making.} *)
+
+val make :
+    Key_list_t.key_list ->
+      Item_value_t.item_value
+;;
+
+(** {6 Writing.} *)
+
+val name_tree : 
+    Item_value_t.item_value ->
+      string Tree_t.tree
+;;
+
+val name_list : 
+    Key_list_t.key_list ->
+      string list
+;;
+
+val name : 
+    Key_list_t.key_list ->
+      string 
+;;
+
+val print : Format.formatter ->
+  Key_list_t.key_list ->
+    unit
+;;
+
+val write : out_channel ->
+  Key_list_t.key_list ->
+    unit
+;;
+

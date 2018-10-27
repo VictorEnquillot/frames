@@ -1,0 +1,94 @@
+Operation_formula_t.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/String_tag_t.cmo
+Operation_formula_t.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/String_tag_t.cmx
+Token_formula_t.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/String_tag_t.cmo \
+    Operation_formula_t.cmo
+Token_formula_t.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/String_tag_t.cmx \
+    Operation_formula_t.cmx
+Expression_atomic_digit_formula_t.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/String_tag_t.cmo
+Expression_atomic_digit_formula_t.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/String_tag_t.cmx
+Expression_atomic_formula_t.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/String_tag_t.cmo \
+    Expression_atomic_digit_formula_t.cmo
+Expression_atomic_formula_t.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/String_tag_t.cmx \
+    Expression_atomic_digit_formula_t.cmx
+Expression_formula_t.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/String_tag_t.cmo \
+    Expression_atomic_formula_t.cmo
+Expression_formula_t.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/String_tag_t.cmx \
+    Expression_atomic_formula_t.cmx
+Operation_formula_v.cmo : \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Token_symbol_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Tag_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_interfaces/String_symbol_list_by_token_tag_provider_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Sole_index_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Operation_symbol_t.cmo \
+    Operation_formula_t.cmo
+Operation_formula_v.cmx : \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Token_symbol_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Tag_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_interfaces/String_symbol_list_by_token_tag_provider_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Sole_index_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Operation_symbol_t.cmx \
+    Operation_formula_t.cmx
+Token_formula_v.cmo : \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Token_symbol_t.cmo \
+    Token_formula_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Tag_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_interfaces/String_symbol_list_by_token_tag_provider_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Sole_index_v.cmi \
+    Operation_formula_v.cmo
+Token_formula_v.cmx : \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Token_symbol_t.cmx \
+    Token_formula_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Tag_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_interfaces/String_symbol_list_by_token_tag_provider_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Sole_index_v.cmx \
+    Operation_formula_v.cmx
+Expression_atomic_digit_formula_v.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Tag_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_interfaces/String_symbol_list_by_expression_tag_provider_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Sole_index_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_symbol_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_atomic_digit_symbol_t.cmo \
+    Expression_atomic_digit_formula_t.cmo
+Expression_atomic_digit_formula_v.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Tag_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_interfaces/String_symbol_list_by_expression_tag_provider_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Sole_index_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_symbol_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_atomic_digit_symbol_t.cmx \
+    Expression_atomic_digit_formula_t.cmx
+Expression_atomic_formula_v.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Tag_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_interfaces/String_symbol_list_by_expression_tag_provider_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Sole_index_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_symbol_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_atomic_symbol_t.cmo \
+    Expression_atomic_formula_t.cmo Expression_atomic_digit_formula_v.cmo
+Expression_atomic_formula_v.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Tag_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_interfaces/String_symbol_list_by_expression_tag_provider_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Sole_index_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_symbol_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_atomic_symbol_t.cmx \
+    Expression_atomic_formula_t.cmx Expression_atomic_digit_formula_v.cmx
+Expression_formula_v.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Tag_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_interfaces/String_symbol_list_by_expression_tag_provider_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Sole_index_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_symbol_t.cmo \
+    Expression_formula_t.cmo Expression_atomic_formula_v.cmo
+Expression_formula_v.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Tag_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_interfaces/String_symbol_list_by_expression_tag_provider_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Sole_index_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_symbol_t.cmx \
+    Expression_formula_t.cmx Expression_atomic_formula_v.cmx

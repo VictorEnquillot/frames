@@ -1,0 +1,83 @@
+# ls -C1 *symbol_t.ml | sed -e 's/_symbol_t.ml/ \\/' -e '/set/d'
+
+. ${UTI}/do_capitalize_first
+. ${UTI}/do_category_mark 
+. ${UTI}/do_category_off_category_extended
+. ${UTI}/doset_name
+. ${UTI}/do_entityset_module_abbreviation 
+. ${UTI}/do_category_type_abbreviation 
+. ${UTI}/do_category_argument_abbreviation
+. ${UTI}/do_category_value_abbreviation
+. do_module_abbreviation_all
+. do_argument_abbreviation_all
+
+# set -x 
+
+set_name=`set_name`
+entityset="${set_name}set"
+Entityset=`capitalize_first ${entityset}`
+ema=`entityset_module_abbreviation ${entityset}`
+Ema=`capitalize_first ${ema}`
+
+if [ "$1" = "" ]
+then
+	echo "Usage :"
+	for c in `${UTI}/do_for_category`
+	do  
+		echo " $0 $c > ${entityset}_${c}_v.mli"
+	done
+	exit
+fi
+
+category=$1
+Category=`capitalize_first ${category}`
+caa=`category_argument_abbreviation ${category}`
+cta=`category_type_abbreviation ${category}`
+cva=`category_value_abbreviation ${category}`
+cam=`category_mark ${category}`
+
+echo "(** {3 The ${Category} functionalities for a ${Entityset}.} *)"
+echo ""
+
+echo "(** {6 Extracting.} *)"
+echo " "
+for e in `do_for_entity`
+do
+    E=`capitalize_first ${e}`
+    M=`module_abbreviation ${e}
+`   echo "val ${e}_${category}_off_${entityset}_${category} :"
+    echo "   ${Entityset}_${category}_${cta}.${entityset}_${category} ->"
+    echo "     ${E}_${category}_${cta}.${e}_${category}"
+    echo ";;"
+    echo " "
+done
+
+echo "(** {6 Upgrading.} *)"
+echo ""
+for e in `do_for_entity`
+do
+    E=`capitalize_first ${e}`
+    M=`module_abbreviation ${e}`
+    echo "val ${entityset}_${category}_of_${e}_${category} :"
+    echo "   ${E}_${category}_${cta}.${e}_${category} ->"
+    echo "     ${Entityset}_${category}_${cta}.${entityset}_${category}"
+    echo ";;"
+    echo ""
+done
+
+echo "(** {6 Converting.} *)"
+echo " "
+echo "val print : Format.formatter ->"
+echo "   ${Entityset}_${category}_${cta}.${entityset}_${category} ->"
+echo "     unit"
+echo ";;"
+echo " "
+echo "val name :"
+echo "   ${Entityset}_${category}_${cta}.${entityset}_${category} ->"
+echo "     string"
+echo ";;"
+echo ""
+. ${UTI}/do_created
+echo ""
+
+exit

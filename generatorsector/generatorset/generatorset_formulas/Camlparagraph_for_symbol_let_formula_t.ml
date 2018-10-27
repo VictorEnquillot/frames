@@ -1,0 +1,10 @@
+(** {3 Camlparagraph_for_symboformula_t.}  *)
+
+(** {6 Typing} *)
+
+type camlparagraph_for_symbol_let_formula = 
+  | Camlparagraph_for_symbol_let_argument_formula of Camlparagraph_for_symbol_let_argument_formula_t.camlparagraph_for_symbol_let_argument_formula
+  | Camlparagraph_for_symbol_let_abbreviate_formula of Camlparagraph_for_symbol_let_abbreviate_formula_t.camlparagraph_for_symbol_let_abbreviate_formula
+  | Camlparagraph_for_symbol_let_match_formula of Camlparagraph_for_symbol_let_match_formula_t.camlparagraph_for_symbol_let_match_formula
+  | Camlparagraph_for_symbol_let_mixed_formula of Camlparagraph_for_symbol_let_mixed_formula_t.camlparagraph_for_symbol_let_mixed_formula
+;;

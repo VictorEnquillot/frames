@@ -1,0 +1,116 @@
+#!/bin/bash
+
+modify_strings_and_rename_files.sh nwchemdata_body nwchemdata_set_body *ml *mk
+modify_strings_and_rename_files.sh nwchemdata_fence nwchemdata_set_fence *ml *mk
+modify_strings_and_rename_files.sh comment_author_name_many comment_authorname_many *ml *mk
+modify_strings_and_rename_files.sh comment_author_name_two comment_authorname_two *ml *mk
+modify_strings_and_rename_files.sh comment_author_name comment_authorname_one *ml *mk
+
+
+
+
+
+
+
+
+modify_string.pl  angular_function angularfunction *dat
+modify_string.pl  angular_momentum angularmomentum *dat
+modify_string.pl  aocomment_emsl comment_aoemsl  *dat
+modify_string.pl  body_variable_shell_name  body_variable_shellname_usual  *dat
+modify_string.pl  body_variable_shell_name_extended  body_variable_shellname_extended  *dat
+modify_string.pl  set_body_variable_shell_relativistic_name  set_body_variable_shellname_relativistic  *dat
+modify_string.pl  body_variable_shell_name_relativistic  body_variable_shellname_relativistic  *dat
+modify_string.pl  center_and_shell_name centerandshellname *dat
+modify_string.pl  comment_author_name comment_authorname_one *dat
+modify_string.pl  comment_author_name_many comment_authorname_many *dat
+modify_string.pl  comment_author_name_two comment_authorname_two *dat
+modify_string.pl  comment_element_line comment_elementline  *dat
+modify_string.pl  contraction_coefficient_column contraction_coefficientcolumn *dat
+modify_string.pl  dashed_line  dashedline *dat
+modify_string.pl  dataname_file datanamefile *dat
+modify_string.pl  general_contraction_shell_set general_contraction_shellset  *dat
+modify_string.pl  journal_reference journalreference *dat
+modify_string.pl  nwchemdata_body nwchemdata_set_body *dat
+modify_string.pl  nwchemdata_fence nwchemdata_set_fence *dat
+modify_string.pl  positive_integer_n_shell_name positiveintegerandshellname *dat
+modify_string.pl  variable_radial_function variable_radialfunction *dat
+modify_string.pl  variable_ao_singles_at_c variable_aos_at_c *dat
+modify_string.pl  variable_shell_extended_name variable_shellname_extended *dat
+modify_string.pl  center_name centername  *dat
+modify_string.pl  dataname_local_name localname_dataname  *dat
+modify_string.pl  numerical_values numericalvalues *dat
+modify_string.pl  ecpset_local_name localname_ecpset  *dat
+modify_string.pl  electron_number electronnumber *dat
+modify_string.pl  non_negative nonnegative *dat
+modify_string.pl  general_contraction  generalcontraction *dat
+modify_string.pl  body_variable_angular_spherical_function  body_variable_angularfunction_spherical *dat
+modify_string.pl  mendeleiev_symbol  mendeleievsymbol *dat
+modify_string.pl  nwchemdata_comment_reference  nwchemdata_comment_reference_constructor *ml
+modify_string.pl  and _n_ *dat
+# modify_word.pl  variable_ao variable_ao_single  *dat
+ao_single_contracted ao_contracted *dat
+
+
+ms "(nam_nbo, nam_dba, nam_dom, nam_sec)" "(bna_nbo, bna_dba, bna_dom, bna_sec)" *ml
+ms "(nam_dba, nam_dom, nam_sec)" "(bna_dba, bna_dom, bna_sec)" *ml
+ms "(nam_dbo, nam_dba)" "(bna_dbo, bna_dba)"  *ml
+mw nam_nba  nam_dba *ml
+mw bna_nba  bna_dba *ml
+mw soi_nba  soi_dba *ml
+mw nam_nbo  nam_dbo *ml
+mw bna_nbo  bna_dbo *ml
+mw soi_nbo  soi_dbo *ml
+
+ms "let build nam_" "let build bna_" *ml
+
+ms "by_basicname_sector_provider_v.provide nam_sec" "by_basicname_sector_provider_v.provide bna_sec" *ml
+ms "by_basicname_domain_provider_v.provide nam_dom" "by_basicname_domain_provider_v.provide bna_dom" *ml
+ms "by_basicname_database_provider_v.provide nam_dba" "by_basicname_database_provider_v.provide bna_dba" *ml
+ms "by_basicname_databox_provider_v.provide nam_dbo" "by_basicname_databox_provider_v.provide bna_dbo" *ml
+
+ms "let nam_dba = Nwchemdata_basicname_database_" "let bna_dba = Nwchemdata_basicname_database_" *ml
+ms "let nam_dbo = Nwchemdata_basicname_databox_" "let bna_dbo = Nwchemdata_basicname_databox_" *ml
+
+ms "string Duo_t.duo" "Basicname_t.basicname Duo_t.duo" *ml 
+ms "Duo_v.name (fun s->s)" "Duo_v.name Basicname_v.name" *ml 
+
+
+
+mscf sector_name basicname_sector  Context_sole_index_by_sector_name_provider_v.ml
+msrf Basicname_database_name Basicname_database *ml *mk
+msrf Basicname_databox_name_by Basicname_databox_by *ml *mk
+msrf Database_name_by Basicname_database_name_by *ml *mk
+msrf Databox_name_by Basicname_databox_name_by *ml *mk
+msrf Databox_name_n_database_name Basicname_databox_n_basicname_database *ml *mk
+msrf Databox_name_n_database_name_by Basicname_databox_n_basicname_database_by *ml *mk
+msrf _context_domain_name_ _context_basicname_domain *ml *mk
+msrf _context_name_trio_ _basicname_trio_ *ml *mk
+msrf Context_name_trio_by_fullnameofdirectory  Basicname_trio_by_fullnameofdirectory *ml *mk
+
+ms "let nam_sec = Nwchemdata_basicname_sector_by_unit_provider_v.provide" "let bna_sec = Nwchemdata_basicname_sector_by_unit_provider_v.provide" *ml
+
+ms "by_basicname_sector_provider_v.provide nam_sec" "by_basicname_sector_provider_v.provide bna_sec" *ml
+
+msrf by_parameter_context_name       by_parameter_basicname  *ml *mk
+msrf by_parameter_context_name       by_parameter_basicname *ml *mk
+msrf by_database_name                 by_basicname_database  *ml *mk
+msrf by_databox_name                  by_basicname_databox  *ml *mk
+msrf by_databox_name_n_database_name  by_basicname_databox_n_basicname_database  *ml *mk
+msrf by_domain_name_n_sector_name     by_basicname_domain_n_basicname_sector  *ml *mk
+msrf by_sector_name_                  by_basicname_sector_ *ml *mk
+
+msrf _context_basicname_domain _basicname_domain *ml *mk
+msrf _context_database_name_by _basicname_database_by *ml *mk
+msrf _context_databox_name_by_ _basicname_databox_by_ *ml *mk 
+msrf _context_domain_name      _basicname_domain *ml *mk
+msrf _context_name_quatuor     _basicname_quatuor *ml *mk
+msrf _context_name_quatuor     _basicname_quatuor *ml *mk
+msrf _context_sector_name      _basicname_sector *ml *mk
+msrf _context_sector_name_by   _basicname_by *ml *mk
+
+ms Nwchemdata_basicname_databox_by_any_sole_index_provider_v Basicname_databox_by_any_sole_index_provider_v *ml
+dlw Nwchemdata_basicname_databox_by_any_sole_index_provider_v *mk
+kef Nwchemdata_basicname_databox_by_any_sole_index_provider_v.ml
+
+
+ms Nwchemdata_parser_v.nwchemdata_symbol_tree_root_databox_of_databox_name  Nwchemdata_parser_v.nwchemdata_symbol_tree_root_databox_of_basicname_databox *ml

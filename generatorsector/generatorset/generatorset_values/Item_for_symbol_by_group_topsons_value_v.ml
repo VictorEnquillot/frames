@@ -1,0 +1,98 @@
+(** {3 Item_for_symbol_by_group_topsons_value_v}  *)
+
+(** {6 Documenting} *)
+
+let documentation () = 
+  [
+   "Needs : FGNR:";
+   "Current : VGNR:Item_for_symbol_by_group_topsons_value_v";
+   "Needed-by : VGNR:Item_value_v";
+   "What-is-it : It upgrades Value type as Symbol type";
+   "Remark : It is a Stem type";
+ ]
+;;
+
+let nam_cod = Management_v.current_module_name (documentation ());;
+
+(** {6 BT_Son_value Datastructure} *)
+
+let camlparagraph_value_list_off_item_for_symbol_by_group_topsons_tag tag_iff =
+  let tag_ite = 
+    Item_tag_v.item_tag_of_item_for_symbol_by_group_topsons_tag 
+      tag_iff 
+  in
+  let tag_cap_l = Item_formula_v.camlparagraph_tag_list_off_item_tag tag_ite in
+  List.map Camlparagraph_value_v.retrieve tag_cap_l
+;;
+
+(** {6 Making} *)
+
+let make sym_iff soi_ite =
+  let tag_iff = Tag_v.make sym_iff soi_ite in
+  let val_cap_l = camlparagraph_value_list_off_item_for_symbol_by_group_topsons_tag tag_iff in
+  match sym_iff with
+  | Item_for_symbol_by_group_topsons_symbol_t.Listing_for_symbol ->
+     Item_for_symbol_by_group_topsons_value_t.Listing_for_symbol val_cap_l
+  | Item_for_symbol_by_group_topsons_symbol_t.Making_for_symbol ->
+     Item_for_symbol_by_group_topsons_value_t.Making_for_symbol val_cap_l
+  | Item_for_symbol_by_group_topsons_symbol_t.Making_for_symbol_bare ->
+     Item_for_symbol_by_group_topsons_value_t.Making_for_symbol_bare val_cap_l
+  | Item_for_symbol_by_group_topsons_symbol_t.Making_for_symbol_notleaf ->
+     Item_for_symbol_by_group_topsons_value_t.Making_for_symbol_notleaf val_cap_l
+  | Item_for_symbol_by_group_topsons_symbol_t.Making_for_symbol_ofstring ->
+     Item_for_symbol_by_group_topsons_value_t.Making_for_symbol_ofstring val_cap_l
+  | Item_for_symbol_by_group_topsons_symbol_t.Naming_for_symbol ->
+     Item_for_symbol_by_group_topsons_value_t.Naming_for_symbol val_cap_l
+  | Item_for_symbol_by_group_topsons_symbol_t.Naming_for_symbol_bare ->
+     Item_for_symbol_by_group_topsons_value_t.Naming_for_symbol_bare val_cap_l
+  | Item_for_symbol_by_group_topsons_symbol_t.Naming_for_symbol_notleaf ->
+     Item_for_symbol_by_group_topsons_value_t.Naming_for_symbol_notleaf val_cap_l
+  | Item_for_symbol_by_group_topsons_symbol_t.Naming_for_symbol_ofstring ->
+     Item_for_symbol_by_group_topsons_value_t.Naming_for_symbol_ofstring val_cap_l
+  | Item_for_symbol_by_group_topsons_symbol_t.String_offing_for_symbol ->
+     Item_for_symbol_by_group_topsons_value_t.String_offing_for_symbol val_cap_l
+  | Item_for_symbol_by_group_topsons_symbol_t.String_offing_for_symbol_bare ->
+     Item_for_symbol_by_group_topsons_value_t.String_offing_for_symbol_bare val_cap_l
+  | Item_for_symbol_by_group_topsons_symbol_t.String_offing_for_symbol_notleaf ->
+     Item_for_symbol_by_group_topsons_value_t.String_offing_for_symbol_notleaf val_cap_l
+  | Item_for_symbol_by_group_topsons_symbol_t.String_offing_for_symbol_ofstring ->
+     Item_for_symbol_by_group_topsons_value_t.String_offing_for_symbol_ofstring val_cap_l
+  | Item_for_symbol_by_group_topsons_symbol_t.Typing_for_symbol ->
+     Item_for_symbol_by_group_topsons_value_t.Typing_for_symbol val_cap_l
+
+
+;;
+
+(** {6 Retrieving} *)
+
+let retrieve tag_iff =
+  let sym_iff = Tag_v.entity_off_tag tag_iff in
+  let soi_ite = Tag_v.sole_index_off_tag tag_iff in
+  make sym_iff soi_ite
+;;
+
+(** {6 Extracting} *)
+
+let string_list_off_item_for_symbol_by_group_topsons_tag tag_iff =
+  let val_cap_l = camlparagraph_value_list_off_item_for_symbol_by_group_topsons_tag tag_iff in
+  List.map Camlparagraph_value_v.string_list_off_camlparagraph_value val_cap_l
+;;
+
+let camlparagraph_value_list_off_item_for_symbol_by_group_topsons_value val_iff =
+  match val_iff with
+  | Item_for_symbol_by_group_topsons_value_t.Listing_for_symbol val_cap_l -> val_cap_l 
+  | Item_for_symbol_by_group_topsons_value_t.Making_for_symbol val_cap_l -> val_cap_l 
+  | Item_for_symbol_by_group_topsons_value_t.Making_for_symbol_bare val_cap_l -> val_cap_l 
+  | Item_for_symbol_by_group_topsons_value_t.Making_for_symbol_notleaf val_cap_l -> val_cap_l 
+  | Item_for_symbol_by_group_topsons_value_t.Making_for_symbol_ofstring val_cap_l -> val_cap_l 
+  | Item_for_symbol_by_group_topsons_value_t.Naming_for_symbol val_cap_l -> val_cap_l 
+  | Item_for_symbol_by_group_topsons_value_t.Naming_for_symbol_bare val_cap_l -> val_cap_l 
+  | Item_for_symbol_by_group_topsons_value_t.Naming_for_symbol_notleaf val_cap_l -> val_cap_l 
+  | Item_for_symbol_by_group_topsons_value_t.Naming_for_symbol_ofstring val_cap_l -> val_cap_l 
+  | Item_for_symbol_by_group_topsons_value_t.String_offing_for_symbol val_cap_l -> val_cap_l 
+  | Item_for_symbol_by_group_topsons_value_t.String_offing_for_symbol_bare val_cap_l -> val_cap_l 
+  | Item_for_symbol_by_group_topsons_value_t.String_offing_for_symbol_notleaf val_cap_l -> val_cap_l 
+  | Item_for_symbol_by_group_topsons_value_t.String_offing_for_symbol_ofstring val_cap_l -> val_cap_l 
+  | Item_for_symbol_by_group_topsons_value_t.Typing_for_symbol val_cap_l -> val_cap_l 
+
+;;

@@ -1,0 +1,8 @@
+let sym_cap = Camlparagraph_symbol_v.???;;
+let idx_cap = Camlparagraph_symbol_v.list_index_of_camlparagraph_symbol sym_cap;;
+let soi_cap = Sole_index_v.make idx_cap soi_ite;;
+let gss_cap = Generatorset_symbol_v.generatorset_symbol_of_camlparagraph_symbol sym_cap;;
+Generatorset_symbol_by_sole_index_production_provider_v.store soi_cap gss_cap;;
+
+let tag_cap_??? = Tag_v.make sym_cap soi_cap;;
+

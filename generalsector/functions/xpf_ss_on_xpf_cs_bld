@@ -1,0 +1,459 @@
+! ===============================================================================
+  subroutine xpf_ss_on_xpf_cs_bld 
+! -------------------------------------------------------------------------------
+!
+! Name           : xpf_ss_on_xpf_cs_bld
+!
+! Description    : the coefficients connecting spherical and cartesian 
+! Description    : xpfs are inferred from their names
+!
+! Description    : xpf_c is r^(n-1) monomial[l](x,y,z) Exp
+! Description    : xpf_s is r^(n-1+l) Ylm Exp
+! Description    : xpf_ss_on_xpf_cs (xpf_s) = Sqrt[(2l+1)/(4 Pi)]           
+! Description    : thus xpf_s_r_power = xpf_c_r_power + l
+! Description    : can be sto or gto 
+!
+! Description    : xpf_ss 'Mn___00i__D_Rn_Y_2-2_000_000'
+! Description    : xpf_cs 'Mn___00i__D_Rm_XY____000_000'
+! Description    : where m = n-l
+!
+! Creates        : xpf_ss_on_xpf_cs (xpf_s, xpf_c)
+!
+! Authors: F. Colonna
+! Date  : 4 June 2004
+! Revision: F.Colonna 09 June 2004 corrected r^l for xpf_s
+! -------------------------------------------------------------------------------
+  implicit none
+
+! i/o:
+
+! local:
+  character(len=max_string_len_routine_name),save :: l_here
+  integer(i4b) :: xpf_c_i, xpf_cs_nb
+  integer(i4b) :: xpf_s_i, xpf_ss_nb
+  integer(i4b) :: l_azi
+  integer(i4b) :: xpf_s_r_power
+  character(len=length_epf_name)     :: sphe_name
+  character(len=length_epf_name)     :: cart_name
+  character(len=max_len_xpf_symcomp) :: cur_symcomp
+
+! header:
+  l_here = "xpf_ss_on_xpf_cs_bld"
+  if (header_execution) then
+    description = 'spherical to cartesian xpf transformation matrix'
+    call object_created_define (l_here, 'xpf_ss_on_xpf_cs', description,  &
+         'real', (/'xpf_ss_nb','xpf_cs_nb'/))
+
+    call object_needed_define (l_here, 'xpf_cs_name')
+    call object_needed_define (l_here, 'xpf_ss_name')
+    call object_needed_define (l_here, 'xpf_ss_r_power')
+    call object_needed_define (l_here, 'xpf_ss_azimuth')
+    call object_needed_define (l_here, 'xpf_ss_magnetic')
+    return
+  end if
+
+! begin:
+  call enter (l_here, 1)
+
+  call object_by_name_build (l_here, "xpf_ss_name")
+  call object_by_name_build (l_here, "xpf_cs_name")
+  call object_by_name_build (l_here, "xpf_ss_r_power")
+  call object_by_name_build (l_here, "xpf_ss_azimuth")
+  call object_by_name_build (l_here, "xpf_ss_magnetic")
+
+  include 'chksiz_xpf_cs_name.inc'
+  include 'chksiz_xpf_ss_name.inc'
+  include 'chksiz_xpf_ss_azimuth.inc'
+  include 'chksiz_xpf_ss_magnetic.inc'
+
+! dimensions:
+
+  xpf_cs_nb = size (xpf_cs_name, 1)
+  xpf_ss_nb = size (xpf_ss_name, 1)
+
+  if(debug) then
+   write (logf,*)trim(l_here),'-d: xpf_ss_nb =',xpf_ss_nb
+   write (logf,*)trim(l_here),'-d: xpf_cs_nb =',xpf_cs_nb
+  end if
+
+! end dimensions
+
+! allocations:
+  call object_allocation ('xpf_ss_on_xpf_cs', xpf_ss_on_xpf_cs,  &
+                           xpf_ss_nb, xpf_cs_nb)
+! end allocations
+
+  xpf_ss_on_xpf_cs = zero
+
+  do xpf_s_i = 1, xpf_ss_nb
+
+    sphe_name = xpf_ss_name (xpf_s_i)
+    xpf_s_r_power = xpf_ss_r_power (xpf_s_i)
+    l_azi     = xpf_ss_azimuth (xpf_s_i)
+    cart_name = xpf_s_to_xpf_c_name (sphe_name, xpf_s_r_power, l_azi)
+
+     if(debug) then 
+       write (logf,*)trim(l_here),'-d: '
+       write (logf,*)trim(l_here),'-d: xpf_s_i # ', xpf_s_i,' "',sphe_name,'"'
+       write (logf,*)trim(l_here),'-d: l_azi = ',l_azi
+     end if
+
+     cur_symcomp = string_to_upper &
+                  (xpf_ss_name (xpf_s_i)(symcomp_beg:symcomp_end))
+  
+     select case(cur_symcomp) 
+
+     case ("Y_0_0") 
+        cart_name (symcomp_beg:symcomp_end) = '_____'
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = one_over_sqrt_4pi
+
+       case ("Y_1_1") 
+        
+        cart_name (symcomp_beg:symcomp_end) = 'X____'
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_1_0") 
+
+        cart_name (symcomp_beg:symcomp_end) = 'Z____'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_1-1") 
+
+        cart_name (symcomp_beg:symcomp_end) = 'Y____'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_2_2") 
+
+        cart_name (symcomp_beg:symcomp_end) = 'XX___'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 3.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) = 'YY___'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -3.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_2_1") 
+
+        cart_name (symcomp_beg:symcomp_end) = 'XZ___'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 3.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_2_0") 
+
+        cart_name (symcomp_beg:symcomp_end) = 'XX___'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -0.5d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) = 'YY___'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -0.5d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) = 'ZZ___'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 1.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_2-1") 
+
+        cart_name (symcomp_beg:symcomp_end) = 'YZ___'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 3.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_2-2") 
+
+        cart_name (symcomp_beg:symcomp_end) = 'XY___'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 6.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_3_3") 
+
+        cart_name (symcomp_beg:symcomp_end) = 'XXX__'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 15.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) = 'XYY__'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -45.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_3_2") 
+
+        cart_name (symcomp_beg:symcomp_end) = 'XXZ__'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 15.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) = 'YYZ__'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -15.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_3_1") 
+
+        cart_name (symcomp_beg:symcomp_end) = 'XXX__'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -1.5d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) = 'XYY__'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -1.5d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) = 'XZZ__'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 6.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_3_0") 
+
+        cart_name (symcomp_beg:symcomp_end) = 'XXZ__'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -1.5d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+
+        cart_name (symcomp_beg:symcomp_end) = 'YYZ__'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -1.5d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+
+        cart_name (symcomp_beg:symcomp_end) = 'ZZZ__'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+
+       case ("Y_3-1") 
+
+        cart_name (symcomp_beg:symcomp_end) = 'XXY__'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -1.5d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) = 'YYY__'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -1.5d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) = 'YZZ__'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 6.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_3-2") 
+
+        cart_name (symcomp_beg:symcomp_end) = 'XYZ__'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 30.0d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_3-3") 
+
+        cart_name (symcomp_beg:symcomp_end) = 'XXY__'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 45.0d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) = 'YYY__'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -15.0d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_4_4") 
+
+        cart_name (symcomp_beg:symcomp_end) = 'XXXX_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 105.0d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) ='XXYY_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -630.0d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) ='YYYY_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 105.0d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_4_3") 
+
+        cart_name (symcomp_beg:symcomp_end) ='XXXZ_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 105.0d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) ='XYYZ_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -315.0d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_4_2") 
+
+        cart_name (symcomp_beg:symcomp_end) ='XXXX_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -(15.d0/2.0d0)*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) ='XXZZ_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -45.0d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) ='YYYY_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) =  (15.d0/2.0d0)*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) ='YYZZ_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) =  -45.0d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_4_1") 
+
+        cart_name (symcomp_beg:symcomp_end) ='XXXZ_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -(15.d0/2.0d0)*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) ='XYYZ_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -(15.d0/2.0d0)*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) ='XZZZ_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 10.0d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_4_0") 
+
+        cart_name (symcomp_beg:symcomp_end) ='XXXX_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = (3.d0/8.0d0)*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+
+        cart_name (symcomp_beg:symcomp_end) ='XXYY_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = (3.d0/4.0d0)*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+
+        cart_name (symcomp_beg:symcomp_end) ='XXZZ_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -3.0d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+
+        cart_name (symcomp_beg:symcomp_end) ='YYYY_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = (3.d0/8.0d0)*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+
+        cart_name (symcomp_beg:symcomp_end) ='YYZZ_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -3.0d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+
+        cart_name (symcomp_beg:symcomp_end) ='ZZZZ_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+
+       case ("Y_4-1") 
+
+        cart_name (symcomp_beg:symcomp_end) ='XXYZ_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -(15.d0/2.0d0)*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) ='YYYZ_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -(15.d0/2.0d0)*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) ='YZZZ_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 10.0d0
+
+       case ("Y_4-2") 
+
+        cart_name (symcomp_beg:symcomp_end) ='XXXY_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -15.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) ='XYYY_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -15.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) ='XYZZ_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 90.0d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_4-3") 
+
+        cart_name (symcomp_beg:symcomp_end) ='XXYZ_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 315.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) ='YYYZ_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -105.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case ("Y_4-4") 
+
+        cart_name (symcomp_beg:symcomp_end) ='XXXY_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = 420.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+        cart_name (symcomp_beg:symcomp_end) ='XYYY_'      
+        xpf_c_i = string_in_array_locate_or_die  &
+                  (cart_name, xpf_cs_name, "xpf_cs_name")
+        xpf_ss_on_xpf_cs (xpf_s_i, xpf_c_i) = -420.d0*sqrt(two*l_azi+one)*one_over_sqrt_4pi
+
+       case default
+
+        message = 'unknown symmetry-component >'+cur_symcomp+ &
+                  '< should be Y_l_m'
+        call die (l_here, message)
+
+       end select
+
+   end do   ! xpf_ss
+
+  include 'debug_xpf_ss_on_xpf_cs.inc'
+ 
+  call exit (l_here, 1)
+
+  end subroutine xpf_ss_on_xpf_cs_bld
+

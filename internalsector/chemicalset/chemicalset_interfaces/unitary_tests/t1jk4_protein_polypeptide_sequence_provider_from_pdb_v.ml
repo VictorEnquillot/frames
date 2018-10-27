@@ -1,0 +1,317 @@
+(** {3 1jk4 Protein_sequencepdb} *)
+
+open Make_test_v;;
+
+testing "1jk4 Protein_polypeptide_sequence_provider_from_pdb_translation_v";;
+
+(* toplevel 
+   #use "t1jk4_protein_polypeptide_sequence_provider_from_pdb_translation_v.ml";; 
+*)
+
+
+Pdr_v.clear ();;
+let sym_enp = Eps_t.ProteinID "1jk4";;
+
+let reg_pkp = Pdr_v.store_of_entrypdb_symbol sym_enp;;
+let val_pkp_l = Epd_v.clusterpdb_data_list_off_entrypdb_symbol sym_enp;;
+
+let str_rcp_l = Pdr_v.retrieve (Pps_v.make "SEQRES")
+let dat_psp = Psp_v.data sym_enp;;
+
+test_number 1 (
+List.length val_pkp_l
+(* : Clusterpdb_data_t.clusterpdb_data list *)
+=
+35
+);;
+
+test_number 2 (
+dat_psp (* : Protein_polypeptide_sequence_provider_from_pdb_translation_t.protein_sequencepdb *)
+=
+  [
+[
+Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Leu);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Arg);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gln);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Cys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Leu);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_proline_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Pro);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Cys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_glycine_tlc_symbol
+     Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gly;
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_proline_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Pro);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_glycine_tlc_symbol
+     Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gly;
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_glycine_tlc_symbol
+     Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gly;
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Lys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_glycine_tlc_symbol
+     Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gly;
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Arg);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Cys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Phe);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_glycine_tlc_symbol
+     Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gly;
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_proline_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Pro);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Ser);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Ile);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Cys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Cys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_glycine_tlc_symbol
+     Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gly;
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Asp);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Glu);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Leu);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_glycine_tlc_symbol
+     Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gly;
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Cys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Phe);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Val);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_glycine_tlc_symbol
+     Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gly;
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Thr);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Ala);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Glu);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Ala);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Leu);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Arg);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Cys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gln);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Glu);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Glu);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Asn);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Tyr);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Leu);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_proline_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Pro);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Ser);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_proline_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Pro);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Cys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gln);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Ser);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_glycine_tlc_symbol
+     Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gly;
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gln);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Lys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_proline_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Pro);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Cys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_glycine_tlc_symbol
+     Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gly;
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Ser);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_glycine_tlc_symbol
+     Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gly;
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_glycine_tlc_symbol
+     Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gly;
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Arg);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Cys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Ala);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Ala);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Ala);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_glycine_tlc_symbol
+     Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gly;
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Ile);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Cys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Cys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Asn);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Asp);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Glu);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Ser);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Cys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Val);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Thr);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Glu);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_proline_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Pro);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Glu);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Cys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Arg);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Glu);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_glycine_tlc_symbol
+     Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gly;
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Val);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_glycine_tlc_symbol
+     Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gly;
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Phe);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_proline_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Pro);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Arg);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Arg);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Val)
+];
+
+   [
+Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Cys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Tyr);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Phe);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gln);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Asn);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Cys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_proline_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Pro);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_fragmented_tlc_symbol
+     (Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_regular_tlc_symbol
+       Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Lys);
+    Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Molecule_aminoacid_glycine_tlc_symbol
+     Protein_polypeptide_sequence_provider_from_pdb_translation_t.Csp_t.Ats_t.Gly
+]
+
+]
+);;

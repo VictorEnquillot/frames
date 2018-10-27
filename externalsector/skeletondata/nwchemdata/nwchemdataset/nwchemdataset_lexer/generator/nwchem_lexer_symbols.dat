@@ -1,0 +1,48 @@
+constructors   figure                     =   nwchem_lexer 
+
+constructors nwchem_lexer                    =   nwchem_lexer_basic      nwchem_lexer_hashline      nwchem_lexer_keyword      nwchem_lexer_symbol      nwchem_lexer_variable
+
+constructors nwchem_lexer_basic              =   nwchem_lexer_basic_boolean:ofstring   nwchem_lexer_basic_character   nwchem_lexer_basic_float:ofstring   nwchem_lexer_basic_integer:ofstring   nwchem_lexer_basic_string:ofstring   nwchem_lexer_basic_word
+
+constructors nwchem_lexer_basic_character    =    nwchem_lexer_basic_character_alphabetic   nwchem_lexer_basic_character_mark   nwchem_lexer_basic_character_numeric:ofstring
+
+constructors nwchem_lexer_basic_character_alphabetic  =   nwchem_lexer_basic_character_alphabetic_lowercase:ofstring   nwchem_lexer_basic_character_alphabetic_uppercase:ofstring
+
+constructors nwchem_lexer_basic_character_mark =   nwchem_lexer_basic_character_mark_coupled   nwchem_lexer_basic_character_mark_singled
+
+constructors nwchem_lexer_basic_character_mark_singled   =   nwchem_lexer_character_mark_ampersand   nwchem_lexer_character_mark_back_quote   nwchem_lexer_character_mark_bang   nwchem_lexer_character_mark_beginning_of_line   nwchem_lexer_character_mark_blank   nwchem_lexer_character_mark_colon   nwchem_lexer_character_mark_comma   nwchem_lexer_character_mark_divide   nwchem_lexer_character_mark_dot   nwchem_lexer_character_mark_double_quote   nwchem_lexer_character_mark_end_of_line   nwchem_lexer_character_mark_equal   nwchem_lexer_character_mark_greater_than   nwchem_lexer_character_mark_hash   nwchem_lexer_character_mark_less_than   nwchem_lexer_character_mark_minus   nwchem_lexer_character_mark_pipe   nwchem_lexer_character_mark_plus   nwchem_lexer_character_mark_question_mark   nwchem_lexer_character_mark_quote   nwchem_lexer_character_mark_semicolon   nwchem_lexer_character_mark_space:ofstring   nwchem_lexer_character_mark_tabulation   nwchem_lexer_character_mark_times
+
+constructors nwchem_lexer_basic_character_mark_coupled   =   nwchem_lexer_character_mark_l_bracket   nwchem_lexer_character_mark_l_curly   nwchem_lexer_character_mark_l_parenthesis   nwchem_lexer_character_mark_r_bracket   nwchem_lexer_character_mark_r_curly   nwchem_lexer_character_mark_r_parenthesis
+
+constructors nwchem_lexer_basic_word                 =   nwchem_lexer_basic_word_anycase   nwchem_lexer_basic_word_capitalized   nwchem_lexer_basic_word_capitalized_strict   nwchem_lexer_basic_word_lowercase   nwchem_lexer_basic_word_numeric   nwchem_lexer_basic_word_uppercase
+
+constructors nwchem_lexer_basic_word_anycase         =   nwchem_lexer_basic_word_anycase_alphabetic:ofstring   nwchem_lexer_basic_word_anycase_alphanumeric:ofstring   nwchem_lexer_basic_word_anycase_anyword:ofstring
+
+constructors nwchem_lexer_basic_word_capitalized     =   nwchem_lexer_basic_word_capitalized_alphabetic:ofstring   nwchem_lexer_basic_word_capitalized_alphanumeric:ofstring   nwchem_lexer_basic_word_capitalized_anyword:ofstring
+
+constructors nwchem_lexer_basic_word_capitalized_strict   =   nwchem_lexer_basic_word_capitalized_strict_alphabetic:ofstring   nwchem_lexer_basic_word_capitalized_strict_alphanumeric:ofstring   nwchem_lexer_basic_word_capitalized_strict_anyword:ofstring
+
+constructors nwchem_lexer_basic_word_lowercase       =   nwchem_lexer_basic_word_lowercase_alphabetic:ofstring   nwchem_lexer_basic_word_lowercase_alphanumeric:ofstring   nwchem_lexer_basic_word_lowercase_anyword:ofstring
+ 
+constructors nwchem_lexer_basic_word_uppercase       =   nwchem_lexer_basic_word_uppercase_alphabetic:ofstring   nwchem_lexer_basic_word_uppercase_alphanumeric:ofstring   nwchem_lexer_basic_word_uppercase_anyword:ofstring
+ 
+constructors nwchem_lexer_basic_word_numeric         =   nwchem_lexer_basic_word_numeric_negative   nwchem_lexer_basic_word_numeric_non_negative   nwchem_lexer_basic_word_numeric_positive   
+
+constructors nwchem_lexer_basic_word_numeric_negative= nwchem_lexer_basic_word_numeric_negative_integer:ofstring   nwchem_lexer_basic_word_numeric_negative_float:ofstring
+
+constructors nwchem_lexer_basic_word_numeric_non_negative = nwchem_lexer_basic_word_numeric_non_negative_integer:ofstring   nwchem_lexer_basic_word_numeric_non_negative_float:ofstring
+
+constructors nwchem_lexer_basic_word_numeric_positive= nwchem_lexer_basic_word_numeric_positive_integer:ofstring   nwchem_lexer_basic_word_numeric_positive_float:ofstring
+
+
+constructors nwchem_lexer_hashline                   =   nwchem_lexer_hashline_basis_set:ofstring   nwchem_lexer_hashline_dashed:ofstring   nwchem_lexer_hashline_empty   nwchem_lexer_hashline_emsl:ofstring   nwchem_lexer_hashline_header:ofstring   nwchem_lexer_hashline_reference:ofstring
+
+
+
+constructors nwchem_lexer_keyword                    =   nwchem_lexer_keyword_basis   nwchem_lexer_keyword_ecp   nwchem_lexer_keyword_ecp_local   nwchem_lexer_keyword_end   nwchem_lexer_keyword_end_of_file   nwchem_lexer_keyword_ecp_electron_number   nwchem_lexer_keyword_hash_basis   nwchem_lexer_keyword_print   nwchem_lexer_keyword_set   nwchem_lexer_keyword_spin_orbit
+
+
+constructors nwchem_lexer_symbol                     =   nwchem_lexer_symbol_r_arrow   nwchem_lexer_symbol_l_arrow
+
+
+constructors nwchem_lexer_variable                   =   nwchem_lexer_variable_basis_name_atomic_orbital:ofstring   nwchem_lexer_variable_basis_name_spin_orbit:ofstring   nwchem_lexer_variable_basis_set_name:ofstring   nwchem_lexer_variable_ecp_set_name:ofstring   nwchem_lexer_variable_many_space:ofstring   nwchem_lexer_variable_shell_name:ofstring   nwchem_lexer_variable_spaced_end_of_line:ofstring   nwchem_lexer_variable_version:ofstring

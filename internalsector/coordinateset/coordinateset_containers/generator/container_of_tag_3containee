@@ -1,0 +1,60 @@
+(** {9 Extracting Containees off Containee_up} *)
+
+let first_containee_tag_off_containee_up_tag tag_cnu =
+  let (sym_cnu, soi_cnu) = tag_cnu in
+  match sym_cnu with 
+  | Conee_up_symbol_t.Conee_1_symbol sym_cnn_1 ->
+      Tag_v.make sym_cnn_1 soi_cnu
+	
+  | _ -> 
+      failwith "Not_a_Conee_1_symbol:Conee_up_container_v.first_containee_tag_off_containee_up_tag"
+;;
+
+let second_containee_tag_off_containee_up_tag tag_cnu =
+  let (sym_cnu, soi_cnu) = tag_cnu in
+  match sym_cnu with 
+  | Conee_up_symbol_t.Conee_2_symbol sym_cnn_2 ->
+      Tag_v.make sym_cnn_2 soi_cnu
+	
+  | _ -> 
+      failwith "Not_a_Conee_2_symbol:Conee_up_container_v.seond_containee_tag_off_containee_up_tag"
+;;
+
+let third_containee_tag_off_containee_up_tag tag_cnu =
+  let (sym_cnu, soi_cnu) = tag_cnu in
+  match sym_cnu with 
+  | Conee_up_symbol_t.Conee_3_symbol sym_cnn_3 ->
+      Tag_v.make sym_cnn_3 soi_cnu
+	
+  | _ -> 
+      failwith "Not_a_Conee_3_symbol:Conee_up_container_v.third_containee_tag_off_containee_up_tag"
+;;
+
+(** {9 Container_of_tag : Containee Datastructure} *)
+
+let container_of_tag tag_ttt =
+  let tag_cnu_t = containee_up_tag_trio tag_ttt in
+  Trio_v.triplet_of_trio
+    first_containee_tag_off_containee_up_tag
+    second_containee_tag_off_containee_up_tag
+    third_containee_tag_off_containee_up_tag
+    tag_cnu_t
+;;
+
+(** {9 Extracting Containees off Tag} *)
+
+let first_containee_tag tag_ttt =
+  let con_ttt = container_of_tag tag_ttt in
+  Triplet_v.first_off_triplet con_ttt
+;;
+
+let second_containee_tag tag_ttt =
+  let con_ttt = container_of_tag tag_ttt in
+  Triplet_v.second_off_triplet con_ttt
+;;
+
+let third_containee_tag tag_ttt =
+  let con_ttt = container_of_tag tag_ttt in
+  Triplet_v.third_off_triplet con_ttt
+;;
+

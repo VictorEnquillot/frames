@@ -1,0 +1,30 @@
+(** {3 The functionalities fro a Constrained Symbol Formula for an Entry of the Pdb} *)
+
+(** 
+@see {{:http://www.wwpdb.org/documentation/format32/sect2.html#TITLE}
+        http://www.wwpdb.org/documentation/format32/sect2.html#TITLE}
+
+A entry contains record clusters used to describe the experiment and the biological macromolecules present in the entry. 
+*)
+
+module Cps_t = Clusterpdb_symbol_t
+module Sps_t = Entrypdb_symbol_t 
+module Tks_t = Tokenpdb_symbol_t
+
+let retrieve_of_protein_symbol = function
+
+;;
+
+let retrieve_of_molecule_symbol smb =
+  Utils_v.not_yet_implemented nam_mod "retrieve_of_molecule_symbol"
+;;
+
+let retrieve_of_nucleicacid_symbol smb =
+  Utils_v.not_yet_implemented nam_mod "retrieve_of_nucleic_symbol"
+;;
+
+let retrieve =  function
+  | Protein_symbol smb -> retrieve_of_protein_symbol smb
+  | Molecule_symbol smb -> retrieve_of_molecule_symbol smb
+  | Nucleicacid_symbol smb -> retrieve_of_nucleicacid_symbol smb
+;;	

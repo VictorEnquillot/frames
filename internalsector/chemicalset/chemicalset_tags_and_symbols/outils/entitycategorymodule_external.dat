@@ -1,0 +1,13 @@
+aggregate        symbol implementation doublet        implementation
+aggregate        symbol implementation ordinal        implementation
+aggregate        symbol type           doublet        type
+aggregate        symbol type           ordinal        type
+atom             symbol implementation error_messages implementation
+polyglycine      symbol implementation doublet        implementation
+polyglycine      symbol implementation ordinal        implementation
+polyglycine      symbol type           doublet        type
+polyglycine      symbol type           ordinal        type
+polyproline      symbol implementation doublet        implementation
+polyproline      symbol implementation ordinal        implementation
+polyproline      symbol type           doublet        type
+polyproline      symbol type           ordinal        type

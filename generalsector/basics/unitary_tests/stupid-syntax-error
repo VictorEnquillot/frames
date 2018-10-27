@@ -1,0 +1,53 @@
+open Make_test_v;;
+
+testing "Character_v with
+   character_u_alain.ml";
+
+(* toplevel 
+   #use "character_u_alain.ml";; 
+
+*)
+
+let a = Character_v.character_of_ascii_code 181
+;;
+
+let agrave = Character_v.character_of_ascii_code 183
+;;
+
+test_number 1 (
+agrave
+=
+''
+);;
+
+test_number 2 (
+aGrave
+=
+''
+);;
+
+test_number 3 (
+ Character_v.unnacent_of_ascii_code 181
+(* : char *)
+=
+'A'
+);;
+
+
+test_number 4 (
+Character_v.escaped_character_of_character 'x'
+=
+"x"
+);;
+
+test_number 5 (
+Character_v.escaped_character_of_character agrave
+""
+);;
+
+test_number 6 (
+Character_v.escaped_character_of_character aGrave
+=
+""
+);;
+

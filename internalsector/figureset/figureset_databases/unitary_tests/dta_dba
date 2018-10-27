@@ -1,0 +1,2 @@
+let nam_dba = "db_1";;
+let dta_dba = Doublet_list_v.find_if_left (fun s -> String.lowercase (Database_entity_symbol_v.string_off s) = nam_dba) dta_dba_l;;

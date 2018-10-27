@@ -1,0 +1,13 @@
+let store key val_str =
+  try Register_v.store register key val_str
+  with Failure ("Already_stored:Register_v.ml:store") ->
+    error_message_already_stored_value_of_key_of_value key val_str
+      ;
+    if Parameters_figureset_general_provider_v.provide "trace-store" = "true"
+    then
+      Management_v.storing_of_register_name_of_value_name_of_key_name 
+	nam_mod
+	(name_of_value val_str)
+	(name_of_key key)
+    else ()
+;;

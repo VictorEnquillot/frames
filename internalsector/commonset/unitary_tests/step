@@ -1,0 +1,33 @@
+let ich = Scanf.Scanning.from_file nam_fil;;
+
+
+let str_dol = [];;
+Scanf.bscanf ich "%0c" (fun c -> c);; (* ' ' *)
+let str = Tools_com_v.read_string_until_char '=' ich;;
+Scanf.bscanf ich "%0c" (fun c -> c);;
+Tools_com_v.skip_any_space ich;;
+Scanf.bscanf ich "%0c" (fun c -> c);; (* '#' *)
+
+Tools_com_v.skip_string_until_eol ich;;
+Scanf.bscanf ich "%0c" (fun c -> c);; (* ' ' *)
+Tools_com_v.skip_any_space ich;;
+
+Scanf.bscanf ich "%0c" (fun c -> c);; (* 't' *)
+let wor = Scanf.bscanf ich "%s" (fun w -> w) (* "target_name" *);;
+let target_name = Tools_com_v.read_name ich ;; (* "triangles_surface_ratio" *)
+
+
+Scanf.bscanf ich "%0c" (fun c -> c);; (* ' ' *)
+Tools_com_v.skip_any_space ich;;
+Scanf.bscanf ich "%0c" (fun c -> c);; (* 't' *)
+
+let wor = Scanf.bscanf ich "%s" (fun w -> w) (* "target_title" *);;
+
+let target_title = Tools_com_v.read_title ich  (* "triangles equilateral and scalene right surface ratio" *)
+Scanf.bscanf ich "%0c" (fun c -> c);; (* ' ' *)
+Tools_com_v.skip_any_space ich;;
+Scanf.bscanf ich "%0c" (fun c -> c);; (* 'p' *)
+
+
+(*
+

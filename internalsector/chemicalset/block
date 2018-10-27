@@ -1,0 +1,277 @@
+# block
+unconstrained block = block_zerotied block_onetied
+
+# .block_zerotied (o|..)
+unconstrained block_zerotied = block_zerotied_zerotied block_zerotied_onetied block_zerotied_forktied 
+
+# .block_zerotied (-|..)
+unconstrained block_onetied = block_onetied_zerotied block_onetied_onetied block_onetied_forktied
+
+# ..block_zerotied_zerotied (o|o)
+unconstrained block_zerotied_zerotied = block_none_none_ax0 block_none_none_ax1 block_none_none_ax2 block_none_none_ax3 block_none_none_ax4
+
+# ...block_none_none (n-B-n)
+unconstrained block_none_none = block_none_none_ax0 block_none_none_ax1 block_none_none_ax2 block_none_none_ax3 block_none_none_ax4
+
+# ...block_none_none_ax0
+unconstrained block_none_none_ax0 = block_none_none_ax0e0_monoatomic
+
+# ....block_none_none_ax0e0_monoatomic
+unconstrained  block_none_none_ax0e0_monoatomic = atom_zerotied
+
+# ...block_none_none_ax1
+unconstrained block_none_none_ax1 = unconstrained block_none_none_ax1en_diatomic
+
+# ....block_none_none_ax1en_diatomic
+unconstrained block_none_none_ax1en_diatomic = n_co_n n_fh_n n_no_n n_ohm1_n 
+
+# ...block_none_none_ax2
+unconstrained block_none_none_ax2 = block_none_none_ax2e0_linear block_none_none_ax2e1_bent block_none_none_ax2e2_bent
+
+# ....block_none_none_ax2e0_linear
+unconstrained block_none_none_ax2e0_linear = n_becl2_n n_co2_n n_hgcl2_n 
+
+# ....block_none_none_ax2e1_bent 
+unconstrained block_none_none_ax2e1_bent = n_ccl2_n n_no2m1_n n_o3_n n_so2_n 
+
+# ....block_none_none_ax2e2_bent 
+unconstrained block_none_none_ax2e2_bent = n_of2_n n_oh2_n n_sh2_n 
+
+# ....block_none_none_ax2e3_linear
+unconstrained block_none_none_ax2e3_linear = n_i3m1_n n_xef2_n n_xecl2_n 
+
+# ...block_none_none_ax3
+unconstrained block_none_none_ax3 = block_none_none_ax3e0_trigonalplanar block_none_none_ax3e1_trigonalpyramidal
+
+# ....block_none_none_ax3e0_trigonalplanar
+unconstrained block_none_none_ax3e0_trigonalplanar = n_coh2_n n_cho2m1_n 
+
+# ....block_none_none_ax3e1_trigonalpyramidal
+unconstrained block_none_none_ax3e1_trigonalpyramidal = n_nh3_n
+
+# ...block_none_none_ax4
+unconstrained block_none_none_ax4 = block_none_none_ax4e1_tetrahedral
+
+# ...block_none_none_ax4e1_tetrahedral
+unconstrained block_none_none_ax4e1_tetrahedral = n_ch4_n n_nh4p1_n
+
+# ..block_zerotied_onetied (o|-) ---------------------------------------------
+unconstrained block_zerotied_onetied = block_none_single block_none_conjugated block_none_double block_none_triple block_none_halfbridge
+
+# ...block_none_single  (n-|-s)
+unconstrained block_none_single = block_none_single_ax1 block_none_single_ax4e1_tetrahedral block_none_single_ax3e0_trigonalplanar block_none_single_ax3e1_trigonalpyramidal 
+
+# ....block_none_single_ax1
+unconstrained block_none_single_ax1 = block_none_single_ax1en_diatomic
+
+# .....block_none_single_ax1en_diatomic
+unconstrained block_none_single_ax1en_diatomic = n_h_s n_f_s n_s_s 
+
+# ....block_none_single_ax2
+unconstrained block_none_single_ax2 = block_none_single_ax2e0_linear block_none_single_ax2e1_bent block_none_single_ax2e2_bent block_none_single_ax2e3_linear
+
+# ....block_none_single_ax2e0_linear
+unconstrained block_none_single_ax2e0_linear = n_becl_s n_hgcl_s 
+
+# ....block_none_single_ax2e1_bent 
+unconstrained block_none_single_ax2e1_bent = n_ccl_s  
+
+# ....block_none_single_ax2e2_bent 
+unconstrained block_none_single_ax2e2_bent = n_of_s n_oh_s n_sh_s 
+
+# ....block_none_single_ax2e3_linear
+unconstrained block_none_single_ax2e3_linear = n_i2m1_s n_xef_s n_xecl_s 
+
+# ...block_none_single_ax3
+unconstrained block_none_single_ax3 = block_none_single_ax3e0_trigonalplanar block_none_single_ax3e1_trigonalpyramidal
+
+# ....block_none_single_ax3e0_trigonalplanar
+unconstrained block_none_single_ax3e0_trigonalplanar = n_coh_s n_co2m1_s n_no2_s 
+
+# ....block_none_single_ax3e1_trigonalpyramidal
+unconstrained block_none_single_ax3e1_trigonalpyramidal = n_nh2_s
+
+# ...block_none_single_ax4
+unconstrained block_none_single_ax4 = block_none_single_ax4e1_tetrahedral
+
+# ....block_none_single_ax4e1_tetrahedral
+unconstrained block_none_single_ax4e1_tetrahedral = n_ch3_s n_co2m1_s n_nh3p1_s 
+
+# ...block_none_conjugated (n-B-c)
+unconstrained block_none_conjugated = block_none_conjugated_ax3e0_trigonalplanar
+
+# ....block_none_conjugated_ax3
+unconstrained block_none_conjugated_ax3e0 = block_none_conjugated_ax3e0_trigonalplanar
+
+# .....block_none_conjugated_ax3e0_trigonalplanar
+unconstrained block_none_conjugated_ax3e0_trigonalplanar = n_nh2_c
+ 
+# ...block_none_double (n-B-d)
+unconstrained block_none_double = block_none_double_ax3e0_trigonalplanar
+
+# ....block_none_double_ax3
+unconstrained block_none_double_ax3 = block_none_double_ax3e0_trigonalplanar
+
+# .....block_none_double_ax3e0_trigonalplanar
+unconstrained block_none_double_ax3e0_trigonalplanar = n_ch2_d n_co_d n_nh_d n_nh2p1_d 
+
+# ...block_none_triple (n-B-t)
+unconstrained block_none_triple = block_none_triple_ax2
+
+# ....block_none_triple_ax1
+unconstrained block_none_triple_ax1 = block_none_triple_ax1en_diatomic
+
+# .....block_none_triple_ax1en_diatomic
+unconstrained block_none_triple_ax1en_diatomic = n_n_t 
+
+# ....block_none_triple_ax2
+unconstrained block_none_triple_ax2 = block_none_triple_ax2e0_linear
+
+# ....block_none_triple_ax2e0_linear
+unconstrained block_none_triple_ax2e0_linear = n_ch_t 
+
+# ...block_none_forked has no sense is equivalent to onetied_...
+
+# ..block_onetied_onetied (-|-)
+unconstrained block_onetied_onetied = block_single_single block_single_conjugated block_single_double block_single_triple 
+
+# ...block_single_single (s-B-s)
+unconstrained block_single_single = block_single_single_ax2 block_single_single_ax3 block_single_single_ax4
+
+# ....block_single_single_ax2 
+unconstrained block_single_single_ax2 = block_single_single_ax2e0_bent block_single_single_ax2e2_bent block_single_single_ax2e3_linear 
+
+# ....block_single_single_ax2e0_bent 
+unconstrained block_single_single_ax2e0_bent = s_be_s s_hg_s 
+
+# ....block_single_single_ax2e2_bent 
+unconstrained block_single_single_ax2e2_bent = s_o_s s_s_s 
+
+# ....block_single_single_ax2e3_linear
+unconstrained block_single_single_ax2e3_linear = s_im1_s s_xe_s
+ 
+# ....block_single_single_ax3
+unconstrained block_single_single_ax3 = block_single_single_ax3e0_trigonalplanar block_single_single_ax3e1_trigonalpyramidal block_single_single_ax3e2_tshaped
+
+# ....block_single_single_ax3e0_trigonalplanar
+unconstrained block_single_single_ax3e0_trigonalplanar = s_bf_s
+
+# ....block_single_single_ax3e1_trigonalpyramidal
+unconstrained block_single_single_ax3e1_trigonalpyramidal = s_nh_s s_pcl_s
+
+# ....block_single_single_ax3e2_tshaped
+unconstrained block_single_single_ax3e2_tshaped = s_clf_s s_brf_s
+
+# ....block_single_single_ax4
+unconstrained block_single_single_ax4 = block_single_single_ax4e0_tetrahedral block_single_single_ax4e1_seesaw
+
+# .....block_single_single_ax4e0_tetrahedral
+unconstrained block_single_single_ax4e0_tetrahedral = s_ch2_s s_nh2p1_s 
+
+# .....block_single_single_ax4e1_seesaw
+unconstrained block_single_single_ax4e1_seesaw = s_sf2_s
+
+# ...block_single_conjugated (s-B-c) No example
+
+# ...block_single_double (s-B-d)
+unconstrained block_single_double = block_single_double_ax3
+
+# ....block_single_double_ax3
+unconstrained block_single_double_ax3 = block_single_double_ax3e0_trigonalplanar 
+
+# .....block_single_double_ax3e0_trigonalplanar 
+unconstrained block_single_double_ax3e0_trigonalplanar = s_ch_d s_n_d s_nhp1_d 
+
+# ...block_single_triple (s-B-t)
+unconstrained block_single_triple = block_single_triple_ax2
+
+# ....block_single_triple_ax2
+unconstrained block_single_triple_ax2 = block_single_triple_ax2e0_linear 
+
+block_single_triple_ax2_linear
+unconstrained block_single_triple_ax2e0_linear = s_c_t s_np1_t
+
+# ...block_conjugated_conjugated (c-B-c)
+unconstrained block_conjugated_conjugated = block_conjugated_conjugated_ax2 
+
+# ....block_conjugated_conjugated_ax2
+unconstrained block_conjugated_conjugated_ax2 = block_conjugated_conjugated_ax2e0_linear
+
+# ....block_conjugated_conjugated_ax2e0_linear
+unconstrained block_conjugated_conjugated_ax2e0_linear = c_ch_c c_n_c
+
+# ...block_conjugated_double (c-B-d)
+unconstrained block_conjugated_double = block_conjugated_double_ax2
+
+# ....block_conjugated_double_ax2
+unconstrained block_conjugated_double_ax2 = block_conjugated_double_ax2e0_linear
+
+# ....block_conjugated_double_ax2e0_linear
+unconstrained block_conjugated_double_ax2e0_linear = c_c_d c_np1_d
+
+# ...block_double_double (d-B-d)
+unconstrained block_double_double = block_double_double_ax2
+
+# ...block_double_double_ax2
+unconstrained block_double_double_ax2 = block_double_double_ax2e0_linear
+
+# ....block_double_double_ax2e0_linear
+unconstrained block_double_double_ax2e0_linear = d_c_d d_np1_d
+
+# ...block_onetied_forktied (-|<) -------------------------------------------------------
+unconstrained block_onetied_forktied = block_onetied_biforktied block_onetied_triforktied
+
+# ....block_onetied_biforktied (-|<) ----------------------------------------------------
+unconstrained block_onetied_biforktied = block_single_singlesingle block_single_singledouble
+
+# .....block_single_singlesingle (s-B-ss)
+unconstrained block_single_singlesingle = block_single_singlesingle_ax3
+
+# ......block_single_singlesingle_ax3
+block_single_singlesingle_ax3 = block_single_singlesingle_ax3e1_trigonalpyramidal
+
+# ......block_single_singlesingle_ax3e1_trigonalpyramidal
+unconstrained block_single_singlesingle_ax3e1_trigonalpyramidal = s_n_ss
+
+# ......block_single_singlesingle_ax4
+block_single_singlesingle_ax4 = block_single_singlesingle_ax4e0_tetrahedral
+
+# ......block_single_singlesingle_ax4e9_tetrahedral
+unconstrained block_single_singlesingle_ax4e0_tetrahedral = s_ch_ss s_nhp1_ss
+
+# .....block_single_singledouble (s-B-sd)
+unconstrained block_single_singledouble = block_single_singledouble_ax3e0_trigonalplanar
+
+# ......block_single_singledouble_vsepr
+unconstrained block_single_singledouble_ax3e0_trigonalplanar = s_c_sd
+
+# .....block_single_doublesingle (s-B-ds)
+unconstrained block_single_doublesingle = block_single_doublesingle_ax3
+
+# ......block_single_doublesingle_ax3
+unconstrained block_single_doublesingle_ax3 = block_single_doublesingle_ax3e0_trigonalplanar 
+
+# ......block_single_doublesingle_ax3e0_trigonalplanar
+unconstrained block_single_doublesingle_ax3e0_trigonalplanar = s_c_ds
+
+# ....block_double_singlesingle (d-B-ss)
+unconstrained block_double_singlesingle = block_double_singlesingle_ax3
+
+# .....block_double_singlesingle_ax3
+unconstrained block_double_singlesingle_ax3 = block_double_singlesingle_ax3e0_trigonalplanar
+
+# .....block_double_singlesingle_ax3e0_trigonalplanar
+unconstrained block_double_singlesingle_ax3e0_trigonalplanar = d_c_ss d_np1_ss
+
+# ....block_onetied_triforktied (-|<-) ---------------------------------- 
+unconstrained block_onetied_triforktied = block_single_singlesinglesingle
+
+# .....block_single_singlesinglesingle (s-B-sss)
+unconstrained block_single_singlesinglesingle = block_single_singlesinglesingle_ax4
+
+# .....block_single_singlesinglesingle_ax4
+unconstrained block_single_singlesinglesingle_ax4 = block_single_singlesinglesingle_ax4e1_tetrahedral
+
+# ......block_single_singlesinglesingle_ax4e1_tetrahedral
+unconstrained block_single_singlesinglesingle_ax4e1_tetrahedral = s_c_sss s_nhp1_sss 
+

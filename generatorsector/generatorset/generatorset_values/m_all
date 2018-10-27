@@ -1,0 +1,6 @@
+cd $SGNR; make depend; make
+cd $TGNR; make depend; make
+cd $DGNR; make depend; make
+cd $IGNR; make depend; make
+cd $FGNR; make depend; make
+cd $VGNR; make depend; make

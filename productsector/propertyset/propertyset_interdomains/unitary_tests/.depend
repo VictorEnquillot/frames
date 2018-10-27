@@ -1,0 +1,36 @@
+test.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_tags/Figure_tag_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/productsector/propertyset/propertyset_interdomains/Figure_tag_by_basicname_variable_external_n_basicname_inputbox_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_builder_trees/Figure_tag_all_list_by_basicname_databox_n_basicname_database_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_symbols/Figure_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/productsector/propertyset/propertyset_interdomains/Figure_symbol_by_basicname_variable_external_n_basicname_inputbox_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_symbols/Figure_set_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_symbols/Figure_set_body_triangle_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_symbols/Figure_set_body_triangle_scalene_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_symbols/Figure_set_body_triangle_scalene_acute_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_symbols/Figure_set_body_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_variables/Check_is_basicname_variable_external_by_basicname_variable_external_n_basicname_inputbox_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_variables/Basicname_databox_by_basicname_variable_external_n_basicname_inputbox_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_variables/Basicname_database_by_basicname_variable_external_n_basicname_inputbox_provider_v.cmo
+test.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_tags/Figure_tag_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/productsector/propertyset/propertyset_interdomains/Figure_tag_by_basicname_variable_external_n_basicname_inputbox_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_builder_trees/Figure_tag_all_list_by_basicname_databox_n_basicname_database_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_symbols/Figure_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/productsector/propertyset/propertyset_interdomains/Figure_symbol_by_basicname_variable_external_n_basicname_inputbox_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_symbols/Figure_set_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_symbols/Figure_set_body_triangle_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_symbols/Figure_set_body_triangle_scalene_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_symbols/Figure_set_body_triangle_scalene_acute_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_symbols/Figure_set_body_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_variables/Check_is_basicname_variable_external_by_basicname_variable_external_n_basicname_inputbox_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_variables/Basicname_databox_by_basicname_variable_external_n_basicname_inputbox_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_variables/Basicname_database_by_basicname_variable_external_n_basicname_inputbox_provider_v.cmx

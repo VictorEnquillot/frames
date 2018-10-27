@@ -1,0 +1,7 @@
+define T_symbol 
+      external [ "figure" "set" "body" "triangle" "isosceles" "equilateral"]
+      external_name "T" 
+      category "symbol"
+      end -- define
+
+stop

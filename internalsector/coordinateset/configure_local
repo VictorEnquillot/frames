@@ -1,0 +1,2 @@
+SUB_DIRECTORIES="coordinateset_databases coordinateset_containers coordinateset_symbols coordinateset_tags coordinateset_values"
+CURRENT_AND_TEST=". unitary_tests"

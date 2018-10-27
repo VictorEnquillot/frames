@@ -1,0 +1,29 @@
+msrf keleton_as_body keleton_as_set_body *ml *mk
+msrf keleton_as_fence keleton_as_set_fence *ml *mk
+msrf keleton_body keleton_set_body *ml *mk
+msrf keleton_fence keleton_set_fence *ml *mk
+
+cp $FFIG/Figure_set_container_t.ml Skeleton_set_container_t.ml 
+cp $FFIG/Figure_set_container_v.ml Skeleton_set_container_v.ml 
+cp $FFIG/Figure_context_container_t.ml Skeleton_context_container_t.ml 
+cp $FFIG/Figure_context_container_v.ml Skeleton_context_container_v.ml 
+cp $FFIG/Figure_context_sector_container_t.ml Skeleton_context_sector_container_t.ml 
+cp $FFIG/Figure_context_sector_container_v.ml Skeleton_context_sector_container_v.ml 
+
+ms  figure skeleton *.ml
+ms  Figure Skeleton *.ml
+ms  FIG SKE *ml
+ms  _fig _ske *ml
+ms _fbo _sbo *ml
+
+cp $FFIG/generator/template_container_as_tuple_body_stem_2sibling_1containee_v.ml .
+cp $FFIG/generator/template_container_as_list_top_stem_2sibling_1containee_v.ml .
+cp $FFIG/generator/template_container_as_uno_fence_stemm_*sibling_1containee_v.ml .
+
+cp -p $FFIG/generator/do_container_all_[tv].sh .
+cp -p $FFIG/generator/do_container_as_tuple_body_stem_2sibling_1containee_v.sh .
+cp -p $FFIG/generator/do_container_datastructure_t.sh .
+cp -p $FFIG/generator/do_container_as_list_context_bud_1containee_v.sh .
+cp -p $FFIG/generator/do_container_as_list_top_stem_2sibling_1containee_v.sh .
+cp -p $FFIG/generator/do_container_as_uno_fence_stem_1sibling_1containee_v.sh .
+cp -p $FFIG/generator/do_container_as_list_context_bud_1containee_v.sh .

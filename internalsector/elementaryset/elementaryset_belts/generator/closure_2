@@ -1,0 +1,54 @@
+(** {6 Closure of Canister} *)
+
+let clsur_canister_list_off_this_canister = function
+  | This_canister_t.Sibling_1_canister can_sss_1 ->
+      Sibling_1_canister_v.clsur_canister_list_off_sibling_1_canister can_sss_1
+
+  | This_canister_t.Sibling_2_canister can_sss_2 ->
+      Sibling_2_canister_v.clsur_canister_list_off_sibling_2_canister can_sss_2
+;;
+
+let clsur_canister_tuple_off_this_canister can_ttt =
+  let can_ccc_l = clsur_canister_list_off_this_canister can_ttt in
+  Tuple_v.tuple_of_list can_ccc_l
+;;
+
+(** {6 Closure of Tag} *)
+
+let clsur_canister_list_off_this_tag tag_ttt =
+  let can_ttt = canister_of_tag tag_ttt in
+  clsur_canister_list_off_this_canister can_ttt
+;;
+
+let clsur_canister_tuple_off_this_tag tag_ttt =
+  let can_ttt = canister_of_tag tag_ttt in
+  clsur_canister_tuple_off_this_canister can_ttt
+;;
+
+(** {6 Data of Canister} *)
+
+let datstr_list_off_this_canister = function
+  | This_canister_t.Sibling_1_canister can_sss_1 ->
+      Sibling_1_canister_v.datstr_list_off_sibling_1_canister can_sss_1
+
+  | This_canister_t.Sibling_2_canister can_sss_2 ->
+      Sibling_2_canister_v.datstr_list_off_sibling_2_canister can_sss_2
+;;
+
+let datstr_tuple_off_this_canister can_ttt =
+  let can_ddd_l = datstr_list_off_this_canister can_ttt in
+  Tuple_v.tuple_of_list can_ddd_l
+;;
+
+(** {6 Data of Tag} *)
+
+let datstr_list_off_this_tag tag_ttt =
+  let can_ttt = canister_of_tag tag_ttt in
+  datstr_list_off_this_canister can_ttt
+;;
+
+let datstr_tuple_off_this_tag tag_ttt =
+  let can_ttt = canister_of_tag tag_ttt in
+  datstr_tuple_off_this_canister can_ttt
+;;
+

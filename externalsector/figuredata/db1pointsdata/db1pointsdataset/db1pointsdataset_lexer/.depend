@@ -1,0 +1,290 @@
+Db1pointsdata_lexer_token_units_length_symbol_t.cmo:
+Db1pointsdata_lexer_token_units_length_symbol_t.cmx:
+Db1pointsdata_lexer_token_units_angle_symbol_t.cmo:
+Db1pointsdata_lexer_token_units_angle_symbol_t.cmx:
+Db1pointsdata_lexer_token_units_symbol_t.cmo: \
+    Db1pointsdata_lexer_token_units_length_symbol_t.cmo \
+    Db1pointsdata_lexer_token_units_angle_symbol_t.cmo
+Db1pointsdata_lexer_token_units_symbol_t.cmx: \
+    Db1pointsdata_lexer_token_units_length_symbol_t.cmx \
+    Db1pointsdata_lexer_token_units_angle_symbol_t.cmx
+Db1pointsdata_lexer_token_figure_kind_symbol_t.cmo:
+Db1pointsdata_lexer_token_figure_kind_symbol_t.cmx:
+Db1pointsdata_lexer_token_figure_symbol_t.cmo: \
+    Db1pointsdata_lexer_token_figure_kind_symbol_t.cmo
+Db1pointsdata_lexer_token_figure_symbol_t.cmx: \
+    Db1pointsdata_lexer_token_figure_kind_symbol_t.cmx
+Db1pointsdata_lexer_token_symbol_t.cmo: \
+    Db1pointsdata_lexer_token_units_symbol_t.cmo \
+    Db1pointsdata_lexer_token_figure_symbol_t.cmo
+Db1pointsdata_lexer_token_symbol_t.cmx: \
+    Db1pointsdata_lexer_token_units_symbol_t.cmx \
+    Db1pointsdata_lexer_token_figure_symbol_t.cmx
+Db1pointsdata_lexer_keyword_figure_symbol_t.cmo:
+Db1pointsdata_lexer_keyword_figure_symbol_t.cmx:
+Db1pointsdata_lexer_keyword_coordinates_units_symbol_t.cmo:
+Db1pointsdata_lexer_keyword_coordinates_units_symbol_t.cmx:
+Db1pointsdata_lexer_keyword_coordinates_symbol_t.cmo: \
+    Db1pointsdata_lexer_keyword_coordinates_units_symbol_t.cmo
+Db1pointsdata_lexer_keyword_coordinates_symbol_t.cmx: \
+    Db1pointsdata_lexer_keyword_coordinates_units_symbol_t.cmx
+Db1pointsdata_lexer_keyword_character_symbol_t.cmo:
+Db1pointsdata_lexer_keyword_character_symbol_t.cmx:
+Db1pointsdata_lexer_keyword_symbol_t.cmo: \
+    Db1pointsdata_lexer_keyword_figure_symbol_t.cmo \
+    Db1pointsdata_lexer_keyword_coordinates_symbol_t.cmo \
+    Db1pointsdata_lexer_keyword_character_symbol_t.cmo
+Db1pointsdata_lexer_keyword_symbol_t.cmx: \
+    Db1pointsdata_lexer_keyword_figure_symbol_t.cmx \
+    Db1pointsdata_lexer_keyword_coordinates_symbol_t.cmx \
+    Db1pointsdata_lexer_keyword_character_symbol_t.cmx
+Db1pointsdata_lexer_basic_word_uppercase_symbol_t.cmo:
+Db1pointsdata_lexer_basic_word_uppercase_symbol_t.cmx:
+Db1pointsdata_lexer_basic_word_lowercase_symbol_t.cmo:
+Db1pointsdata_lexer_basic_word_lowercase_symbol_t.cmx:
+Db1pointsdata_lexer_basic_word_capitalized_symbol_t.cmo:
+Db1pointsdata_lexer_basic_word_capitalized_symbol_t.cmx:
+Db1pointsdata_lexer_basic_word_anycase_symbol_t.cmo:
+Db1pointsdata_lexer_basic_word_anycase_symbol_t.cmx:
+Db1pointsdata_lexer_basic_word_symbol_t.cmo: \
+    Db1pointsdata_lexer_basic_word_uppercase_symbol_t.cmo \
+    Db1pointsdata_lexer_basic_word_lowercase_symbol_t.cmo \
+    Db1pointsdata_lexer_basic_word_capitalized_symbol_t.cmo \
+    Db1pointsdata_lexer_basic_word_anycase_symbol_t.cmo
+Db1pointsdata_lexer_basic_word_symbol_t.cmx: \
+    Db1pointsdata_lexer_basic_word_uppercase_symbol_t.cmx \
+    Db1pointsdata_lexer_basic_word_lowercase_symbol_t.cmx \
+    Db1pointsdata_lexer_basic_word_capitalized_symbol_t.cmx \
+    Db1pointsdata_lexer_basic_word_anycase_symbol_t.cmx
+Db1pointsdata_lexer_basic_string_symbol_t.cmo:
+Db1pointsdata_lexer_basic_string_symbol_t.cmx:
+Db1pointsdata_lexer_basic_float_symbol_t.cmo:
+Db1pointsdata_lexer_basic_float_symbol_t.cmx:
+Db1pointsdata_lexer_basic_symbol_t.cmo: \
+    Db1pointsdata_lexer_basic_word_symbol_t.cmo \
+    Db1pointsdata_lexer_basic_string_symbol_t.cmo \
+    Db1pointsdata_lexer_basic_float_symbol_t.cmo
+Db1pointsdata_lexer_basic_symbol_t.cmx: \
+    Db1pointsdata_lexer_basic_word_symbol_t.cmx \
+    Db1pointsdata_lexer_basic_string_symbol_t.cmx \
+    Db1pointsdata_lexer_basic_float_symbol_t.cmx
+Db1pointsdata_lexer_symbol_t.cmo: Db1pointsdata_lexer_token_symbol_t.cmo \
+    Db1pointsdata_lexer_keyword_symbol_t.cmo \
+    Db1pointsdata_lexer_basic_symbol_t.cmo
+Db1pointsdata_lexer_symbol_t.cmx: Db1pointsdata_lexer_token_symbol_t.cmx \
+    Db1pointsdata_lexer_keyword_symbol_t.cmx \
+    Db1pointsdata_lexer_basic_symbol_t.cmx
+Db1pointsdata_lexer_token_units_length_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_token_units_length_symbol_t.cmo
+Db1pointsdata_lexer_token_units_length_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_token_units_length_symbol_t.cmx
+Db1pointsdata_lexer_token_units_angle_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_token_units_angle_symbol_t.cmo
+Db1pointsdata_lexer_token_units_angle_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_token_units_angle_symbol_t.cmx
+Db1pointsdata_lexer_token_units_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_token_units_symbol_t.cmo \
+    Db1pointsdata_lexer_token_units_length_symbol_v.cmo \
+    Db1pointsdata_lexer_token_units_angle_symbol_v.cmo
+Db1pointsdata_lexer_token_units_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_token_units_symbol_t.cmx \
+    Db1pointsdata_lexer_token_units_length_symbol_v.cmx \
+    Db1pointsdata_lexer_token_units_angle_symbol_v.cmx
+Db1pointsdata_lexer_token_figure_kind_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_token_figure_kind_symbol_t.cmo
+Db1pointsdata_lexer_token_figure_kind_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_token_figure_kind_symbol_t.cmx
+Db1pointsdata_lexer_token_figure_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_token_figure_symbol_t.cmo \
+    Db1pointsdata_lexer_token_figure_kind_symbol_v.cmo
+Db1pointsdata_lexer_token_figure_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_token_figure_symbol_t.cmx \
+    Db1pointsdata_lexer_token_figure_kind_symbol_v.cmx
+Db1pointsdata_lexer_token_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_token_units_symbol_v.cmo \
+    Db1pointsdata_lexer_token_symbol_t.cmo \
+    Db1pointsdata_lexer_token_figure_symbol_v.cmo
+Db1pointsdata_lexer_token_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_token_units_symbol_v.cmx \
+    Db1pointsdata_lexer_token_symbol_t.cmx \
+    Db1pointsdata_lexer_token_figure_symbol_v.cmx
+Db1pointsdata_lexer_keyword_figure_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_keyword_figure_symbol_t.cmo
+Db1pointsdata_lexer_keyword_figure_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_keyword_figure_symbol_t.cmx
+Db1pointsdata_lexer_keyword_coordinates_units_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_keyword_coordinates_units_symbol_t.cmo
+Db1pointsdata_lexer_keyword_coordinates_units_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_keyword_coordinates_units_symbol_t.cmx
+Db1pointsdata_lexer_keyword_coordinates_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_keyword_coordinates_units_symbol_v.cmo \
+    Db1pointsdata_lexer_keyword_coordinates_symbol_t.cmo
+Db1pointsdata_lexer_keyword_coordinates_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_keyword_coordinates_units_symbol_v.cmx \
+    Db1pointsdata_lexer_keyword_coordinates_symbol_t.cmx
+Db1pointsdata_lexer_keyword_character_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_keyword_character_symbol_t.cmo
+Db1pointsdata_lexer_keyword_character_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_keyword_character_symbol_t.cmx
+Db1pointsdata_lexer_keyword_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_keyword_symbol_t.cmo \
+    Db1pointsdata_lexer_keyword_figure_symbol_v.cmo \
+    Db1pointsdata_lexer_keyword_coordinates_symbol_v.cmo \
+    Db1pointsdata_lexer_keyword_character_symbol_v.cmo
+Db1pointsdata_lexer_keyword_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_keyword_symbol_t.cmx \
+    Db1pointsdata_lexer_keyword_figure_symbol_v.cmx \
+    Db1pointsdata_lexer_keyword_coordinates_symbol_v.cmx \
+    Db1pointsdata_lexer_keyword_character_symbol_v.cmx
+Db1pointsdata_lexer_basic_word_uppercase_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_basic_word_uppercase_symbol_t.cmo
+Db1pointsdata_lexer_basic_word_uppercase_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_basic_word_uppercase_symbol_t.cmx
+Db1pointsdata_lexer_basic_word_lowercase_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_basic_word_lowercase_symbol_t.cmo
+Db1pointsdata_lexer_basic_word_lowercase_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_basic_word_lowercase_symbol_t.cmx
+Db1pointsdata_lexer_basic_word_capitalized_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_basic_word_capitalized_symbol_t.cmo
+Db1pointsdata_lexer_basic_word_capitalized_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_basic_word_capitalized_symbol_t.cmx
+Db1pointsdata_lexer_basic_word_anycase_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_basic_word_anycase_symbol_t.cmo
+Db1pointsdata_lexer_basic_word_anycase_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_basic_word_anycase_symbol_t.cmx
+Db1pointsdata_lexer_basic_word_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_basic_word_uppercase_symbol_v.cmo \
+    Db1pointsdata_lexer_basic_word_symbol_t.cmo \
+    Db1pointsdata_lexer_basic_word_lowercase_symbol_v.cmo \
+    Db1pointsdata_lexer_basic_word_capitalized_symbol_v.cmo \
+    Db1pointsdata_lexer_basic_word_anycase_symbol_v.cmo
+Db1pointsdata_lexer_basic_word_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_basic_word_uppercase_symbol_v.cmx \
+    Db1pointsdata_lexer_basic_word_symbol_t.cmx \
+    Db1pointsdata_lexer_basic_word_lowercase_symbol_v.cmx \
+    Db1pointsdata_lexer_basic_word_capitalized_symbol_v.cmx \
+    Db1pointsdata_lexer_basic_word_anycase_symbol_v.cmx
+Db1pointsdata_lexer_basic_string_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_basic_string_symbol_t.cmo
+Db1pointsdata_lexer_basic_string_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_basic_string_symbol_t.cmx
+Db1pointsdata_lexer_basic_float_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_basic_float_symbol_t.cmo
+Db1pointsdata_lexer_basic_float_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_basic_float_symbol_t.cmx
+Db1pointsdata_lexer_basic_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_basic_word_symbol_v.cmo \
+    Db1pointsdata_lexer_basic_symbol_t.cmo \
+    Db1pointsdata_lexer_basic_string_symbol_v.cmo \
+    Db1pointsdata_lexer_basic_float_symbol_v.cmo
+Db1pointsdata_lexer_basic_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_basic_word_symbol_v.cmx \
+    Db1pointsdata_lexer_basic_symbol_t.cmx \
+    Db1pointsdata_lexer_basic_string_symbol_v.cmx \
+    Db1pointsdata_lexer_basic_float_symbol_v.cmx
+Db1pointsdata_lexer_symbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_token_symbol_v.cmo Db1pointsdata_lexer_symbol_t.cmo \
+    Db1pointsdata_lexer_keyword_symbol_v.cmo \
+    Db1pointsdata_lexer_basic_symbol_v.cmo
+Db1pointsdata_lexer_symbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_token_symbol_v.cmx Db1pointsdata_lexer_symbol_t.cmx \
+    Db1pointsdata_lexer_keyword_symbol_v.cmx \
+    Db1pointsdata_lexer_basic_symbol_v.cmx
+Db1pointsdata_lexer_lexical_analysis_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Trio_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/files/File_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Db1pointsdata_lexer_symbol_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Databox_fullnameoffile_by_basicname_databox_n_basicname_database_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_trio_by_fullnameofdirectory_provider_v.cmo
+Db1pointsdata_lexer_lexical_analysis_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Trio_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/files/File_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Db1pointsdata_lexer_symbol_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Databox_fullnameoffile_by_basicname_databox_n_basicname_database_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_trio_by_fullnameofdirectory_provider_v.cmx

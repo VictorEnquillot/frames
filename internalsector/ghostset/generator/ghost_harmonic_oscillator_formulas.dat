@@ -1,0 +1,25 @@
+builders fake_son_constructor                     = list   string
+builders point_constructor:ofstring               = trio   coordinate
+builders triangle_isoceles_acute:ofstring         = doublet   point   vector
+builders triangle_isoceles_equilateral:ofstring   = doublet   point   vector
+builders triangle_isoceles_obtuse:ofstring        = doublet   point   vector
+builders triangle_isoceles_right:ofstring         = doublet   point   vector
+builders triangle_scalene_acute:ofstring          = doublet   point   vector
+builders triangle_scalene_obtuse:ofstring         = doublet   point   vector
+builders triangle_scalene_right:ofstring          = doublet   point   vector
+builders vector_constructor:ofstring              = duo   point
+builders cylindrical_phi                          = doublet   float   string
+builders cylindrical_rho                          = doublet   float   string
+builders cylindrical_zed                          = doublet   float   string
+builders polar_rho                                = doublet   float   string
+builders polar_theta                              = doublet   float   string
+builders spherical_phi                            = doublet   float   string
+builders spherical_rho                            = doublet   float   string
+builders spherical_theta                          = doublet   float   string
+builders x:ofstring                               = doublet   float   string
+builders y:ofstring                               = doublet   float   string
+builders z:ofstring                               = doublet   float   string
+
+# do not mix formula and value
+# formula is defined here (builders)
+# value is defined from some input database

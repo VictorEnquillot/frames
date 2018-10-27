@@ -1,0 +1,1622 @@
+#use "token_pdb_v.ml";; 
+(Scanf.Scanning.from_string "12345")  ;;
+#use "token_pdb_v.ml";; 
+#use "ttoken_pdb_v.ml";; 
+module Tls_v = Tools_v;;
+module Tls_v = Tools_v
+let x = 1;;
+#use "ttoken_pdb_v.ml";; 
+read_integer_4 (Scanf.Scanning.from_string "123456")
+;;
+Scanf.sscanf "   123456" "%5i"  (function i -> i);;
+Scanf.sscanf "   123456" " %5i"  (function i -> i);;
+Scanf.sscanf "   123456" " %5i!"  (function i -> i);;
+Scanf.sscanf "   123456" "! %5i"  (function i -> i);;
+Scanf.sscanf "   123456" " %3i"  (function i -> i);;
+#use "ttoken_pdb_v.ml";; 
+#use "trecordpdb_seqres_v.ml";; 
+Scanf.bscanf ib
+  "%6s %6i %4s %3s \
+   %c %4i \
+   %f %f %f \
+   %f %f \
+   %s"
+ (fun kwd atom_idx atom_name residue_name
+      chain_idx residue_idx
+      x y z
+      percent b_factor
+      label ->
+  kwd, atom_idx, atom_name, residue_name,
+  chain_idx, residue_idx,
+  x, y, z,
+  percent, b_factor,
+  label)
+;;
+Scanf.bscanf ib "%6s" (fun kwd -> kwd);;
+Scanf.bscanf ib "%6s%i4" (fun kwd cnt -> kwd cnt);;
+Scanf.bscanf ib "%6s%i4" (fun kwd cnt -> kwd, cnt);;
+#use "trecordpdb_seqres_v.ml";; 
+Scanf.bscanf ib "%6s %i3" (fun kwd cnt -> (kwd, cnt));;
+Scanf.bscanf ib "%6s%i4" (fun kwd cnt -> kwd, cnt);;
+Scanf.bscanf ib "%6s%i3" (fun kwd cnt -> kwd, cnt);;
+Scanf.bscanf ib "%6s%i5" (fun kwd cnt -> kwd, cnt);;
+Scanf.bscanf ib "%6s%i1" (fun kwd cnt -> kwd, cnt);;
+Scanf.bscanf ib "%6s %i1" (fun kwd cnt -> kwd, cnt);;
+ib;;
+#use "trecordpdb_seqres_v.ml";; 
+str;;
+Scanf.bscanf ib "%6s %i" (fun kwd cnt -> kwd, cnt);;
+Scanf.bscanf ib "%6s%i" (fun kwd cnt -> kwd, cnt);;
+Scanf.sscanf "SEQRES   4" "%6s%i" (fun kwd cnt -> kwd, cnt);;
+Scanf.sscanf "SEQRES   4" "%6s %i" (fun kwd cnt -> kwd, cnt);;
+Scanf.sscanf "SEQRES   4 B" "%6s %i" (fun kwd cnt -> kwd, cnt);;
+Scanf.sscanf "SEQRES   4 B" "%6s%c_%i" (fun kwd cnt -> kwd, cnt);;
+Scanf.sscanf "SEQRES   4 B" "%6s%_%i" (fun kwd cnt -> kwd, cnt);;
+Scanf.sscanf "SEQRES   4 B" "%6s%_c_%i" (fun kwd cnt -> kwd, cnt);;
+Scanf.sscanf "SEQRES   4 B" "%6s%_c%i" (fun kwd cnt -> kwd, cnt);;
+Scanf.sscanf "SEQRES   4 B" "%6s%_s%i" (fun kwd cnt -> kwd, cnt);;
+Scanf.sscanf "SEQRES   4 B" "%6s%0c%i" (fun kwd cnt -> kwd, cnt);;
+Scanf.sscanf "SEQRES   4 B" "%6s%0c%i" (fun kwd c cnt -> kwd, c, cnt);;
+Scanf.sscanf "SEQRES   4 B" "%6s%_c%i" (fun kwd cnt -> kwd,  cnt);;
+Scanf.sscanf "SEQRES   4 B" "%6s@%i" (fun kwd cnt -> kwd,  cnt);;
+Scanf.sscanf "SEQRES   4 B" "%6s@ %i" (fun kwd cnt -> kwd,  cnt);;
+Scanf.sscanf "SEQRES   4 B" "%6s@" (fun kwd cnt -> kwd,  cnt);;
+Scanf.sscanf "SEQRES   4 B" "%6s@" (fun kwd -> kwd);;
+Scanf.sscanf "SEQRES   4 B" "%6s@\t" (fun kwd -> kwd);;
+Scanf.sscanf "SEQRES   4 B" "%6s@[A-Z]" (fun kwd -> kwd);;
+Scanf.sscanf "SEQRES   4 B" "%6s@[A-Z]" (fun kwd c -> kwd,c );;
+Scanf.sscanf "SEQRES   4 B" "%6s@[ A-Z]" (fun kwd c -> kwd,c );;
+Scanf.sscanf "SEQRES   4 B" "%s@[ A-Z]" (fun kwd c -> kwd,c );;
+Scanf.sscanf "SEQRES   4 B" "%s@[ A-Z]" (fun kwd -> kwd);;
+Scanf.sscanf "SEQRES   4 B" "%s@[0-9]" (fun kwd -> kwd);;
+Scanf.sscanf "SEQRES   4 B" "%s@4" (fun kwd -> kwd);;
+Scanf.sscanf "SEQRES   4 B" "%s@B" (fun kwd -> kwd);;
+Scanf.sscanf "SEQRES   4 B" "%s@[B]" (fun kwd -> kwd);;
+Scanf.sscanf "SEQRES   4 B" "%s@%[B]" (fun kwd -> kwd);;
+Scanf.sscanf "SEQRES   4 B" "%s@[B]" (fun kwd -> kwd);;
+#use "trecordpdb_seqres_v.ml";; 
+Scanf.sscanf "SEQRES   4 B" "%s%n" (fun kwd n-> kwd,n);;
+Scanf.bscanf ib "%6s" (fun rec_typ -> rec_typ);;
+#use "trecordpdb_seqres_v.ml";; 
+Scanf.bscanf ib "%6s" (fun rec_typ -> rec_typ);;
+Scanf.sscanf "SEQRES   4 B" "%6s" (fun s-> s);;
+Scanf.sscanf "SEQRE   4 B" "%6s" (fun s-> s);;
+Scanf.sscanf "SEQRE   " "%6s" (fun s-> s);;
+Scanf.sscanf "SEQRE   " "%6s%n" (fun s n -> s,n);;
+String.make;;
+String;;
+module String;;
+module s = String;;
+module S = String;;
+let rec = 
+      Scanf.bscanf ib "%6s%n" (fun rec_typ n -> rec_typ n) ;;
+ Scanf.bscanf ib "%6s%n" (fun rec_typ n -> rec_typ n)   ;;
+Scanf.bscanf ib "%6s%n" (fun rec_typ n -> rec_typ, n),,
+Scanf.bscanf ib "%6s%n" (fun rec_typ n -> rec_typ, n);;
+let ib = Scanf.Scanning.from_string str;;
+Scanf.bscanf ib "%7s%n" (fun rec_typ n -> rec_typ, n);;
+let str_n = String.make (6-n) ' ' ;;
+Scanf.bscanf ib "%7s%n" (fun rec_typ n -> rec_typ, n);;
+let rec_typ n = 
+      Scanf.bscanf ib "%6s%n" (fun rec_typ n -> rec_typ, n) ;;
+let (r, n) = 
+      Scanf.bscanf ib "%6s%n" (fun rec_typ n -> rec_typ, n);;
+let str_n = String.make (6-n) ' ';;
+String.concat r str_n;;
+ String.concat r [str_n];;
+r;;
+let str_n = String.make (6-n) ' ' ;;
+let ib = Scanf.Scanning.from_string str;;
+let recordb_type =
+    let (r, n) = 
+      Scanf.bscanf ib "%6s%n" (fun rec_typ n -> rec_typ, n) in
+    let str_n = String.make (6-n) ' ' in
+    String.concat r [str_n];;
+let ib = Scanf.Scanning.from_string str;;
+let (r, n) = 
+        Scanf.bscanf ib "%6s%n" (fun rec_typ n -> rec_typ, n);;
+let str_n = String.make (6-n) ' ' ;;
+r;;
+r^str_n;;
+let read_recordb_type ib =
+  let (r, n) = 
+    Scanf.bscanf ib "%6s%n" (fun rec_typ n -> rec_typ, n) in
+  let str_n = String.make (6-n) ' ' in
+  r^str_n
+;;
+let ib = Scanf.Scanning.from_string str;;
+read_recordb_type ib ;;
+Scanf.sscanf "1234.00" "%4d". ;;
+Scanf.sscanf "1234.00" "%4d" ;;
+Scanf.sscanf "1234.00" "%4d" (fun n -> n);;
+Scanf.sscanf "\\\"%4d\\\"1234.00" "%\(%i%\)" (fun n -> n);;
+Scanf.sscanf "\\\"%4d\\\"1234.00" (fun n -> n);;
+Scanf.sscanf "\\\"%4d\\\"1234.00"  "%\(%i%\)" (fun n -> n);;
+Scanf.sscanf "\\\"%4d\\\"1234.00"  "\(%i%\)" (fun n -> n);;
+Scanf.sscanf "\\\"%4d\\\"1234.00"  "\( %i %\)" (fun n -> n);;
+Scanf.sscanf "\\\"%4d\\\"1234.00"  "\( %i \)" (fun n -> n);;
+Scanf.sscanf "\\\"%4d\\\"1234.00"  "\(%i\)" (fun n -> n);;
+Scanf.sscanf "fmt:\\\"number is %u\\\"" "fmt:%{%i%}" ;;
+Scanf.sscanf "fmt:\\\"number is %u\\\"" "fmt:%{%i%}" (fun n -> n);;
+Scanf.sscanf "\\\"%4d\\\"1234.00"  "\(%i\)" (fun n -> n);;
+Scanf.sscanf "1234.00" "%4d" (fun n -> n);;
+Scanf.sscanf "\\\"%4d\\\"1234.00"  "\(%i\)" (fun n -> n);;
+;;
+Scanf.sscanf "fmt:\\\"number is %u\\\"" "fmt:%{%i%}" ;;
+Scanf.sscanf "\\\"%4d\\\"1234.00" "%\(%i%\)";;
+read_recordb_type (Scanf.Scanning.from_string "SEQRES   4 B" ;;
+read_recordb_type (Scanf.Scanning.from_string "SEQRES   4 B") ;;
+ read_recordb_type (Scanf.Scanning.from_string "SEQRESX   4 B");;
+read_recordb_type (Scanf.Scanning.from_string "ATOM     4 B");;
+let ib = Scanf.Scanning.from_string str;;
+let s = read_recordb_type ib;;
+let (r, n) = 
+    Scanf.bscanf ib "%c%n" (fun c n -> c, n);;
+let ib = Scanf.Scanning.from_string str;;
+let typ = read_recordb_type ib;;
+let get_type_at_n ib =
+  Scanf.bscanf ib "%6s%n" (fun rec_typ n -> rec_typ, n)
+;;
+let read_type ib =
+  let (r, n) = get_type_at_n ib in
+  let str_n = String.make (6-n) ' ' in
+  (r^str_n, n)
+;;
+let get_type_at_n ib =
+  Scanf.bscanf ib "%6s%n" (fun rec_typ n -> rec_typ, n)
+;;
+let ib = Scanf.Scanning.from_string str;;
+get_type_at_n ib;;
+get_achar_at_n ib;;
+let get_achar_at_n ib =
+  Scanf.bscanf ib "%c%n" (fun c n -> c, n) 
+;;
+get_achar_at_n ib;;
+let ib = Scanf.Scanning.from_string "ATOM     ";;
+get_type_at_n ib;;
+let ib = Scanf.Scanning.from_string "ATOM     ";;
+read_type ib ;;
+ Scanf.bscanf ib "%3c" (fun s -> s);;
+ Scanf.bscanf ib "%1c" (fun s -> s);;
+Scanf.bscanf ;;
+let read_type ib =
+  let (r, n) = get_type_at_n ib in
+  let str_n = String.make (6-n) ' ' in
+  for c = (6-n) to n do
+    skip_char ib 
+  done;
+  (r^str_n, n)
+;;
+;;let skip_char ib =
+  Scanf.bscanf ib "%1c" (fun i -> ())
+;;
+let read_type ib =
+  let (r, n) = get_type_at_n ib in
+  let str_n = String.make (6-n) ' ' in
+  for c = (6-n) to n do
+    skip_char ib 
+  done;
+  (r^str_n, n)
+;;
+let skip_char ib =
+  Scanf.bscanf ib "%1c" (fun i -> ())
+;;
+  for c = (6-n) to n do
+    skip_char ib;
+  done;
+;;
+  for c = (6-n) to n do
+    skip_char ib
+  do;;
+ib;;
+let read_type ib =
+  let (r, n) = get_type_at_n ib in
+  let str_n = String.make (6-n) ' ' in
+  for c = (6-n) to n do
+    Scanf.bscanf ib "%1c" (fun i -> ())
+  done;
+  (r^str_n, n)
+;;
+let skip_char ib =
+  Scanf.bscanf ib "%1c" (fun i -> ())
+;;
+#use "trecordpdb_seqres_v.ml";; 
+read_type ib_atm;;
+get_achar_at_n ib_atm;;
+let ib_atm = Scanf.Scanning.from_string str_atm;;
+get_type_at_n ib_atm;;
+let n=';;
+let n=4;;
+  for c = (6-n) to n do
+    Scanf.bscanf ib "%1c" (fun i -> ())
+  don;
+;;
+  for c = (6-n) to n do
+    Scanf.bscanf ib "%1c" (fun i -> ())
+  done;
+;;
+let get_at_n ib =
+  Scanf.bscanf ib "%n" (fun n -> n) 
+;;
+get_at_n ib;;
+get_at_n ib_atm;;
+let skip_nchar ib n =
+  for c = (6-n) to n do
+    Scanf.bscanf ib "%1c" (fun i -> ())
+  done;
+;;
+let skip_nchar ib_atm 2 =
+let skip_nchar ib_atm 2 ;;
+let skip_nchar ib_atm 2 ;;let skip_n_char ib n =
+  for c = (6-n) to n do
+    Scanf.bscanf ib "%1c" (fun i -> ())
+  done;
+;;let skip_n_char ib n =
+  for c = (6-n) to n do
+    Scanf.bscanf ib "%1c" (fun i -> ())
+  done;
+;;
+ get_at_n ib_atm
+;;
+skip_n_char ib_atm 2;;
+let skip_n_char ib n =
+  for c = (6-n) to n do
+    Scanf.bscanf ib "%1c" (fun i -> ())
+  done;
+;;
+kip_n_char;;
+skip_n_char;;
+skip_n_char ib_atm 2;;
+ get_at_n ib_atm;;
+Scanf.sscanf "abcd" "%1c" (fun i -> ())
+;;
+let ib = Scanf.Scanning.from_string "ab";;
+ get_at_n ib;;
+skip_n_char ib 2;;
+ get_at_n ib;;
+skip_n_char ib 5;;
+skip_n_char ib 2;;
+let skip_n_char ib n =
+  for c = (6-n) to n do
+    Scanf.bscanf ib "%c" (fun i -> ())
+  done;
+;;
+skip_n_char ib 2;;
+ get_at_n ib;;
+let ib = Scanf.Scanning.from_string "ab";;
+Scanf.bscanf ib "%1c" (fun i -> ());;
+ get_at_n ib;;
+let ib = Scanf.Scanning.from_string "ab";;
+ get_at_n ib;;
+Scanf.bscanf ib "%1c" (fun i -> ());;
+ get_at_n ib;;
+let skip_n_char ib n =
+  for c = (6-n) to n do
+    Scanf.bscanf ib "%1c" (fun i -> ())
+  done;
+;;
+let ib = Scanf.Scanning.from_string "ab";;
+skip_n_char ib 2;;
+ get_at_n ib;;
+let skip_n_char ib n =
+  for i = 1 to n do
+    Scanf.bscanf ib "%1c" (fun c -> ())
+  done;
+;;
+let ib = Scanf.Scanning.from_string "ab";;
+skip_n_char ib 2;;
+ get_at_n ib;;
+#use "entrypdb_symbol_formula_pdb_v.ml";; 
+#use "entrypdb_symbol_formula_v.ml";; 
+smb_enp;;
+#use "entrypdb_symbol_formula_v.ml";; 
+#use "tentrypdb_symbol_formula_v.ml";; 
+let fln = Eps_v.filename_of_entrypdb_symbol smb_enp;;
+#use "tentrypdb_symbol_formula_v.ml";; 
+Esf_v.string_list_of_entrypdb_symbol smb_enp;;
+Esf_v.string_list_of_entrypdb_symbol (Eps_t.Pdb_ID "water");;
+Esf_v.string_list_of_entrypdb_symbol (Eps_t.Pdb_ID "4pti");;
+~q
+#use "packpdb_symbol_formula_v.ml";; 
+#use "packpdb_value_v.ml";; 
+Ppv_v.has_of_packpdb_symbol_of_recordpdb_type_string smb_pkp "HETATM";;
+#use "tpackpdb_value_v.ml";; 
+Ppv_v.has_of_packpdb_symbol_of_recordpdb_type_string smb_pkp "HETATM";;
+Ppv_v.extract_packpdb_and_remainder_of_packpdb_symbol_of_string_list smb_pkp str_l
+#use "tpackpdb_value_v.ml";; 
+let prd = has_of_packpdb_symbol_of_recordpdb_type_string smb_pkp;;
+#use "tpackpdb_value_v.ml";; 
+Ppv_v.has_of_packpdb_symbol_of_recordpdb_type_string Pps_v.compnd "COMPND"
+;;
+Ppv_v.has_of_packpdb_symbol_of_recordpdb_type_string Pps_v.compnd "COMPD";;
+#use "tpackpdb_value_v.ml";; 
+let str_rct = List.hd str_l;;
+let smb_pkp=Pps_v.compnd;;
+let prd = has_of_packpdb_symbol_of_recordpdb_type_string smb_pkp;;
+#use "packpdb_value_v.ml";; 
+let prd = has_of_packpdb_symbol_of_recordpdb_type_string smb_pkp;;
+Lst_v.extract_head_list_and_remainder_of_predicate_of_list prd str_l;;
+prd (List.hd str_l);;
+prd (List.tl str_l);;
+prd (List.hd (List.rev str_l));;
+Lst_v.extract_head_list_and_remainder_of_predicate_of_list prd str_l;;
+let (_, str_lc) = Ppv_v.extract_packpdb_and_remainder_of_packpdb_symbol_of_string_list Pps_v.compnd str_l;;
+#use "tpackpdb_value_v.ml";; 
+let (_, str_lc) = Ppv_v.extract_packpdb_and_remainder_of_packpdb_symbol_of_string_list Pps_v.atom str_rha;;
+let (str_lat, str_lc) = Ppv_v.extract_packpdb_and_remainder_of_packpdb_symbol_of_string_list Pps_v.atom str_rha;;
+#use "tentrypdb_value_v.ml";; 
+smb_enp;;
+#use "tentrypdb_value_v.ml";; 
+Epv_v.value smb_enp;;
+#use "t0plw_entrypdb_value_v.ml";; 
+let smb_enp = Eps_t.ProteinID "0plw";;
+let fln = Epv_v.filename_of_entrypdb_symbol smb_enp;;
+(
+fln 
+  =
+Filename_t.String
+  "/home/colonna/sources/ocaml_top/setup/databases/PDB/methanol.pdb"
+);;
+#use "t0plw_entrypdb_value_v.ml";; 
+Epv_v.value smb_enp;;
+#use "t0plw_entrypdb_value_v.ml";; 
+let str_l = string_list_of_entrypdb_symbol smb_enp;;
+#use "entrypdb_value_v.ml";; 
+let str_l = string_list_of_entrypdb_symbol smb_enp;;
+Str_v.string_list_list_of_string_list str_l;;
+#use "t0plw_entrypdb_value_v.ml";; 
+let smb_enp = Eps_t.ProteinID "0plw";;
+let fln = Epv_v.filename_of_entrypdb_symbol smb_enp;;
+let v = Epv_v.value smb_enp;;
+#use "t0plw_entrypdb_value_v.ml";; 
+#use "tpackpdb_value_register_v.ml";; 
+Format.flush_err_formatter ()
+;;
+(Reg_v.hkey_list packpdb_value_register);;
+#use "packpdb_value_register_v.ml";; 
+(Reg_v.hkey_list packpdb_value_register);;
+Reg_v.hkey_list Pvr_v.packpdb_value_register;;
+let val_pkp_l = 
+    Epv_v.packpdb_value_list_off_entrypdb_symbol 
+      smb_enp;;
+List.map packpdb_keypdb_off_packpdb_value val_pkp_l;;
+#use "tpackpdb_value_register_v.ml";; 
+List.map Ppv_v.packpdb_keypdb_off_packpdb_value;;
+List.map Pvr_v.packpdb_keypdb_off_packpdb_value;;
+List.map Pvr_v.packpdb_keypdb_off_packpdb_value val_pkp_l;;
+#use "tpackpdb_value_register_v.ml";; 
+let key_pkp_l = Pvr_v.packpdb_hkey_list ();;
+#use "tpackpdb_value_register_v.ml";; 
+ key_pkp_l;;
+ key_pkp_l = List.sort Pps_v.compare (List.map Pvr_v.packpdb_keypdb_off_packpdb_value val_pkp_l);;
+#use "tpackpdb_value_register_v.ml";; 
+smb_pkp;;
+Lst_v.print Pps_v.print Format.err_formatter (packpdb_hkey_list ());;
+#use "packpdb_value_register_v.ml";; 
+Lst_v.print Pps_v.print Format.err_formatter (packpdb_hkey_list ());;
+#use "tpackpdb_value_register_v.ml";; 
+Pvr_v.retrieve (Pps_v.make "HETATM");;
+#use "t0plw_packpdb_value_register_v.ml";; 
+List.length val_pkp_l;;
+key_pkp_l ;;
+#use "t0plw_packpdb_value_register_v.ml";; 
+Pvr_v.retrieve (Pps_v.make "ATOM");;
+#use "t0plw_packpdb_value_register_v.ml";; 
+Pvr_v.retrieve (Pps_v.make "SEQRES");;
+Pvr_v.retrieve (Pps_v.make "NUMMDL");;
+#use "t0plw_packpdb_value_register_v.ml";; 
+Pvr_v.retrieve (Pps_v.make "NUMMDL")
+;;
+#use "t0plw_packpdb_value_register_v.ml";; 
+Pvr_v.retrieve (Pps_v.make "NUMMDL");;
+#use "t0plw_packpdb_value_register_v.ml";; 
+Pvr_v.retrieve (Pps_v.make "NUMMDL");;
+#use "t0plw_packpdb_value_register_v.ml";; 
+#use "t0plw_packpdb_data_register_v.ml";; 
+#use "0plw entrypdb_data_v.ml";; 
+ #use "0plw_entrypdb_data_v.ml";; 
+ #use "t0plw_entrypdb_data_v.ml";; 
+Epv_v.value smb_enp;;
+List.length  (Epv_v.value smb_enp);;
+List.hd (Epv_v.value smb_enp);;
+Lst_v.last_element_of_list (Epv_v.value smb_enp);;
+ #use "t0plw_entrypdb_data_v.ml";; 
+ #use "t0plw_header_recordpdb_symbol_formula_v.ml";; 
+let frm_smb_hpr = Hrsf_v.make ();;
+Hrsf_v.name frm_smb_hpr;;
+ #use "t0plw_header_recordpdb_symbol_formula_v.ml";; 
+frm_smb_hpr;;
+ #use "t0plw_header_recordpdb_symbol_formula_v.ml";; 
+Hrsf_v.name frm_smb_hpr;;
+ #use "t0plw_header_recordpdb_symbol_formula_v.ml";; 
+ #use "t0plw_seqres_recordpdb_symbol_formula_v.ml";; 
+Srsf_v.name frm_smb_hpr;;
+#use "t0plw_atom_recordpdb_symbol_formula_v.ml";; 
+Arsf_v.name frm_smb_spr;;
+let make_integer_field_format_string w =
+  Printf.sprintf " %%%d%,i" w
+;;
+  Printf.sprintf " %%%d%,i" w
+;;
+let convert_integer_field s i =
+  let fmt_string = make_integer_field_format_string i in
+  Scanf.scanf s (Scanf.format_from_string fmt_string "%i") (fun n -> n)
+;;
+let make_integer_field_format_string w =
+  Printf.sprintf " %%%d%,i" w
+;;
+Printf.sprintf " %%%d%,i"  "3";;
+#use "t0plw_header_recordpdb_value_v.ml";; 
+str_rcp;;
+#use "t0plw_header_recordpdb_value_v.ml";; 
+Hfv_v.value str_rcp;;
+#use "t0plw_header_recordpdb_value_v.ml";; 
+Hrv_v.value str_rcp;;
+#use "t0plw_header_recordpdb_value_v.ml";; 
+let ib = Scanf.Scanning.from_string str_rcp in
+  Scanf.bscanf ib
+    "HEADER%_2s%40s%9s%_3s%4s%_14s" 
+(fun cs dd pi ->  [cs; dd; pi])
+;;
+  Scanf.sscanf str_rcp "%s" (fun s -> s);;   
+  Scanf.sscanf str_rcp "HEADER%s" (fun s -> s);;   
+  Scanf.sscanf str_rcp "%80s" (fun s -> s);;   
+  Scanf.sscanf str_rcp "%S" (fun s -> s);;   
+str_rcp;;
+let s = "MEMBRANE PROTEIN, TRANSPORT PROTEIN    ";;
+  Scanf.sscanf s "%s" (fun s -> s);;   
+  Scanf.sscanf s "%40c" (fun s -> s);;   
+  Scanf.sscanf s "%c" (fun s -> s);;   
+  Scanf.sscanf s "%c%c%c%c%c" (fun s -> s);;   
+let ib = Scanf.Scanning.from_string str_rcp;;
+  Scanf.bscanf ib "HEADER %s" (fun s -> s);;   
+let cs = String.sub 10 59 str_rcp;;
+let cs = String.sub str_rcp 10 59;;
+let cs = String.sub str_rcp 10 49;;
+ let dd = String.sub 50 58 str_rcp;;
+let dd = String.sub str_rcp 50 58 ;;
+str_rcp;;
+let dd = String.sub str_rcp 50 58;;
+String.length str_rcp;;
+let dd = String.sub str_rcp 50 58;;
+String.sub str_rcp 10 49;;
+String.sub str_rcp 50 58;;
+String.sub str_rcp 51 58;;
+String.sub str_rcp 51 51;;
+let dd = String.sub s 50 9;; 
+let dd = String.sub str_rcp  50 9;; 
+ let pi = String.sub str_rcp 62 4;;
+  let dd = String.sub str_rcp 50 9;;
+  let cs = String.sub str_rcp 10 40;;
+#use "header_recordpdb_value_v.ml";; 
+let frm_smb_rcp = Hrsf_v.make ();;
+let col_len_smb_l =
+    List.map (fun s ->
+      ((Hfd_v.fields s), s)
+	     )
+      frm_smb_rcp;;
+#use "t0plw_header_recordpdb_value_v.ml";; 
+Hrv_v.value str_rcp ;;
+  let frm_smb_rcp = Hrsf_v.make ();;
+  let col_len_smb_l =
+    List.map (fun s ->
+      ((Hfd_v.fields s), s)
+	     )
+      frm_smb_rcp;;
+#use "header_recordpdb_value_v.ml";; 
+#use "t0plw_header_recordpdb_value_v.ml";; 
+  let col_len_smb_l =
+    List.map (fun s ->
+      ((Hfd_v.fields s), s)
+	     )
+      frm_smb_rcp;;
+  List.map 
+    (fun ((c, l), s) -> 
+      Hfv_v.value_of_string_of_symbol (String.sub str_rcp c l) s
+    )
+    col_len_smb_l;;
+#use "t0plw_header_recordpdb_value_v.ml";; 
+col_len_smb_l;;
+#use "t0plw_header_recordpdb_value_v.ml";; 
+Hrv_v.value str_rcp ;;
+#use "t0plw_header_recordpdb_value_v.ml";; 
+col_wid_smb_l;;
+#use "t0plw_header_recordpdb_value_v.ml";; 
+List.length val_pkp_l;;
+col_wid_smb_l;;
+#use "t0plw_header_recordpdb_value_v.ml";; 
+List_v.word_list_of_string  str_rcp;;
+#use "t0plw_header_recordpdb_value_v.ml";; 
+#use "t0plw_header_recordpdb_data_v.ml";; 
+List_v.word_list_of_string  str_rcp;;
+List_v.word_array_of_string  str_rcp;;
+String_v.words_of_string  str_rcp;;
+#use "t0plw_seqres_recordpdb_data_v.ml";; 
+col_wid_smb_l;;
+str_rcp;;
+Srd_v.value str_rcp;;
+Srd_v.value str_rcp;;(Scanf.sscanf "  " "%3i" (fun i -> i))
+Srd_v.value str_rcp;;(Scanf.sscanf "  " " %3i" (fun i -> i))
+Srd_v.value str_rcp;;(Scanf.sscanf "  1" "%3i" (fun i -> i))
+Srd_v.value str_rcp;;(Scanf.sscanf "1" "%3i" (fun i -> i))
+Srd_v.value str_rcp;;
+(Scanf.sscanf "1" "%3i" (fun i -> i))
+;;
+(Scanf.sscanf "1" "%3i" (fun i -> i));;
+(Scanf.sscanf " 1" "%3i" (fun i -> i));;
+(Scanf.sscanf "1 " "%3i" (fun i -> i));;
+(Scanf.sscanf " 1" " %3i" (fun i -> i));;
+(Scanf.sscanf "1" " %3i" (fun i -> i));;
+#use "t0plw_seqres_recordpdb_data_v.ml";; 
+Srd_v.value str_rcp;;
+let s = "EMBRANE PROTEIN, TRANSPORT PROTEIN     ";;
+Scanf.sscanf s "%40[\000-\255]" (fun s -> s);; 
+let s = "MEMBRANE PROTEIN, TRANSPORT PROTEIN     ";;
+Scanf.sscanf "5510.444 "%8f" (fun d -> d);;
+let f = Scanf.sscanf "5510.444" "%8f" (fun d -> d);;
+let f = Scanf.sscanf "5510.444" "%8f6.3" (fun d -> d);;
+let f = Scanf.sscanf "5510.444" "%8f8.3" (fun d -> d);;
+let f = Scanf.sscanf "5510.444" "%8f4.3" (fun d -> d);;
+let f = Scanf.sscanf "5510.444" "%8.3f" (fun d -> d);;
+let f = Scanf.sscanf "5510.444" "%8.2f" (fun d -> d);;
+let f = Scanf.sscanf " 510.444" "%8.2f" (fun d -> d);;
+let f = Scanf.sscanf " 510.444" " %8f" (fun d -> d);;
+let f = Scanf.sscanf " -50" " %d" (fun d -> d);;
+#use "t0plw_seqres_recordpdb_symbol_formula_v.ml";; 
+  #use "t0plw_seqres_recordpdb_data_v.ml";; 
+Srd_v.value str_rcp;;
+  #use "t0plw_seqres_recordpdb_data_v.ml";; 
+#use "t0plw_atom_recordpdb_symbol_formula_v.ml";; 
+Arsf_v.name frm_smb_apr;;
+#use "t0plw_seqres_recordpdb_symbol_formula_v.ml";; 
+ #use "t0plw_atom_recordpdb_data_v.ml";; 
+col_wid_smb_l;;
+str_rcp;;
+Ard_v.value str_rcp;;
+ #use "t0plw_atom_recordpdb_data_v.ml";; 
+let make_integer_field_format_string w =
+  Printf.sprintf " %%%d%,i" w
+;;
+let make_integer_field_format_string w = Printf.sprintf " %%%d,i" w ;;
+make_integer_field_format_string 4;;
+let make_integer_field_format_string w = Printf.sprintf " %%%di" w ;;
+make_integer_field_format_string 4;;
+let make_integer_field_format_string w =
+    Printf.sprintf " %%%di" w
+;;
+let convert_integer_field fld w =
+  let fmt_string = make_integer_field_format_string w in
+  Scanf.sscanf fld (Scanf.format_from_string fmt_string "%i") (fun s -> s)
+;;
+ convert_integer_field " 45" 3;;
+Printf.sprintf " %%%d,i" 4 ;;
+let make_integer_field_format_string w = Printf.sprintf " %%%d%,i" w;;
+let make_integer_field_format_string w = Printf.sprintf " %%%di" w;;
+make_integer_field_format_string 4;;
+ #use "t0plw_seqres_recordpdb_data_v.ml";; 
+col_wid_smb_l;;
+ #use "t0plw_seqres_recordpdb_data_v.ml";; 
+ #use "t0plw_atom_recordpdb_data_v.ml";; 
+Ard_v.value str_rcp;;
+ #use "t4pti_atom_recordpdb_data_v.ml";; 
+ #use "t4pti_seqres_recordpdb_data_v.ml";; 
+List.length val_pkp_l;;
+col_wid_smb_l;;
+ #use "t4pti_seqres_recordpdb_data_v.ml";; 
+col_wid_smb_lList.length val_pkp_l;;
+List.length val_pkp_l;;
+ #use "t4pti_seqres_recordpdb_data_v.ml";; 
+str_rcp;;
+Srd_v.value str_rcp;;
+Pdr_v.retrieve (Pps_v.make "SEQRES");;;;
+#use "t0plw_entrypdb_data_v.ml";; 
+Epd_v.data smb_enp;;
+ Fio_v.string_list_of_filename fln;;
+Str_v.string_list_list_of_string_list;;
+String_v.string_list_list_of_string_list;;
+ #use "t4pti_protein_sequencepdb_v.ml";; 
+ #use "tijk4_protein_sequencepdb_v.ml";; 
+ #use "t1jk4_protein_sequencepdb_v.ml";; 
+let dat_psp = Psp_v.data smb_enp;;
+let str_rcp_l = Pdr_v.retrieve (Pps_v.make "SEQRES");;
+Scanf.sscanf str_a "%1c" (fun c -> c);;
+let str_a = "SEQRES   3 A   89  GLY CYS PHE VAL GLY THR ALA GLU ALA LEU ARG CYS GLN          ";;
+Scanf.sscanf str_a "%1c" (fun c -> c);;
+Scanf.sscanf str_a "SEQRES%_s%_i%1c" (fun c -> c);;
+Scanf.sscanf str_a "SEQRES %_s%_i%1c" (fun c -> c);;
+Scanf.sscanf str_a "SEQRES %_i%1c" (fun c -> c);;
+Scanf.sscanf str_a "SEQRES %_i %1c" (fun c -> c);;
+ #use "t1jk4_protein_sequencepdb_v.ml";; 
+dat_psp;;
+let str_rcp_l = Pdr_v.retrieve (Pps_v.make "SEQRES");;
+let dat_psp = Psp_v.data smb_enp;;
+ Scanf.sscanf str_a "SEQRES %_i %1c" (fun c -> c);;
+let str_a = "SEQRES   6 A   89  ILE CYS CYS ASN ASP GLU SER CYS VAL THR GLU PRO GLU          ";
+;;
+let str_a = "SEQRES   6 A   89  ILE CYS CYS ASN ASP GLU SER CYS VAL THR GLU PRO GLU          ";;
+ Scanf.sscanf str_a "SEQRES %_i %1c" (fun c -> c);;
+let str_a = "SEQRES   6     89  ILE CYS CYS ASN ASP GLU SER CYS VAL THR GLU PRO GLU          ";;
+ Scanf.sscanf str_a "SEQRES %_i %1c" (fun c -> c);;
+ Scanf.sscanf str_a "SEQRES %_i%_c%1c" (fun c -> c);;
+let str_a = "SEQRES   6 A   89  ILE CYS CYS ASN ASP GLU SER CYS VAL THR GLU PRO GLU          ";
+ Scanf.sscanf str_a "SEQRES %_i%_c%1c" (fun c -> c);;
+let str_a = "SEQRES   6 A   89  ILE CYS CYS ASN ASP GLU SER CYS VAL THR GLU PRO GLU          ";;
+ Scanf.sscanf str_a "SEQRES %_i%_c%1c" (fun c -> c);;
+ #use "t1jk4_protein_sequencepdb_v.ml";; 
+let reg_pkp = Pdr_v.store_of_entrypdb_symbol smb_enp;;
+ #use "t1jk4_protein_sequencepdb_v.ml";; 
+dat_psp;;
+let dat_psp = Psp_v.data smb_enp;;
+let reg_pkp = Pdr_v.store_of_entrypdb_symbol smb_enp;;
+let str_rcp_l = Pdr_v.retrieve (Pps_v.make "SEQRES");;
+let dat_psp = Psp_v.data smb_enp;;
+ #use "t1jk4_protein_sequencepdb_v.ml";; 
+dat_psp::
+dat_psp;;
+let str_rcp_l = Pdr_v.retrieve (Pps_v.make "SEQRES");;
+let dat_psp = Psp_v.data smb_enp;;
+List.map Ats_v.name dat_psp;;
+List.map Aminoacid_tlc_symbol_vv.name dat_psp;;
+List.map Aminoacid_tlc_symbol_v.name dat_psp;;
+ #use "t1jk4_protein_sequencepdb_v.ml";; 
+let reg_pkp = Pdr_v.store_of_entrypdb_symbol smb_enp;;
+ #use "t1jk4_protein_sequencepdb_v.ml";; 
+List.length val_pkp_l;;
+ #use "t1jk4_protein_sequencepdb_v.ml";; 
+ #use "packpdb_data_register_v.ml";; 
+let print_fatal_error nam smb_pkp =
+    Format.fprintf 
+    Format.err_formatter 
+    "@.@[<hov>%s.%s: --- Fatal Error ---@.\
+     expecting no value yet stored at key >%s<.@.\      
+     in register >packpdb_data_register<.@.\      
+     cure : check list of stored keys:@]@."
+     nam_mod nam (Pps_v.name smb_pkp);
+     Lst_v.print Pps_v.print Format.err_formatter (packpdb_hkey_list ());
+;;
+(fun s -> 
+      try Reg_v.store packpdb_data_register (packpdb_keypdb_off_packpdb_data s) 
+      with Failure ("Already_stored:Reg_v.store") ->
+	print_fatal_error "store_of_entrypdb_symbol" (packpdb_keypdb_off_packpdb_data s);     assert false;
+	s);;
+Reg_v.store;;
+ #use "t1jk4_packpdb_data_register_v.ml";; 
+val_pkp_l;;
+List.length val_pkp_l;;
+key_pkp_l ;;
+ #use "t0jk4_packpdb_data_register_v.ml";; 
+key_pkp_l ;;
+let key_pkp_l = List.sort Pps_v.compare (Pdr_v.packpdb_hkey_list ());;
+(Pdr_v.packpdb_hkey_list ());;
+let str_rcp = "SEQRES   3 A   89  GLY CYS PHE VAL GLY THR ALA GLU ALA LEU ARG CYS GLN          ";
+;;
+module Ard_v = Atom_recordpdb_data_v;;
+Ard_v.atom_chainid_off_recordpdb_string str_rcp;;
+Ard_v.atom_chainmodule Srd_v = Seqres_recordpdb_data_vid_off_recordpdb_string str_rcp;;
+module Srd_v = Seqres_recordpdb_data_v
+;;
+Srd_v.seqres_chainid_off_recordpdb_string str_rcp;;
+let str_rcp="ATOM    595  ND2 ASN B   5      32.819 -38.222 -16.745  1.00 37.60           N  ";;
+Ard_v.atom_chainid_off_recordpdb_string str_rcp;;
+ #use "t0jk4_packpdb_data_register_v.ml";; 
+let str_rcp =  ["TER     602      CYS B   6                                                      "];
+;
+let str_rcp =  ["TER     602      CYS B   6                                                      "];;
+ #use "ter_recordpdb_data_v.ml";; 
+ter_chainid_off_recordpdb_string str_rcp;;
+let str_rcp =  ["TER     602      CYS B   6                                                      "];;
+ter_chainid_off_recordpdb_string str_rcp;;
+let str_rcp =  "TER     602      CYS B   6                                                      ";;
+ter_chainid_off_recordpdb_string str_rcp;;
+ #use "t0jk4_packpdb_data_register_v.ml";; 
+   #use "t0jk4_packpdb_data_v.ml";; 
+let val_pkp_l = Epd_v.packpdb_data_list_off_entrypdb_symbol smb_enp;;
+   #use "t0jk4_packpdb_data_v.ml";; 
+List.length val_pkp_l;;
+let dat_pkp_l = Epd_v.packpdb_data_list_off_entrypdb_symbol smb_enp;;
+let kyp_pkp_l = List.map Ppd_v.packpdb_keypdb_off_packpdb_data dat_pkp_l;;
+List.sort Pps_v.compare (List.map Ppd_v.packpdb_keypdb_off_packpdb_data dat_pkp_l);;
+module Ppk_v = Packpdb_keypdb_v;;
+let kyp_pkp_l = List.sort Ppk_v.compare kyp_pkp_l;;
+   #use "t0jk4_packpdb_data_v.ml";; 
+dat_pkp_l;;
+List.flatten dat_pkp_l;;
+   #use "t0jk4_packpdb_data_v.ml";; 
+kyp_pkp_sl;;
+   #use "t0jk4_packpdb_data_v.ml";; 
+   #use "packpdb_data_v.ml";; 
+dat_pkp_l;;
+ gather_list_list_from_recordpdb_symbol_of_string_list str_l;;
+   #use "packpdb_data_v.ml";; 
+   #use "entrypdb_data_v.ml";; 
+ gather_list_list_from_recordpdb_symbol_of_string_list str_l;;
+let str_l = List.nth dat_pkp_l 4;;
+let str_l = List.nth dat_pkp_l 5;;
+let str_l = List.nth dat_pkp_l 6;;
+let str_l = List.nth dat_pkp_l 7;;
+let str_l = List.nth dat_pkp_l 8;;
+let str_l = List.nth dat_pkp_l 10;;
+let str_l = List.nth dat_pkp_l 11;;
+let str_l = List.nth dat_pkp_l 12;;
+let str_l = List.nth dat_pkp_l 11;;
+gather_subpackpdb_from_chainid_of_string_list str_l;;
+let str_rcp_a = "SEQRES   7 A   89  CYS ARG GLU GLY VAL GLY PHE PRO ARG ARG VAL                  ";;
+let str_rcp_b = "SEQRES   1 B    9  CYS TYR PHE GLN ASN CYS PRO LYS GLY                          ";;
+has_same_chainid_of_string_of_string str_rcp_a str_rcp_b;;
+let smb_pkp = Ppd_v.packpdb_symbol_off_recordpdb_string str_rcp_a;;
+let col_l = Pps_v.chainid_column_list_of_packpdb_symbol smb_pkp ;;
+   #use "entrypdb_data_v.ml";; 
+has_same_chainid_of_string_of_string str_rcp_a str_rcp_b;;
+let sqr_str_l = List.nth dat_pkp_l 11;;
+ 
+let str_rcp_a = "SEQRES   7 A   89  CYS ARG GLU GLY VAL GLY PHE PRO ARG ARG VAL                  ";;
+let str_rcp_b = "SEQRES   1 B    9  CYS TYR PHE GLN ASN CYS PRO LYS GLY                          ";;
+testi 2 (
+Epd_v.has_same_chainid_of_string_of_string str_rcp_a str_rcp_b
+=
+false
+);;
+gather_subpackpdb_from_chainid_of_string_list str_l;;
+List.flatten (gather_subpackpdb_from_chainid_of_string_list str_l);;
+Epd_v.gather_subpackpdb_from_chainid_of_string_list sqr_str_l
+;;
+   #use "t0jk4_packpdb_data_v.ml";; 
+Epd_v.gather_subpackpdb_from_chainid_of_string_list sqr_str_l
+;;
+let str_pkd_l = string_list_of_entrypdb_symbol smb_enp;;
+   #use "packpdb_data_v.ml";; 
+let str_pkd_l = string_list_of_entrypdb_symbol smb_enp;;
+   #use "entrypdb_data_v.ml";; 
+   #use "packpdb_data_v.ml";; 
+   #use "entrypdb_data_v.ml";; 
+ gather_list_list_from_recordpdb_symbol_of_string_list ;;
+string_list_of_entrypdb_symbol;;
+   #use "t0jk4_packpdb_data_v.ml";; 
+List.length dat_pkp_l;;
+let sqr_str_l = List.nth dat_pkp_l 11;;
+ 
+let str_rcp_a = "SEQRES   7 A   89  CYS ARG GLU GLY VAL GLY PHE PRO ARG ARG VAL                  ";;
+let str_rcp_b = "SEQRES   1 B    9  CYS TYR PHE GLN ASN CYS PRO LYS GLY                          ";;
+   #use "t0jk4_packpdb_data_v.ml";; 
+kyp_pkp_sl;;
+Epd_v.gather_subpackpdb_from_chainid_of_string_list sqr_str_l;;
+   #use "t0jk4_packpdb_data_register_v.ml";; 
+   #use "t0jk4_packpdb_data_v.ml";; 
+kyp_pkp_sl;;
+   #use "t0jk4_packpdb_data_register_v.ml";; 
+   #use "t0jk4_packpdb_data_v.ml";; 
+List.length dat_pkp_l;;
+kyp_pkp_sl;;
+   #use "t0jk4_packpdb_data_v.ml";; 
+List.length dat_pkp_l;;
+   #use "t0jk4_packpdb_data_v.ml";; 
+List.length dat_pkp_l;;
+   #use "t0jk4_packpdb_data_v.ml";; 
+List.length dat_pkp_l;;
+   #use "t0jk4_packpdb_data_v.ml";; 
+List.length dat_pkp_l;;
+   #use "t0jk4_packpdb_data_v.ml";; 
+List.length dat_pkp_l;;
+   #use "t0jk4_packpdb_data_v.ml";; 
+List.length dat_pkp_l;;
+   #use "t0jk4_packpdb_data_v.ml";; 
+List.length dat_pkp_l;;
+kyp_pkp_sl;;
+   #use "t0jk4_packpdb_data_v.ml";; 
+ #use "t0jk4_protein_sequencepdb_v.ml";; 
+ dat_clp_l;;
+ #use "t0jk4_protein_sequencepdb_v.ml";; 
+List.length dat_pkp_l;;
+List.length dat_clp_l;;
+  let (col, wid) = 
+    Sqfd_v.column_and_width_of_seqres_fieldpdb_symbol 
+      Sqfs_t.Seqres_thirteen_names;;
+ #use "protein_sequencepdb_v.ml";; 
+  let (col, wid) = 
+    Sqfd_v.column_and_width_of_seqres_fieldpdb_symbol 
+      Sqfs_t.Seqres_thirteen_names;;
+dat_pkp_l;;
+dat_clp_l;;
+let str_rcp =   "SEQRES   4 A   89  GLU GLU ASN TYR LEU PRO SER PRO CYS GLN SER GLY GLN          ";
+;;
+aminoacid_tlc_symbol_list_and_packpdp_keypdb_off_seqres_recorpdb_string str_rcp col wid;;
+ #use "t0jk4_clusterpdb_data_v.ml";; 
+ #use "clusterpdb_data_v.ml";; 
+let str_ll = string_list_list_off_entrypdb_symbol smb_enp;;
+module Eps_t = Entrypdb_symbol_t
+module Epd_v = Entrypdb_data_v
+module Pps_t = Clusterpdb_symbol_t
+module Pps_v = Clusterpdb_symbol_v
+module Ppk_v = Clusterpdb_keypdb_v
+module Ppd_v = Clusterpdb_data_v
+module Rps_t = Recordpdb_symbol_t
+let smb_enp = Eps_t.ProteinID "0jk4";;
+ #use "clusterpdb_data_v.ml";; 
+ #use "t0jk4_clusterpdb_data_v.ml";; 
+let str_ll = string_list_list_off_entrypdb_symbol smb_enp ;;
+ List.map (Cal_v.make smb_enp) str_ll;;
+ List.map (make smb_enp) str_ll ;;
+ #use "t0jk4_clusterpdb_data_v.ml";; 
+List.length dat_pkp_l;;
+kyp_pkp_sl;;
+ #use "clusterpdb_data_v.ml";; 
+let  dat_clp = List.hd dat_clp_l;;
+ #use "t0jk4_clusterpdb_data_v.ml";; 
+let  dat_clp = List.hd dat_clp_l;;
+let  dat_clp = List.nth dat_clp_l 5 ;;
+let  dat_clp = List.nth dat_clp_l 15 ;;
+clusterpdb_keypdb_off_clusterpdb_data dat_clp;;
+ clusterpdb_symbol_off_clusterpdb_data dat_clp;;
+let  dat_clp = List.nth dat_clp_l 10 ;;
+let  dat_clp = List.nth dat_clp_l 11 ;;
+let dat_clp_sqr = List.nth dat_clp_l 11 ;;
+Cld_v.clusterpdb_symbol_off_clusterpdb_data dat_cpl_sqr;;
+Cpd_v.clusterpdb_symbol_off_clusterpdb_data dat_cpl_sqr
+;;
+let dat_clp_sqr = List.nth dat_clp_l 11 ;;
+Cpd_v.clusterpdb_symbol_off_clusterpdb_data dat_cpl_sqr
+;;
+Cpd_v.clusterpdb_symbol_off_clusterpdb_data dat_clp_sqr
+;;
+Cpd_v.entrypdb_symbol_off_clusterpdb_data dat_clp_sqr
+;;
+ #use "t0jk4_clusterpdb_data_v.ml";; 
+(
+dat_clp_sqr (* : Clusterpdb_data_t.clusterpdb_data *)
+=
+  ((Clusterpdb_data_t.Cpk_t.Cps_t.Rps_t.SEQRES,
+    Clusterpdb_data_t.Cpk_t.Eps_t.ProteinID "0jk4"),
+   ["SEQRES   1 A   89  LEU ARG GLN CYS LEU PRO CYS GLY PRO GLY GLY LYS GLY          ";
+    "SEQRES   2 A   89  ARG CYS PHE GLY PRO SER ILE CYS CYS GLY ASP GLU LEU          ";
+    "SEQRES   3 A   89  GLY CYS PHE VAL GLY THR ALA GLU ALA LEU ARG CYS GLN          ";
+    "SEQRES   4 A   89  GLU GLU ASN TYR LEU PRO SER PRO CYS GLN SER GLY GLN          ";
+    "SEQRES   5 A   89  LYS PRO CYS GLY SER GLY GLY ARG CYS ALA ALA ALA GLY          ";
+    "SEQRES   6 A   89  ILE CYS CYS ASN ASP GLU SER CYS VAL THR GLU PRO GLU          ";
+    "SEQRES   7 A   89  CYS ARG GLU GLY VAL GLY PHE PRO ARG ARG VAL                  ";
+    "SEQRES   1 B    9  CYS TYR PHE GLN ASN CYS PRO LYS GLY                          "])
+);;
+(
+Cpd_v.clusterpdb_symbol_off_clusterpdb_data dat_clp_sqr
+(* : Clusterpdb_symbol_t.clusterpdb_symbol *) 
+= 
+Clusterpdb_symbol_t.Rps_t.SEQRES
+);;
+Cpd_v.entrypdb_symbol_off_clusterpdb_data dat_clp_sqr
+;;
+Cpd_v.string_list_off_clusterpdb_data dat_clp_sqr
+;;
+ #use "t0jk4_clusterpdb_data_v.ml";; 
+Cpd_v.retrieve kyp_clp_atm 
+;;
+Cpd_v.retrieve kyp_clp_atm 
+;;
+q
+ #use "t0jk4_packpdb_data_v.ml";; 
+dat_clp_sqr;;
+let dat_pkp_sqr_l = Ppd_v.packpdb_data_list_off_clusterpdb_data dat_clp_sqr;; 
+ #use "t0jk4_packpdb_data_v.ml";; 
+dat_pkp_sqr_l;;
+let kyp_pkp_sqr_l = List.map Ppd_v.packpdb_keypdb_off_packpdb_data dat_pkp_sqr_l;;
+List.length dat_pkp_sqr_l;;
+let kyp_pkp_sqr_l = List.map Ppd_v.packpdb_keypdb_off_packpdb_data dat_pkp_sqr_l;;
+let kyp_pkp_sqr_sl = List.sort Ppk_v.compare kyp_pkp_sqr_l;;
+let dat_pkp_atm_l = Ppd_v.packpdb_data_list_off_clusterpdb_data dat_clp_atm;; 
+let kyp_pkp_atm_l = List.map Ppd_v.packpdb_keypdb_off_packpdb_data dat_pkp_atm_l;;
+let kyp_pkp_atm_sl = List.sort Ppk_v.compare kyp_pkp_atm_l;;
+let dat_pkp_atm_l = Ppd_v.packpdb_data_list_off_clusterpdb_data dat_clp_atm;; 
+let kyp_clp_sqr = Cpk_v.make Cps_v.seqres smb_enp;;
+let kyp_clp_atm = Cpk_v.make Cps_v.atom smb_enp;;
+let dat_clp_atm = Cpd_v.retrieve kyp_clp_atm;;
+kyp_pkp_sqr_sl;;
+dat_pkp_sqr ;;
+dat_pkp_sqr_l;;
+ #use "t0jk4_packpdb_data_v.ml";; 
+ #use "t0jk4_clusterpdb_data_v.ml";; 
+ #use "clusterpdb_data_v.ml";; 
+ #use "t0jk4_clusterpdb_data_v.ml";; 
+let kyp_clp_sqr = Cpk_v.make Cps_v.seqres smb_enp;;
+let dat_clp_l = Cpd_v.clusterpdb_data_list_off_entrypdb_symbol smb_enp;;
+let dat_clp_sqr_l = Cpd_v.retrieve kyp_clp_sqr;;
+List.Length dat_clp_sqr_l ;;
+List.length dat_clp_sqr_l ;;
+let kyp_clp_atm = Cpk_v.make Cps_v.atom smb_enp;;
+let dat_clp_atm_l = Cpd_v.retrieve kyp_clp_atm;;
+List.length dat_clp_atm_l ;;
+let smb_enp = Dbl_v.right_off_doublet kyp_clp ;;
+let kyp_clp = kyp_clp_atm;;
+let smb_enp = Dbl_v.right_off_doublet kyp_clp ;;
+let dat_clp_l = 
+    clusterpdb_data_list_off_entrypdb_symbol smb_enp;;
+let dat_cpl_l2 =
+    List.filter (has_of_clusterpdb_keypdb_of_clusterpdb_data kyp_clp) 
+      dat_clp_l;;
+List.fold_left Cal_v.merge [] dat_cpl_l2;;
+(Cal_v.make kyp_clp []);;
+List.fold_left Cal_v.merge (Cal_v.make kyp_clp []) dat_cpl_l2;;
+ #use "t0jk4_clusterpdb_data_v.ml";; 
+str_sqr_l;;
+dat_clp_atm ;;
+ #use "t0jk4_packpdb_data_v.ml";; 
+str_sqr_a;;
+dat_pkp_atm_b ;;
+ #use "t0jk4_seqres_packpdb_data_v.ml";; 
+kyp_pkp_sqr_a;;
+dat_pkp_sqr_a;;
+ seq_a;;
+let seq_a = Sqpd_v.aminoacid_tlc_symbol_list_off_seqres_packpdb_data dat_pkp_sqr_a;;
+ #use "t0jk4_seqres_packpdb_data_v.ml";; 
+seq_a;;
+module Lst_v = List_v;;
+Lst_v.name Ats_v.name seq_a;;
+module Ats_v = Aminoacid_tlc_symbol_v;;
+Lst_v.name Ats_v.name seq_a;;
+dat_pkp_sqr_a;;
+Lst_v.name_with_separator Ats_v.name " " seq_a;;
+ #use "t0jk4_seqres_packpdb_data_v.ml";; 
+kyp_pkp_sqr_b;;
+dat_pkp_sqr_b;;
+Lst_v.name_with_separator Ats_v.name " " seq_b;;
+ #use "t0jk4_seqres_packpdb_data_v.ml";; 
+compare;;
+compare 4 5;;
+ #use "t0jk4_residue_packpdb_data_v.ml";; 
+dat_clp_sqr ;;
+ #use "t0jk4_residue_packpdb_data_v.ml";; 
+List.length dat_pkp_atm_l ;;
+dat_pkp_atm_l ;;
+mrp_rpk_atm_b;;
+let kyp_rpk_atm_b = Rpk_v.make mrp_rpk_atm_b kyp_pkp_atm_b;;
+dat_pkp_atm_b;;
+dat_rpk_atm_b;;
+ #use "t0jk4_residue_packpdb_data_v.ml";; 
+ Rpd_v.retrieve kyp_rpk_atm_b;;
+ #use "t0jk4_residue_packpdb_data_v.ml";; 
+let dat_rpk_atm_l = Rpd_v.residue_packpdb_data_list_off_packpdb_data dat_pkp_atom_b;;
+let dat_pkp_atm_b = Ppd_v.retrieve kyp_pkp_atm_b;;
+let dat_rpk_atm_l = Rpd_v.residue_packpdb_data_list_off_packpdb_data dat_pkp_atm_b;;
+let dat_rpk_atm_b = Rpd_v.retrieve kyp_rpk_atm_b;;
+List.length dat_rpk_atm_l;;
+dat_rpk_atm_b;;
+ #use "t0jk4_residue_packpdb_data_v.ml";; 
+Rpk_v.residue_packpdb_keypdb_off_residue_packpdb_data dat_rpk_atm_b
+;;
+ #use "residue_packpdb_data_v.ml";; 
+make;;
+ #use "residue_packpdb_data_v.ml";; 
+Rpd_v.residue_packpdb_keypdb_off_residue_packpdb_data dat_rpk_atm_b
+;;
+ #use "t0jk4_residue_packpdb_data_v.ml";; 
+Rpd_v.residue_packpdb_keypdb_off_residue_packpdb_data dat_rpk_atm_b
+;;
+ (
+Rpd_v.residue_packpdb_keypdb_off_residue_packpdb_data dat_rpk_atm_b
+=
+kyp_rpk_atm_b 
+);;
+Rpd_v.aminoacid_tlc_symbol_off_residue_packpdb_data dat_rpk_atm_b
+;;
+(
+Rpd_v.aminoacid_tlc_symbol_off_residue_packpdb_data dat_rpk_atm_b
+=
+Ats_v.tyr
+);;
+string_list_off_residue_packpdb_data dat_rp  dat_rpk_atm_b
+;;
+Rpd_v.string_list_off_residue_packpdb_data dat_rp  dat_rpk_atm_b;;
+Rpd_v.string_list_off_residue_packpdb_data dat_rpk_atm_b;;
+Rpd_v.has_of_residue_packpdb_keypdb_of_residue_packpdb_datakyp_rpk_atm_b dat_rpk_atm_b;;
+ #use "t0jk4_residue_packpdb_data_v.ml";; 
+ #use "t0gzx_residue_packpdb_data_v.ml";; 
+List.length dat_pkp_atm_l ;;
+dat_pkp_atm_a;;
+Rpd_v.residue_packpdb_data_list_off_packpdb_data dat_pkp_atm_a;;
+List.length dat_pkp_atm_l ;;
+ #use "t0jk4_residue_packpdb_data_v.ml";; 
+ dat_pkp_atm_l ;;
+ dat_pkp_atm_b;;
+Rpk_v.has_same_residue_packpdb_keypdb_of_entrypdb_symbol_of_string_of_string smb_enp
+ "ATOM    595  ND2 ASN B   5      32.819 -38.222 -16.745  1.00 37.60           N  "
+ "ATOM    596  N   CYS B   6      35.227 -38.700 -19.770  1.00 31.89           N  ";;
+Rpk_v.has_same_residue_packpdb_keypdb_of_entrypdb_symbol_of_string_of_string smb_enp
+ "ATOM    595  ND2 ASN B   5      32.819 -38.222 -16.745  1.00 37.60           N  "
+ "ATOM    595  ND2 ASN B   5      32.819 -38.222 -16.745  1.00 37.60           N  ";;
+ #use "t0jk4_residue_packpdb_data_v.ml";; 
+ #use "residue_packpdb_data_v.ml";; 
+let dat_pkp =  dat_pkp_atm_b;;
+let smb_enp = Ppd_v.entrypdb_symbol_off_packpdb_data dat_pkp;;
+let str_rcp_l = Ppd_v.string_list_off_packpdb_data dat_pkp;;
+let str_rcp_ll =
+    Lst_v.gather 
+      (Rpk_v.has_same_residue_packpdb_keypdb_of_entrypdb_symbol_of_string_of_string 
+	 smb_enp)
+      str_rcp_l;;
+List.length = str_rcp_ll ;;
+let str_rcp_ll =
+    Lst_v.gather 
+        (Rpk_v.has_same_residue_packpdb_keypdb_of_entrypdb_symbol_of_string_of_string 
+           smb_enp)
+        str_rcp_l  ;;
+List.length str_rcp_ll ;;
+let s = List.map (make smb_enp) str_rcp_ll;;
+List.length s ;;
+List.length dat_rpk_atm_l ;;
+ #use "t0gzx_residue_packpdb_data_v.ml";; 
+List.length dat_rpk_atm_l ;;
+ #use "t0gzx_residue_packpdb_data_v.ml";; 
+List.length dat_rpk_atm_l ;;
+ dat_pkp_atm_b;;
+ #use "t0gzx_residue_packpdb_data_v.ml";; 
+List.length dat_rpk_atm_l ;;
+dat_rpk_atm_b ;;
+ #use "t0gzx_residue_packpdb_data_v.ml";; 
+kyp_rpk_atm_b ;;
+kyp_rpk_atm_b ,,
+kyp_rpk_atm_b ;;
+ #use "t0gzx_residue_packpdb_data_v.ml";; 
+dat_pkp_atm_b;;
+ #use "t0gzx_residue_packpdb_data_v.ml";; 
+dat_rpk_atm_b;;
+ #use "t0gzx_residue_packpdb_data_v.ml";; 
+List.length dat_rpk_atm_l;;
+dat_rpk_atm_b;;
+Rpd_v.string_list_off_residue_packpdb_data dat_rpk_atm_b;;
+ #use "t0gzx_residue_packpdb_data_v.ml";; 
+ #use "t0gzx_atom_recordpdb_data_v.ml";; 
+let kyp_ark_ca_trp = Ark_v.make mrp_ark_ca_trp kyp_rpk_atm_b;;
+ #use "t0gzx_atom_recordpdb_data_v.ml";; 
+Ark_v.residue_packpdb_keypdb_off_atom_recordpdb_keypdb kyp_ark_ca_trp
+;;
+ #use "atom_recordpdb_keypdb_v.ml";; 
+let atom_symbol_off_atom_recordpdb_keypdb kyp_ark =
+  let nam_atm = atom_name_off_atom_recordpdb_keypdb kyp_ark in
+  let nam_res = residue_name_off_atom_recordpdb_keypdb kyp_ark in
+;;
+Rpm_v.make;;
+ #use "t0jk4_residue_packpdb_data_v.ml";; 
+Rpm_v.make;;
+ #use "t0jk4_residue_packpdb_data_v.ml";; 
+kyp_rpk_atm_b ;;
+ #use "t0jk4_residue_packpdb_data_v.ml";; 
+List.length dat_rpk_atm_l;;
+dat_rpk_atm_b;;
+ #use "t0jk4_residue_packpdb_data_v.ml";; 
+Rpd_v.aminoacid_tlc_symbol_off_residue_packpdb_data dat_rpk_atm_b;;
+ #use "t0jk4_residue_packpdb_data_v.ml";; 
+  #use "t0gzx_residue_packpdb_data_v.ml";; 
+#use "t0gzx_residue_packpdb_data_v.ml";; 
+kyp_ark_ca_trp;;
+#use "t0gzx_residue_packpdb_data_v.ml";; 
+ #use "t0gzx_atom_recordpdb_data_v.ml";; 
+kyp_ark_ca_trp;;
+ #use "t0gzx_atom_recordpdb_data_v.ml";; 
+Ark_v.atom_recordpdb_keypdb_off_atom_recordpdb_keypdb kyp_ark_ca_trp;;
+  #use "t0gzx_residue_packpdb_data_v.ml";; 
+kyp_rpk_atm_b ;;
+  #use "t0gzx_residue_packpdb_data_v.ml";; 
+#use "t1try_atom_recordpdb_keypdb_and_semipath_v.ml";; 
+smb_sdg ;;
+smb_sdg;;
+#use "t1try_atom_recordpdb_keypdb_and_semipath_v.ml";; 
+ #use "t1try_clusterpdb_data_v.ml";; 
+List.length dat_clp_l;;
+#use "t1try_atom_recordpdb_keypdb_and_semipath_v.ml";; 
+let mrk_chs_l = List.map2 Mrk_v.make smb_chs_l idx_chs_l;;
+#use "t1try_atom_recordpdb_keypdb_and_semipath_v.ml";; 
+let mrk_chs_l = List.map2 Mrk_v.make smb_chs_l idx_chs_l;;
+let smp_atm = mrk_chs_l;;
+let smp_blk = List.tl smp_atm;;
+let smp_plp = List.tl smp_blk;;
+let smp_frg = List.tl smp_plp;;
+let smp_sdg = List.tl smp_frg;;
+let smp_plp = List.tl smp_sdg;;
+let smp_blk = List.tl smp_atm;;
+#use "t1try_atom_recordpdb_keypdb_and_semipath_v.ml";; 
+smp_plp;;
+let mrk_plp = Mrk_v.make smb_plp idx_plp;;
+#use "t1try_atom_recordpdb_keypdb_and_semipath_v.ml";; 
+chain_id_off_polypeptide_symbol smb_plp ;;
+let smp_atm = mrk_chs_l;;
+#use "t1try_atom_recordpdb_keypdb_and_semipath_v.ml";; 
+chain_id_off_polypeptide_symbol smb_plp ;;
+#use "atom_recordpdb_keypdb_and_semipath_v.ml";; 
+chain_id_off_polypeptide_symbol smb_plp ;;
+smb_plp;;
+#use "atom_recordpdb_keypdb_and_semipath_v.ml";; 
+chain_id_off_polypeptide_symbol smb_plp ;;
+let str = Pls_v.name smb_plp;;
+#use "atom_recordpdb_keypdb_and_semipath_v.ml";; 
+chain_id_off_polypeptide_symbol smb_plp ;;
+smp_atm;;
+ let nam_res = residue_name_off_atom_semipath smp_atm;;
+let smb_plp = polypeptide_symbol_off_atom_semipath smp_atm;;
+let cid_res = chain_id_off_polypeptide_symbol smb_plp;;
+let mrp_rpk = Rpm_v.make nam_res num_res cid_res ;;
+let sidegroup_index_off_atom_semipath smp_atm =
+  let mrk_sdg = sidegroup_marker_off_atom_semipath smp_atm in
+  Mrk_v.index_off_marker mrk_sdg
+;;
+let num_res = sidegroup_index_off_atom_semipath smp_atm;;
+let mrp_rpk = Rpm_v.make nam_res num_res cid_res ;;
+#use "atom_recordpdb_keypdb_and_semipath_v.ml";; 
+#use "t1try_atom_recordpdb_keypdb_and_semipath_v.ml";; 
+#use "atom_recordpdb_keypdb_and_semipath_v.ml";; 
+smp_atm;;
+#use "t1try_atom_recordpdb_keypdb_and_semipath_v.ml";; 
+smp_atm;;
+#use "t1try_atom_recordpdb_keypdb_and_semipath_v.ml";; 
+#use "atom_recordpdb_keypdb_and_semipath_v.ml";; 
+#use "t1try_atom_recordpdb_keypdb_and_semipath_v.ml";; 
+Arks_v.atom_recordpdb_keypdb_of_atom_semipath smp_atm;;
+#use "t1try_atom_recordpdb_keypdb_and_semipath_v.ml";; 
+Arks_v.atom_recordpdb_keypdb_of_atom_semipath smp_atm;;
+ #use "t0jk4_seqres_packpdb_data_v.ml";; 
+#use "t0jk4_seqres_packpdb_data_v.ml";; 
+Lst_v.name_with_separator Ats_v.name;;
+Lst_v.name_with_separator Ats_v.name;;Lst_v.name_with_separator Ats_v.name " " seq_a;;
+Lst_v.name_with_separator Ats_v.name " " seq_a;;
+Lst_v.name_with_separator Ats_v.name " " seq_b;;
+ #use "t0jk4_protein_sequencepdb_v.ml";; 
+ #use "protein_sequencepdb_v.ml";; 
+chain_id_and_residuepdb_symbol_list_of_entrypdb_symbol_of_chain_id smb_enp 'A';;
+ #use "t0jk4_protein_sequencepdb_v.ml";; 
+chain_id_and_residuepdb_symbol_list_of_entrypdb_symbol_of_chain_id smb_enp 'A';;
+smb_enp;;
+let mrp_pkp = Ppm_v.make Pps_v.seqres [cid];;
+let kyp_pkp = Ppk_v.make mrp_pkp smb_enp;;
+ #use "protein_sequencepdb_v.ml";; 
+let kyp_pkp = Ppk_v.make mrp_pkp smb_enp;;
+ #use "t0jk4_protein_sequencepdb_v.ml";; 
+let mrp_pkp = Ppm_v.make Pps_v.seqres [cid];;
+let kyp_pkp = Ppk_v.make mrp_pkp smb_enp;;
+let kyp_pkp = Ppk_v.make mrp_pkp kyp_clp ;;
+let kyp_clp = Cpk_v.make Pps_v.seqres smb_enp;;
+let kyp_pkp = Ppk_v.make mrp_pkp kyp_clp ;;
+Sqpd_v.residuepdb_symbol_list_off_packpdb_keypdb 
+      kyp_pkp;;
+let smb_res_l = 
+    Sqpd_v.residuepdb_symbol_list_off_packpdb_keypdb 
+      kyp_pkp;;
+Dbl_v.make cid smb_res_l;;
+let chain_id_and_residuepdb_symbol_list_of_entrypdb_symbol_of_chain_id smb_enp cid =
+  let kyp_clp = Cpk_v.make Pps_v.seqres smb_enp in
+  let mrp_pkp = Ppm_v.make Pps_v.seqres [cid] in 
+  let kyp_pkp = Ppk_v.make mrp_pkp kyp_clp in
+  let smb_res_l = 
+    Sqpd_v.residuepdb_symbol_list_off_packpdb_keypdb 
+      kyp_pkp in
+  Dbl_v.make cid smb_res_l
+;;
+chain_id_and_residuepdb_symbol_list_of_entrypdb_symbol_of_chain_id smb_enp 'A';;
+chain_id_and_residuepdb_symbol_list_of_entrypdb_symbol_of_chain_id smb_enp 'B';;
+let cid_l = Sqcd_v.chain_id_list_of_entrypdb_symbol smb_enp;;
+module Sqcd_v = Seqres_clusterpdb_data_v;;
+      kyp_pkp;;let sq_l = Psp_v.make smb_enp;;
+let sq_l = Psp_v.make smb_enp;;
+#use "t0jk4_protein_sequencepdb_v.ml";; 
+let sq_l = Psp_v.make smb_enp;;
+List_v.print_with_separator;;
+Dbl_v.print;;
+let prt_cid c = Format.fprintf ppf "%c" c ;;
+let nam_cid c = Format.sprintf "%c" c ;;
+let nam_l l = Lst_v.name_with_separator Rps_v.name " " l ;;
+module Csp_t = Chain_sequencepdb_t
+module Dbl_v = Doublet_v
+module Lst_v = List_v
+module Ppk_v = Packpdb_keypdb_v
+module Rps_v = Residuepdb_symbol_v
+module Sqpd_v = Seqres_packpdb_data_v
+;;
+#use "t0jk4_protein_sequencepdb_v.ml";; 
+#use "t0jk4_protein_sequencepdb_v.ml";; let sq_l = Psp_v.make smb_enp;;
+List.assoc 'B'  csq_l;;
+#use "t0jk4_protein_sequencepdb_v.ml";; 
+List.assoc 'B'  csq_l;;
+#use "protein_sequencepdb_v.ml";; 
+smb_enp;;
+cid;;
+let cid = 'B';;
+ let csq_l = make smb_enp ;;
+has_of_chain_id_of_chain_sequencepdb cid (List.hd csq_l);;
+let cid = 'A';;
+has_of_chain_id_of_chain_sequencepdb cid (List.hd csq_l);;
+has_of_chain_id_of_chain_sequencepdb cid (List.hd csq_l);;List.filter (has_of_chain_id_of_chain_sequencepdb cid) csq_l;;
+List.filter (has_of_chain_id_of_chain_sequencepdb cid) csq_l;;
+Lst_v.name_with_separator;;
+#use "t0jk4_protein_sequencepdb_v.ml";; 
+  #use "t1try_residue_packpdb_data_v.ml";; 
+List.length dat_rpk_atm_l ;;
+  #u_residue_packpdb_data_v.ml";; 
+#use "t0tab_residue_packpdb_data_v.ml";; 
+dat_pkp_atm_b;;
+#use "t0tab_residue_packpdb_data_v.ml";; 
+dat_pkp_atm_b;;
+#use "t0tab_residue_packpdb_data_v.ml";; 
+  #use "t1try_residue_packpdb_data_v.ml";; 
+#use "t0tab_residue_packpdb_data_v.ml";; 
+let dat_rpk_atm_l = Rpd_v.residue_packpdb_data_list_off_packpdb_data dat_pkp_atm_b;;
+List.length dat_rpk_atm_l ;;
+#use "t0tab_residue_packpdb_data_v.ml";; 
+kyp_rpk_atm_b;;
+#use "t0tab_residue_packpdb_data_v.ml";; 
+dat_pkp_atm_a;;
+dat_rpk_atm_b;;
+Rpd_v.string_list_off_residue_packpdb_data dat_rpk_atm_b;;
+let mrp_rpk_atm_b = Rpm_v.make "TRP" 4 ' ';;
+let mrp_rpk_atm_b = Rpm_v.make "TRP" 4 'A';;
+#use "t0tab_residue_packpdb_data_v.ml";; 
+dat_rpk_atm_bl ;;
+#use "tacg_residue_packpdb_data_v.ml";; 
+ #use "tacg_sequencepdb_translation_v.ml";; 
+module Fln_v = Filename_v;;
+smb_enp;;
+ #use "tacg_sequencepdb_translation_v.ml";; 
+#use "tacg_protein_sequencepdb_v.ml";; 
+smb_enp;;
+filename_of_entrypdb_symbol smb_enp ;;
+ Fln_v.filename_of_entrypdb_symbol smb_enp ;;
+Filename_v.filename_of_entrypdb_symbol smb_enp ;;
+module Eps_t = Entrypdb_symbol_t
+module Fln_v = Filename_v;;
+Fln_v.filename_of_entrypdb_symbol smb_enp ;;
+#use "entrypdb_symbol_v.ml";;
+filename_of_entrypdb_symbol smb_enp ;;
+name smb_enp;;
+smb_enp ;;
+string_4_off_entrypdb smb_enp;;
+  let str_4 = string_4_off_entrypdb smb_enp ;;
+ Format.sprintf "%4s" str_4;;
+Format.sprintf "%4s " str_4;;
+Format.sprintf "%s " str_4;;
+Format.sprintf "%s" str_4;;
+let str_4 = string_4_off_entrypdb "anbgde";;
+let smb_enp =  Eps_t.ProteinID "abcdefg"
+;;
+ name smb_enp ;;
+let name smb_enp =
+  let str_4 = string_4_off_entrypdb smb_enp in
+  Format.sprintf "%4s " str_4
+;;
+name smb_enp;;
+Format.sprintf "%4s " "abcdefg"
+;;
+Format.sprintf "%4s" "abcdefg";;
+#use "tacg_protein_sequencepdb_v.ml";; 
+List.length dat_clp_l;;
+ dat_clp_l;;
+psq;;
+#use "tacg_protein_sequencepdb_v.ml";; 
+dat_clp_l;;
+psq ;;
+csq;;
+psq;;
+ #use "t0tab_residue_packpdb_data_v.ml";; 
+kyp_rpk_atm_b;;
+ #use "t0tab_residue_packpdb_data_v.ml";; 
+dat_rpk_atm_b;;
+dat_pkp_atm_a;;
+dat_pkp_atm_b;;
+dat_rpk_atm_b;;
+ #use "t0tab_residue_packpdb_data_v.ml";; 
+kyp_rpk_atm_a;;
+kyp_rpk_atm_b;;
+dat_pkp_atm_b;;
+ #use "t0tab_residue_packpdb_data_v.ml";; 
+dat_rpk_atm_bl ;;
+ #use "t0tab_residue_packpdb_data_v.ml";; 
+dat_pkp_atm_b
+(* : Packpdb_data_t.;;
+dat_pkp_atm_b;;
+ dat_pkp_atm_b;;
+kyp_pkp_atm_a;;
+List.length dat_pkp_atm_a ;;
+dat_pkp_atm_a ;;
+dat_pkp_atm_b;;
+dat_rpk_atm_b;;
+let kyp_rpk_atm_b = Rpk_v.make mrp_rpk_atm_b kyp_pkp_atm_b;;
+let dat_rpk_atm_b = Rpd_v.retrieve kyp_rpk_atm_b;;
+ #use "t0tab_residue_packpdb_data_v.ml";; 
+(
+kyp_pkp_atm_b (* : Packpdb_keypdb_t.packpdb_keypdb *)
+  =
+((Packpdb_keypdb_t.Ppm_t.Pps_t.Rps_t.ATOM, ['B']),
+ (Packpdb_keypdb_t.Cpk_t.Cps_t.Rps_t.ATOM,
+  Packpdb_keypdb_t.Cpk_t.Eps_t.ProteinID "0tab"))
+);;
+dat_pkp_atm_b;;
+(
+dat_pkp_atm_b
+(* : Packpdb_data_t.packpdb_data *) 
+   =
+(((Packpdb_data_t.Ppk_t.Ppm_t.Pps_t.Rps_t.ATOM, ['B']),
+  (Packpdb_data_t.Ppk_t.Cpk_t.Cps_t.Rps_t.ATOM,
+   Packpdb_data_t.Ppk_t.Cpk_t.Eps_t.ProteinID "0tab")),
+ ["ATOM    106  N   GLY B   1      18.814  15.116  -6.008  1.00 29.90           N  ";
+  "ATOM    107  CA  GLY B   1      19.473  15.849  -7.079  1.00 29.15           C  ";
+  "ATOM    108  C   GLY B   1      18.573  17.026  -7.460  1.00 29.76           C  ";
+  "ATOM    109  O   GLY B   1      19.048  18.179  -7.363  1.00 30.90           O  ";
+  "ATOM    527  N   PRO B   2      47.929 -15.131 -15.386  1.00 29.92           N  ";
+  "ATOM    528  CA  PRO B   2      48.050 -13.847 -16.075  1.00 29.60           C  ";
+  "ATOM    529  C   PRO B   2      47.965 -13.973 -17.580  1.00 29.59           C  ";
+  "ATOM    530  O   PRO B   2      47.561 -13.028 -18.254  1.00 30.33           O  ";
+  "ATOM    531  CB  PRO B   2      49.418 -13.341 -15.614  1.00 29.20           C  ";
+  "ATOM    532  CG  PRO B   2      50.154 -14.593 -15.285  1.00 30.05           C  ";
+  "ATOM    533  CD  PRO B   2      49.109 -15.366 -14.545  1.00 29.36           C  ";
+  "ATOM    534  OXT PRO B   2      20.657   0.370  23.211  1.00 32.38           O  "])
+ );;
+kyp_rpk_atm_b;;
+dat_rpk_atm_b;;
+#use "residue_packpdb_data_v.ml";;
+let kyp_rpp=kyp_rpk_atm_b;;
+let kyp_rpp=kyp_rpk_atm_b;; #use "t0tab_residue_packpdb_data_v.ml";; 
+ #use "t0tab_residue_packpdb_data_v.ml";; 
+let kyp_rpp=kyp_rpk_atm_b;;
+let kyp_pkp = Rpk_v.packpdb_keypdb_off_residue_packpdb_keypdb kyp_rpp;;
+let mrp_rpk_atm_b = Rpm_v.make "PRO" 2 'B';;
+let kyp_rpk_atm_b = Rpk_v.make mrp_rpk_atm_b kyp_pkp_atm_b;;
+ kyp_pkp_atm_b;;
+let dat_rpk_atm_b = Rpd_v.retrieve kyp_rpk_atm_b;;
+let dat_pkp = Ppd_v.retrieve kyp_pkp ;;
+let dat_rpp_l =
+    residue_packpdb_data_list_off_packpdb_data dat_pkp;;
+has_of_residue_packpdb_keypdb_of_residue_packpdb_data kyp_rpp;;
+has_of_residue_packpdb_keypdb_of_residue_packpdb_data kyp_rpp List.nth dat_rpp_l 2;;
+has_of_residue_packpdb_keylet has_of_residue_packpdb_keypdb_of_residue_packpdb_data kyp_rpp dat_rpp =pdb_of_residue_packpdb_data kyp_rpp;;
+  let str_rcp = List.hd (string_list_off_residue_packpdb_data dat_rpp) in
+  Rpk_v.has_of_residue_packpdb_keypdb_of_recordpdb_string kyp_rpp str_rcp
+;;
+let has_of_residue_packpdb_keypdb_of_residue_packpdb_data kyp_rpp dat_rpp =
+  let str_rcp = List.hd (string_list_off_residue_packpdb_data dat_rpp) in
+  Rpk_v.has_of_residue_packpdb_keypdb_of_recordpdb_string kyp_rpp str_rcp
+;;
+ has_of_residue_packpdb_keypdb_of_residue_packpdb_data kyp_rpp (List.nth dat_rpp_l 2);;
+ has_of_residue_packpdb_keypdb_of_residue_packpdb_data kyp_rpp (List.nth dat_rpp_l 1);;
+ has_of_residue_packpdb_keypdb_of_residue_packpdb_data kyp_rpp (List.nth dat_rpp_l 0);;
+let  dat_rpp = List.nth dat_rpp_l 1;;
+str_rcp = List.hd (string_list_off_residue_packpdb_data dat_rpp);;
+let str_rcp = List.hd (string_list_off_residue_packpdb_data dat_rpp);;
+kyp_rpp;;
+Rpk_v.has_of_residue_packpdb_keypdb_of_recordpdb_string kyp_rpp str_rcp;;
+let smb_enp = entrypdb_symbol_off_residue_packpdb_keypdb kyp_rpk;;
+ #use "residue_packpdb_keypdb_v.ml";; 
+let smb_enp = entrypdb_symbol_off_residue_packpdb_keypdb kyp_rpk;;
+let kyp_rpk=kyp_rpk_atm_b;;
+let smb_enp = entrypdb_symbol_off_residue_packpdb_keypdb kyp_rpk;;
+let kyp_rpk_a = 
+    residue_packpdb_keypdb_of_entrypdb_symbol_of_recordpdb_string smb_enp str_rcp;;
+str_rcp;;
+residue_packpdb_keypdb_of_entrypdb_symbol_of_recordpdb_string smb_enp str_rcp;;
+let mrp_rpk = Rpm_v.residue_packpdb_markerpdb_off_recordpdb_string str_rcp;;
+ #use "residue_packpdb_markerpdb_v.ml";; 
+residue_packpdb_markerpdb_off_recordpdb_string str_rcp;;
+ #use "t0tab_residue_packpdb_data_v.ml";; 
+dat_rpk_atm_b;;
+ #use "t0tab_residue_packpdb_data_v.ml";; 
+Rpd_v.string_list_off_residue_packpdb_data dat_rpk_atm_b;;
+Rpd_v.has_of_residue_packpdb_keypdb_of_residue_packpdb_data kyp_rpk_atm_b dat_rpk_atm_b;;
+ #use "t0tab_residue_packpdb_data_v.ml";; 
+ #use "t1try_residue_packpdb_data_v.ml";; 
+List.length dat_rpk_atm_l ;;
+dat_clp_atm;;
+ #use "t1try_residue_packpdb_data_v.ml";; 
+dat_rpk_atm_l ;;
+dat_pkp_atm;;
+ #use "t1try_residue_packpdb_data_v.ml";; 
+kyp_rpk_atm ;;
+ #use "t1try_residue_packpdb_data_v.ml";; 
+dat_rpk_atm;;
+ #use "t1try_residue_packpdb_data_v.ml";; 
+ #use "t0plw_atom_recordpdb_data_v.ml";; 
+#use "t1try_atom_recordpdb_data_v.ml";; 
+let mrp_ark_cg_trp = Arm_v.make "CG" ' ';;
+#use "t1try_atom_recordpdb_data_v.ml";; 
+ dat_rpk_atm_a;;
+dat_rpk_atm_a;;
+#use "t1try_atom_recordpdb_data_v.ml";; 
+kyp_ark_ca_trp;;
+ dat_rpk_atm;;
+mrp_rpk_atm;;
+ kyp_rpk_atm ;;
+dat_rpk_atm;;
+#use "t1try_atom_recordpdb_data_v.ml";; 
+dat_rpk_atm;;
+#use "t1try_atom_recordpdb_data_v.ml";; 
+ dat_ark_cg_trp;;
+(
+ dat_ark_cg_trp
+(* : Atom_recordpdb_data_t.atom_recordpdb_data *)
+=
+((("CG", ' '),
+  (("TRP", 4, ' '),
+   ((Atom_recordpdb_data_t.Ark_t.Rpk_t.Ppk_t.Ppm_t.Pps_t.Rps_t.ATOM, [' ']),
+    (Atom_recordpdb_data_t.Ark_t.Rpk_t.Ppk_t.Cpk_t.Cps_t.Rps_t.ATOM,
+     Atom_recordpdb_data_t.Ark_t.Rpk_t.Ppk_t.Cpk_t.Eps_t.ProteinID "1try")))),
+ "ATOM     97  CG  TRP     4      18.617  14.836  -1.731  1.00 27.87           C  ")
+);;
+#use "t1try_residue_packpdb_data_v.ml";; 
+List.length dat_rpk_atm_l ;;
+#use "t1try_residue_packpdb_data_v.ml";; 
+#use "residue_packpdb_data_v.ml";; 
+let dat_pkp = dat_pkp_atm;;
+dat_pkp_atm_l;;
+dat_pkp_atm;;
+kyp_pkp_atm;;
+dat_rpp_l =
+    residue_packpdb_data_list_off_packpdb_data dat_p_atm;;
+let l=    residue_packpdb_data_list_off_packpdb_data dat_p_atm;;
+let l=    residue_packpdb_data_list_off_packpdb_data dat_pkp_atm;;
+;;
+dat_clp_atm;;
+let kyp_rpp = let kyp_pkp_l = List.map Ppd_v.packpdb_keypdb_off_packpdb_data dat_pkp_atm_l;;
+let kyp_pkp_l = List.map Ppd_v.packpdb_keypdb_off_packpdb_data dat_pkp_atm_l;;
+residue_packpdb_data_list_off_packpdb_data dat_pkp_atom;;
+residue_packpdb_data_list_off_packpdb_data dat_pkp_atm;;
+mrp_pkp_atm;;
+dat_pkp_atm_l;;
+Ppd_v.packpdb_data_list_off_clusterpdb_data dat_clp_atm;; 
+List.length dat_pkp_atm_l;;
+let packpdb_keypdb_list_off_clusterpdb_data dat_clp =
+  let dat_pkp_l = packpdb_data_list_off_clusterpdb_data dat_clp in
+  List.map packpdb_keypdb_off_packpdb_data dat_pkp_l
+;;
+#use "packpdb_data_v.ml";; 
+  List.map packpdb_keypdb_off_packpdb_data dat_pkp_l
+;;
+  List.map packpdb_keypdb_off_packpdb_data dat_pkp_l;;
+#use "t1try_residue_packpdb_data_v.ml";; 
+#use "residue_packpdb_data_v.ml";; 
+dat_rpk_atm_l;;
+dat_pkp_atm_l;;
+let dat_pkp =dat_pkp_atm_l;;
+let smb_enp = Ppd_v.entrypdb_symbol_off_packpdb_data dat_pkp;;
+let dat_pkp =List.hd dat_pkp_atm_l;;
+let smb_enp = Ppd_v.entrypdb_symbol_off_packpdb_data dat_pkp;;
+residue_packpdb_data_list_off_packpdb_data dat_pkp;;
+let residue_packpdb_keypdb_list_off_packpdb_data dat_pkp =
+  let dat_rpp_l = residue_packpdb_data_list_off_packpdb_data dat_pkp in
+  List.map residue_packpdb_keypdb_off_residue_packpdb_data dat_rpp_l
+;;
+residue_packpdb_keypdb_list_off_packpdb_data dat_pkp;;
+#use "t1try_residue_packpdb_data_v.ml";; 
+List.length dat_rpk_atm_l ;;
+kyp_rpk_atm ;;
+#use "t1try_residue_packpdb_data_v.ml";; 
+kyp_rpk_atm ;;
+#use "t1try_residue_packpdb_data_v.ml";; 
+dat_pkp_atm;;
+#use "t0tab_residue_packpdb_data_v.ml";; 
+List.length dat_pkp_atm_l ;;
+#use "t0tab_residue_packpdb_data_v.ml";; 
+#use "t1try_residue_packpdb_data_v.ml";; 
+List.length dat_pkp_atm_l ;;
+List.length dat_rpk_atm_l ;;
+#use "t1try_residue_packpdb_data_v.ml";; 
+dat_pkp_atm;;
+kyp_pkp_l ;;
+let kyp_rpk_atm_l = Rpd_v.residue_packpdb_keypdb_list_off_clusterpdb_data dat_clp_atm;;
+#use "t0tab_residue_packpdb_data_v.ml";; 
+let dat_pkp_atm_al = Ppd_v.packpdb_data_list_off_clusterpdb_data dat_clp_atm;; 
+#use "t0tab_residue_packpdb_data_v.ml";; 
+kyp_rpk_atm_l ;;
+#use "t0tab_residue_packpdb_data_v.ml";; dat_clp_atm::
+dat_clp_atm::
+::
+::;;
+dat_clp_atm;;
+#use "t0tab_residue_packpdb_data_v.ml";; dat_clp_atm::
+kyp_rkp_atm_l;;
+let kyp_rkp_atm_l = Rpd_v.residue_packpdb_keypdb_list_off_clusterpdb_data dat_clp_atm;;
+#use "t0tab_residue_packpdb_data_v.ml";; dat_clp_atm::
+List.length dat_rpk_atm_l ;;
+#use "t0tab_residue_packpdb_data_v.ml";; dat_clp_atm::
+List.length dat_rpk_atm_l ;;
+#use "t0tab_residue_packpdb_data_v.ml";; dat_clp_atm::
+#use "t1try_residue_packpdb_data_v.ml";; dat_clp_atm::
+kyp_rpk_atm_l;;
+#use "t1try_residue_packpdb_data_v.ml";; dat_clp_atm::
+kyp_rpk_atm_l;;
+let kyp_clp_atm = Cpk_v.make Cps_v.atom smb_enp;;
+let dat_clp_atm = Cpd_v.retrieve kyp_clp_atm;;
+let dat_pkp_atm_l = Ppd_v.packpdb_data_list_off_clusterpdb_data dat_clp_atm;; 
+let kyp_pkp_atm_l = Ppd_v.packpdb_keypdb_list_off_clusterpdb_data dat_clp_atm;;
+let dat_rpk_atm_l = Rpd_v.residue_packpdb_data_list_off_clusterpdb_data dat_clp_atm;;
+let kyp_rpk_atm_l = Rpd_v.residue_packpdb_keypdb_list_off_clusterpdb_data dat_clp_atm;;
+(* The Pack ATOM A *)
+let mrp_pkp_atm = Ppm_v.make Pps_v.atom ['A'];;
+let kyp_pkp_atm = Ppk_v.make mrp_pkp_atm kyp_clp_atm;;
+let dat_pkp_atm = Ppd_v.retrieve kyp_pkp_atm;;
+(* The Residue Packs in Chain A *)
+let inc_rpk = ' ';;
+let rsn_rpk = 17;;
+let nam_rsp = "VAL";;
+let mrp_rpk_atm = Rpm_v.make nam_rsp rsn_rpk inc_rpk;;
+let kyp_rpk_atm = Rpk_v.make mrp_rpk_atm kyp_pkp_atm;;
+let dat_rpk_atm = Rpd_v.retrieve kyp_rpk_atm;;
+#use "t1try_residue_packpdb_data_v.ml";; dat_clp_atm::
+List.hd kyp_rpk_atm_l;;
+#use "t1try_residue_packpdb_data_v.ml";; dat_clp_atm::
+dat_rpk_atm;;
+#use "t1try_residue_packpdb_data_v.ml";; dat_clp_atm::Rpd_v.string_list_off_residue_packpdb_data dat_rpk_atm;;
+Rpd_v.string_list_off_residue_packpdb_data dat_rpk_atm;;
+#use "t1try_residue_packpdb_data_v.ml";; dat_clp_atm::
+#use "t0tab_atom_recordpdb_data_v.ml";; dat_clp_atm::
+#use "t0tab_atom_recordpdb_data_v.ml";;
+kyp_rpk_atm;;
+#use "t0tab_atom_recordpdb_data_v.ml";;
+kyp_rpk_atm;;
+dat_rpk_atm;;
+mrp_ark_ca_trp;;
+#use "t0tab_atom_recordpdb_data_v.ml";;
+ dat_ark_cg_trp;;
+#use "t0tab_atom_recordpdb_data_v.ml";;
+ #use "t0jk4_residue_packpdb_data_v.ml";; 
+ #use "t0tab_residue_packpdb_data_v.ml";; 
+List.length dat_pkp_atm_l ;;
+List.length dat_rpk_atm_l ;;
+kyp_rpk_atm_l ;;
+ #use "t0tab_residue_packpdb_data_v.ml";; 
+List.tl kyp_rpk_atm_l ;;
+List.tl (List.tl kyp_rpk_atm_l) ;;
+ #use "t0tab_residue_packpdb_data_v.ml";; 
+ #use "t0jk4_protein_sequencepdb_v.ml";; 
+psq;;
+ #use "t0jk4_protein_sequencepdb_v.ml";; 
+psq;;
+ #use "t0jk4_protein_sequencepdb_v.ml";; 
+#use "t0jk4_residue_packpdb_data_v.ml";; 
+#use "t0tab_residue_packpdb_data_v.ml";; 
+List.length dat_pkp_atm_l ;;
+List.length dat_rpk_atm_l ;;
+List.hd kyp_rpk_atm_l ;;
+#use "t0tab_residue_packpdb_data_v.ml";; 
+List.length dat_rpk_atm_l ;;
+ (
+List.length dat_rpk_atm_l 
+(* : Packpdb_data_t.packpdb_data list *)
+=
+18
+);;
+#use "t0tab_residue_packpdb_data_v.ml";; 
+kyp_clp_atm;;
+List.length dat_rpk_atm_l ;;
+#use "t0tab_residue_packpdb_data_v.ml";; 
+dat_pkp_atm_a;;
+#use "t0tab_residue_packpdb_data_v.ml";; 
+ #use "t1hoh_molecule_packpdb_data_v.ml";; 
+let mrp_pkp_atm_a = Ppm_v.make Pps_v.hetatm ['A'];;
+let kyp_pkp_atm_a = Ppk_v.make mrp_pkp_atm_a kyp_clp_atm;;
+let dat_pkp_atm_a = Ppd_v.retrieve kyp_pkp_atm_a;;
+let mrp_rpk_atm_b = Rpm_v.make "HOH" 1 ' ';; (* ' ' is insertion code *)
+let kyp_rpk_atm_b = Rpk_v.make mrp_rpk_atm_b kyp_pkp_atm_b;;
+let dat_rpk_atm_b = Rpd_v.retrieve kyp_rpk_atm_b;;
+ #use "t1hoh_molecule_packpdb_data_v.ml";; 
+(
+List.length dat_pkp_atm_l 
+(* : Packpdb_data_t.packpdb_data list *)
+=
+1
+);;
+ (
+List.length dat_rpk_atm_l 
+(* : Packpdb_data_t.packpdb_data list *)
+=
+1
+);;
+List.hd kyp_rpk_atm_l ;;
+kyp_pkp_atm_a;;
+ #use "t1hoh_molecule_packpdb_data_v.ml";; 
+kyp_pkp_atm_a;;
+dat_pkp_atm_a;;
+kyp_rpk_atm_a;;
+dat_rpk_atm_a ;;
+(
+Rpd_v.molecule_packpdb_keypdb_off_molecule_packpdb_data dat_rpk_atm_a
+=
+kyp_rpk_atm_a 
+);;
+Rpd_v.string_list_off_molecule_packpdb_data dat_rpk_atm_a;;
+ (
+Rpd_v.has_of_molecule_packpdb_keypdb_of_molecule_packpdb_data kyp_rpk_atm_a dat_rpk_atm_a
+);;
+ #use "t1hoh_molecule_packpdb_data_v.ml";; 
+Rpd_v.moleculepdb_symbol_off_molecule_packpdb_data dat_rpk_atm_a;;
+ #use "t1hoh_molecule_packpdb_data_v.ml";; 

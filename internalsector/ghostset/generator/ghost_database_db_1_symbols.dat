@@ -1,0 +1,13 @@
+constructors   ghost                        =   db_1_entity  fake
+
+constructors   db_1_entity                   =   db_1_entity_cluster   db_1_entity_component   db_1_entity_local_database   db_1_entity_element   db_1_entity_float
+
+constructors   db_1_entity_cluster           =   db_1_entity_cluster_triangle:ofstring   db_1_entity_cluster_vector:ofstring   db_1_entity_cluster_vertex:ofstring
+
+constructors   db_1_entity_component         =   db_1_entity_component_triangle:ofstring   db_1_entity_component_vector:ofstring   db_1_entity_component_vertex:ofstring
+
+constructors   db_1_entity_element           =   db_1_entity_element_label:of_string   db_1_entity_element_vertex:of_string
+
+constructors   db_1_entity_local_database    =   db_1_entity_local_database_constructor:ofstring
+
+constructors   db_1_entity_float             =   db_1_entity_float_constructor:ofstring

@@ -1,0 +1,12 @@
+let store key val_ =
+  try Register_v.store register key val_
+  with Failure ("Already_stored:Register_v.store") ->
+    error_message_already_stored_value_of_key_of_value key val_
+;;
+
+let store_verbose nam_mod key val_ =
+  try Register_v.store_verbose register key val_ nam_mod nam_reg name_of_key name_of_value
+  with Failure ("Already_stored:Register_v.store_verbose") ->
+    error_message_already_stored_value_of_key_of_value key val_
+;;
+

@@ -1,0 +1,20 @@
+The most important formula is symbol_formula
+
+All other category formulas (designator and tag) have the same data_structure as the
+symbol_formula.
+
+ 
+[http://en.wikipedia.org/wiki/VSEPR_theory#AXE_Method]
+
+Adaption of VSEPR Theory to Blocks.
+
+The "AXE method" of electron counting is commonly used when applying the VSEPR theory. 
+
+- The A represents the `core' atom. 
+- The X represents the number of `sigma bonds' between the core atoms and leaf atoms.
+Multiple covalent bonds (double, triple, etc) count as one X. 
+- The E represents the number of `lone electron pairs' surrounding the core atom. 
+
+The sum of X and E, known as the `steric number', is also associated with the total number of hybridized orbitals used by valence bond theory.
+
+Based on the `steric number' and distribution of X's and E's, VSEPR theory makes the predictions in the following tables. Note that the geometries are named according to the atomic positions only and not the electron arrangement. For example the description of AX2E1 as bent means that AX2 is a bent molecule without reference to the lone pair, although the lone pair helps to determine the geometry. *)

@@ -1,0 +1,27 @@
+
+1. Only One Input file for a Domain :
+  
+   Input_filename_by_domain_tag_provider_v
+
+2. Several Targets for a Domain
+
+   Target_tag_list_by_domain_tag_provider_v 
+
+3. Several Models for each Targets Input
+
+   Model_tag_list_by_target_tag_provider_v
+
+4. Kind of Coordinates for Input are got from Models
+   Kind of Coordinates for Output are got from Property_units_list
+
+5. Parameters_figureset_input_by_string_trio_provider_v
+
+   Input file -> Parser -> trio -> value
+
+   (("model", "center_a", "coordinate_units_list"), "meter");
+
+   let str_tri = ("model", "center_a", "coordinate_units_list") in
+   let uni_coo_l = 
+     Parameters_figureset_input_by_string_trio_provider_v.provide 
+     str_tri 
+   in

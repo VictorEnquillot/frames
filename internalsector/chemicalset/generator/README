@@ -1,0 +1,31 @@
+# Half-bond symbol
+# b = s, c, d, t, u, v, w 
+# s single bond
+# c conjugated
+# u conjugated trans
+# v conjugated cis
+# d double
+# t triple
+# w double + conjugated
+
+# Questions :
+# Chair and Boat configurations ???
+# Cycle puckering ??? 
+# Must these be taken into account at Topological level or be knowledge of Coordinates ? 
+
+
+# An Atom Symbol :
+# atom zerotied  : A
+# atom onetied   : A_b
+# atom twotied   : b_A_b
+# atom threetied : b_A_bb
+# atom fourtied  : b_A_bbb
+#
+# VSEPR :          b_AXnEm_b
+#                  n number of ties
+#                  m number of lone pairs => shape
+#                  atomic valence >= 
+# Halbridge : 
+#  hb -> hb_b
+#  hb -> b_hb
+

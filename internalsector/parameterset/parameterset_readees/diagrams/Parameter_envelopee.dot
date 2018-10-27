@@ -1,0 +1,33 @@
+digraph Frames {
+                size="40,15";
+                edge [arrowhead = "vee", arrowsize = "2.0", style="solid", taillabel = ""];
+		node [fontsize=40];		
+
+  Title [
+  	label = "The Envelopee\nfor a Parameter", fontsize=80, shape=box, fontname=Courier, color=yellow, style=filled
+  ];
+
+  "Envelopee\n(Set fence aopef tag, Readee)" [color=blue2, style="setlinewidth(5)"];
+  "Parameter\nSet fence aopef tag" [color=blue2, style="setlinewidth(5)"];
+  "Parameter\nSet fence aopef tag\nExponent" [color=cornsilk2, style=filled];
+  "Parameter\nSet fence aopef tag\nCoefficient" [color=cornsilk2, style=filled];		   
+  "Readee" [color=blue2, style="setlinewidth(5)"];
+  "Measure\n(Float, Units)" [color=lavender, style=filled];
+  "Units" [color=lavender, style=filled];
+  "Float" [color=lavender, style=filled];
+  "Color" [color=antiquewhite, style=filled];
+
+  Title -> "Envelopee\n(Set fence aopef tag, Readee)" [ style="invis", width = 5];
+
+	"Envelopee\n(Set fence aopef tag, Readee)" ->	"Parameter\nSet fence aopef tag";
+	"Envelopee\n(Set fence aopef tag, Readee)" ->	"Readee";
+	"Parameter\nSet fence aopef tag" -> "Parameter\nSet fence aopef tag\nExponent";		   
+	"Parameter\nSet fence aopef tag" -> "Parameter\nSet fence aopef tag\nCoefficient";		   
+	"Readee" ->	"Measure\n(Float, Units)";
+	"Readee" ->	"Color";
+	"Measure\n(Float, Units)" ->	"Float";
+	"Measure\n(Float, Units)" ->	"Units";
+	
+
+}
+

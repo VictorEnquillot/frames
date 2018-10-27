@@ -1,0 +1,18 @@
+(** {6 Naming} *)
+
+let name env_ttt =
+  Tuple_v.name Closure_v.name env_ttt
+;;
+
+let string_off env_ttt =
+  Tuple_v.name Closure_v.string_off env_ttt
+;;
+
+let longname env_ttt =
+  Tuple_v.name Closure_v.longname env_ttt
+;;
+
+let fullname env_ttt =
+  Tuple_v.name Closure_v.fullname env_ttt
+;;
+

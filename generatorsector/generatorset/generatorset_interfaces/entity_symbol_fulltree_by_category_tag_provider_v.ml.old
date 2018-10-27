@@ -1,0 +1,168 @@
+(** {3 Provides of Entity_symbol_fulltree for a Category_tag.}  *)
+
+let nam_cod = "entity_symbol_fulltree_by_category_tag_provider_v.ml";;
+
+(**
+
+Needs  : Entity_symbol_from_string_v
+Needs  : Entity_name_fulltree_by_category_tag_provider_v
+
+Remark : Entity_symbol are defined from Entity name 
+Remark : by its position in the Entity_name Fulltree
+Remark : To be able to define Category_formula of Entity_proper_symbol 
+Remark : Top, Son, Current, Fictive are Leaf, Basicnullary
+
+Remark : Entity_symbols are REDEFINED in each subtree.
+*)
+
+(** {6 Aliasing} *)
+
+let entity_name_fulltree = Entity_name_fulltree_by_category_tag_provider_v.provide;;
+
+(** {6 Register.} *)
+
+let nam_reg = "entity_symbol_fulltree_by_category_tag_register";;
+
+let entity_symbol_fulltree_by_category_tag_register : 
+    (Category_tag_t.category_tag, Entity_symbol_t.entity_symbol Tree_t.tree) 
+    Register_t.register = Register_v.make 137
+;;
+
+let store tag_cat sym_ent_t =
+  try Register_v.store 
+      entity_symbol_fulltree_by_category_tag_register tag_cat sym_ent_t
+  with Failure ("Already_stored:Register_v.store") ->
+    failwith ("Already_stored:Framestype_extended_symbol_fulltree_by_category_trail_provider_v.store")
+;;
+
+let is_stored tag_cat =
+  Register_v.is_stored 
+    entity_symbol_fulltree_by_category_tag_register tag_cat
+;;
+
+let retrieve tag_cat =
+  try Register_v.retrieve 
+      entity_symbol_fulltree_by_category_tag_register tag_cat
+  with Failure ("Not_stored:Register_v.retrieve") ->
+    failwith ("Not_stored:Framestype_extended_symbol_fulltree_by_category_trail_provider_v.retrieve")
+;;  
+
+let has_unique_string_or_self_leaf_son_of_tree tre =
+  if not (Tree_v.has_unique_leaf_son_of_tree tre)
+  then false
+  else 
+    let son_l = Tree_v.topson_node_list_off_tree tre in
+    let son = List.hd son_l in
+    match son with 
+    | "self" | "string" -> true
+    | _ -> false 
+;;
+
+let make_when_usual_leaf_sons nam_ent_lea nam_ent_t =
+  let sym_ent_lea = 
+    if Entity_symbol_v.is_entity_external_symbol_of_string nam_ent_lea 
+    then Entity_symbol_from_string_v.entity_external nam_ent_lea
+    else 
+      if Tree_v.is_topson_of_node_off_tree nam_ent_lea nam_ent_t
+      then Entity_symbol_from_string_v.entity_fictive_sonnullary nam_ent_lea
+      else Entity_symbol_from_string_v.entity_fictive_nonsonnullary nam_ent_lea
+  in
+  Tree_v.make_of_leaf sym_ent_lea
+;;
+
+let make_when_extra_unique_leaf_son nam_ent_lea nam_ent_t =
+  let sym_ent_lea =
+    if Tree_v.is_topson_of_node_off_tree nam_ent_lea nam_ent_t
+    then Entity_symbol_from_string_v.entity_fictive_sonnullary nam_ent_lea
+    else Entity_symbol_from_string_v.entity_fictive_nonsonnullary nam_ent_lea
+  in 
+  Tree_v.make_of_leaf sym_ent_lea 
+;;
+
+let make_when_string_or_self_leaf_son nam_ent nam_lea_son_t nam_ent_ft =
+  let nam_ent_lea = Tree_v.root_node_off_tree nam_lea_son_t in
+
+  match nam_ent_lea with 
+  | s when String_v.is_basictype_name_of_string s ->
+      Tree_t.Leaf 
+	(Entity_symbol_from_string_v.entity_fictive_basicnullary 
+	   nam_ent_lea nam_ent)
+
+  | s when s = "self" ->
+      Tree_t.Leaf (Entity_symbol_from_string_v.selfentity nam_ent)
+	
+  | s -> 
+      make_when_extra_unique_leaf_son nam_ent_lea nam_ent_ft
+;;
+
+ let rec set_entity_symbol_self_or_string_leaf_in_tree nam_ent_ft = function
+   | Tree_t.Empty -> Tree_v.empty
+	 
+   | Tree_t.Leaf nam_ent_lea -> 
+       begin
+	 match nam_ent_lea with 
+	 | "self" | "string" ->
+	     Error_messages_v.print_fatal_error nam_cod
+	       "set_entity_symbol_self_or_string_leaf_in_tree"
+	       "No leaf self|string"
+	       (Format.sprintf ">%s<" nam_ent_lea)
+	       (Format.sprintf "Check that >%s< is a unique son leaf\
+                in domainset_entity_symbol.set" nam_ent_lea)
+	 | _ ->	
+	     make_when_usual_leaf_sons nam_ent_lea nam_ent_ft 
+       end
+
+   | Tree_t.Inner (nam_ent_inn, st_l) as tre -> 
+       if has_unique_string_or_self_leaf_son_of_tree tre
+       then 
+	 begin
+	   let nam_lea_son_t = List.hd st_l in
+	   make_when_string_or_self_leaf_son 
+	     nam_ent_inn 
+	     nam_lea_son_t
+	     nam_ent_ft
+	 end
+	   
+       else
+	 
+	 Tree_t.Inner 
+	   (
+	    (Entity_symbol_from_string_v.currententity nam_ent_inn), 
+	    (List.map 
+	       (set_entity_symbol_self_or_string_leaf_in_tree nam_ent_ft) 
+	       st_l))
+;;
+
+let build tag_cat =
+  let nam_ent_ft = entity_name_fulltree tag_cat in
+  let nam_ent_roo = Tree_v.root_off_tree nam_ent_ft in
+  let nam_ent_son_tl = Tree_v.topson_tree_list_off_tree nam_ent_ft in
+
+  let has_notopsonleaf = Tree_v.has_notopsonleaf_of_tree nam_ent_ft in
+
+  let sym_ent_roo =
+    if has_notopsonleaf    
+    then Entity_symbol_from_string_v.top_has_no_leaf_son nam_ent_roo 
+    else Entity_symbol_from_string_v.top_has_some_leaf_son nam_ent_roo 
+  in
+  
+  let sym_ent_son_tl = List.map 
+      (set_entity_symbol_self_or_string_leaf_in_tree nam_ent_ft) 
+      nam_ent_son_tl 
+  in
+
+  Tree_v.make sym_ent_roo sym_ent_son_tl 
+;;
+
+let build_n_store tag_cat =
+  let sym_ent_t = build tag_cat in
+  store tag_cat sym_ent_t; 
+  sym_ent_t
+;;
+
+let provide tag_cat =
+  if Register_v.is_stored 
+      entity_symbol_fulltree_by_category_tag_register tag_cat 
+  then retrieve tag_cat
+  else build_n_store tag_cat 
+;;

@@ -1,0 +1,2 @@
+SUB_DIRECTORIES="skeletonset_databases skeletonset_containers skeletonset_symbols skeletonset_tags skeletonset_values"
+CURRENT_AND_TEST=". unitary_tests"

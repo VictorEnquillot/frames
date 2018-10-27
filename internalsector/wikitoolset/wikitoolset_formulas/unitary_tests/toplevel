@@ -1,0 +1,8 @@
+ledit -x -h .ocaml-history ocaml \
+-I ../../../general/basics \
+-I ../../../general/datastructures \
+-I ../ \
+-I ./ \
+unix.cma str.cma \
+../../basics/basics.cma \
+../datastructures.cma

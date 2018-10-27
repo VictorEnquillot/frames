@@ -1,0 +1,63 @@
+test_number 2 (
+str_tri_n_str_dol
+(* : (string * (string * string) list) list *)
+=
+   [(("domain", "figure", "target_list"),
+    "triangle_equilateral_perimeter  triangle_scalene_right_surface triangle_perimeter_ratio");
+   (("domain", "figure", "domain_name"), "figure");
+   (("target", "triangle_perimeter_ratio", "model_list"),
+    "triangle_equilateral triangle_scalene_right");
+   (("target", "triangle_perimeter_ratio", "property_name"),
+    "triangle_perimeter_ratio");
+   (("target", "triangle_perimeter_ratio", "property_units"), "meter");
+   (("target", "triangle_perimeter_ratio", "property_file"),
+    "triangle_perimeter_ratio.out");
+   (("target", "triangle_perimeter_ratio", "target_title"),
+    "triangles equilateral and scalene right surface ratio");
+   (("target", "triangle_perimeter_ratio", "target_name"),
+    "triangle_perimeter_ratio");
+   (("target", "triangle_scalene_right_surface", "model_list"),
+    "triangle_scalene_right");
+   (("target", "triangle_scalene_right_surface", "property_name"),
+    "triangle_surface");
+   (("target", "triangle_scalene_right_surface", "property_units"), "meter");
+   (("target", "triangle_scalene_right_surface", "property_file"),
+    "surface_triangle_scalene_right_surface.out");
+   (("target", "triangle_scalene_right_surface", "target_title"),
+    "triangle scalene right surface");
+   (("target", "triangle_scalene_right_surface", "target_name"),
+    "triangle_scalene_right_surface");
+   (("target", "triangle_equilateral_perimeter", "model_list"),
+    "triangle_equilateral");
+   (("target", "triangle_equilateral_perimeter", "property_units"), "meter");
+   (("target", "triangle_equilateral_perimeter", "property_name"),
+    "triangle_perimeter");
+   (("target", "triangle_equilateral_perimeter", "property_file"),
+    "triangle_equilateral_perimeter.out");
+   (("target", "triangle_equilateral_perimeter", "target_title"),
+    "triangle equilateral perimeter");
+   (("target", "triangle_equilateral_perimeter", "target_name"),
+    "triangle_equilateral_perimeter");
+   (("target", "triangle_equilateral_perimeter", "domain_name"), "figure");
+   (("model", "triangle_scalene_right", "coordinate_what"), "cartesian");
+   (("model", "triangle_scalene_right", "coordinate_units_length"), "meter");
+   (("model", "triangle_scalene_right", "coordinate_units_angle"), "radian");
+   (("model", "triangle_scalene_right", "entity_name"), "u");
+   (("model", "triangle_scalene_right", "entity_what"),
+    "triangle_scalene_right");
+   (("model", "triangle_scalene_right", "database_name"), "db1");
+   (("model", "triangle_scalene_right", "model_title"),
+    "a triangle scalene right");
+   (("model", "triangle_scalene_right", "model_name"),
+    "triangle_scalene_right");
+   (("model", "triangle_equilateral", "coordinate_what"), "cartesian");
+   (("model", "triangle_equilateral", "coordinate_units_length"), "meter");
+   (("model", "triangle_equilateral", "coordinate_units_angle"), "radian");
+   (("model", "triangle_equilateral", "entity_name"), "T");
+   (("model", "triangle_equilateral", "entity_what"),
+    "triangle_isoceles_equilateral");
+   (("model", "triangle_equilateral", "database_name"), "db1");
+   (("model", "triangle_equilateral", "model_title"),
+    "a triangle equilateral");
+   (("model", "triangle_equilateral", "model_name"), "triangle_equilateral")]
+);;

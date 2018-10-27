@@ -1,0 +1,18 @@
+ #use "Factorial_formula_u_any.ml";; 
+ #use "Factorial_formula_u_any.ml";; 
+ #use "Factorial_formula_u_any.ml";; 
+ #use "Factorial_formula_u_any.ml";;    #use "Factorial_value_u_any.ml";; 
+   #use "Factorial_value_u_any.ml";; 
+   #use "Factorial_property_u_any.ml";; 
+   #use "Factorial_property_v.ml";; 
+   #use "Factorial_value_v.ml";; 
+   #use "Factorial_property_v.ml";; 
+   #use "Factorial_property_u_any.ml";; 
+   #use "Factorial_value_provider_u_any.ml";; 
+  #use "Factorial_property_u_any.ml";; 
+ #use "Factorial_value_provider_u_any.ml";; 
+   #use "Factorial_property_u_any.ml";; 
+Singlet_v.map;;
+let factorial_value_recursive v	=
+  Factorial_value_t.Factorial_recursive v
+;;

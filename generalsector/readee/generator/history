@@ -1,0 +1,27 @@
+Lost Elementary_fence_readee_*symbol*ml
+GIT :
+fra
+mkdir -p elementaryset/elementaryset_symbols
+cd elementaryset/elementaryset_symbols
+git checkout ce631814e825a01e53cc915dbd4e8562eaf1f7a3 Calcu\*ml Elementary\*ml generator Makefile \*.mk
+
+OVH :
+
+/homez.792/willforg/backup/asus/keep/sources/ocaml_top/setup/frames/elementaryset/elementaryset_symbols
+
+mkdir $INS/readeeset
+
+cp -R /home/colonna/sources/ocaml_top/setup/frames/elementaryset/elementaryset_symbols/* .
+###cp $DELE/Closure_*ml .
+###cp $DELE/Readee_by_elementary_fence_tag_provider_v.ml
+
+keep_file Elementary_fence_basic*ml
+keep_file Elementary_fence_color*ml
+keep_file Elementary_border*ml  (coordinateset, parameterset)
+
+grep Elementary_fence_readee files_elementary_mli*mk
+
+modify_strings_and_rename_files.sh Elementary_fence_readee Readee *ml *mk
+modify_strings_and_rename_files.sh elementary_fence_readee readee *ml *mk
+
+modify_word.pl pbi rbi *ml 

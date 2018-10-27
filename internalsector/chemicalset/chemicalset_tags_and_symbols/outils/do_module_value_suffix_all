@@ -1,0 +1,9 @@
+module_value_suffix ()
+{
+case ${1} in
+     ordinal  ) res="p";;
+     index ) res="p";; 
+     *) res="v";; 
+esac
+echo "$res"
+}

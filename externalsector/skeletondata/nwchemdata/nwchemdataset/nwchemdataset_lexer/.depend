@@ -1,0 +1,330 @@
+Nwchemdata_lexer_variable_symbol_t.cmo:
+Nwchemdata_lexer_variable_symbol_t.cmx:
+Nwchemdata_lexer_symbol_symbol_t.cmo:
+Nwchemdata_lexer_symbol_symbol_t.cmx:
+Nwchemdata_lexer_keyword_symbol_t.cmo:
+Nwchemdata_lexer_keyword_symbol_t.cmx:
+Nwchemdata_lexer_hashline_symbol_t.cmo:
+Nwchemdata_lexer_hashline_symbol_t.cmx:
+Nwchemdata_lexer_basic_word_uppercase_symbol_t.cmo:
+Nwchemdata_lexer_basic_word_uppercase_symbol_t.cmx:
+Nwchemdata_lexer_basic_word_numeric_positive_symbol_t.cmo:
+Nwchemdata_lexer_basic_word_numeric_positive_symbol_t.cmx:
+Nwchemdata_lexer_basic_word_numeric_non_negative_symbol_t.cmo:
+Nwchemdata_lexer_basic_word_numeric_non_negative_symbol_t.cmx:
+Nwchemdata_lexer_basic_word_numeric_negative_symbol_t.cmo:
+Nwchemdata_lexer_basic_word_numeric_negative_symbol_t.cmx:
+Nwchemdata_lexer_basic_word_numeric_symbol_t.cmo: \
+    Nwchemdata_lexer_basic_word_numeric_positive_symbol_t.cmo \
+    Nwchemdata_lexer_basic_word_numeric_non_negative_symbol_t.cmo \
+    Nwchemdata_lexer_basic_word_numeric_negative_symbol_t.cmo
+Nwchemdata_lexer_basic_word_numeric_symbol_t.cmx: \
+    Nwchemdata_lexer_basic_word_numeric_positive_symbol_t.cmx \
+    Nwchemdata_lexer_basic_word_numeric_non_negative_symbol_t.cmx \
+    Nwchemdata_lexer_basic_word_numeric_negative_symbol_t.cmx
+Nwchemdata_lexer_basic_word_lowercase_symbol_t.cmo:
+Nwchemdata_lexer_basic_word_lowercase_symbol_t.cmx:
+Nwchemdata_lexer_basic_word_capitalized_strict_symbol_t.cmo:
+Nwchemdata_lexer_basic_word_capitalized_strict_symbol_t.cmx:
+Nwchemdata_lexer_basic_word_capitalized_symbol_t.cmo:
+Nwchemdata_lexer_basic_word_capitalized_symbol_t.cmx:
+Nwchemdata_lexer_basic_word_anycase_symbol_t.cmo:
+Nwchemdata_lexer_basic_word_anycase_symbol_t.cmx:
+Nwchemdata_lexer_basic_word_symbol_t.cmo: \
+    Nwchemdata_lexer_basic_word_uppercase_symbol_t.cmo \
+    Nwchemdata_lexer_basic_word_numeric_symbol_t.cmo \
+    Nwchemdata_lexer_basic_word_lowercase_symbol_t.cmo \
+    Nwchemdata_lexer_basic_word_capitalized_symbol_t.cmo \
+    Nwchemdata_lexer_basic_word_capitalized_strict_symbol_t.cmo \
+    Nwchemdata_lexer_basic_word_anycase_symbol_t.cmo
+Nwchemdata_lexer_basic_word_symbol_t.cmx: \
+    Nwchemdata_lexer_basic_word_uppercase_symbol_t.cmx \
+    Nwchemdata_lexer_basic_word_numeric_symbol_t.cmx \
+    Nwchemdata_lexer_basic_word_lowercase_symbol_t.cmx \
+    Nwchemdata_lexer_basic_word_capitalized_symbol_t.cmx \
+    Nwchemdata_lexer_basic_word_capitalized_strict_symbol_t.cmx \
+    Nwchemdata_lexer_basic_word_anycase_symbol_t.cmx
+Nwchemdata_lexer_basic_character_mark_singled_symbol_t.cmo:
+Nwchemdata_lexer_basic_character_mark_singled_symbol_t.cmx:
+Nwchemdata_lexer_basic_character_mark_coupled_symbol_t.cmo:
+Nwchemdata_lexer_basic_character_mark_coupled_symbol_t.cmx:
+Nwchemdata_lexer_basic_character_mark_symbol_t.cmo: \
+    Nwchemdata_lexer_basic_character_mark_singled_symbol_t.cmo \
+    Nwchemdata_lexer_basic_character_mark_coupled_symbol_t.cmo
+Nwchemdata_lexer_basic_character_mark_symbol_t.cmx: \
+    Nwchemdata_lexer_basic_character_mark_singled_symbol_t.cmx \
+    Nwchemdata_lexer_basic_character_mark_coupled_symbol_t.cmx
+Nwchemdata_lexer_basic_character_alphabetic_symbol_t.cmo:
+Nwchemdata_lexer_basic_character_alphabetic_symbol_t.cmx:
+Nwchemdata_lexer_basic_character_symbol_t.cmo: \
+    Nwchemdata_lexer_basic_character_mark_symbol_t.cmo \
+    Nwchemdata_lexer_basic_character_alphabetic_symbol_t.cmo
+Nwchemdata_lexer_basic_character_symbol_t.cmx: \
+    Nwchemdata_lexer_basic_character_mark_symbol_t.cmx \
+    Nwchemdata_lexer_basic_character_alphabetic_symbol_t.cmx
+Nwchemdata_lexer_basic_symbol_t.cmo: Nwchemdata_lexer_basic_word_symbol_t.cmo \
+    Nwchemdata_lexer_basic_character_symbol_t.cmo
+Nwchemdata_lexer_basic_symbol_t.cmx: Nwchemdata_lexer_basic_word_symbol_t.cmx \
+    Nwchemdata_lexer_basic_character_symbol_t.cmx
+Nwchemdata_lexer_symbol_t.cmo: Nwchemdata_lexer_variable_symbol_t.cmo \
+    Nwchemdata_lexer_symbol_symbol_t.cmo \
+    Nwchemdata_lexer_keyword_symbol_t.cmo \
+    Nwchemdata_lexer_hashline_symbol_t.cmo \
+    Nwchemdata_lexer_basic_symbol_t.cmo
+Nwchemdata_lexer_symbol_t.cmx: Nwchemdata_lexer_variable_symbol_t.cmx \
+    Nwchemdata_lexer_symbol_symbol_t.cmx \
+    Nwchemdata_lexer_keyword_symbol_t.cmx \
+    Nwchemdata_lexer_hashline_symbol_t.cmx \
+    Nwchemdata_lexer_basic_symbol_t.cmx
+Nwchemdata_lexer_variable_symbol_v.cmo: \
+    Nwchemdata_lexer_variable_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_variable_symbol_v.cmx: \
+    Nwchemdata_lexer_variable_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_symbol_symbol_v.cmo: Nwchemdata_lexer_symbol_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_symbol_symbol_v.cmx: Nwchemdata_lexer_symbol_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_keyword_symbol_v.cmo: Nwchemdata_lexer_keyword_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_keyword_symbol_v.cmx: Nwchemdata_lexer_keyword_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_hashline_symbol_v.cmo: \
+    Nwchemdata_lexer_hashline_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_hashline_symbol_v.cmx: \
+    Nwchemdata_lexer_hashline_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_basic_word_uppercase_symbol_v.cmo: \
+    Nwchemdata_lexer_basic_word_uppercase_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_basic_word_uppercase_symbol_v.cmx: \
+    Nwchemdata_lexer_basic_word_uppercase_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_basic_word_numeric_positive_symbol_v.cmo: \
+    Nwchemdata_lexer_basic_word_numeric_positive_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_basic_word_numeric_positive_symbol_v.cmx: \
+    Nwchemdata_lexer_basic_word_numeric_positive_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_basic_word_numeric_non_negative_symbol_v.cmo: \
+    Nwchemdata_lexer_basic_word_numeric_non_negative_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_basic_word_numeric_non_negative_symbol_v.cmx: \
+    Nwchemdata_lexer_basic_word_numeric_non_negative_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_basic_word_numeric_negative_symbol_v.cmo: \
+    Nwchemdata_lexer_basic_word_numeric_negative_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_basic_word_numeric_negative_symbol_v.cmx: \
+    Nwchemdata_lexer_basic_word_numeric_negative_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_basic_word_numeric_symbol_v.cmo: \
+    Nwchemdata_lexer_basic_word_numeric_symbol_t.cmo \
+    Nwchemdata_lexer_basic_word_numeric_positive_symbol_v.cmo \
+    Nwchemdata_lexer_basic_word_numeric_non_negative_symbol_v.cmo \
+    Nwchemdata_lexer_basic_word_numeric_negative_symbol_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_basic_word_numeric_symbol_v.cmx: \
+    Nwchemdata_lexer_basic_word_numeric_symbol_t.cmx \
+    Nwchemdata_lexer_basic_word_numeric_positive_symbol_v.cmx \
+    Nwchemdata_lexer_basic_word_numeric_non_negative_symbol_v.cmx \
+    Nwchemdata_lexer_basic_word_numeric_negative_symbol_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_basic_word_lowercase_symbol_v.cmo: \
+    Nwchemdata_lexer_basic_word_lowercase_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_basic_word_lowercase_symbol_v.cmx: \
+    Nwchemdata_lexer_basic_word_lowercase_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_basic_word_capitalized_strict_symbol_v.cmo: \
+    Nwchemdata_lexer_basic_word_capitalized_strict_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_basic_word_capitalized_strict_symbol_v.cmx: \
+    Nwchemdata_lexer_basic_word_capitalized_strict_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_basic_word_capitalized_symbol_v.cmo: \
+    Nwchemdata_lexer_basic_word_capitalized_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_basic_word_capitalized_symbol_v.cmx: \
+    Nwchemdata_lexer_basic_word_capitalized_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_basic_word_anycase_symbol_v.cmo: \
+    Nwchemdata_lexer_basic_word_anycase_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_basic_word_anycase_symbol_v.cmx: \
+    Nwchemdata_lexer_basic_word_anycase_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_basic_word_symbol_v.cmo: \
+    Nwchemdata_lexer_basic_word_uppercase_symbol_v.cmo \
+    Nwchemdata_lexer_basic_word_symbol_t.cmo \
+    Nwchemdata_lexer_basic_word_numeric_symbol_v.cmo \
+    Nwchemdata_lexer_basic_word_lowercase_symbol_v.cmo \
+    Nwchemdata_lexer_basic_word_capitalized_symbol_v.cmo \
+    Nwchemdata_lexer_basic_word_capitalized_strict_symbol_v.cmo \
+    Nwchemdata_lexer_basic_word_anycase_symbol_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_basic_word_symbol_v.cmx: \
+    Nwchemdata_lexer_basic_word_uppercase_symbol_v.cmx \
+    Nwchemdata_lexer_basic_word_symbol_t.cmx \
+    Nwchemdata_lexer_basic_word_numeric_symbol_v.cmx \
+    Nwchemdata_lexer_basic_word_lowercase_symbol_v.cmx \
+    Nwchemdata_lexer_basic_word_capitalized_symbol_v.cmx \
+    Nwchemdata_lexer_basic_word_capitalized_strict_symbol_v.cmx \
+    Nwchemdata_lexer_basic_word_anycase_symbol_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_basic_character_mark_singled_symbol_v.cmo: \
+    Nwchemdata_lexer_basic_character_mark_singled_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_basic_character_mark_singled_symbol_v.cmx: \
+    Nwchemdata_lexer_basic_character_mark_singled_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_basic_character_mark_coupled_symbol_v.cmo: \
+    Nwchemdata_lexer_basic_character_mark_coupled_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_basic_character_mark_coupled_symbol_v.cmx: \
+    Nwchemdata_lexer_basic_character_mark_coupled_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_basic_character_mark_symbol_v.cmo: \
+    Nwchemdata_lexer_basic_character_mark_symbol_t.cmo \
+    Nwchemdata_lexer_basic_character_mark_singled_symbol_v.cmo \
+    Nwchemdata_lexer_basic_character_mark_coupled_symbol_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_basic_character_mark_symbol_v.cmx: \
+    Nwchemdata_lexer_basic_character_mark_symbol_t.cmx \
+    Nwchemdata_lexer_basic_character_mark_singled_symbol_v.cmx \
+    Nwchemdata_lexer_basic_character_mark_coupled_symbol_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_basic_character_alphabetic_symbol_v.cmo: \
+    Nwchemdata_lexer_basic_character_alphabetic_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_basic_character_alphabetic_symbol_v.cmx: \
+    Nwchemdata_lexer_basic_character_alphabetic_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_basic_character_symbol_v.cmo: \
+    Nwchemdata_lexer_basic_character_symbol_t.cmo \
+    Nwchemdata_lexer_basic_character_mark_symbol_v.cmo \
+    Nwchemdata_lexer_basic_character_alphabetic_symbol_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_basic_character_symbol_v.cmx: \
+    Nwchemdata_lexer_basic_character_symbol_t.cmx \
+    Nwchemdata_lexer_basic_character_mark_symbol_v.cmx \
+    Nwchemdata_lexer_basic_character_alphabetic_symbol_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_basic_symbol_v.cmo: Nwchemdata_lexer_basic_word_symbol_v.cmo \
+    Nwchemdata_lexer_basic_symbol_t.cmo \
+    Nwchemdata_lexer_basic_character_symbol_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_basic_symbol_v.cmx: Nwchemdata_lexer_basic_word_symbol_v.cmx \
+    Nwchemdata_lexer_basic_symbol_t.cmx \
+    Nwchemdata_lexer_basic_character_symbol_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_symbol_v.cmo: Nwchemdata_lexer_variable_symbol_v.cmo \
+    Nwchemdata_lexer_symbol_t.cmo Nwchemdata_lexer_symbol_symbol_v.cmo \
+    Nwchemdata_lexer_keyword_symbol_v.cmo \
+    Nwchemdata_lexer_hashline_symbol_v.cmo \
+    Nwchemdata_lexer_basic_symbol_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_symbol_v.cmx: Nwchemdata_lexer_variable_symbol_v.cmx \
+    Nwchemdata_lexer_symbol_t.cmx Nwchemdata_lexer_symbol_symbol_v.cmx \
+    Nwchemdata_lexer_keyword_symbol_v.cmx \
+    Nwchemdata_lexer_hashline_symbol_v.cmx \
+    Nwchemdata_lexer_basic_symbol_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_lexical_analysis_tools_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_lexical_analysis_tools_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_lexical_analysis_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Trio_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi \
+    Nwchemdata_lexer_symbol_v.cmo \
+    Nwchemdata_lexer_lexical_analysis_tools_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/files/File_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Databox_fullnameoffile_by_databox_name_n_database_name_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Context_name_trio_by_fullnameofdirectory_provider_v.cmo
+Nwchemdata_lexer_lexical_analysis_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Trio_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx \
+    Nwchemdata_lexer_symbol_v.cmx \
+    Nwchemdata_lexer_lexical_analysis_tools_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/files/File_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Databox_fullnameoffile_by_databox_name_n_database_name_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Context_name_trio_by_fullnameofdirectory_provider_v.cmx
+Nwchemdata_lexer_symbol_reverse_list_by_databox_name_register_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Register_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Register_t.cmo \
+    Nwchemdata_lexer_symbol_v.cmo Nwchemdata_lexer_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Nwchemdata_lexer_symbol_reverse_list_by_databox_name_register_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Register_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Register_t.cmx \
+    Nwchemdata_lexer_symbol_v.cmx Nwchemdata_lexer_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Nwchemdata_lexer_symbol_reverse_list_by_databox_name_provider_v.cmo: \
+    Nwchemdata_lexer_symbol_reverse_list_by_databox_name_register_v.cmo \
+    Nwchemdata_lexer_lexical_analysis_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi
+Nwchemdata_lexer_symbol_reverse_list_by_databox_name_provider_v.cmx: \
+    Nwchemdata_lexer_symbol_reverse_list_by_databox_name_register_v.cmx \
+    Nwchemdata_lexer_lexical_analysis_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx

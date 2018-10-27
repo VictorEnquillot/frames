@@ -1,0 +1,63 @@
+A type value is the same datastructure as that defining the type formula. 
+It is built of builders value instead of builders symbol.
+
+As the Builder Tree (BT) leaves are entity_fictive_basicnullary we get the following :
+
+--------------------------------- symbol -----------------------------------
+
+type point_symbol =
+  | Point_3d
+  | Point_2d
+  | Point_1d
+;;
+
+type coordinate_2d_symbol =
+  | Coordinate_cartesian_2d_symbol of Coordinate_cartesian_2d_symbol_t.coordinate_cartesian_2d_symbol
+  | Coordinate_polar_symbol of Coordinate_polar_symbol_t.coordinate_polar_symbol
+;;
+
+type coordinate_cartesian_2d_symbol =
+  | X_2d
+  | Y_2d
+;;
+
+--------------------------------- formula -----------------------------------
+
+type point_2d_formula =
+   Coordinate_2d_tag_t.coordinate_2d_tag Duo_t.duo 
+;;
+
+type coordinate_2d_formula =
+  | Coordinate_cartesian_2d_formula of Coordinate_cartesian_2d_formula_t.coordinate_cartesian_2d_formula
+  | Coordinate_polar_formula of Coordinate_polar_formula_t.coordinate_polar_formula
+;;
+
+type coordinate_cartesian_2d_formula =
+  | X_2d_formula of X_2d_formula_t.x_2d_formula
+  | Y_2d_formula of Y_2d_formula_t.y_2d_formula
+;;
+
+type x_2d_formula =
+  (float Tag_t.tag) Singlet_t.singlet
+;;
+
+--------------------------------- value -----------------------------------
+
+type point_2d_value =
+   Coordinate_2d_tag_t.coordinate_2d_tag Duo_t.duo 
+;;
+
+type coordinate_2d_value =
+  | Coordinate_cartesian_2d_value of Coordinate_cartesian_2d_value_t.coordinate_cartesian_2d_value
+  | Coordinate_polar_value of Coordinate_polar_value_t.coordinate_polar_value
+;;
+
+type coordinate_cartesian_2d_value =
+  | X_2d_value of X_2d_value_t.x_2d_value
+  | Y_2d_value of Y_2d_value_t.y_2d_value
+;;
+
+type x_2d_value = 
+  float Singlet_t.singlet
+;;
+

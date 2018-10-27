@@ -1,0 +1,346 @@
+Frames hierarchy !
+
+       frames  / sector  / domain /  program  /  base   /  box
+       frames  / sector  / domain /  program  /  set    /  code
+
+Generic names :  
+       Sector_name             entry external internal product
+       Domain_name             elementary figure skeleton user
+       Program_name (external) db1figure molpro nwchem 
+       Database_name        =  external program_name
+       Inputbase_name          localinput (pseudo program name)
+       Databox_name            some.<program_abbreviation>
+       Inputbox_name           some.inp
+
+
+   .../frames/entrysector/userinput/inputbase/localinput/localinputset/some.ml
+   .../frames/entrysector/userinput/inputbase/localinput/localinputfiles/Some.loc
+
+ sector ::= <sector_name> sector  
+ domain ::= <domain_name> [domain_name_data|userinput|domain_name_set]
+ base   ::= <program_name>[data|input][files|set]    nwchemdatafiles nwchemdataset
+ box    ::= [data|input]box                          some.nwc some.inp                   
+
+database path hierarchy :
+...frames/databaseset/<domaindata>/<database_name>/files/<databox_name>
+               |           |              |                   |
+           Domain    chemicaldata       pdb               4pti.pdb
+
+         Databaseset figuredata      db1figure            triangle_isoacute.db1
+                     skeletondata    nwchem               cc_pvtz.nwc
+                     skeletondata    nwchem               lanl2dz.nwc
+
+                     <------------ global_context_trio ---------->
+           <--------- context_quatuor ---Context_domaindata_nameoffile_all_list_by_unit_--------------->
+
+Example: 
+Database :
+.../frames/databaseset/skeletondata/nwchem/files/cc_pvtz.nwc
+                                    ---                  ---
+                                     |____________________|
+
+Input :
+.../frames/inputset/files/Print_point_a.loc
+           ---                          ---
+            |____________________________|
+
+
+Sector : 
+    "Definition : there are 3 sectors the entrysector, the datasector and the generatorsector";
+    "Definition : entrysector collects domains inputset operatorset propertyset";
+    "Definition : datasector collects domains figureset skeletoset elementaryset";
+
+Examples : datasector 
+Examples : entrysector 
+       		    
+Famescode :
+.../frames/figureset/figureset_symbols/Figure_field_fence_symbol_t.ml
+
+Famesmakefile :
+.../frames/figureset/figureset_symbols/Makefile
+.../frames/figureset/figureset_symbols/files_mli.mk
+
+Fameslibrary :
+.../frames/figureset/figureset_symbols/figureset_symbols.cma
+                              |_________________|
+
+name :
+   
+extensionoffile : 
+     "Definition : at most 3 characters";
+     "Definition : nameofpurefile only have an extension ";
+     "Example : ml mli inp mk 
+
+nameoffile :
+    "Definition : Nameoffile is the name without its path of any kind of file";
+ 
+nameofpurefile :
+    "Definition : Nameofpurefile is the name without its path with extension of a file not beeing a directory";
+    "Example : cc_pvtz.nwc,  Elementary_border_coordinate_symbol_v.ml"; 
+
+nameofdirectory :
+    "Definition : Nameofdirectory is the name without its path of a directory without its path";
+ 
+nameofusedfile :
+    "Definition : Nameofusedfile is the name without its path of a file beeing a directory or a pure file";
+
+nameofcodefile :
+    "Definition : Nameofcodefile is the name without its path of a file with extension .ml";
+ 
+nameofsectorfile :
+    "Definition : Nameofsectorfile is the name without its path of a file beeing a sector directory in Frames directory";
+
+nameofsector :
+    "Definition : Nameofsector is the prefix name of Nameofsectorfile";
+ 
+fullnameofpurefile : 
+    "Definition : Nameoffile is the name of path + nameofpurefile";
+
+fullnameofdirectory : 
+    "Definition : Nameoffile is the name path + nameofdirectory"; 
+
+fullnameofusedfile : 
+    "Definition : Nameoffile is the name of path + nameofusedfile";
+
+fullnameoffile : 
+    "Definition : Fullnameoffile is the name path + nameoffile";
+
+frames_nameofpurefile :
+    "Definition : extension are *ml *mli *mk ";
+
+context_name definition :
+    "Definition : a Context_name is a node of the Context_name_tree";
+    "Definition : a Context name is related to any box and their ancestors"; 
+
+context_name_tree definition :
+    "Definition : the Context_name_tree is either context_entry_name_tree or context_external_name_tree";
+
+context_entry_name_tree definition :
+    "Definition : the Context_entry_name_tree is [sector, domain, box] : entry input [inputbox]";
+
+context_external_name_tree definition :
+    "Definition : the Context_external_name_tree is [sector, domain, database, databox]";
+
+setdirectory definition :
+    "Definition : a Setdirectory contains Caml code. Its name is suffixed by \"set\"";
+    "Example : figureset, db1figureset, inputset";
+
+datadirectory definition :
+    "Definition : a Datadirectory contains the Databases used by a Setdirectory of Internalsector";
+    "Definition : Its name is suffixed by \"data\"";
+    "Example : figuredata, skeletondata";
+
+domain definition :
+    "Definition : a Domain is a subdirectory of a Sector";
+
+domainset definition : 
+    "Definition : a Domainset coincides with Setdirectory for entrysector, internalsector and productsector";
+    "Definition : Databases Setdirectories are NOT domains";
+
+domain_name_as_domainset definition : 
+    "Definition : it is the name of a Domainset without set suffix";
+    "Example : figure, input";
+
+domain_name definition : 
+    "Definition : it is the name of a Domainset without set suffix";
+    "Example : figure, input, operator";
+
+domaindata definition : 
+    "Definition : a Domaindata is a Datadirectory of externalsector";
+    "Definition : it contains the databases linked to the Domainset having the same Domain_name"
+
+domain_name_as_domaindata definition : 
+    "Definition : a Domaindata_name is the Context_name of a Domain";
+    "Examples : chemistry, camlprogram, quantummechanics, moleculardynamics, figure, skeleton, operator, property";
+
+domaindata_namedata definition: 
+    "Definition : a Domaindata_namedata is the Domaindata_name extended by data";
+    "Examples : chemistrydata, camlprogramdata, quantummechanicsdata, moleculardynamicsdata, figuredata, skeletondata, operatordata, property";
+
+domaininput definition : 
+    "Definition : a Domaininput is an Inputdirectory of entrysector";
+    "Definition : it contains the inputbases used by Productsector"
+
+database definition :
+   "Definition : a Database collects Datafile for a Specific Domain. The second element of the Context List";
+
+datafile definition :
+   "Definition : a Datafile collects the Data in a single file. The last element of the Context Tuple";
+   "Examples : Skeletonfile contains some datafile (basisset) like Sto-3g";
+
+databox definition :
+   "Definition : a Databox_name is the Databox_nameoffile without Database extension";
+   "Definition : a Databox_name is also a so called Basisset file";
+
+context_datafile_name definition :
+   "Definition : a Context_datafile_name has no path nor extension";
+   "Examples : point_a  cc_pvtz";
+
+Somedomain_context_datafile_symbol definition :
+   "Definition : a Somedomain Symbol of Context_datafile_name";
+   "Examples : Db1figure_context_datafile_symbol "point_a";
+
+context_tuple definition :
+   "Definition : quatuor in Context";
+   "Definition : trio in Somedomain";
+
+context_quatuor definition :
+   "Definition : in the Databaseset context the path hierarchy is a quatuor:";
+   "Definition : Datafile (ex.: point_a); Databaseset (ex.: db1figure); Domaindata (ex.: figure); Domain (Databaseset)";
+
+global_context_trio definition :
+   "Definition : in the context of an Entity Domain (Figureset) the path hierarchy is :";
+   "Definition : the trio obtained from the context_quatuor by cutting the top Databaseset Domain (5)";
+
+context_sole_index definition :
+    "Definition : a Context_index is a Global Domain index for [Datafile; Databaseset; Domaindata; Domain]";
+    "Examples : \"nwchem\" is [5; 19; 5] \"skeleton\" is [19; 5] \"database\" is [5]";
+
+global_sole_index definition :
+    "Definition : a Global sole_index is a Context sole_index where the top element (Databaseset (5)) has been dropped"; 
+
+
+bassisset definition : 
+   "Definition : a Basisset is the content of a Datafile for Quantum Calculation Domains";
+   "Remark : a Datafile name is built as basisset_name.database abbreviation";
+
+entity definition : 
+   "Definition : an Entity is an element of interest of a domain manipulated by a program"; 
+   "Examples   : Point, Segment, Triangle, Triangle_isosceles etc... for Figure Domain";
+
+target_definition :
+   "Definition : a Target is an Entity created by applying an Operator to an Operand"; 
+   "Definition : an Explicit Target Entity is defined by a command_creation (define, read ...)"; 
+   "Definition : an Explicit Target is explicitly defined by triplet \"define\" \"name\" \"target\"";
+   "Definition : an Implicit Target Entity is defined implicitly by a command_tounit (print, write)";
+   "Definition : an Implicit Target is implicitly defined by triplet \"print\"|\"write\"|\"name\" \"units\"";
+
+main_type      : the highest type of a Constructor Tree (CT)
+
+simulation     : definition : it is what a Program does.
+
+category       : a category is a type use to describe any Entity
+                 there are six categories : label, tag, container, envelope, value and belt
+
+label          : a Label is a type describing the existence of some Entity in a Domain
+
+tag            : a Tag couples a Label and the Path of an Entity in a Domain
+
+localinput definitions :
+   "Definition : Localinput_fence_variable_name_entity_string_off is the name of a variable entity in Localinput_file (Ex.: T_A)"; 
+   "Definition : Localinput_fence_cell_domain_string_off is the name of the Domain as defined in cell of Localinput_file (Ex.: \"figure\")";
+
+builder_tree definitions :
+
+   "Definition : the B-Tree of any Entity is the Tree of the Entity Tags necessary to build its value";
+   "Definition : the Context gathers Entities at the top of the B-Tree of a Domain (Domain, Database, Datafile)";
+   "Definition : the Body gathers Entities of the B-Tree of a Domain being neither in Context nor in Fence";
+   "Definition : the Fence is the Tag list (Coerced Up) of the Leaf Entities of the B-Tree of any Entity";
+   "Definition : the Border is the Elementary_border_tag list of any Entity";
+   "Definition : and Elementary_border_symbol is the unique father Entity of a Elementary_fence Entity of the Elementary Domain";
+   "Definition : a Builder (for an Entity of a Domain) is a son of its B-Tree i.e. Coerced Up";
+   "Definition : a Builder of a fence Container is its own Tag Coerced Up";
+   "Definition : a Building is the same Datastructure as a Container but filled with Builders"; 
+   "Definition : a Wye-tree (\"Y-tree\") is a Tree the root of which is prolongated upwards with a Domain_context_tag_trio";
+
+container definitions :
+
+   "Definition : a Containee is a Builder expressed in the lowest subtype compatible with the Datastructure of the Container";
+   "Definition : a Container is the Datastructure of the Containee of an Entity";
+   "Definition : a Containee is an element of the Datastructure of the Container of an Entity";
+   "Definition : any (Bud or Trunc) fence Container contains an Uno of its Tag";
+   "Definition : the Containee Tag of a fence Container is its own Tag";
+   "Definition : a non-fence Bud Container is a Datastructure of Containee Tag (see Rule)";
+   "Definition : a non-fence non-Bud (Node of CT Symbol) Container are Up Coerced from lower Container sub-types";
+
+constructor_structures definitions :
+
+   "Definition : a Stalk is a type with only one constructor of nothing";
+   "Definition : a Bud is a type with only one constructor of string";
+   "Definition : a Stem is a type with only constructors of string";
+   "Definition : a Branch is a type with only constructors of nothing";
+   "Definition : a Trunc is a type with only constructors of constructor";
+
+databases definitions 
+
+   "Definition : a Measure couples a float and an Elementary_fence_units_symbol. Coercion on Elementary_fence_units_symbol";
+   "Definition : a Readee generalizes any Elementary Value like Measure";
+   "Definition : a Readee_measure generalizes a Measure";
+   "Definition : a Labeled_measure is a doublet (Elementary_border_tag, Measure)";
+   "Definition : a Labeled_readee is a doublet (Elementary_border_tag, Readee)";
+   "Definition : a Closure is a Tuple_list of Readee. It valuates the Elementary_fence i.e. the Deepestfence of any Domain";
+   "Definition : Closure, Readee, Labeled_readee, Measure are pure values Entities without any subcategory as Symbol etc...";
+
+domain definitions 
+
+   "Definition : a Domain_hierarchy follows the needed-by hierarchy of their Entities when it crosses a Fence"; 
+   "Definition : an Upper_domain U needs some Lower_domains L";
+
+bridge definitions 
+
+   "Definition : a Bridge expresses any Fence entity Tag of an Upper_domain U as a L_tag of a Lower_domain L. It is Up_Coerced";
+
+envelopee definitions 
+
+   "Definition : an Envelopee = (Labeled_readee) is a Elementary_envelopee = Coordinate_envelopee | Parameter_envelopee";
+   "Definition : a  Coordinate_envelopee = (Coordinate_set_fence_symbol, Readee). It is NOT coerced";
+   "Definition : a  Parameter_envelopee = (Parameter_set_fence_symbol, Readee). It is NOT coerced";
+
+   "Definition : Parameter_set_fence_envelope is Parameter_envelopee";
+   "Definition : Parameter_set_body_envelope is Parameter_envelopee_tuple";
+   "Definition : Skeleton_set_fence_envelope is Parameter_envelopee_tuple one element list";
+
+envelope definitions 
+
+   "Definition : an Envelope is a Tuple_list of Envelopee";
+   "Definition : it propagates the Envelopee Tuple along the BT";
+
+# obsolete   "Definition : a  Belt couples its Tag with the lowest possible Readee subtype. It is coerced";
+
+type readee =
+  | Readee_basic of Readee_basic_t.readee_basic
+  | Readee_color of Elementary_fence_color_symbol_t.elementary_fence_color_symbol
+  | Readee_units of Measure_t.measure
+;;
+
+type readee_basic =
+  | Readee_basic_boolean of bool
+  | Readee_basic_integer of int
+  | Readee_basic_float of float
+  | Readee_basic_string of string
+;;
+
+type measure_something = 
+     (float, Elementary_fence_units_something_symbol_t.elementary_fence_units_something_symbol) 
+     Doublet_t.doublet;;
+
+type measure is a Trunc of measure_something.
+
+measure_homogeneous :
+    "Definition : Measure_homogeneous_tuple is a Tuple of same Units Type (i.e. cartesian coordinates)";
+
+ao definition :
+   "Definition : an Ao is an atomic orbital";
+   "Definition : an Ao_kind is gaussian, slater, wavelet ...";	
+
+aopef definition :
+   "Definition : an Aopef is a Prototype for Elementary Function Ao";
+
+ecp definition :
+   "Definition : an ECP is a Pseudo potential";
+
+ecppef definition :
+   "Definition : an Ecppef is a Prototype for Elementary Function Ecp";
+
+name :
+   "Definition : a name is a word used as a generic name. It is ambiguous";
+
+namespecific :
+   "Definition : a namespecific is a string "father_name name". It is non ambiguous";
+
+ordinal :   
+   "Definition : an integer (from 1 ... n) index of some_name in list some_name_list_by_unit_provider";
+
+ordinallocal :   
+   "Definition : the ordinal of a namespecific in list son_name_list_by_father_name_provider";"
+

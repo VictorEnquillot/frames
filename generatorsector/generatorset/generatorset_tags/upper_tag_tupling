@@ -1,0 +1,15 @@
+(** {6 Getting tag upwards along BT-path from tag} *)
+
+let upper_tag_off_current_tag tag_cur =
+  let sym_upp_off_gss = Generatorset_symbol_v.upper_symbol_off_generatorset_symbol in
+  Domainset_tag_v.upper_tag_off_any_tag sym_upp_off_gss tag_cur
+;;
+
+(** {6 Tupling} *)
+
+let current_tuple_off_current_tag tag_cur =
+  let sym_cur = Tag_v.symbol_off_tag tag_cur in
+  let tag_ent = upper_tag_off_current_tag tag_cur in
+  let upp_ent = Upper_tag_v.upper_uppnumtup_off_upper_tag tag_upp in
+  Quadruplet_v.make_of_left_of_uppnumplet sym_cur tri_upp
+;;

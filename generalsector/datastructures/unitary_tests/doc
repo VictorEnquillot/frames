@@ -1,0 +1,22 @@
+let documentation () = 
+  [
+   "Needs : IGNR:Constructor_name_tree_by_domaiset_trail_provider_v";
+   "Current : BAS:Utilities_u_any";
+   "Needed-by : IGNR:";
+   "What-is-it : It is the Full Constructor_name_tree (CT) expressed in Entity_trail";
+   "What-is-it : It transforms the Constructor_name_tree (CT)";
+   "Remark : Entity trails may have ANY category (symbol, tag, formula, value)"; 
+   "Remark : the CT is unique for one Domainset as it expressed the Type hierarchy";
+   "Mind : Not to be confused with Builders Tree (BT) which links leaves of different CT";
+ ]
+;;
+
+let nam_cod = Utilities_v.current_module_name (documentation ());;
+
+test_number 1 (
+nam_cod 
+(* : string *)
+=
+  "Utilities_u_any.ml"
+);;
+

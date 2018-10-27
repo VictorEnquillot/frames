@@ -1,0 +1,24 @@
+# This Universal Makefile is
+# 1. getting information on current disk position.
+# 2. dispatching execution depending on directory kind
+#   i. code using Code_makefile.mk
+#  ii. test using Test_makefile.mk
+ 
+
+SETUP_DIR :=/home/colonna/sources/ocaml_top/setup
+MAKEFILES_DIR := $(SETUP_DIR)/Mk
+
+FULL_CODE_DIR = $(realpath .)
+CODE_DIR = $(lastword $(subst /, , $(realpath $(FULL_CODE_DIR)) )  )
+
+ifndef CODE_DIR
+$(error variable "CODE_DIR" is not defined. Check this Makefile)
+endif
+
+ifeq "$(CODE_DIR)" "test"
+UP_DIR = $(realpath ..)
+include $(MAKEFILES_DIR)/Test_makefile.mk
+else
+include $(MAKEFILES_DIR)/Code_makefile.mk
+endif
+

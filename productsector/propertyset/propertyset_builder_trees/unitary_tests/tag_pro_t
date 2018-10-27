@@ -1,0 +1,49 @@
+( tag_pro_t : Property_symbol_t.property_symbol Tag_t.tag Tree_t.tree ) =
+  Tree_t.Inner
+   ((Property_symbol_t.Property_context_symbol
+      (Property_context_symbol_t.Property_domain "property"),
+     [13]),
+   [Tree_t.Inner
+     ((Property_symbol_t.Property_context_symbol
+        (Property_context_symbol_t.Property_input_file
+          "/keep/sources/ocaml_top/setup/frames/inputset/files/Point_homothety.inp"),
+       [27; 13]),
+     [Tree_t.Inner
+       ((Property_symbol_t.Property_body_symbol
+          (Property_body_symbol_t.Property_target_symbol
+            (Property_target_symbol_t.Property_target_unit_symbol
+              (Property_target_unit_symbol_t.Property_target_unit_constructor
+                "Poi_h"))),
+         [1; 27; 13]),
+       [Tree_t.Leaf
+         (Property_symbol_t.Property_fence_symbol
+           (Property_fence_symbol_t.Property_operator_symbol
+             (Property_operator_symbol_t.Property_operator_unit
+               (Operator_unit_symbol_t.Operator_print "Poi_h", [1; 27; 12]))),
+          [1; 1; 27; 13]);
+        Tree_t.Inner
+         ((Property_symbol_t.Property_body_symbol
+            (Property_body_symbol_t.Property_target_symbol
+              (Property_target_symbol_t.Property_target_created_symbol
+                (Property_target_created_symbol_t.Property_target_created_figure_tag
+                  "Poi_h"))),
+           [2; 1; 27; 13]),
+         [Tree_t.Leaf
+           (Property_symbol_t.Property_fence_symbol
+             (Property_fence_symbol_t.Property_operator_symbol
+               (Property_operator_symbol_t.Property_operator_creation
+                 (Operator_creation_symbol_t.Operator_endomorphism_symbol
+                   (Operator_endomorphism_symbol_t.Operator_transformation_symbol
+                     (Operator_transformation_symbol_t.Operator_transformation_homothety
+                       "Hom_b_2")),
+                  [2; 27; 12]))),
+            [1; 2; 1; 27; 13]);
+          Tree_t.Leaf
+           (Property_symbol_t.Property_fence_symbol
+             (Property_fence_symbol_t.Property_operand_external_symbol
+               (Property_operand_external_symbol_t.Property_operand_figure_tag
+                 (Figure_symbol_t.Figure_fence_symbol
+                   (Figure_fence_symbol_t.Figure_point_symbol
+                     (Figure_point_symbol_t.Figure_point_constructor "T_A")),
+                  [1; 1; 1; 6]))),
+            [2; 2; 1; 27; 13])])])])])

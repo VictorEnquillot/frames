@@ -1,0 +1,28 @@
+let target_input_variable_name_list_of_input_fullnameoffile fno_inp =
+  let nam_n_kin_l = Input_variable_name_n_kind_list_by_input_fullnameoffile_provider_v.provide fno_inp in
+  let nam_tar_n_kin_l = List.filter (fun (n, k) -> Input_symbol_v.is_input_keyword_target k) nam_n_kin_l in
+  List.map Doublet_v.left_off_doublet nam_tar_n_kin_l
+;;
+
+let operand_input_variable_name_list_of_input_fullnameoffile fno_inp =
+  let nam_tar_l = target_input_variable_name_list_of_input_fullnameoffile fno_inp in
+  List.map Operand_name_by_target_input_variable_name_provider_v.provide nam_tar_l
+;;
+
+let figure_operand_input_variable_name_list_of_input_fullnameoffile fno_inp =
+  let nam_opd_l = operand_input_variable_name_list_of_input_fullnameoffile fno_inp in
+  List.filter (fun n -> Domain_name_by_input_variable_name_provider_v.provide n = "figure") nam_opd_l 
+;;
+
+let figure_tag_list_external_of_input_fullnameoffile fno_inp =
+  let nam_opd_fig_l = figure_operand_input_variable_name_list_of_input_fullnameoffile fno_inp in
+  List.map Figure_tag_by_external_input_variable_name_provider_v.provide nam_opd_fig_l
+;;
+
+let figure_symbol_subtree_list_external_of_input_fullnameoffile fno_inp =
+  let tag_fig_ext_l = figure_tag_list_external_of_input_fullnameoffile fno_inp in
+  let tag_fig_stl = List.map Figure_tag_subtree_by_figure_tag_provider_v.provide tag_fig_ext_l in
+  List.map (Tree_v.map Tag_v.entity_off_tag) tag_fig_stl
+;;
+
+

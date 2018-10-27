@@ -1,0 +1,28 @@
+define Con_ncpz 
+       context
+	 databox "cc_pvtz"
+	 database "nwchem"
+         domain "elementary"
+	 end -- context
+       end -- define
+
+define Aopef_nep21	
+       external 
+         type [ "elementary" "parameter_tuple" "aopef" "constructor" ]
+         external_name "Ne p 2 1"
+         external_context Con_ncpz
+         end -- external
+       end -- define
+
+define Uni_len
+       external 
+         type [ "units" "length" "bohr" ]
+         external_context Con_ncpz
+         end -- external
+       end -- define
+
+print Aopef_nep21 
+      units [ Uni_len ]
+      end -- print
+
+stop

@@ -1,0 +1,7 @@
+let sym_dos = Domainset_symbol_v.make nam_dos;;
+let idx_dos = Domainset_symbol_v.list_index_of_domainset_symbol sym_dos;;
+let soi_dos = Sole_index_v.make_of_int idx_dos [];;
+let gss_dos = Generatorset_symbol_v.generatorset_symbol_of_domainset_symbol sym_dos;;
+Generatorset_symbol_by_sole_index_production_provider_v.store_force soi_dos gss_dos;;
+
+let tag_dos = Tag_v.make sym_dos soi_dos;;

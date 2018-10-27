@@ -1,0 +1,35 @@
+                              Wavefunction             
+                                 |
+                                 v
+                             ------------------
+                            /    |             \
+                           /     |              \
+                          /      |               \
+                       Analytic Poly_determinant  \
+                                    |     |        \
+                                    v     |         \ 
+                         -------------    v          |  
+                        /             \   |         /
+                    Csf_jastrowed   |     |        / 
+                       v            v     |       / 
+                        -----------       |      /  
+                        v                 |     /   
+                     Csf_bared            |    /    
+                                      \   |   /     
+                                       \  |  /
+                                        \ | /
+                                         \|/
+                                          |         
+                                      Mono_determinant
+                                          |
+                            Spatialorbital_cluster (MOs)
+                                          |
+                                      Hsbf_molbasis (Aos)
+                                          |
+                                ------------------  
+                                |                |
+                     System_physical_region  Hsbf_single
+                                |
+                              Cefp
+                                |
+                             Basisset

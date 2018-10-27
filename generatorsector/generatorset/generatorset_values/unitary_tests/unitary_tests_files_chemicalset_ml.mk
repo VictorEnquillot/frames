@@ -1,0 +1,55 @@
+CHEMICALSET_SYMBOL_ML := \
+Usagefile_value_u_chemicalset_formula_zerotied_value_alone.ml \
+Usagefile_value_u_chemicalset_formula_onetied_value_alone.ml \
+# Generator_for_domainset_category_usagefile_v.ml \
+# Usagefile_value_u_chemicalset_symbol_fake_type_alone.ml \
+# Usagefile_value_u_chemicalset_formula_molecule_value_alone.ml \
+# Usagefile_value_u_chemicalset_symbol_atom_type_alone.ml \
+# Usagefile_value_u_chemicalset_symbol_atom_value_alone.ml \
+# \
+# Camlline_value_u_chemicalset_symbol_atom_zerotied_extracting.ml \
+# Camlline_value_u_chemicalset_symbol_atom_zerotied_anion_minusone_extracting.ml \
+# Camlline_value_u_chemicalset_symbol_atom_zerotied.ml \
+# Camlline_value_u_chemicalset_symbol_atom_zerotied_anion_minusone.ml \
+# Camlline_value_u_chemicalset_symbol_atom_zerotied_upgrading.ml \
+# Camlline_value_u_chemicalset_symbol_atom_zerotied_anion_minusone_upgrading.ml \
+# Camlline_uno_camltype_value_u_chemicalset_symbol_atom_zerotied.ml \
+# Camlline_uno_camltype_value_u_chemicalset_symbol_atom_zerotied_anion_minusone.ml \
+# Camlparagraph_value_u_chemicalset_symbol_typing_atom_zerotied.ml \
+# item_value_u_chemicalset_symbol_typing_atom_zerotied_raregas.ml \
+# Item_value_u_chemicalset_symbol_abbreviating_molecule.ml \
+# Item_value_u_chemicalset_symbol_atom_zerotied_extracting.ml \
+# Item_value_u_chemicalset_symbol_making_atom_zerotied.ml \
+# Item_value_u_chemicalset_symbol_making_cluster.ml \
+# Item_value_u_chemicalset_symbol_making_molecule.ml \
+# Item_value_u_chemicalset_symbol_naming_atom_zerotied.ml \
+# Item_value_u_chemicalset_symbol_naming_atom_zerotied_anion_minusone.ml \
+# Item_value_u_chemicalset_symbol_typing_atom_zerotied.ml \
+# Item_value_u_chemicalset_symbol_typing_atom_zerotied_anion_minusone.ml \
+# Item_value_u_chemicalset_symbol_atom_zerotied_upgrading.ml \
+# Item_value_u_chemicalset_symbol_atom_zerotied_anion_minusone_upgrading.ml \
+
+CHEMICALSET_TAG_ML := \
+Camlline_value_u_chemicalset_tag_atom_zerotied_anion_minusone_extracting.ml \
+Camlline_value_u_chemicalset_tag_atom_zerotied_upgrading.ml \
+Camlline_value_u_chemicalset_tag_atom_zerotied_anion_minusone_upgrading.ml \
+Camlline_uno_camltype_value_u_chemicalset_tag_atom_zerotied.ml \
+Camlline_uno_camltype_value_u_chemicalset_tag_atom_zerotied_anion_minusone.ml \
+Camlline_uno_function_value_u_chemicalset_tag_atom_zerotied_anion_minusone_naming.ml \
+Camlparagraph_endmarked_type_value_u_chemicalset_tag_typing_atom_zerotied.ml \
+
+DO_CHEMICALSET_FORMULA_ML := \
+Do_chemicalset_formulas_tv.ml \
+Do_chemicalset_formulas_files_mli_mk.ml \
+
+DO_CHEMICALSET_SYMBOL_ML := \
+Do_chemicalset_symbols_tv.ml \
+Do_chemicalset_symbols_files_mli_mk.ml \
+ 
+DO_CHEMICALSET_TAG_ML := \
+Do_chemicalset_tags_tv.ml \
+Do_chemicalset_tags_files_mli_mk.ml \
+ 
+
+UNITARY_TESTS_FILES_CHEMICALSET_ML := \
+$(CHEMICALSET_SYMBOL_ML)

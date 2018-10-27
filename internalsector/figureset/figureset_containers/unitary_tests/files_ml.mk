@@ -1,0 +1,11 @@
+UNITARY_TESTS_FILES_ML := \
+Figure_body_container_u_segment_bc.ml \
+Figure_fence_point_container_u_point_a.ml \
+ 
+EXTRA_FILES_ML := \
+Figure_fence_point_container_u_point_homothety_n_translation.ml \
+Figure_fence_container_u_point_homothety_n_translation.ml \
+Figure_segment_container_u_point_homothety_n_translation.ml \
+Figureset_target_value_provider_u_figure_triangle_t_perimeter.ml \
+Figure_triangle_formula_u_figure_ratioo.ml \
+Figure_fence_point_container_u_point_print.ml \

@@ -1,0 +1,247 @@
+# constructors tied    : block_lefttied_righttied
+# lefttied     : zerotied, onetied
+# righttied    : zerotied, onetied, endtied, forktied
+# forktied         : biforktied, triforktied, quadriforktied
+#   split tied into bonds
+#   constructors bonded  : block_bond_bond...bond 
+#   bond         : none, single, conjugated, double, triple
+# quadriforktied   : singlesinglesinglesingle
+#     split bonds into bonds_vsepr
+#     block_bond_bond...bond_vsepr
+# value :
+# b        : z (zero), s (single), c (conjugated), d (double), t (triple)
+# block    : b_B     = b_A...A       
+# block    :   B_b   =   A...A_b       
+# block    : b_B_b   = b_A...A_b     
+# block    : b_B_bb  = b_A...A_bb    
+# block    : b_B_bbb = b_A...A_bbb  
+#
+# Convention : block_single_double is defined not block_double_single
+# Convention : block_zerotied_onetied is defined not block_onetied_zerotied
+# ==========================================================================-
+# block
+
+constructors   chemical                              =   block
+
+constructors   block                                 =   block_zerotied   block_onetied   block_twotied   block_forktied 
+
+# .block_onetied (-|..)
+constructors   block_onetied =   block_zerotied_onetied   block_onetied_onetied   block_onetied_forktied
+
+# ..block_zerotied_onetied (o|-) ============================================-
+#   |- may be s, c, d, t
+
+constructors   block_zerotied_onetied                 =   block_none_single   block_none_conjugated   block_none_double   block_none_triple   block_none_halfbridge
+
+# ...block_none_single (z|-s)
+constructors   block_none_single =   block_none_single_ax1   block_none_single_ax2   block_none_single_ax3   block_none_single_ax4
+
+# ....block_none_single_ax1
+constructors   block_none_single_ax1 =   block_none_single_ax1en_diatomic
+
+# .....block_none_single_ax1en_diatomic
+constructors   block_none_single_ax1en_diatomic = atom_onetied_single 
+
+# ....block_none_single_ax2
+constructors   block_none_single_ax2 =   block_none_single_ax2e0_linear   block_none_single_ax2e1_bent   block_none_single_ax2e2_bent   block_none_single_ax2e3_linear
+
+# ....block_none_single_ax2e0_linear
+constructors   block_none_single_ax2e0_linear = z_becl_s z_hgcl_s 
+
+# ....block_none_single_ax2e1_bent 
+constructors   block_none_single_ax2e1_bent = z_ccl_s  
+
+# ....block_none_single_ax2e2_bent 
+constructors   block_none_single_ax2e2_bent = z_of_s z_oh_s z_sh_s 
+
+# ....block_none_single_ax2e3_linear
+constructors   block_none_single_ax2e3_linear = z_i2m1_s z_xef_s z_xecl_s 
+
+# ...block_none_single_ax3
+constructors   block_none_single_ax3 =   block_none_single_ax3e0_trigonalplanar   block_none_single_ax3e1_trigonalpyramidal
+
+# ....block_none_single_ax3e0_trigonalplanar
+constructors   block_none_single_ax3e0_trigonalplanar = z_coh_s z_co2m1_s z_no2_s 
+
+# ....block_none_single_ax3e1_trigonalpyramidal
+constructors   block_none_single_ax3e1_trigonalpyramidal = z_nh2_s
+
+# ...block_none_single_ax4
+constructors   block_none_single_ax4 =   block_none_single_ax4e1_tetrahedral
+
+# ....block_none_single_ax4e1_tetrahedral
+constructors   block_none_single_ax4e1_tetrahedral = z_ch3_s z_nh3p1_s 
+
+# ...block_none_conjugated (z-B-c)
+constructors   block_none_conjugated =   block_none_conjugated_ax1   block_none_conjugated_ax2
+
+# ....block_none_conjugated_ax1
+constructors   block_none_conjugated_ax1 =   block_none_conjugated_ax1en_diatomic
+
+# .....block_none_conjugated_ax1en_diatomic
+constructors   block_none_conjugated_ax1en_diatomic  =   atom_onetied_conjugated_ax1en_diatomic
+
+# ....block_none_conjugated_ax2
+constructors   block_none_conjugated_ax2             =   block_none_conjugated_ax2e0_linear
+
+# .....block_none_conjugated_ax2e0_linear
+constructors   block_none_conjugated_ax2e0_linear    =   z_nh_c 
+
+# ....block_none_conjugated_ax3
+constructors   block_none_conjugated_ax3e0           =   block_none_conjugated_ax3e0_trigonalplanar
+
+# .....block_none_conjugated_ax3e0_trigonalplanar
+constructors   block_none_conjugated_ax3e0_trigonalplanar =   z_nh2_c
+ 
+# ...block_none_double (z-B-d)
+constructors   block_none_double                      =   block_none_double_ax3e0_trigonalplanar
+
+# ....block_none_double_ax3
+constructors   block_none_double_ax3                  =   block_none_double_ax3e0_trigonalplanar
+
+# .....block_none_double_ax3e0_trigonalplanar
+constructors   block_none_double_ax3e0_trigonalplanar = z_ch2_d z_co_d z_nh_d z_nh2p1_d 
+
+# ...block_none_triple (z-B-t)
+constructors   block_none_triple                      =   block_none_triple_ax2
+
+# ....block_none_triple_ax1
+constructors   block_none_triple_ax1 =   block_none_triple_ax1en_diatomic
+
+# .....block_none_triple_ax1en_diatomic
+constructors   block_none_triple_ax1en_diatomic = atom_onetied_triple
+
+# ....block_none_triple_ax2
+constructors   block_none_triple_ax2 =   block_none_triple_ax2e0_linear
+
+# ....block_none_triple_ax2e0_linear
+constructors   block_none_triple_ax2e0_linear = z_ch_t 
+
+# ...block_none_forked has no sense is equivalent to onetied_...(bent)
+
+# ..block_onetied_onetied (-|-)
+constructors   block_onetied_onetied =   block_single_single   block_single_conjugated   block_single_double   block_single_triple 
+
+# ...block_single_single (s-B-s)
+constructors   block_single_single =   block_single_single_ax1   block_single_single_ax2   block_single_single_ax3   block_single_single_ax4
+
+# ....block_single_single_ax1
+constructors   block_single_single_ax1 = atom_multitied_singlesingle_ax1
+
+# ....block_single_single_ax2 
+constructors   block_single_single_ax2 = atom_multitied_singlesingle_ax2
+
+# ....block_single_single_ax3
+constructors   block_single_single_ax3 =   block_single_single_ax3e0_trigonalplanar   block_single_single_ax3e1_trigonalpyramidal   block_single_single_ax3e2_tshaped
+
+# ....block_single_single_ax3e0_trigonalplanar
+constructors   block_single_single_ax3e0_trigonalplanar = s_bf_s
+
+# ....block_single_single_ax3e1_trigonalpyramidal
+constructors   block_single_single_ax3e1_trigonalpyramidal = s_nh_s s_pcl_s
+
+# ....block_single_single_ax3e2_tshaped
+constructors   block_single_single_ax3e2_tshaped = s_clf_s s_brf_s
+
+# ....block_single_single_ax4
+constructors   block_single_single_ax4 =   block_single_single_ax4e0_tetrahedral   block_single_single_ax4e1_seesaw
+
+# .....block_single_single_ax4e0_tetrahedral
+constructors   block_single_single_ax4e0_tetrahedral = s_ch2_s s_nh2p1_s 
+
+# .....block_single_single_ax4e1_seesaw
+constructors   block_single_single_ax4e1_seesaw = s_sf2_s
+
+# ...block_single_conjugated (s-B-c) 
+constructors   block_single_conjugated =   block_single_conjugated_ax3e0_trigonalplanar 
+
+# ....block_single_conjugated_ax3e0_trigonalplanar 
+constructors   block_single_conjugated_ax3e0_trigonalplanar = s_co_c s_nh_c
+
+# ...block_single_double (s-B-d)
+constructors   block_single_double =   block_single_double_ax3
+
+# ....block_single_double_ax3
+constructors   block_single_double_ax3 =   block_single_double_ax3e0_trigonalplanar 
+
+# .....block_single_double_ax3e0_trigonalplanar 
+constructors   block_single_double_ax3e0_trigonalplanar = s_ch_d s_n_d s_nhp1_d 
+
+# ...block_single_triple (s-B-t)
+constructors   block_single_triple =   block_single_triple_ax2
+
+# ....block_single_triple_ax2
+constructors   block_single_triple_ax2 = atom_multitied_singletriple   block_single_triple_ax2_fromid
+
+# .....block_single_triple_ax2_fromid
+constructors   block_single_triple_ax2_fromid = string
+
+# ...block_conjugated_conjugated (c-B-c)
+constructors   block_conjugated_conjugated =   block_conjugated_conjugated_ax2 
+
+# ....block_conjugated_conjugated_ax2
+constructors   block_conjugated_conjugated_ax2 =   block_conjugated_conjugated_ax2e0_linear
+
+# ....block_conjugated_conjugated_ax2e0_linear
+constructors   block_conjugated_conjugated_ax2e0_linear = c_ch_c c_n_c
+
+# ...block_conjugated_double (c-B-d)
+constructors   block_conjugated_double =   block_conjugated_double_ax2
+
+# ....block_conjugated_double_ax2
+constructors   block_conjugated_double_ax2 = atom_multitied_conjugateddouble_ax2
+
+
+# ...block_double_double (d-B-d)
+constructors   block_double_double = atom_multitied_doubledouble   block_double_double_ax2_fromid
+
+# ...block_double_double_ax2_fromid
+constructors   block_double_double_ax2_fromid = string
+
+# ...block_onetied_forktied (-|<) ======================================================-
+constructors   block_onetied_forktied =   block_onetied_biforktied   block_onetied_triforktied
+
+# ....block_onetied_biforktied (-|<) ====================================================
+constructors   block_onetied_biforktied =   block_single_singlesingle   block_single_singledouble
+
+# .....block_single_singlesingle (s-B-ss)
+constructors   block_single_singlesingle =   block_single_singlesingle_ax3
+
+# ......block_single_singlesingle_ax3
+constructors   block_single_singlesingle_ax3 = atom_multitied_singlesinglesingle_ax3   block_single_singlesingle_ax3_fromid
+
+# ......block_single_singlesingle_ax3_fromid
+constructors   block_single_singlesingle_ax3_fromid = string
+
+# ......block_single_singlesingle_ax4
+constructors   block_single_singlesingle_ax4 =   block_single_singlesingle_ax4e0_tetrahedral
+
+# ......block_single_singlesingle_ax4e9_tetrahedral
+constructors   block_single_singlesingle_ax4e0_tetrahedral = s_ch_ss s_nhp1_ss
+
+# .....block_single_singledouble (s-B-sd)
+constructors   block_single_singledouble = atom_multitied_singlesingledouble   block_single_singledouble_ax3_fromid
+
+# ......block_single_singledouble_fromid
+constructors   block_single_singledouble_fromid = string
+
+# .....block_single_doublesingle (s-B-ds)
+constructors   block_single_doublesingle =   block_single_singledouble
+
+# ....block_double_singlesingle (d-B-ss)
+constructors   block_double_singlesingle = atom_multitied_doublesinglesingle   block_double_singlesingle_fromid
+
+# .....block_double_singlesingle_fromid
+constructors   block_double_singlesingle_fromid = string
+
+# ....block_onetied_triforktied (-|<-) ================================== 
+constructors   block_onetied_triforktied =   block_single_singlesinglesingle
+
+# .....block_single_singlesinglesingle (s-B-sss)
+constructors   block_single_singlesinglesingle =   block_single_singlesinglesingle_ax4
+
+# ......block_single_singlesinglesingle_ax4
+constructors   block_single_singlesinglesingle_ax4 = atom_multitied_singlesinglesinglesingle_ax4   block_single_singlesinglesingle_ax4_fromid
+
+# .......block_single_singlesinglesingle_ax4_fromid
+constructors   block_single_singlesinglesingle_ax4_fromid = string

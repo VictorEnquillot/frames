@@ -1,0 +1,25 @@
+v1.2.2
+
+#  try_ecp ECP  EMSL  Basis Set Exchange Library  4/1/15 7:40 AM
+# Elements                             References
+# --------                             ----------
+# Na - Hg: P. J. Hay and W. R. Wadt, J. Chem. Phys. 82, 270 (1985).
+# P. J. Hay and W. R. Wadt, J. Chem. Phys. 82, 299 (1985).
+# 
+
+
+ECP
+Au nelec 60
+Au ul
+1    622.6287956            -60.0000000        
+2    136.2843607           -555.5292312        
+Au S
+0    194.7374304              3.0000000        
+1    351.5327447             38.6020880        
+2    122.3270402            864.8370727        
+2     32.0914617            374.9935520        
+
+END
+		
+
+Options:Help:Feedback

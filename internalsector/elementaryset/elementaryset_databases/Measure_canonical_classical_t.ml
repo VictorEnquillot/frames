@@ -1,0 +1,1 @@
+type measure_canonical_classical = (float, Elementary_fence_units_canonical_classical_symbol_t.elementary_fence_units_canonical_classical_symbol) Doublet_t.doublet;;

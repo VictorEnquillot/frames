@@ -1,0 +1,79 @@
+TRANSLATING_MLI := \
+Translating_trail_of_symbol_v.mli \
+Translating_entity_symbol_of_constructor_basename_v.mli \
+Entity_fictive_nullary_symbol_by_constructor_leaf_trail_provider_v.mli \
+Entity_proper_symbol_by_constructor_notleaf_trail_provider_v.mli \
+ 
+TREE_MLI:= \
+Entity_symbol_constructor_tree_by_domain_symbol_provider_v.mli \
+Entity_inconstructortree_symbol_list_by_domain_symbol_provider_v.mli \
+Entity_constructor_inner_symbol_list_by_domain_symbol_provider_v.mli \
+Entity_symbol_path_by_entity_tritup_provider_v.mli \
+Entity_main_symbol_by_entity_tritup_provider_v.mli \
+Entity_symbol_constructor_subtree_list_by_domain_symbol_provider_v.mli \
+Entity_symbol_constructor_subtree_by_entity_proper_tritup_provider_v.mli \
+Entity_symbol_path_constructor_subtree_by_entity_tritup_provider_v.mli \
+ 
+ENTITY_LEAF_LIST_MLI := \
+Entity_leaf_symbol_list_by_entity_proper_tritup_provider_v.ml \
+Entity_fictive_nullary_symbol_list_by_domain_symbol_provider_v.mli \
+Entity_fictive_nullary_symbol_list_by_category_doutup_provider_v.mli \
+ 
+ENTITY_PROPER_LIST_MLI := \
+Entity_proper_symbol_list_by_domain_symbol_provider_v.mli \
+Entity_proper_symbol_list_by_category_doutup_provider_v.mli \
+ 
+TOPSON_BY_ENTITY_TRITUP_MLI := \
+Entity_topson_symbol_list_by_entity_tritup_provider_v.mli \
+Entity_topson_leaf_symbol_list_by_entity_tritup_provider_v.mli \
+Entity_topson_bare_symbol_list_by_entity_tritup_provider_v.mli \
+Entity_topson_ofstring_symbol_list_by_entity_tritup_provider_v.mli \
+Entity_topson_notleaf_symbol_list_by_entity_tritup_provider_v.mli \
+Entity_topson_symbol_by_group_list_by_entity_tritup_provider_v.mli \
+ 
+GRANDSON_BY_ENTITY_TRITUP_MLI := \
+Entity_grandson_symbol_list_by_entity_tritup_provider_v.mli \
+Entity_grandson_leaf_symbol_list_by_entity_tritup_provider_v.mli \
+Entity_grandson_bare_symbol_list_by_entity_tritup_provider_v.mli \
+Entity_grandson_ofstring_symbol_list_by_entity_tritup_provider_v.mli \
+Entity_grandson_notleaf_symbol_list_by_entity_tritup_provider_v.mli \
+ 
+GRANDSON_BY_ITEM_MLI := \
+Entity_grandson_symbol_list_by_item_for_symbol_each_grandson_notleaf_sextup_provider_v.mli \
+ 
+PROFORMULA_MLI := \
+Kind_symbol_list_by_category_symbol_provider_v.mli \
+Contentfile_symbol_list_by_entity_proper_tritup_provider_v.mli \
+Contentfile_interface_v.mli \
+Entity_interface_v.mli \
+Domain_interface_v.mli \
+ 
+BUILDER_MLI := \
+Entity_builder_base_symbol_list_by_entity_fictive_nullary_tritup_provider_v.mli \
+Entity_builder_base_symbol_list_by_entity_tritup_provider_v.mli \
+Entity_builder_basic_symbol_list_by_entity_fictive_nullary_tritup_provider_v.mli \
+Entity_builder_basic_symbol_list_by_entity_tritup_provider_v.mli \
+Entity_builder_symbol_list_by_entity_fictive_nullary_tritup_provider_v.mli \
+Entity_builder_symbol_once_list_by_entity_proper_tritup_provider_v.mli \
+Entity_builder_symbol_tree_by_entity_proper_tritup_provider_v.mli \
+Entity_builder_leaf_symbol_list_by_entity_proper_tritup_provider_v.mli \
+Entity_builder_proper_topson_symbol_list_by_entity_proper_tritup_provider_v.mli \
+
+ 
+NULL := \
+Invariants_v.mli \
+Entity_fictive_nullary_symbol_entity_main_symbol_doublet_list_by_domain_symbol_provider_v.mli \
+Translating_entity_fictive_symbol_of_builder_basename_v.mli \
+ 
+PROVIDER_T_MLI:= \
+$(TRANSLATING_MLI) \
+$(TREE_MLI) \
+$(ENTITY_LEAF_LIST_MLI) \
+$(ENTITY_PROPER_LIST_MLI) \
+$(TOPSON_BY_ENTITY_TRITUP_MLI) \
+$(GRANDSON_BY_ENTITY_TRITUP_MLI) \
+$(BUILDER_MLI) \
+$(PROFORMULA_MLI) \
+Tools_ignr_v.mli \
+
+  

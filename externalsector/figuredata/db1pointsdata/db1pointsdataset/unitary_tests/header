@@ -1,0 +1,41 @@
+let nam_dom = "figure";;
+let tag_dom = Domain_tag_v.make_of_domain_name_of_sole_index_up nam_dom [];;
+
+let tag_ed1 = Db1_entity_local_database_tag_by_domain_tag_provider_v.provide tag_dom;;
+
+test_number 1 (
+ tag_ed1 
+(* : Db1_entity_symbol_t.db1_entity_local_database_symbol Tag_t.tag *)
+=
+  (Db1_entity_local_database_symbol_t.Db1_entity_local_database_constructor
+    "db1",
+   [1; 3])
+);;
+
+let tag_ec1_l = Db1_entity_component_tag_list_by_db1_entity_local_database_tag_provider_v.provide tag_ed1;;
+
+test_number 2 (
+tag_ec1_l
+(* : Db1_entity_component_symbol_t.db1_entity_component_symbol Tag_t.tag list *)
+  =
+  [(Db1_entity_component_symbol_t.Db1_entity_component_triangle_symbol
+     (Db1_entity_component_triangle_symbol_t.Db1_entity_component_triangle_constructor
+       "T"),
+    [1; 1; 3]);
+   (Db1_entity_component_symbol_t.Db1_entity_component_triangle_symbol
+     (Db1_entity_component_triangle_symbol_t.Db1_entity_component_triangle_constructor
+       "u"),
+    [2; 1; 3]);
+   (Db1_entity_component_symbol_t.Db1_entity_component_triangle_symbol
+     (Db1_entity_component_triangle_symbol_t.Db1_entity_component_triangle_constructor
+       "v"),
+    [3; 1; 3]);
+   (Db1_entity_component_symbol_t.Db1_entity_component_vector_symbol
+     (Db1_entity_component_vector_symbol_t.Db1_entity_component_vector_constructor
+       "bc"),
+    [4; 1; 3]);
+   (Db1_entity_component_symbol_t.Db1_entity_component_vertex_symbol
+     (Db1_entity_component_vertex_symbol_t.Db1_entity_component_vertex_constructor
+       "a"),
+    [5; 1; 3])]
+);;

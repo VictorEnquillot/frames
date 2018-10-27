@@ -1,0 +1,4 @@
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/files_mli.mk a
+echo "ITEM_T_MLI := \\" > files_item_t_mli.mk
+grep Item a >> files_item_t_mli.mk
+echo "" >> files_item_t_mli.mk

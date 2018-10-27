@@ -1,0 +1,30 @@
+
+running test Db1_entity_component_tag_list_by_db1_entity_local_database_tag_provider_u_any
+
+ --- Creating  Module_name_stack_v.stack --- 
+
+ --- Creating  Parameters_figureset_general_register_v --- 
+
+ --- Creating  Common_symbol_by_sole_index_register_v --- 
+
+ --- Creating  Local_database_fullnameofdirectory_list_by_domain_tag_register_v --- 
+
+ --- Creating  Db1_entity_symbol_by_sole_index_register_v --- 
+
+ --- Creating  Db1_entity_component_tag_list_by_db1_entity_local_database_tag_register_v --- 
+
+ --- Creating  Component_filename_list_by_db1_entity_local_database_tag_register_v --- 
+
+ --- Creating  String_by_db1_entity_local_database_tag_register_v --- 
+
+ --- Creating  String_by_db1_entity_local_database_tag_register_v --- 
+
+Testing Db1_entity_component_tag_list_by_db1_entity_local_database_tag_provider_v with
+   Db1_entity_component_tag_list_by_db1_entity_local_database_tag_provider_u_any.ml
+1 2 3 
+Testing results:
+Total: 3 tests performed.
+
+
+All tests succeeded.
+

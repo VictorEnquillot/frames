@@ -1,0 +1,6 @@
+Debugger entered--Lisp error: (error "Command attempted to use minibuffer while in minibuffer")
+  completing-read("File to save in: " read-file-name-internal nil nil "~/sources/ocaml_top/setup/frames/general/tools/" file-name-history nil)
+  read-file-name("File to save in: ")
+  basic-save-buffer()
+  save-buffer(1)
+  call-interactively(save-buffer nil nil)

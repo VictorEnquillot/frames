@@ -1,0 +1,4 @@
+let tag_ent_l = Category_formula_v.entity_tag_list_off_category_formula for_cat;;
+let sel_ent = (fun e -> Entity_symbol_v.string_off e = nam_ent)
+let tag_ent = Doublet_list_v.find_if_left sel_ent tag_ent_l;;
+

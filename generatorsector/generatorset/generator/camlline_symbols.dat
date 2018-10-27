@@ -1,0 +1,191 @@
+constructors generator                 = camlline
+
+constructors camlline                  = camlline_constant camlline_for_any camlline_for_formula camlline_for_symbol camlline_for_tag
+
+constructors camlline_constant         = camlline_constant_function camlline_constant_pervasive 
+
+constructors camlline_constant_function =   double_quote_author   double_quote_copyright   double_quote_example   double_quote_how_is_it_done   double_quote_improve   double_quote_needed   double_quote_needs   double_quote_what_is_it   let_count_equal_zero   let_count_increment_in   let_documentation_unit_equal   let_longname_equal_function   let_make_argument_equal_function   let_make_equal_function   let_make_equal_tag_vdot_make_double_semicolon   let_make_nam_s_equal   let_make_of_topson_bare_nam_equal   let_make_of_topson_notleaf_nam_s_equal   let_make_of_topson_ofstring_nam_s_equal   let_map_equal_function   let_nam_cod_equal   let_nam_low_equal_string_lowercase_nam_in   let_name_equal_function   let_name_of_topson_bare_equal_function   let_name_of_topson_notleaf_equal_function   let_name_of_topson_ofstring_equal_function   let_print_ppf_equal_function   let_print_ppf_str_equal   let_string_off_equal_function   let_string_off_of_topson_bare_equal_function   let_string_off_of_topson_notleaf_equal_function   let_string_off_of_topson_ofstring_equal_function   let_symbol_of_formula_equal_function   map   match_nam_low_with   pipe_print_fatal_error_make_4_lines   pipe_underscore_arrow   pipe_underscore_arrow_false   pipe_underscore_arrow_true   sole_index_vdot_son_sole_index_list_of_int_of_length_of_sole_index   try_make_of_topson_bare_nam   try_make_of_topson_notleaf_nam_s   try_make_of_topson_ofstring_nam_s 
+
+constructors camlline_constant_pervasive = basic_type begin_line bracket_left bracket_right curly_bracket_left curly_bracket_right double_semicolon else_line empty_line end_line item_title parenthesis_left parenthesis_right semicolon then_false
+
+# for_any
+constructors camlline_for_any          = camlline_for_any_duo camlline_for_any_uno camlline_for_any_trio
+
+constructors camlline_for_any_duo      = camlline_for_any_duo_current_son camlline_for_any_duo_current_top camlline_for_any_duo_datastructure camlline_for_any_duo_son_top_bare camlline_for_any_duo_son_top_ofstring camlline_for_any_duo_son_top_notleaf camlline_for_any_duo_top_main 
+
+constructors camlline_for_any_duo_current_son   = es_any_vdot_ec_any_off_es_any_ac_as es_any_vdot_is_ec_any_off_es_any_ac_as es_any_vdot_is_ec_ac_as let_ac_as_equal_es_any_vdot_es_any_of_ec_any_ac_ac_in 
+
+constructors camlline_for_any_duo_current_top   = let_et_any_of_ec_any_ac_ac_equal let_ec_any_off_et_any_ac_at_equal let_is_ec_any_off_et_any_ac_at_equal let_is_ec_ac_at_equal
+
+constructors camlline_for_any_duo_datastructure    = pipe_a_b_datastructure_of_a_b_datastructure
+
+constructors camlline_for_any_duo_son_top_bare     = et_any_tdot_es pipe_et_any_tdot_es pipe_et_any_tdot_es_arrow_true
+
+constructors camlline_for_any_duo_son_top_ofstring = et_any_tdot_es_sarg  pipe_et_any_tdot_es_underscore_arrow_true
+
+constructors camlline_for_any_duo_son_top_notleaf  = et_any_tdot_es_any  if_not_is_es_any_off_et_any_ac_at let_ac_as_equal_es_any_off_et_any_ac_at_in let_es_any_off_et_any_equal_function let_et_any_of_es_any_ac_as_equal let_is_es_any_off_et_any_equal_function pipe_et_any_tdot_es_any_ac_as_arrow pipe_et_any_tdot_es_any_ac_as_arrow_ac_as pipe_et_any_tdot_es_any_arrow pipe_et_any_tdot_es_any_underscore_arrow_true pipe_print_fatal_error_es_any_off_et_any_4_lines et_any_of_es_any_ac_as et_any_tdot_es_any_ac_as
+
+constructors camlline_for_any_duo_top_main         = let_build_n_store_sym_at_soi_am_equal let_make_sym_at_soi_am_equal let_soi_am_equal_tag_vdot_sole_index_off_tag_tag_at_in make_sym_at_soi_am
+
+
+
+
+
+
+constructors camlline_for_any_uno                = camlline_for_any_uno_camlfile camlline_for_any_uno_camltype camlline_for_any_uno_son camlline_for_any_uno_top 
+
+constructors camlline_for_any_uno_camlfile       = camlfile_title ending 
+
+constructors camlline_for_any_uno_camltype      =  camlline_for_any_uno_camltype_son_bare  camlline_for_any_uno_camltype_son_notleaf  camlline_for_any_uno_camltype_son_ofstring  camlline_for_any_uno_camltype_top 
+
+constructors camlline_for_any_uno_camltype_son_bare     = pipe_es
+
+constructors camlline_for_any_uno_camltype_son_notleaf  = pipe_es_any_constructor_of_es_any_tdot_es_any
+
+constructors camlline_for_any_uno_camltype_son_ofstring = pipe_es_constructor_of_string
+
+constructors camlline_for_any_uno_camltype_top  = pipe_et_any_constructor_of_et_any_tdot_et_any type_et_any_equal type_et_any_equal_et type_et_any_equal_private 
+
+constructors camlline_for_any_uno_son           = comment_es_comment es_any_vdot_fullname_ac_as es_any_vdot_longname_ac_as es_any_vdot_make_ac_as es_any_vdot_name_ac_as es_any_vdot_string_off_ac_as format_sprintf_fullname_ac_as_string_off_ac_as format_sprintf_longname_es_tdot_string_capitalize_name_ac_as let_is_es_any_equal_function let_is_es_equal_function pipe_datastructure_ac_as_arrow
+
+constructors camlline_for_any_uno_top           = format_sprintf_doublequote_et_any_tdot_percents_doublequote let_fullname_ac_at_equal let_longname_ac_at_equal let_name_ac_at_equal let_retrieve_tag_top_equal let_string_off_ac_at_equal lpar_string_dot_capitalize_lpar_name_ac_at_rpar_rpar double_quote_current  sprintf_for_any_fullname sprintf_for_any_longname  try_name_of_topson_bare try_name_of_topson_notleaf try_name_of_topson_ofstring try_string_off_of_topson_bare try_string_off_of_topson_notleaf try_string_off_of_topson_ofstring
+
+constructors camlline_for_any_trio              = camlline_for_any_trio_current_son_top
+
+constructors camlline_for_any_trio_current_son_top = let_ec_equal_et_any_of_es_any_es_any_vdot_ec_any let_ec_sarg_equal_et_any_of_es_any_lpar_es_any_vdot_ec_any_sarg
+
+# for_formula
+
+constructors camlline_for_formula               = camlline_for_formula_datastructure camlline_for_formula_duo camlline_for_formula_trio camlline_for_formula_uno
+
+constructors camlline_for_formula_datastructure = camlline_for_formula_datastructure_uno camlline_for_formula_datastructure_duo camlline_for_formula_datastructure_trio
+
+constructors camlline_for_formula_datastructure_uno     = das_vdot_name_nam_a_for_at 
+constructors camlline_for_formula_datastructure_duo     = das_vdot_name_nam_a_nam_b_for_at 
+constructors camlline_for_formula_datastructure_trio    = das_vdot_name_nam_a_nam_b_nam_c_for_at
+
+constructors camlline_for_formula_duo                   = camlline_for_formula_duo_builder_data   camlline_for_formula_duo_domain_builder   camlline_for_formula_duo_domain_data   camlline_for_formula_duo_main_builder   camlline_for_formula_duo_main_data   camlline_for_formula_duo_son_builder  camlline_for_formula_duo_son_data   camlline_for_formula_duo_son_main camlline_for_formula_duo_son_top   camlline_for_formula_duo_top_builder   camlline_for_formula_duo_top_data   camlline_for_formula_duo_top_main
+
+constructors camlline_for_formula_duo_builder_data      = eb_formula_vdot_ed_tag_list_off_eb_formula_for_ab_l_in 
+
+constructors camlline_for_formula_duo_domain_builder =   let_dss_of_sym_equal_domain_symbol_vdot_domain_symbol_of_eb_symbol_in   list_dot_iter2_eb_symbol_by_sole_index_register_vdot_store_soi_ab_l_dss_ab_l_semicolon   list_dot_iter2_domain_symbol_by_sole_index_register_vdot_store_soi_ab_l_dss_ab_l_semicolon
+
+constructors camlline_for_formula_duo_domain_data    =   let_dss_of_sym_equal_domain_symbol_vdot_domain_symbol_of_ed_symbol_in   list_dot_iter2_domain_symbol_by_sole_index_register_vdot_store_soi_ad_l_dss_ad_l_semicolon   
+
+constructors camlline_for_formula_duo_main_builder      =   let_sym_ab_l_equal_eb_symbol_list_by_em_tag_provider_vdot_provide_tag_am_in   one_lpar_list_dot_length_sym_ab_l_rpar_soi_am_in
+
+constructors camlline_for_formula_duo_main_data         =   one_lpar_list_dot_length_sym_ad_l_rpar_soi_am_in
+
+constructors camlline_for_formula_duo_son_builder       =   es_formula_vdot_eb_tag_list_off_es_formula_for_as   pipe_es_constructor_of_eb_tag_tdot_eb_tag_list   pipe_es_constructor_of_string_star_eb_tag_tdot_eb_tag_list
+
+constructors camlline_for_formula_duo_son_data          =   es_formula_vdot_ed_tag_list_off_es_formula_for_as   pipe_es_constructor_of_ed_tag_tdot_ed_tag_list   pipe_es_constructor_of_string_star_ed_tag_tdot_ed_tag_list
+
+
+constructors camlline_for_formula_duo_son_main          =   lpar_es_formula_vdot_make_sym_as_soi_am_rpar 
+
+constructors camlline_for_formula_duo_son_top           =   et_formula_tdot_es_formula pipe_et_formula_tdot_es_lpar_sarg_comma_underscore_rpar_arrow  pipe_et_formula_tdot_es_underscore_arrow et_formula_tdot_es_for_das  let_nam_as_equal_es_tag_vdot_name_for_at_in  let_nam_as_equal_tag_vdot_name_et_symbol_vdot_name_in 
+
+constructors camlline_for_formula_duo_top_builder       =   eb_tag_list_off_et_formula_for_at   let_eb_tag_list_off_et_formula_equal_function   let_eb_tag_list_off_et_tag_tag_at_equal   let_iter2_f_of_tag_ab_for_at_1_for_at_2_equal let_iter_f_of_tag_ab_for_at_equal   let_map2_f_of_tag_ab_for_at_1_for_at_2_equal   let_map_f_of_tag_ab_for_at_equal  let_sym_ab_l_equal_et_interface_vdot_make_of_tuple_tup_at_in   let_tag_ab_l_1_equal_eb_tag_list_off_et_formula_for_at_1_in   let_tag_ab_l_2_equal_eb_tag_list_off_et_formula_for_at_2_in   let_tag_ab_l_equal_eb_tag_list_off_et_formula_for_at_in 
+
+constructors camlline_for_formula_duo_top_data         =    let_ed_tag_list_off_et_formula_equal_function   let_ed_tag_list_off_et_formula_for_at_equal       let_ed_tag_list_off_et_tag_tag_at_equal    ed_tag_list_off_et_formula_for_at    let_sym_ad_l_equal_et_interface_vdot_make_of_symbol_sym_at_in  
+                                                           
+constructors camlline_for_formula_duo_top_main         = let_sym_am_equal_em_symbol_vdot_em_symbol_of_et_symbol_sym_at_in 
+
+
+
+constructors camlline_for_formula_trio                  = camlline_for_formula_trio_son_top_builder  camlline_for_formula_trio_son_top_data   camlline_for_formula_trio_top_builder_data camlline_for_formula_trio_top_main_builder 
+
+constructors camlline_for_formula_trio_son_top_builder  =  et_formula_tdot_es_lpar_sarg_comma_tag_ab_l_rpar  et_formula_tdot_es_tag_ab_l  pipe_et_formula_tdot_es_lpar_sarg_comma_tag_ab_l_rpar_arrow_tag_ab_l pipe_et_formula_tdot_es_tag_ab_l_arrow_tag_ab_l 
+
+constructors camlline_for_formula_trio_son_top_data     =  et_formula_tdot_es_lpar_sarg_comma_tag_ad_l_rpar  et_formula_tdot_es_tag_ad_l  pipe_et_formula_tdot_es_lpar_sarg_comma_tag_ad_l_rpar_arrow_tag_ad_l pipe_et_formula_tdot_es_tag_ad_l_arrow_tag_ad_l 
+
+constructors camlline_for_formula_trio_top_main_builder = let_tag_ab_l_equal_build_n_store_sym_at_soi_mai_in
+
+constructors camlline_for_formula_trio_top_builder_data = let_tag_ab_l_equal_ed_tag_list_off_et_formula_for_at_in
+
+
+
+
+constructors camlline_for_formula_uno                  =   camlline_for_formula_uno_builder   camlline_for_formula_uno_data   camlline_for_formula_uno_main   camlline_for_formula_uno_son   camlline_for_formula_uno_top 
+
+constructors camlline_for_formula_uno_builder          =   double_quote_builders   let_dss_ab_l_equal_list_dot_map_dss_of_sym_sym_ab_l_in   let_for_ab_l_equal_list_dot_map_eb_formula_vdot_retrieve_tag_ab_l_in   let_soi_ab_l_equal   list_dot_iter2_f_of_tag_ab_tag_ab_l_1_tag_ab_l_2   list_dot_iter_f_of_tag_ab_tag_ab_l   list_dot_map2_f_of_tag_ab_tag_ab_l_1_tag_ab_l_2   list_dot_map2_tag_vdot_make_sym_ab_l_soi_ab_l   list_dot_map_f_of_tag_ab_tag_ab_l   tools_fgnr_vdot_store_builder_dss_datastructure_dss_of_sym_sym_ab_l_soi_ab_l
+
+constructors camlline_for_formula_uno_data             =   double_quote_data      let_dss_ad_l_equal_list_dot_map_dss_of_sym_sym_ad_l_in   let_soi_ad_l_equal      let_tag_ad_ll_equal_list_dot_map    list_dot_flatten_tag_ad_ll   list_dot_map2_tag_vdot_make_sym_ad_l_soi_ad_l   
+
+constructors camlline_for_formula_uno_main             =   let_tag_am_equal_tag_vdot_make_sym_am_soi_am_in 
+
+constructors camlline_for_formula_uno_son              =   lpar_es_formula_vdot_symbol_of_formula_for_as_rpar es_formula_vdot_map_for_as es_formula_vdot_name_for_as let_tag_as_equal_tag_vdot_make_sym_as_soi_as_in
+
+constructors camlline_for_formula_uno_top              =   for_at let_for_at_equal_retrieve_tag_at_in let_make_soi_at_equal_function let_make_tag_at_equal let_name_for_at_equal let_sym_at_equal_symbol_of_formula_for_at_in et_formula_vdot_name let_for_das_equal_das_vdot_make_tag_at_builder_list_in let_soi_at_equal_tag_vdot_sole_index_off_tag_tag_at_in
+
+# for_symbol
+
+constructors camlline_for_symbol                  = camlline_for_symbol_duo camlline_for_symbol_uno 
+ 
+constructors camlline_for_symbol_duo              = camlline_for_symbol_duo_current_top camlline_for_symbol_duo_son_top 
+
+constructors camlline_for_symbol_duo_current_top  = pipe_ecstring_arrow_et_symbol_tdot_ec_string
+
+
+constructors camlline_for_symbol_duo_son_top      = camlline_for_symbol_duo_son_top_bare camlline_for_symbol_duo_son_top_notleaf camlline_for_symbol_duo_son_top_ofstring 
+
+constructors camlline_for_symbol_duo_son_top_bare = et_symbol_tdot_es   let_ac_at_equal_et_symbol_vdot_es_in      let_es_equal_et_symbol_tdot_es    pipe_et_symbol_tdot_es_arrow    pipe_et_symbol_tdot_es_arrow_emptystring    pipe_et_symbol_tdot_es_arrow_string 
+
+constructors camlline_for_symbol_duo_son_top_ofstring =   et_symbol_tdot_es_sarg   let_es_sarg_equal_et_symbol_tdot_es_sarg    pipe_et_symbol_tdot_es_sarg_arrow    pipe_et_symbol_tdot_es_sarg_arrow_sarg    pipe_et_symbol_tdot_es_underscore_arrow_string
+
+constructors camlline_for_symbol_duo_son_top_notleaf  = et_symbol_tdot_es_symbol   let_es_equal_et_symbol_of_es_symbol_es_symbol_vdot_es    let_es_symbol_arg_equal_et_symbol_tdot_es_symbol_arg    pipe_et_symbol_tdot_es_symbol_sym_as_arrow et_symbol_of_es_symbol_sym_as et_symbol_tdot_es_symbol_sym_as    pipe_et_symbol_tdot_es_symbol_underscore_arrow_string    try_et_symbol_of_es_symbol 
+
+
+
+constructors camlline_for_symbol_uno              =   camlline_for_symbol_uno_son   camlline_for_symbol_uno_current   camlline_for_symbol_uno_top 
+
+constructors camlline_for_symbol_uno_current      = pipe_string_arrow_ec
+
+constructors camlline_for_symbol_uno_son          = camlline_for_symbol_uno_son_bare camlline_for_symbol_uno_son_ofstring camlline_for_symbol_uno_son_notleaf 
+
+constructors camlline_for_symbol_uno_son_notleaf  = lpar_es_symbol_vdot_make_of_string_of_string_rpar failwith_not_es_symbol with_failure_not_es_symbol_arrow es_symbol_vdot_string_off_sym_as es_symbol_vdot_name_sym_as
+
+constructors camlline_for_symbol_uno_son_bare     = pipe_esstring_arrow_es
+
+constructors camlline_for_symbol_uno_son_ofstring = pipe_esstring_arrow_es_sarg
+
+constructors camlline_for_symbol_uno_top          =   et_symbol_vdot_name_sym_at   et_symbol_vdot_string_off_sym_at   let_et_symbol_equal_et_symbol_tdot_et   let_sym_at_equal_tag_vdot_symbol_off_tag_tag_at_in   pipe_et_symbol_tdot_et_symbol_arrow_string   failwith_not_a_et_symbol_make   failwith_not_a_et_symbol_name   failwith_not_a_et_symbol_string_off   failwith_not_a_topson_bare_et_symbol_make   failwith_not_a_topson_bare_et_symbol_name   failwith_not_a_topson_bare_et_symbol_string_off   failwith_not_a_topson_notleaf_et_symbol_make   failwith_not_a_topson_notleaf_et_symbol_name   failwith_not_a_topson_notleaf_et_symbol_string_off   failwith_not_a_topson_ofstring_et_symbol_make   failwith_not_a_topson_ofstring_et_symbol_name   failwith_not_a_topson_ofstring_et_symbol_string_off   let_sym_at_equal_et_symbol_vdot_make_nam_at_s_in   let_underscore_print_error_make_et_of_string_of_string   let_underscore_print_error_name_et_of_string_of_string   let_underscore_print_error_string_off_et_of_string_of_string   print_fatal_error_make_et_of_string_of_string   print_fatal_error_name_et_of_string_of_string   print_fatal_error_string_off_et_of_string_of_string   with_failure_not_a_topson_bare_et_symbol_arrow_make   with_failure_not_a_topson_bare_et_symbol_arrow_name   with_failure_not_a_topson_bare_et_symbol_arrow_string_off   with_failure_not_a_topson_notleaf_et_symbol_arrow_make   with_failure_not_a_topson_notleaf_et_symbol_arrow_name   with_failure_not_a_topson_notleaf_et_symbol_arrow_string_off   with_failure_not_a_topson_ofstring_et_symbol_arrow_make   with_failure_not_a_topson_ofstring_et_symbol_arrow_name   with_failure_not_a_topson_ofstring_et_symbol_arrow_string_off   match_sym_at_with 
+
+
+# --------- for_tag
+
+constructors camlline_for_tag                 = camlline_for_tag_datastructure camlline_for_tag_uno camlline_for_tag_duo camlline_for_tag_trio
+
+constructors camlline_for_tag_datastructure   = camlline_for_tag_datastructure_camltype camlline_for_tag_datastructure_function
+ 
+constructors camlline_for_tag_datastructure_camltype     = camlline_for_tag_datastructure_camltype_uno camlline_for_tag_datastructure_camltype_duo
+
+constructors camlline_for_tag_datastructure_camltype_uno = lpar_a_tag_rpar
+
+constructors camlline_for_tag_datastructure_camltype_duo = lpar_a_b_tag_rpar
+
+constructors camlline_for_tag_datastructure_function = camlline_for_tag_datastructure_function_iter camlline_for_tag_datastructure_function_make camlline_for_tag_datastructure_function_name
+
+constructors camlline_for_tag_datastructure_function_iter = let_map_equal_das_vdot_map let_map2_equal_das_vdot_map2 let_iter_equal_das_vdot_iter let_iter2_equal_das_vdot_iter2
+
+constructors camlline_for_tag_datastructure_function_make       = camlline_for_tag_datastructure_function_make_uno camlline_for_tag_datastructure_function_make_duo camlline_for_tag_datastructure_function_make_trio
+
+constructors camlline_for_tag_datastructure_function_make_uno  = das_vdot_make_tag_a
+constructors camlline_for_tag_datastructure_function_make_duo  = das_vdot_make_tag_a_tag_b 
+constructors camlline_for_tag_datastructure_function_make_trio = das_vdot_make_tag_a_tag_b_tag_c
+
+constructors camlline_for_tag_duo                         = camlline_for_tag_duo_current_top 
+
+constructors camlline_for_tag_duo_current_top             =  let_tag_ec_equal_tag_vdot_make_ec_symbol_sym_ac_soi_at_in tag_vdot_map_left_et_symbol_vdot_ec_symbol_off_et_symbol_tag_at  tag_vdot_map_left_et_symbol_vdot_et_symbol_of_ec_symbol_tag_ac tag_vdot_map_left_et_symbol_vdot_is_ec_symbol_off_et_symbol_tag_at
+
+constructors camlline_for_tag_uno                        = camlline_for_tag_uno_camltype camlline_for_tag_uno_top
+
+constructors camlline_for_tag_uno_top                    = let_make_soi_at_nam_at_s_equal let_make_sym_at_soi_at_equal let_name_tag_at_equal tag_vdot_make_sym_at_soi_at tag_vdot_name_et_symbol_vdot_name_tag_at
+
+constructors camlline_for_tag_uno_camltype               = type_et_tag_equal_et_symbol_tdot_et_symbol_tag
+
+constructors camlline_for_tag_trio                       = lpar_a_b_c_tag_rpar lpar_a_b_c_tag_rpar_tree_footed_capped lpar_a_b_c_tag_rpar_tree_leafed_capped lpar_a_b_c_tag_rpar_triplet lpar_a_b_c_tag_rpar_triplet_list
+
+
+
+

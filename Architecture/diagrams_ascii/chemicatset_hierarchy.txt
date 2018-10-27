@@ -1,0 +1,41 @@
+
+  Frames World              | Interface | External World
+                            |           | Databases
+  values               VCHM |           |
+                         \  |           |
+                          \ |           |
+                           \|           |
+                            \           |
+                            |\          |
+                            | v     defines semipath
+  interfaces                | ICHM  translate semipath into keypdb
+                            |/      retrieve properties from databse
+                            /           |
+                           /|           |
+                          / |           |
+                         /  |           |
+                        v   |           |
+  paths                PCHM |           |
+                        |   |           |
+                        |   |           |
+                        v   |           |
+  formulas             FCHM |           |
+                         \  |           |
+                          \ |           |
+                           \|           |
+                            \           | 
+                            |\          |
+                            | v         |
+  databases                 | DCHM  translate sequence 
+                            |/ | \      |
+                            /  |  \     |
+                           /|  |   \    |
+                          / |  |    \   | 
+                         v  |  |     \  |
+  tags                 TCHM |  v      \ |
+                            | Input    \|
+                            |           \ 
+                            |           |\
+                            |           | v
+                            |           | DCHM/PDB
+                                          database is "Pdb"

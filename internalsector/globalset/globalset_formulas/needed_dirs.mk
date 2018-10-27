@@ -1,0 +1,3 @@
+NEEDED_DIRS := \
+        $(DOMAINSET_SYMBOLS_DIR) \
+ 

@@ -1,0 +1,20 @@
+(*         |-           Skeleton_context_sector   -|          *)
+(*         |                    / | \              | fixed    *)
+(*         |-           Skeleton_context_domain   -| duo      *)
+(* Context |                    / | \              |          *)
+(* Quatuor |-           Skeleton_context_database -|          *)
+(*         |                    / | \              | variable *)
+(*         |-           Skeleton_context_databox  -| duo      *)
+(*         |                      |                           *)
+
+(*                                |                           *)
+(*                          Skeleton_body                     *)
+(*      Skeleton_body_aopefset_anycenter ( | ..._ecppefset_anycenter) *)
+(*             "NWC"                                          *)
+(*         /                     |                \           *)
+(*    Skeleton_body_aopefset_onecenter Skeleton_body_aopefset_onecenter *)
+(*                     "H"                             "He"  .          *)
+
+(*    Skeleton_fence_aopef Skeleton_fence_aopefset ... *)
+(*       "H S 1 1 "      ...   "He S 1 1" ...          *)
+

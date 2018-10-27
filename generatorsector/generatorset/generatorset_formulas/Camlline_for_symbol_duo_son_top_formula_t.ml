@@ -1,0 +1,7 @@
+(** {6 Typing} *)
+
+type camlline_for_symbol_duo_son_top_formula =(** {6 Typing} *)
+  | Camlline_for_symbol_duo_son_top_bare_formula of Camlline_for_symbol_duo_son_top_bare_formula_t.camlline_for_symbol_duo_son_top_bare_formula
+  | Camlline_for_symbol_duo_son_top_notleaf_formula of Camlline_for_symbol_duo_son_top_notleaf_formula_t.camlline_for_symbol_duo_son_top_notleaf_formula
+  | Camlline_for_symbol_duo_son_top_ofstring_formula of Camlline_for_symbol_duo_son_top_ofstring_formula_t.camlline_for_symbol_duo_son_top_ofstring_formula
+;;

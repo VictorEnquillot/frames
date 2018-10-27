@@ -1,0 +1,30 @@
+	digraph jastrowed_psi_pseudo_son {
+		size="14,14";
+		node [
+		     color=yellow, style=filled,
+		     fontsize=24, fontname="Palatino-Italic",fontcolor=black
+		     ];
+		edge [
+        	fontname = "Bitstream Vera Sans"
+        	fontsize = 12
+        	arrowsize="0.7"
+		dir = "down"
+	    ];
+	    
+	    "pseudo electron coordinates" [fontsize=18 label = "pseudo-son Tag:\nelectron coordinates Tag\nobtained from \"basis functions sub-tree\"" shape="record" color = green]
+
+	    Title [label = "The pseudo-son solution" shape="record" color=lightblue, style=filled];
+
+    		Title -> "jastrowed psi"  [style="invis"];
+
+		"jastrowed psi" -> "determinant";
+		"determinant" -> "orbitals";
+		"orbitals" -> "coefficients";
+		"orbitals" -> "basis functions";
+		"basis functions" -> "basis parameters";
+		"basis functions" -> "electron coordinates";
+
+		"jastrowed psi" -> "jastrow";
+		"jastrow" -> "jastrow parameters";
+		"jastrow" -> "pseudo electron coordinates";
+		}

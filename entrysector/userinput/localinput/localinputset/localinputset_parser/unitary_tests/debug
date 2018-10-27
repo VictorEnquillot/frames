@@ -1,0 +1,13 @@
+ledit -x -h ./.debug-history ocamldebug \
+${BAS}/basics.cma \
+${FIL}/files.cma \
+../../../general/datastructures/datastructures.cma \
+../../../commonset/commonset.cma \
+../../../inputset/inputset_common/inputset_common.cma \
+../../../inputset/inputset_lexer/inputset_lexer.cma \
+../../../inputset/inputset_parser/inputset_parser.cma \
+runtest.byt
+
+# 
+# display wrd_l
+# print wrd_l 

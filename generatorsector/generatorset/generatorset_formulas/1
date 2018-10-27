@@ -1,0 +1,84 @@
+(** {3 Item_all_topsons_iterating_formula_v} *)
+
+(** {6 Documenting} *)
+
+let documentation () = 
+  [
+   "Needs : IGNR:Camlparagraph_symbol_by_item_all_topsons_iterating_sextup_provider_v";
+   "Current : FGNR:Item_all_topsons_iterating_formula_v";
+   "Needed-by : FGNR:Item_all_topsons_formula_v";
+   "What-is-it : the Camlparagraph_symbol expressing Item_all_topsons Iterating";
+   "How-is-it-done : build one element list of Camlparagraph Symbol";
+   "Remark : ";
+   "Improve : ";
+   "Example : let make ... = ";
+ ]
+;;
+
+let nam_cod = Management_v.current_module_name (documentation ());;
+
+(** {6 Naming} *)
+
+let name for_iat = "item_all_topsons_iterating_formula";;
+
+let longname for_iat =
+  Format.sprintf "Item_symbol_formula_t.%s" 
+    (String.capitalize (name for_iat))
+
+let string_off for_iat = "";;
+
+let fullname for_iat =
+  Format.sprintf "%s \"%s\"" (longname for_iat) (string_off for_iat)
+;;
+
+(** {6 Working.} *)
+
+let iterating_all_topsons_camlparagraph_symbol_list sex_iat =
+  let sym_cap =
+    Camlparagraph_symbol_by_item_all_topsons_iterating_sextup_provider_v.provide 
+    sex_iat 
+  in
+  [sym_cap]
+;;
+
+let iterating_all_topsons_camlparagraph_symbol_title sex_iat =
+  let sym_iat = Sextuplet_v.left_off_sextuplet sex_iat in
+  let nam_iat = Item_all_topsons_symbol_v.name sym_iat in
+  Camlparagraph_symbol_v.item_title nam_iat
+;;
+
+(** {6 Building.} *)
+
+let build sex_iat =
+    let sym_cap_tit = iterating_all_topsons_camlparagraph_symbol_title sex_iat in
+    let sym_cap_l = iterating_all_topsons_camlparagraph_symbol_list sex_iat in
+
+    sym_cap_tit :: sym_cap_l
+;;
+
+(** {6 Naming.} *)
+
+let make sym_iat soi_ite =
+  let tag_iat = Tag_v.make sym_iat soi_ite in
+  let sex_iat =
+    Item_all_topsons_tag_v.item_all_topsons_sextup_off_item_all_topsons_tag 
+      tag_iat
+  in
+  let sym_cap_l = build sex_iat in
+  let soi_cap_l = 
+    Sole_index_v.son_sole_index_list_of_int_of_length_of_sole_index
+      1 (List.length sym_cap_l)
+      soi_ite
+  in
+
+  List.map2 Tag_v.make sym_cap_l soi_cap_l 
+;;
+
+(** {6 Retrieving.} *)
+
+let retrieve tag_iat = 
+  let sym_iat = Tag_v.symbol_off_tag tag_iat in
+  let soi_ite = Tag_v.sole_index_off_tag tag_iat in
+  make sym_iat soi_ite
+;;
+

@@ -1,0 +1,8 @@
+ter_serial_number                7 11 int 	Ter_serial_number                7 11 int 
+empty_1                         12 17 string 	Empty_1                         12 17 string 
+ter_residue_name                18 20 string 	Ter_residue_name                18 20 string 
+empty_2                         21 21 string 	Empty_2                         21 21 string 
+ter_chain_id                    22 22 char 	Ter_chain_id                    22 22 char 
+ter_residue_sequence_number     23 26 int 	Ter_residue_sequence_number     23 26 int 
+ter_insertion_code              27 27 char 	Ter_insertion_code              27 27 char 
+empty_3                         28 80 string 	Empty_3                         28 80 string 

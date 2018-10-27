@@ -1,0 +1,13 @@
+define Hom_b_2
+       operator 
+         type [ "operator" "set" "body" "creation" "transformation" "constructor" ]
+         operation "homothety"
+         ondomain "figure"
+	 cofactor 
+            cofactor_entity Cen_b 
+            cofactor_basic 2.0 
+	    end -- cofactor
+         end -- operator
+       end -- define
+
+stop

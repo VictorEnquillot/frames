@@ -1,0 +1,33 @@
+        digraph Frames {
+                size="40,15";
+                node [fontsize=50];
+                edge [arrowhead = "vee", arrowsize = "2.0", style="solid", taillabel = ""];
+
+  Title [
+  	label = "The Builder Tree\nDomain Figure", fontsize=80, shape=box, fontname=Courier, color=yellow, style=filled
+  ];
+
+
+
+  "Context\nSector\nExternal"  [color=blue, style="setlinewidth(5)"];
+  "Context\nDomain\nCoordinate" [color=blue, style="setlinewidth(5)"];
+  "Context\nDatabase" [color=blue, style="setlinewidth(5)"];
+  "Context\nDatabox"  [color=blue, style="setlinewidth(5)"];
+  "Set\nBody\nTriangle"  [color=green, style="setlinewidth(5)"];
+  "Set\nFence\nPoint"  [color=lavender, style=filled];
+  "Set\nFence\nPoint "  [color=lavender, style=filled];
+  "Set\nFence\nPoint  "  [color=lavender, style=filled];
+
+  Title -> "Context\nSector\nExternal" [ style="invis"];
+
+  "Context\nSector\nExternal" -> "Context\nDomain\nCoordinate";	
+  "Context\nDomain\nCoordinate" -> "Context\nDatabase";
+  "Context\nDatabase" -> "Context\nDatabox"; 
+  "Context\nDatabox" -> "Set\nBody\nTriangle"; 
+  "Set\nBody\nTriangle" -> "Set\nFence\nPoint"; 
+  "Set\nBody\nTriangle" -> "Set\nFence\nPoint "; 
+  "Set\nBody\nTriangle" -> "Set\nFence\nPoint  "; 
+
+
+}
+

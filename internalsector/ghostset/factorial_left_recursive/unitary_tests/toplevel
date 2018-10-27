@@ -1,0 +1,11 @@
+ledit -x -h ./.toplevel-history ocaml \
+-I ../../../general/basics \
+-I ../../../general/files \
+-I ../../../general/datastructures \
+-I ../ \
+unix.cma str.cma \
+../../../general/basics/basics.cma \
+../../../general/files/files.cma \
+../../../general/datastructures/datastructures.cma \
+../factorial_left_recursive.cma \
+ 

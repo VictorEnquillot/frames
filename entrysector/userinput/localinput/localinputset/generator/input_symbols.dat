@@ -1,0 +1,90 @@
+constructors  figure                   =   input 
+
+constructors  input                    =
+input_basic
+input_command
+input_variable
+input_property
+
+constructors input_variable             =
+input_variable_context
+input_external_entity
+input_variable_operator
+input_variable_target
+
+constructors  input_command             =
+input_command_define
+input_command_print
+input_command_read
+input_command_set
+input_command_title
+input_command_write
+
+constructors  input_constant            =
+input_constant_boolean:ofstring
+input_constant_integer:ofstring
+input_constant_float:ofstring
+input_constant_string:ofstring
+
+constructors  input_basic               =
+input_basic_boolean:ofstring
+input_basic_integer:ofstring
+input_basic_float:ofstring
+input_basic_string:ofstring
+
+constructors  input_entity              =
+input_constant
+input_keyword
+
+constructors  input_frames             =
+input_frames_category:ofstring
+input_frames_database:ofstring
+input_frames_domain:ofstring
+input_frames_file:ofstring
+input_frames_function:ofstring
+input_frames_module:ofstring
+input_frames_name:ofstring
+
+constructors  input_property           =
+
+   transformed 
+
+input_property_category:ofstring
+input_property_domain:ofstring
+input_property_file:ofstring
+input_property_operator
+input_property_name:ofstring
+input_property_ratio
+input_property_scale_factor
+
+constructors  input_external_entity     =
+input_coordinate
+input_coordinate_tuple
+input_elementary
+input_figure
+input_units   
+
+constructors input_lexeme_keyword            =
+input_lexeme_keyword_category
+input_lexeme_keyword_center
+input_lexeme_keyword_comment
+input_lexeme_keyword_created_by
+input_lexeme_keyword_database
+input_lexeme_keyword_debug
+input_lexeme_keyword_domain
+input_lexeme_keyword_end
+input_lexeme_keyword_name
+input_lexeme_keyword_operand
+input_lexeme_keyword_operator
+input_lexeme_keyword_ratio
+input_lexeme_keyword_scale_factor
+input_lexeme_keyword_stop
+input_lexeme_keyword_target
+input_lexeme_keyword_trace
+
+constructors  input_units              =   input_units_angle:ofstring   input_units_energy:ofstring   input_units_length:ofstring   input_units_temperature:ofstring   input_units_time:ofstring
+
+constructors  input_variable           =   input_variable_reserved   input_variable_free:ofstring
+
+constructors  input_variable_reserved  =   input_cpu   input_date   input_run   input_time   input_title   input_user   
+

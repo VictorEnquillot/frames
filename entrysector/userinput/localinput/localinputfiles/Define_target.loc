@@ -1,0 +1,9 @@
+define Poi_h
+       target 
+         type [ "property" "operand" "body" "target" "created" "constructor" ]
+	 target_operator Hom_b_2 
+         target_operand Poi_a
+	 end -- target
+       end -- define
+
+stop

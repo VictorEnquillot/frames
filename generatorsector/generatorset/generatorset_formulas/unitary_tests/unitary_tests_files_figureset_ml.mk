@@ -1,0 +1,86 @@
+FIGURESET_ML := \
+Category_formula_u_figureset.ml \
+Domainset_formula_u_figureset.ml \
+
+FIGURESET_FORMULA_ML := \
+# Camlline_formula_u_figureset_formula_x_typing.ml \
+# Camlline_formula_u_figureset_formula_x_making.ml \
+# Camlline_formula_u_figureset_formula_point_typing.ml \
+# Camlline_formula_u_figureset_formula_point_making.ml \
+# Camlline_formula_u_figureset_formula_vector_making.ml \
+# Camlline_formula_u_figureset_formula_triangle_isoceles_equilateral_typing.ml \
+# Camlline_formula_u_figureset_formula_triangle_isoceles_making.ml \
+# Camlline_formula_u_figureset_formula_triangle_isoceles_typing.ml \
+# Camlparagraph_formula_u_figureset_formula_triangle_isoceles_making.ml \
+# Entity_formula_u_figureset_formula_figureset.ml \
+# Item_formula_u_figureset_formula_triangle_isoceles_making.ml \
+# Item_formula_u_figureset_formula_triangle_isoceles_naming.ml \
+# Usagefile_formula_u_figureset_formula_triangle_isoceles_naming.ml \
+
+FIGURESET_SYMBOL_ML := \
+Camlline_formula_u_figureset_symbol_figureset_extracting_grandson.ml \
+Camlline_formula_u_figureset_symbol_figureset_extracting_topson.ml \
+Camlline_formula_u_figureset_symbol_figureset_fullnaming.ml \
+Camlline_formula_u_figureset_symbol_figureset_making.ml \
+Camlline_formula_u_figureset_symbol_figureset_typing.ml \
+Camlline_formula_u_figureset_symbol_figureset_upgrading_grandson.ml \
+Camlline_formula_u_figureset_symbol_triangle_isoceles_abbreviating.ml \
+Camlline_formula_u_figureset_symbol_triangle_isoceles_making.ml \
+Camlline_formula_u_figureset_symbol_triangle_isoceles_naming.ml \
+Camlline_formula_u_figureset_symbol_triangle_isoceles_string_offing.ml \
+Camlline_formula_u_figureset_symbol_triangle_making.ml \
+Camlline_formula_u_figureset_symbol_triangle_naming.ml \
+Item_formula_u_figureset_symbol_figureset_extracting_grandson.ml \
+Item_formula_u_figureset_symbol_figureset_extracting_topson.ml \
+Item_formula_u_figureset_symbol_triangle_abbreviating.ml \
+Item_formula_u_figureset_symbol_triangle_isoceles_abbreviating.ml \
+# Camlline_formula_u_figureset_symbol_figureset_making_both.ml \
+# Camlparagraph_formula_u_figureset_symbol_figureset.ml \
+# Section_formula_u_figureset_symbol_figureset.ml \
+# Group_formula_u_figureset_symbol_figureset.ml \
+# Item_all_topsons_making_formula_u_figureset_symbol_figureset.ml \
+# Item_all_topsons_naming_formula_u_figureset_symbol_figureset.ml \
+# Item_all_topsons_typing_formula_u_figureset_symbol_figureset.ml \
+# Item_each_grandson_leaf_abbreviating_grandson_formula_u_figureset_symbol_figureset.ml \
+# Item_each_topson_leaf_abbreviating_topson_formula_u_figureset_symbol_figureset.ml \
+# Item_each_grandson_notleaf_upgrading_grandson_formula_u_figureset_symbol_figureset.ml \
+# Item_each_topson_notleaf_upgrading_topson_formula_u_figureset_symbol_figureset.ml \
+# Item_only_top_documenting_formula_u_figureset_symbol_figureset.ml \
+# Entity_formula_u_figureset_symbol_figureset.ml \
+# Entity_formula_u_figureset_symbol_triangle_isoceles.ml \
+# Camlline_duo_function_formula_u_figureset_symbol_figureset_upgrading.ml \
+# Camlline_formula_u_figureset_symbol_triangle_isoceles_typing.ml \
+# Camlline_formula_u_figureset_symbol_triangle_isoceles_making.ml \
+# Camlline_formula_u_figureset_symbol_figureset_typing.ml \
+# Camlline_formula_u_figureset_symbol_figureset_making.ml \
+# Camlparagraph_formula_u_figureset_symbol_triangle_isoceles_naming.ml \
+# Camlparagraph_formula_u_figureset_symbol_triangle_isoceles_typing.ml \
+# Camlparagraph_formula_u_figureset_symbol_triangle_typing.ml \
+# Camlparagraph_formula_u_figureset_symbol_triangle_upgrading.ml \
+# Contentfile_formula_u_figureset_symbol_figureset.ml \
+# Item_formula_u_figureset_symbol_figureset_typing.ml \
+# Item_formula_u_figureset_symbol_triangle_isoceles_documenting.ml \
+# Item_formula_u_figureset_symbol_triangle_isoceles_ending.ml \
+# Item_formula_u_figureset_symbol_triangle_isoceles_heading.ml \
+# Item_formula_u_figureset_symbol_triangle_isoceles_making.ml \
+# Item_formula_u_figureset_symbol_triangle_isoceles_typing.ml \
+ 
+FIGURESET_TAG_ML := \
+Contentfile_formula_u_figureset_tag_triangle_isoceles.ml \
+Usagefile_formula_u_figureset_tag_type_alone.ml \
+Usagefile_formula_u_figureset_tag_value_alone.ml \
+Entity_formula_u_figureset_tag_triangle_isoceles.ml \
+Camlline_formula_u_figureset_tag_triangle_isoceles_typing.ml \
+Camlline_formula_u_figureset_tag_triangle_isoceles_making.ml \
+Item_formula_u_figureset_tag_triangle_isoceles_making.ml \
+  
+FILES_INACTIVE := \
+
+UNITARY_TESTS_FILES_FIGURESET_ML := \
+$(FIGURESET_ML) \
+$(FIGURESET_SYMBOL_ML) \
+# $(FIGURESET_FORMULA_ML) \
+# $(FIGURESET_TAG_ML) \
+
+
+

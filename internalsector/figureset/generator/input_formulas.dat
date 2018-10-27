@@ -1,0 +1,12 @@
+     builders local_entity_database_constructor:ofstring = datastructure entity;
+     builders local_entity_domain_constructor:ofstring = datastructure entity;
+     builders local_entity_coordinate_constructor:ofstring = datastructure entity;;
+     builders local_point_constructor:ofstring = datastructure entity;
+     builders local_triangle_isosceles_acute:ofstring = datastructure entity;
+     builders local_triangle_isosceles_equilateral:ofstring = datastructure entity;
+     builders local_triangle_isosceles_obtuse:ofstring = datastructure entity;
+     builders local_triangle_isosceles_right:ofstring = datastructure entity;
+     builders local_triangle_scalene_acute:ofstring = datastructure entity;
+     builders local_triangle_scalene_obtuse:ofstring = datastructure entity;
+     builders local_triangle_scalene_right:ofstring = datastructure entity;
+     builders local_vector_constructor:ofstring = datastructure entity;

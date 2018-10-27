@@ -1,0 +1,29 @@
+ms lexer_keyword_named_cofactor_entity	 lexer_keyword_nextvarnamed_cofactor_entity  *ml
+ms  lexer_keyword_named_createdby	 lexer_keyword_nextvarnamed_createdby  *ml
+ms  lexer_keyword_named_external_context	 lexer_keyword_nextvarnamed_external_context  *ml
+ms  lexer_keyword_named_external_variable  lexer_keyword_nextvarnamed_external_variable  *ml
+ms  lexer_keyword_named_target_operand	  lexer_keyword_nextvarnamed_target_operand  *ml
+ms  lexer_keyword_named_target_operator	  lexer_keyword_nextvarnamed_target_operator  *ml
+ms  lexer_keyword_named_type	 lexer_keyword_nextvarnamed_type  *ml
+ms  lexer_keyword_named_units	  lexer_keyword_nextvarnamed_units  *ml
+
+ms   lexer_keyword_named_category	  lexer_keyword_stringed_category  *ml
+ms   lexer_keyword_named_cofactor	  lexer_keyword_stringed_cofactor  *ml
+ms   lexer_keyword_named_database	  lexer_keyword_stringed_database  *ml
+ms   lexer_keyword_named_databox	  lexer_keyword_stringed_databox  *ml
+ms   lexer_keyword_named_domain	  lexer_keyword_stringed_domain  *ml
+ms  lexer_keyword_named_external_name	 lexer_keyword_stringed_external_name  *ml
+ms   lexer_keyword_named_file 	  lexer_keyword_stringed_file  *ml
+ms   lexer_keyword_named_function	  lexer_keyword_stringed_function  *ml
+ms   lexer_keyword_named_module	  lexer_keyword_stringed_module  *ml
+ms   lexer_keyword_named_ondomain	  lexer_keyword_stringed_ondomain  *ml
+ms   lexer_keyword_named_operation	  lexer_keyword_stringed_operation  *ml
+
+ms   lexer_keyword_named_end	  lexer_keyword_blocknamed_end  *ml
+
+#   "Author : François Colonna 21 avril 2017 at 15:23:02+02:00";
+
+msrf by_inputbox_name by_basicname_inputbox *ml
+msrf by_variable_name_n_inputbox_name  by_basicname_variable_n_basicname_inputbox *ml
+
+let bna_ibo = Basicname_v.basicname_inputbox_of_string nam_ibo in

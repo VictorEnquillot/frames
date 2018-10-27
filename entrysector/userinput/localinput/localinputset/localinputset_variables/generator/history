@@ -1,0 +1,70 @@
+ms "nam_dom, nam_sec"  "bna_dom, bna_sec" *ml 
+ms "(nam_ibo, nam_iba, nam_dom, nam_sec)" "(bna_ibo, bna_iba, bna_dom, bna_sec)" *ml
+ms "(nam_iba, nam_dom, nam_sec)" "(bna_iba, bna_dom, bna_sec)" *ml
+ms "(nam_ibo, nam_iba)" "(bna_ibo, bna_iba)"  *ml
+mw nam_lba  nam_iba *ml
+mw bna_nba  bna_iba *ml
+mw soi_nba  soi_iba *ml
+mw nam_lbo  nam_ibo *ml
+mw bna_nbo  bna_ibo *ml
+mw soi_nbo  soi_ibo *ml
+
+ms "let build nam_" "let build bna_" *ml
+
+ms "by_basicname_sector_provider_v.provide nam_sec" "by_basicname_sector_provider_v.provide bna_sec" *ml
+ms "by_basicname_domain_provider_v.provide nam_dom" "by_basicname_domain_provider_v.provide bna_dom" *ml
+ms "by_basicname_inputbase_provider_v.provide nam_iba" "by_basicname_inputbase_provider_v.provide bna_iba" *ml
+ms "by_basicname_inputbox_provider_v.provide nam_ibo" "by_basicname_inputbox_provider_v.provide bna_ibo" *ml
+
+ms "let nam_iba = Localinput_basicname_inputbase_" "let bna_iba = Localinput_basicname_inputbase_" *ml
+ms "let nam_ibo = Localinput_basicname_inputbox_" "let bna_ibo = Localinput_basicname_inputbox_" *ml
+
+ms "let nam_sec = Localinput_basicname_sector_by_unit_provider_v.provide" "let bna_sec = Localinput_basicname_sector_by_unit_provider_v.provide" *ml
+ms "let soi_sec = Context_sole_index_by_sector_name_provider_v.provide nam_sec in" "let soi_sec = Context_sole_index_by_basicname_sector_provider_v.provide bna_sec in" *ml
+
+ms "let nam_sec = Localinput_basicname_sector_by_unit_provider_v.provide" "let bna_sec = Localinput_basicname_sector_by_unit_provider_v.provide" *ml
+
+
+ms "string Duo_t.duo" "Basicname_t.basicname Duo_t.duo" *ml 
+ms "Duo_v.name (fun s->s)" "Duo_v.name Basicname_v.name" *register_v.ml 
+ms "string)" "Basicname_t.basicname)" *register_v.ml 
+
+
+mscf sector_name basicname_sector  Context_sole_index_by_sector_name_provider_v.ml
+msrf Basicname_inputbase_name Basicname_inputbase *ml *mk
+msrf Basicname_inputbox_name_by Basicname_inputbox_by *ml *mk
+msrf Inputbase_name_by Basicname_inputbase_name_by *ml *mk
+msrf Inputbox_name_by Basicname_inputbox_name_by *ml *mk
+msrf Inputbox_name_n_inputbase_name Basicname_inputbox_n_basicname_inputbase *ml *mk
+msrf Inputbox_name_n_inputbase_name_by Basicname_inputbox_n_basicname_inputbase_by *ml *mk
+
+msrf _context_domain_name_ _context_basicname_domain *ml *mk
+msrf _context_name_trio_ _basicname_trio_ *ml *mk
+msrf Context_name_trio_by_fullnameofdirectory  Basicname_trio_by_fullnameofdirectory *ml *mk
+
+ms "by_basicname_sector_provider_v.provide nam_sec" "by_basicname_sector_provider_v.provide bna_sec" *ml
+
+msrf by_inputbase_name                 by_basicname_inputbase  *ml *mk
+msrf by_inputbox_name                  by_basicname_inputbox  *ml *mk
+msrf by_inputbox_name_n_inputbase_name  by_basicname_inputbox_n_basicname_inputbase  *ml *mk
+msrf by_domain_name_n_sector_name     by_basicname_domain_n_basicname_sector  *ml *mk
+msrf by_sector_name_                  by_basicname_sector_ *ml *mk
+
+msrf _context_basicname_domain _basicname_domain *ml *mk
+msrf _context_inputbase_name_by _basicname_inputbase_by *ml *mk
+msrf _context_inputbox_name_by_ _basicname_inputbox_by_ *ml *mk 
+msrf _context_domain_name      _basicname_domain *ml *mk
+msrf _context_name_trio        _basicname_trio *ml *mk
+msrf _context_name_quatuor     _basicname_quatuor *ml *mk
+msrf _context_sector_name      _basicname_sector *ml *mk
+
+ms Localinput_basicname_inputbox_by_any_sole_index_provider_v Basicname_inputbox_by_any_sole_index_provider_v *ml
+dlw Localinput_basicname_inputbox_by_any_sole_index_provider_v *mk
+kef Localinput_basicname_inputbox_by_any_sole_index_provider_v.ml
+
+
+ms Localinput_parser_v.localinput_symbol_tree_root_inputbox_of_inputbox_name  Localinput_parser_v.localinput_symbol_tree_root_inputbox_of_basicname_inputbox *ml
+
+#   "Author : François Colonna 21 avril 2017 at 12:41:37+02:00";
+
+msrf 

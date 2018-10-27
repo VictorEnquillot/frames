@@ -1,0 +1,5 @@
+let nam_dba = "nwchem";;
+let nam_bas = "lanl2dz";;
+
+Parameters_general_register_v.store "database-name" nam_dba;;
+Parameters_general_register_v.store "basisset-name" nam_bas;;

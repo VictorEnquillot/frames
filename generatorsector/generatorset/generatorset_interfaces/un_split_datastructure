@@ -1,0 +1,18 @@
+let un_split_all_datastructure_leaf_list_of_tree tre = 
+
+  let rec apply = function
+    | Tree_t.Empty -> Tree_t.Empty 
+    | Tree_t.Leaf lf as t -> t
+    | Tree_t.Inner (roo, son_tl) as t ->
+	let ent_nam_l = Tree_v.topson_node_list_off_tree t in
+	let ent_nam_hd = List.hd ent_nam_l in
+	match ent_nam_hd with
+	| n when Entity_symbol_v.is_entity_external_datastructure_symbol_of_string n ->
+	    let str = List_v.name_bare_with_separator (fun s->s) " " ent_nam_l in
+	    Tree_t.Inner (roo, [Tree_v.make_of_leaf str])
+	| _ -> 
+	    Tree_t.Inner (roo, List.map apply son_tl)
+  in
+  apply tre
+;;
+

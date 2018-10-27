@@ -1,0 +1,6 @@
+coordinates_units_length  bohr
+coordinates_units_angle   radian
+coordinates_kind          spherical 
+figure_kind point
+figure_name A
+vertex A_A       1. 0.785398163397448279 0.785398163397448279

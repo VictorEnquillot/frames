@@ -1,0 +1,2 @@
+
+type section_for_symbol_body_son_try_top_of_son_with_failure_arrow_tag = Section_for_symbol_body_son_try_top_of_son_with_failure_arrow_symbol_t.section_for_symbol_body_son_try_top_of_son_with_failure_arrow_symbol Tag_t.tag;;

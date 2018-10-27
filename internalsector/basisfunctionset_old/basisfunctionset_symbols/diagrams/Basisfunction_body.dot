@@ -1,0 +1,12 @@
+digraph basisfunction_body {
+  size="14,14";
+  node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+  edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+  Title [label = "The Constructor Tree Body\nfor Basisfunction Domain" shape="record" color=lightblue, style=filled];
+  Title -> "Bf_set\nbody" [style="invis"];
+
+  "Bf_set\nbody" -> {"Bf_set\nbody\nset\ncentered" "Bf_set\nbody\nset\nperiodic"};
+  "Bf_set\nbody\nset\ncentered" -> {"Bf_set\nbody\nset\ncentered\nfull" "Bf_set\nbody\nset\ncentered\nc\nindexed" "Bf_set\nbody\nset\ncentered\nl\nindexed" "Bf_set\nbody\nset\ncentered\nn\nindexed"};
+  "Bf_set\nbody\nset\nperiodic" -> {"Bf_set\nbody\nset\nperiodic\nbloch"};
+   }

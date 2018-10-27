@@ -1,0 +1,29 @@
+# Makefile for directory units
+
+LIB = tools
+
+SETUP_DIR = ../../..
+MAKEFILES_DIR = $(SETUP_DIR)/Mk
+
+# All Directories and Libraries
+include $(MAKEFILES_DIR)/All_directories_and_libraries.mk
+
+# needed libs
+NEEDED_DIRS =
+
+NEEDED_LIBS = 
+
+# Include the generic configuration for Caml applications.
+include $(MAKEFILES_DIR)/Config.mk
+
+# CAMLINTFILES (*.mli) from include 
+include ocaml_files_mli.mk
+
+# CAMLC_INCLUDES 
+CAML_INCLUDED_DIRS = -I ./
+   
+# Create Library
+include $(MAKEFILES_DIR)/Library.mk
+
+# Include the generic setup for Caml applications.
+include $(MAKEFILES_DIR)/Caml.mk

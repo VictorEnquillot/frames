@@ -1,0 +1,71 @@
+msrf perator_as_body perator_as_set_body *ml *mk
+msrf perator_as_fence perator_as_set_fence *ml *mk
+msrf perator_body perator_set_body *ml *mk
+msrf perator_fence perator_set_fence *ml *mk
+
+msrf calinput_as_body calinput_as_set_body *ml *mk
+msrf calinput_as_fence calinput_as_set_fence *ml *mk
+msrf calinput_body calinput_set_body *ml *mk
+msrf calinput_fence calinput_set_fence *ml *mk
+
+msrf b1pointsdata_as_body b1pointsdata_as_set_body *ml *mk
+msrf b1pointsdata_as_fence b1pointsdata_as_set_fence *ml *mk
+msrf b1pointsdata_body b1pointsdata_set_body *ml *mk
+msrf b1pointsdata_fence b1pointsdata_set_fence *ml *mk
+
+ms Localinput_set_fence_cell_external_name_string_off_by_input_fullnameoffile_n_localinput_set_fence_variable_name_entity_string_off Localinput_set_fence_cell_external_name_string_off_by_inputbox_name_n_localinput_set_fence_variable_name_entity_string_off *ml
+
+mw Coordinate_tag_t.elementary_tag Coordinate_tag_t.coordinate_tag *ml
+
+msrf _by_input_fullnameoffile_n_localinput_set_fence_variable_name_entity_string_off _by_inputbox_name_n_localinput_set_fence_variable_name_entity_string_off *ml *mk 
+by_inputbox_name_n_localinput_set_fence
+msrf _by_input_fullnameoffile_n_input_fence_variable_name_entity_string_off  _by_inputbox_name_n_localinput_set_fence_variable_name_entity_string_off *ml *mk
+
+msrf _by_input_fullnameoffile_ _by_inputbox_name_ *ml *mk
+ms Input_fullnameoffile_by_sole_index_provider_v Inputbox_name_by_any_sole_index_provider_v *ml
+
+mw sof_ine sof_lne *ml
+
+msrf by_database_name_n_databox_name by_databox_name_n_database_name *ml *mk
+
+ms "(nam_dba, nam_dbo)" "(nam_dbo, nam_dba)" *ml
+
+mw Parameter_tag_t.elementary_tag Parameter_tag_t.parameter_tag *ml
+
+mw fno_inp nam_ibo *ml
+
+mw sym_ele sym_par Par*ml
+mw tag_ele tag_par Par*ml
+mw tag_ele_l tag_par_l Par*ml
+
+
+msrf Operator_tag_all_list_by_inputbox_name Operator_tag_all_list_by_inputbox_name_n_inputbase_name *ml
+
+#   "Author : François Colonna 20 mars 2017 at 11:29:35+01:00";
+
+msrf property_set_fence_operand_external property_operand_fence_external *ml *mk
+msrf property_set_fence_operator property_operator_fence *ml *mk
+msrf property_set_fence_operator property_operator_fence *ml *mk
+msrf property_set_body_operand property_operand_body *ml *mk
+msrf property_set_body_command property_command_body *ml *mk
+msrf property_set_body_command property_command_body *ml *mk
+msrf property_set_body_target property_target_body *ml *mk
+msrf property_set_body_target property_target_body *ml *mk
+
+msrf Property_set_fence_operand_external Property_operand_fence_external *ml *mk
+msrf Property_set_fence_operator Property_operator_fence *ml *mk
+msrf Property_set_fence_operator Property_operator_fence *ml *mk
+msrf Property_set_body_operand Property_operand_body *ml *mk
+msrf Property_set_body_command Property_command_body *ml *mk
+msrf Property_set_body_command Property_command_body *ml *mk
+msrf Property_set_body_target Property_target_body *ml *mk
+msrf Property_set_body_target Property_target_body *ml *mk
+
+ms property_set_fence_operand_external property_operand_fence_external do_envelope_all*sh
+ms property_set_fence_operator property_operator_fence do_envelope_all*sh
+ms property_set_fence_operator property_operator_fence do_envelope_all*sh
+ms property_set_body_operand property_operand_body do_envelope_all*sh
+ms property_set_body_command property_command_body do_envelope_all*sh
+ms property_set_body_command property_command_body do_envelope_all*sh
+ms property_set_body_target property_target_body do_envelope_all*sh
+ms property_set_body_target property_target_body do_envelope_all*sh

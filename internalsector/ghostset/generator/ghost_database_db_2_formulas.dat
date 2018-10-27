@@ -1,0 +1,9 @@
+     builders database_entity_db_2_database:ofstring = singlet string
+     builders database_entity_db_2_name:ofstring = singlet string
+     builders database_entity_db_2_triangle:ofstring = doublet   database_entity_db_2_summit  database_entity_db_2_basis
+     builders database_entity_db_2_summit:ofstring = singlet string
+     builders database_entity_db_2_basis:ofstring = doublet   database_entity_db_2_summit   database_entity_db_2_summit
+     builders database_entity_db_2_units:ofstring = singlet string
+     builders database_entity_db_2_float = singlet string 	      
+
+     builders fake = singlet string

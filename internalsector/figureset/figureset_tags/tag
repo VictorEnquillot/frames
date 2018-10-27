@@ -1,0 +1,47 @@
+(** {3 Figure_tag_v} *)
+
+
+let documentation () = 
+[
+  "Needs: ";
+  "Current : TFIG:Figure_tag_v";
+  "Needed-by: ";
+  "What-is-it: ";
+  "How-is-it-done: ";
+  "Example: ";
+]
+;;
+
+(** {6 Naming} *)
+
+let name_as_symbol tag_fig =
+  let sym_fig = Tag_v.entity_off_tag tag_fig in
+  Figure_symbol_v.name sym_fig
+;;
+
+let as_string tag_fig =
+  Tag_v.as_string Figure_symbol_v.name tag_fig
+;;
+
+let name tag_fig =
+  Tag_v.name Figure_symbol_v.name tag_fig
+;;
+
+let string_off tag_fig =
+  Tag_v.string_off Figure_symbol_v.string_off tag_fig
+;;
+
+let longname tag_fig =
+  Tag_v.longname Figure_symbol_v.longname tag_fig
+;;
+
+let fullname tag_fig =
+  Tag_v.fullname Figure_symbol_v.fullname tag_fig
+;;
+
+(** {6 Making} *)
+
+let make soi_fig nam_fig s =
+  let sym_fig = Figure_symbol_v.make nam_fig s in
+  Tag_v.make sym_fig soi_fig
+;;

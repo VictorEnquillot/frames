@@ -1,0 +1,17 @@
+cp $ESKE/Skeleton_envelope_[tv].ml .
+cp $ESKE/Skeleton_set_fence_envelope_[tv].ml .
+
+msrf skeleton figure Skeleton_*ml
+msrf Skeleton Figure Skeleton_*ml
+
+msrf parameter coordinate *ml
+msrf Parameter Coordinate *ml
+
+ms sym_psf sym_csf *ml
+ms tag_par_psf tag_coo_csf *ml
+ms env_psb env_csb *ml
+mw tag_psb tag_csb *ml
+ms eee_par_ eee_coo_  *ml
+
+mw tag_par tag_coo *ml
+mw tag_ssf tag_fsf *ml

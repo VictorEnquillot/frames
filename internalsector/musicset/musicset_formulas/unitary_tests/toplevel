@@ -1,0 +1,9 @@
+ledit -x -h ./.toplevel-history ocaml \
+-I ../../../general/basics \
+-I ../../../general/files \
+-I ../../../general/datastructures \
+-I ../../musicset_symbols \
+-I ../ \
+unix.cma str.cma \
+../musicset_formulas.cma
+

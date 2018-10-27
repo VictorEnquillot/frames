@@ -1,0 +1,19 @@
+set debug 
+      module "provider"
+      function "build"
+      end -- debug
+    end -- set 
+-(-
+set cpu 
+      module
+        external_name "F"
+    end -- set
+
+set trace 
+      function 
+         external_name "G"
+         end -- function
+      end -- trace
+    end -- set 
+-)-
+stop

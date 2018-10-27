@@ -1,0 +1,20 @@
+let retrieve tag_ite =
+  let sym_cap_l = 
+    Camlparagraph_symbol_list_by_item_tag_provider_v.provide
+      tag_ite
+  in
+  let gss_cap_l = List.map 
+      Generatorset_symbol_v.generatorset_symbol_of_camlparagraph_symbol 
+      sym_cap_l 
+  in
+  let soi_ite = Tag_v.sole_index_off_tag tag_ite in
+  let soi_cap_l = Sole_index_v.son_sole_index_list_of_length_of_sole_index
+      (List.length sym_cap_l)
+      soi_ite
+  in
+  List.iter2 
+    Generatorset_symbol_by_sole_index_production_provider_v.store
+    soi_cap_l gss_cap_l;
+  
+  List.map2 Tag_v.make sym_cap_l soi_cap_l
+;; 

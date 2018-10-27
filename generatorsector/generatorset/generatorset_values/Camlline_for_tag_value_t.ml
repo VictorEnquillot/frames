@@ -1,0 +1,8 @@
+type camlline_for_tag_value =
+  | Camlline_for_tag_datastructure_value of Camlline_for_tag_datastructure_value_t.camlline_for_tag_datastructure_value
+  | Camlline_for_tag_uno_value of Camlline_for_tag_uno_value_t.camlline_for_tag_uno_value
+  | Camlline_for_tag_duo_value of Camlline_for_tag_duo_value_t.camlline_for_tag_duo_value
+  | Camlline_for_tag_trio_value of Camlline_for_tag_trio_value_t.camlline_for_tag_trio_value
+;;
+
+

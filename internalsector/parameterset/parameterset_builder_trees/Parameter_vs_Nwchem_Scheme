@@ -1,0 +1,4 @@
+(* Parameter_vs_Nwchem_Scheme *)
+(*    Parameter_set_body_tuple_aopef   Nwchemdata_set_body_node_aoset_numericalvalues  *)
+(*           String_off                                   String_off                   *)                       
+(*           "ne p 3 1"               <=              "Ne P 5 GAUSSIAN 1"              *)

@@ -1,0 +1,74 @@
+(** {6 Closure_units} *)
+
+let closure_units tag_ttt =
+  let soi_ttt = Tag_v.sole_index_off_tag tag_ttt in
+  let sym_ttt = Tag_v.entity_off_tag tag_ttt in
+  match sym_ttt with
+  | This_symbol_t.Sibling_1_symbol sym_sib_1 ->
+      let tag_sib_1 = Tag_v.make sym_sib_1 soi_ttt in	
+      Sibling_1_envelope_v.closure_units tag_sib_1
+
+  | This_symbol_t.Sibling_2_symbol sym_sib_2 ->
+      let tag_sib_2 = Tag_v.make sym_sib_2 soi_ttt in	
+      Sibling_2_envelope_v.closure_units tag_sib_2
+
+  | This_symbol_t.Sibling_3_symbol sym_sib_3 ->
+      let tag_sib_3 = Tag_v.make sym_sib_3 soi_ttt in	
+      Sibling_3_envelope_v.closure_units tag_sib_3
+;;
+
+let closure_units_as_tuple tag_ttt = 
+  let soi_ttt = Tag_v.sole_index_off_tag tag_ttt in
+  let sym_ttt = Tag_v.entity_off_tag tag_ttt in
+  match sym_ttt with
+  | This_symbol_t.Sibling_1_symbol sym_sib_1 ->
+      let tag_sib_1 = Tag_v.make sym_sib_1 soi_ttt in	
+      Sibling_1_envelope_v.closure_units_as_tuple tag_sib_1
+
+  | This_symbol_t.Sibling_2_symbol sym_sib_2 ->
+      let tag_sib_2 = Tag_v.make sym_sib_2 soi_ttt in	
+      Sibling_2_envelope_v.closure_units_as_tuple tag_sib_2
+
+  | This_symbol_t.Sibling_3_symbol sym_sib_3 ->
+      let tag_sib_3 = Tag_v.make sym_sib_3 soi_ttt in	
+      Sibling_3_envelope_v.closure_units_as_tuple tag_sib_3
+;;
+
+let closure_units_as_tuple_list tag_ttt =
+  let soi_ttt = Tag_v.sole_index_off_tag tag_ttt in
+  let sym_ttt = Tag_v.entity_off_tag tag_ttt in
+  match sym_ttt with
+  | This_symbol_t.Sibling_1_symbol sym_sib_1 ->
+      let tag_sib_1 = Tag_v.make sym_sib_1 soi_ttt in	
+      Sibling_1_envelope_v.closure_units_as_tuple_list tag_sib_1
+
+  | This_symbol_t.Sibling_2_symbol sym_sib_2 ->
+      let tag_sib_2 = Tag_v.make sym_sib_2 soi_ttt in	
+      Sibling_2_envelope_v.closure_units_as_tuple_list tag_sib_2
+
+  | This_symbol_t.Sibling_3_symbol sym_sib_3 ->
+      let tag_sib_3 = Tag_v.make sym_sib_3 soi_ttt in	
+      Sibling_3_envelope_v.closure_units_as_tuple_list tag_sib_3
+;;
+
+(** {6 Closure} *)
+
+let closure tag_ttt =
+  let cun_ttt = closure_units tag_ttt in
+  Closure_v.closure_of_closure_units cun_ttt
+;;
+
+(** {6 Measure} *)
+
+let measure_tuple_of_this_tag tag_ttt =
+  closure_units_as_tuple tag_ttt 
+;;
+
+let measure_tuple_list_of_this_tag tag_ttt =
+  closure_units_as_tuple_list tag_ttt 
+;;
+
+let measure_list_of_this_tag tag_ttt =
+  closure_units tag_ttt 
+;;
+

@@ -1,0 +1,7 @@
+let pre_sym_beg s = Localinput_lexer_symbol_v.is_localinput_lexer_keyword_external_name s;;
+let pre_sym_end s = Localinput_lexer_symbol_v.is_localinput_lexer_basic_string_constructor s;;
+
+let sym_lex_sl = List_v.sublist_of_predicate_included_of_predicate_included_of_list  pre_sym_beg  pre_sym_end sym_lex_l;;
+
+test_number 4 (
+(sym_lex_sl : Localinput_lexer_symbol_t.localinput_lexer_symbol list ) =

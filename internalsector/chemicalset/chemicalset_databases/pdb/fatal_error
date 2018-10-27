@@ -1,0 +1,7 @@
+let print_fatal_error nam_mod nam fld c w =
+      Format.fprintf
+Format.err_formatter
+"@.@[<hov>%s.%s: --- Fatal Error ---        @.    expecting data from field >%s< at column %i of %i-digits wide.        found End_of_file.        cure : check fields width@]@."
+nam_mod nam fld (Ord_p.int_of_ordinal c) w;
+        assert false;
+;;

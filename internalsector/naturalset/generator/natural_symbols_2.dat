@@ -1,0 +1,47 @@
+# kind         type                     = constructor_basename list
+#       
+# --------------------------------------------------------------------------------------------
+
+# natural  Constructor_Tree  Root
+constructors   natural                  =   expression   token
+
+# expression
+constructors   expression               =   expression_atomic   expression_composite
+
+# expression_atomic
+constructors   expression_atomic        =   expression_atomic_digit   variable:ofstring
+
+# digit
+constructors   expression_atomic_digit  =   expression_atomic_digit_zero   expression_atomic_digit_one   expression_atomic_digit_two   expression_atomic_digit_three   expression_atomic_digit_four   expression_atomic_digit_five   expression_atomic_digit_six   expression_atomic_digit_seven   expression_atomic_digit_eight   expression_atomic_digit_nine
+
+constructors   expression_atomic_digit_zero       =   zero_constructor 
+
+constructors   expression_atomic_digit_one        =   one_constructor 
+
+constructors   expression_atomic_digit_two        =   two_constructor 
+
+constructors   expression_atomic_digit_three      =   three_constructor 
+
+constructors   expression_atomic_digit_four       =   four_constructor 
+
+constructors   expression_atomic_digit_five       =   five_constructor 
+
+constructors   expression_atomic_digit_six        =   six_constructor 
+
+constructors   expression_atomic_digit_seven      =   seven_constructor 
+
+constructors   expression_atomic_digit_eight      =   eight_constructor 
+
+constructors   expression_atomic_digit_nine       =   nine_constructor 
+
+# token
+constructors   token                    =   operation   leftparenthesis   rightparenthesis
+
+# operation                      
+constructors   operation                =   successor   addition   multiplication
+
+
+
+
+
+

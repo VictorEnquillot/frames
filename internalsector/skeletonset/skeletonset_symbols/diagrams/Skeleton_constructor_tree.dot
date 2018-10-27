@@ -1,0 +1,56 @@
+        digraph Frames {
+                size="40,15";
+                node [fontsize=50];
+                edge [arrowhead = "vee", arrowsize = "2.0", style="solid", taillabel = ""];
+
+  Title [
+  	label = "The Constructor Tree\nDomain Skeleton\nDatabase Nwchem", shape=box, fontname=Courier, color=yellow, style=filled
+  ];
+
+
+   "Skeleton" [color=green, style=filled];
+   "Skeleton\nContext" [color=beige, style=filled];
+   "Context\nSector"    [color=beige, style=filled];
+   "Context\nDomain"    [color=beige, style=filled];
+   "Context\nDatabase"    [color=beige, style=filled];
+   "Context\nDatabox"    [color=beige, style=filled];
+
+   "Skeleton\nSet" [color=lightskyblue2, style=filled];
+
+   "Set\nBody"[color=lavender, style=filled];
+   "Body\nCentered" [color=lavender, style=filled];
+   "Body\nCentered\nAopefSet" [color=lavender, style=filled];
+   "Body\nCentered\nAopefSet\nAnyCenter" [color=lavender, style=filled];
+   "Body\nCentered\nAopefSet\nOneCenter" [color=lavender, style=filled];
+   "Body\nCentered\nAopefSet\nShellSymmetry" [color=lavender, style=filled];
+   "Body\nCentered\nAopefSet\nShellOrdinal" [color=lavender, style=filled];
+   "Body\nCentered\nEcppefSet" [color=lavender, style=filled];
+	   
+   "Body\nPeriodic" [color=lightpink, style=filled];
+
+   "Set\nFence"[color=azure, style=filled];
+   "Fence\nCentered" [color=azure, style=filled];
+   "Fence\nCentered\nAopef" [color=azure, style=filled];
+   "Fence\nCentered\nEcppef" [color=azure, style=filled];
+
+	    
+   Title -> "Skeleton"  [style="invis"];
+
+	   
+   "Skeleton" -> {"Skeleton\nContext" "Skeleton\nSet"};
+   "Skeleton\nSet" -> {"Set\nBody" "Set\nFence"};
+
+   "Skeleton\nContext" ->  {"Context\nSector" "Context\nDomain" "Context\nDatabase" "Context\nDatabox"};
+
+   "Set\nBody" -> {"Body\nCentered" "Body\nPeriodic"};
+   "Body\nCentered" -> {"Body\nCentered\nAopefSet" "Body\nCentered\nEcppefSet"};
+   "Body\nCentered\nAopefSet" -> {
+   "Body\nCentered\nAopefSet\nAnyCenter" 
+   "Body\nCentered\nAopefSet\nOneCenter" 
+   "Body\nCentered\nAopefSet\nShellSymmetry"
+   "Body\nCentered\nAopefSet\nShellOrdinal"};	
+
+    "Set\nFence" -> "Fence\nCentered";
+    "Fence\nCentered" -> { "Fence\nCentered\nAopef" "Fence\nCentered\nEcppef"};
+
+}

@@ -1,0 +1,4 @@
+ledit -x -h ./.debug-history ocamldebug -I $BAS -I $FIL -I $DAT -I $AGNR -I $SGNR -I $TGNR -I $IGNR -I $FGNR $1
+# 
+# display wrd_l
+# print wrd_l 

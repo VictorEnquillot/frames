@@ -1,0 +1,29 @@
+builders mp3_file = list mp3_frame
+
+builders mp3_frame_audio = doublet mp3_header mp3_data_audio
+builders mp3_frame_video = doublet mp3_header mp3_data_video
+builders mp3_frame_closed_caption = doublet mp3_header mp3_data_closed_caption
+
+builders mp3_elementary_stream_audio = list mp3_frame
+
+builders mp3_header = record   version:mp3_header_tag_one_bit  error_protection:mp3_header_tag_one  pad_bit:mp3_header_tag_one_bit  intensity_stereo:mp3_header_tag_one_bit  ms_stereo:mp3_header_tag_one_bit  private_bit:mp3_header_tag_one_bit  copy:mp3_header_tag_one_bit  original:mp3_header_tag_one_bit  layer:mp3_header_tag_twobits  mode:mp3_header_tag_twobits  frequency:mp3_header_tag_twobits  emphasis:mp3_header_tag_twobits  bit_rate:mp3_header_tag_fourbits  sync:mp3_header_tag_twelvebits
+
+builders mp3_layout_id3v1 = record header:string_3 title:string_30 artist:string_30 album:string_30 year:string_4 comment:string_30 zerobyte:string_1 track:string_1 genre:string_1
+
+builders mp3_layout_id3v1_extended = record header:string_4 title:string_60 artist:string_60 album:string_60 year:string_4 speed:string_1 genre:string_30 comment:string_30 zerobyte:string_1 track:string_1 starttime:string_6 endtime:string_6
+
+builders mp3_data_closed_caption =  
+
+builders mp3_data_video =
+
+builders mp3_data_audio =
+
+The data stream can contain an optional checksum, but the checksum only protects the header data, not the audio data.
+
+An MP3 file is made up of multiple MP3 frames, which consist of a header and a data block. 
+
+This sequence of frames is called an elementary stream. Frames are not independent items ("byte reservoir") and therefore cannot be extracted on arbitrary frame boundaries. 
+
+The MP3 Data blocks contain the (compressed) audio information in terms of frequencies and amplitudes. 
+
+The diagram shows that the MP3 Header consists of a sync word, which is used to identify the beginning of a valid frame. This is followed by a bit indicating that this is the MPEG standard and two bits that indicate that layer 3 is used; hence MPEG-1 Audio Layer 3 or MP3. After this, the values will differ, depending on the MP3 file. ISO/IEC 11172-3 defines the range of values for each section of the header along with the specification of the header. Most MP3 files today contain ID3 metadata, which precedes or follows the MP3 frames; as noted in the diagram.

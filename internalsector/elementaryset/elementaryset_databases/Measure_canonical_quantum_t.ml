@@ -1,0 +1,1 @@
+type measure_canonical_quantum = (float, Elementary_fence_units_canonical_quantum_symbol_t.elementary_fence_units_canonical_quantum_symbol) Doublet_t.doublet;;

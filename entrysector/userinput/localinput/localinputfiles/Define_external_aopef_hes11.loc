@@ -1,0 +1,9 @@
+define Aopef_hes11	
+       external 
+         type [ "skeleton" "set" "fence" "centered" "aopef" "constructor" ]
+         external_name "he s 1 1"
+         external_context Con_nwc
+         end -- external
+       end -- define
+
+stop

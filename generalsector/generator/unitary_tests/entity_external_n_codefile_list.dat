@@ -1,0 +1,9 @@
+atom             symbol implementation error_messages interface
+atom             symbol implementation error_messages implementation
+aggregate        symbol implementation error_messages type
+aggregate        symbol implementation doublet        implementation
+aggregate        symbol type           doublet        type
+chemicalset      symbol implementation messages       implementation
+molecule_polymer symbol type           doublet        type
+polyglycine      symbol implementation triplet        implementation
+polyproline      symbol implementation tree           interface

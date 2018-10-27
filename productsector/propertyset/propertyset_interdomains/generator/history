@@ -1,0 +1,34 @@
+  let nam_var = Basicname_v.string_off bna_var in
+  let nam_dom = Basicname_v.string_off bna_dom in
+  let bna_dbo = Basicname_v.basicname_databox_of_string nam_dbo in
+  let bna_dba = Basicname_v.basicname_database_of_string nam_dba in
+      (Format.sprintf "Check Input file >%s.loc<" (Basicname_v.string_off bna_ibo))
+
+msrf by_inputbox_name_n_inputbase_name  by_basicname_inputbox_n_basicname_inputbase *ml *mk
+msrf by_databox_name_n_database_name    by_basicname_databox_n_basicname_database *ml *mk
+msrf basicname_variable_n_basicname_inputbox   basicname_databox_n_basicname_variable *ml *mk
+
+ms "(nam_dbo, nam_dba)" "(bna_dbo, bna_dba)" *ml
+ms "(nam_ibo, nam_iba)" "(bna_ibo, bna_iba)" *ml
+ms "(nam_dom, nam_ibo, nam_var)"  "(bna_dom, bna_ibo, bna_var)" *ml
+ms "(bna_dom, bna_ibo, bna_var)"  "(bna_ibo, bna_var, bna_dom)" *ml
+ms "(bna_var, bna_ibo)" "(bna_ibo, bna_var)" *ml
+ms "(bna_ibo, bna_var)" "(bna_var, bna_ibo)" *ml
+
+ms "(fun s->s)" "Basicname_v.name" *register_v.ml 
+ms "string Duo_t.duo" "Basicname_t.basicname Duo_t.duo" *register_v.ml  
+
+msrf by_domain_name_n_databox_name_n_variable_name    by_basicname_variable_n_basicname_databox_n_basicname_domain *ml *mk
+
+msrf by_basicname_databox_n_basicname_variable_n_basicname_domain    by_basicname_variable_n_basicname_databox_n_basicname_domain *ml *mk
+msrf by_basicname_databox_n_basicname_variable  by_basicname_variable_n_basicname_databox  *ml *mk
+
+msrf basicname_databox basicname_inputbox *ml *mk
+
+ms Localinput_set_fence_cell_databox_string_off_by_basicname_variable_external Basicname_domain_by_basicname_variable_external *ml 
+
+ms Localinput_set_fence_cell_database_string_off_by_basicname_variable_external Basicname_database_by_basicname_variable_external *ml 
+
+ms Localinput_set_fence_cell_domain_string_off_by_basicname_variable_external Basicname_domain_by_basicname_variable_external *ml 
+
+ms Localinput_set_fence_cell_external_name_string_off_by_basicname_variable_external_n_basicname_inputbox_provider_v  Basicname_external_name_by_basicname_variable_external *ml 

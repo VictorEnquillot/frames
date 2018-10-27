@@ -1,0 +1,32 @@
+(* ------------------------- debug -------------------------------------*)
+
+let sym_lex_s = Input_parser_v.input_entity_symbol_stack_of_input_nameoffile nof_inp;;
+
+let sym_lex_l = Input_lexical_analysis_v.input_lexeme_symbol_list_of_input_nameoffile nof_inp;; 
+let idx_deb = List_v.index_of_element_of_list Input_lexeme_symbol_v.input_lexeme_debug sym_lex_l ;;
+let idx_def = List_v.index_of_element_of_list Input_lexeme_symbol_v.input_lexeme_define sym_lex_l ;;
+
+
+if idx_deb <> 0
+then
+  begin
+    ignore (Stack.pop sym_lex_s);
+    let sym_lex = Stack.pop sym_lex_s in
+	
+    ignore (test_number 1 (
+      sym_lex 
+    (* : Input_lexeme_symbol_t.input_lexeme_symbol *)
+	=
+      Input_lexeme_symbol_t.Input_lexeme_keyword_symbol
+   (Input_lexeme_keyword_symbol_t.Input_lexeme_keyword_ended_symbol
+     Input_lexeme_keyword_ended_symbol_t.Input_lexeme_debug)
+    ) )
+  end
+
+let sym_lex_s = Input_parser_v.input_entity_symbol_stack_of_input_nameoffile nof_inp;;
+for i = 0 to (idx_def-1) do
+  ignore (Stack.pop sym_lex_s)
+done
+;;
+
+(* ------------------------- define -------------------------------------*)

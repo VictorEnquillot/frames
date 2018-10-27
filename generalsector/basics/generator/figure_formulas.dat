@@ -1,0 +1,26 @@
+builders fake_son_constructor:ofstring = list string
+builders point_constructor:ofstring = list coordinate_cartesian
+builders triangle_isoceles_acute:ofstring = list point
+builders triangle_isoceles_equilateral:ofstring = list point
+builders triangle_isoceles_obtuse:ofstring = list point
+builders triangle_isoceles_right:ofstring = list point
+builders triangle_scalene_acute:ofstring = list point
+builders triangle_scalene_obtuse:ofstring = list point
+builders triangle_scalene_right:ofstring = list point
+builders vector_constructor:ofstring = list point
+#      builders cylindrical_rho = singlet float;
+#      builders cylindrical_phi = singlet float;
+#      builders cylindrical_zed = singlet float;
+#      builders spherical_rho = singlet float;
+#      builders spherical_phi = singlet float;
+#      builders spherical_theta = singlet float;
+#      builders polar_rho = singlet float;
+#      builders polar_theta = singlet float 
+# builders x = singlet float
+# builders y = singlet float
+# builders z = singlet float
+
+# do not mix formula and value
+# BT-leaves have NO builders 
+# formula is defined here (builders)
+# value is defined from some input database

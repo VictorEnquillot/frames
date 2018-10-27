@@ -1,0 +1,7 @@
+let sym_usf = Usagefile_symbol_v.make nam_usf;;
+let idx_usf = Usagefile_symbol_v.list_index_of_usagefile_symbol sym_usf;;
+let soi_usf = Sole_index_v.make idx_usf soi_cof;;
+let gss_usf = Generatorset_symbol_v.generatorset_symbol_of_usagefile_symbol sym_usf;;
+Generatorset_symbol_by_sole_index_production_provider_v.store soi_usf gss_usf;;
+let tag_usf = Tag_v.make sym_usf soi_usf;;
+

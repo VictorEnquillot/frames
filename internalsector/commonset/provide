@@ -1,0 +1,43 @@
+(** {6 Building.} *)
+
+let child_symbol_list_of_parent_tag tag_par =
+;;
+
+let build tag_par =
+  let soi_par = Tag_v.sole_index_off_tag tag_par in
+  let sym_chi_l = child_symbol_list_of_parent_tag tag_par in
+  let soi_chi_l = List.mapi (fun i s -> Sole_index_v.make (i+1) soi_par) sym_chi_l in
+  List.map2 Tag_v.make sym_chi_l soi_chi_l
+;;
+
+let build_n_store tag_par =
+  let tag_chi_l = build tag_par in
+
+  let coerce = Here_symbol_v.here_symbol_of_child_symbol in
+  let sym_chi_l = List.map Tag_v.entity_off_tag tag_chi_l in
+  let soi_chi_l = List.map Tag_v.sole_index_off_tag tag_chi_l in
+  let css_chi_l = List.map coerce sym_chi_l in
+  List.iter2 Here_symbol_by_sole_index_register_v.store soi_chi_l css_chi_l;
+
+  Doublet_list_v.make css_chi_l soi_chi_l
+;;
+
+(** {6 Providing.} *)
+
+let provide tag_par =
+  let str_pre = "is_child_symbol_off_here_symbol" in 
+  let tag_css_l =
+    if Here_symbol_main_register_v.is_stored_son_here_tag_list_of_string_predicate_of_parher_tag str_pre tag_par
+    then Here_symbol_main_register_v.son_here_tag_list_of_string_predicate_of_parher_tag str_pre tag_par
+    else build_n_store tag_par
+  in	
+  
+  let tag_chi_l = List.map
+      (Tag_v.map_entity 
+	 Here_symbol_v.child_symbol_off_here_symbol)
+    tag_css_l
+  in
+
+  Doublet_list_v.sort_by_right compare tag_chi_l
+;;
+

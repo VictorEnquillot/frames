@@ -1,0 +1,184 @@
+constructors  figure                         =   localinput
+
+constructors  localinput                     =   localinput_context   localinput_set
+
+constructors  localinput_set                 =   localinput_set_body   localinput_set_fence
+
+# body
+
+constructors  localinput_set_body                =   localinput_set_body_block   localinput_set_body_box   localinput_set_body_handle   localinput_set_body_list 
+
+constructors  localinput_set_body_block          =   localinput_set_body_block_define   localinput_set_body_block_cofactor   localinput_set_body_block_print   localinput_set_body_block_read   localinput_set_body_block_set   localinput_set_body_block_set_alternative   localinput_set_body_block_title   localinput_set_body_block_variable_context   localinput_set_body_block_variable_external   localinput_set_body_block_variable_operator   localinput_set_body_block_variable_target   localinput_set_body_block_write
+
+constructors  localinput_set_body_block_define   =  localinput_set_body_block_define_constructor:ofstring
+constructors  localinput_set_body_block_cofactor  =  localinput_set_body_block_cofactor_constructor:ofstring
+constructors  localinput_set_body_block_print    =  localinput_set_body_block_print_constructor:ofstring
+constructors  localinput_set_body_block_read     =  localinput_set_body_block_read_constructor:ofstring
+constructors  localinput_set_body_block_set      =  localinput_set_body_block_set_constructor:ofstring
+constructors  localinput_set_body_block_set_alternative    =  localinput_set_body_block_set_alternative_constructor:ofstring
+constructors  localinput_set_body_block_title    =  localinput_set_body_block_title_constructor:ofstring
+constructors  localinput_set_body_block_variable_context   =  localinput_set_body_block_variable_context_constructor:ofstring
+constructors  localinput_set_body_block_variable_external  =  localinput_set_body_block_variable_external_constructor:ofstring
+constructors  localinput_set_body_block_variable_operator  =  localinput_set_body_block_variable_operator_constructor:ofstring
+constructors  localinput_set_body_block_variable_target    =  localinput_set_body_block_variable_target_constructor:ofstring
+constructors  localinput_set_body_block_write    =  localinput_set_body_block_write_constructor:ofstring
+
+
+constructors  localinput_set_body_box            =   localinput_set_body_box_type   localinput_set_body_box_units
+
+constructors  localinput_set_body_box_type       =   localinput_set_body_box_type_constructor:ofstring
+constructors  localinput_set_body_box_units      =   localinput_set_body_box_units_constructor:ofstring
+
+constructors  localinput_set_body_handle_command =   localinput_set_body_handle_command_creation   localinput_set_body_handle_command_tounit
+
+constructors  localinput_set_body_handle_command_creation       =   localinput_set_body_handle_command_creation_define   localinput_set_body_handle_command_creation_read   localinput_set_body_handle_command_creation_set   localinput_set_body_handle_command_creation_title
+
+constructors  localinput_set_body_handle_command_creation_define=  localinput_set_body_handle_command_creation_define_constructor:ofstring
+
+constructors  localinput_set_body_handle_command_creation_read  =  localinput_set_body_handle_command_creation_read_constructor:ofstring
+constructors  localinput_set_body_handle_command_creation_set   =  localinput_set_body_handle_command_creation_set_constructor:ofstring
+constructors  localinput_set_body_handle_command_creation_title =  localinput_set_body_handle_command_creation_title_constructor:ofstring
+
+constructors  localinput_set_body_handle_command_tounit           =   localinput_set_body_handle_command_tounit_print   localinput_set_body_handle_command_tounit_write
+
+constructors  localinput_set_body_handle_command_tounit_print     =  localinput_set_body_handle_command_tounit_print_constructor:ofstring
+constructors  localinput_set_body_handle_command_tounit_write     =  localinput_set_body_handle_command_tounit_write_constructor:ofstring
+
+
+constructors  localinput_set_body_handle                   =   localinput_set_body_handle_cofactor   localinput_set_body_handle_command   localinput_set_body_handle_variable_kind
+
+constructors  localinput_set_body_handle_cofactor          =   localinput_set_body_handle_cofactor_constructor:ofstring
+constructors  localinput_set_body_handle_variable_kind     =   localinput_set_body_handle_variable_context   localinput_set_body_handle_variable_external   localinput_set_body_handle_variable_operator   localinput_set_body_handle_variable_target
+
+constructors  localinput_set_body_handle_variable_context  =   localinput_set_body_handle_variable_context_constructor:ofstring
+constructors  localinput_set_body_handle_variable_external =   localinput_set_body_handle_variable_external_constructor:ofstring
+constructors  localinput_set_body_handle_variable_operator =   localinput_set_body_handle_variable_operator_constructor:ofstring
+constructors  localinput_set_body_handle_variable_target   =   localinput_set_body_handle_variable_target_constructor:ofstring
+
+
+constructors  localinput_set_body_list                     =   localinput_set_body_list_variable_name_external   localinput_set_body_list_variable_type
+
+constructors  localinput_set_body_list_variable_name_external =   localinput_set_body_list_variable_name_external_constructor:ofstring
+
+constructors  localinput_set_body_list_variable_type =   localinput_set_body_list_variable_type_constructor:ofstring
+
+
+constructors  localinput_context                        =   localinput_context_domain   localinput_context_inputbase   localinput_context_inputbox   localinput_context_sector  
+constructors  localinput_context_domain                =   localinput_context_domain_constructor:ofstring
+constructors  localinput_context_inputbase             =   localinput_context_inputbase_constructor:ofstring
+constructors  localinput_context_inputbox              =   localinput_context_inputbox_constructor:ofstring
+constructors  localinput_context_sector                =   localinput_context_sector_constructor:ofstring
+
+
+constructors  localinput_set_fence                         =   localinput_set_fence_basic_numerical   localinput_set_fence_basic_word   localinput_set_fence_cell   localinput_set_fence_keyword   localinput_set_fence_variable_kind   localinput_set_fence_variable_name
+
+constructors  localinput_set_fence_basic_numerical         =   localinput_set_fence_basic_float   localinput_set_fence_basic_integer
+
+constructors  localinput_set_fence_basic_float             =   localinput_set_fence_basic_float_constructor:ofstring
+
+constructors  localinput_set_fence_basic_integer           =   localinput_set_fence_basic_integer_constructor:ofstring
+
+constructors  localinput_set_fence_basic_word              =   localinput_set_fence_basic_word_anycase   localinput_set_fence_basic_word_capitalized   localinput_set_fence_basic_word_lowercase   localinput_set_fence_basic_word_uppercase
+
+constructors  localinput_set_fence_basic_word_anycase      =   localinput_set_fence_basic_word_anycase_constructor:ofstring
+constructors  localinput_set_fence_basic_word_capitalized  =   localinput_set_fence_basic_word_capitalized_constructor:ofstring
+constructors  localinput_set_fence_basic_word_lowercase    =   localinput_set_fence_basic_word_lowercase_constructor:ofstring
+constructors  localinput_set_fence_basic_word_uppercase    =   localinput_set_fence_basic_word_uppercase_constructor:ofstring
+
+
+constructors  localinput_set_fence_cell                    =   localinput_set_fence_cell_category   localinput_set_fence_cell_cofactor_basic   localinput_set_fence_cell_cofactor_entity   localinput_set_fence_cell_context   localinput_set_fence_cell_sector   localinput_set_fence_cell_database   localinput_set_fence_cell_databox   localinput_set_fence_cell_domain   localinput_set_fence_cell_external_context   localinput_set_fence_cell_external_name   localinput_set_fence_cell_external_variable   localinput_set_fence_cell_file   localinput_set_fence_cell_function   localinput_set_fence_cell_module   localinput_set_fence_cell_ondomain   localinput_set_fence_cell_operation   localinput_set_fence_cell_target_operand   localinput_set_fence_cell_target_operator
+
+constructors  localinput_set_fence_cell_category           =   localinput_set_fence_cell_category_constructor:ofstring
+constructors  localinput_set_fence_cell_cofactor_basic     =   localinput_set_fence_cell_cofactor_basic_constructor:ofstring
+constructors  localinput_set_fence_cell_cofactor_entity    =   localinput_set_fence_cell_cofactor_entity_constructor:ofstring
+constructors  localinput_set_fence_cell_context            =   localinput_set_fence_cell_context_constructor:ofstring
+constructors  localinput_set_fence_cell_sector             =   localinput_set_fence_cell_sector_constructor:ofstring
+constructors  localinput_set_fence_cell_database           =   localinput_set_fence_cell_database_constructor:ofstring
+constructors  localinput_set_fence_cell_databox            =   localinput_set_fence_cell_databox_constructor:ofstring
+constructors  localinput_set_fence_cell_domain             =   localinput_set_fence_cell_domain_constructor:ofstring
+constructors  localinput_set_fence_cell_external_context   =   localinput_set_fence_cell_external_context_constructor:ofstring
+constructors  localinput_set_fence_cell_external_name      =   localinput_set_fence_cell_external_name_constructor:ofstring
+constructors  localinput_set_fence_cell_external_variable  =   localinput_set_fence_cell_external_variable_constructor:ofstring
+constructors  localinput_set_fence_cell_file               =   localinput_set_fence_cell_file_constructor:ofstring
+constructors  localinput_set_fence_cell_function           =   localinput_set_fence_cell_function_constructor:ofstring
+constructors  localinput_set_fence_cell_module             =   localinput_set_fence_cell_module_constructor:ofstring
+constructors  localinput_set_fence_cell_ondomain           =   localinput_set_fence_cell_ondomain_constructor:ofstring
+constructors  localinput_set_fence_cell_operation          =   localinput_set_fence_cell_operation_constructor:ofstring
+constructors  localinput_set_fence_cell_target_operand     =   localinput_set_fence_cell_target_operand_constructor:ofstring
+constructors  localinput_set_fence_cell_target_operator    =   localinput_set_fence_cell_target_operator_constructor:ofstring
+
+constructors  localinput_set_fence_keyword                 =   localinput_set_fence_keyword_command   localinput_set_fence_keyword_variable_kind   localinput_set_fence_keyword_word
+
+constructors  localinput_set_fence_keyword_command         =   localinput_set_fence_keyword_command_define   localinput_set_fence_keyword_command_print   localinput_set_fence_keyword_command_read   localinput_set_fence_keyword_command_set   localinput_set_fence_keyword_command_stop   localinput_set_fence_keyword_command_title   localinput_set_fence_keyword_command_write
+
+constructors  localinput_set_fence_keyword_command_define  = localinput_set_fence_keyword_command_define_constructor:ofstring
+constructors  localinput_set_fence_keyword_command_print   = localinput_set_fence_keyword_command_print_constructor:ofstring
+constructors  localinput_set_fence_keyword_command_read    = localinput_set_fence_keyword_command_read_constructor:ofstring
+constructors  localinput_set_fence_keyword_command_set     = localinput_set_fence_keyword_command_set_constructor:ofstring
+constructors  localinput_set_fence_keyword_command_stop    = localinput_set_fence_keyword_command_stop_constructor:ofstring
+constructors  localinput_set_fence_keyword_command_title   = localinput_set_fence_keyword_command_title_constructor:ofstring
+constructors  localinput_set_fence_keyword_command_write   = localinput_set_fence_keyword_command_write_constructor:ofstring
+
+constructors  localinput_set_fence_keyword_variable_kind   =   localinput_set_fence_keyword_variable_kind_context   localinput_set_fence_keyword_variable_kind_external   localinput_set_fence_keyword_variable_kind_operator   localinput_set_fence_keyword_variable_kind_target   
+constructors  localinput_set_fence_keyword_variable_kind_context  = localinput_set_fence_keyword_variable_kind_context_constructor:ofstring
+constructors  localinput_set_fence_keyword_variable_kind_external = localinput_set_fence_keyword_variable_kind_external_constructor:ofstring
+constructors  localinput_set_fence_keyword_variable_kind_operator = localinput_set_fence_keyword_variable_kind_operator_constructor:ofstring
+constructors  localinput_set_fence_keyword_variable_kind_target   = localinput_set_fence_keyword_variable_kind_target_constructor:ofstring
+
+constructors  localinput_set_fence_keyword_word            =   localinput_set_fence_keyword_word_category   localinput_set_fence_keyword_word_cofactor   localinput_set_fence_keyword_word_cofactor_basic   localinput_set_fence_keyword_word_cofactor_entity   localinput_set_fence_keyword_word_context   localinput_set_fence_keyword_word_cpu   localinput_set_fence_keyword_word_database   localinput_set_fence_keyword_word_databox   localinput_set_fence_keyword_word_debug   localinput_set_fence_keyword_word_domain   localinput_set_fence_keyword_word_end   localinput_set_fence_keyword_word_external_context   localinput_set_fence_keyword_word_file   localinput_set_fence_keyword_word_module   localinput_set_fence_keyword_word_name   localinput_set_fence_keyword_word_ondomain   localinput_set_fence_keyword_word_operation   localinput_set_fence_keyword_word_operator   localinput_set_fence_keyword_word_sector   localinput_set_fence_keyword_word_statistics   localinput_set_fence_keyword_word_type   localinput_set_fence_keyword_word_units
+
+constructors  localinput_set_fence_keyword_word_category         = localinput_set_fence_keyword_word_category_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_cofactor         = localinput_set_fence_keyword_word_cofactor_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_cofactor_basic   = localinput_set_fence_keyword_word_cofactor_basic_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_cofactor_entity  = localinput_set_fence_keyword_word_cofactor_entity_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_context          = localinput_set_fence_keyword_word_context_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_cpu              = localinput_set_fence_keyword_word_cpu_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_database         = localinput_set_fence_keyword_word_database_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_databox          = localinput_set_fence_keyword_word_databox_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_debug            = localinput_set_fence_keyword_word_debug_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_domain           = localinput_set_fence_keyword_word_domain_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_end              = localinput_set_fence_keyword_word_end_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_external_context = localinput_set_fence_keyword_word_external_context_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_file       = localinput_set_fence_keyword_word_file_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_module     = localinput_set_fence_keyword_word_module_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_name       = localinput_set_fence_keyword_word_name_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_ondomain   = localinput_set_fence_keyword_word_ondomain_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_operation  = localinput_set_fence_keyword_word_operation_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_operator   = localinput_set_fence_keyword_word_operator_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_sector     = localinput_set_fence_keyword_word_sector_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_statistics = localinput_set_fence_keyword_word_statistics_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_type       = localinput_set_fence_keyword_word_type_constructor:ofstring
+constructors  localinput_set_fence_keyword_word_units      = localinput_set_fence_keyword_word_units_constructor:ofstring
+
+constructors  localinput_set_fence_variable_kind           =   localinput_set_fence_variable_kind_context   localinput_set_fence_variable_kind_entity   localinput_set_fence_variable_kind_operator
+
+constructors  localinput_set_fence_variable_kind_context   =   localinput_set_fence_variable_kind_context_constructor:ofstring
+constructors  localinput_set_fence_variable_kind_operator  =   localinput_set_fence_variable_kind_operator_constructor:ofstring
+
+constructors  localinput_set_fence_variable_kind_entity         =   localinput_set_fence_variable_kind_entity_external   localinput_set_fence_variable_kind_entity_implicit   localinput_set_fence_variable_kind_entity_target
+
+constructors localinput_set_fence_variable_kind_entity_external =   localinput_set_fence_variable_kind_entity_external_constructor:ofstring
+constructors localinput_set_fence_variable_kind_entity_implicit =   localinput_set_fence_variable_kind_entity_implicit_constructor:ofstring
+constructors localinput_set_fence_variable_kind_entity_target   =   localinput_set_fence_variable_kind_entity_target_constructor:ofstring
+
+constructors  localinput_set_fence_variable_name                =   localinput_set_fence_variable_name_context   localinput_set_fence_variable_name_entity   localinput_set_fence_variable_name_operator
+
+constructors  localinput_set_fence_variable_name_context        =   localinput_set_fence_variable_name_context_constructor:ofstring
+constructors  localinput_set_fence_variable_name_operator       =   localinput_set_fence_variable_name_operator_constructor:ofstring
+constructors  localinput_set_fence_variable_name_entity         =   localinput_set_fence_variable_name_entity_external   localinput_set_fence_variable_name_entity_implicit   localinput_set_fence_variable_name_entity_target
+
+constructors localinput_set_fence_variable_name_entity_external =   localinput_set_fence_variable_name_entity_external_constructor:ofstring
+
+constructors localinput_set_fence_variable_name_entity_implicit =   localinput_set_fence_variable_name_entity_implicit_constructor:ofstring
+
+constructors localinput_set_fence_variable_name_entity_target   =   localinput_set_fence_variable_name_entity_target_constructor:ofstring
+
+
+
+
+
+
+
+
+
+

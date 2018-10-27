@@ -1,0 +1,39 @@
+digraph dgn {
+  size="14,14";
+  node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+  edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+  Title [label = "The Tag Tree\nfor Db1 Database\nin Elementary domain" shape="record" color=lightblue, style=filled];
+
+   "Elementary\nDomain\n[4]" -> { "Db1\nDatabase\n[1;4]" "Db2\nDatabase\n[2;4]" "...D..." "Nwchem\nDatabase\nNwc\n[5;4]"};
+ 
+   "Db1\nDatabase\n[1;4]"    -> { "Coordinate_tuple\nCartesian T_A\n[1;1;4]" 
+   			          "Coordinate_tuple\nCartesian T_B\n[2;1;4]"
+   			          "Coordinate_tuple\nCartesian T_C\n[3;1;4]"
+				  " ... U_A  U_B  U_C  BC_B  BC_C"
+				  "Coordinate_tuple\nSpherical A_A\n[12;1;4]"
+				 };
+
+   "Coordinate_tuple\nCartesian T_A\n[1;1;4]" -> {
+        			    "X\n[1;1;1;4]" 		    
+   				    "Y\n[2;1;1;4]" 		    
+   				    "Z\n[3;1;1;4]" 		    
+   				    } ;
+
+   "X\n[1;1;1;4]" -> "Units\nBohr\n[1;1;1;1;4]";
+   "Y\n[2;1;1;4]" -> "Units\nBohr\n[1;2;1;1;4]";
+   "Z\n[3;1;1;4]" -> "Units\nBohr\n[1;3;1;1;4]";
+
+
+   "Coordinate_tuple\nSpherical A_A\n[12;1;4]" -> {
+   					       "Rho\n[1;12;1;4]"
+   					       "Phi\n[2;12;1;4]"
+   					       "Theta\n[3;12;1;4]"
+   };						
+
+   "Rho\n[1;12;1;4]" -> "Units\nMeter\n[1;1;12;1;4]"
+   "Phi\n[2;12;1;4]" -> "Units\nDegree\n[1;2;12;1;4]"
+   "Theta\n[3;12;1;4]" -> "Units\nDegree\n[1;3;12;1;4]"
+
+}
+

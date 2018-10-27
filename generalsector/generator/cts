@@ -1,0 +1,6 @@
+  | Cts_t.Symbol -> "symbol"
+  | Cts_t.Path -> "path"
+  | Cts_t.Marker -> "marker"
+  | Cts_t.Formula -> "formula"
+  | Cts_t.Provider -> "provider"
+  | Cts_t.Value -> "value"

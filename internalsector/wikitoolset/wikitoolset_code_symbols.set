@@ -1,0 +1,6 @@
+type html_lexeme = html_attribute html_attribute_parameter html_tag 
+type html_attribute = class href 
+type html_tag = a b center div em empty_tag font hn i img p s span u
+type html_attribute_parameter = string
+
+

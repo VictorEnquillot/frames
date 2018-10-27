@@ -1,0 +1,7 @@
+coordinates_units_length  nanometer 
+coordinates_kind          cartesian 
+figure_kind               triangle 
+figure_name W
+vertex W_A       1.   0.   0.
+vertex W_B       0.   2.   0.
+vertex W_C       0.   0.   3.  

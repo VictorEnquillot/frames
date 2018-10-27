@@ -1,0 +1,26 @@
+msrf property_set_fence_operand_external property_operand_fence_external *ml *mk
+msrf property_set_fence_operator property_operator_fence *ml *mk
+msrf property_set_fence_operator property_operator_fence *ml *mk
+msrf property_set_body_operand property_operand_body *ml *mk
+msrf property_set_body_command property_command_body *ml *mk
+msrf property_set_body_command property_command_body *ml *mk
+msrf property_set_body_target property_target_body *ml *mk
+msrf property_set_body_target property_target_body *ml *mk
+
+msrf Property_set_fence_operand_external Property_operand_fence_external *ml *mk
+msrf Property_set_fence_operator Property_operator_fence *ml *mk
+msrf Property_set_fence_operator Property_operator_fence *ml *mk
+msrf Property_set_body_operand Property_operand_body *ml *mk
+msrf Property_set_body_command Property_command_body *ml *mk
+msrf Property_set_body_command Property_command_body *ml *mk
+msrf Property_set_body_target Property_target_body *ml *mk
+msrf Property_set_body_target Property_target_body *ml *mk
+
+ms property_set_fence_operand_external property_operand_fence_external do_container_all*sh
+ms property_set_fence_operator property_operator_fence do_container_all*sh
+ms property_set_fence_operator property_operator_fence do_container_all*sh
+ms property_set_body_operand property_operand_body do_container_all*sh
+ms property_set_body_command property_command_body do_container_all*sh
+ms property_set_body_command property_command_body do_container_all*sh
+ms property_set_body_target property_target_body do_container_all*sh
+ms property_set_body_target property_target_body do_container_all*sh

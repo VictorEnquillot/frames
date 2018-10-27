@@ -1,0 +1,10 @@
+(** {3 Camlline_for_tag_datastructure_function_formula_t} *)
+
+
+(** {6 Typing_for_formula} *)
+
+type camlline_for_tag_datastructure_function_formula =
+  | Camlline_for_tag_datastructure_function_iter_formula of Camlline_for_tag_datastructure_function_iter_formula_t.camlline_for_tag_datastructure_function_iter_formula
+  | Camlline_for_tag_datastructure_function_make_formula of Camlline_for_tag_datastructure_function_make_formula_t.camlline_for_tag_datastructure_function_make_formula
+  | Camlline_for_tag_datastructure_function_name of Entity_tag_t.entity_tag list
+;;

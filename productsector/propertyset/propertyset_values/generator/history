@@ -1,0 +1,150 @@
+dlw Nwcheminput_basicname_inputbox_by_any_sole_index_provider_v *mk
+dlw Parameter_basicname_databox_by_any_sole_index_provider_v *mk
+kef Check_consistency_by_parameter_basicname_quatuor_provider_v.ml
+kef Nwcheminput_basicname_inputbox_by_any_sole_index_provider_v.ml
+kef Parameter_basicname_databox_by_any_sole_index_provider_v.ml
+
+ms "(fun s->s)" "Basicname_v.name" *register_v.ml 
+ms "string Duo_t.duo" "Basicname_t.basicname Duo_t.duo" *ml 
+
+
+let bna_ibo = Basicname_v.basicname_inputbox_of_string nam_ibo;;
+let bna_iba = Basicname_v.basicname_inputbase_of_string nam_iba;;
+
+
+ms "(nam_ibo, nam_iba, nam_pcd, nam_pcs)" "(bna_dbo, bna_dba, bna_dom, bna_sec)" *ml
+ms "(nam_iba, nam_dom, nam_sec)" "(bna_iba, bna_dom, bna_sec)" *ml
+ms "(nam_ibo, nam_iba)" "(bna_ibo, bna_iba)"  *ml
+ms "(nam_ibo, nam_var)" "(bna_ibo, bna_var)"  *ml
+
+ms "(nam_dba, nam_dom, nam_sec)" "(bna_dba, bna_dom, bna_sec)" *ml
+ms "(nam_dbo, nam_dba)" "(bna_dbo, bna_dba)"  *ml
+ms "(nam_box, nam_bas)" "(bna_dbo, bna_dba)"  *ml
+ms "(nam_dom, nam_sec)" "(bna_dom, bna_sec)"  *ml
+ms "(nam_pcd, nam_pcs)" "(bna_dom, bna_sec)"  *ml
+
+
+ms "(nam_nbo, nam_iba, nam_dom, nam_sec)" "(bna_nbo, bna_iba, bna_dom, bna_sec)" *ml
+ms "(nam_pbo, nam_pba)" "(bna_dbo, bna_dba)"  *ml
+ms "(nam_pbo, nam_pba, nam_dom, nam_sec)" "(bna_dbo, bna_dba, bna_dom, bna_sec)" *ml
+
+ms "by_basicname_database_provider_v.provide nam_" "by_basicname_database_provider_v.provide bna_" *ml
+ms "by_basicname_databox_provider_v.provide nam_"  "by_basicname_databox_provider_v.provide bna_" *ml
+ms "by_domain_name_provider_v.provide nam_"   "by_basicname_domain_provider_v.provide bna_" *ml
+ms "by_basicname_domain_provider_v.provide nam_"   "by_basicname_domain_provider_v.provide bna_" *ml
+ms "by_sector_name_provider_v.provide nam_"   "by_basicname_sector_provider_v.provide bna_" *ml
+ms "by_basicname_sector_provider_v.provide nam_"   "by_basicname_sector_provider_v.provide bna_" *ml
+ms "by_basicname_inputbase_provider_v.provide nam_iba"   "by_basicname_inputbase_provider_v.provide bna_iba" *ml
+ms "by_basicname_inputbox_provider_v.provide nam_ibo"   "by_basicname_inputbox_provider_v.provide bna_ibo" *ml
+
+ms "let build bna_nbo =" "let build bna_dbo =" *ml
+ms "let build nam_" "let build bna_" *ml
+ms "let build nam_" "let build bna_" *ml
+
+ms Box_name_n_base_name_by_sole_index_provider_v   Basicname_inputbox_n_basicname_inputbase_by_any_sole_index_provider_v *ml
+
+mw sof_let nam_var *ml
+  
+ms "let nam_iba = Property_basicname_inputbase_" "let bna_iba = Property_basicname_inputbase_" *ml
+ms "let nam_ibo = Property_basicname_inputbox_" "let bna_ibo = Property_basicname_inputbox_" *ml
+ms "let nam_dom = Property_basicname_domain_by_unit_provider_v" "let bna_dom = Property_basicname_domain_by_unit_provider_v" *ml 
+ms "let nam_dom = Property_context_domain_name_by_unit_provider_v.provide ()"  "let bna_dom = Property_context_domain_name_by_unit_provider_v.provide ()" *ml
+
+ms "let nam_iba = Localinput_basicname_inputbase_" "let bna_iba = Localinput_basicname_inputbase_" *ml
+ms "let nam_ibo = Localinput_basicname_inputbox_" "let bna_ibo = Localinput_basicname_inputbox_" *ml
+ms "let nam_sec = Localinput_basicname_sector_by_unit_provider_v.provide" "let bna_sec = Localinput_basicname_sector_by_unit_provider_v.provide" *ml
+ms "let nam_sec = Property_basicname_sector_by_unit_provider_v.provide" "let bna_sec = Property_basicname_sector_by_unit_provider_v.provide" *ml
+ms "let nam_sec = Property_context_sector_name_by_unit_provider_v.provide ()"  "let bna_sec = Property_context_sector_name_by_unit_provider_v.provide ()" *ml
+
+ms "provide nam_" "provide bna_" *ml
+
+ms Check_consistency_by_property_basicname_quatuor_provider_v Check_consistency_by_basicname_quatuor_provider_v *ml
+ms Domain_name_n_sector_name_by_fullnameofdirectory_provider_v Basicname_duo_by_fullnameofdirectory_provider_v *ml
+ms Domain_name_n_sector_name_by_fullnameofdirectory_provider_v Basicname_duo_by_fullnameofdirectory_provider_v *ml
+ms Localinput_basicname_inputbox_by_any_sole_index_provider_v Basicname_inputbox_by_any_sole_index_provider_v *ml
+ms Localinput_parser_v.localinput_symbol_tree_root_inputbox_of_inputbox_name  Localinput_parser_v.localinput_symbol_tree_root_inputbox_of_basicname_inputbox *ml
+ms Property_basicname_inputbox_by_any_sole_index_provider_v Basicname_inputbox_by_any_sole_index_provider_v *ml
+ms Property_parser_v.property_symbol_tree_root_inputbox_of_inputbox_name  Property_parser_v.property_symbol_tree_root_inputbox_of_basicname_inputbox *ml
+
+ms _ele_ _par_ *ml
+ms sym_nwc  sym_par *ml
+
+msrf by_inputbox_name_n_inputbase_name  by_basicname_inputbox_n_basicname_inputbase  *ml *mk
+msrf by_domain_name_n_sector_name     by_basicname_domain_n_basicname_sector  *ml *mk
+
+msrf by_basicname_inputbox_n_inputbase_name_   by_basicname_inputbox_n_basicname_inputbase_  *ml *mk
+msrf "basicname_inputbox_provider_v.provide nam_" "basicname_inputbox_provider_v.provide bna_" *ml *mk
+
+msrf Basicname_inputbase_name       Basicname_inputbase *ml *mk
+msrf Basicname_inputbox_name_by     Basicname_inputbox_by *ml *mk
+msrf Basicname_inputbase_name Basicname_inputbase *ml *mk
+msrf Basicname_inputbox_name_by Basicname_inputbox_by *ml *mk
+msrf Context_name_trio_by_fullnameofdirectory  Basicname_trio_by_fullnameofdirectory *ml *mk
+msrf Context_name_trio_by_fullnameofdirectory  Basicname_trio_by_fullnameofdirectory *ml *mk
+msrf Database_name_by             Basicname_inputbase_name_by *ml *mk
+msrf Databox_name_by              Basicname_inputbox_name_by *ml *mk
+msrf Databox_name_n_inputbase_name Basicname_inputbox_n_basicname_inputbase *ml *mk
+msrf Databox_name_n_inputbase_name_by Basicname_inputbox_n_basicname_inputbase_by *ml *mk
+msrf Inputbase_name_by            Basicname_inputbase_by *ml *mk
+
+msrf Inputbox_name_by Basicname_inputbox_name_by *ml *mk
+msrf Inputbox_name_n_inputbase_name Basicname_inputbox_n_basicname_inputbase *ml *mk
+msrf Inputbox_name_n_inputbase_name_by Basicname_inputbox_n_basicname_inputbase_by *ml *mk
+msrf Property_context_basicname_ Property_basicname_ *ml *mk
+msrf Property_symbol_subtree_by_nwchemdata_context_basicname_inputbox_provider_v Property_symbol_subtree_by_nwchemdata_context_inputbox_tag_provider_v *ml *mk
+
+msrf _context_inputbox_name_    _basicname_inputbox_ *ml *mk
+msrf _context_domain_name      _basicname_domain *ml *mk
+msrf _context_domain_name      _basicname_domain *ml *mk
+msrf _context_name_            _basicname_ *ml *mk
+msrf _context_name_quatuor     _basicname_quatuor *ml *mk
+msrf _context_name_trio_       _basicname_trio_ *ml *mk
+msrf _context_sector_name      _basicname_sector *ml *mk
+
+
+msrf by_inputbox_name_n_inputbase_name  by_basicname_inputbox_n_basicname_inputbase  *ml *mk
+msrf by_domain_name_provider           by_basicname_domain_provider  *ml *mk
+msrf by_inputbase_name                 by_basicname_inputbase  *ml *mk
+msrf by_inputbase_name                 by_basicname_inputbase  *ml *mk
+msrf by_inputbox_name                  by_basicname_inputbox  *ml *mk
+msrf by_inputbox_name                  by_basicname_inputbox  *ml *mk
+
+msrf by_property_context_name       by_property_basicname  *ml *mk
+msrf by_property_context_name       by_property_basicname  *ml *mk
+msrf by_property_context_name       by_property_basicname *ml *mk
+msrf by_property_context_name       by_property_basicname *ml *mk
+msrf by_sector_name_                  by_basicname_sector_ *ml *mk
+msrf by_sector_name_                  by_basicname_sector_ *ml *mk
+
+mw bna_nba  bna_iba *ml
+mw bna_nbo  bna_ibo *ml
+mw bna_pba  bna_iba *ml
+mw bna_pbo  bna_ibo *ml
+mw nam_ecd  nam_dom *ml
+mw nam_ecs  nam_sec *ml
+mw nam_nba  nam_iba *ml
+mw nam_nbo  nam_ibo *ml
+mw nam_pba  nam_iba *ml
+mw nam_pbo  nam_ibo *ml
+mw ord_ecd  ord_dom *ml
+mw ord_ecs  ord_sec *ml
+mw bna_pcs  bna_sec *ml
+mw bna_pcd  bna_dom *ml
+mw ord_pcs  ord_sec *ml
+mw ord_pcd  ord_dom *ml
+mw soi_ecs  soi_sec *ml
+mw soi_nba  soi_iba *ml
+mw soi_nbo  soi_ibo *ml
+mw soi_pba  soi_iba *ml
+mw soi_pbo  soi_ibo *ml
+mw sym_ecd  sym_pcd *ml
+mw sym_ncs  sym_pcs *ml
+mw tag_ecd  tag_dom *ml
+mw tag_ecs  tag_sec *ml
+
+mw bna_fun  nam_fun *ml
+mw bna_mod nam_mod *ml
+
+
+ms "let nam_pcs = Property_basicname_sector_by_unit_provider_v" "let bna_sec = Property_basicname_sector_by_unit_provider_v" *ml
+ms "let nam_pcd = Property_basicname_domain_by_unit_provider_v" "let bna_dom = Property_basicname_sector_by_unit_provider_v" *ml

@@ -1,0 +1,17 @@
+type camlline_constant_pervasive_formula = 
+  | Basic_type             of Entity_tag_t.entity_tag list (* string *)
+  | Begin_line             of Entity_tag_t.entity_tag list (* begin *)
+  | Bracket_left           of Entity_tag_t.entity_tag list (* [ *)
+  | Bracket_right          of Entity_tag_t.entity_tag list (* ] *)
+  | Curly_bracket_left     of Entity_tag_t.entity_tag list (* { *)
+  | Curly_bracket_right    of Entity_tag_t.entity_tag list (* } *)
+  | Double_semicolon       of Entity_tag_t.entity_tag list (* ;; *)
+  | Else_line              of Entity_tag_t.entity_tag list (* else *)
+  | Empty_line             of Entity_tag_t.entity_tag list (* *)
+  | End_line               of Entity_tag_t.entity_tag list (* end *)
+  | Item_title             of Entity_tag_t.entity_tag list (* end *)
+  | Parenthesis_left       of Entity_tag_t.entity_tag list (* ( *)
+  | Parenthesis_right      of Entity_tag_t.entity_tag list (* ( *)
+  | Semicolon              of Entity_tag_t.entity_tag list (* ; *)
+  | Then_false             of Entity_tag_t.entity_tag list (* then false *)
+;;

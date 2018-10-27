@@ -1,0 +1,14 @@
+  if Elementary_symbol_by_sole_index_register_v.is_stored soi_dom 
+  then 
+    begin
+      let sym_len_dom =
+	Elementary_symbol_by_sole_index_register_v.retrieve 
+	  soi_dom
+      in
+      let sym_led =  (* coerce down *)
+	  Elementary_symbol_v.elementary_domain_symbol_off_elementary_symbol
+	  sym_len_dom
+      in
+      Tag_v.make sym_led soi_dom
+    end
+  else build_n_store tag_dom

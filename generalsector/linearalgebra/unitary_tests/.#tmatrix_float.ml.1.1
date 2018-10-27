@@ -1,0 +1,92 @@
+(* $Id: tmatrix_float.ml,v 1.1 2007-08-22 16:58:07 colonna Exp $ *)
+
+open Gentest;;
+
+testing "Matrix_float";;
+
+let epsilon = 0.0000001;;
+
+testi 0 ( 
+Matrix.dim_1 [| [|1.0; 2.0; 3.0|]; [|4.0; 5.0; 6.0|]; |] = 2
+);;
+
+testi 1 ( 
+Matrix.dim_2 [| [|1.0; 2.0; 3.0|]; [|4.0; 5.0; 6.0|]; |] = 3
+);;
+
+testi 2 (
+Matrix.is_squared [| [|1.0; 2.0|]; [|2.0; 3.0|]; |]
+);;
+
+testi 3 (
+not (Matrix.is_squared [| [|1.0; 2.0; 3.0|]; [|4.0; 5.0; 6.0|]; |])
+);;
+
+testi 4 (
+Matrix.transposed [|[|1.; 2.; 3.|]; [|4.; 5.; 6.|]|] =
+[| [|1.0; 4.0|]; [|2.0; 5.0|]; [|3.0; 6.0|]; |]
+);;
+
+testi 5 (
+Matrix.to_list_list [| [|1.0; 2.0|]; [|3.0; 4.0|]; |] =
+[[1.; 2.]; [3.; 4.]]
+);;
+
+testi 6 (
+ Matrix.to_list [| [|1.0; 2.0|]; [|3.0; 4.0|]; |] =
+ [1.; 2.; 3.; 4.]
+);;
+
+testi 7 (
+ Matrix_float.scaling  [| [|1.0; 2.0|]; [|3.0; 4.0|]; |] 2.0 =
+ [|[|2.; 4.|]; [|6.; 8.|]|]
+);;
+
+testi 8 (
+Matrix_float.is_symmetric_at_epsilon  epsilon  [| [|1.0; 2.0|]; [|2.0; 3.0|]; |]
+);;
+
+testi 9 (
+not (Matrix_float.is_symmetric_at_epsilon  epsilon  [| [|1.0; 2.000001|]; [|2.0; 3.0|]; |])
+);;
+
+testi 10 (
+Matrix.to_array [| [|1.0; 2.0; 3.0|]; [|4.0; 5.0; 6.0|]; |] =
+[|1.; 2.; 3.; 4.; 5.; 6.|]
+);;
+
+(* TODO
+let left_mult_c = Matrix_float.left_matrix_mult mat_2_2 mat_2_3;;
+let left_mult_e = [|
+    [|1.0; 0.0|];
+    [|0.0; 1.0|];
+  |]
+let check = (left_mult_c = left_mult_e);;
+testi 11 check;;
+when_fail check 11 tprint_matrix_float "left_mult" left_mult_c left_mult_e;;
+
+let determinant_c = Matrix_float.determinant mat_2_2;;
+let determinant_e = -2.0;;
+let check = (determinant_c = determinant_e);;
+testi 12 check;;
+when_fail check 12 tprint_scalar "determinant" determinant_c determinant_e;;
+
+let inversion_c = Matrix_float.inversion mat_2_2;;
+let inversion_e = [|
+    [|-2.0; -1.5|];
+    [|-1.0; -0.5|];
+  |]
+let check = (inversion_c = inversion_e);;
+testi 13 check;;
+when_fail check 13 tprint_matrix_float "inversion" inversion_c inversion_e;;
+
+testi 14 (
+Matrix.diagonal  [| [|1.0; 2.0|]; [|2.0; 3.0|]; |] = [|1.0; 3.0|]
+);;
+
+
+testi 15 (
+Matrix_float.make_diagonal [|1.0; 2.0|] =  [| [|1.0; 0.0|]; [|2.0; 3.0|]; |]
+);;
+
+*)

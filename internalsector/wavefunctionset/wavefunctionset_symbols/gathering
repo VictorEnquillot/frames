@@ -1,0 +1,37 @@
+
+
+
+locate wavefunction | grep symbol_t.ml | grep -v symbol_t.mli | grep -v top_17_sep_2012 | grep frames_2_sep_2011 | grep -v markers
+
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/simulationset_tags/wavefunction_symbol_t.ml
+
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/wavefunctionset_tags/cc_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/wavefunctionset_tags/ci_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/wavefunctionset_tags/csf_bare_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/wavefunctionset_tags/csf_jastrowed_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/wavefunctionset_tags/do_wavefunctionset_symbol_t_ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/wavefunctionset_tags/excitation_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/wavefunctionset_tags/mono_determinant_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/wavefunctionset_tags/poly_determinant_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/wavefunctionset_tags/spatialorbital_cluster_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/wavefunctionset_tags/spatialorbital_single_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/wavefunctionset_tags/wavefunction_analytic_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/wavefunctionset_tags/wavefunction_mcscf_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/wavefunctionset_tags/wavefunction_valencebond_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/wavefunctionset_tags/wavefunctionset_symbol_t.ml
+
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/values/wavefunctionset_values/analytic_wavefunction_symbol_t.ml
+
+locate hsbf | grep symbol_t.ml | grep -v symbol_t.mli | grep frames_2_sep_2011 | grep -v top_17_sep_2012 | grep -v markers
+
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_bundle_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_cluster_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_expanded_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_molbasis_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_pack_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_single_symbol_t.ml
+
+
+locate xfp | grep symbol_t.ml | grep -v symbol_t.mli | grep frames_2_sep_2011 | grep -v top_17_sep_2012 | grep -v markers
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/xfp_expanded_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/xfp_single_symbol_t.ml

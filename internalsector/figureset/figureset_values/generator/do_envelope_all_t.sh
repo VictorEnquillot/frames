@@ -1,0 +1,26 @@
+do_envelope_as_list_t.sh figure_field_fence_point
+do_envelope_as_list_t.sh figure_field_fence
+do_envelope_as_list_t.sh figure_field_body_segment
+do_envelope_as_list_t.sh figure_field_body_triangle_scalene_right
+do_envelope_as_list_t.sh figure_field_body_triangle_scalene_obtuse
+do_envelope_as_list_t.sh figure_field_body_triangle_scalene_acute
+do_envelope_as_list_t.sh figure_field_body_triangle_scalene
+do_envelope_as_list_t.sh figure_field_body_triangle_isosceles_right
+do_envelope_as_list_t.sh figure_field_body_triangle_isosceles_obtuse
+do_envelope_as_list_t.sh figure_field_body_triangle_isosceles_equilateral
+do_envelope_as_list_t.sh figure_field_body_triangle_isosceles_acute
+do_envelope_as_list_t.sh figure_field_body_triangle_isosceles
+do_envelope_as_list_t.sh figure_field_body_triangle
+do_envelope_as_list_t.sh figure_field_body
+do_envelope_as_list_t.sh figure_field
+do_envelope_as_list_t.sh figure_context_domain
+do_envelope_as_list_t.sh figure_context_databox
+do_envelope_as_list_t.sh figure_context_database
+do_envelope_as_list_t.sh figure_context
+do_envelope_as_list_t.sh figure
+
+echo ""
+echo " mv Figure*.ml ../"
+echo ""
+
+exit

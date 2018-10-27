@@ -1,0 +1,29 @@
+#use "Figureset_run.ml";;
+let read_stdin () =
+  let ssi = Scanf.Scanning.stdin in
+  Input_parser_v.read_input_file_of_scanning_in_channel ssi
+;;
+let str_dol_dol = read_stdin ();;
+#use "Arg_u_any.ml";;
+let str_ref := string ref;;
+let str_ref = string ref;;
+let str_ref = ref "";;
+let str_ref = ref string;;
+let spec = Arg.Set_string str_ref;;
+let doc ="domain";;
+ Arg.parse [(key, spec, doc)] (fun s->s) "usage";;
+let key = "domain";;
+let str_ref = ref "";;
+let spec = Arg.Set_string str_ref;;
+let doc ="domain";;
+ 
+Arg.parse [(key, spec, doc)] (fun s->s) "usage";;
+Arg.parse [(key, spec, doc)] (fun s->unit) "usage";;
+Arg.parse [(key, spec, doc)] (fun s->()) "usage";;
+#use "Arg_u_any.ml";;
+!str_ref;;
+let str_ref = ref "";;
+!str_ref;;
+Format.fprintf Format.std_formatter "%s@." (!str_ref);;
+#use "Arg_u_any.ml";;
+print_string;;

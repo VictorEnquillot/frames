@@ -1,0 +1,36 @@
+test.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tree_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tag_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_symbol_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_set_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_set_fence_variable_name_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_set_fence_variable_name_entity_target_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_set_fence_variable_name_entity_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_set_fence_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_variables/Localinput_set_body_handle_command_creation_define_tag_list_by_basicname_inputbox_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_set_body_handle_command_creation_define_symbol_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_set_body_handle_command_creation_define_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_variables/Localinput_as_set_fence_variable_name_entity_tag_by_basicname_inputbox_n_localinput_set_body_handle_command_creation_define_symbol_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_variables/Localinput_as_set_body_handle_command_creation_define_tag_subtree_by_basicname_variable_n_basicname_inputbox_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_t.cmo
+test.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tree_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tag_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_symbol_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_set_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_set_fence_variable_name_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_set_fence_variable_name_entity_target_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_set_fence_variable_name_entity_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_set_fence_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_variables/Localinput_set_body_handle_command_creation_define_tag_list_by_basicname_inputbox_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_set_body_handle_command_creation_define_symbol_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_symbols/Localinput_set_body_handle_command_creation_define_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_variables/Localinput_as_set_fence_variable_name_entity_tag_by_basicname_inputbox_n_localinput_set_body_handle_command_creation_define_symbol_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_variables/Localinput_as_set_body_handle_command_creation_define_tag_subtree_by_basicname_variable_n_basicname_inputbox_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_t.cmx

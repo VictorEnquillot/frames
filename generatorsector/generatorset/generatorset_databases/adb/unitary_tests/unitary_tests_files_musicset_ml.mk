@@ -1,0 +1,48 @@
+FILES_GENERAL_MUSICSET_SYMBOL_ML := \
+Database_record_list_by_category_trail_provider_u_musicset_symbol.ml \
+Word_word_string_triplet_list_by_category_trail_provider_u_musicset_symbol.ml \
+Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_u_musicset_symbol.ml \
+  
+FILES_GENERAL_MUSICSET_FORMULA_ML := \
+Database_record_list_by_category_trail_provider_u_musicset_formula.ml \
+Word_word_string_triplet_list_by_category_trail_provider_u_musicset_formula.ml \
+Entity_basename_righthandside_string_doublet_list_by_category_trail_provider_u_musicset_formula.ml \
+
+FILES_CONSTRUCTOR_MUSICSET_ML := \
+Entity_node_basename_righthandside_string_doublet_list_by_domain_trail_provider_u_musicset.ml \
+Entity_node_basename_list_by_domain_trail_provider_u_musicset.ml \
+Builder_basename_list_by_domain_trail_provider_u_musicset.ml \
+Entity_basic_basename_list_by_domain_trail_provider_u_musicset.ml \
+Constructor_basename_tree_by_domain_trail_provider_u_musicset.ml \
+ 
+FILES_CONSTRUCTOR_MUSICSET_SYMBOL_ML := \
+Righthandside_string_list_by_category_trail_provider_u_musicset_symbol.ml \
+Righthandside_string_by_constructor_node_trail_provider_u_musicset_symbol.ml \
+Constructor_basename_list_by_constructor_node_trail_provider_u_musicset_symbol.ml \
+Constructor_basename_list_by_domain_trail_provider_u_musicset_symbol.ml \
+
+FILES_BUILDER_MUSICSET_ML := \
+Constructor_leaf_basename_righthandside_string_doublet_list_by_domain_trail_provider_u_musicset.ml \
+Constructor_leaf_basename_list_by_domain_trail_provider_u_musicset.ml \
+Constructor_leaf_basename_datastructure_basename_doublet_list_by_domain_trail_provider_u_musicset.ml \
+Builder_root_basename_list_by_domain_trail_provider_u_musicset.ml \
+
+FILES_BUILDER_MUSICSET_FORMULA_ML := \
+Righthandside_string_list_by_category_trail_provider_u_musicset_formula.ml \
+Righthandside_string_by_constructor_leaf_trail_provider_u_musicset_formula.ml \
+Builder_basename_list_by_constructor_leaf_trail_provider_u_musicset_formula.ml \
+Builder_basename_subtree_by_constructor_leaf_trail_provider_u_musicset_formula.ml \
+Builder_basename_tree_list_by_domain_trail_provider_u_musicset.ml \
+Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_u_musicset.ml \
+Datastructure_basename_by_constructor_leaf_trail_provider_u_musicset_formula.ml \
+
+FILES_INACTIVE := \
+
+UNITARY_TESTS_FILES_MUSICSET_ML := \
+$(FILES_BUILDER_MUSICSET_FORMULA_ML) \
+# $(FILES_GENERAL_MUSICSET_SYMBOL_ML) \
+# $(FILES_BUILDER_MUSICSET_ML) \
+# $(FILES_GENERAL_MUSICSET_FORMULA_ML) \
+# $(FILES_CONSTRUCTOR_MUSICSET_ML) \
+# $(FILES_CONSTRUCTOR_MUSICSET_SYMBOL_ML) \
+ 

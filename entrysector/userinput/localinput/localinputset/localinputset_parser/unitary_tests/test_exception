@@ -1,0 +1,1 @@
+test_raises_some_exc Stack.top sym_lex_con_s;;

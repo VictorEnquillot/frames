@@ -1,0 +1,24 @@
+emacs \
+	configure \
+	Makefile \
+	system_units_t.mli \
+	system_units_v.ml \
+	system_units_v.mli \
+	au/au_t.mli \
+	au/au_v.ml  \
+	au/au_v.mli  \
+	au/configure \
+	au/Makefile \
+	cgs/cgs_t.mli \
+	cgs/cgs_v.ml \
+	cgs/cgs_v.mli \
+	cgs/configure \
+	cgs/Makefile \
+	mksa/mksa_t.mli \
+	mksa/mksa_v.ml \
+	mksa/mksa_v.mli \
+	mksa/si_t.mli \
+	mksa/si_v.ml \
+	mksa/si_v.mli \
+	mksa/configure \
+	mksa/Makefile

@@ -1,0 +1,211 @@
+# ------ No Fence ------
+
+# ------ Border ------
+
+# border_bud coordinate_homogeneous
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_homogeneous_cartesian_x ecx elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_homogeneous_cartesian_y ecy elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_homogeneous_cartesian_z ecz elementary_fence_units_actual
+
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_homogeneous_linear_x  elx elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_homogeneous_planar_x  epx elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_homogeneous_planar_y  epy elementary_fence_units_actual
+
+# border_trunc_2envelopee coordinate_homogeneous
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_homogeneous_linear ehl elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_homogeneous_planar ehp elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_homogeneous_cartesian ehc elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_homogeneous ech elementary_fence_units_actual
+
+# border_bud coordinate_heterogeneous
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_heterogeneous_cylindrical_phi   ecp elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_heterogeneous_cylindrical_rho   ecr elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_heterogeneous_cylindrical_zed   ecz elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_heterogeneous_polar_rho   epr elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_heterogeneous_polar_theta ept elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_heterogeneous_spherical_phi   esp elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_heterogeneous_spherical_rho   esr elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_heterogeneous_spherical_theta est elementary_fence_units_actual
+
+# border_trunc  coordinate heterogeneous (2 units)
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_heterogeneous_cylindrical ehc elementary_fence_units_actual 
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_heterogeneous_spherical   ehs elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_heterogeneous_polar       ehp elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate_heterogeneous bch elementary_fence_units_actual
+
+# coordinate as_uno border
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_coordinate  ebc elementary_fence_units_actual
+
+# parameter aopef
+
+# parameter as_doublet border_bud
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_parameter_aopef_coefficient eac elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_parameter_aopef_exponent    eae  elementary_fence_units_actual
+
+# parameter as_doublet border_trunc
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_parameter_aopef epa elementary_fence_units_actual 
+
+# parameter ecppef
+
+# parameter as_doublet border_bud
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_parameter_ecppef_coefficient eec elementary_fence_units_actual
+
+do_envelope_as_list_border_trunc_units_v.sh  \
+elementary_border_parameter_ecppef_exponent    eee elementary_fence_units_actual
+
+# parameter as_doublet border_trunc
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_parameter_ecppef epe elementary_fence_units_actual
+
+# parameter as_doublet border_trunc
+
+do_envelope_as_list_border_trunc_units_v.sh \
+elementary_border_parameter ebp elementary_fence_units_actual
+
+# border
+
+do_envelope_as_list_border_self_units_v.sh \
+elementary_border ebo elementary_fence_units_actual
+
+# --- parameter_tuple ---
+
+# as_tuple_body_bud 
+
+do_envelope_as_tuple_body_bud_measure_units_float_v.sh \
+elementary_body_parameter_tuple_aopef  eta
+
+do_envelope_as_tuple_body_bud_measure_units_float_v.sh \
+elementary_body_parameter_tuple_ecppef ete
+
+# as_tuple_body_trunc
+
+do_envelope_as_tuple_body_trunc_measure_units_float_v.sh \
+elementary_body_parameter_tuple ept 
+
+# coordinate_tuple body_bud
+
+do_envelope_as_tuple_body_bud_measure_units_float_v.sh \
+elementary_body_coordinate_tuple_homogeneous_cartesian ehc
+
+do_envelope_as_tuple_body_bud_measure_units_float_v.sh \
+elementary_body_coordinate_tuple_homogeneous_planar ehp
+
+do_envelope_as_tuple_body_bud_measure_units_float_v.sh \
+elementary_body_coordinate_tuple_homogeneous_linear ehl
+
+do_envelope_as_tuple_body_bud_measure_units_float_v.sh \
+elementary_body_coordinate_tuple_heterogeneous_cylindrical ehc
+
+do_envelope_as_tuple_body_bud_measure_units_float_v.sh \
+elementary_body_coordinate_tuple_heterogeneous_spherical ehs
+
+do_envelope_as_tuple_body_bud_measure_units_float_v.sh \
+elementary_body_coordinate_tuple_heterogeneous_polar ehp
+
+# coordinate_tuple body_trunc
+
+do_envelope_as_tuple_body_trunc_measure_units_float_v.sh \
+elementary_body_coordinate_tuple_heterogeneous ehe
+
+do_envelope_as_tuple_body_trunc_measure_units_float_v.sh \
+elementary_body_coordinate_tuple_homogeneous eho
+ 
+do_envelope_as_tuple_body_trunc_measure_units_float_v.sh \
+elementary_body_coordinate_tuple ect 
+
+# body top
+
+do_envelope_as_tuple_body_trunc_measure_units_float_v.sh \
+elementary_body ebo 
+
+# context_bud 
+
+do_envelope_as_list_context_bud_measure_units_float_v.sh \
+elementary_context_databox_figuredata edf
+
+do_envelope_as_list_context_bud_measure_units_float_v.sh \
+elementary_context_databox_skeletondata edb
+
+do_envelope_as_list_context_bud_measure_units_float_v.sh \
+elementary_context_database ecd 
+
+do_envelope_as_list_context_bud_measure_units_float_v.sh \
+elementary_context_domain ecd 
+
+# context_trunc 
+
+do_envelope_as_list_context_bud_measure_units_float_v.sh \
+elementary_context_databox ecd 
+
+# context top 
+
+do_envelope_as_list_context_bud_measure_units_float_v.sh \
+elementary_context eco 
+
+# top 
+do_envelope_as_tuple_body_trunc_measure_units_float_v.sh \
+elementary ele 
+
+
+echo " "
+echo " mv Elementary_*.ml ../"
+echo " "
+
+exit
+
+ 

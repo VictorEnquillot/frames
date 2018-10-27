@@ -1,0 +1,214 @@
+and property_operand_target_created_envelope_of_operand_target_of_operator_tag tag_pro_pox tag_oen =
+  let nam_fun = "property_operand_target_created_envelope_of_operand_target_of_operator_tag" in
+  if debug then Format.fprintf Format.std_formatter "%s.%s: tag_oen >%s<@." nam_mod nam_fun (Operator_endomorphism_tag_v.fullname tag_oen);  
+
+  let sym_oen = Tag_v.entity_off_tag tag_oen in
+  match sym_oen with 
+  | Operator_endomorphism_symbol_t.Operator_transformation_symbol
+      (Operator_transformation_symbol_t.Operator_transformation_homothety nam_ivn_hom) ->
+	
+	property_operand_target_created_envelope_of_homothety_of_operand_target 
+	  nam_ivn_hom
+	  tag_pro_pox
+  
+  | Operator_endomorphism_symbol_t.Operator_transformation_symbol
+      (Operator_transformation_symbol_t.Operator_transformation_translation nam_ivn_tra) ->
+	
+	property_operand_target_created_envelope_of_translation_of_operand_target
+	  nam_ivn_tra
+	  tag_pro_pox
+	  
+  | Operator_endomorphism_symbol_t.Operator_transformation_symbol
+      (Operator_transformation_symbol_t.Operator_transformation_rotation nam_ivn_rot) ->
+	
+	property_operand_target_created_envelope_of_rotation_of_operand_target
+	  nam_ivn_rot
+	  tag_pro_pox
+	  
+  | Operator_endomorphism_symbol_t.Operator_copy nam_ivn_cop ->
+      
+      property_operand_target_created_envelope_of_copy_of_operand_target
+	nam_ivn_cop
+	tag_pro_pox
+
+
+and property_operand_target_created_envelope_of_operand_external_of_operator_tag tag_pro_pox tag_oen =
+  let nam_fun = "property_operand_target_created_envelope_of_operand_external_of_operator_tag" in
+  if debug then Format.fprintf Format.std_formatter "%s.%s: tag_oen >%s<@." nam_mod nam_fun (Operator_endomorphism_tag_v.fullname tag_oen);  
+  if debug then Format.fprintf Format.std_formatter "%s.%s: tag_pro_pox >%s<@." nam_mod nam_fun (Property_tag_v.fullname tag_pro_pox);  
+
+  let sym_oen = Tag_v.entity_off_tag tag_oen in
+  match sym_oen with 
+  | Operator_endomorphism_symbol_t.Operator_transformation_symbol
+      (Operator_transformation_symbol_t.Operator_transformation_homothety nam_ivn_hom) ->
+	
+	property_operand_target_created_envelope_of_homothety_of_property_as_operand_external_tag
+	  nam_ivn_hom
+	  tag_pro_pox
+  
+  | Operator_endomorphism_symbol_t.Operator_transformation_symbol
+      (Operator_transformation_symbol_t.Operator_transformation_translation nam_ivn_tra) ->
+	
+	property_operand_target_created_envelope_of_translation_of_operand_external
+	  nam_ivn_tra
+	  tag_pro_pox
+	  
+  | Operator_endomorphism_symbol_t.Operator_transformation_symbol
+      (Operator_transformation_symbol_t.Operator_transformation_rotation nam_ivn_rot) ->
+	
+	property_operand_target_created_envelope_of_rotation_of_operand_external
+	  nam_ivn_rot
+	  tag_pro_pox
+	  
+  | Operator_endomorphism_symbol_t.Operator_copy nam_ivn_cop ->
+      
+      property_operand_target_created_envelope_of_copy_of_operand_external
+	nam_ivn_cop
+	tag_pro_pox
+
+and property_operand_target_created_envelope_of_translation_of_operand_target nam_ivn_tra tag_pro_pox =
+  let nam_fun = "property_operand_target_created_envelope_of_translation_of_operand_target" in
+  if debug then Format.fprintf Format.std_formatter "%s.%s: nam_ivn_tra >%s<@." nam_mod nam_fun nam_ivn_tra;  
+  if debug then Format.fprintf Format.std_formatter "%s.%s: tag_pro_pox >%s<@." nam_mod nam_fun (Property_tag_v.fullname tag_pro_pox);  
+
+(* Operand Figure Created Measure list *)
+  let mch_opd_tl = 
+    envelope_of_operand_target_tag
+      tag_pro_pox 
+  in
+  let flo_opd_tl = List.map (Tuple_v.map Measure_v.float_off_measure) mch_opd_tl in
+
+(* Translation by Segment Float Tuple Duo *)
+  let nam_ivn_seg = 
+    Segment_input_variable_name_by_operator_input_variable_name_provider_v.provide 
+      nam_ivn_tra
+  in
+
+  let mch_seg_td = 
+    Measure_tools_v.measure_canonical_homogeneous_tuple_duo_of_segment_input_variable_name 
+      nam_ivn_seg 
+  in
+  let flo_seg_td = Duo_v.map (Tuple_v.map Measure_v.float_off_measure) mch_seg_td in
+
+  let flo_tra_tl = 
+    Float_operator_v.translation_tuple_list_of_operand_as_float_tuple_list_of_segment_as_float_tuple_duo 
+      flo_opd_tl 
+      flo_seg_td
+  in
+
+  let sym_uni = Measure_v.canonical_elementary_units_symbol_as_length in
+  List.map (Tuple_v.map (fun f -> Measure_v.make f sym_uni)) flo_tra_tl 
+
+and property_operand_target_created_envelope_of_homothety_of_operand_target nam_ivn_hom tag_pro_pox =
+  let nam_fun = "property_operand_target_created_envelope_of_homothety_of_operand_target" in
+  if debug then Format.fprintf Format.std_formatter "%s.%s: tag_pro_pox >%s<@." nam_mod nam_fun (Property_tag_v.fullname tag_pro_pox);  
+
+(* Operand Figure Created Measure list *)
+  let mch_opd_tl = 
+    envelope_of_operand_target_tag 
+      tag_pro_pox
+  in
+  let flo_opd_tl = List.map (Tuple_v.map Measure_v.float_off_measure) mch_opd_tl in
+
+(* Homothety Scale_factor Float *)
+  let str_flo_sca = 
+    Scale_factor_name_by_operator_input_variable_name_provider_v.provide 
+      nam_ivn_hom 
+  in
+  let flo_sca = String_v.float_of_string str_flo_sca in
+
+(* Homothety Center Figure Float list *)
+  let nam_ivn_cen = 
+    Center_input_variable_name_by_operator_input_variable_name_provider_v.provide 
+      nam_ivn_hom
+  in
+  let mch_cen_t = 
+    Measure_tools_v.measure_canonical_homogeneous_tuple_of_center_input_variable_name 
+      nam_ivn_cen 
+  in
+  let flo_cen_t = Tuple_v.map Measure_v.float_off_measure mch_cen_t in
+
+  let flo_hom_tl = 
+    Float_operator_v.homothety_tuple_list_of_operand_as_float_tuple_list_of_center_tuple_of_scale_factor 
+      flo_opd_tl 
+      flo_cen_t 
+      flo_sca 
+   in
+
+  let sym_uni = Measure_v.canonical_elementary_units_symbol_as_length in
+  List.map (Tuple_v.map (fun f -> Measure_v.make f sym_uni)) flo_hom_tl 
+	
+and envelope_of_operand_target_tag tag_pro_pox =
+
+  let tag_ptc_opd = Tag_v.map_entity 
+      Property_symbol_v.property_operand_target_created_symbol_off_property_symbol 
+      tag_pro_pox
+  in
+  
+  envelope_of_property_operand_target_created_tag tag_ptc_opd
+
+and property_operand_target_created_envelope_of_translation_of_operand nam_ivn_tra tag_pro_pox =
+
+(* Operand External or Target *)
+  let sym_pro_opd = Tag_v.entity_off_tag tag_pro_pox in
+
+  match sym_pro_opd with
+  | Property_symbol_t.Property_body_symbol
+      (Property_body_symbol_t.Property_target_symbol
+	 (Property_target_symbol_t.Property_operand_target_created_symbol
+	    (Property_operand_target_created_symbol_t.Property_operand_target_created_figure_tag sof_ptc))) ->
+		 
+	      property_operand_target_created_envelope_of_translation_of_operand_target 
+		nam_ivn_tra 
+		tag_pro_pox
+
+  | Property_symbol_t.Property_fence_symbol
+      (Property_fence_symbol_t.Property_operand_external_symbol
+	 (Property_operand_external_symbol_t.Property_operand_figure_tag tag_fig)) ->
+
+	   property_operand_target_created_envelope_of_translation_of_operand_external 
+	     nam_ivn_tra 
+	     tag_pro_pox
+		
+  | _ ->
+
+      let nam_mod = Management_v.current_module_name (documentation ()) in
+      let nam_fun = "property_operand_target_created_envelope_of_translation_of_operand" in
+      Error_messages_v.print_fatal_error nam_mod nam_fun
+	"Property_operand_symbol were Property_operand_figure_tag | Property_operand_target_created_figure_tag"
+	(Format.sprintf "%s" (Property_symbol_v.fullname sym_pro_opd))
+	"Check"
+
+and property_operand_target_created_envelope_of_homothety_of_operand nam_ivn_hom tag_pro_pox =
+
+(* Operand External or Target *)
+  let sym_pro_opd = Tag_v.entity_off_tag tag_pro_pox in
+
+  match sym_pro_opd with
+  | Property_symbol_t.Property_body_symbol
+      (Property_body_symbol_t.Property_target_symbol
+	 (Property_target_symbol_t.Property_operand_target_created_symbol
+	    (Property_operand_target_created_symbol_t.Property_operand_target_created_figure_tag sof_ptc))) ->
+		 
+	      property_operand_target_created_envelope_of_homothety_of_operand_target 
+		nam_ivn_hom 
+		tag_pro_pox
+
+  | Property_symbol_t.Property_fence_symbol
+      (Property_fence_symbol_t.Property_operand_external_symbol
+	 (Property_operand_external_symbol_t.Property_operand_figure_tag tag_fig)) ->
+
+	   property_operand_target_created_envelope_of_homothety_of_property_as_operand_external_tag 
+	     nam_ivn_hom 
+	     tag_pro_pox
+		
+  | _ ->
+
+      let nam_mod = Management_v.current_module_name (documentation ()) in
+      let nam_fun = "property_operand_target_created_envelope_of_homothety_of_operand" in
+      Error_messages_v.print_fatal_error nam_mod nam_fun
+	"Property_operand_symbol were Property_operand_figure_tag | Property_operand_target_created_figure_tag"
+	(Format.sprintf "%s" (Property_symbol_v.fullname sym_pro_opd))
+	"Check"
+;;
+

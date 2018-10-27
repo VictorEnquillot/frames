@@ -1,0 +1,21 @@
+define Ctu_sph
+       elementary [ "coordinate_tuple" "heterogeneous" "spherical" ] 
+         external_name "rho_phi_theta"
+         context 
+           database "db1points"
+           domain "elementary"
+           end -- context
+         end -- elementary
+       end -- define
+
+define Phi
+       elementary [ "coordinate" "spherical" ] 
+         external_name "phi"
+         context 
+           database "db1points"
+           domain "elementary"
+           end -- context
+         end -- elementary
+       end -- define
+
+stop

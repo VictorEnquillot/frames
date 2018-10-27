@@ -1,0 +1,14 @@
+ledit -x -h ./.debug-history ocamldebug \
+-I ../../../general/basics \
+-I ../../../general/datastructures \
+-I ../../../general/files \
+-I ../../figureset_symbols \
+-I ../../figureset_interfaces \
+-I ../../figureset_tags \
+-I ../../figureset_databases/common \
+-I ../../figureset_databases \
+-I ../../figureset_databases/db1 \
+-I ../../../commonset \
+-I ../../../inputset \
+-I ../ \
+runtest.byt

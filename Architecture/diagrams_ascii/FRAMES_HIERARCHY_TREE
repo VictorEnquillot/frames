@@ -1,0 +1,51 @@
+                                                      Simulation of Physical_Property 
+                                                                  |
+                                                          Physical_Property 
+                                                                  |
+                                                         [ Regional_Model ]       
+                                                                  |
+                                           ------------------------------------
+                                           |                                  |
+                                System_Physical_Region                  System_Model    
+                                           |                                  |
+                        ------------------------------------                  |
+                        |                                  |                  |
+                  System_Physical          data ---> Selection_Criterion      |     
+                        |                                                     |
+              data ---> |                                                     |    
+                        |                                                     |
+           |------------|                                       ---------------------------
+           |            |                                       |                         |
+   External_Field System_Particles                         Wavefunction              Force_Field
+                        |                                       |
+           formula ---->|                                ---------------
+                        |
+                 -----------------
+                 |               |
+         Particle_Elementary  Molecule 
+                                 |                       |             |
+                         ------------------              |             |
+                         |                |          Analytic  LC_Jastrowed_CSF 
+                        Box             Protein                        |        
+                         |                |                           CSF
+                      Molecule          Chain                          |
+                         |                |                      Mono_Determinant
+                     Fragment_grouping  Residue                        |
+                         |                |                            MO
+                         |         -------------                       |
+                         |         |           |                   Hsbf_molbasis
+                         |       Sidechain Capeptide                   |
+                         |         |           |                ------------------  
+                         -----------           |                |                |
+                              |                |     System_Physical_Region  Hsbf_Single
+                      Fragment_grouping        |                                 |
+                              |                |                                Cefp
+                              ------------------                                 |
+                                       |                                      Basisset
+                                    Fragment
+                                       |
+                                     Block
+                                       |
+                                      Atom
+                                       |
+                              Molecular_Database

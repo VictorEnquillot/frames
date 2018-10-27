@@ -1,0 +1,21 @@
+ # nothing
+   model =
+     model_name = triangle_equilateral
+   end # model
+
+   model =
+     model_name = triangle_scalene_right
+   end # model
+
+   target = 
+     target_name = triangle_equilateral_perimeter
+   end # target
+
+   target = 
+     target_name = triangle_scalene_right_surface
+   end # target
+
+   target = 
+     target_name = triangle_perimeter_ratio
+   end # target
+

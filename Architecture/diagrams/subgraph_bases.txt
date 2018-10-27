@@ -1,0 +1,8 @@
+subgraph bases {
+	 style=filled
+	 color=lightgrey;
+	 data [shape=record, 
+	       label="{ Localinput\nLOI | Molprodata\nMPR | Nwchemdata\nNWC | Db1pointsdata\nDB1|Db2pointsdata\nDB2}"];
+	 label = "Inputbases and Databases";
+
+	 }

@@ -1,0 +1,1 @@
+let idx_cat = Category_symbol_v.category_symbol_index_of_category_symbol sym_cat;;

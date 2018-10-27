@@ -1,0 +1,58 @@
+(** {6 Builder Tag Containers} *)
+
+let builder_tag_list tag_ttt =
+  let tag_ele = Tag_v.map_entity (* Coerce Up *)
+      Elementary_symbol_v.elementary_symbol_of_this_symbol
+      tag_ttt
+  in
+
+  let tag_ele_bui_l =
+    Elementary_any_category_by_sole_index_extractor_v.son_elementary_tag_list_of_string_predicate_of_father_tag 
+      "is_buldr_symbol_off_elementary_symbol"
+      tag_ele 
+  in
+
+  List.map 
+    (Tag_v.map_entity (* Coerce Down *)
+       Elementary_symbol_v.buldr_symbol_off_elementary_symbol)
+    tag_ele_bui_l
+;;
+
+let builder_tag_datstr tag_ttt =
+  let tag_bbb_l = builder_tag_list tag_ttt in
+  Datstr_v.datstr_off_list tag_bbb_l
+;;
+
+let builder_tag_tuple tag_ttt =
+  let tag_bbb_d = builder_tag_datstr tag_ttt in
+  Tuple_v.tuple_of_datstr tag_bbb_d
+;;
+
+(** {6 Extracting Individual Builder Tag off Tag} *)
+
+let buldr_tag_off_this_tag tag_ttt =
+  let uni_tag_s = builder_tag_datstr tag_ttt in
+  Datstr_v.element_off_datstr uni_tag_s
+;;
+
+(** {6 Fence Tag off Tag} *)
+
+let fence_list tag_ttt =
+  builder_tag_list tag_ttt 
+;;
+
+let fence_tuple tag_ttt =
+  builder_tag_tuple tag_ttt 
+;;
+
+(** {6 Deepfence Tag off Tag} *)
+
+let deepfence_list tag_ttt =
+  let fen_l = fence_list tag_ttt in
+  List.map Buldr_container_v.fence_list fen_l
+;;
+
+let deepfence_tuple tag_ttt =
+  let fen_t = fence_tuple tag_ttt in
+  Tuple_v.map Buldr_container_v.fence_tuple fen_t
+;;

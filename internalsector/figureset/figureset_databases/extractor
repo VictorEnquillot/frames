@@ -1,0 +1,243 @@
+(** {6 Extracting.} *)
+
+let sole_index_n_database_entity_symbol_list_of_database_entity_symbol_predicate gss_pre =
+  Register_v.entry_list_of_value_predicate_of_register gss_pre
+    Database_entity_symbol_by_sole_index_register_v.register 
+;;
+
+let sole_index_n_database_entity_symbol_of_database_entity_symbol_predicate_off_sole_index gss_pre soi =
+let nam_fun = "sole_index_n_database_entity_symbol_of_database_entity_symbol_predicate_off_sole_index" in
+
+  let soi_l = Sole_index_v.sole_index_list_off_sole_index soi in
+  let gss_l = List.map provide soi_l in
+  let soi_n_des_dol = Doublet_list_v.make soi_l gss_l in
+
+  if (not (List_v.is_once_list_of_list gss_l))  (* Invariant *)
+
+  then
+    Error_messages_v.print_fatal_error nam_cod nam_fun
+      (Format.sprintf "Symbols were defined Once along Sole_index %s" (Sole_index_v.name soi))
+      (Format.sprintf "this Symbol list :@.   %s" 
+	 (Doublet_list_v.name_with_separator Sole_index_v.name Database_entity_symbol_v.fullname ";\n   " soi_n_des_dol)
+      )
+      "Refine predicate"
+  else
+    try 
+    
+      Doublet_list_v.find_if_right gss_pre soi_n_des_dol
+  
+    with Failure ("Not_found:doublet_list_v.ml:find_if_right") ->
+      Error_messages_v.print_fatal_error nam_cod 
+	"sole_index_n_database_entity_symbol_of_database_entity_symbol_predicate_off_sole_index"
+	(Format.sprintf "predicate were true once along Sole_index %s" (Sole_index_v.name soi))
+	(Format.sprintf "this Symbol list :@.   %s" 
+	   (Doublet_list_v.name_with_separator Sole_index_v.name Database_entity_symbol_v.fullname ";\n   " soi_n_des_dol)
+	)
+	"Redefine predicate"
+;;
+
+let database_entity_symbol_of_database_entity_symbol_predicate_off_sole_index gss_pre soi =
+  let soi_n_des = 
+    sole_index_n_database_entity_symbol_of_database_entity_symbol_predicate_off_sole_index 
+      gss_pre 
+      soi 
+  in
+  Doublet_v.right_off_doublet soi_n_des
+;;
+
+let sole_index_of_database_entity_symbol_predicate_off_sole_index gss_pre soi =
+  let soi_n_des = 
+    sole_index_n_database_entity_symbol_of_database_entity_symbol_predicate_off_sole_index 
+      gss_pre 
+      soi 
+  in
+  Doublet_v.left_off_doublet soi_n_des
+;;
+
+(** {6 Querying} *)
+
+(** {6 Extracting_off_sole_index} *)
+
+(** {9 Local_database} *)
+
+let local_database_symbol_off_sole_index soi =
+  database_entity_symbol_of_database_entity_symbol_predicate_off_sole_index
+    Database_entity_symbol_v.is_local_database_symbol_off_database_entity_symbol
+    soi
+;;
+
+let local_database_sole_index_off_sole_index soi =
+  sole_index_of_database_entity_symbol_predicate_off_sole_index
+    Database_entity_symbol_v.is_local_database_symbol_off_database_entity_symbol
+    soi
+;;
+
+let local_database_entity_tag_off_sole_index soi =
+  let sym_dab = local_database_symbol_off_sole_index soi in
+  let soi_dab = local_database_sole_index_off_sole_index soi in
+  Tag_v.make sym_dab soi_dab
+;;
+
+(** {9 Local_figure} *)
+
+let local_figure_symbol_off_sole_index soi =
+  let sym_den = database_entity_symbol_of_database_entity_symbol_predicate_off_sole_index
+    Database_entity_symbol_v.is_local_figure_symbol_off_database_entity_symbol
+    soi
+  in 
+  Database_entity_symbol_v.local_figure_symbol_off_database_entity_symbol sym_den
+;;
+
+let local_figure_sole_index_off_sole_index soi =
+  sole_index_of_database_entity_symbol_predicate_off_sole_index
+    Database_entity_symbol_v.is_local_figure_symbol_off_database_entity_symbol
+    soi
+;;
+
+let local_figure_tag_off_sole_index soi =
+  let sym_lfi = local_figure_symbol_off_sole_index soi in
+  let soi_lfi = local_figure_sole_index_off_sole_index soi in
+  Tag_v.make sym_lfi soi_lfi
+;;
+
+let local_figure_db1_symbol_off_sole_index soi =
+  let sym_lfi = local_figure_symbol_off_sole_index soi in
+  Local_figure_symbol_v.local_figure_db1_symbol_off_local_figure_symbol sym_lfi
+;;
+
+let local_figure_db1_sole_index_off_sole_index soi =
+  local_figure_sole_index_off_sole_index soi
+;;
+
+let local_figure_db1_tag_off_sole_index soi =
+  let sym_lf1 = local_figure_db1_symbol_off_sole_index soi in
+  let soi_lf1 = local_figure_db1_sole_index_off_sole_index soi in
+  Tag_v.make sym_lf1 soi_lf1
+;;
+
+(* let vector_symbol_off_sole_index soi = *)
+(*   database_entity_symbol_of_database_entity_symbol_predicate_off_sole_index *)
+(*     is_vector_of_database_entity_symbol *)
+(*     soi *)
+(* ;; *)
+
+(* let vector_sole_index_off_sole_index soi = *)
+(*   sole_index_of_database_entity_symbol_predicate_off_sole_index *)
+(*     is_vector_of_database_entity_symbol *)
+(*     soi *)
+(* ;; *)
+
+(* let vector_database_entity_tag_off_sole_index soi = *)
+(*   let sym_tri = vector_symbol_off_sole_index soi in *)
+(*   let soi_tri = vector_sole_index_off_sole_index soi in *)
+(*   Tag_v.make sym_tri soi_tri *)
+(* ;; *)
+
+(* let basis_symbol_off_sole_index soi = *)
+(*   database_entity_symbol_of_database_entity_symbol_predicate_off_sole_index *)
+(*     is_basis_of_database_entity_symbol *)
+(*     soi *)
+(* ;; *)
+
+(* let basis_sole_index_off_sole_index soi = *)
+(*   sole_index_of_database_entity_symbol_predicate_off_sole_index *)
+(*     is_basis_of_database_entity_symbol *)
+(*     soi *)
+(* ;; *)
+
+(* let basis_local_database_entity_tag_off_sole_index soi = *)
+(*   let sym_tri = basis_symbol_off_sole_index soi in *)
+(*   let soi_tri = basis_sole_index_off_sole_index soi in *)
+(*   Tag_v.make sym_tri soi_tri *)
+(* ;; *)
+
+(* let summit_symbol_off_sole_index soi = *)
+(*   database_entity_symbol_of_database_entity_symbol_predicate_off_sole_index *)
+(*     is_summit_of_database_entity_symbol *)
+(*     soi *)
+(* ;; *)
+
+(* let summit_sole_index_off_sole_index soi = *)
+(*   sole_index_of_database_entity_symbol_predicate_off_sole_index *)
+(*     is_summit_of_database_entity_symbol *)
+(*     soi *)
+(* ;; *)
+
+(* let summit_database_entity_tag_off_sole_index soi = *)
+(*   let sym_tri = summit_symbol_off_sole_index soi in *)
+(*   let soi_tri = summit_sole_index_off_sole_index soi in *)
+(*   Tag_v.make sym_tri soi_tri *)
+(* ;; *)
+
+(* let vertex_symbol_off_sole_index soi = *)
+(*   database_entity_symbol_of_database_entity_symbol_predicate_off_sole_index *)
+(*     is_vertex_of_database_entity_symbol *)
+(*     soi *)
+(* ;; *)
+
+(* let vertex_sole_index_off_sole_index soi = *)
+(*   sole_index_of_database_entity_symbol_predicate_off_sole_index *)
+(*     is_vertex_of_database_entity_symbol *)
+(*     soi *)
+(* ;; *)
+
+(* let vertex_database_entity_tag_off_sole_index soi = *)
+(*   let sym_ver = vertex_symbol_off_sole_index soi in *)
+(*   let soi_ver = vertex_sole_index_off_sole_index soi in *)
+(*   Tag_v.make sym_ver soi_ver *)
+(* ;; *)
+
+(* let local_units_symbol_off_sole_index soi = *)
+(*   database_entity_symbol_of_database_entity_symbol_predicate_off_sole_index *)
+(*     Database_entity_symbol_v.is_local_units *)
+(*     soi *)
+(* ;; *)
+
+(* let units_sole_index_off_sole_index soi = *)
+(*   sole_index_of_database_entity_symbol_predicate_off_sole_index *)
+(*     Database_entity_symbol_v.is_local_units *)
+(*     soi *)
+(* ;; *)
+
+(** {6 Building_and_storing} *)
+
+(* let domain_sole_index_of_domain_name nam_dos = *)
+(*   let idx_dos = Domain_symbol_v.domain_index_of_domain_name nam_dos in *)
+(*   Sole_index_v.make idx_dos [] *)
+(* ;; *)
+
+(* let domain_database_entity_tag_of_domain_name nam_dos = *)
+(*   let soi_dos = domain_sole_index_of_domain_name nam_dos in *)
+  
+(*   let sym_adb_dos = Database_entity_symbol_v.make "domain" nam_dos in *)
+(*   Database_entity_symbol_by_sole_index_register_v.store soi_dos sym_adb_dos; *)
+
+(*   Tag_v.make sym_adb_dos soi_dos *)
+(* ;; *)
+
+(** {6 Extracting_off_son} *)
+
+(* let database_entity_tag_off_local_figure_key key_tri = *)
+(*   let soi_tri = Tag_v.sole_index_off_tag key_tri in *)
+(*   let sym_dab = database_symbol_off_sole_index soi_tri in *)
+(*   let soi_dab = database_sole_index_off_sole_index soi_tri in *)
+(*   Tag_v.make sym_dab soi_dab *)
+(* ;; *)
+
+(* let database_entity_tag_off_vector_key key_vec = *)
+(*   let soi_vec = Tag_v.sole_index_off_tag key_vec in *)
+(*   let sym_dab = database_symbol_off_sole_index soi_vec in *)
+(*   let soi_dab = database_sole_index_off_sole_index soi_vec in *)
+(*   Tag_v.make sym_dab soi_dab *)
+(* ;; *)
+
+(* let local_figure_database_entity_tag_off_vertex_key key_ver = *)
+(*   let soi_ver = Tag_v.sole_index_off_tag key_ver in *)
+(*   let sym_ver = local_figure_symbol_off_sole_index soi_ver in *)
+(*   let soi_ver = local_figure_sole_index_off_sole_index soi_ver in *)
+(*   Tag_v.make sym_ver soi_ver *)
+(* ;; *)
+
+
+
+

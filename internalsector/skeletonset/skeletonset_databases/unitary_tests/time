@@ -1,0 +1,26 @@
+----------------------------
+no is_stackable
+str File "Prototype_symbol_subtree_by_prototype_context_basisset_tag_provider_v.ml", line 30, characters 45-52
+real	0m0.217s
+user	0m0.164s
+sys	0m0.044s
+
+----------------------------
+is_stackable included
+str File "Prototype_symbol_subtree_by_prototype_context_basisset_tag_provider_v.ml", line 30, characters 45-52
+real	0m1.887s
+user	0m1.448s
+sys	0m0.428s
+
+-----------------------------
+no Full_stack 
+
+
+let f = Unix.time ();;
+let t = Unix.gmtime f;;
+let sec = t.tm_sec;;
+let m = Unix.mktime t;; 
+
+let ts = Unix.times ();;
+let u = ts.tms_utime;;
+let s = ts.tms_stime;;

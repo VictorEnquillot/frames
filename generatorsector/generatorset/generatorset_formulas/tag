@@ -1,0 +1,5 @@
+  let tag_ggg = Tag_v.make sym_ggg soi_gro in
+  let non_ggg = 
+    Group_stem_tag_v.group_stem_nontup_off_group_stem_tag 
+      tag_ggg 
+  in

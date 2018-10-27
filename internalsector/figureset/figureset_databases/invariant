@@ -1,0 +1,22 @@
+let invariant_key_list_is_a_once_list key val_ =
+  let nam_fun = "invariant_key_list_is_a_once_list" in
+
+  let val__old = retrieve key in
+  if val_ <> val__old
+  then 
+    Error_messages_v.print_fatal_error nam_mod nam_fun
+      (Format.sprintf "for key >%s< already stored value >%s \"%s\"< equal new one"
+	 (Sole_index_v.name key) 
+	 (Local_entity_symbol_v.longname val__old)
+	 (Local_entity_symbol_v.string_off val__old)
+      )
+      (Format.sprintf "for new one >%s %s<@.Register stores:@.    %s" 
+	 (Local_entity_symbol_v.longname val_) 
+	 (Local_entity_symbol_v.string_off val_)
+	 (dump ())
+      )
+      "Check or re-run if it is a test"
+  else 
+    ();
+;;
+

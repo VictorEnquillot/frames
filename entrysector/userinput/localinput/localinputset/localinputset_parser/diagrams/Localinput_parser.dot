@@ -1,0 +1,24 @@
+digraph dgn {
+    size="14,14";
+
+    Title [label = "The BNF Tree\nfor an Localinput" fontsize=24, shape="record", color=lightblue, style=filled];
+
+
+    edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+    node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+   "<input_block>" -> { 
+                       "<handle_command_block_define>" 
+                       "stop" 
+                       };
+
+  "<handle_command_block_define>" -> { "define" "<define_block>" }
+  "<handle_command_block_print>" ->  { "print" "<print_block>" };
+  "<handle_command_block_read>" ->  {"read" "<read_block>"};
+  "<handle_command_block_set>" ->  {"set" "<set_block>"};
+  "<handle_command_block_title>" ->  {"title" "( string { string } )"};
+  "<handle_command_block_write>" ->  {"write" "<write_block>"};
+                      				 
+}
+

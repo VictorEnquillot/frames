@@ -1,0 +1,18 @@
+(** {6 Measure} *)
+
+let measure_datstr_of_this_tag tag_ttt =
+  closure_units_as_datstr tag_ttt 
+;;
+
+let measure_tuple_of_this_tag tag_ttt =
+  closure_units_as_tuple tag_ttt 
+;;
+
+let measure_tuple_list_of_this_tag tag_ttt =
+  closure_units_as_tuple_list tag_ttt 
+;;
+
+let measure_list_of_this_tag tag_ttt =
+  closure_units tag_ttt 
+;;
+

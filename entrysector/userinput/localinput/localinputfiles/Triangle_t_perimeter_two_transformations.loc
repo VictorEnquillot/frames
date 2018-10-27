@@ -1,0 +1,105 @@
+define Con_tia 
+       context 
+	 databox "triangle_isoacute"
+	 database "db1points"
+         domain "figure"
+	 sector "internal"
+	 end -- context
+       end -- define
+
+define Con_sbc 
+       context 
+	 databox "segment_BC"
+	 database "db1points"
+         domain "figure"
+	 sector "internal"
+	 end -- context
+       end -- define
+
+define Hom_b_2
+       operator 
+         type [ "operator" "set" "body" "creation" "transformation" "constructor" ]
+         operation "homothety"
+         ondomain "figure"
+	 cofactor 
+            cofactor_entity Cen_b 
+            cofactor_basic 2.0 
+	    end -- cofactor
+         end -- operator
+       end -- define
+
+define Hom_c_3
+       operator
+         type [ "operator" "set" "body" "creation" "transformation" "constructor" ]
+         operation "homothety"
+         ondomain "figure"
+	 cofactor 
+            cofactor_entity P_bc_c 
+            cofactor_basic 3.0 
+	    end -- cofactor
+         end -- operator
+       end -- define
+
+define T 
+       external
+         type [ "figure" "set" "body" "triangle" "isosceles" "acute" "constructor"]
+         external_name "T"
+	 external_context Con_tia
+         end -- external
+       end -- define
+
+define P_bc_b 
+       external
+         type [ "figure" "set" "fence" "point" "constructor" ]
+         external_name "BC_B"
+         external_context Con_sbc
+	 end -- external
+       end -- define
+
+define P_bc_c 
+       external
+         external_name "BC_C"
+         type [ "figure" "set" "fence" "point" "constructor" ]
+         external_context Con_sbc
+	 end -- external
+       end -- define
+
+define T_hb2
+       target 
+         type [ "property" "operand" "body" "target" "created" "constructor" ]
+	 target_operator Hom_b_2 
+         target_operand T_hc3
+	 end -- target
+       end -- define
+
+define T_hc3
+       target 
+         type [ "property" "operand" "body" "target" "created" "constructor" ]
+	 target_operator Hom_c_3 
+         target_operand T
+	 end -- target
+       end -- define
+
+define Per
+       operator
+         type [ "operator" "set" "body" "creation" "tomeasure" "constructor" ]
+         operation "perimeter"
+         ondomain "figure"
+         end -- operator
+       end -- define
+
+define Per_t_hb2
+       target 
+         type [ "property" "operand" "body" "target" "measured" "constructor" ]
+	 target_operator Per
+         target_operand T_hb2
+	 end -- target
+       end -- define
+
+print Per_t_hb2
+      units 
+         length "meter"
+         end -- units
+      end -- print
+
+stop

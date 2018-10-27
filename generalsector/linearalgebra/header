@@ -1,0 +1,3 @@
+let mod_nam = "Path_v";;
+let oc_info = Tools_v.oc_info_of_module_name mod_nam;;
+let octr_ppf = Format.formatter_of_out_channel Tools_v.oc_trace;;

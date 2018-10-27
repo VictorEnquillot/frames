@@ -1,0 +1,8 @@
+(*  Figure_Db1points_Coordinate_Scheme                                                           *)
+(*  Figure_set_fence "A"       -->        Db1pointsdata_set_body_cluster_vertex_constructor "A"  *)
+(*           idx_fsf                                          |                                  *)
+(*  ------------|------------------------------------------------------------------------------  *)
+(*              v                                             |                                  *)
+(*  COO      idx_fsf                                          v                                  *)
+(*  Coordinate_set_body_tuple "A_A"  <--  Db1pointsdata_set_body_record_vertex_constructor "A_A" *)
+

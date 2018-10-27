@@ -1,0 +1,48 @@
+define Con_db1 
+       context
+	 database "db1points"
+         domain "figure"
+	 end -- context
+       end -- define
+
+define Len
+       operator 
+         type [ "operator" "set" "body" "creation" "tomeasure" "constructor"]
+         end -- operator
+       end -- define
+
+define Seg_bc
+       external 
+         type [ "figure" "set" "body" "segment" "constructor" ]
+         external_name "BC"
+         external_context Con_db1
+         end -- external
+       end -- define
+
+define Len_bc
+       target 
+         type [ "property" "operand" "body" "target" "measured" "constructor" ]
+	 target_operator Len
+         target_operand Seg_bc
+	 end -- target
+       end -- define
+
+stop
+
+define Uni_len
+       external 
+         type [ "units" "length" "bohr" ]
+         external_context Con_nwc
+         end -- external
+
+print Len_bc
+      units [ Uni_len ]
+      end -- print
+
+set debug 
+       module "Property_target_created_value_v"
+       end -- debug
+    end -- set
+
+stop
+

@@ -1,0 +1,51 @@
+#!/bin/bash
+
+modify_strings_and_rename_files.sh nwchemdata_body nwchemdata_set_body *ml *mk
+modify_strings_and_rename_files.sh nwchemdata_fence nwchemdata_set_fence *ml *mk
+modify_strings_and_rename_files.sh comment_author_name_many comment_authorname_many *ml *mk
+modify_strings_and_rename_files.sh comment_author_name_two comment_authorname_two *ml *mk
+modify_strings_and_rename_files.sh comment_author_name comment_authorname_one *ml *mk
+
+
+
+
+
+
+
+
+modify_string.pl  angular_function angularfunction *dat
+modify_string.pl  angular_momentum angularmomentum *dat
+modify_string.pl  aocomment_emsl comment_aoemsl  *dat
+modify_string.pl  body_variable_shell_name  body_variable_shellname_usual  *dat
+modify_string.pl  body_variable_shell_name_extended  body_variable_shellname_extended  *dat
+modify_string.pl  set_body_variable_shell_relativistic_name  set_body_variable_shellname_relativistic  *dat
+modify_string.pl  body_variable_shell_name_relativistic  body_variable_shellname_relativistic  *dat
+modify_string.pl  center_and_shell_name centerandshellname *dat
+modify_string.pl  comment_author_name comment_authorname_one *dat
+modify_string.pl  comment_author_name_many comment_authorname_many *dat
+modify_string.pl  comment_author_name_two comment_authorname_two *dat
+modify_string.pl  comment_element_line comment_elementline  *dat
+modify_string.pl  contraction_coefficient_column contraction_coefficientcolumn *dat
+modify_string.pl  dashed_line  dashedline *dat
+modify_string.pl  dataname_file datanamefile *dat
+modify_string.pl  general_contraction_shell_set general_contraction_shellset  *dat
+modify_string.pl  journal_reference journalreference *dat
+modify_string.pl  nwchemdata_body nwchemdata_set_body *dat
+modify_string.pl  nwchemdata_fence nwchemdata_set_fence *dat
+modify_string.pl  positive_integer_n_shell_name positiveintegerandshellname *dat
+modify_string.pl  variable_radial_function variable_radialfunction *dat
+modify_string.pl  variable_ao_singles_at_c variable_aos_at_c *dat
+modify_string.pl  variable_shell_extended_name variable_shellname_extended *dat
+modify_string.pl  center_name centername  *dat
+modify_string.pl  dataname_local_name localname_dataname  *dat
+modify_string.pl  numerical_values numericalvalues *dat
+modify_string.pl  ecpset_local_name localname_ecpset  *dat
+modify_string.pl  electron_number electronnumber *dat
+modify_string.pl  non_negative nonnegative *dat
+modify_string.pl  general_contraction  generalcontraction *dat
+modify_string.pl  body_variable_angular_spherical_function  body_variable_angularfunction_spherical *dat
+modify_string.pl  mendeleiev_symbol  mendeleievsymbol *dat
+
+modify_string.pl and _n_ *dat
+# modify_word.pl  variable_ao variable_ao_single  *dat
+ao_single_contracted ao_contracted *dat

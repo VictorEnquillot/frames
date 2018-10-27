@@ -1,0 +1,83 @@
+(** {6 Upgrading.} *)
+
+let molecule_aminoacid_regular_symbol_of_molecule_aminoacid_regular_olc_symbol = function
+  | Maos_t.A -> Mas_t.Alanine
+  | Maos_t.R -> Mas_t.Arginine
+  | Maos_t.N -> Mas_t.Asparagine
+  | Maos_t.D -> Mas_t.Aspartic
+  | Maos_t.C -> Mas_t.Cysteine
+  | Maos_t.Q -> Mas_t.Glutamine
+  | Maos_t.E -> Mas_t.Glutamic
+  | Maos_t.H -> Mas_t.Histidine
+  | Maos_t.I -> Mas_t.Isoleucine
+  | Maos_t.L -> Mas_t.Leucine
+  | Maos_t.K -> Mas_t.Lysine
+  | Maos_t.M -> Mas_t.Methionine
+  | Maos_t.F -> Mas_t.Phenylalanine
+  | Maos_t.S -> Mas_t.Serine
+  | Maos_t.T -> Mas_t.Threonine
+  | Maos_t.W -> Mas_t.Tryptophan
+  | Maos_t.Y -> Mas_t.Tyrosine
+  | Maos_t.V -> Mas_t.Valine
+;;
+
+let molecule_aminoacid_segmented_symbol_of_molecule_aminoacid_segmented_olc_symbol = function
+  | Maos_t.Molecule_aminoacid_glycine_olc_symbol _ -> 
+      Mas_t.Molecule_aminoacid_glycine_symbol Mas_t.Glycine
+;;
+
+let molecule_aminoacid_fragmented_symbol_of_molecule_aminoacid_fragmented_olc_symbol = function
+  | Maos_t.Molecule_aminoacid_proline_olc_symbol _ -> 
+      Mas_t.Molecule_aminoacid_proline_symbol Mas_t.Proline
+  | Maos_t.Molecule_aminoacid_regular_olc_symbol smb_aor -> 
+      Mas_t.Molecule_aminoacid_regular_symbol
+	(molecule_aminoacid_regular_symbol_of_molecule_aminoacid_regular_olc_symbol smb_aor)
+;;
+
+let molecule_aminoacid_symbol_of_molecule_aminoacid_olc_symbol = function
+  | Maos_t.Molecule_aminoacid_segmented_olc_symbol smb -> 
+      Mas_t.Molecule_aminoacid_segmented_symbol
+	(molecule_aminoacid_segmented_symbol_of_molecule_aminoacid_segmented_olc_symbol smb)
+
+  | Maos_t.Molecule_aminoacid_fragmented_olc_symbol smb_aon ->
+      Mas_t.Molecule_aminoacid_fragmented_symbol
+	(molecule_aminoacid_fragmented_symbol_of_molecule_aminoacid_fragmented_olc_symbol smb_aon)
+;;
+
+let char_of_molecule_aminoacid_olc_symbol smb_amo =
+  let str = name smb_amo in
+  String.get str 0  
+;;
+
+(** {6 Making.} *)
+
+let molecule_aminoacid_olc_symbol_of_molecule_aminoacid_regular_olc_symbol smb_aor =
+  Maos_t.Molecule_aminoacid_fragmented_olc_symbol
+    (Maos_t.Molecule_aminoacid_regular_olc_symbol smb_aor)
+;;
+
+let molecule_aminoacid_olc_symbol_of_char = function
+  | 'g'
+  | 'G' as chr -> g
+  | 'p'
+  | 'P' as chr -> p
+  | chr -> 
+      molecule_aminoacid_olc_symbol_of_molecule_aminoacid_regular_olc_symbol 
+	(molecule_aminoacid_regular_olc_symbol_of_char chr)
+;;
+	
+let molecule_aminoacid_olc_symbol_of_string str =
+  if String.length str = 1 
+  then
+    begin
+      let c = String.get str 1 in
+      molecule_aminoacid_olc_symbol_of_char c
+    end
+  else
+    failwith "Not_character:Maos_v.molecule_aminoacid_olc_symbol_of_string"
+;;
+
+let read ib =
+  let str = Scanf.bscanf ib "%s" (fun s -> s) in
+  Scanf.sscanf str "%0c" molecule_aminoacid_olc_symbol_of_char
+;;

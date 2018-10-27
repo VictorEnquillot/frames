@@ -1,0 +1,31 @@
+ELEMENTARY_VALUES_T_MLI := \
+   Elementary_units_value_t.mli \
+   Elementary_color_value_t.mli \
+  Elementary_closure_value_t.mli \
+     Elementary_coordinate_spherical_value_t.mli \
+     Elementary_coordinate_polar_value_t.mli \
+     Elementary_coordinate_cylindrical_value_t.mli \
+    Elementary_coordinate_heterogeneous_value_t.mli \
+     Elementary_coordinate_planar_value_t.mli \
+     Elementary_coordinate_linear_value_t.mli \
+     Elementary_coordinate_cartesian_value_t.mli \
+    Elementary_coordinate_homogeneous_value_t.mli \
+   Elementary_coordinate_value_t.mli \
+     Elementary_coordinate_tuple_spherical_value_t.mli \
+     Elementary_coordinate_tuple_polar_value_t.mli \
+     Elementary_coordinate_tuple_cylindrical_value_t.mli \
+    Elementary_coordinate_tuple_heterogeneous_value_t.mli \
+     Elementary_coordinate_tuple_linear_value_t.mli \
+     Elementary_coordinate_tuple_planar_value_t.mli \
+     Elementary_coordinate_tuple_cartesian_value_t.mli \
+    Elementary_coordinate_tuple_homogeneous_value_t.mli \
+   Elementary_coordinate_tuple_value_t.mli \
+  Elementary_body_value_t.mli \
+  \
+   Elementary_createdby_value_t.mli \
+   Elementary_domain_value_t.mli \
+  Elementary_context_value_t.mli \
+ Elementary_value_t.mli \
+ 
+ELEMENTARY_VALUES_V_MLI := $(subst _t.mli,_v.mli,$(ELEMENTARY_VALUES_T_MLI)) 
+ELEMENTARY_VALUES_TV_MLI := $(ELEMENTARY_VALUES_T_MLI) $(ELEMENTARY_VALUES_V_MLI)

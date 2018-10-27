@@ -1,0 +1,2 @@
+
+let make str = str;;

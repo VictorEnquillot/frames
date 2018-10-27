@@ -1,0 +1,17 @@
+#!/bin/bash
+ocamlc -warn-error A -annot -g \
+-I ../../general/basics \
+-I ../../general/files \
+-I ../../general/datastructures \
+-I ../../commonset/commonset.cma \
+unix.cma -cclib -lunix str.cma -cclib -lstr \
+../../general/basics/basics.cma \
+../../general/datastructures/datastructures.cma \
+../../general/files/files.cma \
+../../commonset/commonset.cma \
+functional_tests.cma -o Figureset_run.byt
+
+ls -alt Figureset_run.byt
+
+echo " Figureset_run.byt done"
+

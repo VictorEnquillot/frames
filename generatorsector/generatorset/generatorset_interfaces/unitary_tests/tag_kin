@@ -1,0 +1,6 @@
+let sym_kin = Kind_symbol_v.make nam_kin;;
+let idx_kin = Kind_symbol_v.list_index_of_kind_symbol sym_kin;;
+let soi_kin = Sole_index_v.make idx_kin soi_cat;;
+let gss_kin = Generatorset_symbol_v.generatorset_symbol_of_category_symbol sym_kin;;
+Generatorset_symbol_by_sole_index_production_provider_v.store soi_kin gss_kin;;
+let tag_kin = Tag_v.make sym_kin soi_kin;;

@@ -1,0 +1,23 @@
+    (
+     (Item_each_grandson_notleaf_symbol_t.item_each_grandson_notleaf_symbol,	
+      Usagefile_symbol_t.usagefile_symbol,
+      Contentfile_symbol_t.contentfile_symbol,	
+      Entity_symbol_t.entity_symbol, 
+      Category_symbol_t.category_symbol,
+      Domainset_symbol_t.domainset_symbol
+     ) Sextuplet_t.sextuplet,
+
+     (Entity_symbol_t.entity_symbol, 
+      
+      (Camlparagraph_symbol_t.camlparagraph_symbol,
+       Item_symbol_t.item_symbol,	
+       Usagefile_symbol_t.usagefile_symbol,
+       Contentfile_symbol_t.contentfile_symbol,	
+       Entity_symbol_t.entity_symbol, 
+       Category_symbol_t.category_symbol,
+       Domainset_symbol_t.domainset_symbol 
+      ) Septuplet_t.septuplet
+    
+     )  Doublet_list_t.doublet_list
+    
+    ) Register_t.register = Register_v.make 137

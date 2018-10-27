@@ -1,0 +1,34 @@
+let make_of_topson_leaf nam s =
+  let nam_low = String.lowercase nam in
+  match nam_low with
+
+  | "vector" -> vector
+  | "point" -> point
+
+  | _ -> failwith "Not_a_topson_leaf:Geometryset_symbol_v.ml:make"
+;;
+
+let make_of_topson_notleaf nam s =
+
+  try geometryset_symbol_of_triangle_symbol
+      (Triangle_symbol_v.make nam s)
+  with Failure "Not_Triangle_symbol:Triangle_symbol_v:make" ->
+  try geometryset_symbol_of_coordinate_symbol
+      (Coordinate_symbol_v.make nam s)
+  with Failure "Not_Coordinate_symbol:Coordinate_symbol_v:make" ->
+
+  failwith "Not_a_topson_notleaf:Geometryset_symbol_v.ml:make"
+;;
+
+let make nam s =
+
+    try make_of_topson_leaf nam s
+    with Failure "Not_a_topson_leaf:Geometryset_symbol_v.ml:make" ->
+    try make_of_topson_notleaf nam s
+    with Failure "Not_a_topson_notleaf:Geometryset_symbol_v.ml:make" ->
+
+      Error_messages_v.print_fatal_error nam_cod "make"
+	(Format.sprintf "strings \"%s\" and \"%s\" represent an existing Geometryset subtype" nam s)
+	"it does not exists"
+	"Check file geometryset_symbol_v.ml" 
+;;

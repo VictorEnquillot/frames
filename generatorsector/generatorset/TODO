@@ -1,0 +1,41 @@
+* voir dans IGNR la création d'un module de traduction Entity_builder_name -> Entify_fictive_symbol
+
+* ne pas utiliser de mots clé comme "name" dans symbols.dat.
+
+* créer un Coercion Generator universel (symbol, formula, value)
+
+* introduire un Item Predicate ( string ->  (entity_symbol -> bool) )
+
+* make for constructor : take_off all redondant information | "point" | "point_constructor" -> 
+  | "coordinates_kind" 
+  | "db1_entity_element_coordinates_kind_constructor" -> db1_entity_element_coordinates_kind_constructor s
+
+* Pb des constructor : CE NE SONT PAS DES TYPES  X_constructor est du type x_symbol !!!
+  il manque Dgn_symbol_v.dgn_context_domain_symbol_off_dgn_symbol
+            Dgn_symbol_v.dgn_domain_of_dgn_context_domain_symbol
+
+  si Constructor : il faut aussi main_symbol_of_ et _off_main_symbol (pour Tag par exemple )
+  Domain, Database etc... of string remplacé par of Domain_symbol etc... en plus de l'abbreviation.
+
+* make for symbols améliorer le message d'erreur avec backtrace.
+
+* create  let symbol_list () =
+
+* create let predicate_of_string = function
+
+* bad !!! Exception: Failure "Not_a_input_entity_symbol:Input_entity_symbol_v.ml:make"
+
+* make is always : val make : string -> string -> entity;;
+
+* When entity_data is used with reference to extra-domain entity : Coordinate, Measure 
+ type entity_data_symbol =
+   | Entity_data_coordinate_symbol of Coordinate_symbol_t.coordinate_symbol
+   | etc...
+
+needs automatic generation see examples in Figure_symbol and Local_entity_symbol
+
+* define compare function for all entities
+
+* define function with  top_entity_as_some_sub_entity to avoid coercion.
+
+* in *_symbols_v.ml define predicates as strings.

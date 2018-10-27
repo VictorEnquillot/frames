@@ -1,0 +1,104 @@
+#!/bin/bash
+# DO NOT EDIT.
+# to generate this script run:
+#  NO more do_build_do_entity_depth_all.sh > do_entity_depth_all
+
+entity_depth () {
+case $1 in
+# 0
+   asymmetric_unit) res="0";;
+   cterminal) res="0";;
+   heap) res="0";;
+   molecule_nucleoside) res="0";;
+   peptideca_embedded) res="0";;
+   peptideca_subunit) res="0";;
+   polypeptide_subunit) res="0";;
+   residue_embedded) res="0";;
+   residue_extended) res="0";;
+# 1
+   atom_closed) res="1";;
+   atom_fivetied) res="1";;
+   atom_fourtied) res="1";;
+   atom_leaf_double) res="1";;
+   atom_leaf_nonsigma) res="1";;
+   atom_leaf_single) res="1";;
+   atom_leaf_triple) res="1";;
+   atom_onetied) res="1";;
+   atom_sixtied) res="1";;
+   atom_threetied) res="1";;
+   atom_twotied) res="1";;
+   molecule_aminoacid_fragmented) res="1";;
+   molecule_aminoacid_segmented) res="1";;
+   molecule_forked_moreforked) res="1";;
+   molecule_forked_oneforked) res="1";;
+   molecule_forked_threeforked) res="1";;
+   molecule_forked_twoforked) res="1";;
+   molecule_linear_diatomic) res="1";;
+   molecule_linear_monoatomic) res="1";;
+   molecule_linear_pentatomic) res="1";;
+   molecule_linear_polyatomic) res="1";;
+   molecule_linear_tetratomic) res="1";;
+   molecule_linear_triatomic) res="1";;
+   peptideca_buried_fragmented) res="1";;
+   peptideca_buried_segmented) res="1";;
+   peptideca_nterminal_fragmented) res="1";;
+   peptideca_nterminal_segmented) res="1";;
+   residue_buried_fragmented) res="1";;
+   residue_buried_segmented) res="1";;
+   residue_nterminal_fragmented) res="1";;
+   residue_nterminal_segmented) res="1";;
+# 2
+   aggregate) res="2";;
+   atom_core) res="2";;
+   atom_leaf) res="2";;
+   block_oneend) res="2";;
+   block_oneone) res="2";;
+   block_zerofork) res="2";;
+   block_zeroone) res="2";;
+   block_zerozero) res="2";;
+   box) res="2";;
+   cluster) res="2";;
+   cterminal_subunit) res="2";;
+   fragment_buried) res="2";;
+   fragment_closed) res="2";;
+   fragment_head) res="2";;
+   fragment_leaf) res="2";;
+   grouping) res="2";;
+   mendeleev) res="2";;
+   molecule) res="2";;
+   molecule_aminoacid) res="2";;
+   molecule_aminoacid_fragmented) res="2";;
+   molecule_aminoacid_segmented) res="2";;
+   molecule_bridged) res="2";;
+   molecule_dendrimer) res="2";;
+   molecule_forked) res="2";;
+   molecule_linear) res="2";;
+   peptideca_buried) res="2";;
+   peptideca_nterminal) res="2";;
+   polypeptide_sidegroup) res="2";;
+   residue_buried) res="2";;
+   residue_nterminal) res="2";;
+   segment_buried) res="2";;
+   segment_head) res="2";;
+# 3
+   atom) res="3";;
+   block) res="3";;
+   fragment) res="3";;
+   peptideca) res="3";;
+   residue) res="3";;
+   segment) res="3";;
+# 4
+   chemicalset) res="4";;
+#
+    [A-Z]) res="0";
+exit;;
+# default
+   *) echo "Error: in script do_entity_depth_all";
+      echo          "unknown entity >$1<.";
+      echo "Cure :";
+exit
+;;
+esac
+echo "$res"
+}
+

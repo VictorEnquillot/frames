@@ -1,0 +1,18 @@
+    let str_reg = 
+      Register_v.string_of_register 
+	Trail_v.name Utils_v.identity
+	"\n" 
+	constructors_string_by_entity_trail_register
+    in
+    let nam_ent = Trail_v.value_off_trail_of_key tra_ent "entity" in
+    let tra_cat = List.tl tra_ent in
+    let nam_fil = Filename_p.name
+        (Database_filename_by_category_trail_provider_v.provide tra_cat) 
+    in
+    Error_messages_v.print_fatal_error 
+      nam_cod 
+      "retrieve"
+      (Format.sprintf "key >%s<@.    were already stored"
+         (Trail_v.name tra_ent)) 
+      (Format.sprintf "no such key in register dumped below:@.        %s" str_reg) 
+      (Format.sprintf "check entry >%s< in file:@.       >%s<" nam_ent nam_fil)

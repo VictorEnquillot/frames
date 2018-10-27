@@ -1,0 +1,21 @@
+let map f_of_tag_cal for_eee = 
+  let tag_cal_l = camlline_tag_list_off_entity_node_formula for_eee in
+  List.map f_of_tag_cal tag_cal_l
+;;
+
+let iter f_of_tag_cal for_eee = 
+  let tag_cal_l = camlline_tag_list_off_entity_node_formula for_eee in
+  List.iter f_of_tag_cal tag_cal_l ;;
+
+let map2 f_of_tag_cal for_eee_1 for_eee_2  = 
+  let tag_cal_l_1 = camlline_tag_list_off_entity_node_formula for_eee_1 in
+  let tag_cal_l_2 = camlline_tag_list_off_entity_node_formula for_eee_2 in
+  List.map2 f_of_tag_cal tag_cal_l_1 tag_cal_l_2
+;;
+
+let iter2 f_of_tag_cal for_eee_1 for_eee_2 = 
+  let tag_cal_l_1 = camlline_tag_list_off_entity_node_formula for_eee_1 in
+  let tag_cal_l_2 = camlline_tag_list_off_entity_node_formula for_eee_2 in
+  List.iter2 f_of_tag_cal tag_cal_l_1 tag_cal_l_2 
+;;
+

@@ -1,0 +1,77 @@
+# set -x
+Some=$1
+some=`echo ${Some}|tr A-Z a-z`
+SOME=`echo ${Some}|tr a-z A-Z`
+Modu=$2
+echo "some ${some} with ${Modu}"
+filetml="${some}_fieldpdb_symbol_t.ml"
+filevml="${some}_recordpdb_symbol_formula_v.ml"
+filevmli="${some}_recordpdb_symbol_formula_v.mli"
+
+grep '|' ${filetml} | sed -e 's/  | //' -e 's/-/ /' -e 's/(//' -e 's/)//' -e 's/\*//g' > ${some}_Fields
+
+echo "cat ${some}_Fields"
+
+cat ${some}_Fields | tr A-Z a-z > ${some}_fields
+paste  ${some}_fields  ${some}_Fields > ${some}_fields_Fields
+
+echo "(** {3 The functionalities for a Symbol Formula for a ${SOME} Record of a Pdb file.} *)" > l
+
+echo "" >> l
+echo "let nam_mod = \"${Some}_recorpdb_symbol_formula_v\"" >> l
+echo "" >> l
+
+echo "module ${Modu}_v = ${Some}_fieldpdb_symbol_v" >> l
+echo "module Lst_v = List_v" >> l
+echo "" >> l
+
+echo "let make () =" >> l
+echo "  [" >> l
+awk '{print "  MOD_v."$1";"}' ${some}_fields | grep -v empty | sed "s/MOD/${Modu}/" >> l
+echo "  ]" >> l
+echo ";;" >> l
+
+echo "" >> l
+echo "(** {6 Converting.} *)" >> l
+echo "" >> l
+echo "let name frm_smb =" >> l 
+echo "  Lst_v.name ${Modu}_v.name frm_smb" >> l
+echo ";;" >> l
+echo "" >> l
+echo "let print ppf frm_smb =" >> l
+echo "  Lst_v.print ${Modu}_v.print ppf frm_smb" >> l
+echo ";;" >> l
+
+Type=${Some}_recordpdb_symbol_formula_t.${some}_recordpdb_symbol_formula
+
+echo "(** {3 The functionalities for a Symbol Formula for a ${SOME} Record of a Pdb file.} *)" > v
+
+echo "" >> v
+echo "(** {6 Making.} *)" >> v
+echo "" >> v
+echo "val make :" >> v 
+echo "  unit ->" >> v
+echo "    ${Type}" >> v 
+echo ";;" >> v
+echo "" >> v
+echo "(** {6 Converting.} *)" >> v
+echo "" >> v
+
+echo "val name :" >> v 
+echo "  ${Type} ->" >> v
+echo "     string" >> v
+echo ";;" >> v
+echo "" >> v
+echo "val print : Format.formatter ->" >> v
+echo "  ${Type} ->" >> v
+echo "     unit" >> v
+echo ";;" >> v
+
+echo `. ${UTI}/do_created` >> l
+echo `. ${UTI}/do_created` >> v
+
+cp l  ${filevml}
+cp v  ${filevmli}
+
+echo "cat ${filevml}"
+echo "cat ${filevmli}"

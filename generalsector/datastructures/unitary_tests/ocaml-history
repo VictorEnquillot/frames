@@ -1,0 +1,73 @@
+let pair_product v_1 v_2 =
+  List.map2 (fun x y -> x *. y) v_1 v_2
+;;
+pair_product [1; 2; 3] [1; 2; 3];;
+pair_product [1.; 2.; 3.] [1.; 2.; 3.];;
+#use "list_v.ml";
+;
+#use "list_v.ml";;
+let scaling vct scl =
+  List.map (fun x -> x *. scl) vct
+;;
+let v_1 =[1; 2; 3] 
+;;
+let v_2 =[4.; 5.; 6.] 
+;;
+let v_1 =[1.; 2.; 3.];; 
+let scaling vct scl =
+  List.map (fun x -> x *. scl) vct
+;;
+scaling v_1 3. ;;
+let dividing vct scl =
+  if scl < epsilon_float 
+  then
+    failwith "Fatal_error in Vector_v.dividing: Division by too small a float"
+  else
+    List.map (fun x -> x /. scl) vct
+;;
+dividing v_1 0.3;;
+dividing v_1 0.000000000000000000000000000003;;
+  List.map (fun x -> scaling x v_2) v_1;;
+  List.map (fun x -> scaling x v_2) v_1;; List.map (scaling v_2 ) v_1;;
+ List.map (scaling v_2 ) v_1;;
+v_1;;
+v_2;;
+let rec canonical = function
+  | 0 -> []
+  | len -> axis_ith (len-1) len :: canonical (len-2) len  
+;;
+module Vec_v = Vector_v
+;;
+let axis_ith i len = unity_ith i len;;
+let unity_ith i len =  (* i starts at 0 *)
+  if i = 0
+  then
+    1. :: zero (len-1)
+  else
+    if i = len
+    then
+      zero (len-1) @ [1.]
+    else
+      let v_1 = zero i in
+      let v_2 = zero (len-i) in
+      v_1 @ [1.] @ v_2
+;; 
+let length = List.length
+;;
+let zero len = Lst_v.same_element_list_of_element_of_length 0. len
+;;
+let unity len = Lst_v.same_element_list_of_element_of_length 1. len
+;;
+let unity_ith i len =  (* i starts at 0 *)
+  if i = 0
+  then
+    1. :: zero (len-1)
+  else
+    if i = len
+    then
+      zero (len-1) @ [1.]
+    else
+      let v_1 = zero i in
+      let v_2 = zero (len-i) in
+      v_1 @ [1.] @ v_2
+;; 

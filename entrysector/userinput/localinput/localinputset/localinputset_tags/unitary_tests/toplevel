@@ -1,0 +1,17 @@
+ledit -x -h ./.toplevel-history ocaml \
+-I ../../../general/basics \
+-I ../../../general/files \
+-I ../../../general/datastructures \
+-I ../../../commonset \
+-I ../../../inputset/inputset_common \
+-I ../../../inputset/inputset_lexemes \
+-I ../../../inputset/inputset_symbols \
+unix.cma str.cma \
+../../../general/basics/basics.cma \
+../../../general/files/files.cma \
+../../../general/datastructures/datastructures.cma \
+../../../commonset/commonset.cma \
+../../../inputset/inputset_common/inputset_common.cma \
+../../../inputset/inputset_lexemes/inputset_lexemes.cma \
+../../../inputset/inputset_symbols/inputset_symbols.cma \
+  

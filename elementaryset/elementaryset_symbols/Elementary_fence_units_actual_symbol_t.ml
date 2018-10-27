@@ -1,0 +1,22 @@
+(** {3 Elementary_fence_units_actual_symbol_t} *)
+
+
+(** {6 Typing_for_symbol} *)
+
+type elementary_fence_units_actual_symbol =
+  | Elementary_fence_units_actual_action_symbol of Elementary_fence_units_actual_action_symbol_t.elementary_fence_units_actual_action_symbol
+  | Elementary_fence_units_actual_angle_symbol of Elementary_fence_units_actual_angle_symbol_t.elementary_fence_units_actual_angle_symbol
+  | Elementary_fence_units_actual_charge_symbol of Elementary_fence_units_actual_charge_symbol_t.elementary_fence_units_actual_charge_symbol
+  | Elementary_fence_units_actual_energy_symbol of Elementary_fence_units_actual_energy_symbol_t.elementary_fence_units_actual_energy_symbol
+  | Elementary_fence_units_actual_length_symbol of Elementary_fence_units_actual_length_symbol_t.elementary_fence_units_actual_length_symbol
+  | Elementary_fence_units_actual_mass_symbol of Elementary_fence_units_actual_mass_symbol_t.elementary_fence_units_actual_mass_symbol
+  | Elementary_fence_units_actual_temperature_symbol of Elementary_fence_units_actual_temperature_symbol_t.elementary_fence_units_actual_temperature_symbol
+  | Elementary_fence_units_actual_time_symbol of Elementary_fence_units_actual_time_symbol_t.elementary_fence_units_actual_time_symbol
+  | Elementary_fence_units_actual_none_symbol of Elementary_fence_units_actual_none_symbol_t.elementary_fence_units_actual_none_symbol
+;;
+
+
+(** Elementary_fence_units_actual_symbol_t at 11:53:17 on 9 May 2016. created by version v2.4 of generator *)
+
+
+

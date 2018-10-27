@@ -1,0 +1,6 @@
+(* Tracing *)
+
+Parameters_figureset_general_register_v.store_force "trace-store" "true";;
+Parameters_figureset_general_register_v.store_force "trace-translate" "true";;
+Parameters_figureset_general_register_v.store_force "trace-provide" "true";;
+Parameters_figureset_general_register_v.store_force "trace-extract" "true";;

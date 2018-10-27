@@ -1,0 +1,19 @@
+cp $EPAR/Parameter_envelopee_tuple_[tv].ml .
+cp $EPAR/Parameter_set_fence_envelope_[tv].ml .
+cp $EPAR/Parameter_set_body_envelope_[tv].ml .
+cp $EPAR/Parameter_envelope_[tv].ml .
+
+msrf parameter coordinate Parameter_*ml
+msrf Parameter Coordinate Parameter_*ml
+
+ms sym_psf sym_csf *ml
+ms tag_par_psf tag_coo_csf *ml
+ms env_psb env_csb *ml
+ms env_par env_coo *ml
+mw tag_par tag_coo *ml
+mw soi_par soi_coo *ml
+mw sym_psb sym_csb *ml
+mw sym_par sym_coo *ml
+mw tag_psb tag_csb *ml
+ms eee_par_ eee_coo_  *ml
+ms PAR COO *ml

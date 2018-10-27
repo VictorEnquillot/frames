@@ -1,0 +1,13 @@
+digraph prototype_top {
+  size="14,14";
+  node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+  edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+  Title [label = "The Constructor Tree Top\nfor Skeleton Domain" shape="record" color=lightblue, style=filled];
+  Title -> "Prt_set\ntop" [style="invis"];
+
+  "Prt_set\ntop"        -> {"Prt_set\nbody"  "Prt_set\ncontext"   "Prt_set\nclosure"};
+  "Prt_set\ncontext"    -> {"Prt_set\ncreatedby" "Prt_set\ndomain"};
+  "Prt_set\ndomain"     -> {"Prt_set\ndomain\nconstructor\nof string"};
+  "Prt_set\ncreatedby"  -> {"Prt_set\ndatabase\nof string" "Prt_set\ninput_file\nof string"};
+   }

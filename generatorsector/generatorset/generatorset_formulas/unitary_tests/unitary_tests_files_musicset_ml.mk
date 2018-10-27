@@ -1,0 +1,33 @@
+MUSICSET_SYMBOL_ML := \
+category_formula_u_musicset.ml \
+Entity_proper_formula_u_musicset_symbol_molecule_linear_diatomic.ml \
+contentfile_formula_u_musicset_symbol_musicset.ml \
+item_formula_u_musicset_symbol_musicset.ml \
+item_formula_u_musicset_symbol_musicset_typing.ml \
+item_formula_u_musicset_symbol_molecule_linear_diatomic_value_alone.ml \
+item_formula_u_musicset_symbol_molecule_linear_diatomic_abbreviating.ml \
+item_formula_u_musicset_symbol_molecule_linear_diatomic_extracting.ml \
+item_formula_u_musicset_symbol_molecule_linear_diatomic_making.ml \
+item_formula_u_musicset_symbol_molecule_linear_diatomic_naming.ml \
+item_formula_u_musicset_symbol_molecule_linear_diatomic_typing.ml \
+camlparagraph_formula_u_musicset_symbol_molecule.ml \
+camlparagraph_formula_u_musicset_symbol_molecule_linear_diatomic.ml \
+camlline_formula_u_musicset_symbol_musicset.ml \
+
+MUSICSET_FORMULA_ML := \
+Entity_proper_formula_u_musicset_formula_molecule_linear_diatomic.ml \
+contentfile_formula_u_musicset_formula_musicset.ml \
+item_formula_u_musicset_formula_musicset_typing.ml \
+item_formula_u_musicset_formula_molecule_linear_diatomic.ml \
+camlparagraph_formula_u_musicset_formula_molecule_typing.ml \
+camlparagraph_formula_u_musicset_formula_molecule_linear_diatomic.ml \
+camlline_formula_u_musicset_formula_molecule_linear_diatomic_typing.ml \
+camlline_formula_u_musicset_formula_molecule_linear_diatomic_making.ml \
+camlline_formula_u_musicset_formula_molecule_linear_diatomic_naming.ml \
+camlline_formula_u_musicset_formula_molecule_linear_diatomic_extracting.ml \
+
+FILES_INACTIVE := \
+
+UNITARY_TESTS_FILES_MUSICSET_ML := \
+$(MUSICSET_FORMULA_ML) \
+# $(MUSICSET_SYMBOL_ML) \

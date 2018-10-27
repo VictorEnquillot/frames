@@ -1,0 +1,4 @@
+val molecule_aminoacid_segmented_symbol_of_molecule_aminoacid_segmented_olc_symbol :
+  Molecule_aminoacid_segmented_olc_symbol_t.molecule_aminoacid_segmented_olc_symbol ->
+    Molecule_aminoacid_segmented_symbol_t.molecule_aminoacid_segmented_symbol
+;;

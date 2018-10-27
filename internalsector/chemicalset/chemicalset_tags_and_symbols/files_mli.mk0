@@ -1,0 +1,154 @@
+FILES_MLI =  \
+chain_symbol_t.mli \
+mendeleev_symbol_t.mli \
+halfbridge_symbol_t.mli \
+atom_symbol_t.mli \
+ block_symbol_t.mli \
+  segment_symbol_t.mli \
+   fragment_symbol_t.mli \
+   cterminal_symbol_t.mli \
+    grouping_symbol_t.mli \
+    polypeptide_sidegroup_symbol_t.mli \
+  asymmetric_unit_symbol_t.mli \
+   peptideca_embedded_symbol_t.mli \
+   peptideca_nterminal_symbol_t.mli \
+    peptideca_symbol_t.mli \
+  molecule_aminoacid_olc_symbol_t.mli \
+  molecule_aminoacid_tlc_symbol_t.mli \
+  molecule_aminoacid_symbol_t.mli \
+  polypeptide_subunit_symbol_t.mli \
+   cterminal_subunit_symbol_t.mli \
+   residue_embedded_symbol_t.mli \
+   residue_nterminal_symbol_t.mli \
+    residue_symbol_t.mli \
+  molecule_bridged_symbol_t.mli \
+  molecule_nonbridged_symbol_t.mli \
+  nitrogenous_base_symbol_t.mli \
+  nucleoside_symbol_t.mli \
+  nucleotide_symbol_t.mli \
+   molecule_forked_symbol_t.mli \
+   molecule_linear_symbol_t.mli \
+    molecule_nonpolymer_symbol_t.mli \
+   nucleicacid_symbol_t.mli \
+   polypeptide_symbol_t.mli \
+    molecule_polymer_symbol_t.mli \
+     molecule_symbol_t.mli \
+     aggregate_symbol_t.mli \
+     protein_symbol_t.mli \
+      box_symbol_t.mli \
+chemicalset_symbol_t.mli \
+chain_symbol_v.mli \
+mendeleev_symbol_v.mli \
+halfbridge_symbol_v.mli \
+atom_symbol_v.mli \
+ block_symbol_v.mli \
+  segment_symbol_v.mli \
+   fragment_symbol_v.mli \
+   cterminal_symbol_v.mli \
+    grouping_symbol_v.mli \
+    polypeptide_sidegroup_symbol_v.mli \
+  nitrogenous_base_symbol_v.mli \
+  nucleoside_symbol_v.mli \
+  nucleotide_symbol_v.mli \
+  nucleicacid_symbol_v.mli \
+  molecule_aminoacid_olc_symbol_v.mli \
+  molecule_aminoacid_tlc_symbol_v.mli \
+  molecule_aminoacid_symbol_v.mli \
+  polypeptide_subunit_symbol_v.mli \
+  cterminal_subunit_symbol_v.mli \
+  asymmetric_unit_symbol_v.mli \
+   peptideca_embedded_symbol_v.mli \
+   peptideca_nterminal_symbol_v.mli \
+    peptideca_symbol_v.mli \
+   polypeptide_symbol_v.mli \
+   residue_embedded_symbol_v.mli \
+   residue_nterminal_symbol_v.mli \
+    residue_symbol_v.mli \
+  molecule_bridged_symbol_v.mli \
+  molecule_nonbridged_symbol_v.mli \
+   molecule_forked_symbol_v.mli \
+   molecule_linear_symbol_v.mli \
+    molecule_polymer_symbol_v.mli \
+    molecule_nonpolymer_symbol_v.mli \
+     molecule_symbol_v.mli \
+     aggregate_symbol_v.mli \
+      protein_symbol_v.mli \
+       box_symbol_v.mli \
+chemicalset_symbol_v.mli \
+chain_marker_t.mli \
+mendeleev_marker_t.mli \
+halfbridge_marker_t.mli \
+atom_marker_t.mli \
+ block_marker_t.mli \
+  segment_marker_t.mli \
+   fragment_marker_t.mli \
+   cterminal_marker_t.mli \
+   cterminal_subunit_marker_t.mli \
+    grouping_marker_t.mli \
+    polypeptide_sidegroup_marker_t.mli \
+  asymmetric_unit_marker_t.mli \
+   peptideca_embedded_marker_t.mli \
+   peptideca_nterminal_marker_t.mli \
+    peptideca_marker_t.mli \
+  molecule_aminoacid_olc_marker_t.mli \
+  molecule_aminoacid_tlc_marker_t.mli \
+  molecule_aminoacid_marker_t.mli \
+  polypeptide_subunit_marker_t.mli \
+   residue_embedded_marker_t.mli \
+   residue_nterminal_marker_t.mli \
+    residue_marker_t.mli \
+  molecule_bridged_marker_t.mli \
+  molecule_nonbridged_marker_t.mli \
+  nitrogenous_base_marker_t.mli \
+  nucleoside_marker_t.mli \
+  nucleotide_marker_t.mli \
+   molecule_forked_marker_t.mli \
+   molecule_linear_marker_t.mli \
+    molecule_nonpolymer_marker_t.mli \
+   nucleicacid_marker_t.mli \
+   polypeptide_marker_t.mli \
+    molecule_polymer_marker_t.mli \
+     molecule_marker_t.mli \
+     aggregate_marker_t.mli \
+     protein_marker_t.mli \
+      box_marker_t.mli \
+chemicalset_marker_t.mli \
+chain_marker_v.mli \
+mendeleev_marker_v.mli \
+halfbridge_marker_v.mli \
+atom_marker_v.mli \
+ block_marker_v.mli \
+  segment_marker_v.mli \
+   fragment_marker_v.mli \
+   cterminal_marker_v.mli \
+    grouping_marker_v.mli \
+  nitrogenous_base_marker_v.mli \
+  nucleoside_marker_v.mli \
+  nucleotide_marker_v.mli \
+  nucleicacid_marker_v.mli \
+  molecule_aminoacid_olc_marker_v.mli \
+  molecule_aminoacid_tlc_marker_v.mli \
+  molecule_aminoacid_marker_v.mli \
+  polypeptide_subunit_marker_v.mli \
+  cterminal_subunit_marker_v.mli \
+    polypeptide_sidegroup_marker_v.mli \
+  asymmetric_unit_marker_v.mli \
+   peptideca_embedded_marker_v.mli \
+   peptideca_nterminal_marker_v.mli \
+    peptideca_marker_v.mli \
+   polypeptide_marker_v.mli \
+   residue_embedded_marker_v.mli \
+   residue_nterminal_marker_v.mli \
+    residue_marker_v.mli \
+  molecule_bridged_marker_v.mli \
+  molecule_nonbridged_marker_v.mli \
+   molecule_forked_marker_v.mli \
+   molecule_linear_marker_v.mli \
+    molecule_polymer_marker_v.mli \
+    molecule_nonpolymer_marker_v.mli \
+     molecule_marker_v.mli \
+     aggregate_marker_v.mli \
+      protein_marker_v.mli \
+       box_marker_v.mli \
+chemicalset_marker_v.mli \
+ 

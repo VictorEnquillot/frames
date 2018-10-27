@@ -1,0 +1,3 @@
+let sym_cal_l = Doublet_list_v.right_list_off_doublet_list sym_ent_l_sym_cal_dol;;
+let gss_of_cal = Generatorset_symbol_v.generatorset_symbol_of_camlline_symbol;;
+let tag_cal_l = Tag_v.make_n_store_son_list store gss_of_cal sym_cal_l soi_cap;;

@@ -1,0 +1,13 @@
+     builders figure_set_body_segment_constructor:ofstring = list point
+     builders figure_set_body_triangle_isosceles_acute_constructor:ofstring = datastructure entity;
+     builders figure_set_body_triangle_isosceles_equilateral_constructor:ofstring = datastructure entity;
+     builders figure_set_body_triangle_isosceles_obtuse_constructor:ofstring = datastructure entity;
+     builders figure_set_body_triangle_isosceles_right_constructor:ofstring = datastructure entity;
+     builders figure_set_body_triangle_scalene_acute_constructor:ofstring = datastructure entity;
+     builders figure_set_body_triangle_scalene_obtuse_constructor:ofstring = datastructure entity 
+     builders figure_set_body_triangle_scalene_right_constructor:ofstring = datastructure entity;
+     builders figure_context_database_constructor:ofstring = datastructure entity;	
+     builders figure_context_databox_constructor:ofstring = datastructure entity;	
+     builders figure_context_domain_constructor:ofstring = list point
+     builders figure_context_sector_constructor:ofstring = list point
+     builders figure_set_fence_point_constructor:ofstring = list coordinate_cartesian

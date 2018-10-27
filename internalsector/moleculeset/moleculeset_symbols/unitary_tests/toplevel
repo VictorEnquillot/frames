@@ -1,0 +1,8 @@
+ledit -x -h ./.toplevel-history ocaml \
+-I $BAS \
+-I $FIL \
+-I $DAT \
+-I ../ \
+unix.cma str.cma \
+../moleculeset_symbols.cma
+

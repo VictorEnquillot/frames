@@ -1,0 +1,26 @@
+type attribut =
+
+| Href of string
+| Hcolor of string
+(** À COMPLÉTER SI NÉCESSAIRE *)
+| Size of int
+;;
+
+type html_tree =
+| Empty
+| Html of attribut list * html_tree list
+| Head of attribut list * html_tree list
+| Body of attribut list * html_tree list
+| P of attribut list * html_tree list
+| B of attribut list * html_tree list
+| I of attribut list * html_tree list
+| U of attribut list * html_tree list
+| Font of attribut list * html_tree list
+| A of attribut list * html_tree list
+| H1 of attribut list * html_tree list
+| H2 of attribut list * html_tree list
+| H3 of attribut list * html_tree list
+| H4 of attribut list * html_tree list
+| H5 of attribut list * html_tree list
+| Center of attribut list * html_tree list
+| Words of string list

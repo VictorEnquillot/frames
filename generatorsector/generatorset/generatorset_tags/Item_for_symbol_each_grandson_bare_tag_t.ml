@@ -1,0 +1,2 @@
+
+type item_for_symbol_each_grandson_bare_tag = Item_for_symbol_each_grandson_bare_symbol_t.item_for_symbol_each_grandson_bare_symbol Tag_t.tag;;

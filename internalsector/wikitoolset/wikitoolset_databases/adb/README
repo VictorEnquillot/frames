@@ -1,0 +1,62 @@
+File : frames/wikitoolset/wikitoolset_databases/adb/README
+
+== Format Rue89 print ==
+
+          sentence list
+               |
+               v
+            paragraph list
+                  |
+                  v
+             section tree
+                  |
+                  v
+              record_list  [("record", index); ("filenaming, "/..../truc.html") ]
+                  |
+                  v
+               text file       [("filenaming, "/..../truc.html") ]
+ 
+1. read an html file as a record list : 
+   database_record_list_by_filenaming_trail_provider_v.ml
+
+2. take <body>...</body>
+3. get sections <h2>  ... </h2> 
+4. get paragraph   <p>..</p>
+5. get references 
+
+<span class="print-footnote">[1]</span>
+<p><strong>Links:</strong><br />
+
+[1] http://www.rue89.com/chinatown<br />
+[3] http://nf.nfdaily.cn/<br />
+
+6. get images
+<img class='print-logo' src='http://asset.rue89.com/sites/all/themes/rue89dev/layout/rue89_logo.gif' alt='' />
+
+7. get title 
+    <div class="print-title">Chine : arrêté pour un article sur des esclaves sexuelles</div>
+
+8. get authors
+    <div class="print-submitted">By <em>Pierre Haski</em></div>
+  
+9. get date
+
+    <div class="print-created">Created <em>09/25/2011 - 11:15</em></div>
+
+9. get site 
+
+<div class="print-site_name">Published on <em>Rue89</em> (<a href="http://www.rue89.com">http://www.rue89.com</a>)</div>
+
+10. get link 
+<a href="http://nf.nfdaily.cn/" target="_blank" target="_blank">Nanfang Dushi Bao</a>
+
+11. citation
+  
+<blockquote><p>«&nbsp;Si le processus de paix reprend durant l'été, la France dira qu'il faut laisser les protagonistes discuter sans bousculer le calendrier.</p>
+<p> Si, à l'inverse, le processus de paix est toujours au point mort en septembre, la France prendra ses responsabilités sur la question centrale de la reconnaissance de l'Etat palestinien.&nbsp;»</p>
+</p></blockquote>
+
+12. à enlever
+
+ <div class="read_more_rue89">
+ 

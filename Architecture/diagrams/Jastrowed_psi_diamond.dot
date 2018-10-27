@@ -1,0 +1,17 @@
+	digraph jastrowed_psi_tree {
+		size="14,14";
+		node [color=yellow, style=filled,
+		fontsize=24, fontname="Palatino-Italic",fontcolor=black];
+
+		"psi" -> "jastrow" [color=red];
+		"jastrow" -> "jastrow parameters";
+		"jastrow" -> "electrons coordinates" [color=red];
+
+		"psi" -> "determinant" [color=green];
+		"determinant" -> "orbitals" [color=green];
+		"orbitals" -> "basis functions" [color=green];
+		"basis functions" -> "basis parameters";
+		"basis functions" -> "electrons coordinates" [color=green];
+		"orbitals" -> "coefficients";
+		}
+

@@ -1,0 +1,6 @@
+#!/bin/bash
+# The directory where we run a configure script.
+SUB_DIRECTORIES="nwchemdataset_lexer nwchemdataset_parser nwchemdataset_symbols nwchemdataset_tags nwchemdataset_builder_trees"
+
+# The directory where we just configure .depend and .depend-rebuild.
+CURRENT_AND_TEST=". unitary_tests"

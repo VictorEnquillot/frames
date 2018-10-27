@@ -1,0 +1,48 @@
+digraph dgn {
+    size="14,14";
+
+    Title [label = "The Tag Tree\nfor Database Nwchem\nin Elementary domain" fontsize=24, shape="record", color=lightblue, style=filled];
+
+
+    edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+
+
+    node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+   "Domain\nElementary[4]" -> { "Context\nDatabase Db1\n[1;4]" 
+                                  "Context\nDatabase Db2\n[2;4]"
+				  "Context\nInputfile..." 
+				  "Context\nDatabase Nwchem\nNwc [5;4]"
+				  };
+ 
+   "Context\nDatabase Nwchem\nNwc [5;4]" -> 
+   					     {
+   					    "Datafile\nBasisset\n."
+					    "Datafile\nBasisset\nCc_pvtz\n[4;5;4]"
+   					    "Datafile\nBasisset\nLanl2dz\n[5;5;4]"
+					    "Datafile\nBasisset\n.."
+                                            };
+
+    node [color="#40f0d0", style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+   "Datafile\nBasisset\nLanl2dz\n[5;5;4]" -> {	    
+        			    "Body\nParameter_tuple\nAopef\nne s 1 1"
+        			    "... 2 3 ..."
+        			    "Body\nParameter_tuple\nAopef\nne s 1 4"
+        			    " ...S P ..."
+        			    "Body\nParameter_tuple\nEcppef\nau p 2 3"
+   				    } ;
+
+    node [color="#40c0d0", style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+   "Body\nParameter_tuple\nAopef\nne s 1 1" -> {"Fence\nParameter\nCoefficient\nne s 1 1" "Fence\nParameter\nExponent\nne s 1 1"};
+
+    node [color="#40a0d0", style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+
+   "Fence\nParameter\nCoefficient\nne s 1 1" -> "Deepfence\nUnits\nBohr"; 
+   "Fence\nParameter\nExponent\nne s 1 1" -> "Deepfence\nUnits\nBohr "; 
+
+}
+

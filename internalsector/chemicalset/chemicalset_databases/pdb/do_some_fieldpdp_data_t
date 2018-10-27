@@ -1,0 +1,38 @@
+# set -x
+Some=$1
+some=`echo ${Some}|tr A-Z a-z`
+SOME=`echo ${Some}|tr a-z A-Z`
+Mods=$2
+Modd=`echo ${Mods} | sed 's/s$/d/'`
+echo "some ${some} with ${Mods} and ${Modd}"
+
+filetml="${some}_fieldpdb_symbol_t.ml"
+
+file_type="fieldpdb_data"
+filetypetml="${some}_${file_type}_t.ml"
+
+# Prepare fields files for awk
+
+grep '|' ${filetml} | sed -e 's/  | //' -e 's/-/ /' -e 's/(//' -e 's/)//' -e 's/\*//g' > ${some}_Fields
+
+echo "${some}_Fields done"
+
+cat ${some}_Fields | tr A-Z a-z > ${some}_fields
+paste  ${some}_fields  ${some}_Fields > ${some}_fields_Fields
+echo "${some}_fields done"
+echo "${some}_fields_Fields done"
+
+# Build _data_t.ml
+
+echo "(** {3 A Data for a field in a ${SOME} Record of a Pdb file.} *)" > l
+
+echo "" >> l
+echo "type ${some}_${file_type} =" >> l
+awk '{print "  | "$1" of "$4" (* "$2"-"$3" *)"}' ${some}_Fields >> l
+echo ";;" >> l
+
+echo `. ${UTI}/do_created` >> l
+
+cp l  ${filetypetml}
+
+echo "cat ${filetypetml}"

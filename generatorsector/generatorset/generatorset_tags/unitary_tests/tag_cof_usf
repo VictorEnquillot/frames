@@ -1,0 +1,22 @@
+(* Value_alone *)
+
+let nam_cof = "value_alone";;
+
+(* Type_alone *)
+
+let nam_cof = "type_alone";;
+
+let sym_cof = Contentfile_symbol_v.make nam_cof;;
+let idx_cof = Contentfile_symbol_v.list_index_of_contentfile_symbol sym_cof;;
+let soi_cof = Sole_index_v.make idx_cof soi_enp;;
+let gss_cof = Generatorset_symbol_v.generatorset_symbol_of_contentfile_symbol sym_cof;;
+Generatorset_symbol_by_sole_index_production_provider_v.store soi_cof gss_cof;;
+let tag_cof = Tag_v.make sym_cof soi_cof;;
+
+let sym_usf = Usagefile_symbol_v.make nam_usf;;
+let idx_usf = Usagefile_symbol_v.list_index_of_usagefile_symbol sym_usf;;
+let soi_usf = Sole_index_v.make idx_usf soi_cof;;
+let gss_usf = Generatorset_symbol_v.generatorset_symbol_of_usagefile_symbol sym_usf;;
+Generatorset_symbol_by_sole_index_production_provider_v.store soi_usf gss_usf;;
+let tag_usf = Tag_v.make sym_usf soi_usf;;
+

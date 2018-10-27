@@ -1,0 +1,4 @@
+module Ags_t = Aggregate_symbol_t
+module _ = _
+module Ord_ = _
+module Dbt_v = Doublet_v

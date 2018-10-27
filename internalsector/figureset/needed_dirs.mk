@@ -1,0 +1,3 @@
+NEEDED_DIRS := \
+	$(FIGURESET_VALUES_DIR) \
+  

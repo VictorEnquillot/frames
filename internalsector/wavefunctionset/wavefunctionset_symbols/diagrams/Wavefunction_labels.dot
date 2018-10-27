@@ -1,0 +1,67 @@
+	digraph wavefunction_labels {
+		size="14,14";
+		node [
+		     color=yellow, style=filled,
+		     fontsize=24, fontname="Palatino-Italic",fontcolor=black
+		     ];
+		edge [
+        	fontname = "Bitstream Vera Sans"
+        	fontsize = 12
+        	arrowsize="0.7"
+		dir = "down"
+	    ];
+	    
+	    Title [label = "The Constructor Tree\nfor Wavefunction Set" shape="record" color=lightblue, style=filled];
+
+    		Title -> "wavefunction"  [style="invis"];
+
+	"wavefunction"            -> {"wavefunction_body"  "wavefunction_context"   "wavefunction_closure"};
+	"wavefunction_context"    -> {"wavefunction_createdby" "wavefunction_domain"};
+	"wavefunction_domain"     -> {"wavefunction_domain_constructor:ofstring"};
+	"wavefunction_createdby"  -> {"wavefunction_database:ofstring" "wavefunction_input_file:ofstring"};
+};
+
+	digraph wavefunction_labels {
+		size="14,14";
+		node [
+		     color=yellow, style=filled,
+		     fontsize=24, fontname="Palatino-Italic",fontcolor=black
+		     ];
+		edge [
+        	fontname = "Bitstream Vera Sans"
+        	fontsize = 12
+        	arrowsize="0.7"
+		dir = "down"
+	    ];
+
+	"wavefunction_body"       -> {"wavefunction_spatial_manye" "wavefunction_total"}; 
+	"wavefunction_spatial_manye" -> {"wavefunction_spatial_manye_analytic" "wavefunction_spatial_manye_determinant"    "wavefunction_spatial_manye_numerical" "wavefunction_spatial_manye_fragment"};
+
+	"wavefunction_spatial_manye_determinant" -> {"wavefunction_spatial_manye_determinant_bare"  "wavefunction_spatial_manye_determinant_scaled"};  
+
+	"wavefunction_spatial_manye_fragment" -> {"    wavefunction_spatial_manye_fragment_bare" "wavefunction_spatial_manye_fragment_jastrowed" "wavefunction_spatial_manye_fragment_jastrowed_scaled"};
+
+	"wavefunction_total" -> {"wavefunction_total_manye" "wavefunction_total_orbital"};
+
+	"wavefunction_total_manye"    -> {"wavefunction_total_manye_analytic" "wavefunction_total_manye_determinant" " wavefunction_total_manye_numerical"};
+
+	"wavefunction_total_orbital"  -> {"wavefunction_total_orbital_analytic" "wavefunction_total_orbital_numerical"};
+
+
+	"wavefunction_closure"        -> {"wavefunction_coefficient" "wavefunction_jastrow_factor" "wavefunction_spatial_orbital" "wavefunction_spin"];
+
+	"wavefunction_jastrow_factor" -> {"wavefunction_jastrow_factor_constructor:of_string"};
+
+
+	"wavefunction_spatial_orbital"    -> {"wavefunction_spatial_orbital_analytic" "wavefunction_spatial_orbital_determinant" " wavefunction_spatial_orbital_numerical"};
+
+	"wavefunction_spin" -> {"wavefunction_spin_up:ofstring" "wavefunction_spin_down:ofstring"};
+
+	"wavefunction_spatial_orbital_numerical"    -> {"wavefunction_spatial_orbital_numerical_constructor:ofstring"};
+
+	"wavefunction_spatial_orbital_analytic"     -> {"wavefunction_spatial_orbital_analytic_constructor:ofstring"};
+
+	"wavefunction_coefficient" -> {"wavefunction_coefficient_determinant:ofstring" "wavefunction_coefficient_jastrow:ofstring" "wavefunction_coefficient_fragment:ofstring"};
+
+
+		}

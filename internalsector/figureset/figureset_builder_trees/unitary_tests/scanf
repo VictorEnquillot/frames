@@ -1,0 +1,1 @@
+Scanf.sscanf "Ne P 3" "%s %s %s" (fun s t u -> (s, t, u));;

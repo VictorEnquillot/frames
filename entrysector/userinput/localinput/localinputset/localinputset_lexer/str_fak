@@ -1,0 +1,27 @@
+  let str_fak =
+  match low_wor with
+   | "category"
+   | "cofactor_basic"
+   | "cofactor_entity"
+   | "cofactor"
+   | "createdby"
+   | "database"
+   | "databox"
+   | "debug"
+   | "domain"
+   | "end"
+   | "external_context"
+   | "external_name"
+   | "external_variable"
+   | "file"
+   | "function"
+   | "module"
+   | "ondomain"
+   | "operation"
+   | "symbol_t.ml
+   | "target_operand"
+   | "target_operator"
+   | "type"
+   | "units" ->
+      "?-1"
+  in

@@ -1,0 +1,22 @@
+let tag_lf1_l = Local_figure_db1_tag_list_by_local_database_db1_tag_provider_v.provide tag_ld1;;
+
+test_number 2 (
+tag_lf1_l
+(* : Local_figure_symbol_t.local_figure_symbol Tag_t.tag list *)
+=
+ [(Local_figure_db1_symbol_t.Local_triangle_db1_symbol
+     (Local_triangle_db1_symbol_t.Local_triangle_db1_constructor "T"),
+    [1; 1; 3]);
+   (Local_figure_db1_symbol_t.Local_triangle_db1_symbol
+     (Local_triangle_db1_symbol_t.Local_triangle_db1_constructor "u"),
+    [2; 1; 3]);
+   (Local_figure_db1_symbol_t.Local_triangle_db1_symbol
+     (Local_triangle_db1_symbol_t.Local_triangle_db1_constructor "v"),
+    [3; 1; 3]);
+   (Local_figure_db1_symbol_t.Local_vector_db1_symbol
+     (Local_vector_db1_symbol_t.Local_vector_db1_constructor "bc"),
+    [4; 1; 3]);
+   (Local_figure_db1_symbol_t.Local_vertex_db1_symbol
+     (Local_vertex_db1_symbol_t.Local_vertex_db1_constructor "a"),
+    [5; 1; 3])]
+);;

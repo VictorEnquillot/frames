@@ -1,0 +1,63 @@
+Parsing Structures :
+
+lexeme_definition :
+   "Definition : a Lexeme is a basic unit of meaning. The headwords of a dictionary are all lexemes.
+
+token_definition :
+   "Definition : a Token is a pre-terminal lexical abstraction resulting from the application of a regular expression of a Lexeme" 
+
+word_definition :
+   "Definition : a Word is a Token reduce to one word"
+
+keyword_definition :
+   "Definition : a Keyword is a Terminal of the Language"
+
+cell_definition :
+   "Definition : Cell :== Keyword Word"
+
+record_definition :
+   "Definition : Record :== { Lexeme } eol
+
+bundle_definition :
+   "Definition : Bundle :== { Record } "
+
+cluster_definition :
+   "Definition : Cluster :== { Bundle } "
+
+block_definition :
+   "Definition : Block :== { Lexeme } (end | stop)"
+
+handle_definition :
+   "Definition : Handle :== Keyword Block"
+
+sequence_definition :
+   "Definition : Sequence ::= { Token }"
+
+list_definition :
+   "Definition : List ::= \"[\" Sequence \"]\"";
+
+box_definition :
+   "Definition : Box ::= Keyword List"
+
+== How to Parse ==
+
+add eol if there is no Block.
+
+add eof to the list of Lexeme in any case. Push eof until the Parser main function.
+
+parsing a succession :
+   "How-is-it-done : set a function starting from the first element. Progress until some end" 
+   "How-is-it-done : use the recursion to define the Subtree of the Succession" 
+
+parsing a repetition :
+   "How-is-it-done : set a function starting from the first element. Progress until some end" 
+   "How-is-it-done : use the recursion with Top to define the Subtree of the Repetition" 
+
+== Symbol_subtree_by_databox ==
+
+Lexeme = Localinput_lexer_symbol
+
+The Lexer reads the Databox file of the Database and provide the Lexeme_symbol list Topped by the Databox Symbol.
+
+The Lexeme list is Parsed into the Localinput_symbol_subtree for a Databox_name
+The Context_tag tuple is added on top of it to form the Tag_Y_Tree of the Domain.

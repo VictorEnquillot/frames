@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# the general configure script
+. configure_local $1
+. $SUP/configure_global

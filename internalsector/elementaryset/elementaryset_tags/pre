@@ -1,0 +1,192 @@
+  | "is_elementary_context_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_elementary_context_symbol_off_elementary_symbol
+  | "is_elementary_body_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_elementary_body_symbol_off_elementary_symbol
+  | "is_elementary_closure_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_elementary_closure_symbol_off_elementary_symbol
+  | "is_black" ->
+     Elementary_symbol_v.is_black
+  | "is_blue" ->
+     Elementary_symbol_v.is_blue
+  | "is_green" ->
+     Elementary_symbol_v.is_green
+  | "is_orange" ->
+     Elementary_symbol_v.is_orange
+  | "is_pink" ->
+     Elementary_symbol_v.is_pink
+  | "is_red" ->
+     Elementary_symbol_v.is_red
+  | "is_white" ->
+     Elementary_symbol_v.is_white
+  | "is_yellow" ->
+     Elementary_symbol_v.is_yellow
+  | "is_planck_constant" ->
+     Elementary_symbol_v.is_planck_constant
+  | "is_degree" ->
+     Elementary_symbol_v.is_degree
+  | "is_radian" ->
+     Elementary_symbol_v.is_radian
+  | "is_coulomb" ->
+     Elementary_symbol_v.is_coulomb
+  | "is_electron" ->
+     Elementary_symbol_v.is_electron
+  | "is_atomic_units_energy" ->
+     Elementary_symbol_v.is_atomic_units_energy
+  | "is_calorie" ->
+     Elementary_symbol_v.is_calorie
+  | "is_electron_volt" ->
+     Elementary_symbol_v.is_electron_volt
+  | "is_joule" ->
+     Elementary_symbol_v.is_joule
+  | "is_kilocalorie" ->
+     Elementary_symbol_v.is_kilocalorie
+  | "is_kilojoule" ->
+     Elementary_symbol_v.is_kilojoule
+  | "is_angstrom" ->
+     Elementary_symbol_v.is_angstrom
+  | "is_bohr" ->
+     Elementary_symbol_v.is_bohr
+  | "is_centimeter" ->
+     Elementary_symbol_v.is_centimeter
+  | "is_decameter" ->
+     Elementary_symbol_v.is_decameter
+  | "is_decimeter" ->
+     Elementary_symbol_v.is_decimeter
+  | "is_foot" ->
+     Elementary_symbol_v.is_foot
+  | "is_inch" ->
+     Elementary_symbol_v.is_inch
+  | "is_kilometer" ->
+     Elementary_symbol_v.is_kilometer
+  | "is_light_year" ->
+     Elementary_symbol_v.is_light_year
+  | "is_meter" ->
+     Elementary_symbol_v.is_meter
+  | "is_millimeter" ->
+     Elementary_symbol_v.is_millimeter
+  | "is_nanometer" ->
+     Elementary_symbol_v.is_nanometer
+  | "is_yard" ->
+     Elementary_symbol_v.is_yard
+  | "is_atomic_units_mass" ->
+     Elementary_symbol_v.is_atomic_units_mass
+  | "is_gram" ->
+     Elementary_symbol_v.is_gram
+  | "is_celsius" ->
+     Elementary_symbol_v.is_celsius
+  | "is_kelvin" ->
+     Elementary_symbol_v.is_kelvin
+  | "is_femtosecond" ->
+     Elementary_symbol_v.is_femtosecond
+  | "is_nanosecond" ->
+     Elementary_symbol_v.is_nanosecond
+  | "is_picosecond" ->
+     Elementary_symbol_v.is_picosecond
+  | "is_second" ->
+     Elementary_symbol_v.is_second
+  | "is_units_none" ->
+     Elementary_symbol_v.is_units_none
+  | "is_elementary_database_constructor" ->
+     Elementary_symbol_v.is_elementary_database_constructor
+  | "is_elementary_domain_constructor" ->
+     Elementary_symbol_v.is_elementary_domain_constructor
+  | "is_cylindrical_rho" ->
+     Elementary_symbol_v.is_cylindrical_rho
+  | "is_cylindrical_phi" ->
+     Elementary_symbol_v.is_cylindrical_phi
+  | "is_cylindrical_zed" ->
+     Elementary_symbol_v.is_cylindrical_zed
+  | "is_polar_rho" ->
+     Elementary_symbol_v.is_polar_rho
+  | "is_polar_theta" ->
+     Elementary_symbol_v.is_polar_theta
+  | "is_spherical_rho" ->
+     Elementary_symbol_v.is_spherical_rho
+  | "is_spherical_phi" ->
+     Elementary_symbol_v.is_spherical_phi
+  | "is_spherical_theta" ->
+     Elementary_symbol_v.is_spherical_theta
+  | "is_cartesian_x" ->
+     Elementary_symbol_v.is_cartesian_x
+  | "is_cartesian_y" ->
+     Elementary_symbol_v.is_cartesian_y
+  | "is_cartesian_z" ->
+     Elementary_symbol_v.is_cartesian_z
+  | "is_linear_x" ->
+     Elementary_symbol_v.is_linear_x
+  | "is_planar_x" ->
+     Elementary_symbol_v.is_planar_x
+  | "is_planar_y" ->
+     Elementary_symbol_v.is_planar_y
+  | "is_coordinate_tuple_cylindrical_constructor" ->
+     Elementary_symbol_v.is_coordinate_tuple_cylindrical_constructor
+  | "is_coordinate_tuple_polar_constructor" ->
+     Elementary_symbol_v.is_coordinate_tuple_polar_constructor
+  | "is_coordinate_tuple_spherical_constructor" ->
+     Elementary_symbol_v.is_coordinate_tuple_spherical_constructor
+  | "is_coordinate_tuple_cartesian_constructor" ->
+     Elementary_symbol_v.is_coordinate_tuple_cartesian_constructor
+  | "is_coordinate_tuple_linear_constructor" ->
+     Elementary_symbol_v.is_coordinate_tuple_linear_constructor
+  | "is_coordinate_tuple_planar_constructor" ->
+     Elementary_symbol_v.is_coordinate_tuple_planar_constructor
+  | "is_elementary_database_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_elementary_database_symbol_off_elementary_symbol
+  | "is_elementary_domain_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_elementary_domain_symbol_off_elementary_symbol
+  | "is_coordinate_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_symbol_off_elementary_symbol
+  | "is_coordinate_heterogeneous_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_heterogeneous_symbol_off_elementary_symbol
+  | "is_coordinate_cylindrical_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_cylindrical_symbol_off_elementary_symbol
+  | "is_coordinate_polar_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_polar_symbol_off_elementary_symbol
+  | "is_coordinate_spherical_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_spherical_symbol_off_elementary_symbol
+  | "is_coordinate_homogeneous_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_homogeneous_symbol_off_elementary_symbol
+  | "is_coordinate_cartesian_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_cartesian_symbol_off_elementary_symbol
+  | "is_coordinate_linear_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_linear_symbol_off_elementary_symbol
+  | "is_coordinate_planar_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_planar_symbol_off_elementary_symbol
+  | "is_coordinate_tuple_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_tuple_symbol_off_elementary_symbol
+  | "is_coordinate_tuple_heterogeneous_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_tuple_heterogeneous_symbol_off_elementary_symbol
+  | "is_coordinate_tuple_cylindrical_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_tuple_cylindrical_symbol_off_elementary_symbol
+  | "is_coordinate_tuple_polar_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_tuple_polar_symbol_off_elementary_symbol
+  | "is_coordinate_tuple_spherical_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_tuple_spherical_symbol_off_elementary_symbol
+  | "is_coordinate_tuple_homogeneous_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_tuple_homogeneous_symbol_off_elementary_symbol
+  | "is_coordinate_tuple_cartesian_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_tuple_cartesian_symbol_off_elementary_symbol
+  | "is_coordinate_tuple_linear_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_tuple_linear_symbol_off_elementary_symbol
+  | "is_coordinate_tuple_planar_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_coordinate_tuple_planar_symbol_off_elementary_symbol
+  | "is_color_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_color_symbol_off_elementary_symbol
+  | "is_units_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_units_symbol_off_elementary_symbol
+  | "is_units_action_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_units_action_symbol_off_elementary_symbol
+  | "is_units_angle_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_units_angle_symbol_off_elementary_symbol
+  | "is_units_charge_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_units_charge_symbol_off_elementary_symbol
+  | "is_units_energy_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_units_energy_symbol_off_elementary_symbol
+  | "is_units_length_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_units_length_symbol_off_elementary_symbol
+  | "is_units_mass_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_units_mass_symbol_off_elementary_symbol
+  | "is_units_temperature_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_units_temperature_symbol_off_elementary_symbol
+  | "is_units_time_symbol_off_elementary_symbol" ->
+     Elementary_symbol_v.is_units_time_symbol_off_elementary_symbol

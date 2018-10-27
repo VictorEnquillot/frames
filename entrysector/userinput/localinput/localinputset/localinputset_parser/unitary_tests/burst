@@ -1,0 +1,4 @@
+let sym_def = Localinput_lexer_symbol_t.Localinput_lexer_command_symbol Localinput_lexer_command_symbol_t.Localinput_lexer_command_define;;
+let sub_lex_ll = List_v.burst_left_included_of_predicate_of_list (fun e -> e = sym_def) sym_lex_l;;
+let len_lex_ll = List.length sub_lex_ll;;
+let sub_lex_l1 = List.nth sub_lex_ll 0;;

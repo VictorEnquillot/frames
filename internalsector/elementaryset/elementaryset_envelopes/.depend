@@ -1,0 +1,46 @@
+Elementary_envelopee_t.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_envelopes/Parameter_envelopee_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_t.cmo
+Elementary_envelopee_t.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_envelopes/Parameter_envelopee_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_t.cmx
+Elementary_envelopee_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_envelopes/Parameter_envelopee_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Elementary_envelopee_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_v.cmo
+Elementary_envelopee_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_envelopes/Parameter_envelopee_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Elementary_envelopee_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_v.cmx
+Elementary_envelopee_tuple_t.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_envelopes/Parameter_envelopee_tuple_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_tuple_t.cmo
+Elementary_envelopee_tuple_t.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_envelopes/Parameter_envelopee_tuple_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_tuple_t.cmx
+Elementary_envelopee_tuple_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tuple_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_envelopes/Parameter_envelopee_tuple_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Elementary_envelopee_tuple_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_tuple_v.cmo
+Elementary_envelopee_tuple_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tuple_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_envelopes/Parameter_envelopee_tuple_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Elementary_envelopee_tuple_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_tuple_v.cmx

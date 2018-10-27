@@ -1,0 +1,36 @@
+builders triangle_isoceles_equilateral = list point
+builders triangle_isoceles_right = list point
+builders triangle_isoceles_acute = list point
+builders triangle_isoceles_obtuse = list point
+builders triangle_scalene_right = list point
+builders triangle_scalene_acute = list point
+builders triangle_scalene_obtuse = list point
+
+builders point_constructor:ofstring = list coordinate_cartesian
+
+builders fake_son_constructor = list string
+
+builders vector_constructor = list point
+
+builders x:ofstring = list float
+builders y:ofstring = list float
+builders z:ofstring = list float
+
+builders cylindrical_rho = list float
+builders cylindrical_phi = list float
+builders cylindrical_zed = list float
+
+builders polar_rho       = list float
+builders polar_theta     = list float
+
+builders spherical_rho  = list float
+builders spherical_phi  = list float
+builders spherical_theta = list float
+
+#builders 1d              = list integer
+#builders 2d              = list integer
+#builders 3d              = list integer
+
+# do not mix formula and value
+# formula is defined here (builders)
+# value is defined from some input database

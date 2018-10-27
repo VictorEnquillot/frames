@@ -1,0 +1,22 @@
+(** {6 Making} *)
+
+let make tag_ttt =
+  let con_ttt = This_container_v.container_of_tag tag_ttt in
+  let env_ttt_d = Datstr_v.map Buldr_envelope_v.boundary_list con_ttt in
+  Tuple_v.tuple_of_datstr env_ttt_d
+;;
+
+(** {6 Closure} *)
+
+let closure tag_ttt = 
+  let dfe_ttt_l = This_container_v.deepfence_list tag_ttt in
+  List.flatten (List.map Clsur_envelope_v.closure dfe_ttt_l)
+;;
+
+let closure_as_tuple tag_ttt = make tag_ttt;;
+
+let closure_as_tuple_list tag_ttt =
+  let clo_ttt = closure tag_ttt in
+  Tuple_list_v.make clo_ttt
+;;
+

@@ -1,0 +1,72 @@
+
+
+# .semi_closed
+constructors   semi_closed                                       =   left_closed   right_closed
+
+# ..left_closed
+constructors   left_closed                                       =   left_closed_block   left_closed_fragment
+
+
+# ..right_closed
+constructors   right_closed                                      =   right_closed_block   
+
+
+# .linear
+constructors   linear                                            =   linear_block   linear_segment
+
+
+# .forked
+constructors   forked                                            =   forked_block   forked_fragment
+
+
+# .grouping 
+constructors   grouping                                          =   grouping_constructor:ofstring
+
+# ..zerotied  (z.z)
+constructors   zerotied                                          =   zerotied_block 
+
+
+constructors   zerotied_block                                    =   zerotied_block_none_none_ax1
+
+
+
+# ..onetied    
+constructors   onetied                                           =   onetied_single   onetied_double   onetied_triple   onetied_biconjugated
+
+# ..onetied_single ( z.s )
+constructors   onetied_single                                    =   onetied_single_atom  
+
+# ...onetied_single_atom
+constructors   onetied_single_atom                               =   z_h_s   z_f_s   z_s_s
+
+
+
+
+# ..onetied_double ( z.d )
+constructors   onetied_double                                    =   onetied_double_atom  
+
+# ...onetied_double_atom
+constructors   onetied_double_atom                               =   z_o_d   
+
+
+
+
+
+# ..onetied_triple ( z.t )
+constructors   onetied_triple                                    =   onetied_triple_atom  
+
+# ...onetied_triple_atom
+constructors   onetied_triple_atom                               =   z_n_t   
+
+
+
+
+
+# ..onetied_biconjugated ( z.b )
+constructors   onetied_biconjugated                              =   onetied_biconjugated_atom  
+
+# ...onetied_biconjugated_atom
+constructors   onetied_biconjugated_atom                         =   z_n_b   z_o_b   
+
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Camltype_container_symbol_t" rel="Chapter" href="Camltype_container_symbol_t.html"><link title="Modules" rel="Section" href="#6_Modules">
+<link title="Typing" rel="Section" href="#6_Typing">
+<title>Camltype_container_symbol_t</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a href="index.html">Up</a>
+&nbsp;</div>
+<center><h1>Module <a href="type_Camltype_container_symbol_t.html">Camltype_container_symbol_t</a></h1></center>
+<br>
+<pre><span class="keyword">module</span> Camltype_container_symbol_t: <code class="code">sig</code> <a href="Camltype_container_symbol_t.html">..</a> <code class="code">end</code></pre><span id="3_TheSymbolforaCamltypeContainer"><h3>The Symbol for a Camltype Container</h3></span><br>
+<hr width="100%">
+<br>
+<span id="6_Modules"><h6>Modules</h6></span><br>
+<pre><span class="keyword">module</span> <a href="Camltype_container_symbol_t.Cccs_t.html">Cccs_t</a>: <code class="type">Camltype_container_constrained_symbol_t</code></pre><pre><span class="keyword">module</span> <a href="Camltype_container_symbol_t.Ccus_t.html">Ccus_t</a>: <code class="type">Camltype_container_unconstrained_symbol_t</code></pre><br>
+<span id="6_Typing"><h6>Typing</h6></span><br>
+<br><code><span id="TYPEcamltype_container_symbol"><span class="keyword">type</span> <code class="type"></code>camltype_container_symbol</span> = </code><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span class="constructor">Camltype_container_constrained_symbol</span> <span class="keyword">of</span> <code class="type">Cccs_t.camltype_container_constrained_symbol</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span class="constructor">Camltype_container_unconstrained_symbol</span> <span class="keyword">of</span> <code class="type">Ccus_t.camltype_container_unconstrained_symbol</code></code></td>
+
+</tr></table>
+
+
+<br>
+Container Camltypes give information on the content of an Entity,
+they may be Constrained by the private keyword or not.<br>
+</body></html>

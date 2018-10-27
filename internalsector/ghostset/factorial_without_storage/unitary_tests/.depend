@@ -1,0 +1,54 @@
+Factorial_formula_u_any.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Singlet_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Make_test_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_tag_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_symbol_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_formula_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_formula_t.cmo
+Factorial_formula_u_any.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Singlet_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Make_test_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_tag_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_symbol_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_formula_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_formula_t.cmx
+Factorial_value_u_any.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Singlet_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Make_test_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_value_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_value_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_tag_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_symbol_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_formula_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_formula_t.cmo
+Factorial_value_u_any.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Singlet_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Make_test_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_value_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_value_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_tag_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_symbol_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_formula_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_formula_t.cmx
+Factorial_property_u_any.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Singlet_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Make_test_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_value_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_value_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_tag_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_symbol_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_property_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_property_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_formula_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_formula_t.cmo
+Factorial_property_u_any.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Singlet_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Make_test_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_value_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_value_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_tag_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_symbol_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_property_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_property_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_formula_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_without_storage/Factorial_formula_t.cmx

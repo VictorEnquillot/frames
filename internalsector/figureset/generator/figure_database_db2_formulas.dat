@@ -1,0 +1,9 @@
+     builders database_entitydb2_database:ofstring = singlet string
+     builders database_entitydb2_name:ofstring = singlet string
+     builders database_entitydb2_triangle:ofstring = doublet   database_entitydb2_summit  database_entitydb2_basis
+     builders database_entitydb2_summit:ofstring = singlet string
+     builders database_entitydb2_basis:ofstring = doublet   database_entitydb2_summit   database_entitydb2_summit
+     builders database_entitydb2_units:ofstring = singlet string
+     builders database_entitydb2_float = singlet string 	      
+
+     builders fake = singlet string

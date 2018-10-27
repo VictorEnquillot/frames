@@ -1,0 +1,4 @@
+let pre_nod s = (s = Input_symbol_v.input_fence_variable_name_entity_external_constructor "Poi_a");;
+let sym_inp_con_hom_st = List_v.only_element_of_predicate_off_list 
+    (Tree_v.has_node_of_node_predicate_off_tree pre_nod) 
+    sym_inp_tso_stl;;

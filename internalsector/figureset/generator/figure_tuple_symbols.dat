@@ -1,0 +1,32 @@
+constructors figure                     =   coordinate   point   triangle   vector   fake
+
+# triangle
+constructors triangle                   =   triangle_isosceles   triangle_scalene
+constructors triangle_isosceles          =   triangle_isosceles_equilateral:ofstring   triangle_isosceles_right:ofstring   triangle_isosceles_acute:ofstring   triangle_isosceles_obtuse:ofstring
+constructors triangle_scalene           =   triangle_scalene_right:ofstring   triangle_scalene_acute:ofstring   triangle_scalene_obtuse:ofstring
+
+constructors fake                       =   fake_son 
+
+constructors fake_son                   =   fake_son_constructor
+
+# vector
+constructors vector                     =   vector_constructor:ofstring
+
+# point                         
+
+constructors point                      =   point_constructor:ofstring
+
+# coordinate
+constructors coordinate                 =   coordinate_cartesian   coordinate_cylindrical   coordinate_polar   coordinate_spherical 
+
+constructors coordinate_cartesian       =   x:ofstring   y:ofstring   z:ofstring 
+constructors coordinate_cylindrical     =   cylindrical_rho   cylindrical_phi   cylindrical_zed
+constructors coordinate_spherical       =   spherical_rho   spherical_phi   spherical_theta   
+constructors coordinate_polar           =   polar_rho   polar_theta   
+
+description spherical_rho      = distance to origin
+description spherical_phi      = angular coordinate in xy plane
+description spherical_psi      = angular coordinate to z axis
+description cylindrical_rho    = distance to z axis
+description cylindrical_phi    = angular coordinate in xy plane
+description cylindrical_zed    = projection on z axis

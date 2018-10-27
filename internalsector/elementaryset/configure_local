@@ -1,0 +1,7 @@
+# The sub-directories where we run a configure script.
+SUB_DIRECTORIES=" elementaryset_builder_trees elementaryset_formulas elementaryset_databases elementaryset_tags elementaryset_values elementaryset_symbols"
+
+# The directory where we just configure .depend and .depend-rebuild.
+CURRENT_AND_TEST=". unitary_tests"
+
+# created by /code/sources/ocaml_top/setup/utilities/do_configure_local_frames.sh > configure_local

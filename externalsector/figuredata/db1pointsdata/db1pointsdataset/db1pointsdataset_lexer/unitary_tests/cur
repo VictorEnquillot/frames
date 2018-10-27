@@ -1,0 +1,1 @@
+let cur_idx = List_v.index_of_element_of_list sym_lex  sym_lex_l;;

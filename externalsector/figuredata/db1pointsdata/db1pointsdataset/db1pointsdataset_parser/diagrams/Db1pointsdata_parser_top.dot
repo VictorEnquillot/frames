@@ -1,0 +1,14 @@
+digraph dgn {
+    size="14,14";
+
+    edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+    node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+    Title [label = "BNF Tree\nfor Db1pointsdata Top\n" fontsize=24, shape="record", color=lightblue, style=filled];
+
+
+ "<component_datafile>"                 -> { "<cluster_information> " "<cluster_vertex> "}; 
+
+}
+

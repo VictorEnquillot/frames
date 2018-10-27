@@ -1,0 +1,7 @@
+# The sub-directories where we run a configure script.
+SUB_DIRECTORIES="localinputset_lexical_analysis localinputset_lexer localinputset_parser localinputset_builder_trees localinputset_symbols localinputset_tags localinputset_variables"
+
+# The directory where we just configure .depend and .depend-rebuild.
+CURRENT_AND_TEST=". unitary_tests"
+
+# created by /code/sources/ocaml_top/setup/utilities/do_configure_local_frames.sh > configure_local

@@ -1,0 +1,21 @@
+constructors   figure                   =   figure_input_entity 
+
+constructors   input_entity             =   input_command   input_constant   input_database_frames   input_domain_frames   input_entity_basic    input_entity_frames   input_entity_variable   input_keyword   input_mathematical_expression 
+
+constructors   input_command            =   define   print   set   write
+
+constructors   input_constant           =   input_constant_boolean:ofstring   input_constant_integer:ofstring   input_constant_float:ofstring   input_constant_string:ofstring
+
+constructors   input_entity_basic       =   input_entity_boolean:ofstring   input_entity_integer:ofstring   input_entity_float:ofstring   input_entity_float_value:ofstring   input_entity_string:ofstring
+
+constructors   input_entity_keyword     =   as   by   comment   cpu   database   debug   domain   end   evaluating   extracting   file   from   off   trace   to   units   with
+
+constructors   input_domain_frames      =   input_domain_frames_constructor:ofstring
+
+constructors   input_database_frames    =   input_database_frames_constructor:ofstring
+
+constructors   input_entity_variable    =   input_entity_variable_reserved   input_entity_variable_free:ofstring
+
+constructors   input_entity_variable_reserved    =   Date   Run   Time   Title   User   
+
+constructors   input_mathematical_expression     =   input_mathematical_expression_constructor:ofstring

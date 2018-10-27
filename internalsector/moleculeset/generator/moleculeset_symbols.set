@@ -1,0 +1,30 @@
+type moleculeset = fragment grouping molecule 
+
+# .molecule
+type molecule = molecule_forked molecule_linear molecule_polymer
+
+# ..molecule_forked
+type molecule_forked = guanidine molecule_forked_fromid
+
+# ..molecule_linear
+type molecule_linear = molecule_linear_diatomic molecule_linear_overdiatomic
+
+# ...molecule_linear_diatomic
+type molecule_linear_diatomic = carbonmonoxide dihydrogen dinitrogen dioxygen hydrogenchloride hydrogenfluoride
+
+# ...molecule_linear_overdiatomic
+type molecule_linear_overdiatomic = hydrogensulfide water propane butane nitromethane
+
+# ..molecule_polymer
+type molecule_polymer = polypeptide_fromid molecule_polymer_fromid
+
+# ..fragment 
+type fragment = fragment_closed_fromid fragment_head_fromid fragment_buried_fromid fragment_leaf_fromid
+
+
+description z_ch4_z   = methane
+description z_coh2_z  = methanal or formaldehyde
+description z_cho2m_z = formate_anion (Cdss 0_d Om1_s H_s)
+description z_co_z    = carbonmonoxide 
+description z_cs_z    = carbonmonosulfide 
+description z_nh3_z   = ammonia

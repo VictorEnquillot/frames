@@ -1,0 +1,143 @@
+constructors  figure                        =   db1pointsdata  
+
+constructors  db1pointsdata                     =   db1pointsdata_context   db1pointsdata_set
+
+constructors  db1pointsdata_set                 =   db1pointsdata_set_body  db1pointsdata_set_fence 
+
+# body
+
+constructors  db1pointsdata_set_body                   =   db1pointsdata_set_body_bundle   db1pointsdata_set_body_cluster   db1pointsdata_set_body_record   db1pointsdata_set_body_sequence   db1pointsdata_set_body_name 
+
+constructors  db1pointsdata_set_body_bundle            =   db1pointsdata_set_body_bundle_coordinates   db1pointsdata_set_body_bundle_figure
+
+constructors  db1pointsdata_set_body_bundle_coordinates=   db1pointsdata_set_body_bundle_coordinates_constructor:ofstring
+
+constructors  db1pointsdata_set_body_bundle_figure     =   db1pointsdata_set_body_bundle_figure_constructor:ofstring
+
+constructors  db1pointsdata_set_body_cluster            =   db1pointsdata_set_body_cluster_information   db1pointsdata_set_body_cluster_vertex
+
+constructors  db1pointsdata_set_body_cluster_information =  db1pointsdata_set_body_cluster_information_constructor:ofstring
+
+constructors  db1pointsdata_set_body_cluster_vertex      =  db1pointsdata_set_body_cluster_vertex_constructor:ofstring
+
+constructors  db1pointsdata_set_body_name            =   db1pointsdata_set_body_name_vertex
+
+constructors  db1pointsdata_set_body_name_vertex     =   db1pointsdata_set_body_name_vertex_constructor:ofstring
+
+constructors  db1pointsdata_set_body_record          =   db1pointsdata_set_body_record_vertex
+
+constructors  db1pointsdata_set_body_record_vertex   =   db1pointsdata_set_body_record_vertex_constructor:ofstring
+
+constructors  db1pointsdata_set_body_sequence        =   db1pointsdata_set_body_sequence_float
+constructors  db1pointsdata_set_body_sequence_float  =   db1pointsdata_set_body_sequence_float_constructor:ofstring
+
+# context
+
+constructors db1pointsdata_context                =   db1pointsdata_context_databox   db1pointsdata_context_database   db1pointsdata_context_domain   db1pointsdata_context_sector
+
+constructors db1pointsdata_context_databox        =   db1pointsdata_context_databox_constructor:ofstring
+constructors db1pointsdata_context_database       =   db1pointsdata_context_database_constructor:ofstring
+constructors db1pointsdata_context_domain         =   db1pointsdata_context_domain_constructor:ofstring
+constructors db1pointsdata_context_sector         =   db1pointsdata_context_sector_constructor:ofstring
+
+# fence 
+
+constructors  db1pointsdata_set_fence                         =   db1pointsdata_set_fence_basic   db1pointsdata_set_fence_cell   db1pointsdata_set_fence_keyword   db1pointsdata_set_fence_token
+
+# fence_basic
+
+constructors  db1pointsdata_set_fence_basic                   =   db1pointsdata_set_fence_basic_numerical   db1pointsdata_set_fence_basic_word
+
+constructors  db1pointsdata_set_fence_basic_numerical         =   db1pointsdata_set_fence_basic_numerical_float   db1pointsdata_set_fence_basic_numerical_integer
+
+constructors  db1pointsdata_set_fence_basic_numerical_float   =   db1pointsdata_set_fence_basic_numerical_float_constructor:ofstring
+constructors  db1pointsdata_set_fence_basic_numerical_integer =   db1pointsdata_set_fence_basic_numerical_integer_constructor:ofstring
+constructors  db1pointsdata_set_fence_basic_word              =   db1pointsdata_set_fence_basic_word_anycase   db1pointsdata_set_fence_basic_word_capitalized   db1pointsdata_set_fence_basic_word_lowercase   db1pointsdata_set_fence_basic_word_uppercase
+
+constructors  db1pointsdata_set_fence_basic_word_anycase      =   db1pointsdata_set_fence_basic_word_anycase_constructor:ofstring
+constructors  db1pointsdata_set_fence_basic_word_capitalized  =   db1pointsdata_set_fence_basic_word_capitalized_constructor:ofstring
+constructors  db1pointsdata_set_fence_basic_word_lowercase    =   db1pointsdata_set_fence_basic_word_lowercase_constructor:ofstring
+constructors  db1pointsdata_set_fence_basic_word_uppercase    =   db1pointsdata_set_fence_basic_word_uppercase_constructor:ofstring
+
+# fence_cell
+
+constructors  db1pointsdata_set_fence_cell                =   db1pointsdata_set_fence_cell_coordinates   db1pointsdata_set_fence_cell_figure
+
+constructors  db1pointsdata_set_fence_cell_coordinates    =   db1pointsdata_set_fence_cell_coordinates_kind   db1pointsdata_set_fence_cell_coordinates_units
+
+constructors  db1pointsdata_set_fence_cell_coordinates_kind   =   db1pointsdata_set_fence_cell_coordinates_kind_constructor:ofstring
+
+constructors  db1pointsdata_set_fence_cell_coordinates_units    =   db1pointsdata_set_fence_cell_coordinates_units_angle   db1pointsdata_set_fence_cell_coordinates_units_length
+
+constructors  db1pointsdata_set_fence_cell_coordinates_units_angle   =   db1pointsdata_set_fence_cell_coordinates_units_angle_constructor:ofstring
+
+constructors  db1pointsdata_set_fence_cell_coordinates_units_length  =   db1pointsdata_set_fence_cell_coordinates_units_length_constructor:ofstring
+
+constructors  db1pointsdata_set_fence_cell_figure         =   db1pointsdata_set_fence_cell_figure_kind   db1pointsdata_set_fence_cell_figure_name
+
+constructors  db1pointsdata_set_fence_cell_figure_kind    =   db1pointsdata_set_fence_cell_figure_kind_constructor:ofstring
+constructors  db1pointsdata_set_fence_cell_figure_name    =   db1pointsdata_set_fence_cell_figure_name_constructor:ofstring
+
+# fence_keyword
+
+constructors  db1pointsdata_set_fence_keyword                  =   db1pointsdata_set_fence_keyword_coordinates   db1pointsdata_set_fence_keyword_figure   db1pointsdata_set_fence_keyword_vertex
+
+constructors  db1pointsdata_set_fence_keyword_figure  =   db1pointsdata_set_fence_keyword_figure_constructor:ofstring
+
+constructors  db1pointsdata_set_fence_keyword_vertex  =   db1pointsdata_set_fence_keyword_vertex_constructor:ofstring
+
+
+constructors  db1pointsdata_set_fence_keyword_coordinates      =   db1pointsdata_set_fence_keyword_coordinates_units   db1pointsdata_set_fence_keyword_coordinates_kind
+
+constructors  db1pointsdata_set_fence_keyword_coordinates_units=   db1pointsdata_set_fence_keyword_coordinates_units_angle   db1pointsdata_set_fence_keyword_coordinates_units_length
+
+constructors  db1pointsdata_set_fence_keyword_coordinates_units_angle =   db1pointsdata_set_fence_keyword_coordinates_units_angle_constructor:ofstring
+
+constructors  db1pointsdata_set_fence_keyword_coordinates_units_length =   db1pointsdata_set_fence_keyword_coordinates_units_length_constructor:ofstring
+
+constructors  db1pointsdata_set_fence_keyword_coordinates_kind=   db1pointsdata_set_fence_keyword_coordinates_kind_constructor:ofstring
+
+
+# fence_token
+
+constructors  db1pointsdata_set_fence_token                         =   db1pointsdata_set_fence_token_coordinates   db1pointsdata_set_fence_token_figure
+
+constructors  db1pointsdata_set_fence_token_coordinates             =   db1pointsdata_set_fence_token_coordinates_units   db1pointsdata_set_fence_token_coordinates_kind
+
+constructors  db1pointsdata_set_fence_token_coordinates_units       =   db1pointsdata_set_fence_token_coordinates_units_angle   db1pointsdata_set_fence_token_coordinates_units_length
+
+constructors  db1pointsdata_set_fence_token_coordinates_units_angle =   db1pointsdata_set_fence_token_coordinates_units_angle_degree   db1pointsdata_set_fence_token_coordinates_units_angle_noangle   db1pointsdata_set_fence_token_coordinates_units_angle_radian
+  
+constructors  db1pointsdata_set_fence_token_coordinates_units_angle_degree  =   db1pointsdata_set_fence_token_coordinates_units_angle_degree_constructor:ofstring
+
+constructors  db1pointsdata_set_fence_token_coordinates_units_angle_noangle =   db1pointsdata_set_fence_token_coordinates_units_angle_noangle_constructor:ofstring
+
+constructors  db1pointsdata_set_fence_token_coordinates_units_angle_radian  =   db1pointsdata_set_fence_token_coordinates_units_angle_radian_constructor:ofstring
+
+constructors  db1pointsdata_set_fence_token_coordinates_units_length=   db1pointsdata_set_fence_token_coordinates_units_length_angstrom   db1pointsdata_set_fence_token_coordinates_units_length_bohr   db1pointsdata_set_fence_token_coordinates_units_length_meter   db1pointsdata_set_fence_token_coordinates_units_length_nanometer
+
+
+constructors  db1pointsdata_set_fence_token_coordinates_units_length_angstrom  =   db1pointsdata_set_fence_token_coordinates_units_length_angstrom_constructor:ofstring
+constructors  db1pointsdata_set_fence_token_coordinates_units_length_bohr      =   db1pointsdata_set_fence_token_coordinates_units_length_bohr_constructor:ofstring
+constructors  db1pointsdata_set_fence_token_coordinates_units_length_meter     =   db1pointsdata_set_fence_token_coordinates_units_length_meter_constructor:ofstring
+constructors  db1pointsdata_set_fence_token_coordinates_units_length_nanometer =   db1pointsdata_set_fence_token_coordinates_units_length_nanometer_constructor:ofstring
+
+
+constructors  db1pointsdata_set_fence_token_coordinates_kind        =   db1pointsdata_set_fence_token_coordinates_kind_cartesian   db1pointsdata_set_fence_token_coordinates_kind_cylindrical   db1pointsdata_set_fence_token_coordinates_kind_linear   db1pointsdata_set_fence_token_coordinates_kind_planar   db1pointsdata_set_fence_token_coordinates_kind_polar   db1pointsdata_set_fence_token_coordinates_kind_spherical
+
+constructors  db1pointsdata_set_fence_token_coordinates_kind_cartesian    =   db1pointsdata_set_fence_token_coordinates_kind_cartesian_constructor:ofstring 
+constructors  db1pointsdata_set_fence_token_coordinates_kind_cylindrical  =   db1pointsdata_set_fence_token_coordinates_kind_cylindrical_constructor:ofstring 
+constructors  db1pointsdata_set_fence_token_coordinates_kind_polar        =   db1pointsdata_set_fence_token_coordinates_kind_polar_constructor:ofstring 
+constructors  db1pointsdata_set_fence_token_coordinates_kind_planar        =   db1pointsdata_set_fence_token_coordinates_kind_planar_constructor:ofstring 
+constructors  db1pointsdata_set_fence_token_coordinates_kind_linear        =   db1pointsdata_set_fence_token_coordinates_kind_linear_constructor:ofstring 
+constructors  db1pointsdata_set_fence_token_coordinates_kind_spherical    =   db1pointsdata_set_fence_token_coordinates_kind_spherical_constructor:ofstring 
+
+constructors  db1pointsdata_set_fence_token_figure                  =   db1pointsdata_set_fence_token_figure_kind
+
+constructors  db1pointsdata_set_fence_token_figure_kind             =   db1pointsdata_set_fence_token_figure_kind_segment  db1pointsdata_set_fence_token_figure_kind_triangle   db1pointsdata_set_fence_token_figure_kind_point
+
+constructors  db1pointsdata_set_fence_token_figure_kind_segment     =   db1pointsdata_set_fence_token_figure_kind_segment_constructor:ofstring
+constructors  db1pointsdata_set_fence_token_figure_kind_triangle    =   db1pointsdata_set_fence_token_figure_kind_triangle_constructor:ofstring   
+constructors  db1pointsdata_set_fence_token_figure_kind_point       =   db1pointsdata_set_fence_token_figure_kind_point_constructor:ofstring
+
+

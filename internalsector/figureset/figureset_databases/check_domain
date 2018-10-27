@@ -1,0 +1,18 @@
+let check_domain_sole_index nam_dba =
+  let nam_mod = Management_v.current_module_name (documentation ()) in
+  let nam_fun = "check_domain_sole_index" in
+
+  let tag_ddo = Database_db1_domain_tag_by_unit_provider_v.provide () in
+  let soi_dom = Tag_v.sole_index_off_tag tag_ddo in
+  let soi_d1d = Tag_v.sole_index_off_tag nam_dba in
+  if List_v.last_element_off_list soi_dom <> List_v.last_element_off_list soi_d1d
+  then 
+    Error_messages_v.print_fatal_error nam_mod nam_fun 
+      (Format.sprintf "input tag %s contained domain sole_index %i" 
+	 (Database_db1_database_tag_v.fullname nam_dba) (List_v.last_element_off_list soi_dom)
+      )
+      (Format.sprintf "it contains %i" (List_v.last_element_off_list soi_d1d))
+      "Check"
+  else ()
+;;
+

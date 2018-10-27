@@ -1,0 +1,21 @@
+MIXED_T_MLI :=  \
+  Forked_fragment_symbol_t.mli \
+  Forked_block_symbol_t.mli \
+ Forked_symbol_t.mli \
+  Linear_segment_symbol_t.mli \
+  Linear_block_symbol_t.mli \
+ Linear_symbol_t.mli \
+   Semi_closed_right_grouping_symbol_t.mli \
+   Semi_closed_right_block_symbol_t.mli \
+  Semi_closed_right_symbol_t.mli \
+   Semi_closed_left_fragment_symbol_t.mli \
+   Semi_closed_left_segment_symbol_t.mli \
+   Semi_closed_left_block_symbol_t.mli \
+  Semi_closed_left_symbol_t.mli \
+ Semi_closed_symbol_t.mli \
+  Closed_grouping_symbol_t.mli \
+  Closed_segment_symbol_t.mli \
+  Closed_block_symbol_t.mli \
+  Closed_atom_symbol_t.mli \
+ Closed_symbol_t.mli \
+Chemical_symbol_t.mli \

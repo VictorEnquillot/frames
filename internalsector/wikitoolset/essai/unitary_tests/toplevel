@@ -1,0 +1,5 @@
+ledit -x -h ./.toplevel-history ocaml \
+-I ../ \
+unix.cma str.cma make_test_v.cmo \
+../program.cma \
+ 

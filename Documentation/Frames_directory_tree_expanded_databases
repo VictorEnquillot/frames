@@ -1,0 +1,141 @@
+---------------------------------------------------------------------------------------------------
+entry:
+	domaininput:
+		inputbase:
+			inputbox:
+			inputset: parser
+external:			
+	domaindata:
+		database:
+			databox:
+			dataset: parser
+---------------------------------------------------------------------------------------------------
+entrysector:
+	userinput:
+		localinput:
+			localinputfiles: *.inp
+			localinputset:	
+					localinputset_common  
+					localinputset_parser   
+					localinputset_tags
+		 			localinputset_builder_trees  
+					localinputset_lexer
+					localinputset_symbols:
+						Localinput_symbol_t.ml
+(not yet used)	molproinput: 
+			molproinputfiles: *.inp
+			molproinputset:	
+					molproinputset_common  
+					molproinputset_parser   
+					molproinputset_tags
+		 			molproinputset_builder_trees  
+					molproinputset_lexer
+					molproinputset_symbols:
+						Molproinput_symbol_t.ml
+
+externalsector:
+	chemicaldata
+	figuredata:
+		db1figuredata:
+			db1figuredatafiles:*.db2
+			db1figuredataset:
+				db1figuredataset_builder_trees
+				db1figuredataset_lexer
+				db1figuredataset_parser
+				db1figuredataset_symbols:
+					Db1figuredata_symbol_t.ml
+				db1figuredataset_tags
+		db2figuredata:*.db1
+			db2figurefiles:*.db2
+			db2figuredataset:		
+	skeletondata:
+		g9xdata:
+			g9xfiles:*.g9x	
+			g9xset:
+		molprodata:
+		nwchemdata:
+			nwchemdatafiles:*nwc
+			nwchemdataset:
+				nwchemdataset_builder_trees
+				nwchemdataset_lexer
+				nwchemdataset_parser
+				nwchemdataset_symbols
+				nwchemdataset_tags
+---------------------------------------------------------------------------------------------------
+Frames Code :
+       domainset (internalsector) 
+       domainset (productsector) 
+
+---------------------------------------------------------------------------------------------------
+internalsector:
+	basisfunctionset
+	chemicalset
+	commonset:
+	contextset:
+		Context*.ml
+	elementaryset:
+		elementaryset_databases  
+		elementaryset_formulas
+		elementaryset_symbols:
+			Elementary_symbol-t.ml
+		elementaryset_tags
+		elementaryset_values
+	figureset:
+		figureset_databases
+		figureset_formulas
+		figureset_symbols:
+			Figure_symbol_t.ml
+		figureset_tags
+		figureset_values
+	skeletonset:
+		skeletonset_databases	
+		skeletonset_formulas  
+		skeletonset_symbols:
+			Skeleton_symbol_t.ml  
+		skeletonset_tags
+		skeletonset_values
+
+	wavefunctionset
+	wikitoolset
+
+productsector:
+	operatorset:
+		operatorset_formulas  
+		operatorset_interfaces  
+		operatorset_symbols:
+			Operator_symbol_t.ml
+		operatorset_tags
+		operatorset_values
+	propertyset:
+		propertyset_formulas  
+		propertyset_interfaces  
+		propertyset_symbols:
+			Property_symbol_t.ml     
+		propertyset_tags
+		propertyset_values
+-----------------------------------------------------------------------------
+Context quatuor :
+
+	sector		domain		base		basefiles	box
+sole_index [s]          [d; s]          [b; d; s]       		[x; b; d; s]
+
+
+	external	domaindata	database	datafiles	databox
+	external	skeletondata	nwchemdata	nwchemdatafiles	some.nwc
+                            |              |               		   |
+                            v              v               		   v
+	internal	domainset	database	datafiles	databox
+	internal	skeletonset	nwchemdata	nwchemdatafiles	some.nwc
+
+Context specific uno || Context transfered trio -----------------------------
+
+	entry		domaininput	inputbase	inputfiles	inputbox
+	entry		userinput	localinput	localinputfiles some.inp
+                   (unique fictitious)     |               		   |
+                     (not transfered)      v               		   v
+	product		domainset	inputbase	inputfiles	inputbox
+	product		propertyset	localinput	localinputfiles	some.inp
+
+Context specific duo -------------- || Context transfered duo ---------------
+
+Domain_name : Domainset Domaininput

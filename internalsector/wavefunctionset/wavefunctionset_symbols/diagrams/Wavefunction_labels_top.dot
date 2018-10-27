@@ -1,0 +1,22 @@
+	digraph wavefunction_labels {
+		size="14,14";
+		node [
+		     color=yellow, style=filled,
+		     fontsize=24, fontname="Palatino-Italic",fontcolor=black
+		     ];
+		edge [
+        	fontname = "Bitstream Vera Sans"
+        	fontsize = 12
+        	arrowsize="0.7"
+		dir = "down"
+	    ];
+	    
+	    Title [label = "The Constructor Tree Top\nfor Wavefunction Set" shape="record" color=lightblue, style=filled];
+
+	    Title -> "wavefunction"  [style="invis"];
+
+	"wavefunction"            -> {"wavefunction_body"  "wavefunction_context"   "wavefunction_closure"};
+	"wavefunction_context"    -> {"wavefunction_createdby" "wavefunction_domain"};
+	"wavefunction_domain"     -> {"wavefunction_domain_constructor:ofstring"};
+	"wavefunction_createdby"  -> {"wavefunction_database:ofstring" "wavefunction_input_file:ofstring"};
+};

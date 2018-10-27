@@ -1,0 +1,18 @@
+(** {3 Localinput_lexer_keyword_nextvarnamed_symbol_t} *)
+
+
+(** {6 Typing_for_symbol} *)
+
+type localinput_lexer_keyword_nextvarnamed_symbol =
+  | Localinput_lexer_keyword_nextvarnamed_cofactor_entity_symbol of Localinput_lexer_keyword_nextvarnamed_cofactor_entity_symbol_t.localinput_lexer_keyword_nextvarnamed_cofactor_entity_symbol
+  | Localinput_lexer_keyword_nextvarnamed_external_context_symbol of Localinput_lexer_keyword_nextvarnamed_external_context_symbol_t.localinput_lexer_keyword_nextvarnamed_external_context_symbol
+  | Localinput_lexer_keyword_nextvarnamed_external_variable_symbol of Localinput_lexer_keyword_nextvarnamed_external_variable_symbol_t.localinput_lexer_keyword_nextvarnamed_external_variable_symbol
+  | Localinput_lexer_keyword_nextvarnamed_target_operand_symbol of Localinput_lexer_keyword_nextvarnamed_target_operand_symbol_t.localinput_lexer_keyword_nextvarnamed_target_operand_symbol
+  | Localinput_lexer_keyword_nextvarnamed_target_operator_symbol of Localinput_lexer_keyword_nextvarnamed_target_operator_symbol_t.localinput_lexer_keyword_nextvarnamed_target_operator_symbol
+;;
+
+
+(** Localinput_lexer_keyword_nextvarnamed_symbol_t at 12:11:31 on 22 Mar 2017. created by version v2.4 of generator *)
+
+
+

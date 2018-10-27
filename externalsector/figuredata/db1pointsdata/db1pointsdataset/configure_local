@@ -1,0 +1,7 @@
+#!/bin/bash
+# The directory where we run a configure script.
+SUB_DIRECTORIES="db1points_builder_trees db1points_lexer db1points_tags db1points_parser db1points_symbols"
+
+
+# The directory where we just configure .depend and .depend-rebuild.
+CURRENT_AND_TEST=". unitary_tests"

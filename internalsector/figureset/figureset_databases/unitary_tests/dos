@@ -1,0 +1,3 @@
+let nam_dos = "figureset";;
+let taa_dos = Alien_database_entity_symbol_by_sole_index_provider_v.domainset_tagadb_of_domainset_name nam_dos;;
+let sym_dos = Tag_v.symbol_off_tag taa_dos;;

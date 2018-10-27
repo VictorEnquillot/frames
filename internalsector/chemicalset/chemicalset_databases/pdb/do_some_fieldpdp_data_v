@@ -1,0 +1,127 @@
+# set -x
+Some=$1
+some=`echo ${Some}|tr A-Z a-z`
+SOME=`echo ${Some}|tr a-z A-Z`
+Mods=$2
+Modd=`echo ${Mods} | sed 's/s$/d/'`
+echo "some ${some} with ${Mods} and ${Modd}"
+
+filetml="${some}_fieldpdb_symbol_t.ml"
+
+file_type="fieldpdb_data"
+
+filevml="${some}_${file_type}_v.ml"
+filevmli="${some}_${file_type}_v.mli"
+
+# Prepare fields files for awk
+
+grep '|' ${filetml} | sed -e 's/  | //' -e 's/-/ /' -e 's/(//' -e 's/)//' -e 's/\*//g' > ${some}_Fields
+
+echo "${some}_Fields done"
+
+cat ${some}_Fields | tr A-Z a-z > ${some}_fields
+paste  ${some}_fields  ${some}_Fields > ${some}_fields_Fields
+echo "${some}_fields done"
+echo "${some}_fields_Fields done"
+
+# ---------------- Build _data_v.ml ----------------------
+
+echo "(** {3 The functionalities for a Symbol Formula for a ${SOME} Record of a Pdb file.} *)" > l
+
+echo "" >> l
+echo "let nam_mod = \"${Some}_${file_type}_v\"" >> l
+echo "" >> l
+
+# ---------------- module ----------------------
+echo "module ${Modd}_t = ${Some}_fieldpdb_data_t" >> l
+echo "module ${Mods}_t = ${Some}_fieldpdb_symbol_t" >> l
+echo "module Fps_t = Fieldpdb_symbol_t" >> l
+echo "module Fpt_v = Fieldpdb_tools_v" >> l
+echo "module Ord_p = Ordinal_p" >> l
+echo "module Str_v = String_v" >> l
+echo "" >> l
+
+echo "let column_pair_of_${some}_fieldpdb_symbol = function" >> l
+awk '{print "  | MODS_t."$1" -> (Ord_p.make "$2", Ord_p.make "$3")"}' ${some}_Fields | sed "s/MODS/${Mods}/" >> l
+echo ";;" >> l
+echo "" >> l
+
+echo "let column_and_width_of_${some}_fieldpdb_symbol smb =" >> l
+echo "  let (c1, c2) = column_pair_of_${some}_fieldpdb_symbol smb in" >> l
+echo "  let w = (Ord_p.int_of_ordinal c2) - (Ord_p.int_of_ordinal c1) + 1 in" >> l
+echo "  (c1, w)" >> l
+echo ";;" >> l
+echo "" >> l
+
+echo "let column_and_width_and_symbol_of_${some}_fieldpdb_symbol smb =" >> l
+echo "  let (c1, w) = column_and_width_of_${some}_fieldpdb_symbol smb in" >> l
+echo "  (c1, w, smb)" >> l
+echo ";;" >> l
+echo "" >> l
+
+echo "let print_fatal_error nam_mod nam fld c w =" >> l
+echo "      Format.fprintf" >> l 
+echo "	Format.err_formatter" >> l 
+echo "	\"@.@[<hov>%s.%s: --- Fatal Error ---@.\\" >> l      
+echo "        expecting data from field >%s< at column %i of %i-digits wide.@.\\" >> l      
+echo "        found End_of_file.@.\\" >> l     
+echo "        cure : check fields width@]@.\"" >> l
+echo "	nam_mod nam fld (Ord_p.int_of_ordinal c) w;" >> l
+echo "        assert false;" >> l
+echo ";;" >> l
+echo "" >> l
+
+echo "let ${some}_chain_id_of_${some}_fieldpdb_symbol_of_recordpdb_string smb str_rcp =" >> l 
+echo " let (col, wid) =" >> l
+echo "    column_and_width_of_${some}_fieldpdb_symbol smb in" >> l
+echo " let str_cid =" >> l 
+ echo "   String.sub str_rcp (Ord_p.int_decrement_of_ordinal col) wid in" >> l 
+echo "" >> l
+echo "  try Scanf.sscanf str_cid \"%c\" (fun ch -> ch)" >> l
+echo "  with End_of_file ->" >> l
+echo "    print_fatal_error nam_mod \"chain_id_off_${some}_recordpdb_string\" str_cid col wid;" >> l
+echo ";;" >> l
+echo "" >> l
+
+# ---------------- Build _data_v.mli ----------------------
+
+Type=${Some}_recordpdb_symbol_formula_t.${some}_recordpdb_symbol_formula
+
+echo "(** {3 The functionalities for a Symbol Formula for a ${SOME} Record of a Pdb file.} *)" > v
+
+echo "" >> v
+echo "(** {6 Making.} *)" >> v
+echo "" >> v
+echo "val column_pair_of_${some}_fieldpdb_symbol :" >> v 
+echo "  ${Some}_fieldpdb_symbol_t.${some}_fieldpdb_symbol ->" >> v
+echo "    Ordinal_p.ordinal * Ordinal_p.ordinal"  >> v 
+echo ";;" >> v
+echo "" >> v
+
+echo "val column_and_width_of_${some}_fieldpdb_symbol :" >> v
+echo "    ${Some}_fieldpdb_symbol_t.${some}_fieldpdb_symbol ->" >> v
+echo "    Ordinal_p.ordinal * int"  >> v 
+echo ";;" >> v
+echo "" >> v
+
+echo "val column_and_width_and_symbol_of_${some}_fieldpdb_symbol :" >> v
+echo "    ${Some}_fieldpdb_symbol_t.${some}_fieldpdb_symbol ->" >> v
+echo "    Ordinal_p.ordinal * int * ${Some}_fieldpdb_symbol_t.${some}_fieldpdb_symbol"  >> v 
+echo ";;" >> v
+echo "" >> v
+
+echo "val ${some}_chain_id_of_${some}_fieldpdb_symbol_of_recordpdb_string :" >> v 
+echo "  ${Some}_fieldpdb_symbol_t.${some}_fieldpdb_symbol ->" >> v
+echo "    string ->" >> v
+echo "      char" >> v
+echo ";;" >> v
+echo "" >> v
+
+echo `. ${UTI}/do_created` >> l
+echo `. ${UTI}/do_created` >> v
+
+cp l  ${filevml}
+cp v  ${filevmli}
+
+echo "cat ${filevml}"
+echo "cat ${filevmli}"

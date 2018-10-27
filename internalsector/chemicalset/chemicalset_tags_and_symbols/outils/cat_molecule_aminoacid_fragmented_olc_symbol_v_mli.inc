@@ -1,0 +1,4 @@
+val molecule_aminoacid_fragmented_symbol_of_molecule_aminoacid_fragmented_olc_symbol :
+  Molecule_aminoacid_fragmented_olc_symbol_t.molecule_aminoacid_fragmented_olc_symbol ->
+    Molecule_aminoacid_fragmented_symbol_t.molecule_aminoacid_fragmented_symbol
+;;

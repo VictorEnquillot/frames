@@ -1,0 +1,1 @@
+type closure_color = Elementary_fence_color_symbol_t.elementary_fence_color_symbol list;;

@@ -1,0 +1,15 @@
+   Dgn_symbol_t.Dgn_body_node_basis_set_for_a_shell_block "Ne S";
+   Dgn_symbol_t.Dgn_body_node_center_and_shell_name "Ne S";
+   Dgn_symbol_t.Dgn_body_node_basis_set_for_a_shell_block "Ne P";
+   Dgn_symbol_t.Dgn_body_node_center_and_shell_name "Ne P";
+   Dgn_symbol_t.Dgn_body_node_contraction_definition "";
+   Dgn_symbol_t.Dgn_body_node_hash_basis_set "";
+   Dgn_symbol_t.Dgn_body_node_contraction_image "3 s";
+   Dgn_symbol_t.Dgn_body_node_basis_set_for_any_shell_block "";
+   Dgn_symbol_t.Dgn_body_node_contraction_values_block "";
+   Dgn_symbol_t.Dgn_body_node_basis_set_for_a_shell_block "Au S";
+   Dgn_symbol_t.Dgn_body_node_center_and_shell_name "Au S";
+   Dgn_symbol_t.Dgn_body_node_basis_set_for_a_shell_block "Au P";
+   Dgn_symbol_t.Dgn_body_node_center_and_shell_name "Au P";
+   Dgn_symbol_t.Dgn_body_node_basis_set_for_a_shell_block "Au D";
+   Dgn_symbol_t.Dgn_body_node_center_and_shell_name "Au D" 

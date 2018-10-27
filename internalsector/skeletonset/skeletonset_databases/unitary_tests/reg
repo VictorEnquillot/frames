@@ -1,0 +1,21 @@
+
+Register_v.delete  Context_fullnameoffile_by_context_nameoffile_register_v.register;;
+Register_v.delete  Context_index_by_context_nameoffile_register_v.register;;
+Register_v.delete  Context_name_by_context_nameoffile_register_v.register;;
+Register_v.delete  Cpu_by_module_name_register_v.register;;
+Register_v.delete  Debug_by_module_name_register_v.register;;
+Register_v.delete  Elementary_creation_module_name_by_sole_index_register_v.register;;
+Register_v.delete  Elementary_deepfence_by_elementary_tag_register_v.register;;
+Register_v.delete  Elementary_symbol_by_sole_index_register_v.register;;
+Register_v.delete  Elementary_tag_all_list_by_elementary_basisset_tag_register_v.register;;
+Register_v.delete  Elementary_tag_tree_by_elementary_tag_register_v.register;;
+Register_v.delete  Nwchem_creation_module_name_by_sole_index_register_v.register;;
+Register_v.delete  Nwchem_lexer_symbol_reverse_list_by_database_fullnameoffile_register_v.register;;
+Register_v.delete  Nwchem_symbol_by_sole_index_register_v.register;;
+Register_v.delete  Nwchem_tag_all_list_by_nwchem_context_basisset_tag_register_v.register;;
+Register_v.delete  Parameters_general_register_v.register;;
+Register_v.delete  Prototype_creation_module_name_by_sole_index_register_v.register;;
+Register_v.delete  Prototype_symbol_by_sole_index_register_v.register;;
+Register_v.delete  Prototype_tag_all_list_by_prototype_context_basisset_tag_register_v.register;;
+Register_v.delete  Prototype_tag_subtree_by_prototype_tag_register_v.register;;
+Register_v.delete  Son_nwchem_tag_list_by_father_nwchem_tag_register_v.register;;

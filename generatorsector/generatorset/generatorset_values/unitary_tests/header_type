@@ -1,0 +1,35 @@
+let nam_dos = "geometryset";;
+let nam_cat = "symbol";;
+let nam_ent = "triangle";;
+let nam_cof = "type_alone";;
+let nam_usf = "implementation";;
+let nam_ite = "typing";;
+
+let sym_dos = Domainset_symbol_v.make nam_dos;;
+let idx_dos = Domainset_symbol_v.list_index_of_domainset_symbol sym_dos;;
+let soi_dos = Sole_index_v.make idx_dos [];;
+let gss_dos = Generatorset_symbol_v.generatorset_symbol_of_domainset_symbol sym_dos;;
+Generatorset_symbol_by_sole_index_provider_v.store soi_dos gss_dos;;
+let tag_dos = Tag_v.make sym_dos soi_dos;;
+let for_dos = Domainset_formula_v.retrieve tag_dos;;
+
+let sel_cat = (fun c -> Category_symbol_v.name c = nam_cat);;
+let tag_cat = Doublet_list_v.find_if_left sel_cat for_dos;;
+let for_cat = Category_formula_v.retrieve tag_cat;;
+
+let tag_ent_l = Category_formula_v.entity_tag_list_off_category_formula for_cat;;
+let sel_ent = (fun e -> Entity_symbol_v.string_off e = nam_ent);;
+let tag_ent = Doublet_list_v.find_if_left sel_ent tag_ent_l;;
+let for_ent = Entity_formula_v.retrieve tag_ent;;
+
+let sel_cof = (fun c -> Contentfile_symbol_v.name c = nam_cof);;
+let tag_cof = Doublet_list_v.find_if_left sel_cof for_ent;;
+let for_cof = Contentfile_formula_v.retrieve tag_cof;;
+
+let sel_usf = (fun u -> Usagefile_symbol_v.name u = nam_usf);;
+let tag_usf = Doublet_list_v.find_if_left sel_usf for_cof;;
+let for_usf = Usagefile_formula_v.retrieve tag_usf;;
+
+let sel_ite = (fun i -> Item_symbol_v.name i = nam_ite);;
+let tag_ite = Doublet_list_v.find_if_left sel_ite for_usf;; 
+

@@ -1,0 +1,4 @@
+ledit -x -h .toplevel-history \
+ocaml -I . -I ../ -I ../..  -I ../../tools -I ../../units \
+unix.cma str.cma ../../units/units.cma ../../tools/tools.cma \
+../integrals.cma

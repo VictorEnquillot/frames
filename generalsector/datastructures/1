@@ -1,0 +1,6 @@
+(** {3 A Septuplet between three entities of different type.} *)
+ 
+type ('a, 'b, 'c, 'd, 'e, 'f) septuplet = 'a * 'b * 'c * 'd * 'e * 'f 
+;;
+(** A septuplet is an oriented septuplet of six entities of different type. *)
+

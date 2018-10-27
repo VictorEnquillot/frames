@@ -1,0 +1,34 @@
+define Con_a
+       context
+         databox "Point_a"
+         database "db1points"
+         domain "figure"
+         sector "internal"
+         end -- context
+       end -- define
+
+define Poi_a
+       external 
+         type [ "figure" "set" "fence" "point" "constructor" ]
+         external_name "A"
+         external_context Con_a
+         end -- external
+       end -- define
+
+define Uni_len
+       external 
+         type [ "units" "length" "bohr" ]
+         end -- external
+       end -- define
+
+define Uni_ang
+       external 
+         type [ "units" "angle" "radian" ]
+         end -- external
+       end -- define
+
+print Poi_a
+      units [ Uni_len Uni_ang ]
+      end -- print
+
+stop

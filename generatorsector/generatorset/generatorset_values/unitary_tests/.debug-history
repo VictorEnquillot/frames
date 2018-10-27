@@ -1,0 +1,1080 @@
+r
+b
+bt
+up
+help
+print c
+display c
+up
+display wrd_l
+display c_l
+print wrd_l
+print str
+r
+b
+up
+print str;;
+print str
+bt
+up
+print sym_cat
+print sym_ent_c
+print wor_l
+up
+print tag_usf
+r
+b
+bt
+up
+print sym_ent_l
+print soi_cal
+print sym_cuv
+print sym_cal
+r
+b
+print sym_cal
+print soi_cal
+up
+print soi_cal
+up
+r
+b
+print soi_cal
+print sym_ent_l
+r
+b
+bt
+list
+up
+list
+r
+b
+bt
+list
+print nam_cur
+print nam_mod
+print wrd_l
+up
+print wrd_l
+up
+print sym_ent
+print cnt_wrd
+down
+r
+b
+bt
+up
+print sym_ent
+print sym_cat
+up
+print sym_ent_c
+b
+r
+b
+bt
+up
+r
+b
+bt
+r
+b
+bt
+up
+print wrd_l
+r
+b
+bt
+up
+r
+b
+bt
+up
+print sym_ent_l
+up
+list
+r
+list
+b
+bt
+list
+up
+list
+r
+b
+bt
+up
+print sym_ent_l
+r
+b
+bt
+up
+print tag_usf
+up
+r
+b
+bt
+print nam_cur
+up
+print sym_ent_l
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+print tag_ite
+up
+print pat_sym_ent_l_n_sym_cap_l 
+up
+tag_enp_l
+print tag_enp_l
+$r
+b
+bt
+b
+r
+b
+bt
+r
+b
+vt
+bt
+up
+print sym_ite;;
+print sym_ite
+up
+r
+b
+print_nam_cur
+print nam_cur
+bt
+r
+b
+bt
+q
+y
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+list
+up
+print wl
+print w1
+up
+r
+b
+bt
+r
+b
+bt
+up
+show tag_enp
+show sym_cof_l
+print tag_enp
+up
+print sym_cof_l
+up
+print for_enp
+up
+r
+b
+bt
+up
+print str_arg
+r
+b
+bt
+r
+b
+bt
+up
+print str_arg
+r
+b
+bt
+r
+b
+bt
+up
+print tag_cap
+r
+b
+bt
+up
+r
+b
+bt
+up
+quit
+y
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+print  tag_cap 
+up
+print  tag_usf
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+print tag_cap
+r
+b
+bt
+up
+print tag_cap
+up
+print tag_usf
+r
+b
+bt
+up
+print tag_cap
+r
+b
+bt
+r
+b
+bt
+up
+print tag_usf
+up
+print tag_enp_l
+r
+b
+bt
+up
+print sym_cal
+up
+print tag_usf
+print tag_enp_l
+up
+print tag_enp_l
+r
+b
+bt
+r
+b
+bt
+up
+print tag_usf
+r
+b
+bt
+r
+b
+bt
+up
+print tag_usf
+up
+r
+b
+bt
+up
+print l
+print r
+d
+help
+info
+help info
+info modules 
+sgnr
+r
+b
+bt
+up
+r
+b
+bt
+r
+b
+bt
+up
+print typ_enp
+print tag_enp
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+list
+up
+r
+b
+print s
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+r
+b
+bt
+up
+r
+b
+bt
+r
+b
+bt
+up
+print tag_ite
+r
+b
+bt
+up
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+print tga_cap
+print tag_cap
+up
+print tag_cap
+help
+down
+print tag_cap
+down
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+u
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+print tag_cap
+up
+r
+b
+bt
+up
+print soi_cap
+r
+b
+bt
+up
+print tag_eng
+r
+b
+bt
+r
+q
+t
+y
+r
+b
+bt
+r
+b
+bt
+up
+print tag_usf
+up
+print tag_ent_l
+up
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+print sym_ent_l
+r
+b
+bt
+r
+b
+bt
+up
+print l
+l
+r
+b
+bt
+print char
+up
+r
+b
+bt
+up
+print_w_1
+print w_1
+up
+print sym_ent_b
+r
+b
+bt
+up
+print tag_cap
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+print sym_ent
+up
+r
+b
+bt
+up
+print tag_cap
+fgeo
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+print sym_cal
+print sym_ent_l
+fgeo
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+print sym_ent_l
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+print sym_snl
+print idx_gro_l
+up
+print dec_cdf
+print soi_cal
+r
+b
+bt
+up
+print dec_cdf
+print idx_gro
+print sym_snl_l
+r
+b
+bt
+print idx_gro
+up
+print sym_snl_l
+up
+print sym_ent_top
+up
+r
+b
+bt
+up
+print sym_snl_l
+print idx
+print idx_gro
+r
+b
+bt
+up
+print sym_snl_l
+r
+b
+bt
+up
+r
+b
+bt
+r
+b
+bt
+up
+print sym_is2
+r
+b
+bt
+r
+b
+bt
+up
+print tag_ifs
+up
+print sym_gfs
+r
+b
+bt
+up
+print sym_ign
+up
+print  tag_uim
+print valite_l
+print val_ite_l
+up
+print sym_is1
+up
+R
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+r
+b
+bt
+up
+print big
+print hea_sma
+up
+print sym_cdf
+print sma
+r
+b
+bt
+up
+print big
+r
+b
+bt
+r
+b
+bt
+up
+print idx_tsn
+print sym_ent_cur
+print pat_sym_ent_cur
+r
+b
+bt
+r
+b
+bt
+up
+down
+print sym_cdf
+cd 
+r
+b
+bt
+r
+b
+bt
+up
+print sym_ent_cur
+r
+b
+bt
+up
+print sym_ent_cur
+up
+print sym_ent_cur
+r
+b
+bt
+r
+b
+bt
+up
+print sym_cdf
+up
+print soi_cap
+up
+print sym_gsb
+up
+print sym_gfs
+up
+print sym_cfs
+up
+print sym_is2
+r
+b
+bt
+up
+print sym_cdf
+print soi_cal
+r
+b
+bt
+r
+b
+bt
+up
+print sym_cuf
+up
+r
+b
+bt
+up
+print tag_iff
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+r
+b
+bt
+up
+print tri_ent
+d
+up
+b
+bt
+up
+print nam_cur
+up
+print tri_ent
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+q
+r
+b
+bt
+q
+y
+r
+b
+bt
+r
+b
+bt
+up
+print soi_cal
+r
+b
+bt
+q
+y
+r
+b
+bt
+r
+b
+bt
+up
+print tri_ent_son
+r
+b
+bt
+up
+print tri_ent_son
+print tri_ent_top
+up
+print sym_ctb
+up
+print tag_ctb
+up
+print str;;
+print str
+up
+down
+print str
+r
+b
+bt
+up
+r
+b
+bt
+up
+print tri_ent_top
+r
+b
+bt
+up
+print tri_ent_top
+r
+b
+bt
+up
+print tri_ent
+r
+b
+bt
+r
+b
+bt
+up
+print sym_ent
+up
+r
+b
+bt
+up
+print sym_ctd
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+print sym_ent_l
+up
+print sym_cl
+print sym_clc
+print soi_cal
+r
+b
+bt
+up
+print tri_ent
+up
+print tri_ent_son
+up
+print sym_cmb
+r
+b
+bt
+r
+b
+bt
+up
+print tri_ent
+up
+print soi_cal
+r
+b
+bt
+up
+print pre
+print tre
+r
+b
+bt
+d
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+print tri_ent_son
+up
+print soi_cal
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+print nof
+r
+b
+bt
+r
+bt
+b
+yp
+up
+print tag_usf_l
+print sel_usf
+print nam_usf
+r
+b
+bt
+up
+print sym_gss
+r
+b
+r
+b
+bt
+r
+b
+bt
+up
+print sym_gss
+r
+b
+bt
+up
+print tra_dos
+up
+print tri_efn
+up
+print sym_efb_l
+up
+print qui_uff
+up
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+print tri_ent
+up
+print oct_sss
+print oct_sst
+up
+r
+b
+bt
+up
+print tri_ent
+d
+b
+bt
+up
+print tri_ent
+up
+print sym_gro_l
+up
+r
+b
+bt
+up
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+print sym_enp_bts_l
+r
+b
+bt
+up
+print sym_efb_dat
+print sym_efb_dat_l
+up
+r
+b
+bt
+r
+b
+bt
+up
+print tri_efn
+up
+r
+b
+bt
+up
+print tl
+up
+print tra_cat
+up
+print tra_dos
+up
+print tra_con
+up
+print dou_cat
+up
+print tag_cat
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt

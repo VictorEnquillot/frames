@@ -1,0 +1,1029 @@
+(** {3 The Symbol functionalities for a Atom.} *)
+
+let nam_mod = "Atom_symbol_v";;
+
+(* *** TODO atom names *)
+
+(** {6 Modules.} *)
+
+module Ats_t = Atom_symbol_t
+module Hbs_v = Halfbridge_symbol_v
+
+(** {6 Converting.} *)
+
+(** {9 Naming.} *)
+
+let rec name_atom_symbol = function
+  | Ats_t.Leaf_atom_symbol smb ->
+      name_leaf_atom_symbol smb
+  | Ats_t.Core_atom_symbol smb ->
+      name_core_atom_symbol smb
+
+and name_core_atom_symbol = function
+  | Ats_t.Closed_atom_symbol smb ->
+      name_closed_atom_symbol smb
+  | Ats_t.Onetied_atom_symbol smb ->
+      name_onetied_atom_symbol smb
+  | Ats_t.Twotied_atom_symbol smb ->
+      name_twotied_atom_symbol smb
+  | Ats_t.Threetied_atom_symbol smb ->
+      name_threetied_atom_symbol smb
+  | Ats_t.Fourtied_atom_symbol smb ->
+      name_fourtied_atom_symbol smb
+  | Ats_t.Fivetied_atom_symbol smb ->
+      name_fivetied_atom_symbol smb
+  | Ats_t.Sixtied_atom_symbol smb ->
+      name_sixtied_atom_symbol smb
+
+and name_leaf_atom_symbol = function
+  | Ats_t.Single_leaf_atom_symbol smb ->
+      name_single_leaf_atom_symbol smb
+  | Ats_t.Double_leaf_atom_symbol smb ->
+      name_double_leaf_atom_symbol smb
+  | Ats_t.Triple_leaf_atom_symbol smb ->
+      name_triple_leaf_atom_symbol smb
+  | Ats_t.Nonsigma_leaf_atom_symbol smb ->
+      name_nonsigma_leaf_atom_symbol smb
+
+and name_closed_atom_symbol = function
+  | Ats_t.Raregas_symbol smb ->
+      name_raregas_symbol smb
+  | Ats_t.Anion_symbol smb ->
+      name_anion_symbol smb
+  | Ats_t.Cation_symbol smb ->
+      name_cation_symbol smb
+  | Ats_t.Halfbridge_atom_symbol smb ->
+      Hbs_v.name smb
+
+and name_raregas_symbol = function
+  | Ats_t.Rg_Ar -> (* Ar *)
+      Format.sprintf "Rg_Ar"
+  | Ats_t.Rg_He -> 
+      Format.sprintf "Rg_He"
+  | Ats_t.Rg_Kr -> (* Kr *)
+      Format.sprintf "Rg_Kr"
+  | Ats_t.Rg_Ne -> (* Ne *)
+      Format.sprintf "Rg_Ne"
+  | Ats_t.Rg_Xe -> (* Xe *)
+      Format.sprintf "Rg_Xe"
+
+and name_anion_symbol = function
+  | Ats_t.Minus_one_anion_symbol smb ->
+      name_minus_one_anion_symbol smb
+
+and name_cation_symbol = function 
+  | Ats_t.Plus_one_anion_symbol smb ->
+      name_plus_one_anion_symbol smb
+  | Ats_t.Plus_two_anion_symbol smb ->
+      name_plus_two_anion_symbol smb
+  | Ats_t.Plus_three_anion_symbol smb ->
+      name_plus_three_anion_symbol smb
+
+and name_minus_one_anion_symbol = function
+  | Ats_t.Mon_F ->   (* F- *)
+      Format.sprintf "Mon_F"
+
+and name_plus_one_anion_symbol = function
+  | Ats_t.Pon_H ->   (* H+ *)
+      Format.sprintf "Pon_H"
+  | Ats_t.Pon_Na ->  (* Na+ *)
+      Format.sprintf "Pon_Na"
+
+and name_plus_two_anion_symbol = function
+  | Ats_t.Ptw_Ca ->  (* Ca++ *)
+      Format.sprintf "Ptw_Ca"
+  | Ats_t.Ptw_Fe ->  (* Fe++ *)
+      Format.sprintf "Ptw_Fe"
+
+and name_plus_three_anion_symbol = function
+  | Ats_t.Pth_Fe ->  (* Fe+++ *)
+      Format.sprintf "Pth_Fe"
+
+and name_nonsigma_leaf_atom_symbol = function
+  | Ats_t.Nlf_O ->   (* O.- in -Coo anion. *)
+      Format.sprintf "Nlf_o"
+
+and name_single_leaf_atom_symbol = function
+  | Ats_t.Slf_H ->   (* H- in h-H molecule *)
+      Format.sprintf "Slf_H"
+  | Ats_t.Slf_F ->   (* F- in f-H molecule *)
+      Format.sprintf "Slf_F"
+
+and name_double_leaf_atom_symbol = function
+  | Ats_t.Dlf_O ->   (* O=  in Co2 molecule *)
+      Format.sprintf "Dlf_O"
+
+and name_triple_leaf_atom_symbol = function
+  | Ats_t.Tlf_N ->   (* N#  H-C#N *)
+      Format.sprintf "Tlf_N"
+  | Ats_t.Tlf_O ->   (* O#  C#O *)
+      Format.sprintf "Tlf_O"
+
+and name_onetied_atom_symbol = function
+  | Ats_t.Sigma_onetied_atom_symbol smb ->
+      name_sigma_onetied_atom_symbol smb
+
+and name_twotied_atom_symbol = function
+  | Ats_t.Sigma_twotied_atom_symbol smb ->
+      name_sigma_twotied_atom_symbol smb
+  | Ats_t.Nonsigma_twotied_atom_symbol smb ->
+      name_nonsigma_twotied_atom_symbol smb
+
+and name_threetied_atom_symbol = function
+  | Ats_t.Sigma_threetied_atom_symbol smb ->
+      name_sigma_threetied_atom_symbol smb
+  | Ats_t.Nonsigma_threetied_atom_symbol smb ->
+      name_nonsigma_threetied_atom_symbol smb
+
+and name_fourtied_atom_symbol = function
+  | Ats_t.Fo_C ->   (* >C<  Methane *)
+      Format.sprintf "Fo_C"
+  | Ats_t.Fo_N ->   (* >N+< Ammonium *)
+      Format.sprintf "Fo_N"
+  | Ats_t.Fo_S ->   (* >S< Sf4 molecule See_saw *)
+      Format.sprintf "Fo_S"
+  | Ats_t.Fo_Xe ->  (* >Xe< XeF4 molecule Square_planar *)
+      Format.sprintf "Fo_Xe"
+
+and name_fivetied_atom_symbol = function
+  | Ats_t.Fi_Cl ->  (* >Cl<- Clf5 molecule Square_pyramidal *)
+      Format.sprintf "Fi_Cl"
+
+and name_sixtied_atom_symbol = function
+  | Ats_t.Si_S ->   (* ->S<- Sf6 molecule Octahedral *)
+      Format.sprintf "Si_S"
+
+and name_sigma_onetied_atom_symbol = function
+  | Ats_t.Single_sigma_onetied_atom_symbol smb ->
+      name_singlesigma_onetied_atom_symbol smb
+
+and name_sigma_twotied_atom_symbol = function
+  | Ats_t.Single_sigma_twotied_atom_symbol smb ->
+      name_singlesigma_twotied_atom_symbol smb
+  | Ats_t.Double_sigma_twotied_atom_symbol smb ->
+      name_doublesigma_twotied_atom_symbol smb
+  | Ats_t.Triple_sigma_twotied_atom_symbol smb ->
+      name_triplesigma_twotied_atom_symbol smb
+
+and name_sigma_threetied_atom_symbol = function
+  | Ats_t.Single_sigma_threetied_atom_symbol smb ->
+      name_singlesigma_threetied_atom_symbol smb
+  | Ats_t.Double_sigma_threetied_atom_symbol smb ->
+      name_doublesigma_threetied_atom_symbol smb
+
+and name_nonsigma_threetied_atom_symbol = function
+  | Ats_t.Singlenonsigma_threetied_atom_symbol smb ->
+      name_singlenonsigma_threetied_atom_symbol smb
+  | Ats_t.Doublenonsigma_threetied_atom_symbol smb ->
+      name_doublenonsigma_threetied_atom_symbol smb
+
+and name_singlesigma_onetied_atom_symbol = function
+  | Ats_t.Sson_Cl ->   (* Cl-   in Cl-h molecule *)
+      Format.sprintf "Sson_Cl"
+  | Ats_t.Sson_F ->    (* F-   in F-h molecule *)
+      Format.sprintf "Sson_F"
+  | Ats_t.Sson_H ->    (* H-   in h-h molecule *)
+      Format.sprintf "Sson_H"
+
+and name_singlesigma_twotied_atom_symbol = function
+  | Ats_t.Sstw_O ->    (* -O-   in h-O-h molecule *)
+      Format.sprintf "Sstw_O"
+  | Ats_t.Sstw_S ->    (* -S-   h-S-h molecule *)
+      Format.sprintf "Sstw_S"
+
+and name_doublesigma_twotied_atom_symbol = function
+  | Ats_t.Dstw_C ->    (* =C=   in o=C=o molecule *)
+      Format.sprintf "Dstw_C"
+  | Ats_t.Dstw_N ->    (* =N-   in Guanidine C=N-H *)
+      Format.sprintf "Dstw_N"
+  | Ats_t.Dstw_S ->    (* =S=   o=S=o sulfur dioxide molecule *)
+      Format.sprintf "Dstw_S"
+
+and name_triplesigma_twotied_atom_symbol = function
+  | Ats_t.Tstw_C ->    (* -C#   in h-C#n molecule  *)
+      Format.sprintf "Tstw_C"
+  | Ats_t.Tstw_N ->    (* -N+#  in ??? molecule  *)
+      Format.sprintf "Tstw_N"
+
+and name_nonsigma_twotied_atom_symbol = function
+  | Ats_t.Ntw_N ->   (* -N.-  in o-N.-o anion *)
+      Format.sprintf "Sntw_N"
+  | Ats_t.Ntw_O ->   (* -O.-  in o-O.-o molecule *)
+      Format.sprintf "Sntw_O"
+
+and name_singlesigma_threetied_atom_symbol = function
+  | Ats_t.Ssth_N ->    (* -N<  Nh3 molecule Trigonal_pyramidal *)
+      Format.sprintf "Ssth_N"
+  | Ats_t.Ssth_Cl ->   (* ClF3 molecule Tshaped *)
+      Format.sprintf "Ssth_Cl"
+
+and name_doublesigma_threetied_atom_symbol = function
+  | Ats_t.Dsth_C ->    (* =C< in Ethylene molecule *)
+      Format.sprintf "Dsth_C"
+  | Ats_t.Dsth_N ->    (* =N+<  *)
+      Format.sprintf "Dsth_N"
+  | Ats_t.Dsth_S ->    (* =S<< in So3 sulfur trioxide molecule planar *)
+      Format.sprintf "Dsth_S"
+
+and name_singlenonsigma_threetied_atom_symbol = function
+  | Ats_t.Snth_C ->    (* -C.< in Co3 carbonate anion planar *)
+      Format.sprintf "Snth_C"
+  | Ats_t.Snth_N ->    (* -N+.< in Guanidinium trigonal_planar ??? *)
+      Format.sprintf "Snth_N"
+
+and name_doublenonsigma_threetied_atom_symbol = function
+  | Ats_t.Dnth_S ->    (* =S< in o=S< Sulfinyl group (covalent/ionic) *)
+      Format.sprintf "Dnth_S"
+;;
+
+let name = name_atom_symbol;;
+
+(** {9 Printing.} *)
+
+let rec print_atom_symbol ppf = function
+  | Ats_t.Leaf_atom_symbol smb ->
+      print_leaf_atom_symbol ppf smb
+  | Ats_t.Core_atom_symbol smb ->
+      print_core_atom_symbol ppf smb
+
+and print_core_atom_symbol ppf = function
+  | Ats_t.Closed_atom_symbol smb ->
+      print_closed_atom_symbol ppf smb
+  | Ats_t.Onetied_atom_symbol smb ->
+      print_onetied_atom_symbol ppf smb
+  | Ats_t.Twotied_atom_symbol smb ->
+      print_twotied_atom_symbol ppf smb
+  | Ats_t.Threetied_atom_symbol smb ->
+      print_threetied_atom_symbol ppf smb
+  | Ats_t.Fourtied_atom_symbol smb ->
+      print_fourtied_atom_symbol ppf smb
+  | Ats_t.Fivetied_atom_symbol smb ->
+      print_fivetied_atom_symbol ppf smb
+  | Ats_t.Sixtied_atom_symbol smb ->
+      print_sixtied_atom_symbol ppf smb
+
+and print_leaf_atom_symbol ppf = function
+  | Ats_t.Single_leaf_atom_symbol smb ->
+      print_single_leaf_atom_symbol ppf smb
+  | Ats_t.Double_leaf_atom_symbol smb ->
+      print_double_leaf_atom_symbol ppf smb
+  | Ats_t.Triple_leaf_atom_symbol smb ->
+      print_triple_leaf_atom_symbol ppf smb
+  | Ats_t.Nonsigma_leaf_atom_symbol smb ->
+      print_nonsigma_leaf_atom_symbol ppf smb
+
+and print_closed_atom_symbol ppf = function
+  | Ats_t.Raregas_symbol smb ->
+      print_raregas_symbol ppf smb
+  | Ats_t.Anion_symbol smb ->
+      print_anion_symbol ppf smb
+  | Ats_t.Cation_symbol smb ->
+      print_cation_symbol ppf smb
+  | Ats_t.Halfbridge_atom_symbol smb ->
+      Hbs_v.print ppf smb
+
+and print_raregas_symbol ppf = function
+  | Ats_t.Rg_Ar -> (* Ar *)
+      Format.fprintf ppf "Rg_Ar"
+  | Ats_t.Rg_He -> 
+      Format.fprintf ppf "Rg_He"
+  | Ats_t.Rg_Kr -> (* Kr *)
+      Format.fprintf ppf "Rg_Kr"
+  | Ats_t.Rg_Ne -> (* Ne *)
+      Format.fprintf ppf "Rg_Ne"
+  | Ats_t.Rg_Xe -> (* Xe *)
+      Format.fprintf ppf "Rg_Xe"
+
+and print_anion_symbol ppf = function
+  | Ats_t.Minus_one_anion_symbol smb ->
+      print_minus_one_anion_symbol ppf smb
+
+and print_cation_symbol ppf = function 
+  | Ats_t.Plus_one_anion_symbol smb ->
+      print_plus_one_anion_symbol ppf smb
+  | Ats_t.Plus_two_anion_symbol smb ->
+      print_plus_two_anion_symbol ppf smb
+  | Ats_t.Plus_three_anion_symbol smb ->
+      print_plus_three_anion_symbol ppf smb
+
+and print_minus_one_anion_symbol ppf = function
+  | Ats_t.Mon_F ->   (* F- *)
+      Format.fprintf ppf "Mon_F"
+
+and print_plus_one_anion_symbol ppf = function
+  | Ats_t.Pon_H ->   (* H+ *)
+      Format.fprintf ppf "Pon_H"
+  | Ats_t.Pon_Na ->  (* Na+ *)
+      Format.fprintf ppf "Pon_Na"
+
+and print_plus_two_anion_symbol ppf = function
+  | Ats_t.Ptw_Ca ->  (* Ca++ *)
+      Format.fprintf ppf "Ptw_Ca"
+  | Ats_t.Ptw_Fe ->  (* Fe++ *)
+      Format.fprintf ppf "Ptw_Fe"
+
+and print_plus_three_anion_symbol ppf = function
+  | Ats_t.Pth_Fe ->  (* Fe+++ *)
+      Format.fprintf ppf "Pth_Fe"
+
+and print_nonsigma_leaf_atom_symbol ppf = function
+  | Ats_t.Nlf_O ->   (* O.- in -Coo anion. *)
+      Format.fprintf ppf "Clf_O"
+
+and print_single_leaf_atom_symbol ppf = function
+  | Ats_t.Slf_H ->   (* H- in h-H molecule *)
+      Format.fprintf ppf "Slf_H"
+  | Ats_t.Slf_F ->   (* F- in f-H molecule *)
+      Format.fprintf ppf "Slf_F"
+
+and print_double_leaf_atom_symbol ppf = function
+  | Ats_t.Dlf_O ->   (* O=  in Co2 molecule *)
+      Format.fprintf ppf "Dlf_O"
+
+and print_triple_leaf_atom_symbol ppf = function
+  | Ats_t.Tlf_N ->   (* N#  H-C#N *)
+      Format.fprintf ppf "Tlf_N"
+  | Ats_t.Tlf_O ->   (* O#  C#O *)
+      Format.fprintf ppf "Tlf_O"
+
+and print_onetied_atom_symbol ppf = function
+  | Ats_t.Sigma_onetied_atom_symbol smb ->
+      print_sigma_onetied_atom_symbol ppf smb
+
+and print_twotied_atom_symbol ppf = function
+  | Ats_t.Sigma_twotied_atom_symbol smb ->
+      print_sigma_twotied_atom_symbol ppf smb
+  | Ats_t.Nonsigma_twotied_atom_symbol smb ->
+      print_nonsigma_twotied_atom_symbol ppf smb
+
+and print_threetied_atom_symbol ppf = function
+  | Ats_t.Sigma_threetied_atom_symbol smb ->
+      print_sigma_threetied_atom_symbol ppf smb
+  | Ats_t.Nonsigma_threetied_atom_symbol smb ->
+      print_nonsigma_threetied_atom_symbol ppf smb
+
+and print_fourtied_atom_symbol ppf = function
+  | Ats_t.Fo_C ->   (* >C<  Methane *)
+      Format.fprintf ppf "Fo_C"
+  | Ats_t.Fo_N ->   (* >N+< Ammonium *)
+      Format.fprintf ppf "Fo_N"
+  | Ats_t.Fo_S ->   (* >S< Sf4 molecule See_saw *)
+      Format.fprintf ppf "Fo_S"
+  | Ats_t.Fo_Xe ->  (* >Xe< XeF4 molecule Square_planar *)
+      Format.fprintf ppf "Fo_Xe"
+
+and print_fivetied_atom_symbol ppf = function
+  | Ats_t.Fi_Cl ->  (* >Cl<- Clf5 molecule Square_pyramidal *)
+      Format.fprintf ppf "Fi_Cl"
+
+and print_sixtied_atom_symbol ppf = function
+  | Ats_t.Si_S ->   (* ->S<- Sf6 molecule Octahedral *)
+      Format.fprintf ppf "Si_S"
+
+and print_sigma_onetied_atom_symbol ppf = function
+  | Ats_t.Single_sigma_onetied_atom_symbol smb ->
+      print_singlesigma_onetied_atom_symbol ppf smb
+
+and print_sigma_twotied_atom_symbol ppf = function
+  | Ats_t.Single_sigma_twotied_atom_symbol smb ->
+      print_singlesigma_twotied_atom_symbol ppf smb
+  | Ats_t.Double_sigma_twotied_atom_symbol smb ->
+      print_doublesigma_twotied_atom_symbol ppf smb
+  | Ats_t.Triple_sigma_twotied_atom_symbol smb ->
+      print_triplesigma_twotied_atom_symbol ppf smb
+
+and print_sigma_threetied_atom_symbol ppf = function
+  | Ats_t.Single_sigma_threetied_atom_symbol smb ->
+      print_singlesigma_threetied_atom_symbol ppf smb
+  | Ats_t.Double_sigma_threetied_atom_symbol smb ->
+      print_doublesigma_threetied_atom_symbol ppf smb
+
+and print_nonsigma_threetied_atom_symbol ppf = function
+  | Ats_t.Singlenonsigma_threetied_atom_symbol smb ->
+      print_singlenonsigma_threetied_atom_symbol ppf smb
+  | Ats_t.Doublenonsigma_threetied_atom_symbol smb ->
+      print_doublenonsigma_threetied_atom_symbol ppf smb
+
+and print_singlesigma_onetied_atom_symbol ppf = function
+  | Ats_t.Sson_Cl ->   (* Cl-   in Cl-h molecule *)
+      Format.fprintf ppf "Sson_Cl"
+  | Ats_t.Sson_F ->    (* F-   in F-h molecule *)
+      Format.fprintf ppf "Sson_F"
+  | Ats_t.Sson_H ->    (* H-   in h-h molecule *)
+      Format.fprintf ppf "Sson_H"
+
+and print_singlesigma_twotied_atom_symbol ppf = function
+  | Ats_t.Sstw_O ->    (* -O-   in h-O-h molecule *)
+      Format.fprintf ppf "Sstw_O"
+  | Ats_t.Sstw_S ->    (* -S-   h-S-h molecule *)
+      Format.fprintf ppf "Sstw_S"
+
+and print_doublesigma_twotied_atom_symbol ppf = function
+  | Ats_t.Dstw_C ->    (* =C=   in o=C=o molecule *)
+      Format.fprintf ppf "Dstw_C"
+  | Ats_t.Dstw_N ->    (* =N-   in Guanidine C=N-H *)
+      Format.fprintf ppf "Dstw_N"
+  | Ats_t.Dstw_S ->    (* =S=   o=S=o sulfur dioxide molecule *)
+      Format.fprintf ppf "Dstw_S"
+
+and print_triplesigma_twotied_atom_symbol ppf = function
+  | Ats_t.Tstw_C ->    (* -C#   in h-C#n molecule  *)
+      Format.fprintf ppf "Tstw_C"
+  | Ats_t.Tstw_N ->    (* -N+#  in ??? molecule  *)
+      Format.fprintf ppf "Tstw_N"
+
+and print_nonsigma_twotied_atom_symbol ppf = function
+  | Ats_t.Ntw_N ->     (* -N.-  in o-N.-o anion *)
+      Format.fprintf ppf "Sntw_N"
+  | Ats_t.Ntw_O ->     (* -O.-  in o-O.-o molecule *)
+      Format.fprintf ppf "Sntw_O"
+
+and print_singlesigma_threetied_atom_symbol ppf = function
+  | Ats_t.Ssth_N ->    (* -N<  Nh3 molecule Trigonal_pyramidal *)
+      Format.fprintf ppf "Ssth_N"
+  | Ats_t.Ssth_Cl ->   (* ClF3 molecule Tshaped *)
+      Format.fprintf ppf "Ssth_Cl"
+
+and print_doublesigma_threetied_atom_symbol ppf = function
+  | Ats_t.Dsth_C ->    (* =C< in Ethylene molecule *)
+      Format.fprintf ppf "Dsth_C"
+  | Ats_t.Dsth_N ->    (* =N+<  *)
+      Format.fprintf ppf "Dsth_N"
+  | Ats_t.Dsth_S ->    (* =S<< in So3 sulfur trioxide molecule planar *)
+      Format.fprintf ppf "Dsth_S"
+
+and print_singlenonsigma_threetied_atom_symbol ppf = function
+  | Ats_t.Snth_C ->    (* -C.< in Co3 carbonate anion planar *)
+      Format.fprintf ppf "Snth_C"
+  | Ats_t.Snth_N ->    (* -N+.< in Guanidinium trigonal_planar ??? *)
+      Format.fprintf ppf "Snth_N"
+
+and print_doublenonsigma_threetied_atom_symbol ppf = function
+  | Ats_t.Dnth_S ->    (* =S< in o=S< Sulfinyl group (covalent/ionic) *)
+      Format.fprintf ppf "Dnth_S"
+;;
+
+let print = print_atom_symbol
+;;
+
+(** {6 Downgrading.} *)
+
+let core_atom_symbol_off_atom_symbol = function
+  | Ats_t.Core_atom_symbol smc -> smc
+  | _ -> failwith "Not_Core_atom_symbol:Ats_v.core_atom_symbol_off_atom_symbol"
+;;
+
+let closed_atom_symbol_off_core_atom_symbol = function
+  | Ats_t.Closed_atom_symbol smc -> smc
+  | _ -> failwith "Not_Closed_atom_symbol:Ats_v.closed_atom_symbol_off_core_atom_symbol"
+;;
+let leaf_atom_symbol_off_atom_symbol = function
+  | Ats_t.Leaf_atom_symbol smc -> smc
+  | _ -> failwith "Not_Leaf_atom_symbol:Ats_v.leaf_atom_symbol_off_atom_symbol"
+;;
+
+(** {6 Upgrading.} *)
+
+let core_atom_symbol_of_closed_atom_symbol smb =
+  Ats_t.Closed_atom_symbol smb
+;;
+
+let core_atom_symbol_of_onetied_atom_symbol smb =
+  Ats_t.Onetied_atom_symbol smb 
+;;
+
+let core_atom_symbol_of_twotied_atom_symbol smb =
+  Ats_t.Twotied_atom_symbol smb 
+;;
+
+let core_atom_symbol_of_threetied_atom_symbol smb =
+  Ats_t.Threetied_atom_symbol smb
+;;
+
+let core_atom_symbol_of_fourtied_atom_symbol smb =  
+  Ats_t.Fourtied_atom_symbol smb 
+;;
+
+let core_atom_symbol_of_fivetied_atom_symbol smb = 
+  Ats_t.Fivetied_atom_symbol smb
+;;
+
+let core_atom_symbol_of_sixtied_atom_symbol smb =  
+  Ats_t.Sixtied_atom_symbol smb 
+;;
+
+let closed_atom_symbol_of_raregas_symbol smb =
+  Ats_t.Raregas_symbol smb
+;;
+
+let closed_atom_symbol_of_anion_symbol smb =
+  Ats_t.Anion_symbol smb
+;;
+
+let closed_atom_symbol_of_cation_symbol smb =
+  Ats_t.Cation_symbol smb
+;;
+
+let closed_atom_symbol_of_halfbridge_symbol smb =
+  Ats_t.Halfbridge_atom_symbol smb
+;;
+
+let atom_symbol_of_core_atom_symbol smb =
+  Ats_t.Core_atom_symbol smb
+;;
+ 
+let atom_symbol_of_onetied_atom_symbol smb =
+  let cas = core_atom_symbol_of_onetied_atom_symbol smb in
+  atom_symbol_of_core_atom_symbol cas
+;;
+
+let atom_symbol_of_twotied_atom_symbol smb =
+  let cas = core_atom_symbol_of_twotied_atom_symbol smb in
+  atom_symbol_of_core_atom_symbol cas
+;;
+
+let atom_symbol_of_threetied_atom_symbol smb =
+  let cas = core_atom_symbol_of_threetied_atom_symbol smb in
+  atom_symbol_of_core_atom_symbol cas
+;;
+
+let atom_symbol_of_fourtied_atom_symbol smb =  
+  let cas = core_atom_symbol_of_fourtied_atom_symbol smb in
+  atom_symbol_of_core_atom_symbol cas
+;;
+
+let atom_symbol_of_fivetied_atom_symbol smb = 
+  let cas = core_atom_symbol_of_fivetied_atom_symbol smb in
+  atom_symbol_of_core_atom_symbol cas
+;;
+
+let atom_symbol_of_sixtied_atom_symbol smb =  
+  let cas = core_atom_symbol_of_sixtied_atom_symbol smb in
+  atom_symbol_of_core_atom_symbol cas
+;;
+
+let atom_symbol_of_closed_atom_symbol cas =
+  atom_symbol_of_core_atom_symbol cas
+;;
+
+let leaf_atom_symbol_of_single_leaf_atom_symbol smb =
+  Ats_t.Single_leaf_atom_symbol smb 
+;;
+
+let leaf_atom_symbol_of_double_leaf_atom_symbol smb =
+  Ats_t.Double_leaf_atom_symbol smb 
+;;
+
+let leaf_atom_symbol_of_triple_leaf_atom_symbol smb =
+  Ats_t.Triple_leaf_atom_symbol smb 
+;;
+
+let leaf_atom_symbol_of_nonsigma_leaf_atom_symbol smb =
+  Ats_t.Nonsigma_leaf_atom_symbol smb 
+;;
+
+let atom_symbol_of_leaf_atom_symbol smb =
+  Ats_t.Leaf_atom_symbol smb
+;;
+ 
+let atom_symbol_of_single_leaf_atom_symbol smb =
+  atom_symbol_of_leaf_atom_symbol smb 
+;;
+
+let atom_symbol_of_double_leaf_atom_symbol smb =
+  atom_symbol_of_leaf_atom_symbol smb 
+;;
+
+let atom_symbol_of_triple_leaf_atom_symbol smb =
+  atom_symbol_of_leaf_atom_symbol smb 
+;;
+
+let atom_symbol_of_nonsigma_leaf_atom_symbol smb =
+  atom_symbol_of_leaf_atom_symbol smb 
+;;
+
+(** {6 Abbreviating.} *)
+
+let cfo_n = core_atom_symbol_of_fourtied_atom_symbol Ats_t.Fo_N;;
+let cfo_c = core_atom_symbol_of_fourtied_atom_symbol Ats_t.Fo_C;;
+
+let pp_fe = (Ats_t.Cation_symbol (Ats_t.Plus_two_anion_symbol Ats_t.Ptw_Fe));;
+
+let m_f = (Ats_t.Anion_symbol (Ats_t.Minus_one_anion_symbol Ats_t.Mon_F));;
+
+let cfi_cl = (Ats_t.Fivetied_atom_symbol Ats_t.Fi_Cl);;
+
+let lslf_h = (Ats_t.Single_leaf_atom_symbol Ats_t.Slf_H);;
+let csson_h = (Ats_t.Onetied_atom_symbol (Ats_t.Sigma_onetied_atom_symbol (Ats_t.Single_sigma_onetied_atom_symbol Ats_t.Sson_H)));;
+
+let csstw_o = (Ats_t.Twotied_atom_symbol (Ats_t.Sigma_twotied_atom_symbol (Ats_t.Single_sigma_twotied_atom_symbol Ats_t.Sstw_O)));;
+
+let cdstw_s = (Ats_t.Twotied_atom_symbol (Ats_t.Sigma_twotied_atom_symbol (Ats_t.Double_sigma_twotied_atom_symbol Ats_t.Dstw_S)));;
+
+let cdstw_c = (Ats_t.Twotied_atom_symbol (Ats_t.Sigma_twotied_atom_symbol (Ats_t.Double_sigma_twotied_atom_symbol Ats_t.Dstw_C)));;
+
+let lnlf_o = (Ats_t.Nonsigma_leaf_atom_symbol Ats_t.Nlf_O);;
+
+let ctstw_c = (Ats_t.Twotied_atom_symbol (Ats_t.Sigma_twotied_atom_symbol (Ats_t.Triple_sigma_twotied_atom_symbol Ats_t.Tstw_C)));;
+
+let ctstw_n = (Ats_t.Twotied_atom_symbol (Ats_t.Sigma_twotied_atom_symbol (Ats_t.Triple_sigma_twotied_atom_symbol Ats_t.Tstw_N)));;
+
+let cntw_o = (Ats_t.Twotied_atom_symbol (Ats_t.Nonsigma_twotied_atom_symbol Ats_t.Ntw_O));;
+
+let pp_ca = (Ats_t.Cation_symbol (Ats_t.Plus_two_anion_symbol Ats_t.Ptw_Ca));;
+
+
+let cssth_n = (Ats_t.Threetied_atom_symbol (Ats_t.Sigma_threetied_atom_symbol (Ats_t.Single_sigma_threetied_atom_symbol Ats_t.Ssth_N)));;
+
+let p_na = (Ats_t.Cation_symbol (Ats_t.Plus_one_anion_symbol Ats_t.Pon_Na));;
+
+let cdsth_n = (Ats_t.Threetied_atom_symbol (Ats_t.Sigma_threetied_atom_symbol (Ats_t.Double_sigma_threetied_atom_symbol Ats_t.Dsth_N)));;
+
+let ppp_fe = (Ats_t.Cation_symbol (Ats_t.Plus_three_anion_symbol Ats_t.Pth_Fe));;
+
+let cdnth_s = (Ats_t.Threetied_atom_symbol (Ats_t.Nonsigma_threetied_atom_symbol (Ats_t.Doublenonsigma_threetied_atom_symbol Ats_t.Dnth_S)));;
+
+let cntw_n = (Ats_t.Twotied_atom_symbol (Ats_t.Nonsigma_twotied_atom_symbol Ats_t.Ntw_N));;
+
+let cfo_xe = core_atom_symbol_of_fourtied_atom_symbol Ats_t.Fo_Xe;;
+
+let csnth_c = (Ats_t.Threetied_atom_symbol (Ats_t.Nonsigma_threetied_atom_symbol (Ats_t.Singlenonsigma_threetied_atom_symbol Ats_t.Snth_C)));;
+
+let csnth_n = (Ats_t.Threetied_atom_symbol (Ats_t.Nonsigma_threetied_atom_symbol (Ats_t.Singlenonsigma_threetied_atom_symbol Ats_t.Snth_N)));;
+
+let ltlf_n = (Ats_t.Triple_leaf_atom_symbol Ats_t.Tlf_N);;
+
+let cssth_cl = (Ats_t.Threetied_atom_symbol (Ats_t.Sigma_threetied_atom_symbol (Ats_t.Single_sigma_threetied_atom_symbol Ats_t.Ssth_Cl)));;
+
+let cdstw_n = (Ats_t.Twotied_atom_symbol (Ats_t.Sigma_twotied_atom_symbol (Ats_t.Double_sigma_twotied_atom_symbol Ats_t.Dstw_N)));;
+
+let lslf_f = (Ats_t.Single_leaf_atom_symbol Ats_t.Slf_F);;
+
+let cdsth_c = (Ats_t.Threetied_atom_symbol (Ats_t.Sigma_threetied_atom_symbol (Ats_t.Double_sigma_threetied_atom_symbol Ats_t.Dsth_C)));;
+
+let ldlf_o = (Ats_t.Double_leaf_atom_symbol Ats_t.Dlf_O);;
+
+let csstw_s = (Ats_t.Twotied_atom_symbol (Ats_t.Sigma_twotied_atom_symbol (Ats_t.Single_sigma_twotied_atom_symbol Ats_t.Sstw_S)));;
+
+let cfo_s = core_atom_symbol_of_fourtied_atom_symbol Ats_t.Fo_S;;
+
+let cdsth_s = (Ats_t.Threetied_atom_symbol (Ats_t.Sigma_threetied_atom_symbol (Ats_t.Double_sigma_threetied_atom_symbol Ats_t.Dsth_S)));;
+
+let p_h = (Ats_t.Cation_symbol (Ats_t.Plus_one_anion_symbol Ats_t.Pon_H));;
+
+let csi_s = (Ats_t.Sixtied_atom_symbol Ats_t.Si_S);;
+
+let cl_ar = Ats_t.Raregas_symbol Ats_t.Rg_Ar;;
+let cl_he = Ats_t.Raregas_symbol Ats_t.Rg_He;;
+let cl_kr = Ats_t.Raregas_symbol Ats_t.Rg_Kr;;
+let cl_ne = Ats_t.Raregas_symbol Ats_t.Rg_Ne;;
+let cl_xe = Ats_t.Raregas_symbol Ats_t.Rg_Xe;;
+
+let c_ar = Ats_t.Closed_atom_symbol cl_ar;;
+let c_he = Ats_t.Closed_atom_symbol cl_he;;
+let c_kr = Ats_t.Closed_atom_symbol cl_kr;;
+let c_ne = Ats_t.Closed_atom_symbol cl_ne;;
+let c_xe = Ats_t.Closed_atom_symbol cl_xe;;
+
+let ar = Ats_t.Core_atom_symbol c_ar;;
+let he = Ats_t.Core_atom_symbol c_he;;
+let kr = Ats_t.Core_atom_symbol c_kr;;
+let ne = Ats_t.Core_atom_symbol c_ne;;
+let xe = Ats_t.Core_atom_symbol c_xe;;
+
+let mon_f = (Ats_t.Closed_atom_symbol (Ats_t.Anion_symbol (Ats_t.Minus_one_anion_symbol Ats_t.Mon_F)));;
+
+let pon_h = (Ats_t.Closed_atom_symbol (Ats_t.Cation_symbol (Ats_t.Plus_one_anion_symbol Ats_t.Pon_H)));;
+
+let pon_na = (Ats_t.Closed_atom_symbol (Ats_t.Cation_symbol (Ats_t.Plus_one_anion_symbol Ats_t.Pon_Na)));;
+
+let ptw_ca = (Ats_t.Closed_atom_symbol (Ats_t.Cation_symbol (Ats_t.Plus_two_anion_symbol Ats_t.Ptw_Ca)));;
+
+let ptw_fe = (Ats_t.Closed_atom_symbol (Ats_t.Cation_symbol (Ats_t.Plus_two_anion_symbol Ats_t.Ptw_Fe)));;
+
+let pth_fe = (Ats_t.Closed_atom_symbol (Ats_t.Cation_symbol (Ats_t.Plus_three_anion_symbol Ats_t.Pth_Fe)));;
+
+let nlf_o = (Ats_t.Leaf_atom_symbol (Ats_t.Nonsigma_leaf_atom_symbol Ats_t.Nlf_O));;
+
+let slf_h = (Ats_t.Leaf_atom_symbol (Ats_t.Single_leaf_atom_symbol Ats_t.Slf_H));;
+
+let slf_f = (Ats_t.Leaf_atom_symbol (Ats_t.Single_leaf_atom_symbol Ats_t.Slf_F));;
+
+let dlf_o = (Ats_t.Leaf_atom_symbol (Ats_t.Double_leaf_atom_symbol Ats_t.Dlf_O));;
+
+let tlf_n = (Ats_t.Leaf_atom_symbol (Ats_t.Triple_leaf_atom_symbol Ats_t.Tlf_N));;
+
+let fo_c = atom_symbol_of_fourtied_atom_symbol Ats_t.Fo_C;;
+
+let fo_n = atom_symbol_of_fourtied_atom_symbol Ats_t.Fo_N;;
+
+let fo_s = atom_symbol_of_fourtied_atom_symbol Ats_t.Fo_S;;
+
+let fo_xe = atom_symbol_of_fourtied_atom_symbol Ats_t.Fo_Xe;;
+
+let fi_cl = (Ats_t.Core_atom_symbol (Ats_t.Fivetied_atom_symbol Ats_t.Fi_Cl));;
+
+let si_s = (Ats_t.Core_atom_symbol (Ats_t.Sixtied_atom_symbol Ats_t.Si_S));;
+
+let sson_h = (Ats_t.Core_atom_symbol (Ats_t.Onetied_atom_symbol (Ats_t.Sigma_onetied_atom_symbol (Ats_t.Single_sigma_onetied_atom_symbol Ats_t.Sson_H))));;
+
+let sstw_o = (Ats_t.Core_atom_symbol (Ats_t.Twotied_atom_symbol (Ats_t.Sigma_twotied_atom_symbol (Ats_t.Single_sigma_twotied_atom_symbol Ats_t.Sstw_O))));;
+
+let sstw_s = (Ats_t.Core_atom_symbol (Ats_t.Twotied_atom_symbol (Ats_t.Sigma_twotied_atom_symbol (Ats_t.Single_sigma_twotied_atom_symbol Ats_t.Sstw_S))));;
+
+let dstw_c = (Ats_t.Core_atom_symbol (Ats_t.Twotied_atom_symbol (Ats_t.Sigma_twotied_atom_symbol (Ats_t.Double_sigma_twotied_atom_symbol Ats_t.Dstw_C))));;
+
+let dstw_n =
+ (Ats_t.Core_atom_symbol (Ats_t.Twotied_atom_symbol (Ats_t.Sigma_twotied_atom_symbol (Ats_t.Double_sigma_twotied_atom_symbol Ats_t.Dstw_N))))
+;;
+
+let dstw_s =
+ (Ats_t.Core_atom_symbol (Ats_t.Twotied_atom_symbol (Ats_t.Sigma_twotied_atom_symbol (Ats_t.Double_sigma_twotied_atom_symbol Ats_t.Dstw_S))))
+;;
+
+let tstw_c =
+ (Ats_t.Core_atom_symbol (Ats_t.Twotied_atom_symbol (Ats_t.Sigma_twotied_atom_symbol (Ats_t.Triple_sigma_twotied_atom_symbol Ats_t.Tstw_C))))
+;;
+
+let tstw_n =
+ (Ats_t.Core_atom_symbol (Ats_t.Twotied_atom_symbol (Ats_t.Sigma_twotied_atom_symbol (Ats_t.Triple_sigma_twotied_atom_symbol Ats_t.Tstw_N))))
+;;
+
+let ntw_n =
+ (Ats_t.Core_atom_symbol (Ats_t.Twotied_atom_symbol (Ats_t.Nonsigma_twotied_atom_symbol Ats_t.Ntw_N)))
+;;
+
+let ntw_o =
+ (Ats_t.Core_atom_symbol (Ats_t.Twotied_atom_symbol (Ats_t.Nonsigma_twotied_atom_symbol Ats_t.Ntw_O)))
+;;
+
+let ssth_n =
+ (Ats_t.Core_atom_symbol (Ats_t.Threetied_atom_symbol (Ats_t.Sigma_threetied_atom_symbol (Ats_t.Single_sigma_threetied_atom_symbol Ats_t.Ssth_N))))
+;;
+
+let ssth_cl =
+ (Ats_t.Core_atom_symbol (Ats_t.Threetied_atom_symbol (Ats_t.Sigma_threetied_atom_symbol (Ats_t.Single_sigma_threetied_atom_symbol Ats_t.Ssth_Cl))))
+;;
+
+let dsth_c =
+ (Ats_t.Core_atom_symbol (Ats_t.Threetied_atom_symbol (Ats_t.Sigma_threetied_atom_symbol (Ats_t.Double_sigma_threetied_atom_symbol Ats_t.Dsth_C))))
+;;
+
+let dsth_n =
+ (Ats_t.Core_atom_symbol (Ats_t.Threetied_atom_symbol (Ats_t.Sigma_threetied_atom_symbol (Ats_t.Double_sigma_threetied_atom_symbol Ats_t.Dsth_N))))
+;;
+
+let dsth_s =
+ (Ats_t.Core_atom_symbol (Ats_t.Threetied_atom_symbol (Ats_t.Sigma_threetied_atom_symbol (Ats_t.Double_sigma_threetied_atom_symbol Ats_t.Dsth_S))))
+;;
+
+let snth_c =
+ (Ats_t.Core_atom_symbol (Ats_t.Threetied_atom_symbol (Ats_t.Nonsigma_threetied_atom_symbol (Ats_t.Singlenonsigma_threetied_atom_symbol Ats_t.Snth_C))))
+;;
+
+let snth_n =
+ (Ats_t.Core_atom_symbol (Ats_t.Threetied_atom_symbol (Ats_t.Nonsigma_threetied_atom_symbol (Ats_t.Singlenonsigma_threetied_atom_symbol Ats_t.Snth_N))))
+;;
+
+let dnth_s =
+ (Ats_t.Core_atom_symbol (Ats_t.Threetied_atom_symbol (Ats_t.Nonsigma_threetied_atom_symbol (Ats_t.Doublenonsigma_threetied_atom_symbol Ats_t.Dnth_S))))
+;;
+
+let cl_hbc = Ats_t.Halfbridge_atom_symbol Hbs_v.hbc;;
+let cl_hbd = Ats_t.Halfbridge_atom_symbol Hbs_v.hbd;;
+let cl_hbs = Ats_t.Halfbridge_atom_symbol Hbs_v.hbs;;
+let cl_hbt = Ats_t.Halfbridge_atom_symbol Hbs_v.hbt;;
+
+let c_hbc = Ats_t.Closed_atom_symbol cl_hbc;;
+let c_hbd = Ats_t.Closed_atom_symbol cl_hbd;;
+let c_hbs = Ats_t.Closed_atom_symbol cl_hbs;;
+let c_hbt = Ats_t.Closed_atom_symbol cl_hbt;;
+
+let hbc = Ats_t.Core_atom_symbol c_hbc;;
+let hbd = Ats_t.Core_atom_symbol c_hbd;;
+let hbs = Ats_t.Core_atom_symbol c_hbs;;
+let hbt = Ats_t.Core_atom_symbol c_hbt;;
+
+
+(* created by ./caml_t_ml_to_v_ml_or_mli.pl atom_symbol_t.ml 19 January 2010 *)
+
+(** {9 Valence.} *)
+
+module Idx_p = Index_p
+
+let rec valence_of_atom_symbol = function
+  | Ats_t.Leaf_atom_symbol smb ->
+      valence_of_leaf_atom_symbol smb
+  | Ats_t.Core_atom_symbol smb ->
+      valence_of_core_atom_symbol smb
+
+and valence_of_core_atom_symbol = function
+  | Ats_t.Closed_atom_symbol smb ->
+      valence_of_closed_atom_symbol smb
+  | Ats_t.Onetied_atom_symbol smb ->
+      valence_of_onetied_atom_symbol smb
+  | Ats_t.Twotied_atom_symbol smb ->
+      valence_of_twotied_atom_symbol smb
+  | Ats_t.Threetied_atom_symbol smb ->
+      valence_of_threetied_atom_symbol smb
+  | Ats_t.Fourtied_atom_symbol smb ->
+      valence_of_fourtied_atom_symbol smb
+  | Ats_t.Fivetied_atom_symbol smb ->
+      valence_of_fivetied_atom_symbol smb
+  | Ats_t.Sixtied_atom_symbol smb ->
+      valence_of_sixtied_atom_symbol smb
+
+and valence_of_leaf_atom_symbol = function
+  | Ats_t.Single_leaf_atom_symbol smb ->
+      valence_of_single_leaf_atom_symbol smb
+  | Ats_t.Double_leaf_atom_symbol smb ->
+      valence_of_double_leaf_atom_symbol smb
+  | Ats_t.Triple_leaf_atom_symbol smb ->
+      valence_of_triple_leaf_atom_symbol smb
+  | Ats_t.Nonsigma_leaf_atom_symbol smb ->
+      valence_of_nonsigma_leaf_atom_symbol smb
+
+and valence_of_closed_atom_symbol = function
+  | Ats_t.Raregas_symbol smb ->
+      valence_of_raregas_symbol smb
+  | Ats_t.Anion_symbol smb ->
+      valence_of_anion_symbol smb
+  | Ats_t.Cation_symbol smb ->
+      valence_of_cation_symbol smb
+  | Ats_t.Halfbridge_atom_symbol smb ->
+      Hbs_v.valence_off_halfbridge_symbol smb
+
+and valence_of_raregas_symbol = function
+  | Ats_t.Rg_Ar    (* Ar *)
+  | Ats_t.Rg_He    (* He *)  
+  | Ats_t.Rg_Kr    (* Kr *)
+  | Ats_t.Rg_Ne    (* Ne *)
+  | Ats_t.Rg_Xe -> (* Xe *)
+      Idx_p.zero 
+
+and valence_of_anion_symbol = function
+  | Ats_t.Minus_one_anion_symbol smb ->
+      valence_of_minus_one_anion_symbol smb
+
+and valence_of_cation_symbol = function 
+  | Ats_t.Plus_one_anion_symbol smb ->
+      valence_of_plus_one_anion_symbol smb
+  | Ats_t.Plus_two_anion_symbol smb ->
+      valence_of_plus_two_anion_symbol smb
+  | Ats_t.Plus_three_anion_symbol smb ->
+      valence_of_plus_three_anion_symbol smb
+
+and valence_of_minus_one_anion_symbol = function
+  | Ats_t.Mon_F ->   (* F- *)
+      Idx_p.zero
+
+and valence_of_plus_one_anion_symbol = function
+  | Ats_t.Pon_H      (* H+ *)
+  | Ats_t.Pon_Na ->  (* Na+ *)
+      Idx_p.zero
+
+and valence_of_plus_two_anion_symbol = function
+  | Ats_t.Ptw_Ca ->  (* Ca++ *)
+      Idx_p.two
+  | Ats_t.Ptw_Fe ->  (* Fe++ *)
+      Idx_p.four
+
+and valence_of_plus_three_anion_symbol = function
+  | Ats_t.Pth_Fe ->  (* Fe+++ *)
+      Idx_p.four
+
+and valence_of_nonsigma_leaf_atom_symbol = function
+  | Ats_t.Nlf_O ->   (* O.- in -Coo anion. *)
+      Idx_p.one
+
+and valence_of_single_leaf_atom_symbol = function
+  | Ats_t.Slf_H      (* H- in h-H molecule *)
+  | Ats_t.Slf_F ->   (* F- in f-H molecule *)
+      Idx_p.one
+
+and valence_of_double_leaf_atom_symbol = function
+  | Ats_t.Dlf_O ->   (* O=  in Co2 molecule *)
+      Idx_p.two
+
+and valence_of_triple_leaf_atom_symbol = function
+  | Ats_t.Tlf_N      (* N#  H-C#N *)
+  | Ats_t.Tlf_O ->   (* O#  C#O *)
+      Idx_p.three
+
+and valence_of_onetied_atom_symbol = function
+  | Ats_t.Sigma_onetied_atom_symbol smb ->
+      valence_of_sigma_onetied_atom_symbol smb
+
+and valence_of_twotied_atom_symbol = function
+  | Ats_t.Sigma_twotied_atom_symbol smb ->
+      valence_of_sigma_twotied_atom_symbol smb
+  | Ats_t.Nonsigma_twotied_atom_symbol smb ->
+      valence_of_nonsigma_twotied_atom_symbol smb
+
+and valence_of_threetied_atom_symbol = function
+  | Ats_t.Sigma_threetied_atom_symbol smb ->
+      valence_of_sigma_threetied_atom_symbol smb
+  | Ats_t.Nonsigma_threetied_atom_symbol smb ->
+      valence_of_nonsigma_threetied_atom_symbol smb
+
+and valence_of_fourtied_atom_symbol = function
+  | Ats_t.Fo_C      (* >C<  Methane *)
+  | Ats_t.Fo_N      (* >N+< Ammonium *)
+  | Ats_t.Fo_S      (* >S< Sf4 molecule See_saw *)
+  | Ats_t.Fo_Xe ->  (* >Xe< XeF4 molecule Square_planar *)
+      Idx_p.four
+
+and valence_of_fivetied_atom_symbol = function
+  | Ats_t.Fi_Cl ->  (* >Cl<- Clf5 molecule Square_pyramidal *)
+      Idx_p.five
+
+and valence_of_sixtied_atom_symbol = function
+  | Ats_t.Si_S ->   (* ->S<- Sf6 molecule Octahedral *)
+      Idx_p.six
+
+and valence_of_sigma_onetied_atom_symbol = function
+  | Ats_t.Single_sigma_onetied_atom_symbol smb ->
+      valence_of_singlesigma_onetied_atom_symbol smb
+
+and valence_of_sigma_twotied_atom_symbol = function
+  | Ats_t.Single_sigma_twotied_atom_symbol smb ->
+      valence_of_singlesigma_twotied_atom_symbol smb
+  | Ats_t.Double_sigma_twotied_atom_symbol smb ->
+      valence_of_doublesigma_twotied_atom_symbol smb
+  | Ats_t.Triple_sigma_twotied_atom_symbol smb ->
+      valence_of_triplesigma_twotied_atom_symbol smb
+
+and valence_of_sigma_threetied_atom_symbol = function
+  | Ats_t.Single_sigma_threetied_atom_symbol smb ->
+      valence_of_singlesigma_threetied_atom_symbol smb
+  | Ats_t.Double_sigma_threetied_atom_symbol smb ->
+      valence_of_doublesigma_threetied_atom_symbol smb
+
+and valence_of_nonsigma_threetied_atom_symbol = function
+  | Ats_t.Singlenonsigma_threetied_atom_symbol smb ->
+      valence_of_singlenonsigma_threetied_atom_symbol smb
+  | Ats_t.Doublenonsigma_threetied_atom_symbol smb ->
+      valence_of_doublenonsigma_threetied_atom_symbol smb
+
+and valence_of_singlesigma_onetied_atom_symbol = function
+  | Ats_t.Sson_Cl      (* Cl-  in Cl-h molecule *)
+  | Ats_t.Sson_F       (* F-   in F-h molecule *)
+  | Ats_t.Sson_H ->    (* H-   in H-h molecule *)
+      Idx_p.one
+	
+and valence_of_singlesigma_twotied_atom_symbol = function
+  | Ats_t.Sstw_O       (* -O-   in h-O-h molecule *)
+  | Ats_t.Sstw_S ->    (* -S-   h-S-h molecule *)
+      Idx_p.two
+	
+and valence_of_doublesigma_twotied_atom_symbol = function
+  | Ats_t.Dstw_C ->    (* =C=   in o=C=o molecule *)
+      Idx_p.four
+  | Ats_t.Dstw_N ->    (* =N-   in Guanidine C=N-H *)
+      Idx_p.three
+  | Ats_t.Dstw_S ->    (* =S=   o=S=o sulfur dioxide molecule *)
+      Idx_p.four
+	
+and valence_of_triplesigma_twotied_atom_symbol = function
+  | Ats_t.Tstw_C ->    (* -C#   in h-C#n molecule  *)
+      Idx_p.four
+  | Ats_t.Tstw_N ->    (* -N+#  in ??? molecule  *)
+      Idx_p.four
+	
+and valence_of_nonsigma_twotied_atom_symbol = function
+  | Ats_t.Ntw_N ->    (* -N.-  in o-N.-o anion *)
+    Idx_p.two
+  | Ats_t.Ntw_O ->    (* -O.-  in o-O.-o molecule *)
+    Idx_p.one
+
+and valence_of_singlesigma_threetied_atom_symbol = function
+  | Ats_t.Ssth_N       (* -N<  Nh3 molecule Trigonal_pyramidal *)
+  | Ats_t.Ssth_Cl ->   (* Clf3 molecule Tshaped *)
+    Idx_p.three
+
+and valence_of_doublesigma_threetied_atom_symbol = function
+  | Ats_t.Dsth_C       (* =C< in Ethylene molecule *)
+  | Ats_t.Dsth_N ->    (* =N+<  *)
+    Idx_p.four
+  | Ats_t.Dsth_S ->    (* =S<< in So3 sulfur trioxide molecule planar *)
+    Idx_p.six
+
+and valence_of_singlenonsigma_threetied_atom_symbol = function
+  | Ats_t.Snth_C ->    (* -C.< in Co3 carbonate anion planar *)
+    Idx_p.three  
+  | Ats_t.Snth_N ->    (* -N+.< in Guanidinium trigonal_planar ??? *)
+    Idx_p.three  
+
+and valence_of_doublenonsigma_threetied_atom_symbol = function
+  | Ats_t.Dnth_S ->    (* =S< in o=S< Sulfinyl group (covalent/ionic) *) 
+    Idx_p.four  
+;;
+
+module Mns_v = Mendeleev_symbol_v
+
+let mendeleev_symbol_off_atom_symbol smb_atm =
+  let nam = name smb_atm in
+  let str = Scanf.sscanf nam "%_s@_%s" (fun s -> s) in
+  Mns_v.mendeleev_symbol_of_string str 
+;;
+

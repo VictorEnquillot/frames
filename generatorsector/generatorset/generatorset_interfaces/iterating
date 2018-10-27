@@ -1,0 +1,45 @@
+let camlparagraph_symbol_for_iterating_of_category_of_entity sym_cat sym_enc =
+  match sym_cat with
+  | Category_symbol_t.Formula ->
+      
+      begin
+	match sym_enc with 
+	| Entity_symbol_t.Entity_fictive_symbol 
+	    (Entity_fictive_symbol_t.Entity_fictive_nullary_symbol 
+	       Entity_fictive_nullary_symbol_t.Empty) -> 
+		 
+		 let nam_iat = Item_only_topsons_symbol_v.name sym_iat in
+		 Camlparagraph_symbol_v.item_title nam_iat
+		   
+	| Entity_symbol_t.Entity_fictive_symbol
+	    (Entity_fictive_symbol_t.Entity_fictive_nullary_symbol _) ->
+	      
+	      Camlparagraph_symbol_v.let_iterating_entity_fictive_nullary_for_formula
+
+	| Entity_symbol_t.Entity_fictive_symbol
+	    (Entity_fictive_symbol_t.Entity_fictive_basicnullary_symbol _) ->
+	      
+	      Error_messages_v.print_fatal_error nam_cod 
+		"camlparagraph_symbol_for_iterating_of_category_of_entity"
+		"NOT Entity_fictive_symbol_t.Entity_fictive_basicnullary_symbol"
+		(Format.sprintf ">%s<" (Entity_symbol_v.fullname sym_enc))
+		"Check"
+
+	| Entity_symbol_t.Entity_proper_symbol _ ->
+
+	    Camlparagraph_symbol_v.let_iterating_entity_proper_for_formula
+	| _ -> 
+	    Error_messages_v.print_fatal_error nam_cod 
+	      "camlparagraph_symbol_for_iterating_of_category_of_entity"
+              "Entity_symbol were Entity_fictive_nullary|Entity_proper"
+	      (Entity_symbol_v.fullname sym_enc) "Check or add_it above"
+
+      end 
+
+  | sym_cat ->
+      Error_messages_v.print_fatal_error nam_cod 
+        "camlparagraph_symbol_for_string_offing_of_category"
+        "Category_symbol formula|symbol|tag"
+        (Format.sprintf ">%s<" (Category_symbol_v.name sym_cat))
+        "Check"
+;;

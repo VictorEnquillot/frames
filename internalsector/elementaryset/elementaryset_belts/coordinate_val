@@ -1,0 +1,622 @@
+(** {3 Coordinate_value_v.}  *)
+
+(** {6 Documenting} *)
+
+let documentation () = 
+  [
+   "Needs : FGNR:";
+   "Current : VELE:Coordinate_value_v";
+   "Needed-by :";
+   "What-is-it : Up_coercion of Value type as Symbol type up_coercion";
+   "Remark : It is a Node type";
+ ]
+;;
+
+let nam_cod = Management_v.current_module_name (documentation ());;
+
+(** {6 Symbolizing} *)
+
+let symbol_off_value = function
+  | Coordinate_value_t.Coordinate_cartesian_value val_cca ->
+      Coordinate_symbol_v.coordinate_symbol_of_coordinate_cartesian_symbol  
+	(Coordinate_cartesian_value_v.symbol_off_value val_cca)
+
+  | Coordinate_value_t.Coordinate_cylindrical_value val_ccy ->
+      Coordinate_symbol_v.coordinate_symbol_of_coordinate_cylindrical_symbol  
+	(Coordinate_cylindrical_value_v.symbol_off_value val_ccy)
+
+  | Coordinate_value_t.Coordinate_spherical_value val_csp ->
+      Coordinate_symbol_v.coordinate_symbol_of_coordinate_spherical_symbol  
+	(Coordinate_spherical_value_v.symbol_off_value val_csp)
+
+  | Coordinate_value_t.Coordinate_linear_value val_cpo ->
+      Coordinate_symbol_v.coordinate_symbol_of_coordinate_linear_symbol  
+	(Coordinate_linear_value_v.symbol_off_value val_cpo)
+
+  | Coordinate_value_t.Coordinate_planar_value val_cpo ->
+      Coordinate_symbol_v.coordinate_symbol_of_coordinate_planar_symbol  
+	(Coordinate_planar_value_v.symbol_off_value val_cpo)
+
+  | Coordinate_value_t.Coordinate_polar_value val_cpo ->
+      Coordinate_symbol_v.coordinate_symbol_of_coordinate_polar_symbol  
+	(Coordinate_polar_value_v.symbol_off_value val_cpo)
+;;
+
+let tag_off_value = function
+  | Coordinate_value_t.Coordinate_cartesian_value val_cca ->
+      Tag_v.map_entity Coordinate_symbol_v.coordinate_symbol_of_coordinate_cartesian_symbol
+	(Coordinate_cartesian_value_v.tag_off_value val_cca)
+
+  | Coordinate_value_t.Coordinate_cylindrical_value val_ccy ->
+      Tag_v.map_entity Coordinate_symbol_v.coordinate_symbol_of_coordinate_cylindrical_symbol
+	(Coordinate_cylindrical_value_v.tag_off_value val_ccy)
+
+  | Coordinate_value_t.Coordinate_spherical_value val_csp ->
+      Tag_v.map_entity Coordinate_symbol_v.coordinate_symbol_of_coordinate_spherical_symbol
+	(Coordinate_spherical_value_v.tag_off_value val_csp)
+
+  | Coordinate_value_t.Coordinate_linear_value val_cpo ->
+      Tag_v.map_entity Coordinate_symbol_v.coordinate_symbol_of_coordinate_linear_symbol
+	(Coordinate_linear_value_v.tag_off_value val_cpo)
+
+  | Coordinate_value_t.Coordinate_planar_value val_cpo ->
+      Tag_v.map_entity Coordinate_symbol_v.coordinate_symbol_of_coordinate_planar_symbol
+	(Coordinate_planar_value_v.tag_off_value val_cpo)
+
+  | Coordinate_value_t.Coordinate_polar_value val_cpo ->
+      Tag_v.map_entity Coordinate_symbol_v.coordinate_symbol_of_coordinate_polar_symbol
+	(Coordinate_polar_value_v.tag_off_value val_cpo)
+;;
+
+(** {6 Naming} *)
+
+let name = function
+  | Coordinate_value_t.Coordinate_cartesian_value val_cca ->
+      (Coordinate_cartesian_value_v.name val_cca)
+	
+  | Coordinate_value_t.Coordinate_cylindrical_value val_ccy ->
+      (Coordinate_cylindrical_value_v.name val_ccy)
+	
+  | Coordinate_value_t.Coordinate_spherical_value val_csp ->
+      (Coordinate_spherical_value_v.name val_csp)
+	
+  | Coordinate_value_t.Coordinate_linear_value val_cpo ->
+      (Coordinate_linear_value_v.name val_cpo)
+	
+  | Coordinate_value_t.Coordinate_planar_value val_cpo ->
+      (Coordinate_planar_value_v.name val_cpo)
+	
+  | Coordinate_value_t.Coordinate_polar_value val_cpo ->
+      (Coordinate_polar_value_v.name val_cpo)
+;;
+
+let string_off = function
+  | Coordinate_value_t.Coordinate_cartesian_value val_cca ->
+      (Coordinate_cartesian_value_v.string_off val_cca)
+	
+  | Coordinate_value_t.Coordinate_cylindrical_value val_ccy ->
+      (Coordinate_cylindrical_value_v.string_off val_ccy)
+	
+  | Coordinate_value_t.Coordinate_spherical_value val_csp ->
+      (Coordinate_spherical_value_v.string_off val_csp)
+	
+  | Coordinate_value_t.Coordinate_linear_value val_cpo ->
+      (Coordinate_linear_value_v.string_off val_cpo)
+	
+  | Coordinate_value_t.Coordinate_planar_value val_cpo ->
+      (Coordinate_planar_value_v.string_off val_cpo)
+	
+  | Coordinate_value_t.Coordinate_polar_value val_cpo ->
+      (Coordinate_polar_value_v.string_off val_cpo)
+;;
+
+let longname = function
+  | Coordinate_value_t.Coordinate_cartesian_value val_cca ->
+      (Coordinate_cartesian_value_v.longname val_cca)
+	
+  | Coordinate_value_t.Coordinate_cylindrical_value val_ccy ->
+      (Coordinate_cylindrical_value_v.longname val_ccy)
+	
+  | Coordinate_value_t.Coordinate_spherical_value val_csp ->
+      (Coordinate_spherical_value_v.longname val_csp)
+	
+  | Coordinate_value_t.Coordinate_linear_value val_cpo ->
+      (Coordinate_linear_value_v.longname val_cpo)
+	
+  | Coordinate_value_t.Coordinate_planar_value val_cpo ->
+      (Coordinate_planar_value_v.longname val_cpo)
+	
+  | Coordinate_value_t.Coordinate_polar_value val_cpo ->
+      (Coordinate_polar_value_v.longname val_cpo)
+;;
+
+let fullname = function
+  | Coordinate_value_t.Coordinate_cartesian_value val_cca ->
+      (Coordinate_cartesian_value_v.fullname val_cca)
+	
+  | Coordinate_value_t.Coordinate_cylindrical_value val_ccy ->
+      (Coordinate_cylindrical_value_v.fullname val_ccy)
+	
+  | Coordinate_value_t.Coordinate_spherical_value val_csp ->
+      (Coordinate_spherical_value_v.fullname val_csp)
+	
+  | Coordinate_value_t.Coordinate_linear_value val_cpo ->
+      (Coordinate_linear_value_v.fullname val_cpo)
+	
+  | Coordinate_value_t.Coordinate_planar_value val_cpo ->
+      (Coordinate_planar_value_v.fullname val_cpo)
+	
+  | Coordinate_value_t.Coordinate_polar_value val_cpo ->
+      (Coordinate_polar_value_v.fullname val_cpo)
+;;
+
+(** {6 Retrieving} *)
+
+let retrieve tag_coo =
+  let soi_coo = Tag_v.sole_index_off_tag tag_coo in
+  let sym_coo = Tag_v.entity_off_tag tag_coo in
+  match sym_coo with
+  | Coordinate_symbol_t.Coordinate_cartesian_symbol sym_cca ->
+      Coordinate_value_t.Coordinate_cartesian_value
+	(Coordinate_cartesian_value_v.retrieve (sym_cca, soi_coo))
+
+  | Coordinate_symbol_t.Coordinate_spherical_symbol sym_csp ->
+      Coordinate_value_t.Coordinate_spherical_value
+	(Coordinate_spherical_value_v.retrieve (sym_csp, soi_coo))
+
+  | Coordinate_symbol_t.Coordinate_cylindrical_symbol sym_ccy ->
+      Coordinate_value_t.Coordinate_cylindrical_value
+	(Coordinate_cylindrical_value_v.retrieve (sym_ccy, soi_coo))
+
+  | Coordinate_symbol_t.Coordinate_linear_symbol sym_cpo ->
+      Coordinate_value_t.Coordinate_linear_value
+	(Coordinate_linear_value_v.retrieve (sym_cpo, soi_coo))
+
+  | Coordinate_symbol_t.Coordinate_planar_symbol sym_cpo ->
+      Coordinate_value_t.Coordinate_planar_value
+	(Coordinate_planar_value_v.retrieve (sym_cpo, soi_coo))
+
+  | Coordinate_symbol_t.Coordinate_polar_symbol sym_cpo ->
+      Coordinate_value_t.Coordinate_polar_value
+	(Coordinate_polar_value_v.retrieve (sym_cpo, soi_coo))
+;;
+
+(** {6 Making} *)
+
+let make tag_coo val_uni =
+  let can_coo = Singlet_v.make val_uni in
+  let soi_coo = Tag_v.sole_index_off_tag tag_coo in
+  let sym_coo = Tag_v.entity_off_tag tag_coo in
+  match sym_coo with
+  | Coordinate_symbol_t.Coordinate_cartesian_symbol sym_cca ->
+      let tag_cca = Tag_v.make sym_cca soi_coo in 
+      Coordinate_value_t.Coordinate_cartesian_value
+	(Coordinate_cartesian_value_v.make tag_cca can_coo)
+	
+  | Coordinate_symbol_t.Coordinate_spherical_symbol sym_csp ->
+      let tag_csp = Tag_v.make sym_csp soi_coo in 
+      Coordinate_value_t.Coordinate_spherical_value
+	(Coordinate_spherical_value_v.make tag_csp can_coo)
+	
+  | Coordinate_symbol_t.Coordinate_cylindrical_symbol sym_ccy ->
+      let tag_ccy = Tag_v.make sym_ccy soi_coo in 
+      Coordinate_value_t.Coordinate_cylindrical_value
+	(Coordinate_cylindrical_value_v.make tag_ccy can_coo)
+ 	
+  | Coordinate_symbol_t.Coordinate_linear_symbol sym_cpo ->
+      let tag_cpo = Tag_v.make sym_cpo soi_coo in 
+      Coordinate_value_t.Coordinate_linear_value
+	(Coordinate_linear_value_v.make tag_cpo can_coo)
+ 	
+  | Coordinate_symbol_t.Coordinate_planar_symbol sym_cpo ->
+      let tag_cpo = Tag_v.make sym_cpo soi_coo in 
+      Coordinate_value_t.Coordinate_planar_value
+	(Coordinate_planar_value_v.make tag_cpo can_coo)
+ 	
+  | Coordinate_symbol_t.Coordinate_polar_symbol sym_cpo ->
+      let tag_cpo = Tag_v.make sym_cpo soi_coo in 
+      Coordinate_value_t.Coordinate_polar_value
+	(Coordinate_polar_value_v.make tag_cpo can_coo)
+;;
+
+(** {6 Coercing up} *)
+
+let coordinate_value_of_coordinate_cartesian_value val_cca =
+  Coordinate_value_t.Coordinate_cartesian_value val_cca 
+;;
+
+let coordinate_value_of_coordinate_cylindrical_value val_ccy =
+  Coordinate_value_t.Coordinate_cylindrical_value val_ccy
+;;
+
+let coordinate_value_of_coordinate_spherical_value val_csp =
+  Coordinate_value_t.Coordinate_spherical_value val_csp
+;;
+
+let coordinate_value_of_coordinate_linear_value val_cpo =
+  Coordinate_value_t.Coordinate_linear_value val_cpo 
+;;
+
+let coordinate_value_of_coordinate_planar_value val_cpo =
+  Coordinate_value_t.Coordinate_planar_value val_cpo 
+;;
+
+let coordinate_value_of_coordinate_polar_value val_cpo =
+  Coordinate_value_t.Coordinate_polar_value val_cpo 
+;;
+
+(** {6 Coercing down} *)
+
+let coordinate_cartesian_value_off_coordinate_value = function
+  | Coordinate_value_t.Coordinate_cartesian_value val_cca -> val_cca
+  | _ -> failwith "Not_a_coordinate_cartesian:Coordinate_value.coordinate_cartesian_value_off_coordinate_value"
+;;
+
+let coordinate_cylindrical_value_off_coordinate_value = function
+  | Coordinate_value_t.Coordinate_cylindrical_value val_ccy -> val_ccy
+  | _ -> failwith "Not_a_coordinate_cylindrical:Coordinate_value.coordinate_cylindrical_value_off_coordinate_value"
+;;
+
+let coordinate_spherical_value_off_coordinate_value = function
+  | Coordinate_value_t.Coordinate_spherical_value val_csp -> val_csp
+  | _ -> failwith "Not_a_coordinate_spherical:Coordinate_value.coordinate_spherical_value_off_coordinate_value"
+;;
+
+let coordinate_linear_value_off_coordinate_value = function
+  | Coordinate_value_t.Coordinate_linear_value val_cpo -> val_cpo
+  | _ -> failwith "Not_a_coordinate_linear:Coordinate_value.coordinate_linear_value_off_coordinate_value"
+;;
+
+let coordinate_planar_value_off_coordinate_value = function
+  | Coordinate_value_t.Coordinate_planar_value val_cpo -> val_cpo
+  | _ -> failwith "Not_a_coordinate_planar:Coordinate_value.coordinate_planar_value_off_coordinate_value"
+;;
+
+let coordinate_polar_value_off_coordinate_value = function
+  | Coordinate_value_t.Coordinate_polar_value val_cpo -> val_cpo
+  | _ -> failwith "Not_a_coordinate_polar:Coordinate_value.coordinate_polar_value_off_coordinate_value"
+;;
+
+(** {12 Polar <- Polar} *)
+
+let planar_float_duo_off_polar_float_duo (flo_rho, flo_theta) =
+  let flo_x_2d = flo_rho *. (cos flo_theta) in
+  let flo_y_2d = flo_rho *. (sin flo_theta) in
+  (flo_x_2d, flo_y_2d) 
+;;
+
+let planar_units_value_duo_off_polar_units_value_duo (val_uni_rho, val_uni_theta) =
+  let sym_uni_rho = Units_value_v.symbol_off_value val_uni_rho in
+  let flo_rho =Units_value_v.float_off_value val_uni_rho in
+
+  let sym_uni_theta = Units_value_v.symbol_off_value val_uni_theta in
+  let flo =Units_value_v.float_off_value val_uni_theta in
+  let flo_theta = flo *. (Units_angle_symbol_v.radian_of_units_angle_symbol 
+			    (Units_symbol_v.units_angle_symbol_off_units_symbol sym_uni_theta)) 
+  in
+
+  let (flo_x_2d, flo_y_2d) = planar_float_duo_off_polar_float_duo (flo_rho, flo_theta) in
+  let val_uni_x_2d = Units_value_v.make flo_x_2d sym_uni_rho in 
+  let val_uni_y_2d = Units_value_v.make flo_y_2d sym_uni_rho in 
+
+  (val_uni_x_2d, val_uni_y_2d)
+;;
+
+let coordinate_planar_canister_duo_off_coordinate_polar_canister_duo (can_rho, can_theta) =
+  let val_uni_rho = Coordinate_polar_canister_v.units_value_off_coordinate_polar_canister can_rho in
+  let val_uni_theta = Coordinate_polar_canister_v.units_value_off_coordinate_polar_canister can_theta in
+
+  let (val_uni_x_2d, val_uni_y_2d) =
+    planar_units_value_duo_off_polar_units_value_duo 
+      (val_uni_rho, val_uni_theta) 
+  in
+  let can_x_2d = Coordinate_planar_canister_v.make val_uni_x_2d in
+  let can_y_2d = Coordinate_planar_canister_v.make val_uni_y_2d in
+
+  Duo_v.make can_x_2d can_y_2d 
+;;
+
+let coordinate_planar_value_duo_off_coordinate_polar_value_duo (val_rho, val_theta) =
+  let can_rho = Coordinate_polar_value_v.canister_off_value val_rho in
+  let can_theta = Coordinate_polar_value_v.canister_off_value val_theta in
+
+  let tag_rho = Coordinate_polar_value_v.tag_off_value val_rho in
+  let tag_theta = Coordinate_polar_value_v.tag_off_value val_theta in
+
+  let soi_rho = Tag_v.sole_index_off_tag tag_rho in
+  let soi_theta = Tag_v.sole_index_off_tag tag_theta in
+
+  let sym_x_2d  = Coordinate_planar_symbol_v.x_2d "x_2d" in
+  let sym_y_2d  = Coordinate_planar_symbol_v.y_2d "y_2d" in
+
+  let tag_x_2d = Tag_v.make sym_x_2d soi_rho in
+  let tag_y_2d = Tag_v.make sym_y_2d soi_theta in
+
+  let (can_x_2d, can_y_2d) =  
+    coordinate_planar_canister_duo_off_coordinate_polar_canister_duo 
+      (can_rho, can_theta)
+  in 
+  let val_x_2d = Coordinate_cartesian_value_v.make tag_x_2d can_x_2d in
+  let val_y_2d = Coordinate_cartesian_value_v.make tag_y_2d can_y_2d in
+
+  (val_x_2d, val_y_2d)
+;;
+
+(** {12 Cartesian <- Cylindrical} *)
+
+let cartesian_float_trio_off_cylindrical_float_trio (flo_rho, flo_phi, flo_zed) =
+  let flo_x_3d = flo_rho *. (cos flo_phi) in
+  let flo_y_3d = flo_rho *. (sin flo_phi) in
+  let flo_z_3d = flo_zed in
+
+  (flo_x_3d, flo_y_3d, flo_z_3d) 
+;;
+
+let cartesian_units_value_trio_off_cylindrical_units_value_trio (val_uni_rho, val_uni_phi, val_uni_zed) =
+  let sym_uni_rho = Units_value_v.symbol_off_value val_uni_rho in
+  let flo_rho =Units_value_v.float_off_value val_uni_rho in
+
+  let sym_uni_phi = Units_value_v.symbol_off_value val_uni_phi in
+  let flo =Units_value_v.float_off_value val_uni_phi in
+  let flo_phi = flo *. (Units_angle_symbol_v.radian_of_units_angle_symbol 
+			    (Units_symbol_v.units_angle_symbol_off_units_symbol sym_uni_phi)) 
+  in
+
+  let sym_uni_zed = Units_value_v.symbol_off_value val_uni_zed in
+  let flo_zed =Units_value_v.float_off_value val_uni_zed in
+
+  let (flo_x_3d, flo_y_3d, flo_z_3d) = 
+    cartesian_float_trio_off_cylindrical_float_trio 
+      (flo_rho, flo_phi, flo_zed) 
+  in
+ 
+  let val_uni_x_3d = Units_value_v.make flo_x_3d sym_uni_rho in 
+  let val_uni_y_3d = Units_value_v.make flo_y_3d sym_uni_rho in 
+  let val_uni_z_3d = Units_value_v.make flo_z_3d sym_uni_zed in 
+
+  (val_uni_x_3d, val_uni_y_3d, val_uni_z_3d)
+;;
+
+let coordinate_cartesian_canister_trio_off_coordinate_cylindrical_canister_trio (can_rho, can_phi, can_zed) =
+  let val_uni_rho = Coordinate_cylindrical_canister_v.units_value_off_coordinate_cylindrical_canister can_rho in
+  let val_uni_phi = Coordinate_cylindrical_canister_v.units_value_off_coordinate_cylindrical_canister can_phi in
+  let val_uni_zed = Coordinate_cylindrical_canister_v.units_value_off_coordinate_cylindrical_canister can_zed in
+  
+  let (val_uni_x_3d, val_uni_y_3d, val_uni_z_3d) =
+    cartesian_units_value_trio_off_cylindrical_units_value_trio
+      (val_uni_rho, val_uni_phi, val_uni_zed) 
+  in
+
+  let can_x_3d = Coordinate_cartesian_canister_v.make val_uni_x_3d in
+  let can_y_3d = Coordinate_cartesian_canister_v.make val_uni_y_3d in
+  let can_z_3d = Coordinate_cartesian_canister_v.make val_uni_z_3d in
+
+  Trio_v.make can_x_3d can_y_3d can_z_3d
+;;
+
+let coordinate_cartesian_value_trio_off_coordinate_cylindrical_value_trio (val_rho, val_phi, val_zed) =
+  let can_rho = Coordinate_cylindrical_value_v.canister_off_value val_rho in
+  let can_phi = Coordinate_cylindrical_value_v.canister_off_value val_phi in
+  let can_zed = Coordinate_cylindrical_value_v.canister_off_value val_zed in
+
+  let tag_rho = Coordinate_cylindrical_value_v.tag_off_value val_rho in
+  let tag_phi = Coordinate_cylindrical_value_v.tag_off_value val_phi in
+  let tag_zed = Coordinate_cylindrical_value_v.tag_off_value val_zed in
+
+  let soi_rho = Tag_v.sole_index_off_tag tag_rho in
+  let soi_phi = Tag_v.sole_index_off_tag tag_phi in
+  let soi_zed = Tag_v.sole_index_off_tag tag_zed in
+
+  let sym_x_3d  = Coordinate_cartesian_symbol_v.x_3d "x_3d" in
+  let sym_y_3d  = Coordinate_cartesian_symbol_v.y_3d "y_3d" in
+  let sym_z_3d  = Coordinate_cartesian_symbol_v.z_3d "z_3d" in
+
+  let tag_x_3d = Tag_v.make sym_x_3d soi_rho in
+  let tag_y_3d = Tag_v.make sym_y_3d soi_phi in
+  let tag_z_3d = Tag_v.make sym_z_3d soi_zed in
+
+  let (can_x_3d, can_y_3d, can_z_3d) =  
+    coordinate_cartesian_canister_trio_off_coordinate_cylindrical_canister_trio 
+      (can_rho, can_phi, can_zed)
+  in 
+  let val_x_3d = Coordinate_cartesian_value_v.make tag_x_3d can_x_3d in
+  let val_y_3d = Coordinate_cartesian_value_v.make tag_y_3d can_y_3d in
+  let val_z_3d = Coordinate_cartesian_value_v.make tag_z_3d can_z_3d in
+
+  (val_x_3d, val_y_3d, val_z_3d)
+;;
+
+(** {12 Cartesian <- Spherical} *)
+
+let cartesian_float_trio_off_spherical_float_trio (flo_rho, flo_phi, flo_theta) =
+ 
+  let flo_x_3d = flo_rho *. (sin flo_theta) *. (cos flo_phi) in
+  let flo_y_3d = flo_rho *. (sin flo_theta) *. (sin flo_phi) in
+  let flo_z_3d = flo_rho *. (cos flo_theta) in
+
+  (flo_x_3d, flo_y_3d, flo_z_3d)
+;;
+
+let cartesian_units_value_trio_off_spherical_units_value_trio (val_uni_rho, val_uni_phi, val_uni_theta) =
+  let sym_uni_rho = Units_value_v.symbol_off_value val_uni_rho in
+  let flo_rho =Units_value_v.float_off_value val_uni_rho in
+ 
+  let sym_uni_phi = Units_value_v.symbol_off_value val_uni_phi in
+  let flo =Units_value_v.float_off_value val_uni_phi in
+  let flo_phi = flo *. (Units_angle_symbol_v.radian_of_units_angle_symbol 
+			    (Units_symbol_v.units_angle_symbol_off_units_symbol sym_uni_phi)) 
+  in
+  
+  let sym_uni_theta = Units_value_v.symbol_off_value val_uni_theta in
+  let flo =Units_value_v.float_off_value val_uni_theta in
+  let flo_theta = flo *. (Units_angle_symbol_v.radian_of_units_angle_symbol 
+			    (Units_symbol_v.units_angle_symbol_off_units_symbol sym_uni_theta)) 
+  in
+
+  let (flo_x_3d, flo_y_3d, flo_z_3d) = 
+    cartesian_float_trio_off_spherical_float_trio 
+      (flo_rho, flo_phi, flo_theta) 
+  in
+  
+  let val_uni_x_3d = Units_value_v.make flo_x_3d sym_uni_rho in 
+  let val_uni_y_3d = Units_value_v.make flo_y_3d sym_uni_rho in 
+  let val_uni_z_3d = Units_value_v.make flo_z_3d sym_uni_rho in 
+
+  (val_uni_x_3d, val_uni_y_3d, val_uni_z_3d)
+;;
+
+let coordinate_cartesian_canister_trio_off_coordinate_spherical_canister_trio (can_rho, can_phi, can_theta) =
+  let val_uni_rho = Coordinate_spherical_canister_v.units_value_off_coordinate_spherical_canister can_rho in
+  let val_uni_phi = Coordinate_spherical_canister_v.units_value_off_coordinate_spherical_canister can_phi in
+  let val_uni_theta = Coordinate_spherical_canister_v.units_value_off_coordinate_spherical_canister can_theta in
+
+  let (val_uni_x_3d, val_uni_y_3d, val_uni_z_3d) =
+    cartesian_units_value_trio_off_spherical_units_value_trio 
+      (val_uni_rho, val_uni_phi, val_uni_theta) 
+  in
+
+  let can_x_3d = Coordinate_cartesian_canister_v.make val_uni_x_3d in
+  let can_y_3d = Coordinate_cartesian_canister_v.make val_uni_y_3d in
+  let can_z_3d = Coordinate_cartesian_canister_v.make val_uni_z_3d in
+
+  Trio_v.make can_x_3d can_y_3d can_z_3d
+;;
+
+let coordinate_cartesian_value_trio_off_coordinate_spherical_value_trio (val_rho, val_phi, val_theta) =
+  let can_rho = Coordinate_spherical_value_v.canister_off_value val_rho in
+  let can_phi = Coordinate_spherical_value_v.canister_off_value val_phi in
+  let can_theta = Coordinate_spherical_value_v.canister_off_value val_theta in
+
+  let tag_rho = Coordinate_spherical_value_v.tag_off_value val_rho in
+  let tag_phi = Coordinate_spherical_value_v.tag_off_value val_phi in
+  let tag_theta = Coordinate_spherical_value_v.tag_off_value val_theta in
+
+  let soi_rho = Tag_v.sole_index_off_tag tag_rho in
+  let soi_phi = Tag_v.sole_index_off_tag tag_phi in
+  let soi_theta = Tag_v.sole_index_off_tag tag_theta in
+
+  let sym_x_3d  = Coordinate_cartesian_symbol_v.x_3d "x_3d" in
+  let sym_y_3d  = Coordinate_cartesian_symbol_v.y_3d "y_3d" in
+  let sym_z_3d  = Coordinate_cartesian_symbol_v.z_3d "z_3d" in
+
+  let tag_x_3d = Tag_v.make sym_x_3d soi_rho in
+  let tag_y_3d = Tag_v.make sym_y_3d soi_phi in
+  let tag_z_3d = Tag_v.make sym_z_3d soi_theta in
+
+  let (can_x_3d, can_y_3d, can_z_3d) =  
+    coordinate_cartesian_canister_trio_off_coordinate_spherical_canister_trio 
+      (can_rho, can_phi, can_theta)
+  in 
+  let val_x_3d = Coordinate_cartesian_value_v.make tag_x_3d can_x_3d in
+  let val_y_3d = Coordinate_cartesian_value_v.make tag_y_3d can_y_3d in
+  let val_z_3d = Coordinate_cartesian_value_v.make tag_z_3d can_z_3d in
+
+  (val_x_3d, val_y_3d, val_z_3d)
+;;
+
+(** {12 Planar <- Any} *)
+
+let coordinate_planar_value_duo_off_coordinate_value_duo val_coo_d =
+  let nam_fun = "coordinate_cartesian_value_duo_off_coordinate_value_duo" in
+
+  match val_coo_d with
+  | (Coordinate_value_t.Coordinate_planar_value val_x_2d, 
+     Coordinate_value_t.Coordinate_planar_value val_y_2d) -> 
+
+	 (val_x_2d, val_y_2d)
+
+  | (Coordinate_value_t.Coordinate_polar_value val_rho, 
+     Coordinate_value_t.Coordinate_polar_value val_theta) -> 
+
+       coordinate_planar_value_duo_off_coordinate_polar_value_duo 
+	 (val_rho, val_theta)
+
+
+  | (_, _) ->
+      Error_messages_v.print_fatal_error nam_cod nam_fun
+	"Duo type were planar | polar"
+	(Format.sprintf "%s" (Duo_v.name fullname val_coo_d))
+	"Check"
+;;
+
+(** {12 Cartesian <- Any} *)
+
+let coordinate_cartesian_value_trio_off_coordinate_value_trio = function 
+  | (Coordinate_value_t.Coordinate_cartesian_value val_x_3d, 
+     Coordinate_value_t.Coordinate_cartesian_value val_y_3d, 
+     Coordinate_value_t.Coordinate_cartesian_value val_z_3d) -> 
+
+       (val_x_3d, val_y_3d, val_z_3d)
+
+  | (Coordinate_value_t.Coordinate_cylindrical_value val_rho, 
+     Coordinate_value_t.Coordinate_cylindrical_value val_phi, 
+     Coordinate_value_t.Coordinate_cylindrical_value val_zed) -> 
+ 
+      coordinate_cartesian_value_trio_off_coordinate_cylindrical_value_trio 
+	 (val_rho, val_phi, val_zed)
+
+  | (Coordinate_value_t.Coordinate_spherical_value val_rho, 
+     Coordinate_value_t.Coordinate_spherical_value val_phi, 
+     Coordinate_value_t.Coordinate_spherical_value val_theta) -> 
+ 
+      coordinate_cartesian_value_trio_off_coordinate_spherical_value_trio 
+	 (val_rho, val_phi, val_theta)
+
+  | val_coo_t ->
+      let nam_fun = "coordinate_cartesian_value_trio_off_coordinate_value_trio" in
+      Error_messages_v.print_fatal_error nam_cod nam_fun
+	"Trio type were cartesian | spherical | cylindrical"
+	(Format.sprintf "%s" (Trio_v.name fullname val_coo_t) )
+	"Check"
+;;
+
+let coordinate_planar_value_tuple_off_coordinate_value_tuple = function
+  | Tuple_t.Duo val_coo_d -> 
+      let val_cca_d = coordinate_planar_value_duo_off_coordinate_value_duo val_coo_d in
+      Tuple_t.Duo val_cca_d
+
+  | val_coo_t -> 
+      let nam_fun = "coordinate_planar_value_tuple_off_coordinate_value_tuple" in
+      Error_messages_v.print_fatal_error nam_cod nam_fun
+	"Tuple were a Duo"
+	(Format.sprintf "%s" (Tuple_v.name fullname val_coo_t))
+	"Check"
+;;
+
+let coordinate_cartesian_value_tuple_off_coordinate_value_tuple = function
+  | Tuple_t.Trio val_coo_t ->
+      let val_cca_t = coordinate_cartesian_value_trio_off_coordinate_value_trio val_coo_t in
+      Tuple_t.Trio val_cca_t
+
+  | val_coo_t ->
+      let nam_fun = "coordinate_cartesian_value_tuple_off_coordinate_value_tuple" in 
+      Error_messages_v.print_fatal_error nam_cod nam_fun
+	"Tuple were a Trio"
+	(Format.sprintf "%s" (Tuple_v.name fullname val_coo_t))
+	"Check"
+;;
+
+(** {6 Extracting_basic_value} *)
+
+let units_value_off_coordinate_value val_coo =
+  match val_coo with
+  | Coordinate_value_t.Coordinate_cartesian_value val_cca ->
+      Coordinate_cartesian_value_v.units_value_off_coordinate_cartesian_value val_cca
+
+  | Coordinate_value_t.Coordinate_spherical_value val_cca ->
+      Coordinate_spherical_value_v.units_value_off_coordinate_spherical_value val_cca
+
+  | Coordinate_value_t.Coordinate_cylindrical_value val_cca ->
+      Coordinate_cylindrical_value_v.units_value_off_coordinate_cylindrical_value val_cca
+
+  | Coordinate_value_t.Coordinate_linear_value val_cca ->
+      Coordinate_linear_value_v.units_value_off_coordinate_linear_value val_cca
+
+  | Coordinate_value_t.Coordinate_planar_value val_cca ->
+      Coordinate_planar_value_v.units_value_off_coordinate_planar_value val_cca
+
+  | Coordinate_value_t.Coordinate_polar_value val_cca ->
+      Coordinate_polar_value_v.units_value_off_coordinate_polar_value val_cca
+
+;;
+

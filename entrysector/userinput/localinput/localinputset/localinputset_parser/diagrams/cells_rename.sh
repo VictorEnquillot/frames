@@ -1,0 +1,14 @@
+ modify_string.pl category_cell              	 cell_category              $1
+ modify_string.pl cofactor_basic_cell        	 cell_cofactor_basic        $1
+ modify_string.pl cofactor_entity_cell       	 cell_cofactor_entity       $1
+ modify_string.pl createdby_cell             	 cell_createdby             $1
+ modify_string.pl database_cell              	 cell_database              $1
+ modify_string.pl datafile_cell              	 cell_datafile              $1
+ modify_string.pl domain_cell                	 cell_domain                $1
+ modify_string.pl entity_external_name_cell  	 cell_entity_external_name  $1
+ modify_string.pl external_context_cell      	 cell_external_context      $1
+ modify_string.pl file_cell                  	 cell_file                  $1
+ modify_string.pl function_cell              	 cell_function              $1
+ modify_string.pl module_cell                	 cell_module                $1
+ modify_string.pl target_operand_cell        	 cell_target_operand        $1
+ modify_string.pl target_operator_cell       	 cell_target_operator       $1

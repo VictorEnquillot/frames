@@ -1,0 +1,693 @@
+(** {3 The Symbol functionalities for a Atom.} *)
+
+(** {6 Upgrading.} *)
+
+val atom_symbol_of_core_atom_symbol :
+    Atom_symbol_t.core_atom_symbol ->
+      Atom_symbol_t.atom_symbol 
+;;
+
+val atom_symbol_of_leaf_atom_symbol :
+    Atom_symbol_t.leaf_atom_symbol ->
+      Atom_symbol_t.atom_symbol 
+;;
+
+val core_atom_symbol_of_closed_atom_symbol :
+    Atom_symbol_t.closed_atom_symbol ->
+      Atom_symbol_t.core_atom_symbol
+;;
+
+(** {6 Downgrading.} *)
+
+val core_atom_symbol_off_atom_symbol :
+    Atom_symbol_t.atom_symbol -> 
+      Atom_symbol_t.core_atom_symbol
+;;
+
+val leaf_atom_symbol_off_atom_symbol :
+    Atom_symbol_t.atom_symbol -> 
+      Atom_symbol_t.leaf_atom_symbol
+;;
+
+val closed_atom_symbol_off_core_atom_symbol :
+    Atom_symbol_t.core_atom_symbol ->
+      Atom_symbol_t.closed_atom_symbol
+;;
+
+val closed_atom_symbol_of_raregas_symbol :
+    Atom_symbol_t.raregas_symbol ->
+      Atom_symbol_t.closed_atom_symbol
+;;
+
+val closed_atom_symbol_of_anion_symbol :
+    Atom_symbol_t.anion_symbol -> 
+      Atom_symbol_t.closed_atom_symbol
+;;
+
+val closed_atom_symbol_of_cation_symbol :
+    Atom_symbol_t.cation_symbol -> 
+      Atom_symbol_t.closed_atom_symbol 
+;;
+
+val closed_atom_symbol_of_halfbridge_symbol : 
+    Halfbridge_symbol_t.halfbridge_symbol ->
+      Atom_symbol_t.closed_atom_symbol
+;;
+
+(** {6 Converting.} *)
+
+(** {9 Printing.} *)
+
+val print : Format.formatter ->
+  Atom_symbol_t.atom_symbol ->
+     unit
+;;
+val print_atom_symbol : Format.formatter ->
+  Atom_symbol_t.atom_symbol ->
+     unit
+;;
+
+val print_core_atom_symbol : Format.formatter ->
+  Atom_symbol_t.core_atom_symbol ->
+     unit
+;;
+
+val print_leaf_atom_symbol : Format.formatter ->
+  Atom_symbol_t.leaf_atom_symbol ->
+     unit
+;;
+
+val print_closed_atom_symbol : Format.formatter ->
+  Atom_symbol_t.closed_atom_symbol ->
+     unit
+;;
+
+val print_raregas_symbol : Format.formatter ->
+  Atom_symbol_t.raregas_symbol ->
+     unit
+;;
+
+val print_anion_symbol : Format.formatter ->
+  Atom_symbol_t.anion_symbol ->
+     unit
+;;
+
+val print_cation_symbol : Format.formatter -> 
+  Atom_symbol_t.cation_symbol ->
+     unit
+;;
+
+val print_minus_one_anion_symbol : Format.formatter ->
+  Atom_symbol_t.minus_one_anion_symbol ->
+     unit
+;;
+
+val print_plus_one_anion_symbol : Format.formatter ->
+  Atom_symbol_t.plus_one_anion_symbol ->
+     unit
+;;
+
+val print_plus_two_anion_symbol : Format.formatter ->
+  Atom_symbol_t.plus_two_anion_symbol ->
+     unit
+;;
+
+val print_plus_three_anion_symbol : Format.formatter ->
+  Atom_symbol_t.plus_three_anion_symbol ->
+     unit
+;;
+
+val print_nonsigma_leaf_atom_symbol : Format.formatter ->
+  Atom_symbol_t.nonsigma_leaf_atom_symbol ->
+     unit
+;;
+
+val print_single_leaf_atom_symbol : Format.formatter ->
+  Atom_symbol_t.single_leaf_atom_symbol ->
+     unit
+;;
+
+val print_double_leaf_atom_symbol : Format.formatter ->
+  Atom_symbol_t.double_leaf_atom_symbol ->
+     unit
+;;
+
+val print_triple_leaf_atom_symbol : Format.formatter ->
+  Atom_symbol_t.triple_leaf_atom_symbol ->
+     unit
+;;
+
+val print_twotied_atom_symbol : Format.formatter ->
+  Atom_symbol_t.twotied_atom_symbol ->
+     unit
+;;
+
+val print_threetied_atom_symbol : Format.formatter ->
+  Atom_symbol_t.threetied_atom_symbol ->
+     unit
+;;
+
+val print_fourtied_atom_symbol : Format.formatter ->
+  Atom_symbol_t.fourtied_atom_symbol ->
+     unit
+;;
+
+val print_fivetied_atom_symbol : Format.formatter ->
+  Atom_symbol_t.fivetied_atom_symbol ->
+     unit
+;;
+
+val print_sixtied_atom_symbol : Format.formatter ->
+  Atom_symbol_t.sixtied_atom_symbol ->
+     unit
+;;
+
+val print_sigma_twotied_atom_symbol : Format.formatter ->
+  Atom_symbol_t.sigma_twotied_atom_symbol ->
+     unit
+;;
+
+val print_sigma_threetied_atom_symbol : Format.formatter ->
+  Atom_symbol_t.sigma_threetied_atom_symbol ->
+     unit
+;;
+
+val print_nonsigma_threetied_atom_symbol : Format.formatter ->
+  Atom_symbol_t.nonsigma_threetied_atom_symbol ->
+     unit
+;;
+
+val print_singlesigma_twotied_atom_symbol : Format.formatter ->
+  Atom_symbol_t.singlesigma_twotied_atom_symbol ->
+     unit
+;;
+
+val print_doublesigma_twotied_atom_symbol : Format.formatter ->
+  Atom_symbol_t.doublesigma_twotied_atom_symbol ->
+     unit
+;;
+
+val print_triplesigma_twotied_atom_symbol : Format.formatter ->
+  Atom_symbol_t.triplesigma_twotied_atom_symbol ->
+     unit
+;;
+
+val print_nonsigma_twotied_atom_symbol : Format.formatter ->
+  Atom_symbol_t.nonsigma_twotied_atom_symbol ->
+     unit
+;;
+
+val print_singlesigma_threetied_atom_symbol : Format.formatter ->
+  Atom_symbol_t.singlesigma_threetied_atom_symbol ->
+     unit
+;;
+
+val print_doublesigma_threetied_atom_symbol : Format.formatter ->
+  Atom_symbol_t.doublesigma_threetied_atom_symbol ->
+     unit
+;;
+
+val print_singlenonsigma_threetied_atom_symbol : Format.formatter ->
+  Atom_symbol_t.singlenonsigma_threetied_atom_symbol ->
+     unit
+;;
+
+val print_doublenonsigma_threetied_atom_symbol : Format.formatter ->
+  Atom_symbol_t.doublenonsigma_threetied_atom_symbol ->
+     unit
+;;
+
+(** {9 Naming.} *)
+
+val name :
+  Atom_symbol_t.atom_symbol ->
+     string
+;;
+val name_atom_symbol :
+  Atom_symbol_t.atom_symbol ->
+     string
+;;
+
+val name_core_atom_symbol :
+  Atom_symbol_t.core_atom_symbol ->
+     string
+;;
+
+val name_leaf_atom_symbol :
+  Atom_symbol_t.leaf_atom_symbol ->
+     string
+;;
+
+val name_closed_atom_symbol :
+  Atom_symbol_t.closed_atom_symbol ->
+     string
+;;
+
+val name_raregas_symbol :
+  Atom_symbol_t.raregas_symbol ->
+     string
+;;
+
+val name_anion_symbol :
+  Atom_symbol_t.anion_symbol ->
+     string
+;;
+
+val name_cation_symbol : 
+  Atom_symbol_t.cation_symbol ->
+     string
+;;
+
+val name_minus_one_anion_symbol :
+  Atom_symbol_t.minus_one_anion_symbol ->
+     string
+;;
+
+val name_plus_one_anion_symbol :
+  Atom_symbol_t.plus_one_anion_symbol ->
+     string
+;;
+
+val name_plus_two_anion_symbol :
+  Atom_symbol_t.plus_two_anion_symbol ->
+     string
+;;
+
+val name_plus_three_anion_symbol :
+  Atom_symbol_t.plus_three_anion_symbol ->
+     string
+;;
+
+val name_nonsigma_leaf_atom_symbol :
+  Atom_symbol_t.nonsigma_leaf_atom_symbol ->
+     string
+;;
+
+val name_single_leaf_atom_symbol :
+  Atom_symbol_t.single_leaf_atom_symbol ->
+     string
+;;
+
+val name_double_leaf_atom_symbol :
+  Atom_symbol_t.double_leaf_atom_symbol ->
+     string
+;;
+
+val name_triple_leaf_atom_symbol :
+  Atom_symbol_t.triple_leaf_atom_symbol ->
+     string
+;;
+
+val name_twotied_atom_symbol :
+  Atom_symbol_t.twotied_atom_symbol ->
+     string
+;;
+
+val name_threetied_atom_symbol :
+  Atom_symbol_t.threetied_atom_symbol ->
+     string
+;;
+
+val name_fourtied_atom_symbol :
+  Atom_symbol_t.fourtied_atom_symbol ->
+     string
+;;
+
+val name_fivetied_atom_symbol :
+  Atom_symbol_t.fivetied_atom_symbol ->
+     string
+;;
+
+val name_sixtied_atom_symbol :
+  Atom_symbol_t.sixtied_atom_symbol ->
+     string
+;;
+
+val name_sigma_twotied_atom_symbol :
+  Atom_symbol_t.sigma_twotied_atom_symbol ->
+     string
+;;
+
+val name_sigma_threetied_atom_symbol :
+  Atom_symbol_t.sigma_threetied_atom_symbol ->
+     string
+;;
+
+val name_nonsigma_threetied_atom_symbol :
+  Atom_symbol_t.nonsigma_threetied_atom_symbol ->
+     string
+;;
+
+val name_singlesigma_twotied_atom_symbol :
+  Atom_symbol_t.singlesigma_twotied_atom_symbol ->
+     string
+;;
+
+val name_doublesigma_twotied_atom_symbol :
+  Atom_symbol_t.doublesigma_twotied_atom_symbol ->
+     string
+;;
+
+val name_triplesigma_twotied_atom_symbol :
+  Atom_symbol_t.triplesigma_twotied_atom_symbol ->
+     string
+;;
+
+val name_nonsigma_twotied_atom_symbol :
+  Atom_symbol_t.nonsigma_twotied_atom_symbol ->
+     string
+;;
+
+val name_singlesigma_threetied_atom_symbol :
+  Atom_symbol_t.singlesigma_threetied_atom_symbol ->
+     string
+;;
+
+val name_doublesigma_threetied_atom_symbol :
+  Atom_symbol_t.doublesigma_threetied_atom_symbol ->
+     string
+;;
+
+val name_singlenonsigma_threetied_atom_symbol :
+  Atom_symbol_t.singlenonsigma_threetied_atom_symbol ->
+     string
+;;
+
+val name_doublenonsigma_threetied_atom_symbol :
+  Atom_symbol_t.doublenonsigma_threetied_atom_symbol ->
+     string
+;;
+val cfo_n : Atom_symbol_t.core_atom_symbol;;
+val pp_fe : Atom_symbol_t.closed_atom_symbol;;
+val m_f : Atom_symbol_t.closed_atom_symbol;;
+val cfi_cl : Atom_symbol_t.core_atom_symbol;;
+
+val csson_h : Atom_symbol_t.core_atom_symbol;;
+val csstw_o : Atom_symbol_t.core_atom_symbol;;
+val cdstw_s : Atom_symbol_t.core_atom_symbol;;
+val cdstw_c : Atom_symbol_t.core_atom_symbol;;
+val ctstw_c : Atom_symbol_t.core_atom_symbol;;
+val ctstw_n : Atom_symbol_t.core_atom_symbol;;
+val cntw_o : Atom_symbol_t.core_atom_symbol;;
+
+val pp_ca : Atom_symbol_t.closed_atom_symbol;;
+val cfo_c : Atom_symbol_t.core_atom_symbol;;
+val cssth_n : Atom_symbol_t.core_atom_symbol;;
+val p_na : Atom_symbol_t.closed_atom_symbol;;
+val cdsth_n : Atom_symbol_t.core_atom_symbol;;
+val ppp_fe : Atom_symbol_t.closed_atom_symbol;;
+val cdnth_s : Atom_symbol_t.core_atom_symbol;;
+val cntw_n : Atom_symbol_t.core_atom_symbol;;
+val cfo_xe : Atom_symbol_t.core_atom_symbol;;
+val csnth_c : Atom_symbol_t.core_atom_symbol;;
+val csnth_n : Atom_symbol_t.core_atom_symbol;;
+val cssth_cl : Atom_symbol_t.core_atom_symbol;;
+val cdstw_n : Atom_symbol_t.core_atom_symbol;;
+val cdsth_c : Atom_symbol_t.core_atom_symbol;;
+val csstw_s : Atom_symbol_t.core_atom_symbol;;
+val cfo_s : Atom_symbol_t.core_atom_symbol;;
+val cdsth_s : Atom_symbol_t.core_atom_symbol;;
+val p_h : Atom_symbol_t.closed_atom_symbol;;
+val csi_s : Atom_symbol_t.core_atom_symbol;;
+
+val lslf_h : Atom_symbol_t.leaf_atom_symbol;;
+val lnlf_o : Atom_symbol_t.leaf_atom_symbol;;
+val ltlf_n : Atom_symbol_t.leaf_atom_symbol;;
+val lslf_f : Atom_symbol_t.leaf_atom_symbol;;
+val ldlf_o : Atom_symbol_t.leaf_atom_symbol;;
+
+val cl_ar : Atom_symbol_t.closed_atom_symbol;;
+val cl_he : Atom_symbol_t.closed_atom_symbol;;
+val cl_kr : Atom_symbol_t.closed_atom_symbol;;
+val cl_ne : Atom_symbol_t.closed_atom_symbol;;
+val cl_xe : Atom_symbol_t.closed_atom_symbol;;
+
+val c_ar : Atom_symbol_t.core_atom_symbol;;
+val c_he : Atom_symbol_t.core_atom_symbol;;
+val c_kr : Atom_symbol_t.core_atom_symbol;;
+val c_ne : Atom_symbol_t.core_atom_symbol;;
+val c_xe : Atom_symbol_t.core_atom_symbol;;
+
+val ar : Atom_symbol_t.atom_symbol;;
+val he : Atom_symbol_t.atom_symbol;;
+val kr : Atom_symbol_t.atom_symbol;;
+val ne : Atom_symbol_t.atom_symbol;;
+val xe : Atom_symbol_t.atom_symbol;;
+
+val mon_f : Atom_symbol_t.core_atom_symbol;;
+
+val pon_h : Atom_symbol_t.core_atom_symbol;;
+
+val pon_na : Atom_symbol_t.core_atom_symbol;;
+
+val ptw_ca : Atom_symbol_t.core_atom_symbol;;
+
+val ptw_fe : Atom_symbol_t.core_atom_symbol;;
+
+val pth_fe : Atom_symbol_t.core_atom_symbol;;
+
+val nlf_o : Atom_symbol_t.atom_symbol;;
+
+val slf_h : Atom_symbol_t.atom_symbol;;
+
+val slf_f : Atom_symbol_t.atom_symbol;;
+
+val dlf_o : Atom_symbol_t.atom_symbol;;
+
+val tlf_n : Atom_symbol_t.atom_symbol;;
+
+val fo_c : Atom_symbol_t.atom_symbol;;
+
+val fo_n : Atom_symbol_t.atom_symbol;;
+
+val fo_s : Atom_symbol_t.atom_symbol;;
+
+val fo_xe : Atom_symbol_t.atom_symbol;;
+
+val fi_cl : Atom_symbol_t.atom_symbol;;
+
+val si_s : Atom_symbol_t.atom_symbol;;
+
+val sstw_o : Atom_symbol_t.atom_symbol;;
+
+val sson_h : Atom_symbol_t.atom_symbol;;
+
+val sstw_s : Atom_symbol_t.atom_symbol;;
+
+val dstw_c : Atom_symbol_t.atom_symbol;;
+
+val dstw_n : Atom_symbol_t.atom_symbol;;
+
+val dstw_s : Atom_symbol_t.atom_symbol;;
+
+val tstw_c : Atom_symbol_t.atom_symbol;;
+val tstw_n : Atom_symbol_t.atom_symbol;;
+
+val ntw_n : Atom_symbol_t.atom_symbol;;
+
+val ntw_o : Atom_symbol_t.atom_symbol;;
+
+val ssth_n : Atom_symbol_t.atom_symbol;;
+val ssth_cl : Atom_symbol_t.atom_symbol;;
+val dsth_c : Atom_symbol_t.atom_symbol;;
+val dsth_n : Atom_symbol_t.atom_symbol;;
+val dsth_s : Atom_symbol_t.atom_symbol;;
+val snth_c : Atom_symbol_t.atom_symbol;;
+val snth_n : Atom_symbol_t.atom_symbol;;
+val dnth_s : Atom_symbol_t.atom_symbol;;
+
+val cl_hbc : Atom_symbol_t.closed_atom_symbol;;
+val cl_hbd : Atom_symbol_t.closed_atom_symbol;;
+val cl_hbs : Atom_symbol_t.closed_atom_symbol;;
+val cl_hbt : Atom_symbol_t.closed_atom_symbol;;
+
+val c_hbc : Atom_symbol_t.core_atom_symbol;;
+val c_hbd : Atom_symbol_t.core_atom_symbol;;
+val c_hbs : Atom_symbol_t.core_atom_symbol;;
+val c_hbt : Atom_symbol_t.core_atom_symbol;;
+
+val hbc : Atom_symbol_t.atom_symbol;;
+val hbd : Atom_symbol_t.atom_symbol;;
+val hbs : Atom_symbol_t.atom_symbol;;
+val hbt : Atom_symbol_t.atom_symbol;;
+
+
+
+(* created by ./caml_t_ml_to_v_ml_or_mli.pl atom_symbol_t.ml 19 January 2010 *)
+
+(** {9 Valence.} *)
+
+val valence_of_atom_symbol :
+  Atom_symbol_t.atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_core_atom_symbol :
+  Atom_symbol_t.core_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_leaf_atom_symbol :
+  Atom_symbol_t.leaf_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_closed_atom_symbol :
+  Atom_symbol_t.closed_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_raregas_symbol :
+  Atom_symbol_t.raregas_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_anion_symbol :
+  Atom_symbol_t.anion_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_cation_symbol : 
+  Atom_symbol_t.cation_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_minus_one_anion_symbol :
+  Atom_symbol_t.minus_one_anion_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_plus_one_anion_symbol :
+  Atom_symbol_t.plus_one_anion_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_plus_two_anion_symbol :
+  Atom_symbol_t.plus_two_anion_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_plus_three_anion_symbol :
+  Atom_symbol_t.plus_three_anion_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_nonsigma_leaf_atom_symbol :
+  Atom_symbol_t.nonsigma_leaf_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_single_leaf_atom_symbol :
+  Atom_symbol_t.single_leaf_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_double_leaf_atom_symbol :
+  Atom_symbol_t.double_leaf_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_triple_leaf_atom_symbol :
+  Atom_symbol_t.triple_leaf_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_onetied_atom_symbol :
+  Atom_symbol_t.onetied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_twotied_atom_symbol :
+  Atom_symbol_t.twotied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_threetied_atom_symbol :
+  Atom_symbol_t.threetied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_fourtied_atom_symbol :
+  Atom_symbol_t.fourtied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_fivetied_atom_symbol :
+  Atom_symbol_t.fivetied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_sixtied_atom_symbol :
+  Atom_symbol_t.sixtied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_sigma_onetied_atom_symbol :
+  Atom_symbol_t.sigma_onetied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_sigma_twotied_atom_symbol :
+  Atom_symbol_t.sigma_twotied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_sigma_threetied_atom_symbol :
+  Atom_symbol_t.sigma_threetied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_nonsigma_threetied_atom_symbol :
+  Atom_symbol_t.nonsigma_threetied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_singlesigma_onetied_atom_symbol :
+  Atom_symbol_t.singlesigma_onetied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_singlesigma_twotied_atom_symbol :
+  Atom_symbol_t.singlesigma_twotied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_doublesigma_twotied_atom_symbol :
+  Atom_symbol_t.doublesigma_twotied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_triplesigma_twotied_atom_symbol :
+  Atom_symbol_t.triplesigma_twotied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_nonsigma_twotied_atom_symbol :
+  Atom_symbol_t.nonsigma_twotied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_singlesigma_threetied_atom_symbol :
+  Atom_symbol_t.singlesigma_threetied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_doublesigma_threetied_atom_symbol :
+  Atom_symbol_t.doublesigma_threetied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_singlenonsigma_threetied_atom_symbol :
+  Atom_symbol_t.singlenonsigma_threetied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val valence_of_doublenonsigma_threetied_atom_symbol :
+  Atom_symbol_t.doublenonsigma_threetied_atom_symbol ->
+     Mendeleev_symbol_t.valence
+;;
+
+val mendeleev_symbol_off_atom_symbol :
+    Atom_symbol_t.atom_symbol ->
+      Mendeleev_symbol_t.mendeleev_symbol
+;;

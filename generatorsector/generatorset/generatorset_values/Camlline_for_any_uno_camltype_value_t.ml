@@ -1,0 +1,8 @@
+(** {6 Typing} *)
+
+type camlline_for_any_uno_camltype_value =
+  | Camlline_for_any_uno_camltype_son_bare_value of Camlline_for_any_uno_camltype_son_bare_value_t.camlline_for_any_uno_camltype_son_bare_value
+  | Camlline_for_any_uno_camltype_son_notleaf_value of Camlline_for_any_uno_camltype_son_notleaf_value_t.camlline_for_any_uno_camltype_son_notleaf_value
+  | Camlline_for_any_uno_camltype_son_ofstring_value of Camlline_for_any_uno_camltype_son_ofstring_value_t.camlline_for_any_uno_camltype_son_ofstring_value
+  | Camlline_for_any_uno_camltype_top_value of Camlline_for_any_uno_camltype_top_value_t.camlline_for_any_uno_camltype_top_value
+;;

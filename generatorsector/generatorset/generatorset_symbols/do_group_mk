@@ -1,0 +1,4 @@
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/files_mli.mk a
+echo "GROUP_T_MLI := \\" > files_group_t_mli.mk
+grep Group a >> files_group_t_mli.mk
+echo "" >> files_group_t_mli.mk

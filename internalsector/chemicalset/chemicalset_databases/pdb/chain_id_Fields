@@ -1,0 +1,36 @@
+
+module Anfs_t = Anisou_fieldpdb_symbol_t
+module Atfs_t = Atom_fieldpdb_symbol_t
+module D1fs_t = Dbref1_fieldpdb_symbol_t
+module D2fs_t = Dbref2_fieldpdb_symbol_t
+module Dfs_t = Dbref_fieldpdb_symbol_t
+module Hlfs_t = Helix_fieldpdb_symbol_t
+module Hafs_t = Hetatm_fieldpdb_symbol_t
+module Htfs_t = Het_fieldpdb_symbol_t
+module Mfs_t = Modres_fieldpdb_symbol_t
+module Safs_t = Seqadv_fieldpdb_symbol_t
+module Sqfs_t = Seqres_fieldpdb_symbol_t
+module Tfs_t = Ter_fieldpdb_symbol_t
+module Shfs_t = Sheet_fieldpdb_symbol_t
+module Cfs_t = Cispep_fieldpdb_symbol_t
+module Lfs_t = Link_fieldpdb_symbol_t
+module Sbfs_t = Ssbond_fieldpdb_symbol_t
+module Sifs_t = Site_fieldpdb_symbol_t
+
+Anisou
+Atom
+Dbref1
+Dbref2
+Dbref
+Helix
+Hetatm
+Het
+Modres
+Seqadv
+Seqres
+Ter
+Sheet
+Cispep
+Link
+Ssbond
+Site

@@ -1,0 +1,294 @@
+(** {3 The Symbol for a Block.} *)
+
+module Ats_t = Atom_symbol_t
+module Mty_t = Multiplicity_t
+module Hbs_t = Halfbridge_symbol_t
+
+(***
+http://fr.wikipedia.org/wiki/Complexe_%28chimie%29
+
+    On a regroupé ci-dessous la liste des structures les plus répandues en fonction du nombre de coordination (NC) (ou coordinence) :
+
+    * NC = 2 : linéaire,
+    * NC = 3 : trigonale plane,
+    * NC = 4 : tétraédrique ou plan carrée
+    * NC = 5 : bipyramidale à base triangulaire ou pyramidale à base carrée
+    * NC = 6 : octaédrique ou prisme trigonale
+    * NC = 7 : bipyramidale à base pentagonale
+
+***)
+
+(** In a molecule a [Block] is made of one 'core' atom 
+    and zero or several 'onetied' or 'leaf' atoms exclusively bonded to it. 
+
+    A Block is never closed (only Molecules are closed) as an element of
+    the bonding system.
+
+    - The nature of a Block is to be part of a fragment which is has 
+      linear structure.
+
+      In a fragment a block is bonded  zero or one times backwards
+      A block is located 
+      - at the head of a fragment
+      - in the body of a fragment
+      - at the tail of a fragment
+      
+      For convenience it is built according to these rules :
+
+      1. The first part is the atom_symbol of the core atom.
+      2. then follows the concatenation of the `leaf' atom_symbol
+         the order ( if needed ) is F(orth), L(eft), U(p), R(ight), D(own).
+      3. repeated atom_symbols are indicated by an integer (C_h_4, Oh2)
+
+      4. the charge if any is indicated by 
+          -- adding p to the atom symbol for cation Np (N+), Capp (Ca++)
+          -- adding m to the atom symbol or block for anion Ccoc2 (Cdodo-)
+
+      5. the conjugation is noted by adding r to the atom symbol
+
+      6. to simplify Arp is noted As (Ns of Guanidinium)
+
+      7. Sometimes it is necessary to tell how many ties a symbol makes :
+         C makes 4 ties 
+         Cd make 3 ties 
+         Ct make two ties        
+
+    - A Block Symbol caracterizes the chemical formula 
+                                  and the bonding properties of the Block ??? 
+
+     Nomenclature
+
+     zero, one, fork mean no, one tie of whatever bond, one fork of any kind.
+
+     onefork is one tie at left and a fork at right.
+
+     Symbol                        
+
+     b   biforked                         
+     c   conjugation                  : 
+     s   conjugation for N+ (cp = s)  : in Guanidinium
+     d   double bond backwards        =
+     t   triple bond backwards        #
+     u   N+ and triple bond backwards #
+     p   cation
+     m   anion
+
+     bifork with 2 _            <
+     bifork with 1 = and 1 _    <.
+     bifork with 1 = and 1 =    <<
+     trifork with 3 _           <-
+     quadrifork with 4 _        <:
+
+    When upgraded a Chemical a leaf (methyl -Ch3)
+                  a Rchemical is a head  (rmethyl Ch3-)
+
+
+    A known chemical entity is designed 
+    - by its chemical name when Block_symbol
+    - by its chemical name suffixed 
+          by _h if it is a head  methyl_h
+          by _l if it is a leaf  methyl_l
+          by _c if it is closed  water_c 
+    - by its chemical name prefixed
+          by r_ if is a Block_symbol head (reversed)
+*) 
+
+type block_symbol =  
+  | Zerozero_block_symbol of zerozero_block_symbol   (* o|o                 zz *)
+  | Zeroone_block_symbol of zeroone_block_symbol     (* o|-                 zo *)
+  | Zerofork_block_symbol of zerofork_block_symbol   (* o|- top of cycles   zf *)
+  | Oneone_block_symbol of oneone_block_symbol       (* -|-                 oo *)
+  | Oneend_block_symbol of oneend_block_symbol       (* -|< or -|<- or -|o  oe *)
+
+(* TODO divide oneend into its components 
+  change one by uno o -> u
+       fork -> furca
+       bifork -> bifurca
+
+*)
+
+(* o|< zo cannot exist in Fragments -see fragment definition 
+          may exit in arbitrary decomposition like proline residue. *)
+
+and zerozero_block_symbol = (* o|o *)
+  | Closed_monoatomic_block_symbol of Ats_t.closed_atom_symbol
+  | Closed_diatomic_block_symbol of closed_diatomic_block_symbol
+  | Closed_triatomic_block_symbol of closed_triatomic_block_symbol
+  | Closed_tetratomic_block_symbol of closed_tetratomic_block_symbol
+  | Closed_pentatomic_block_symbol of closed_pentatomic_block_symbol
+
+and closed_diatomic_block_symbol =
+  | Zz_F_h_    (* Fh Hydrogenfluoride *)
+  | Zz_Cl_h_   (* Clh Hydrogenchloride *)
+  | Zz_Ctot    (* Co Carbonmonoxide *)
+  | Zz_H_h_    (* H2 Dihydrogen *)
+  | Zz_Ntnt    (* N2 Dinitrogen *)
+  | Zz_Odod    (* O2 Dioxygen *)
+
+and closed_triatomic_block_symbol =
+  | Zz_Cdod2   (* Co2 Carbon dioxide molecule *)
+  | Zz_Nsoc2   (* No2-  Nitrite anion Bent *) 
+  | Zz_O_h_2   (* Oh2 Water *)
+  | Zz_S_h_2   (* Sh2 Hydrogensulfide *)
+  | Zz_Sdod2   (* So2 O=S=O ??? *)
+
+and closed_tetratomic_block_symbol =
+  | Zz_Ccoc2h_ (* Formate anion *)
+  | Zz_N_h_3   (* Nh3 Ammonia *)
+
+and closed_pentatomic_block_symbol =
+  | Zz_C_h_4   (* Ch4 Methane *)
+  | Zz_Nph_4   (* N+h4 Ammonium *)
+
+and zeroone_block_symbol =
+  | Zeroonesingle_block_symbol of zeroonesingle_block_symbol 
+  | Zeroonedouble_block_symbol of zeroonedouble_block_symbol
+  | Zeroonetriple_block_symbol of zeroonetriple_block_symbol
+  | Zeoonehalfbridge_block_symbol of Hbs_t.halfbridge_symbol
+
+and zeroonesingle_block_symbol =
+  | Zos_C_h_3    (* C_h_3- head or reversed methyl *)
+  | Zos_Cdodh_   (* Cho- component of formic acid Planar*)
+  | Zos_Ccoc2    (* Coo- Carboxylate anion Planar Head *)
+  | Zos_Cch_2    (* Ch2- *)
+  | Zos_N_h_2    (* N_h_2- *) 
+  | Zos_Ndod     (* Ndod- *)
+  | Zos_Nsoc2    (* N.+oo- in N2O3 Nitrogen Trioxide Planar *)
+  | Zos_Nph_3    (* N+h3- *)
+  | Zos_Nsh_2    (* Nsh_2- *)
+  | Zos_O_h_     (* O_h_- *)
+  | Zos_S_h_     (* S_h_- *)
+  | Zos_Sdod     (* So- *)
+
+and zeroonedouble_block_symbol =
+  | Zod_Cdh_2    (* Cdh2= *)
+  | Zod_Cdod     (* Co= *)
+  | Zod_Ndh_     (* Nh= *)
+  | Zod_Noh_2    (* Noh2=  No is N+ and N= *) 
+
+and zeroonetriple_block_symbol =
+  | Zot_Cth_     (* Ch# *)
+
+and zerofork_block_symbol =
+  | Zerobifork_block_symbol of zerobifork_block_symbol
+  | Zerotrifork_block_symbol of zerotrifork_block_symbol
+  | Zeroquadrifork_block_symbol of zeroquadrifork_block_symbol
+
+and zerobifork_block_symbol =
+  | Zbf_Cch_    (* Ch <  in Benzene *)
+  | Zbf_Cdh_    (* Ch =< ??? *)
+  | Zbf_Nsh_    (* Nsh < in Pyrrole *)
+
+and zerotrifork_block_symbol =
+  | Ztf_C_h_    (* C_h <- *)
+  | Ztf_N_      (* N_ <- ??? *)
+
+and zeroquadrifork_block_symbol =
+  | Zqf_C_       (* C_<< in Cubane *)
+
+(* Oneend o|e *)
+and oneend_block_symbol =  (* -|< or -|<- or -|o  of *)
+  | Onefork_block_symbol of onefork_block_symbol     (* -|< or -|<-    of *)
+  | Onezero_block_symbol of onezero_block_symbol     (* -|o            oz *)
+
+and onezero_block_symbol =
+  | Onesinglezero_block_symbol of onesinglezero_block_symbol 
+  | Onedoublezero_block_symbol of onedoublezero_block_symbol
+  | Onetriplezero_block_symbol of onetriplezero_block_symbol
+  | Onezerohalfbridge_block_symbol of Hbs_t.halfbridge_symbol
+
+and onesinglezero_block_symbol =
+  | Osz_C_h_3   (* -C_h_3 Tetrahedral *)
+  | Osz_Nph_3   (* -N+h_3 Tetrahedral *)
+
+  | Osz_N_h_2   (* -Nh2   Pyramidal Amide *) 
+
+  | Osz_Cch_2   (* -Cch_2 Planar conjugated C *)
+  | Osz_Ccoc2   (* -Coo   Planar Carboxylateate anion Leaf *)
+(*  | Osz_Cdod FAUX *)   (* -Co Carbonyl ??? *)
+  | Osz_Cdodh_  (* -Cho   Planar component of formic acid *)
+  | Osz_Nch_2   (* -Nh2   Planar conjugated N ??? *) 
+  | Osz_Nsh_2   (* -Nh2   Planar conjugated N *)
+  | Osz_Ndod    (* -No    Linear *)
+  | Osz_O_h_    (* -Oh    Hydroxyl *)
+  | Osz_S_h_    (* -Sh    Thiol *)
+  | Osz_Sdod    (* -So in S2o2*)
+
+and onedoublezero_block_symbol =
+  | Odz_Cdh_2    (* =Ch2  Planar *)
+  | Odz_Nph_2    (* =N+h2 Planar *) 
+  | Odz_Cdod     (* =Co   Linear *)
+  | Odz_Ndh_     (* =Nh   Linear in Guanidine *)
+
+and onetriplezero_block_symbol =
+  | Otz_Cth_     (* #Cth_ Methine_l *)
+
+and oneone_block_symbol = 
+  | Onesingleonesingle_block_symbol of onesingleonesingle_block_symbol 
+  | Onesingleonedouble_block_symbol of onesingleonedouble_block_symbol
+  | Onesingleonetriple_block_symbol of onesingleonetriple_block_symbol
+  | Onedoubleonesingle_block_symbol of onedoubleonesingle_block_symbol
+  | Onedoubleonedouble_block_symbol of onedoubleonedouble_block_symbol
+  | Onetripleonesingle_block_symbol of onetripleonesingle_block_symbol
+
+and onesingleonesingle_block_symbol = (* -B- *)
+  | Osos_C_h_2   (* -C_h_2- Methene *)
+  | Osos_Ccoc    (* -Ccoc-  Carbonyl in peptide group conjugated *)
+  | Osos_Cdod    (* -Cdod-  Carbonyldb with double bond where ??? *)
+  | Osos_Cch_    (* -Cch_- *) 
+  | Osos_N_h_    (* -Nh-    Pyramidal *)
+  | Osos_Nph_2   (* -N+h2-  Pyramidal *)
+  | Osos_Nch_    (* -Nh-    Planar peptide group conjugated *)
+  | Osos_Nsh_    (* -Nh-    Planar Guanidinium group inside Arginine *)
+  | Osos_Nc      (* -Nc- *)
+  | Osos_O_      (* -O- *)
+  | Osos_S_      (* -S- *)
+
+and onesingleonedouble_block_symbol = (* -B= *)
+  | Osod_Cdh_    (* -Ch= *)
+  | Osod_Nd      (* -N= *)
+  | Osod_Nph_    (* -N+h= *)
+
+and onesingleonetriple_block_symbol = (* -B# *)
+  | Osot_Ct      (* -C# *)
+  | Osot_Nu      (* -N+# *)
+
+and onedoubleonesingle_block_symbol =
+  | Odos_Cdh_    (* =Ch_- *)
+  | Odos_Nd      (* =N- *)
+  | Odos_Nph_    (* =N+h_- *)
+
+and onedoubleonedouble_block_symbol =
+  | Odod_Cd      (* =Cd= *)
+  | Odod_Nq      (* =N+= *)
+
+and onetripleonesingle_block_symbol =
+  | Otos_Ct      (* #C- *)
+  | Otos_Nu      (* #N+- *)
+
+and onefork_block_symbol =
+  | Onebifork_block_symbol of onebifork_block_symbol
+  | Onetrifork_block_symbol of onetrifork_block_symbol
+
+and onebifork_block_symbol = (* -|< *)
+  | Onesinglebiforksinglesingle_block_symbol of onesinglebiforksinglesingle_block_symbol
+  | Onedoublebiforksinglesingle_block_symbol of onedoublebiforksinglesingle_block_symbol
+
+and onesinglebiforksinglesingle_block_symbol = (* -B< *)
+  | Osbss_C_h_   (* -Ch< methine *)
+  | Osbss_Cc     (* -Cc< *)
+  | Osbss_N_     (* -N< *)
+  | Osbss_Nph_   (* -N+h< *)
+  | Osbss_Nsh_   (* -Nsh< cation Guanidinium *)
+
+and onedoublebiforksinglesingle_block_symbol = (* =B< *)
+  | Odbss_Cd     (* =C< *)
+  | Odbss_No     (* =N+< *)
+
+and onetrifork_block_symbol = (* -|<- *)
+  | Onesingletriforksinglesinglesingle_block_symbol of onesingletriforksinglesinglesingle_block_symbol
+
+and onesingletriforksinglesinglesingle_block_symbol = (* -B<- *)
+  | Ostsss_C_    (* -C<- *)
+  | Ostsss_Np    (* -N+<- *)
+;;

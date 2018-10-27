@@ -1,0 +1,21 @@
+MOLECULE_T_MLI :=  \
+  Zerotied_forked_symbol_t.mli \
+   Zerotied_fragment_fourblocks_symbol_t.mli \
+   Zerotied_fragment_threeblocks_symbol_t.mli \
+   Zerotied_fragment_twoblocks_symbol_t.mli \
+  Zerotied_fragment_symbol_t.mli \
+    Zerotied_block_none_none_ax4e1_tetrahedral_symbol_t.mli \
+   Zerotied_block_none_none_ax4_symbol_t.mli \
+    Zerotied_block_none_none_ax3e1_trigonalpyramidal_symbol_t.mli \
+    Zerotied_block_none_none_ax3e0_trigonalplanar_symbol_t.mli \
+   Zerotied_block_none_none_ax3_symbol_t.mli \
+    Zerotied_block_none_none_ax2e3_linear_symbol_t.mli \
+    Zerotied_block_none_none_ax2e2_bent_symbol_t.mli \
+    Zerotied_block_none_none_ax2e1_bent_symbol_t.mli \
+    Zerotied_block_none_none_ax2e0_linear_symbol_t.mli \
+   Zerotied_block_none_none_ax2_symbol_t.mli \
+   Zerotied_block_none_none_ax1_symbol_t.mli \
+  Zerotied_block_symbol_t.mli \
+  Zerotied_atom_symbol_t.mli \
+ Molecule_symbol_t.mli \
+Chemical_symbol_t.mli \

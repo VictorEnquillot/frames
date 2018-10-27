@@ -1,0 +1,30 @@
+Simulation Symbol Formula : regional_model_symbol array
+Regional_model Symbol Formula : System_physical_region + System_model  
+System_physical_region Symbol Formula : System_physical + Selection_criterion
+Physical_property Symbol Formula : 
+
+
+ Simulation 
+  - of a physical property    phase_space_trajectory
+                              from step 0 to step 10 by stepsize 1 fs
+                               
+       described by a mathematical model
+       for a model of a physical system
+                
+             Physical property
+                     |
+                     v
+             Mathematical model
+                     |
+                     v
+             Model system
+                     |
+                     v
+             Regions of the physical system
+                     |
+                     v
+             Region criterion
+                     |
+                     v
+             Physical system
+

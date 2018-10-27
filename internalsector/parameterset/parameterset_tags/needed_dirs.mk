@@ -1,0 +1,3 @@
+NEEDED_DIRS := \
+        $(PARAMETERSET_SYMBOLS_DIR) \
+ 

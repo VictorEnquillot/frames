@@ -1,0 +1,33 @@
+(** {6 Building_and_storing_basic_sons} *)
+
+(* Camlparagraph_for_formula_let_argument : let_build_n_store_basic_sons *)
+
+(* Section_for_formula_header_top_main : let_build_n_store_basic_sons  *)
+(* Group_for_formula_header_top_main : let_build_n_store_basic_sons  *)
+let build_n_store sym_top soi_mai =
+
+(* Section_for_formula_body_top_main_data : builder_stem_sole_index_data_list  *)
+(* Group_for_formula_body_top_main : main_tag_off_top_symbol *)
+  let sym_mai = Main_symbol_v.main_symbol_of_top_symbol sym_top in
+  let tag_mai = Tag_v.make sym_mai soi_mai in      (* let_tag_am_equal_tag_vdot_make_sym_am_soi_am_in *)
+
+(* Group_for_formula_body_main_data : builder_stem_symbol_data_list *)
+  let sym_dat_l = Data_symbol_list_by_main_tag_provider_v.provide tag_mai in
+
+(* Group_for_formula_body_main_data : sole_index_data_list  *)
+  let soi_dat_l =
+    Sole_index_v.son_sole_index_list_of_int_of_length_of_sole_index
+      1 (List.length sym_dat_l) soi_mai in
+
+(* Section_for_formula_body_domainset_data : data_tag_list  *)
+
+(* Group_for_formula_body_domainset_data : domainset_symbol_data_list *)
+  let dss_of_sym = Domainset_symbol_v.domainset_symbol_of_data_symbol in
+  let dss_dat_l = List.map dss_of_sym sym_dat_l in
+
+(* Group_for_formula_body_domainset_data : store_data_tag_list *)
+  List.iter2 Domainset_symbol_by_sole_index_register_v.store soi_dat_l dss_dat_l;
+  
+(* Group_for_formula_body_data_alone : make_data_tag_list *)
+  List.map2 Tag_v.make sym_dat_l soi_dat_l
+;;

@@ -1,0 +1,18 @@
+These tests have two purposes :
+1. check the code.
+2. show how to use it.
+
+To be more comfortable one may use the toplevel script in the same directory 
+by typing.
+
+>toplevel
+# # use "tsome_module.ml";;
+# Ctrl d
+>
+
+- it writes down all function values. 
+- it allows to play with the code.
+
+
+To be documented on the toplevel see :
+http://galileo.lct.jussieu.fr/~frames/mediawiki/index.php/OCaml_Toplevel_Index

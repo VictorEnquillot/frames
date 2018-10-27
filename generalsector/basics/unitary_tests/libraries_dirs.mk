@@ -1,0 +1,6 @@
+LIBRARIES_DIRS := \
+	$(realpath ..)
+
+
+
+

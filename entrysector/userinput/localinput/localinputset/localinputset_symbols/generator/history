@@ -1,0 +1,8 @@
+msrf calinput_as_body calinput_as_set_body *ml *mk
+msrf calinput_as_fence calinput_as_set_fence *ml *mk
+
+msrf calinput_body calinput_set_body *ml *mk
+msrf calinput_fence calinput_set_fence *ml *mk
+
+msrf calinput_body calinput_set_body *dat
+msrf calinput_fence calinput_set_fence *dat

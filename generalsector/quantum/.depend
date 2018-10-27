@@ -1,0 +1,76 @@
+Spin_p.cmi:
+Shell_symmetry_v.cmi: Shell_symmetry_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi
+Quantum_numbers_p.cmi: Shell_symmetry_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi
+Spherical_harmonics_data_v.cmi: Spherical_harmonics_data_t.cmo \
+    Quantum_numbers_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi
+Shell_ordinal_p.cmi: Quantum_numbers_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi
+Shell_name_p.cmi: Shell_symmetry_t.cmo Shell_ordinal_p.cmi \
+    Quantum_numbers_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_t.cmo
+Spin_p.cmo: Spin_p.cmi
+Spin_p.cmx: Spin_p.cmi
+Shell_symmetry_t.cmo:
+Shell_symmetry_t.cmx:
+Shell_symmetry_v.cmo: Shell_symmetry_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Shell_symmetry_v.cmi
+Shell_symmetry_v.cmx: Shell_symmetry_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Shell_symmetry_v.cmi
+Quantum_numbers_p.cmo: Shell_symmetry_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi \
+    Quantum_numbers_p.cmi
+Quantum_numbers_p.cmx: Shell_symmetry_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmx \
+    Quantum_numbers_p.cmi
+Spherical_harmonics_data_t.cmo: Quantum_numbers_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi
+Spherical_harmonics_data_t.cmx: Quantum_numbers_p.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmx
+Spherical_harmonics_data_v.cmo: Spherical_harmonics_data_t.cmo \
+    Quantum_numbers_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Constants_v.cmo \
+    Spherical_harmonics_data_v.cmi
+Spherical_harmonics_data_v.cmx: Spherical_harmonics_data_t.cmx \
+    Quantum_numbers_p.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Constants_v.cmx \
+    Spherical_harmonics_data_v.cmi
+Shell_ordinal_p.cmo: Quantum_numbers_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    Shell_ordinal_p.cmi
+Shell_ordinal_p.cmx: Quantum_numbers_p.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    Shell_ordinal_p.cmi
+Shell_name_p.cmo: Shell_symmetry_v.cmi Shell_symmetry_t.cmo \
+    Shell_ordinal_p.cmi Quantum_numbers_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_t.cmo \
+    Shell_name_p.cmi
+Shell_name_p.cmx: Shell_symmetry_v.cmx Shell_symmetry_t.cmx \
+    Shell_ordinal_p.cmx Quantum_numbers_p.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_t.cmx \
+    Shell_name_p.cmi

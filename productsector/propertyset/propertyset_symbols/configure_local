@@ -1,0 +1,5 @@
+# The sub-directories where we run a configure script.
+SUB_DIRECTORIES=""
+ 
+# The directory where we just conproperty .depend and .depend-rebuild.
+CURRENT_AND_TEST=". unitary_tests"

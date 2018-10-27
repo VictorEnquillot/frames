@@ -1,0 +1,5 @@
+rm runtest.byt
+
+ocamlc -warn-error A -g -I /keep/sources/ocaml_top/setup/frames/general/basics -I /keep/sources/ocaml_top/setup/frames/general/files -I /keep/sources/ocaml_top/setup/frames/general/datastructures -I /keep/sources/ocaml_top/setup/frames/generatorset/generatorset_tags -I /keep/sources/ocaml_top/setup/frames/generatorset/generatorset_databases/adb -I /keep/sources/ocaml_top/setup/frames/generatorset/generatorset_interfaces -o runtest.byt unix.cma -cclib -lunix str.cma -cclib -lstr  /keep/sources/ocaml_top/setup/frames/generatorset/generatorset_tags/generatorset_tags.cma   /keep/sources/ocaml_top/setup/frames/generatorset/generatorset_databases/generatorset_databases.cma   /keep/sources/ocaml_top/setup/frames/generatorset/generatorset_interfaces/generatorset_interfaces.cma $1
+
+runtest.byt

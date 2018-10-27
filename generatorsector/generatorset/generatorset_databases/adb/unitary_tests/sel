@@ -1,0 +1,40 @@
+let select_entity_name nam dep1 dep2 rcd =
+  let wor = List.hd (String_v.split_of_c '=' rcd) in
+  let str = try List.nth (String_v.split_of_c ' ' wor) 1 
+  with Failure "nth" ->
+    Error_messages_v.print_fatal_error 
+      "tdatabase_record_list_by_category_trail_provider_v_chemicalset_formula.ml"
+      "select_entity_name"
+      "two words before = record"
+      rcd "check"
+  in
+  let dep = List.length (String_v.split_of_c '_' str) in
+  String.length str >= (String.length nam) 
+    && (String.sub str 0 (String.length nam) = nam)
+    && dep >= dep1 
+    && dep <= dep2 
+;;
+
+let select_entity_off_singlet nam dep1 dep2 rcd =
+  let dep = List.length (String_v.split_of_c '_' rcd) in
+  String.length rcd >= (String.length nam) 
+    && (String.sub rcd 0 (String.length nam) = nam)
+    && dep >= dep1 
+    && dep <= dep2 
+;;
+
+let select_entity_off_doublet ent dep1 dep2 dou =
+  let (e, s) = dou in
+  let dep = List.length (String_v.split_of_c '_' e) in
+  String.length e >= (String.length ent) 
+    && (String.sub e 0 (String.length ent) = ent)
+    && dep >= dep1 
+    && dep <= dep2 
+;;
+
+let select_entity_off_triplet ent dep1 dep2 tri =
+  let (k, e, s) = tri in
+  (k = "type")
+    && (select_entity_off_doublet ent dep1 dep2 (e, s))
+;;
+

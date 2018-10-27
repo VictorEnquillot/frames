@@ -1,0 +1,29 @@
+
+
+
+locate primitive | grep symbol_t.ml | grep -v symbol_t.mli | grep -v top_17_sep_2012 | grep frames_2_sep_2011 | grep -v markers
+
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_bundle_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_cluster_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_expanded_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_molbasis_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_pack_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_single_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/ml_symmetry_cartesian_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/primitiveset_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/xfp_expanded_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/xfp_single_symbol_t.ml
+
+locate hsbf | grep symbol_t.ml | grep -v symbol_t.mli | grep frames_2_sep_2011 | grep -v top_17_sep_2012 | grep -v markers
+
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_bundle_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_cluster_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_expanded_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_molbasis_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_pack_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/hsbf_single_symbol_t.ml
+
+
+locate xfp | grep symbol_t.ml | grep -v symbol_t.mli | grep frames_2_sep_2011 | grep -v top_17_sep_2012 | grep -v markers
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/xfp_expanded_symbol_t.ml
+/keep/sources/ocaml_top/setup/frames_2_sep_2011/tags/primitiveset_tags/xfp_single_symbol_t.ml

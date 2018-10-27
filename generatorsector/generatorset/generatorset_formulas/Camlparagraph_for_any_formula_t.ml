@@ -1,0 +1,5 @@
+
+type camlparagraph_for_any_formula =
+  | Camlparagraph_for_any_comment_formula of Camlparagraph_for_any_comment_formula_t.camlparagraph_for_any_comment_formula
+  | Camlparagraph_for_any_function_formula of Camlparagraph_for_any_function_formula_t.camlparagraph_for_any_function_formula
+;;

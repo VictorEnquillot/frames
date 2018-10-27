@@ -1,0 +1,165 @@
+constructors figure                          =   nwchemdata
+
+constructors  nwchemdata                      =   nwchemdata_comment   nwchemdata_context   nwchemdata_set
+
+constructors  nwchemdata_set                  =   nwchemdata_set_body   nwchemdata_set_fence
+
+# comment
+
+constructors  nwchemdata_comment              =   nwchemdata_comment_authorname   nwchemdata_comment_aoemsl   nwchemdata_comment_dashed   nwchemdata_comment_dashedline   nwchemdata_comment_elementline   nwchemdata_comment_header   nwchemdata_comment_journalreference   nwchemdata_comment_reference
+
+constructors  nwchemdata_comment_authorname   =   nwchemdata_comment_authorname_one   nwchemdata_comment_authorname_two   nwchemdata_comment_authorname_many
+constructors  nwchemdata_comment_authorname_many  =   nwchemdata_comment_authorname_many_constructor:ofstring
+constructors  nwchemdata_comment_authorname_one   =   nwchemdata_comment_authorname_one_constructor:ofstring
+constructors  nwchemdata_comment_authorname_two   =   nwchemdata_comment_authorname_two_constructor:ofstring
+
+
+constructors  nwchemdata_comment_aoemsl           =   nwchemdata_comment_aoemsl_constructor:ofstring 
+constructors  nwchemdata_comment_dashed           =   nwchemdata_comment_dashed_constructor:ofstring
+constructors  nwchemdata_comment_dashedline       =   nwchemdata_comment_dashedline_constructor:ofstring
+constructors  nwchemdata_comment_header           =   nwchemdata_comment_header_constructor:ofstring
+constructors  nwchemdata_comment_journalreference =   nwchemdata_comment_journalreference_constructor:ofstring
+constructors  nwchemdata_comment_reference        =   nwchemdata_comment_reference_constructor:ofstring
+
+
+constructors  nwchemdata_comment_elementline      =   nwchemdata_comment_elementline_one   nwchemdata_comment_elementline_many
+constructors  nwchemdata_comment_elementline_one  =   nwchemdata_comment_elementline_one_constructor:ofstring
+
+constructors  nwchemdata_comment_elementline_many =   nwchemdata_comment_elementline_many_constructor:ofstring
+
+
+# context
+
+constructors nwchemdata_context                =   nwchemdata_context_databox   nwchemdata_context_database   nwchemdata_context_domain   nwchemdata_context_sector
+
+constructors nwchemdata_context_databox        =   nwchemdata_context_databox_constructor:ofstring
+constructors nwchemdata_context_database       =   nwchemdata_context_database_constructor:ofstring
+constructors nwchemdata_context_domain         =   nwchemdata_context_domain_constructor:ofstring
+constructors nwchemdata_context_sector         =   nwchemdata_context_sector_constructor:ofstring
+
+# body 
+
+constructors nwchemdata_set_body               =   nwchemdata_set_body_directive   nwchemdata_set_body_keyword   nwchemdata_set_body_node   nwchemdata_set_body_variable
+
+constructors nwchemdata_set_body_directive     =   nwchemdata_set_body_directive_basis   nwchemdata_set_body_directive_ecp   nwchemdata_set_body_directive_end   nwchemdata_set_body_directive_print
+
+constructors nwchemdata_set_body_keyword       =   nwchemdata_set_body_keyword_cartesian   nwchemdata_set_body_keyword_colon   nwchemdata_set_body_keyword_comma   nwchemdata_set_body_keyword_end_of_file   nwchemdata_set_body_keyword_hash_basis   nwchemdata_set_body_keyword_left_arrow   nwchemdata_set_body_keyword_left_bracket   nwchemdata_set_body_keyword_left_parenthesis   nwchemdata_set_body_keyword_nelec   nwchemdata_set_body_keyword_nosegment   nwchemdata_set_body_keyword_rel   nwchemdata_set_body_keyword_right_arrow   nwchemdata_set_body_keyword_right_bracket   nwchemdata_set_body_keyword_right_parenthesis   nwchemdata_set_body_keyword_segment   nwchemdata_set_body_keyword_set   nwchemdata_set_body_keyword_spherical
+
+constructors nwchemdata_set_body_node          =   nwchemdata_set_body_node_aobasis_block   nwchemdata_set_body_node_aocomment_block   nwchemdata_set_body_node_aoset   nwchemdata_set_body_node_center_n_shellname   nwchemdata_set_body_node_comment_block   nwchemdata_set_body_node_comment_reference_block   nwchemdata_set_body_node_datanamefile   nwchemdata_set_body_node_ecpbasis_block   nwchemdata_set_body_node_ecpset   nwchemdata_set_body_node_hash_databox   nwchemdata_set_body_node_positiveinteger_n_shellname   nwchemdata_set_body_node_shell
+
+
+constructors  nwchemdata_set_body_node_aobasis_block    =   nwchemdata_set_body_node_aobasis_block_constructor:ofstring
+
+constructors  nwchemdata_set_body_node_aocomment_block  =   nwchemdata_set_body_node_aocomment_block_constructor:ofstring
+
+constructors  nwchemdata_set_body_node_ecpbasis_block   =   nwchemdata_set_body_node_ecpbasis_block_constructor:ofstring
+
+
+constructors  nwchemdata_set_body_node_aoset            =   nwchemdata_set_body_node_aoset_anycenter_block   nwchemdata_set_body_node_aoset_anyshell_block   nwchemdata_set_body_node_aoset_block   nwchemdata_set_body_node_aoset_center_contraction_image   nwchemdata_set_body_node_aoset_center_contraction_scheme   nwchemdata_set_body_node_aoset_definition   nwchemdata_set_body_node_aoset_numericalvalues   nwchemdata_set_body_node_aoset_numericalvalues_block   nwchemdata_set_body_node_aoset_onecenter_block   nwchemdata_set_body_node_aoset_oneshell_block
+
+
+constructors  nwchemdata_set_body_node_aoset_anycenter_block  =   nwchemdata_set_body_node_aoset_anycenter_block_constructor:ofstring
+constructors  nwchemdata_set_body_node_aoset_anyshell_block   =   nwchemdata_set_body_node_aoset_anyshell_block_constructor:ofstring
+constructors  nwchemdata_set_body_node_aoset_block      =   nwchemdata_set_body_node_aoset_block_constructor:ofstring
+constructors  nwchemdata_set_body_node_aoset_center_contraction_image   =   nwchemdata_set_body_node_aoset_center_contraction_image_constructor:ofstring
+constructors  nwchemdata_set_body_node_aoset_center_contraction_scheme  =   nwchemdata_set_body_node_aoset_center_contraction_scheme_constructor:ofstring
+constructors  nwchemdata_set_body_node_aoset_definition  =   nwchemdata_set_body_node_aoset_definition_constructor:ofstring
+constructors  nwchemdata_set_body_node_aoset_numericalvalues =   nwchemdata_set_body_node_aoset_numericalvalues_constructor:ofstring
+constructors  nwchemdata_set_body_node_aoset_numericalvalues_block  =   nwchemdata_set_body_node_aoset_numericalvalues_block_constructor:ofstring
+constructors  nwchemdata_set_body_node_aoset_onecenter_block  =   nwchemdata_set_body_node_aoset_onecenter_block_constructor:ofstring
+constructors  nwchemdata_set_body_node_aoset_oneshell_block   =   nwchemdata_set_body_node_aoset_oneshell_block_constructor:ofstring
+
+
+constructors  nwchemdata_set_body_node_ecpset            =   nwchemdata_set_body_node_ecpset_anycenter_block   nwchemdata_set_body_node_ecpset_anyshell_block   nwchemdata_set_body_node_ecpset_block   nwchemdata_set_body_node_ecpset_definition   nwchemdata_set_body_node_ecpset_electronnumber   nwchemdata_set_body_node_ecpset_numericalvalues   nwchemdata_set_body_node_ecpset_numericalvalues_block   nwchemdata_set_body_node_ecpset_onecenter_block   nwchemdata_set_body_node_ecpset_oneshell_block
+
+
+constructors  nwchemdata_set_body_node_ecpset_anycenter_block   =   nwchemdata_set_body_node_ecpset_anycenter_block_constructor:ofstring
+constructors  nwchemdata_set_body_node_ecpset_anyshell_block    =   nwchemdata_set_body_node_ecpset_anyshell_block_constructor:ofstring
+constructors  nwchemdata_set_body_node_ecpset_block             =   nwchemdata_set_body_node_ecpset_block_constructor:ofstring
+constructors  nwchemdata_set_body_node_ecpset_definition        =   nwchemdata_set_body_node_ecpset_definition_constructor:ofstring
+constructors  nwchemdata_set_body_node_ecpset_electronnumber    =   nwchemdata_set_body_node_ecpset_electronnumber_constructor:ofstring
+constructors  nwchemdata_set_body_node_ecpset_numericalvalues  =   nwchemdata_set_body_node_ecpset_numericalvalues_constructor:ofstring
+constructors  nwchemdata_set_body_node_ecpset_numericalvalues_block  =   nwchemdata_set_body_node_ecpset_numericalvalues_block_constructor:ofstring
+constructors  nwchemdata_set_body_node_ecpset_onecenter_block   =   nwchemdata_set_body_node_ecpset_onecenter_block_constructor:ofstring
+constructors  nwchemdata_set_body_node_ecpset_oneshell_block    =   nwchemdata_set_body_node_ecpset_oneshell_block_constructor:ofstring
+
+constructors  nwchemdata_set_body_node_center_n_shellname       =   nwchemdata_set_body_node_center_n_shellname_constructor:ofstring
+constructors  nwchemdata_set_body_node_comment_block            =   nwchemdata_set_body_node_comment_block_constructor:ofstring
+constructors  nwchemdata_set_body_node_comment_reference_block  =   nwchemdata_set_body_node_comment_reference_block_constructor:ofstring
+constructors  nwchemdata_set_body_node_datanamefile  =   nwchemdata_set_body_node_datanamefile_constructor:ofstring
+constructors  nwchemdata_set_body_node_hash_databox             =   nwchemdata_set_body_node_hash_databox_constructor:ofstring
+constructors  nwchemdata_set_body_node_positiveinteger_n_shellname  =   nwchemdata_set_body_node_positiveinteger_n_shellname_constructor:ofstring
+
+constructors  nwchemdata_set_body_node_shell   =   nwchemdata_set_body_node_shell_contraction   nwchemdata_set_body_node_shell_expansion
+
+constructors  nwchemdata_set_body_node_shell_contraction  =   nwchemdata_set_body_node_shell_contraction_constructor:ofstring
+constructors  nwchemdata_set_body_node_shell_expansion  =   nwchemdata_set_body_node_shell_expansion_constructor:ofstring
+
+
+
+constructors nwchemdata_set_body_variable      =   nwchemdata_set_body_variable_angularfunction   nwchemdata_set_body_variable_angularmomentum   nwchemdata_set_body_variable_ao   nwchemdata_set_body_variable_aos   nwchemdata_set_body_variable_centername   nwchemdata_set_body_variable_coefficient   nwchemdata_set_body_variable_databox_name   nwchemdata_set_body_variable_dummy_center   nwchemdata_set_body_variable_exponent   nwchemdata_set_body_variable_exponent_n_coefficient   nwchemdata_set_body_variable_generalcontraction   nwchemdata_set_body_variable_localname   nwchemdata_set_body_variable_mendeleievsymbol   nwchemdata_set_body_variable_name   nwchemdata_set_body_variable_radialfunction   nwchemdata_set_body_variable_shellname   nwchemdata_set_body_variable_version
+
+constructors nwchemdata_set_body_variable_angularfunction          =   nwchemdata_set_body_variable_angularfunction_cartesian   nwchemdata_set_body_variable_angularfunction_spherical
+
+constructors  nwchemdata_set_body_variable_angularfunction_cartesian =  nwchemdata_set_body_variable_angularfunction_cartesian_constructor:ofstring 
+constructors  nwchemdata_set_body_variable_angularfunction_spherical =   nwchemdata_set_body_variable_angularfunction_spherical_constructor:ofstring
+
+constructors  nwchemdata_set_body_variable_angularmomentum  =   nwchemdata_set_body_variable_angularmomentum_constructor:ofstring
+
+constructors nwchemdata_set_body_variable_ao   =   nwchemdata_set_body_variable_ao_contracted   nwchemdata_set_body_variable_ao_single
+
+constructors  nwchemdata_set_body_variable_ao_contracted    =   nwchemdata_set_body_variable_ao_contracted_constructor:ofstring
+constructors  nwchemdata_set_body_variable_ao_single        =   nwchemdata_set_body_variable_ao_single_constructor:ofstring
+
+constructors  nwchemdata_set_body_variable_aos         =  nwchemdata_set_body_variable_aos_at_c   nwchemdata_set_body_variable_aos_at_c_n
+
+constructors  nwchemdata_set_body_variable_aos_at_c    =   nwchemdata_set_body_variable_aos_at_c_constructor:ofstring
+constructors  nwchemdata_set_body_variable_aos_at_c_n  =   nwchemdata_set_body_variable_aos_at_c_n_constructor:ofstring
+
+constructors  nwchemdata_set_body_variable_localname  =   nwchemdata_set_body_variable_localname_dataname   nwchemdata_set_body_variable_localname_ecpset
+
+
+constructors  nwchemdata_set_body_variable_databox_name =   nwchemdata_set_body_variable_databox_name_constructor:ofstring
+constructors  nwchemdata_set_body_variable_centername  =   nwchemdata_set_body_variable_centername_constructor:ofstring
+constructors  nwchemdata_set_body_variable_coefficient  =   nwchemdata_set_body_variable_coefficient_constructor:ofstring
+constructors  nwchemdata_set_body_variable_dummy_center =   nwchemdata_set_body_variable_dummy_center_constructor:ofstring
+constructors  nwchemdata_set_body_variable_exponent =   nwchemdata_set_body_variable_exponent_constructor:ofstring
+constructors  nwchemdata_set_body_variable_exponent_n_coefficient  =   nwchemdata_set_body_variable_exponent_n_coefficient_constructor:ofstring
+
+constructors  nwchemdata_set_body_variable_localname_dataname  =   nwchemdata_set_body_variable_localname_dataname_constructor:ofstring
+constructors  nwchemdata_set_body_variable_localname_ecpset   =   nwchemdata_set_body_variable_localname_ecpset_constructor:ofstring
+
+constructors  nwchemdata_set_body_variable_generalcontraction = nwchemdata_set_body_variable_generalcontraction_coefficientcolumn   nwchemdata_set_body_variable_generalcontraction_shellset
+
+constructors  nwchemdata_set_body_variable_generalcontraction_coefficientcolumn =   nwchemdata_set_body_variable_generalcontraction_coefficientcolumn_constructor:ofstring
+constructors  nwchemdata_set_body_variable_generalcontraction_shellset =   nwchemdata_set_body_variable_generalcontraction_shellset_constructor:ofstring
+
+constructors  nwchemdata_set_body_variable_mendeleievsymbol =   nwchemdata_set_body_variable_mendeleievsymbol_constructor:ofstring
+constructors  nwchemdata_set_body_variable_name =   nwchemdata_set_body_variable_name_constructor:ofstring
+constructors  nwchemdata_set_body_variable_radialfunction   =   nwchemdata_set_body_variable_radialfunction_constructor:ofstring
+
+constructors  nwchemdata_set_body_variable_shellname  =   nwchemdata_set_body_variable_shellname_extended   nwchemdata_set_body_variable_shellname_usual   nwchemdata_set_body_variable_shellname_relativistic
+
+constructors  nwchemdata_set_body_variable_shellname_extended =   nwchemdata_set_body_variable_shellname_extended_constructor:ofstring
+constructors  nwchemdata_set_body_variable_shellname_usual =   nwchemdata_set_body_variable_shellname_usual_constructor:ofstring
+constructors  nwchemdata_set_body_variable_shellname_relativistic =   nwchemdata_set_body_variable_shellname_relativistic_constructor:ofstring
+
+constructors nwchemdata_set_body_variable_version        =   nwchemdata_set_body_variable_version_constructor:ofstring
+
+
+# fence
+constructors nwchemdata_set_fence   =   nwchemdata_set_fence_float   nwchemdata_set_fence_integer   nwchemdata_set_fence_string
+
+constructors  nwchemdata_set_fence_float =   nwchemdata_set_fence_float_positive   nwchemdata_set_fence_float_negative   nwchemdata_set_fence_float_nonnegative
+
+constructors  nwchemdata_set_fence_float_negative    =   nwchemdata_set_fence_float_negative_constructor:ofstring
+constructors  nwchemdata_set_fence_float_nonnegative =   nwchemdata_set_fence_float_nonnegative_constructor:ofstring
+constructors  nwchemdata_set_fence_float_positive     =   nwchemdata_set_fence_float_positive_constructor:ofstring
+
+constructors  nwchemdata_set_fence_integer =   nwchemdata_set_fence_integer_positive   nwchemdata_set_fence_integer_negative   nwchemdata_set_fence_integer_nonnegative
+constructors  nwchemdata_set_fence_integer_negative    =   nwchemdata_set_fence_integer_negative_constructor:ofstring
+constructors  nwchemdata_set_fence_integer_nonnegative =   nwchemdata_set_fence_integer_nonnegative_constructor:ofstring
+constructors  nwchemdata_set_fence_integer_positive     =   nwchemdata_set_fence_integer_positive_constructor:ofstring
+
+
+constructors  nwchemdata_set_fence_string =   nwchemdata_set_fence_string_constructor:ofstring

@@ -1,0 +1,200 @@
+(** {3 Localinput_parser_v}*)
+
+(** {6 Documenting} *)
+
+let documentation () = 
+  [
+   "Current : PARLOI:Localinput_parser_v";
+   "Needed-by : Builder-Tree"; 
+   "What-is-it : the Localinput_symbol Tree or Abstract Syntax Tree";
+   "How-is-it-done : by parsing the Frames User Language (FUL)";
+   "Author : François Colonna 10 septembre 2016 at 17:14:44+02:00";
+ ]
+;;
+
+let nam_mod = Management_v.current_module_name (documentation ());;
+
+let handle_command_alternative_subtree_of_inputbox_name_of_localinput_lexer_symbol_stack nam_ibo sym_lex_s = 
+  let nam_fun = "handle_command_alternative_subtree_of_inputbox_name_of_localinput_lexer_symbol_stack" in
+
+  (* Look_ahead in Stack for wor_cap i.e. basic_word_capitalized *)
+
+  (* Stack top is Localinput_lexer_command_...                   *)
+  
+  (* <handle_command_define>      ::= define <block_define> *)
+  (* <handle_command_read>        ::= read <block_read> *)
+  (* <handle_command_set>         ::= set <block_set> *)
+  (* <handle_command_title>       ::= title ( string | { string } ) *)
+
+  (* <handle_command_print>       ::= print <block_print> *)
+  (* <handle_command_write>       ::= write <block_write> *)
+
+  Localinput_parser_tools_v.debug_what_lexer "sym_lex top" nam_mod nam_fun (Stack.top sym_lex_s);
+
+  (* Look_ahead in Stack for wor_cap *)
+  let pre_bwc = 
+    Localinput_lexer_symbol_v.is_localinput_lexer_basic_word_capitalized_symbol_off_localinput_lexer_symbol 
+  in
+  let sym_lex_bwc = Stack_v.find_non_destructive_of_predicate_of_stack pre_bwc sym_lex_s in
+  let wor_cap = Localinput_lexer_symbol_v.string_off sym_lex_bwc in
+
+  Localinput_parser_tools_v.debug_what_string "wor_cap from stack" nam_mod nam_fun wor_cap;
+  
+  let sym_lex_cur = Stack.pop sym_lex_s in
+  
+  Localinput_parser_tools_v.debug_what_lexer " pop " nam_mod nam_fun sym_lex_cur;
+  
+  let sym_llc = (* Coerce Down *) 
+    Localinput_lexer_symbol_v.localinput_lexer_command_symbol_off_localinput_lexer_symbol
+      sym_lex_cur
+  in
+  
+  Localinput_parser_tools_v.debug_what_lexer "command sym_llc" nam_mod nam_fun sym_lex_cur;
+
+  match sym_llc with 
+  | Localinput_lexer_command_symbol_t.Localinput_lexer_command_define ->
+      
+      let sym_loi_kcd = Localinput_symbol_v.localinput_fence_keyword_command_define_constructor wor_cap in
+      let sym_loi_f   = Tree_v.make_of_leaf sym_loi_kcd in
+
+      let sym_loi_hcd = Localinput_symbol_v.localinput_body_handle_command_creation_define_constructor wor_cap in
+      let sym_loi_st  =
+	Localinput_parser_define_v.block_define_subtree_of_inputbox_name_of_localinput_lexer_symbol_stack 
+	  nam_ibo
+	  sym_lex_s
+      in
+      Tree_v.make_of_node sym_loi_hcd [sym_loi_f; sym_loi_st]
+	
+  | Localinput_lexer_command_symbol_t.Localinput_lexer_command_print ->
+      
+      let sym_loi_kcp = Localinput_symbol_v.localinput_fence_keyword_command_print_constructor wor_cap in
+      let sym_loi_f   = Tree_v.make_of_leaf sym_loi_kcp in
+
+      let sym_loi_hcp = Localinput_symbol_v.localinput_body_handle_command_unit_print_constructor wor_cap in
+      let sym_loi_st  =
+	Localinput_parser_command_unit_v.block_print_subtree_of_inputbox_name_of_word_capitalized_of_localinput_lexer_symbol_stack
+	  nam_ibo
+	  wor_cap
+	  sym_lex_s
+      in
+      Tree_v.make_of_node sym_loi_hcp [sym_loi_f; sym_loi_st]
+
+  | Localinput_lexer_command_symbol_t.Localinput_lexer_command_read ->
+      Utilities_v.not_yet_implemented nam_mod (nam_fun ^ " read")
+	
+  | Localinput_lexer_command_symbol_t.Localinput_lexer_command_set ->
+      Utilities_v.not_yet_implemented nam_mod (nam_fun ^ " set")
+	
+  | Localinput_lexer_command_symbol_t.Localinput_lexer_command_title	->
+      Utilities_v.not_yet_implemented nam_mod (nam_fun ^ " title")
+	
+  | Localinput_lexer_command_symbol_t.Localinput_lexer_command_write  ->
+      Utilities_v.not_yet_implemented nam_mod (nam_fun ^ " write")
+;;
+
+let localinput_block_tree_of_inputbox_name_of_localinput_lexer_symbol_stack nam_ibo sym_lex_s =
+  let nam_fun = "localinput_block_tree_of_inputbox_name_of_localinput_lexer_symbol_stack" in
+
+ (* <input_block>                ::= { <command> } *)
+ (*                                      stop *)
+
+ (* <command>                    ::= | <command_creation> *)
+ (*                                  | <command_unit> *)
+
+ (* <command_creation>           ::= | <handle_command_define>  *)
+ (*                                  | <handle_command_read> *)
+ (*                                  | <handle_command_set> *)
+ (*                                  | <handle_command_title> *)
+
+  Localinput_parser_tools_v.debug_what_string "top nam_ibo" nam_mod nam_fun nam_ibo;
+  Localinput_parser_tools_v.debug_what_lexer "top sym_lex" nam_mod nam_fun (Stack.top sym_lex_s);
+
+  let sof_cur = "localinput" in
+  let rec apply acc_tl lex_s =
+    
+    let sym_lex_cur = Stack.top lex_s in
+    Localinput_parser_tools_v.debug_what_lexer "recursive top" nam_mod nam_fun sym_lex_cur;
+
+    match sym_lex_cur with 
+    | Localinput_lexer_symbol_t.Localinput_lexer_command_symbol _ ->
+	
+	let sym_loi_st = 
+	  handle_command_alternative_subtree_of_inputbox_name_of_localinput_lexer_symbol_stack 
+	    nam_ibo
+	    sym_lex_s 
+	in 
+	apply (acc_tl @ [ sym_loi_st ]) lex_s
+
+    | w when w = Localinput_lexer_symbol_v.localinput_lexer_keyword_stop ->
+
+        (ignore (Stack.pop lex_s));
+
+	let sym_loi = Localinput_symbol_v.localinput_fence_keyword_word_stop_constructor sof_cur in
+	let sym_loi_f = Tree_v.make_of_leaf sym_loi in 
+	(acc_tl @ [sym_loi_f])
+
+    | _ ->
+	Error_messages_v.print_syntax_error __LOC__ nam_fun
+	  "Current Lexeme were command | stop"
+	  (Format.sprintf "Current Lexeme is >%s<@." (Localinput_lexer_symbol_v.fullname sym_lex_cur))
+	  (Format.sprintf "Check input file :@.  %s@." nam_ibo)
+  in
+
+  let sym_loi_tl = apply [] sym_lex_s in
+  let sym_loi_fno = Localinput_symbol_v.localinput_context_inputbox_constructor nam_ibo in
+  
+  Tree_v.make_of_node sym_loi_fno sym_loi_tl
+;;
+
+let localinput_lexer_symbol_stack_of_localinput_lexer_symbol_list sym_lex_l =
+  let sym_lex_s : Localinput_lexer_symbol_t.localinput_lexer_symbol 
+      Stack.t = Stack.create () 
+  in
+  let sym_lex_rl = List.rev sym_lex_l in
+  List.iter (fun l -> Stack.push l sym_lex_s) sym_lex_rl;
+  sym_lex_s
+;;
+
+let localinput_lexer_symbol_stack_of_fullnameoffile fno =
+  let sym_lex_l = 
+    Localinput_lexer_lexical_analysis_v.localinput_lexer_symbol_list_of_fullnameoffile 
+      fno 
+  in
+  localinput_lexer_symbol_stack_of_localinput_lexer_symbol_list sym_lex_l
+;;
+
+let localinput_symbol_tree_root_inputbox_of_fullnamefile fno =
+  let nam_fun = "localinput_symbol_tree_root_inputbox_of_fullnamefile" in
+
+  let sym_lex_s = localinput_lexer_symbol_stack_of_fullnameoffile fno in
+  let fno_ibo = Localinput_lexer_symbol_v.string_off (Stack.pop sym_lex_s) in
+  if (fno = fno_ibo)
+  then 
+    begin
+      let nam_ibo = Context_name_by_context_fullnameoffile_provider_v.provide fno in
+      localinput_block_tree_of_inputbox_name_of_localinput_lexer_symbol_stack 
+	nam_ibo 
+	sym_lex_s 
+    end
+  else
+    Error_messages_v.print_fatal_error __LOC__ nam_fun
+      (Format.sprintf "Inputbox fullnameoffile >%s< from Stack were the same as argument >%s<" 
+	 fno_ibo fno)
+      "it is NOT"
+      "Check both"
+;;
+
+let localinput_symbol_tree_root_inputbox_of_inputbox_name nam_ibo =
+  let nam_fun = "localinput_symbol_tree_root_inputbox_of_inputbox_name" in
+  let pro_cpu = Management_v.entering_of_module_name_of_function_name nam_mod nam_fun in
+
+  let fno_ibo = Localinput_lexer_symbol_v.string_off (Stack.pop sym_lex_s) in
+  let sym_loc_t =
+    localinput_symbol_tree_root_inputbox_of_fullnamefile 
+      fno_ibo
+  in
+  Management_v.exiting_of_process_times_of_module_name_of_function_name pro_cpu nam_mod nam_fun;
+  sym_loc_t
+;;
+
+

@@ -1,0 +1,70 @@
+define Con_db1 
+       context 
+	 database "db1points"
+         domain "figure"
+	 end -- context
+       end -- define
+
+define Con_hom 
+       context 
+	 createdby Hom_b_2
+         domain "figure"
+	 end -- context
+       end -- define
+
+define Cen_b
+       external 
+         type [ "figure" "set" "fence" "point" "constructor" ]
+         external_name "BC_B"
+         external_context Con_db1
+         end -- external
+       end -- define
+
+define Poi_a	
+       external 
+         type [ "figure" "set" "fence" "point" "constructor" ]
+         external_name "T_A"
+         external_context Con_db1
+         end -- external
+       end -- define
+
+define Hom_b_2
+       operator 
+         type [ "operator" "set" "body" "creation" "transformation" "constructor" ]
+         operation "homothety"
+         ondomain "figure"
+	 cofactor 
+           cofactor_basic 2.0
+           cofactor_entity Cen_b
+           end -- cofactor	
+         end -- operator
+       end -- define
+
+define Poi_h
+       target 
+         type [ "property" "operand" "body" "target" "created" "constructor" ]
+	 target_operator Hom_b_2 
+         target_operand Poi_a
+	 end -- target
+       end -- define
+
+define Uni_len
+       external 
+         type [ "units" "length" "bohr" ]
+         external_context Con_nwc
+         end -- external
+       end -- define
+
+define Uni_ang
+       external 
+         type [ "units" "angle" "radian" ]
+         external_context Con_nwc
+         end -- external
+       end -- define
+
+write Poi_h
+      file "point_h.out"
+      units [ Uni_len Uni_ang ]
+      end -- write
+
+stop

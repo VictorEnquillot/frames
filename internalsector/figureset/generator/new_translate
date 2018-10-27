@@ -1,0 +1,37 @@
+let translate_without_trace tag_fff =
+  let tag_fat = Tag_v.map_entity                  (* coerce up *)
+      Database_entity_symbol_v.database_entity_symbol_of_database_entity_fatherent_symbol
+      tag_fff
+  in
+
+  if Son_database_entity_tag_list_by_father_database_entity_tag_register_v.is_stored tag_fat
+  then
+    begin 
+      let tag_son_l = 
+	Son_database_entity_tag_list_by_father_database_entity_tag_register_v.retrieve 
+	  tag_fat
+      in
+      List.map 
+	(Tag_v.map_entity                           (* coerce down *)
+	   Database_entity_symbol_v.database_entity_sonent_symbol_off_database_entity_symbol)
+	   tag_son_l
+    end
+  else build_n_store tag_fff
+;;
+
+let translate_with_trace tag_fff =
+  let nam_cod = Management_v.current_module_name (documentation ()) in
+  Management_v.entering_of_current_module_name nam_cod;
+
+  let result = translate_without_trace tag_fff in
+
+  Management_v.exiting_of_current_module_name nam_cod;
+  result
+;;
+
+let translate tag_fff =
+  if Parameters_figureset_general_provider_v.provide "trace-translate" = "true"
+  then translate_with_trace tag_fff
+  else translate_without_trace tag_fff
+;;
+

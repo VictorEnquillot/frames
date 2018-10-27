@@ -1,0 +1,29 @@
+    let str_old = retrieve tra_ent in
+    if str_old <> str
+    then
+      begin
+	let nam_ent = Trail_v.value_off_trail_of_key tra_ent "entity" in
+	let tra_cat = List.tl tra_ent in
+	let nam_fil = 
+          Filename_p.name
+            (Database_filename_by_category_trail_provider_v.provide tra_cat) 
+	in
+	Error_messages_v.print_fatal_error 
+	  nam_cod 
+          "store"
+          (Format.sprintf "for key >%s<@.    already stored value >%s< equal new one"
+             (Trail_v.name tra_ent)
+             (Utils_v.identity str_old) 
+	  )
+	  
+          (Format.sprintf ">%s<" (Utils_v.identity str) )
+          (Format.sprintf "check for duplicated entry >%s< in file:@.       >%s<" nam_ent nam_fil)
+      end
+    else 
+      Error_messages_v.print_warning
+	nam_cod 
+        "store"
+        (Format.sprintf "for key >%s<@.    already stored value >%s<"
+           (Trail_v.name tra_ent)
+           (Utils_v.identity str_old) 
+	)

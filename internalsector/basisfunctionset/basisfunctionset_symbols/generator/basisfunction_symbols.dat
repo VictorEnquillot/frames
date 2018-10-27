@@ -1,0 +1,55 @@
+constructors  figure                   =   basisfunction
+
+constructors basisfunction                  =   basisfunction_context   basisfunction_set
+
+constructors basisfunction_set              =   basisfunction_set_body   basisfunction_set_fence
+
+constructors basisfunction_context          =   basisfunction_context_database   basisfunction_context_databox  basisfunction_context_domain   basisfunction_context_sector
+
+constructors basisfunction_context_database =   basisfunction_context_database_constructor:ofstring
+
+constructors basisfunction_context_databox  =   basisfunction_context_databox_constructor:ofstring
+
+constructors basisfunction_context_domain   =   basisfunction_context_domain_constructor:ofstring
+
+constructors basisfunction_context_sector   =   basisfunction_context_sector_constructor:ofstring
+
+# body
+
+constructors basisfunction_set_body             =   basisfunction_set_body_centered   basisfunction_set_body_periodic
+
+
+constructors basisfunction_set_body_centered    =   basisfunction_set_body_centered_aopxfset   basisfunction_set_body_centered_ecppxfset
+
+constructors basisfunction_set_body_centered_aopxfset   =   basisfunction_set_body_centered_aopxfset_onecenter   basisfunction_set_body_centered_aopxfset_anycenter   basisfunction_set_body_centered_aopxfset_shellsymmetry   basisfunction_set_body_centered_aopxfset_shellordinal
+
+constructors basisfunction_set_body_centered_aopxfset_onecenter       =   basisfunction_set_body_centered_aopxfset_onecenter_constructor:ofstring
+		 
+constructors basisfunction_set_body_centered_aopxfset_anycenter       =   basisfunction_set_body_centered_aopxfset_anycenter_constructor:ofstring
+		 
+constructors basisfunction_set_body_centered_aopxfset_shellsymmetry   =   basisfunction_set_body_centered_aopxfset_shellsymmetry_constructor:ofstring
+
+constructors basisfunction_set_body_centered_aopxfset_shellordinal    =   basisfunction_set_body_centered_aopxfset_shellordinal_constructor:ofstring
+
+constructors basisfunction_set_body_centered_ecppxfset   =   basisfunction_set_body_centered_ecppxfset_constructor:ofstring
+
+constructors basisfunction_set_body_periodic             =   basisfunction_set_body_periodic_blochwaveset   basisfunction_set_body_periodic_waveletset
+
+constructors basisfunction_set_body_periodic_blochwaveset=   basisfunction_set_body_periodic_blochwaveset_constructor:ofstring
+
+constructors basisfunction_set_body_periodic_waveletset  =   basisfunction_set_body_periodic_waveletset_constructor:ofstring
+
+
+constructors basisfunction_set_fence                 =   basisfunction_set_fence_centered   basisfunction_set_fence_periodic
+
+constructors basisfunction_set_fence_centered        =   basisfunction_set_fence_centered_aopxf   basisfunction_set_fence_centered_ecppxf
+
+constructors basisfunction_set_fence_centered_aopxf  =   basisfunction_set_fence_centered_aopxf_constructor:ofstring
+
+constructors basisfunction_set_fence_centered_ecppxf =   basisfunction_set_fence_centered_ecppxf_constructor:ofstring
+
+constructors basisfunction_set_fence_periodic          =   basisfunction_set_fence_periodic_blochwave   basisfunction_set_fence_periodic_wavelet
+
+constructors basisfunction_set_fence_periodic_blochwave=   basisfunction_set_fence_periodic_blochwave_constructor:ofstring
+
+constructors basisfunction_set_fence_periodic_wavelet  =   basisfunction_set_fence_periodic_wavelet_constructor:ofstring

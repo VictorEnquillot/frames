@@ -1,0 +1,42 @@
+(** {6 Naming} *)
+
+let name ttt =
+  Doublet_v.name
+    String_v.string_of_float
+    Units_actual_this_v.name 
+    ttt
+;;
+
+(** {6 Shortnaming} *)
+
+let shortname ttt =
+  Doublet_v.name
+    String_v.string_of_float
+    Units_actual_this_v.shortname 
+    ttt
+;;
+
+(** {6 Longnaming} *)
+
+let longname ttt =
+  Doublet_v.name
+    String_v.string_of_float
+    Units_actual_this_v.longname
+    ttt
+;;
+
+(** {6 Fullnaming} *)
+
+let fullname ttt =
+  Doublet_v.name
+    String_v.string_of_float
+    Units_actual_this_v.fullname
+    ttt
+;;
+
+(** {6 Dimensioning} *)
+
+let dimension ttt = 
+  let uni = units_actual_this_off_measure_actual_this ttt in
+  Units_actual_this_v.dimension uni
+;;

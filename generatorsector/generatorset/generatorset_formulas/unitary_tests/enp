@@ -1,0 +1,12 @@
+  [Entity_symbol_t.Entity_proper_symbol
+    (Entity_proper_symbol_t.Currententity "coordinate_cartesian");
+   Entity_symbol_t.Entity_proper_symbol
+    (Entity_proper_symbol_t.Currententity "coordinate_cylindrical");
+   Entity_symbol_t.Entity_proper_symbol
+    (Entity_proper_symbol_t.Currententity "coordinate_polar");
+   Entity_symbol_t.Entity_proper_symbol
+    (Entity_proper_symbol_t.Currententity "coordinate_spherical");
+   Entity_symbol_t.Entity_proper_symbol
+    (Entity_proper_symbol_t.Currententity "triangle_isoceles");
+   Entity_symbol_t.Entity_proper_symbol
+    (Entity_proper_symbol_t.Currententity "triangle_scalene")]

@@ -1,0 +1,66 @@
+digraph dgn {
+    size="14,14";
+
+    edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+    node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+
+    Title [label = "BNF Tree\nfor Context Con_nwc\nfor Nwchem Database\n" fontsize=24, shape="record", color=lightblue, style=filled];
+
+
+  "Con_nwc" [color=green] ;
+
+  "<handle_command_define>";
+  "<handle_command_print>";
+  "<handle_variable_kind>";
+
+  "print" [color=lightblue];
+  "<block_print>";
+  "<cell_domain>";
+  "<cell_database>";
+  "<cell_datafile>";
+
+    "database" [color=lightblue];
+    "datafile" [color=lightblue];
+    "domain" [color=lightblue];
+    "end_context" [color=lightblue];
+    "end_define" [color=lightblue];
+
+    "stop" [color=lightblue];
+
+    "define" [color=lightblue];
+    "context" [color=lightblue] ;
+
+    "<block_variable_context>";
+    "<block_define>";
+
+    "nwchem" [color=green] ;
+    "cc_pvtz" [color=green] ;
+    "prototype"[color=green] ;
+
+
+
+  "<localinput_block>\ninput file" -> {"<handle_command_define>" "<handle_command_print>" "stop"}; 
+
+subgraph cluster_0 {
+  "<handle_command_define>"       -> {"define" "<block_define>"};
+  "<block_define>"         -> {"Con_nwc" "<handle_variable_kind>" "end_define"};
+  "<handle_variable_kind>" -> {"context" "<block_variable_context>"};
+
+  {"<cell_domain>"}         -> { "domain" "prototype"};
+  {"<cell_database>"}       -> { "database" "nwchem"};
+  {"<cell_datafile>"}       -> { "datafile" "cc_pvtz"};
+
+  "<block_variable_context>"   ->  {"<cell_domain>"};
+  "<block_variable_context>"   ->  {"<cell_database>"};
+  "<block_variable_context>"   ->  {"<cell_datafile>"};
+  "<block_variable_context>"   ->  {"end_context"};
+}
+
+subgraph cluster_1 {
+  "<handle_command_print>"        -> {"print" "<block_print>"};
+
+}
+}
+

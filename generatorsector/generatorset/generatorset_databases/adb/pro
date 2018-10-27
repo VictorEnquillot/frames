@@ -1,0 +1,8 @@
+    if not (Trail_v.has_of_head_key_off_trail "category" tra_cat) 
+    then 
+      Error_messages_v.print_fatal_error nam_cod "provide"
+	"category trail"
+	(Format.sprintf "%s instead" (Trail_v.name tra_cat))
+	"Check"
+    else
+      begin

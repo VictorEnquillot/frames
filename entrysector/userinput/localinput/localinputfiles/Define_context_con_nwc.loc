@@ -1,0 +1,10 @@
+define Con_nwc 
+       context
+	 sector "internal"
+         domain "skeleton"
+	 database "nwchem"
+	 databox "cc_pvtz"
+	 end -- context
+       end -- define
+
+stop

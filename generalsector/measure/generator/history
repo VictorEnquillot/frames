@@ -1,0 +1,38 @@
+
+modify_string.pl Elementary_fence_units_ Units_ *ml 
+modify_string.pl elementary_fence_units_ units_ *ml 
+modify_string.pl _symbol_ _ *ml 
+modify_string.pl "_symbol)" ")" *ml 
+modify_string.pl "_symbol =" " =" *ml
+modify_string.pl "_symbol of" " of" *ml
+modify_string.pl "e_symbol" "e" *ml
+modify_string.pl "h_symbol" "h" *ml
+modify_string.pl "l_symbol" "l" *ml
+modify_string.pl "m_symbol" "m" *ml
+modify_string.pl "n_symbol" "n" *ml
+modify_string.pl "s_symbol" "s" *ml
+modify_string.pl "y_symbol" "y" *ml
+
+modify_string.pl "(_Units" "(Units" *ml
+modify_string.pl "(float, units" "(float, Units" *ml
+
+modify_string.pl units_actual_angle_v Units_actual_angle_v *ml
+modify_string.pl units_actual_energy_v Units_actual_energy_v *ml
+modify_string.pl units_actual_charge_v Units_actual_charge_v *ml
+modify_string.pl units_actual_length_v Units_actual_length_v *ml
+modify_string.pl units_actual_mass_v Units_actual_mass_v *ml
+modify_string.pl units_actual_none_v Units_actual_none_v *ml
+modify_string.pl units_actual_time_v Units_actual_time_v *ml
+modify_string.pl units_actual_temperature_v Units_actual_temperature_v *ml
+modify_string.pl units_canonical_v Units_canonical_v *ml
+modify_string.pl units_canonical_classical_v Units_canonical_classical_v *ml
+modify_string.pl units_canonical_quantum_v Units_canonical_quantum_v *ml
+modify_string.pl units_canonical_classical_conversion_v Units_canonical_classical_conversion_v *ml
+modify_string.pl units_canonical_quantum_conversion_v Units_canonical_quantum_conversion_v *ml
+
+modify_string.pl t._units_ t.Units_ *ml
+
+
+
+
+sed 's/of_measure_\(.*\)_of_calculation_name \([a-z_]*\) nam_cal/of_calculation_name_of_measure_\1 nam_cal \2/' Measure_actual_mass_v.ml

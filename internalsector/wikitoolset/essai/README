@@ -1,0 +1,32 @@
+
+syntaxe concrète : flux de char
+syntaxe abstraite : arbre
+
+val parse_html : lexeme stream -> syntax tree
+let parse_html_file_of  =
+
+	let htm_tag = html_tag_of_scanning_in_channel iss in
+
+        let att_l =
+
+        in
+
+        let htm_tl =  
+        in
+
+        Html_lexeme_v.make_tag_node htm_tag att_l htm_tl
+
+
+
+Scanf.Scanning.from_string "";;
+
+ val bscanf : Scanning.in_channel -> ('a, 'b, 'c, 'd) scanner 
+ val fscanf : in_channel -> ('a, 'b, 'c, 'd) scanner 
+ val kscanf : Scanning.in_channel ->
+       (Scanning.in_channel -> exn -> 'a) -> ('b, 'c, 'd, 'a) scanner 
+
+
+
+<tag attribute="parameter list"> 
+  [<tag > ... </tag> list]
+</tag>

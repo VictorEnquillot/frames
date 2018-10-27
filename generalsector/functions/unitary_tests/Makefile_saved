@@ -1,0 +1,92 @@
+######################################################################
+#                                                                    #
+#                         Frames                                     #
+#                                                                    #
+#                 Pierre Weis, INRIA Rocquencourt                    #
+#     François Colonna, Laboratoire de Chimie Théorique, Paris 6     #
+#                                                                    #
+#  Copyright 2005-2007,                                              #
+#  Institut National de Recherche en Informatique et en Automatique, #
+#  Centre National de la Recherche Scientifique.                     #
+#  All rights reserved.                                              #
+#                                                                    #
+#  This file is distributed under the terms of the Q Public License. #
+#                                                                    #
+######################################################################
+
+# $Id: Makefile,v 1.21 2007-12-22 19:17:07 colonna Exp $
+
+# The Makefile for frames_13_jan_2008 tests.
+
+# The directory where Makefile templates reside.
+FRAMES_DIR = ../../..
+TOP_DIR = $(FRAMES_DIR)/top
+MAKEFILES_DIR = $(FRAMES_DIR)/Mk
+FUNCTIONS_DIR = $(TOP_DIR)/functions
+
+FUNCTIONS_LIB = $(FUNCTIONS_DIR)/functions
+
+# Include the generic setup for Caml applications.
+include $(MAKEFILES_DIR)/Config.mk
+
+CAMLCINCLUDES = -I $(TOP_DIR) -I $(FUNCTIONS_DIR)
+LINKFLAGS = -I $(TOP_DIR) -I $(FUNCTIONS_DIR)
+
+# We need to relax the warning is error option of the compiler,
+# since moca still generates unused match cases.
+CAMLBYTCONFIG = -g $(CAMLBYTINCLUDES)
+CAMLBINCONFIG = $(CAMLBININCLUDES)
+
+# The special base name of the modules to generate tests
+TESTGEN = gentest_v 
+
+# The base names of test files (normally there is no .mli file).
+TESTING = \
+  tfonction_v.ml \
+  tradial_fonction_v.ml 
+
+# Used to compute .depend
+ALLTESTING = $(TESTGEN:%=%.mli) $(TESTGEN:%=%.ml) $(TESTING)
+
+CAMLINTFILES = $(TESTGEN:%=%.mli)
+CAMLIMPFILES = $(TESTGEN:%=%.ml) $(TESTING)
+
+# Used to compute .depend
+CAMLFILES = $(CAMLINTFILES) $(CAMLIMPFILES)
+
+BYTOBJS = $(CAMLIMPFILES:%.ml=%.cmo)
+
+WITH_BYT_LIBS = $(WITHBYTUNIX) $(WITHBYTSTR) $(FUNCTIONS_LIB).cma
+
+.PHONY: bytlib run
+
+all: byt run
+
+byt: runtest.byt
+
+runtest.byt: bytlib $(BYTOBJS)
+	$(CAMLBYT) $(LINKFLAGS) -o runtest.byt $(WITH_BYT_LIBS) $(BYTOBJS)
+
+bytlib:
+	(cd ..; $(MAKE) $@)
+
+#WITH_BIN_LIBS = $(WITHBINUNIX) $(WITHBINSTR) $(WITHBINFRAMES)
+#BINOBJS = $(BYTOBJS:%.cmo=%.cmx)
+#bin: runtest.bin
+
+#runtest.bin: binlib $(BINOBJS)
+#	$(CAMLBIN) $(LINKFLAGS) -o runtest.bin $(WITH_BIN_LIBS) $(BINOBJS)
+
+#binlib:
+	(cd ..; $(MAKE) $@)
+
+#run: runtest.byt runtest.bin
+#	./runtest.byt
+#	./runtest.bin
+
+run: runtest.byt
+	./runtest.byt
+
+configure::
+
+include $(MAKEFILES_DIR)/Caml.mk

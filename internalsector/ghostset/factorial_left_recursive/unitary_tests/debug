@@ -1,0 +1,6 @@
+ledit -x -h ./.debug-history ocamldebug \
+-I ../../../general/basics \
+-I ../../../general/files \
+-I ../../../general/datastructures \
+-I ../ \
+runtest.byt

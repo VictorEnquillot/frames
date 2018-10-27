@@ -1,0 +1,13 @@
+ledit -x -h ./.toplevel-history ocaml \
+-I $BAS \
+-I $FIL \
+-I $DAT \
+-I $AGNR \
+-I $SGNR \
+-I $TGNR \
+-I $IGNR \
+-I $FGNR \
+-I $VGNR \
+unix.cma str.cma \
+$GNR/generatorset_values/generatorset_values.cma
+

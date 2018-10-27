@@ -1,0 +1,40 @@
+digraph prototype_containers {  size="14,14";
+  edge [fontname = "Bitstream Vera Sans" fontsize = 15 arrowsize="0.7" dir = down];
+
+  Title [label = "The Container Tree\nfor Prototype Domain" shape="record" color=lightblue, style=filled];
+
+  node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+  "Prototype\nContainers" [style = filled, color = yellow, 
+		fontname="Palatino-Italic",fontcolor=black];
+  "Prototype\nContainers" -> "Aopef_set\nAny_center"[color=red, label="list"];
+
+  "Aopef_set\nAny_center" -> "Aopef_set\nA_center" [color=red, label="list"];
+
+  "Aopef_set\nA_center" -> "Aopef_set\nShell_symmetry" [color=red, label="list"];
+
+  "Aopef_set\nShell_symmetry" -> "Aopef_set\nShell_ordinal" [color=red, label="list"];
+
+  node [color=orange, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+
+  "Aopef_set\nShell_ordinal" -> "Aopef\n(Fence)" [color=red, label="list"];
+
+ node [color=lightblue, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+  "Aopef\n(Fence)" -> {"Elementary\nParameter_Tuple\nAopef"} [color=Blue label="Transdomain"];
+
+  "Elementary\nParameter_Tuple\nAopef" -> {"Elementary\nCoefficient" "Elementary\nExponent"} [label="Doublet"];
+
+
+ node [color=yellowgreen, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+  "Elementary\nCoefficient" -> "Elementary\nUnits\n(Deepfence)"
+  "Elementary\nExponent" -> "Elementary\nUnits\n(Deepfence) "
+		
+}
+
+
+#  "Elementary\nCoordinate Tuple" [shape = diamond, color = yellowgreen];
+#  "Aopef\nFence" [shape = box, color = lightblue];
+

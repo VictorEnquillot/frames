@@ -1,0 +1,49 @@
+# constructors chemical                                            =   closed   semi_closed   linear  forked 
+
+
+# .closed
+constructors   chemical                                          =   closed_atom   closed_block   closed_segment   closed_grouping
+
+
+
+# ..closed_atom
+constructors   closed_atom                                       =   closed_atom_neutral   closed_atom_anion   closed_atom_cation
+
+# ...closed_atom_anion
+constructors   closed_atom_anion                                 =   fm1   hm1   clm1   brm1   im1  om2   sm2
+
+# ...closed_atom_cation
+constructors   closed_atom_cation                                =   hp1   kp1   lip1   nap1   nip1   cup1   mgp2   cap2   fep2   znp2   cup2   fep3   nip3
+
+# ...closed_atom_neutral
+constructors   closed_atom_neutral                               =   ar   he   kr   ne   xe
+
+
+
+
+# ..closed_block
+constructors   closed_block                                      =   closed_block_anion   closed_block_cation   closed_block_neutral
+
+# ..closed_block_anion
+constructors   closed_block_anion                                =   closed_block_anion_constructor:ofstring
+
+# ..closed_block_cation
+constructors   closed_block_cation                               =   closed_block_cation_constructor:ofstring
+
+# ..closed_block_neutral
+constructors   closed_block_neutral                              =   z_fh_z   z_h2_z   z_sh_z   z_o2_z   z_no_z   z_co_z   z_n2_z
+
+
+
+# ..closed_segment
+constructors   closed_segment                                    =   closed_segment_anion   closed_segment_cation   closed_segment_neutral
+
+# ..closed_segment_anion
+constructors   closed_segment_anion                              =   closed_segment_anion_constructor:ofstring
+
+# ..closed_segment_cation
+constructors   closed_segment_cation                             =   closed_segment_cation_constructor:ofstring
+
+# ..closed_segment_neutral
+constructors   closed_segment_neutral                            =   closed_segment_neutral_constructor:ofstring
+

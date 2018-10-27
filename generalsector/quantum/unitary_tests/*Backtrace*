@@ -1,0 +1,5 @@
+Debugger entered--Lisp error: (mark-inactive)
+  signal(mark-inactive nil)
+  mark()
+  (list (point) (mark))
+  call-interactively(kill-region)

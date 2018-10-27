@@ -1,0 +1,30 @@
+constructors   figure                           =   operator
+
+constructors   operator                         =   operator_cofactor   operator_endomorphism   operator_measure   operator_unit
+
+constructors   operator_cofactor                =   operator_cofactor_axis   operator_cofactor_center   operator_cofactor_file   operator_cofactor_ratio   operator_cofactor_vector      
+
+constructors   operator_endomorphism            =   operator_copy   operator_extractor   operator_transformation   
+
+constructors   operator_extractor               =   extractor_basis:ofstring    extractor_centroid:ofstring   extractor_edge:ofstring   extractor_hypotenuse:ofstring   extractor_orthocenter:ofstring   extractor_side:ofstring   extractor_summit:ofstring   extractor_vertex:ofstring   
+
+constructors   operator_transformation          =   operator_homothety   operator_rotation   operator_translation
+
+constructors   operator_homothety               =   operator_homothety_constructor:ofstring	  
+
+constructors   operator_rotation                =   operator_rotation_constructor:ofstring	  
+
+constructors   operator_translation             =   operator_translation_constructor:ofstring	  
+
+constructors   operator_measure                 =   operator_length   operator_perimeter   operator_surface   
+
+constructors   operator_length                  =   operator_length_constructor:ofstring
+
+constructors   operator_perimeter               =   operator_perimeter_constructor:ofstring
+
+constructors   operator_surface                 =   operator_surface_constructor:ofstring
+
+constructors   operator_unit                    =   operator_print   operator_write
+
+
+

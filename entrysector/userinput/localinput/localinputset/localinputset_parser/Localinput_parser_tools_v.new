@@ -1,0 +1,635 @@
+(** {3 Localinput_parser_tools_v} *)
+
+(** {6 Documenting} *)
+
+let documentation () = 
+  [
+   "Current : PARLOI:Localinput_parser_tools_v";
+   "What-is-it : a set of tools. Should be moved to general directory";
+ ]
+;;
+
+let nam_mod = Management_v.current_module_name (documentation ());;
+
+let debug_what_lexer what nam_mod nam_fun sym_lex =
+  Management_v.debug_what_string what nam_mod nam_fun (Localinput_lexer_symbol_v.fullname sym_lex);
+;; 
+
+let debug_what_string what nam_mod nam_fun str =
+  Management_v.debug_what_string what nam_mod nam_fun str
+;; 
+
+let skip_any_space ich =
+  let rec apply ich =
+    Scanf.bscanf ich "%0c"
+      (fun c ->
+	match c with  
+	| ' ' | '\t' | '\n'  -> 
+	    let _ = Scanf.bscanf ich "%1c" (fun c -> (Format.sprintf "%c" c)) in () ;
+	    apply ich;
+	| _ -> ()
+
+      )
+  in
+  apply ich 
+;;
+
+let skip_string_until_eol ich =
+  let rec apply ich =
+    Scanf.bscanf ich "%1c"
+      (fun c ->
+	match c with  
+	| '\n'  -> ()
+	| _ -> 
+	    ();
+	    apply ich;
+      )
+  in
+  apply ich 
+;;
+
+let string_until_of_char_of_in_channel cha ich =
+(* needs a syntaxic analysis *)
+  let rec apply ich str =
+    Scanf.bscanf ich "%0c"
+      (fun c ->
+	match c with  
+	| c when c = cha -> 
+	    let _ = Scanf.bscanf ich "%1c" (fun c -> (Format.sprintf "%c" c)) in
+	    str
+
+	| _ ->
+	    let cst = Scanf.bscanf ich "%1c" (fun c -> (Format.sprintf "%c" c)) in
+	    let str = str ^ cst in
+	    (apply ich str)
+      )
+  in
+  apply ich ""
+;;
+
+let word_of_in_channel ich =
+  let _ = string_until_of_char_of_in_channel '=' ich in
+  skip_any_space ich;
+  Scanf.bscanf ich "%s" (fun s -> s)
+;;
+
+let scalar_string_of_in_channel ich =
+  let nam_fun = "scalar_string_of_in_channel" in
+  let wor = word_of_in_channel ich in
+  if not (String_v.is_generalized_float_of_string wor)
+  then
+    Error_messages_v.print_fatal_error nam_mod nam_fun 
+      "current Word represented a float"
+      (Format.sprintf ">%s<" wor)
+      (Format.sprintf "Check input file") 
+  else wor
+;;
+
+let name_list_string_of_in_channel ich =
+  let _ = string_until_of_char_of_in_channel '{' ich in
+  skip_any_space ich;
+  String.trim (string_until_of_char_of_in_channel '}' ich)
+;;
+
+let localinput_lexer_pop_symbol_of_module_name_of_function_name_of_stack nam_mod nam_fun sym_lex_s =
+  let sym_lex_pop =
+    try Stack.pop sym_lex_s
+    with Stack.Empty ->
+      Error_messages_v.print_syntax_error nam_mod nam_fun
+	"Localinput_lexer_keyword_end_of_file Lexeme were set in Lexeme list"
+	"it is NOT : Stack is Empty"
+	"Please check Localinput_lexer_lexical_analysis_v.ml"
+  in
+  Management_v.debug_what_string "POP@." nam_mod nam_fun (Localinput_lexer_symbol_v.fullname sym_lex_pop); 
+  
+  sym_lex_pop
+;;
+
+let localinput_lexer_top_symbol_of_module_name_of_function_name_of_stack nam_mod nam_fun sym_lex_s =
+  let sym_lex_top =
+    try Stack.top sym_lex_s
+    with Stack.Empty ->
+      Error_messages_v.print_syntax_error nam_mod nam_fun
+	"Localinput_lexer_keyword_end_of_file Lexeme were set in Lexeme list"
+	"it is NOT : Stack is Empty"
+	"Please check Localinput_lexer_lexical_analysis_v.ml"
+  in
+	
+  Management_v.debug_what_string "sym_lex_top" nam_mod nam_fun (Localinput_lexer_symbol_v.fullname sym_lex_top); 
+  
+  sym_lex_top
+;;
+
+let title_string_of_in_channel ich =
+  let nam_fun = "title_string_of_in_channel" in
+
+  let _ = string_until_of_char_of_in_channel '=' ich in
+  skip_any_space ich;
+
+  Scanf.bscanf ich "%0c"
+    (fun c ->
+      match c with  
+      | '=' -> 
+	  skip_any_space ich;
+	  Scanf.bscanf ich "%s" (fun s -> s)
+      | '\"' ->
+          let _ = (Scanf.bscanf ich "%1c" (fun c -> c) ) in
+          (string_until_of_char_of_in_channel '\"' ich)
+   
+      | _ -> 
+	  Error_messages_v.print_fatal_error nam_mod nam_fun 
+	    "current Character were =|\""
+	    (Format.sprintf ">%c<" c)
+	    (Format.sprintf "Check input file") 
+    )
+;;
+
+let check_l_parenthesis_of_localinput_lexer_symbol_stack sym_lex_s =
+  let nam_fun = "check_l_parenthesis_of_localinput_lexer_symbol_stack" in
+  
+  let sym_lex_top = Stack.top sym_lex_s in
+  if sym_lex_top <> Localinput_lexer_symbol_v.localinput_lexer_token_l_parenthesis
+  then
+      Error_messages_v.print_syntax_error nam_mod nam_fun
+	"Lexeme '(' at beginning of string-expression"
+	(Format.sprintf "Lexeme >%s<" (Localinput_lexer_symbol_v.fullname sym_lex_top))
+	"Check wether '(' and ')' are missing around string-expression in input file"
+  else ()
+;;
+
+let check_double_quote_of_localinput_lexer_symbol_stack sym_lex_s =
+  let nam_fun = "check_double_quote_of_localinput_lexer_symbol_stack" in
+  
+  let sym_lex_top = Stack.top sym_lex_s in
+  if sym_lex_top <> Localinput_lexer_symbol_v.localinput_lexer_token_double_quote
+  then
+      Error_messages_v.print_syntax_error nam_mod nam_fun
+	"Lexeme '(' at beginning of string-expression"
+	(Format.sprintf "Lexeme >%s<" (Localinput_lexer_symbol_v.fullname sym_lex_top))
+	"Check wether '(' and ')' are missing around string-expression in input file"
+  else ()
+;;
+
+let module_debug_store_of_module_tree sym_inp_t =
+
+  let sym_inp_deb_tl = 
+    Tree_v.subtree_filter_of_node_predicate_off_tree
+      Localinput_symbol_v.is_localinput_fence_keyword_word_debug_constructor 
+      sym_inp_t
+  in
+  
+  let sym_inp_mod_tl = List.flatten 
+      (List.map 
+	 (Tree_v.subtree_filter_of_node_predicate_off_tree
+	    Localinput_symbol_v.is_localinput_fence_cell_module_constructor
+	 )
+	 sym_inp_deb_tl)
+  in
+  
+  let sym_inp_l = List.flatten 
+      ( List.map Tree_v.leaf_node_list_off_tree sym_inp_mod_tl )  
+  in
+  
+  let nam_mod_l = List.map Localinput_symbol_v.string_off sym_inp_l in
+
+  List.iter 
+    (fun n -> Trace_what_by_module_name_register_v.store n "debug")
+    nam_mod_l
+;;
+
+
+let leaf_block_of_what_of_localinput_lexer_symbol_stack wha_ien sym_lex_s =
+  let nam_fun = "leaf_block_of_what_of_localinput_lexer_symbol_stack" in
+
+  debug_what_lexer "input" nam_mod nam_fun (Stack.top sym_lex_s);
+
+  let sym_lex_cur = Stack.pop sym_lex_s in 
+
+  debug_what_lexer " pop " nam_mod nam_fun sym_lex_cur;
+
+  let sof_lex = Localinput_lexer_symbol_v.string_off sym_lex_cur in
+  let sym_ien = Localinput_symbol_v.make wha_ien sof_lex in
+  
+  Tree_v.make_of_leaf sym_ien
+;;
+
+let localinput_lexer_symbol_inside_double_quote_of_localinput_lexer_symbol_stack sym_lex_s =
+  let nam_fun = "input_lexer_symbol_inside_double_quote_of_localinput_lexer_symbol_stack" in
+
+(* " some string " or "word" *)
+  debug_what_lexer "input" nam_mod nam_fun (Stack.top sym_lex_s);
+
+  let sym_lex_1 = Stack.pop sym_lex_s in  (* '"' *) 
+  let sym_lex_2 = Stack.pop sym_lex_s in  (* some string | word *) 
+  let sym_lex_3 = Stack.pop sym_lex_s in  (* '"' *) 
+
+  match (sym_lex_1, sym_lex_2, sym_lex_3) with 
+  | (Localinput_lexer_symbol_t.Localinput_lexer_token_symbol
+       Localinput_lexer_token_symbol_t.Localinput_lexer_token_double_quote,
+     
+     Localinput_lexer_symbol_t.Localinput_lexer_basic_symbol _ ,
+      
+      Localinput_lexer_symbol_t.Localinput_lexer_token_symbol
+	Localinput_lexer_token_symbol_t.Localinput_lexer_token_double_quote) ->
+	 
+	 sym_lex_2
+	   
+  | _ ->
+      let nam_mod = Management_v.current_module_name (documentation ()) in 
+      Error_messages_v.print_syntax_error nam_mod nam_fun
+	"3 Lexemes (\", Localinput_lexer_basic_symbol _, \")"
+	(Format.sprintf "Lexeme 1 >%s<@.   Lexeme 2 >%s<@.   Lexeme 3 >%s<@." 
+	   (Localinput_lexer_symbol_v.fullname sym_lex_1)
+	   (Localinput_lexer_symbol_v.fullname sym_lex_2)
+	   (Localinput_lexer_symbol_v.fullname sym_lex_3)
+	)
+	"Check "
+;;
+
+let string_inside_double_quote_of_localinput_lexer_symbol_stack sym_lex_s =
+  let nam_fun = "string_inside_double_quote_of_localinput_lexer_symbol_stack" in
+
+(* " some string " or "word" *)
+  debug_what_lexer "input" nam_mod nam_fun (Stack.top sym_lex_s);
+
+  let sym_lex = 
+    localinput_lexer_symbol_inside_double_quote_of_localinput_lexer_symbol_stack 
+      sym_lex_s
+  in
+
+  debug_what_lexer "after double_quote" nam_mod nam_fun sym_lex;
+
+  Localinput_lexer_symbol_v.string_off sym_lex 
+
+;;
+
+let string_for_string_block_of_localinput_lexer_symbol_stack sym_lex_s =
+  let nam_fun = "string_for_string_block_of_localinput_lexer_symbol_stack" in
+  let nam_mod = Management_v.current_module_name (documentation ()) in 
+	
+  let sym_lex_cur = Stack.pop sym_lex_s in
+  
+  debug_what_lexer "pop" nam_mod nam_fun sym_lex_cur; 
+  
+  match sym_lex_cur with
+  | w when (Localinput_lexer_symbol_v.is_localinput_lexer_basic_string_constructor w
+	  || Localinput_lexer_symbol_v.is_localinput_lexer_basic_word_symbol_off_localinput_lexer_symbol w ) ->
+	
+	Localinput_lexer_symbol_v.string_off sym_lex_cur
+	
+  | _ ->
+      Error_messages_v.print_syntax_error nam_mod nam_fun
+	  "Lexeme ( | string | word_capitalized | )"
+	  (Format.sprintf "Lexeme >%s<@."
+	     (Localinput_lexer_symbol_v.fullname sym_lex_cur) 
+	  )
+	  "Check wether '(' and ')' are missing around string-expression in input file"
+;;
+
+let string_for_parenthesized_string_block_of_localinput_lexer_symbol_stack sym_lex_s =
+  let nam_fun = "string_for_parenthesized_string_block_of_localinput_lexer_symbol_stack" in
+  
+(* <parenthesized_string_block> ::= { <string_block> } ')'                  *)
+  
+(* <string_block>               ::=   <double_quoted_block>                       *)
+(*                                  | <entity_local_variable_identifier_block>             *)
+(* <double_quoted_block>        ::= "a string with our without any blanks"  *)
+(* <entity_local_variable_identifier_block>    ::= Capitalized_word                        *)
+
+  let rec apply acc_str lex_s =
+  
+    let sym_lex_cur = Stack.pop lex_s in
+    
+    debug_what_lexer " sym_lex_cur " nam_mod nam_fun sym_lex_cur;
+    debug_what_string " acc_str " nam_mod nam_fun acc_str;
+
+    match sym_lex_cur with
+
+    | Localinput_lexer_symbol_t.Localinput_lexer_token_symbol
+	Localinput_lexer_token_symbol_t.Localinput_lexer_token_double_quote ->
+
+	  Stack.push sym_lex_cur lex_s; (* improve *) 
+	  let str = string_inside_double_quote_of_localinput_lexer_symbol_stack lex_s in
+	  apply (acc_str ^ str) lex_s
+
+    | Localinput_lexer_symbol_t.Localinput_lexer_basic_symbol
+	(Localinput_lexer_basic_symbol_t.Localinput_lexer_basic_word_symbol
+	   (Localinput_lexer_basic_word_symbol_t.Localinput_lexer_basic_word_capitalized_symbol
+              (Localinput_lexer_basic_word_capitalized_symbol_t.Localinput_lexer_basic_word_capitalized_constructor
+		 str))) ->
+	  
+	  apply (acc_str ^ str) lex_s
+
+    | Localinput_lexer_symbol_t.Localinput_lexer_token_symbol
+	Localinput_lexer_token_symbol_t.Localinput_lexer_token_r_parenthesis ->
+
+	Format.sprintf "%s ]" acc_str 
+
+    | _ ->
+	Error_messages_v.print_syntax_error nam_mod nam_fun
+	  "Lexeme ( | string | word | word_capitalized | )"
+	  (Format.sprintf "Lexeme >%s<@.   Current string already processed is:@.   \"%s\"" 
+	     (Localinput_lexer_symbol_v.fullname sym_lex_cur)  acc_str)
+	  "Check wether '(' and/or ')' are missing around string-expression in input file"
+  in
+
+  apply "" sym_lex_s 
+
+;;
+
+let string_list_inside_bracket_n_double_quote_of_localinput_lexer_symbol_stack sym_lex_s =
+  let nam_fun = "string_list_inside_bracket_n_double_quote_of_localinput_lexer_symbol_stack" in
+  
+    (* <string_list_inside_bracket_n_double_quote> ::=  { """ <string> """ } *)
+  debug_what_lexer "input" nam_mod nam_fun (Stack.top sym_lex_s);
+
+  let rec apply acc_l lex_s =
+  
+    let sym_lex_cur = Stack.pop lex_s in
+    
+    debug_what_lexer " pop " nam_mod nam_fun sym_lex_cur;
+    
+    match sym_lex_cur with
+
+    | Localinput_lexer_symbol_t.Localinput_lexer_token_symbol
+	Localinput_lexer_token_symbol_t.Localinput_lexer_token_double_quote ->
+
+          Stack.push sym_lex_cur lex_s;
+	  let str = string_inside_double_quote_of_localinput_lexer_symbol_stack lex_s in
+
+	  apply (acc_l @ [str]) lex_s
+
+    | Localinput_lexer_symbol_t.Localinput_lexer_token_symbol
+	Localinput_lexer_token_symbol_t.Localinput_lexer_token_r_bracket ->
+
+          Stack.push sym_lex_cur lex_s;
+	  let sym_lex_cur = Stack.top lex_s in  
+	  debug_what_lexer " in r_bracket sym_lex_cur " nam_mod nam_fun sym_lex_cur;
+          debug_what_string " acc_l  " nam_mod nam_fun (List_v.name_with_semicolons (fun s->s) acc_l); 
+	acc_l
+
+    | _ ->
+	Error_messages_v.print_syntax_error nam_mod nam_fun
+	  "Lexeme \""
+	  (Format.sprintf "Lexeme >%s<" (Localinput_lexer_symbol_v.fullname sym_lex_cur))
+	  "Check"
+  in
+
+  let res = apply [] sym_lex_s in
+  let sym_lex_cur = Stack.top sym_lex_s in  
+  debug_what_lexer " after apply sym_lex_cur " nam_mod nam_fun sym_lex_cur; 
+  res
+;;
+
+let entity_symbol_for_expression_string_block_of_localinput_lexer_symbol_stack sym_lex_s =
+  let nam_fun = "entity_symbol_for_expression_string_block_of_localinput_lexer_symbol_stack" in
+  let nam_mod = Management_v.current_module_name (documentation ()) in 
+
+(* <expression_string_block>    ::=   <string_block>                        *)
+(*                                  | <parenthesized_string_block>          *)
+(* <parenthesized_string_block> ::= ( { <string_block> } )                  *)
+(* <string_block>               ::=   <simple_string>                       *)
+(*                                  | <entity_local_variable_identifier_block>             *)
+(* <simple_string>              ::= a string with our without any blanks    *)
+(* <entity_local_variable_identifier_block>    ::= Capitalized_word                        *)
+  debug_what_lexer "input" nam_mod nam_fun (Stack.top sym_lex_s);
+
+  let sym_lex_cur = Stack.pop sym_lex_s in
+
+  debug_what_lexer " pop " nam_mod nam_fun sym_lex_cur;
+
+  let what_entity_frames =  
+    match sym_lex_cur with
+    | Localinput_lexer_symbol_t.Localinput_lexer_token_symbol
+	Localinput_lexer_token_symbol_t.Localinput_lexer_token_double_quote ->
+	  
+	  Stack.push sym_lex_cur sym_lex_s; (* improve *)
+	  let str = 
+	    string_inside_double_quote_of_localinput_lexer_symbol_stack 
+	      sym_lex_s
+	  in
+	  Format.sprintf "string [ %s" str
+
+    | Localinput_lexer_symbol_t.Localinput_lexer_token_symbol
+	Localinput_lexer_token_symbol_t.Localinput_lexer_token_l_parenthesis ->
+	  
+	  let str =
+	    string_for_parenthesized_string_block_of_localinput_lexer_symbol_stack 
+	      sym_lex_s
+	  in 
+	  Format.sprintf "string [ %s" str
+  
+    | Localinput_lexer_symbol_t.Localinput_lexer_basic_symbol
+	(Localinput_lexer_basic_symbol_t.Localinput_lexer_basic_string_symbol
+	   (Localinput_lexer_basic_string_symbol_t.Localinput_lexer_basic_string_constructor str)) ->
+	     
+	  Format.sprintf "string [ %s ]" str 
+	
+
+    | Localinput_lexer_symbol_t.Localinput_lexer_basic_symbol
+	(Localinput_lexer_basic_symbol_t.Localinput_lexer_basic_word_symbol
+	   (Localinput_lexer_basic_word_symbol_t.Localinput_lexer_basic_word_capitalized_symbol
+              (Localinput_lexer_basic_word_capitalized_symbol_t.Localinput_lexer_basic_word_capitalized_constructor str))) ->
+		 
+	  Format.sprintf "string [ %s ]" str
+	    
+    | _ ->
+	Error_messages_v.print_syntax_error nam_mod nam_fun
+	  "Lexeme '(' | string | word | word_capitalized"
+	  (Format.sprintf "Lexeme >%s<@."
+	     (Localinput_lexer_symbol_v.fullname sym_lex_cur)
+	  )
+	  "Check wether '(' and ')' are missing around string-expression in input file"
+  in
+
+  debug_what_string " what_entity_frames " nam_mod nam_fun what_entity_frames;
+
+  Localinput_symbol_v.make "input_entity_frames_entity" what_entity_frames
+;;
+
+let localinput_symbol_for_word_block_of_localinput_entity_what_of_localinput_lexer_symbol_stack wha_ien sym_lex_s =
+  let nam_fun = "input_symbol_for_word_block_of_localinput_entity_what_of_localinput_lexer_symbol_stack" in
+
+  let str = string_inside_double_quote_of_localinput_lexer_symbol_stack sym_lex_s in
+
+  debug_what_string " wha_ien " nam_mod nam_fun wha_ien; 
+  debug_what_string " word | string " nam_mod nam_fun str; 
+
+  Localinput_symbol_v.make wha_ien str
+;;
+
+let word_block_leaf_of_localinput_entity_what_of_localinput_lexer_symbol_stack wha_ien sym_lex_s =
+  let sym_ien = 
+    localinput_symbol_for_word_block_of_localinput_entity_what_of_localinput_lexer_symbol_stack 
+      wha_ien 
+      sym_lex_s 
+  in
+  Tree_v.make_of_leaf sym_ien
+;;
+
+let localinput_symbol_for_float_block_of_localinput_lexer_symbol_stack sym_lex_s =
+  let nam_fun = "input_symbol_for_float_block_of_localinput_lexer_symbol_stack" in
+  let nam_mod = Management_v.current_module_name (documentation ()) in 
+
+(* <float_block> ::=    float *)
+(*                  | - float *)
+  debug_what_lexer "input" nam_mod nam_fun (Stack.top sym_lex_s);
+
+  let rec apply cha lex_s =  
+    
+    let sym_lex_cur = Stack.pop lex_s in
+    
+    debug_what_lexer " pop " nam_mod nam_fun sym_lex_cur;
+    
+    match sym_lex_cur with
+    | Localinput_lexer_symbol_t.Localinput_lexer_token_symbol
+	Localinput_lexer_token_symbol_t.Localinput_lexer_token_minus ->
+	  
+	  apply '-' lex_s	  
+	    
+    | Localinput_lexer_symbol_t.Localinput_lexer_basic_symbol
+	(Localinput_lexer_basic_symbol_t.Localinput_lexer_basic_float_symbol
+	   (Localinput_lexer_basic_float_symbol_t.Localinput_lexer_basic_float_constructor str_flo)) ->
+	     
+	       let str_val = Format.sprintf "%c%s" cha str_flo in
+	       Localinput_symbol_v.localinput_fence_basic_float_constructor str_val
+		 
+    | _ ->
+	Error_messages_v.print_syntax_error nam_mod nam_fun
+	  "Lexeme \"basic_float\" or \"minus\" after >float<"
+	  (Format.sprintf "Lexeme >%s<" (Localinput_lexer_symbol_v.fullname sym_lex_cur))
+	  "Check input file"
+  in
+  
+  apply ' ' sym_lex_s
+
+;;
+
+let float_inside_double_quote_of_localinput_lexer_symbol_stack sym_lex_s =
+  let nam_mod = Management_v.current_module_name (documentation ()) in 
+  let nam_fun = "float_inside_double_quote_of_localinput_lexer_symbol_stack" in
+
+  Utilities_v.not_yet_implemented nam_mod nam_fun;
+;;
+
+let float_block_leaf_subtree_of_localinput_lexer_symbol_stack sym_lex_s =
+  let sym_ien = localinput_symbol_for_float_block_of_localinput_lexer_symbol_stack sym_lex_s in
+  Tree_v.make_of_leaf sym_ien
+;;
+
+let word_capitalized_of_localinput_lexer_symbol sym_lex =
+  
+  match sym_lex with
+  | Localinput_lexer_symbol_t.Localinput_lexer_basic_symbol
+      (Localinput_lexer_basic_symbol_t.Localinput_lexer_basic_word_symbol
+	 (Localinput_lexer_basic_word_symbol_t.Localinput_lexer_basic_word_capitalized_symbol
+            (Localinput_lexer_basic_word_capitalized_symbol_t.Localinput_lexer_basic_word_capitalized_constructor sof))) ->
+	      
+	      sof
+		
+  | _ ->
+      Error_messages_v.print_syntax_error __LOC__ "word_capitalized_of_localinput_lexer_symbol_stack"
+	"Localinput_lexer_basic_word_capitalized_constructor"
+	(Format.sprintf "Lexeme >%s< Not a word_capitalized" (Localinput_lexer_symbol_v.fullname sym_lex))
+	"Check input file"
+;;
+
+(*
+let localinput_symbol_as_fence_basic_float_of_localinput_lexer_symbol_stack sym_lex_s =
+  let nam_fun = "input_symbol_as_fence_basic_float_of_localinput_lexer_symbol_stack" in
+  let nam_mod = Management_v.current_module_name (documentation ()) in 
+
+(*  localinput_lexer_keyword_basic_float "-2.0" *)
+
+  let sym_lex_nex = Stack.pop sym_lex_s in
+  
+  match sym_lex_nex with
+  | Localinput_lexer_symbol_t.Localinput_lexer_basic_symbol
+      (Localinput_lexer_basic_symbol_t.Localinput_lexer_basic_float_symbol
+	 (Localinput_lexer_basic_float_symbol_t.Localinput_lexer_basic_float_constructor str_flo)) ->
+	   
+	   Localinput_symbol_v.localinput_fence_basic_float_constructor str_flo
+
+  | _ ->
+      Error_messages_v.print_syntax_error nam_mod nam_fun
+	"Localinput_lexer_basic_float"
+	(Format.sprintf "Lexeme >%s<" (Localinput_lexer_symbol_v.fullname sym_lex_nex))
+	"Check input file"
+	
+;;
+*)
+
+let localinput_symbol_as_fence_basic_numerical_of_localinput_lexer_symbol sym_lex =
+  let nam_fun = "input_symbol_as_fence_basic_numerical_of_localinput_lexer_symbol" in
+  let nam_mod = Management_v.current_module_name (documentation ()) in 
+
+(*   >basic_numerical<             ::= word_float | word_integer *)
+  debug_what_lexer "input" nam_mod nam_fun sym_lex;
+
+  match sym_lex with
+  | Localinput_lexer_symbol_t.Localinput_lexer_basic_symbol
+      (Localinput_lexer_basic_symbol_t.Localinput_lexer_basic_float_symbol
+	 (Localinput_lexer_basic_float_symbol_t.Localinput_lexer_basic_float_constructor str_flo)) ->
+	   
+	   Localinput_symbol_v.localinput_fence_basic_float_constructor str_flo
+
+  | Localinput_lexer_symbol_t.Localinput_lexer_basic_symbol
+      (Localinput_lexer_basic_symbol_t.Localinput_lexer_basic_integer_symbol
+	 (Localinput_lexer_basic_integer_symbol_t.Localinput_lexer_basic_integer_constructor str_int)) ->
+	   
+	   Localinput_symbol_v.localinput_fence_basic_integer_constructor str_int
+
+  | _ ->
+      Error_messages_v.print_syntax_error nam_mod nam_fun
+	"Localinput_lexer_basic_float or integer"
+	(Format.sprintf "Lexeme >%s<" (Localinput_lexer_symbol_v.fullname sym_lex))
+	"Check input file"
+	
+;;
+
+(*
+let localinput_symbol_for_integer_block_of_localinput_lexer_symbol_stack sym_lex_s =
+  let nam_mod = Management_v.current_module_name (documentation ()) in 
+  let nam_fun = "input_symbol_for_integer_block_of_localinput_lexer_symbol_stack" in
+
+(* <integer_block> ::=    integer *)
+(*                  | - integer *)
+
+  let rec apply cha lex_s =  
+    
+    let sym_lex_cur = Stack.pop lex_s in
+    
+    if debug () then Format.fprintf Format.std_formatter "%s.%s: sym_lex_cur >%s<@." nam_mod nam_fun (Localinput_lexer_symbol_v.fullname sym_lex_cur); 
+    
+    match sym_lex_cur with
+    | Localinput_lexer_symbol_t.Localinput_lexer_token_symbol
+	Localinput_lexer_token_symbol_t.Localinput_lexer_token_minus ->
+	  
+	  apply '-' lex_s	  
+	    
+    | Localinput_lexer_symbol_t.Localinput_lexer_basic_symbol
+	(Localinput_lexer_basic_symbol_t.Localinput_lexer_basic_integer_symbol
+	   (Localinput_lexer_basic_integer_symbol_t.Localinput_lexer_basic_integer_constructor str_int)) ->
+	     
+	     let str_val = Format.sprintf "%c%s" cha str_int in
+	     Localinput_symbol_v.make "input_entity_local_constant_integer" str_val
+	       
+    | _ ->
+	Error_messages_v.print_syntax_error nam_mod nam_fun
+	  "Lexeme \"basic_integer\" or \"minus\" after >integer<"
+	  (Format.sprintf "Lexeme >%s<" (Localinput_lexer_symbol_v.fullname sym_lex_cur))
+	  "Check input file"
+  in
+  
+  apply ' ' sym_lex_s
+
+;;
+
+let integer_block_subtree_of_localinput_lexer_symbol_stack sym_lex_s =
+  let sym_ien = localinput_symbol_for_integer_block_of_localinput_lexer_symbol_stack sym_lex_s in
+  Tree_v.make_of_leaf sym_ien
+;;
+*)
+
+
+

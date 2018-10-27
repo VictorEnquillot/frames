@@ -1,0 +1,5 @@
+type camlline_for_tag_uno_value =
+  | Camlline_for_tag_uno_camltype_value of Camlline_for_tag_uno_camltype_value_t.camlline_for_tag_uno_camltype_value
+  | Camlline_for_tag_uno_top_value of Camlline_for_tag_uno_top_value_t.camlline_for_tag_uno_top_value
+
+;;

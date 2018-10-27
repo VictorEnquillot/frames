@@ -1,0 +1,7 @@
+NEEDED_DIRS := \
+	$(QUANTUM_DIR) \
+	$(LINEARALGEBRA_DIR) \
+  
+
+
+

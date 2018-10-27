@@ -1,0 +1,61 @@
+let token_of_formal_word = function
+  | "|-" -> Token_types.Turnstile_token Token_types.True
+  | "||/-" -> Token_types.Turnstile_token Token_types.False
+  | "|/=" -> Token_types.Turnstile_token Token_types.Ntrue           
+  | "||=" -> Token_types.Turnstile_token Token_types.Nfalse          
+  | "|=soft" -> Token_types.Turnstile_token Token_types.True_soft       
+  | "||/=soft" -> Token_types.Turnstile_token Token_types.False_soft      
+  | "|/=soft" -> Token_types.Turnstile_token Token_types.Ntrue_soft      
+  | "||=soft" -> Token_types.Turnstile_token Token_types.Nfalse_soft      
+  | "+*" -> Token_types.Turnstile_token Token_types.Accept           
+  | "-*" -> Token_types.Turnstile_token Token_types.Reject          
+  | "/+*" -> Token_types.Turnstile_token Token_types.Naccept          
+  | "/-*" -> Token_types.Turnstile_token Token_types.Nreject         
+  | "-" -> Token_types.Formula_token Token_types.Not
+  | "~" -> Token_types.Formula_token Token_types.Nnot
+  | "~'" -> Token_types.Formula_token Token_types.Pnot
+  | "bot" -> Token_types.Formula_token Token_types.Bot
+  | "/\" -> Token_types.Formula_token Token_types.And
+  | "\\\/" -> Token_types.Formula_token Token_types.Or 
+  | "<=>" -> Token_types.Formula_token Token_types.Equiv
+  | "->" -> Token_types.Formula_token Token_types.Imply
+  | "/\/\" -> Token_types.Formula_token Token_types.Interjun
+  | "*" -> Token_types.Formula_token Token_types.Partial_imply 
+  | "," -> Token_types.Formula_token Token_types.Comma
+  | "(" -> Token_types.Formula_token Token_types.Left_parenthesis
+  | ")" -> Token_types.Formula_token Token_types.Right_parenthesis
+  | "T" -> Token_types.Formula_token Token_types.T     
+  | "F" -> Token_types.Formula_token Token_types.F
+  | w -> Token_types.Formula_token (Token_types.Variable w)
+;;
+
+let token_of_text_word = function
+  | "True" -> Token_types.Turnstile_token Token_types.True
+  | "False" -> Token_types.Turnstile_token Token_types.False
+  | "Ntrue" -> Token_types.Turnstile_token Token_types.Ntrue           
+  | "Nfalse" -> Token_types.Turnstile_token Token_types.Nfalse          
+  | "True_soft" -> Token_types.Turnstile_token Token_types.True_soft       
+  | "False_soft" -> Token_types.Turnstile_token Token_types.False_soft      
+  | "Ntrue_soft" -> Token_types.Turnstile_token Token_types.Ntrue_soft      
+  | "Nfalse_soft" -> Token_types.Turnstile_token Token_types.Nfalse_soft      
+  | "Accept" -> Token_types.Turnstile_token Token_types.Accept           
+  | "Reject" -> Token_types.Turnstile_token Token_types.Reject          
+  | "Naccept" -> Token_types.Turnstile_token Token_types.Naccept          
+  | "Nreject" -> Token_types.Turnstile_token Token_types.Nreject         
+  | "Not" -> Token_types.Formula_token Token_types.Not
+  | "Nnot" -> Token_types.Formula_token Token_types.Nnot
+  | "Pnot" -> Token_types.Formula_token Token_types.Pnot
+  | "Bot" -> Token_types.Formula_token Token_types.Bot
+  | "And" -> Token_types.Formula_token Token_types.And
+  | "Or" -> Token_types.Formula_token Token_types.Or 
+  | "Equiv" -> Token_types.Formula_token Token_types.Equiv
+  | "Imply" -> Token_types.Formula_token Token_types.Imply
+  | "Interjun" -> Token_types.Formula_token Token_types.Interjun
+  | "Partial_imply" -> Token_types.Formula_token Token_types.Partial_imply 
+  | "," -> Token_types.Formula_token Token_types.Comma
+  | "(" -> Token_types.Formula_token Token_types.Left_parenthesis
+  | ")" -> Token_types.Formula_token Token_types.Right_parenthesis
+  | "T" -> Token_types.Formula_token Token_types.T     
+  | "F" -> Token_types.Formula_token Token_types.F
+  | w -> Token_types.Formula_token (Token_types.Variable w)
+;;

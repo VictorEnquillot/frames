@@ -1,0 +1,2 @@
+
+type section_for_formula_header_top_main_tag = Section_for_formula_header_top_main_symbol_t.section_for_formula_header_top_main_symbol Tag_t.tag;;

@@ -1,0 +1,7 @@
+let fnd_cat = Category_symbol_v.is_formula_off_category_symbol;;
+let fnd_enp = (fun e -> Entity_proper_symbol_v.string_off e = nam_enp)
+let fnd_cof = Contentfile_symbol_v.is_contentfile_type_alone_symbol_off_contentfile_symbol;;
+let fnd_usf = Usagefile_symbol_v.is_implementation_off_usagefile_symbol;; 
+let fnd_ite = Item_symbol_v.is_typing;;
+let fnd_cap = Camlparagraph_symbol_v.is_type_definition_for_formula;;
+let fnd_cal = Camlline_symbol_v.is_pipe_mss_bof_mss_tdot_mss;;

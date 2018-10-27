@@ -1,0 +1,28 @@
+#use "read_record_list_v.ml";;
+#use "../read_by_scanf.ml";;
+let ib = Scanf.Scanning.from_string "He";;
+read ib;;
+#use "read_record_list_v.ml";;
+str;;
+let ib = Scanf.Scanning.from_string str;;
+Scanf.bscanf ib "%1c" (fun c -> c);;
+Scanf.bscanf ib "%2s" 
+    (fun s -> s);;
+Scanf.bscanf ib "%2s" 
+	    (fun t -> t);;
+s ^ t;;
+String.capitalize  "acbd";;
+#use "read_record_list_v.ml";;
+read "<span ";;
+read "<span>";;
+#use "read_record_list_v.ml";;
+#use "tools_v.ml";;
+assert false;;
+assert;;
+assert false;
+;;
+#use "read_record_list_v.ml";;
+#load "tools_v.cmo";;
+#use "read_record_list_v.ml";;
+Scanf.Scanning.from_string;;
+Scanf.bscanf ;;

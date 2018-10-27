@@ -1,0 +1,9 @@
+define Len
+       operator 
+         type [ "operator" "set" "body" "creation" "tomeasure" "constructor"]
+	 operation "length"
+	 ondomain "figure"  
+         end -- operator
+       end -- define
+
+stop   

@@ -1,0 +1,7 @@
+               let sym_ctu_st =
+		 Coordinate_symbol_subtree_by_db1_entity_element_tag_translator_v.ml tag_den_roo 
+	       in
+	       let tag_ele_st = 
+		 Elementary_tag_tree_by_coordinate_tuple_tag_provider_v.provide 
+		   tag_ctu 
+	       in

@@ -1,0 +1,14 @@
+	digraph database_db1_tag_tree {
+		size="14,14";
+		node [color=yellow, style=filled];
+		"Database_Db1\nTree of Tag" [style = filled, color = yellow, 
+		fontsize=24, fontname="Palatino-Italic",fontcolor=black];
+
+		"Elementary\nCoordinate Tuple" [shape = diamond, color = green];
+
+		"Database_Db1\nTree of Tag" -> { "Triangle" "Segment" "Point "} ;
+		"Triangle" -> "Point" 
+		"Segment" -> "Point" 
+		"Point " -> "Point" 
+		"Point" -> "Elementary\nCoordinate Tuple";
+		}

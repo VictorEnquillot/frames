@@ -1,0 +1,50 @@
+        digraph Frames {
+                size="40,15";
+                node [fontsize=50];
+                edge [arrowhead = "vee", arrowsize = "2.0", style="solid", taillabel = ""];
+
+  Title [
+  	label = "The Constructor Tree\nDomain Figure", shape=box, fontname=Courier, color=yellow, style=filled
+  ];
+	    
+   "Figure"    [color=green, style=filled];
+   "Figure\nContext"    [color=beige, style=filled];
+   "Context\nSector"    [color=beige, style=filled];
+   "Context\nDomain"    [color=beige, style=filled];
+   "Context\nDatabase"    [color=beige, style=filled];
+   "Context\nDatabox"    [color=beige, style=filled];
+
+   "Figure\nSet"        [color=lightskyblue3, style=filled];
+   "Figure\nSet\nBody"  [color=lightskyblue3, style=filled];
+   "Body\nTriangle"            [color=lightskyblue2, style=filled];
+   "Body\nTriangle\nisosceles" [color=lightskyblue2, style=filled];
+   "Body\nTriangle\nisosceles\nequilateral" [color=lightskyblue2, style=filled];
+   "Body\nTriangle\nisosceles\nright" [color=lightskyblue2, style=filled];
+   "Body\nTriangle\nisosceles\nacute" [color=lightskyblue2, style=filled];
+   "Body\nTriangle\nisosceles\nobtuse" [color=lightskyblue2, style=filled];
+   "Body\nTriangle\nscalene" [color=lightskyblue2, style=filled];
+   "Body\nTriangle\nscalene\nright" [color=lightskyblue2, style=filled];
+   "Body\nTriangle\nscalene\nacute" [color=lightskyblue2, style=filled];
+   "Body\nTriangle\nscalene\nobtuse" [color=lightskyblue2, style=filled];
+
+   "Body\nSegment"            [color=lightskyblue1, style=filled];
+   "Figure\nSet\nFence" [color=azure, style=filled];
+
+   "Fence\nPoint"       [color=azure, style=filled];
+	   
+   Title -> "Figure"  [style="invis"];
+
+   "Figure" -> {"Figure\nContext" "Figure\nSet"};
+   "Figure\nSet" -> {"Figure\nSet\nBody" "Figure\nSet\nFence"};
+
+   "Figure\nContext" ->  {"Context\nSector" "Context\nDomain" "Context\nDatabase" "Context\nDatabox"};
+
+   "Figure\nSet\nBody" -> {"Body\nTriangle" "Body\nSegment"};
+   "Body\nTriangle" -> {"Body\nTriangle\nisosceles" "Body\nTriangle\nscalene"};
+   "Body\nTriangle\nisosceles" -> {"Body\nTriangle\nisosceles\nequilateral" "Body\nTriangle\nisosceles\nright" "Body\nTriangle\nisosceles\nacute" "Body\nTriangle\nisosceles\nobtuse"};
+
+   "Body\nTriangle\nscalene" -> {"Body\nTriangle\nscalene\nright" "Body\nTriangle\nscalene\nacute" "Body\nTriangle\nscalene\nobtuse"};
+
+    "Figure\nSet\nFence" -> "Fence\nPoint"
+
+}

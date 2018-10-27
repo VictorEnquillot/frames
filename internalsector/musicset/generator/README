@@ -1,0 +1,51 @@
+               Constructor Tree ( Symbol Tree )
+               ( musicset_symbols.set )
+                          musicset
+      /                /          \           \      
+  mp3_header_field    mp3_file    id3_tag     mp3_header  
+   | | | |
+   | | | mp3_header_field_elevenbits
+   | | mp3_header_field_fourbits
+   | mp3_header_field_twobits 
+mp3_header_field_onebit
+| | | | | | |
+| | | | | | copyright 
+| | | | | original 
+| | | | error_protection 
+| | | pad_bit 
+| | intensity_stereo 
+| ms_stereo private_bit 
+|
+version 
+| | |
+| | version_1 
+| version_2 
+version_2_5 
+
+
+  Builder SubTrees 
+
+ 
+  mp3_header_field_onebit_formula 
+  | |
+  | Version_formula
+  | Error_protection : Onebit Singlet
+
+
+
+
+                    (Lac, [1]) 
+                    /          \ 
+      (Bassin_1,[1; 1])          (Bassin_2,[2; 1])
+             /        \                                 /              \
+     
+   Moleculeset
+   Molecule_plane
+   Molecule_triatomique
+        
+   Water_1,[1;1;1] ... Water_124547,[124547;1;1]   Water_1,[1;2;1] ... Water_564328    /  | \
+(O,[1;1;1;1]) (H,[1;2;1;1] (H,[3;1;1;1])
+
+ Les tags descendent
+ La formula du père crée le tag du fils.
+ Le tag d'un fils contient le tag du père.

@@ -1,0 +1,236 @@
+Frames Framework.
+File : $FRA/README
+
+---- Purpose ----
+
+* To write [Program]s in such a way as to make anybody from the same [domain] of 
+  knowledge as the Programmer be able to :
+- understand where to find the information he is seeking
+- modify rapidly the code to adapt it to its own needs
+- infer the name of a function (of a module) without knowing it
+- understand by reading the name of a function what it its doing
+ 
+* To define a programming way in order to make programming as
+much automatic as possible : the programmer only needs to describe what
+[entities] are necessary to express the [domain] he wants to [simulate].
+
+* The Programmer needs only to 
+ - define the [Symbols] of entities of the domain in a specfic file ( some_entity_symbols.dat ) 
+          directory : domainset_symbols
+ - define the [Formulas] of each entity in an other specific file ( some_entity_formulas.dat ) 
+The code for both [Category] is generated automatically.
+          directory : domainset_formulas
+ - read the external databases as tree structures using symbols and formulas specially designed for these exteranal data.
+          directory : domainset_databases
+
+ - build a series of modules to translate the external database information into the Symbols of the Program.
+          directory : domainset_interfaces
+
+
+* Tags :
+   [tags] are automatically generated from symbols.
+          directory : domainset_tags   
+
+
+== Concepts ==
+
+* Domainset : the domain of interest to be described in Caml.
+  
+ Ex.: Chemicalset, Geometryset, Wavefunctionset
+
+* Entity    : an Entity is any element of a Domainset 
+
+ Ex.: Atom, Molecule, Bond are entities of the Chemicalset
+
+* Category  : An Entity has several "aspects"
+              There are two main and dual categories in Frames : Symbol and Formula
+
+ A Symbol says that some "entity_symbol" exits and nothing else.
+          Cannot be described in Caml with Tuple or List.
+
+ A Formula (entity_formula) tells what other entity_symbols are used to build the
+           value of a given entity.  
+           It must be described in Caml with a Tuple or a List.
+
+ Ex. : type atom_symbol = 
+         | Atom_not_linked        ( Ar, He ...)
+         | Atom_singly_linked     ( H or Cl in HCl, C or O in CO ) 
+         | Atom_multiply_linked   ( C or N in CH4 or NH3)
+
+ Ex. : type molecule_symbol =
+         | Linear_molecule
+         | Ramified_molecule
+
+ Ex. : type linear_molecule_formula = atom_symbol list 
+ Ex. : type ramified_molecule_formula = atom_symbol tree 
+
+
+ A Value is an other Category which has the same Structure as the Formula Category
+         and is computed recursively from the Values of the Data Entity using the Formula
+----------------------------------------------------------
+
+Any entity has two dual aspects : its Symbol (Label) and its Formula (Content)
+
+These two aspects are expressed with two different Caml Types.
+
+The programmer has to focalize first of all on the Symbols using types that are
+not Datastructure Types (list, tuples) but only descriptive Types, designed hierarchically as a Set of Sets.
+
+== Concepts for the Code Generator ==
+
+A Caml code is made of the following Generatorset Entities Formula hierarchy :
+
+   Domainset     (Chemicalset, ...)
+   Category      (Symbol, Formula, Value, ...)
+   Entity_proper (an entity whose types are defined in a Module) (Atom, Molecule, ...)
+   Contentfile   (Type_only "_t.ml", Value_only "_v.ml", Type_n_value "_p.ml")
+   Usagefile     (Implementation ".ml", Interface ".mli")
+   ----- Module is defined here as atom_symbol_v.mli ---------------------------------
+   Item          (Abbreviating, Making, Naming, Upgrading, Extracting, Querying, ...)
+   Camlparagraph 
+   Camlline
+
+---- Definitions ----
+
+---- Rules ----
+
+== Design ==
+
+* Uniformity : In similar situations the solution is always the same
+* Consistency : no execption 
+* Systematic
+* Clarity
+
+Strong discipline, no short cuts, no trick.
+
+* The programmer has to design the Symbols and the Formula types for the Code Generator.
+
+
+-------- Entities and Categories -------- 
+
+ == Categories ==
+
+ Symbol
+ Tag 
+ Formula
+ Value
+ Database
+
+ The Category Tree : The Disk Directory Hierarchy for any Domain 
+
+     frames/thisset/thisset_values/
+                      |
+                      v
+     frames/thisset/thisset_formulas/
+                      |
+                      v
+     frames/thisset/thisset_interfaces/	
+                 /               \
+                v                 v
+frames/thisset/thisset_tags/      frames/thisset/thisset_databases/
+                                    \
+                                     v
+                                  frames/thisset/thisset_databases/adb
+                                  
+
+
+=== Symbols ===
+
+* Symbols are designed first
+
+
+=== Tags ===
+
+* Tags (Symbol, Sole_index) couple are only created by the Father's Formula
+* Sole_index is defined there.
+* Symbol is stored with Sole_index key in Domainset_symbol_provider
+* This replaced the Path mechanism.
+
+=>
+  Any entity tag module can retrieve any ascendant Tag.
+
+  Son Tag Contains Father Tag 
+
+== Formulas ==
+
+* The formulas are independant (Need to be designed this way)
+* Only Values can use a Formula
+* Formulas uses Interfaces
+
+== Values ==
+
+* a Value applies recursively a function making a Value to its Formula
+
+== Properties ==
+
+* Any calulated entity using Values
+ 
+== Entities ==
+
+* The Symbol Tree  (Constructor Tree)
+* The Formula Tree  (Production Tree)
+* The Database Tree  (Production Tree)
+
+== Coding ==
+
+=== Aliasing module names in implementation files ===
+
+rule : module aliases are abbreviation of a module name obeying 
+       the following rules :
+  They are Capitalized.
+  they have two parts : 
+     - Categorizedentity part which has at leat 3 characters
+       this is decomposed into 
+       - Entity part   : First letter of each Entity name component
+       - Category part : s, t, f, v
+     - Camlfilecontent part which is either t or v or p
+
+2. Open statement  
+
+rule : usage of the open statement is forbidden
+justification : 
+  1. using open may lead to error very difficult to find out.
+  2. prefixing a function or a type with a module name make the code more understandable.
+
+rule : any non pervasive module must be aliased in all implementation files, wit
+h a rigorously defined abbreviation.
+
+=== function names ===
+
+let uppertype_of_subtype s = ... 
+
+let subtype_off_uppertype s = ... 
+
+No "_to_" !
+
+---- The Code  ----
+
+It is reduced to some necessary and sufficient functions :
+
+* Naming
+* Abbreviating
+* Extracting
+* Making
+* Upgrading
+* Querying
+* Providing
+* Retrieving
+
+
+=== Error messages ===
+
+* Should not be interpreted, but simply read to be fully understandable.
+* Three parts :
+** What expected
+** What found
+** What cure
+With as many printed information as possible :
+module_name, function_name.
+
+=== Style ===
+
+==== type names ====
+* Leaf : a word, that should be unique in the whole domain. (Ex: Ar, He)
+* Non-leaf : is composed of the upper types with "_" and ends with the 
+             category.
+ (Ex : atom_zerotied_anion_minusone_symbol )

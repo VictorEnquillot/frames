@@ -1,0 +1,74 @@
+constructors chemical                                            =   molecule 
+
+# .zerotied                                                      
+constructors   molecule                                          =   zerotied_atom   zerotied_block   zerotied_fragment   zerotied_forked
+
+# ..zerotied_atom  ( A )
+constructors   zerotied_atom                                     =   ar   brm1   cap2   clm1   cup1   cup2     fep2   fep3   fm1   he   hm1   hp1   im1     kp1   kr   lip1   mgp2   nap1   ne   nip1   nip3   om2   sm2   xe   znp2
+
+
+# ..zerotied_block (z-B-z)
+constructors   zerotied_block                                    =   zerotied_block_none_none_ax1   zerotied_block_none_none_ax2   zerotied_block_none_none_ax3   zerotied_block_none_none_ax4
+
+
+
+# ...zerotied_block_none_none_ax1
+constructors   zerotied_block_none_none_ax1                      =   z_cnm1_z  z_co_z   z_cs_z   z_fh_z   z_no_z   z_nop1_z   z_ohm1_z
+
+
+
+# ...zerotied_block_none_none_ax2
+constructors   zerotied_block_none_none_ax2                      =   zerotied_block_none_none_ax2e0_linear   zerotied_block_none_none_ax2e1_bent   zerotied_block_none_none_ax2e2_bent   zerotied_block_none_none_ax2e3_linear
+
+# ....zerotied_block_none_none_ax2e0_linear
+constructors   zerotied_block_none_none_ax2e0_linear             =   z_becl2_z   z_co2_z   z_hgcl2_z 
+
+# ....zerotied_block_none_none_ax2e1_bent 
+constructors   zerotied_block_none_none_ax2e1_bent               =   z_so2_z   z_o3_z
+
+# ....zerotied_block_none_none_ax2e2_bent 
+constructors   zerotied_block_none_none_ax2e2_bent               =   z_ccl2_z   z_no2m1_z   z_of2_z   z_oh2_z   z_sh2_z
+
+# ....zerotied_block_none_none_ax2e3_linear
+constructors   zerotied_block_none_none_ax2e3_linear             =   z_i3m1_z   z_krf2_z   z_xef2_z   z_xecl2_z 
+
+
+
+# ...zerotied_block_none_none_ax3
+constructors   zerotied_block_none_none_ax3                      =   zerotied_block_none_none_ax3e0_trigonalplanar   zerotied_block_none_none_ax3e1_trigonalpyramidal
+
+# ....zerotied_block_none_none_ax3e0_trigonalplanar
+constructors   zerotied_block_none_none_ax3e0_trigonalplanar     =   z_coh2_z   z_cho2m1_z  
+
+# ....zerotied_block_none_none_ax3e1_trigonalpyramidal
+constructors   zerotied_block_none_none_ax3e1_trigonalpyramidal  =   z_nh3_z
+
+# ...zerotied_block_none_none_ax4
+constructors   zerotied_block_none_none_ax4                      =   zerotied_block_none_none_ax4e1_tetrahedral
+
+# ...zerotied_block_none_none_ax4e1_tetrahedral
+constructors   zerotied_block_none_none_ax4e1_tetrahedral        =   z_ch4_z   z_nh4p1_z
+
+
+
+# ..zerotied_fragment (o|...|o)
+constructors zerotied_fragment                                   =   zerotied_fragment_twoblocks   zerotied_fragment_threeblocks   zerotied_fragment_fourblocks  
+
+
+
+# ...zerotied_fragment_twoblocks (o|B-B|o)
+constructors zerotied_fragment_twoblocks                         =   z_ch2_d_ch2_z   z_ch2_s_ch2_z   z_ch3_s_ch3_z   z_ch3_s_co2m1_z   z_ch3_s_oh_z   z_ch_t_ch_z   z_coh_s_oh_z   z_zo2_s_zo_z   
+
+# ...zerotied_fragment_threeblocks (o|B-B|o)
+constructors zerotied_fragment_threeblocks                       =   z_ch3_s_ch2_s_ch3_z   z_ch3_s_co_s_oh_z   z_co2m1_s_ch2_s_nh3p1_z  
+
+
+# ...zerotied_fragment_fourblocks (o|B-B|o)
+constructors zerotied_fragment_fourblocks                        =   z_ch3_s_r2_ch2_s_2r_s_ch3_z   z_oh_s_co_s_ch2_s_nh2_z   
+
+
+# ..zerotied_forked
+constructors zerotied_forked                                     =   z_ch3_s_ch_le_s_ch3_z_ri_s_nh2_z   zerotied_forked_constructor:ofstring
+
+
+

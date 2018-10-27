@@ -1,0 +1,1 @@
+type item_for_any_only_top_tag = Item_for_any_only_top_symbol_t.item_for_any_only_top_symbol Tag_t.tag;;

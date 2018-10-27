@@ -1,0 +1,16 @@
+     builders db_1_entity_local_database_constructor:ofstring    =   list   db_1_entity_component
+
+     builders db_1_entity_component_triangle:ofstring    =   list   db_1_entity_cluster
+     builders db_1_entity_component_vector:ofstring      =   list   db_1_entity_cluster
+     builders db_1_entity_component_vertex:ofstring      =   list   db_1_entity_cluster
+
+     builders db_1_entity_cluster_triangle:ofstring      =   singlet  db_1_entity_element
+     builders db_1_entity_cluster_vector:ofstring        =   singlet  db_1_entity_element
+     builders db_1_entity_cluster_vertex:ofstring        =   list     db_1_entity_element
+
+     builders db_1_entity_element_label:of_string        =   singlet   string
+     builders db_1_entity_element_vertex:of_string       =   list  float
+
+     builders db_1_entity_float_constructor:ofstring     =   doublet   float   string 	      
+
+     builders fake = list string

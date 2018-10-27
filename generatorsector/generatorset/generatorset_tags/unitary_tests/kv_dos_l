@@ -1,0 +1,5 @@
+let re_l = Register_v.entry_list Generatorset_symbol_by_sole_index_register_v.register;;
+let fi1_l = Doublet_list_v.filter_if_left (fun e -> List_v.ultimate_element_off_list e = idx_dos) re_l;;
+let fi2_l = Doublet_list_v.filter_if_left (fun e -> List.length e <= List.length soi_cat) fi1_l;;
+let compare_entry (k1, v1) (k2, v2) = compare (List.length k1) (List.length k2);;
+let kv_dos_l = List.sort compare_entry fi2_l;;

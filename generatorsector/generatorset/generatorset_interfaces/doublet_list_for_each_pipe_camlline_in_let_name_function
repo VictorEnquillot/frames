@@ -1,0 +1,81 @@
+let doublet_list_for_each_pipe_camlline_in_let_name_function tag_cap pat_sym_ent =
+
+(*** Improve Context checking ****)
+
+  let sym_ite = Camlparagraph_tag_v.item_symbol_off_camlparagraph_tag tag_cap in
+  if (sym_ite <> Item_symbol_v.naming)
+  then
+    Error_messages_v.print_fatal_error nam_cod 
+      "doublet_list_for_each_pipe_camlline_in_let_make_function"
+      "Item_symbol were naming"
+      (Item_symbol_v.name sym_ite)
+      "Check"
+  else
+    begin
+      let pat_dep = List.length pat_sym_ent in
+      let sym_ent_top = List_v.ultimate_element_off_list pat_sym_ent in 
+      let sym_ent_cur = List.hd pat_sym_ent in
+      
+      match sym_ent_cur with
+      |  Entity_symbol_t.Entity_proper_symbol 
+	  (Entity_proper_symbol_t.Entity_proper_son_symbol s) ->
+	    
+(* Ex.:   | Atom_zerotied_symbol_t.Atom_zerotied_raregas_symbol sym_atz -> 
+   Atom_zerotied_raregas_symbol_v.name sym_atz *)
+	    
+	    let sym_ent_son = List_v.penultimate_element_off_list pat_sym_ent in 
+	    [
+	     ([sym_ent_son; sym_ent_top], 
+	      Camlline_symbol_v.pipe_mst_tdot_mss_space_ass_arrow );
+	     ([sym_ent_son], 
+	      Camlline_symbol_v.mas_vdot_name_aas)
+	   ]
+	      
+      | Entity_symbol_t.Entity_proper_symbol 
+	  (Entity_proper_symbol_t.Selfentity _) ->
+	    begin
+	      match pat_dep with 
+		(*** Improve need two Symbols Topselfentity Sonselfentity *)
+	      | 1 ->
+		  (* Ex.:   
+                     let name = function
+                     | Vector_symbol_t.Vector -> "vector"
+                   *)
+		  [([sym_ent_top], 
+		    Camlline_symbol_v.pipe_mst_tdot_est_arrow_string)]
+	      | _ ->
+		  (* Ex.:   
+                     | Geometryset_symbol_t.Vector_symbol sym_vec ->
+                     Vector_symbol_v.name sym_vec
+                   *)
+		  let sym_ent_son = List_v.penultimate_element_off_list pat_sym_ent in 
+		  [
+		   ([sym_ent_son; sym_ent_top], 
+		    Camlline_symbol_v.pipe_mst_tdot_mss_space_ass_arrow );
+		   ([sym_ent_son], 
+		    Camlline_symbol_v.mas_vdot_name_aas)
+		 ]
+	    end    
+	      
+      | Entity_symbol_t.Entity_fictive_symbol 
+	  (Entity_fictive_symbol_t.Entity_fictive_nullary_symbol 
+	     (Entity_fictive_nullary_symbol_t.Sonnullary s)) ->
+	       
+	       [([sym_ent_cur; sym_ent_top], 
+		 Camlline_symbol_v.pipe_mst_tdot_esl_arrow_string)]
+		 
+      | Entity_symbol_t.Entity_fictive_symbol 
+	  (Entity_fictive_symbol_t.Entity_fictive_basicnullary_symbol _) ->
+	    
+	    [([sym_ent_cur; sym_ent_top], 
+	      Camlline_symbol_v.pipe_est_tdot_ess_underscore_arrow_string)]
+	      
+      | _ ->
+	  Error_messages_v.print_fatal_error nam_cod 
+	    "doublet_list_for_each_pipe_camlline_in_let_name_function"
+	"a valid Entity_symbol"
+            (Format.sprintf ">%s<" (Entity_symbol_v.fullname sym_ent_cur))
+            "Check or add it to menu"
+    end	 
+;;
+

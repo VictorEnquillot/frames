@@ -1,0 +1,10 @@
+let tag_cap_l = Camlparagraph_tag_list_by_item_tag_provider_v.provide tag_ite;;
+
+let tag_cap = List.nth tag_cap_l (idx_cap-1);;
+let tag_cal_l = Tag_v.make_son_list sym_cal_l soi_cap;;
+let soi_cap = Tag_v.sole_index_off_tag tag_cap;;
+
+let sym_ent_l_sym_cal_dol = Entity_symbol_list_camlline_symbol_doublet_list_by_camlparagraph_tag_provider_v.provide tag_cap;;
+let sym_cal_l = Doublet_list_v.right_list_off_doublet_list sym_ent_l_sym_cal_dol;;
+let tag_cal_l = Tag_v.make_son_list sym_cal_l soi_cap;;
+Generatorset_symbol_by_sole_index_provider_v.build_n_store_son_list Generatorset_symbol_v.generatorset_symbol_of_camlline_symbol soi_cap sym_cal_l;;

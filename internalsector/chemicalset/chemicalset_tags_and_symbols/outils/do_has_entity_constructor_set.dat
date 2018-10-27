@@ -1,0 +1,8 @@
+# DO NOT EDIT. created by do_build_do_has_entity_constructor_set.sh
+
+has_entity_constructor_set () {
+  case $1 in
+ ;;
+ esac
+ echo $res
+}

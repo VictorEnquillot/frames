@@ -1,0 +1,53 @@
+let nam_dos = "geometryset";;
+let nam_cat = "symbol";;
+let nam_usf = "implementation";;
+let nam_enp = "geometryset";;
+let nam_cof = "type_alone";;
+let nam_ite = "typing";;
+
+let store = Generatorset_symbol_by_sole_index_provider_v.store;;
+let gss_of_cal = Generatorset_symbol_v.generatorset_symbol_of_camlline_symbol;;
+
+let sym_dos = Domainset_symbol_v.make nam_dos;;
+let idx_dos = Domainset_symbol_v.list_index_of_domainset_symbol sym_dos;;
+let soi_dos = Sole_index_v.make idx_dos [];;
+let gss_dos = Generatorset_symbol_v.generatorset_symbol_of_domainset_symbol sym_dos;;
+Generatorset_symbol_by_sole_index_provider_v.store soi_dos gss_dos;;
+let tag_dos = Tag_v.make sym_dos soi_dos;;
+
+let sym_cat = Category_symbol_v.make nam_cat;;
+let idx_cat = Category_symbol_v.list_index_of_category_symbol sym_cat;;
+let soi_cat = Sole_index_v.make idx_cat soi_dos;;
+let gss_cat = Generatorset_symbol_v.generatorset_symbol_of_category_symbol sym_cat;;
+Generatorset_symbol_by_sole_index_provider_v.store soi_cat gss_cat;;
+let tag_cat = Tag_v.make sym_cat soi_cat;;
+
+let sym_enp_l = Entity_proper_symbol_list_by_domainset_tag_provider_v.provide tag_dos;;
+
+let sym_enp = List.find (fun e -> Entity_proper_symbol_v.string_off e = nam_enp) sym_enp_l;;
+let idx_enp = (List_v.index_of_element_of_list sym_enp sym_enp_l) + 1;; 
+let soi_enp = Sole_index_v.make idx_enp soi_cat;;
+let gss_enp = Generatorset_symbol_v.generatorset_symbol_of_entity_proper_symbol sym_enp;;
+Generatorset_symbol_by_sole_index_provider_v.store soi_enp gss_enp;;
+let tag_enp = Tag_v.make sym_enp soi_enp;;
+
+let sym_cof = Contentfile_symbol_v.make nam_cof;;
+let idx_cof = Contentfile_symbol_v.list_index_of_contentfile_symbol sym_cof;;
+let soi_cof = Sole_index_v.make idx_cof soi_enp;;
+let gss_cof = Generatorset_symbol_v.generatorset_symbol_of_contentfile_symbol sym_cof;;
+Generatorset_symbol_by_sole_index_provider_v.store soi_cof gss_cof;;
+let tag_cof = Tag_v.make sym_cof soi_cof;;
+
+let sym_usf = Usagefile_symbol_v.make nam_usf;;
+let idx_usf = Usagefile_symbol_v.list_index_of_usagefile_symbol sym_usf;;
+let soi_usf = Sole_index_v.make idx_usf soi_cof;;
+let gss_usf = Generatorset_symbol_v.generatorset_symbol_of_usagefile_symbol sym_usf;;
+Generatorset_symbol_by_sole_index_provider_v.store soi_usf gss_usf;;
+let tag_usf = Tag_v.make sym_usf soi_usf;;
+
+let sym_ite = Item_symbol_v.make nam_ite;;
+let idx_ite = Item_symbol_v.list_index_of_item_symbol sym_ite;;
+let soi_ite = Sole_index_v.make idx_ite soi_usf;;
+let gss_of_ite = Generatorset_symbol_v.generatorset_symbol_of_item_symbol;;
+let tag_ite = Tag_v.make_n_store_son store gss_of_ite sym_ite idx_ite soi_usf;;
+

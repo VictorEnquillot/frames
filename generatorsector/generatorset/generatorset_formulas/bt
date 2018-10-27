@@ -1,0 +1,3 @@
+  match for_sss with
+  | Section_for_formula_body_top_data_formula_t.Builder_stem_sole_index_data_list tag_gro_l -> tag_gro_l
+  | Section_for_formula_body_top_data_formula_t.Data_tag_list_of_tag_for_formula tag_gro_l -> tag_gro_l

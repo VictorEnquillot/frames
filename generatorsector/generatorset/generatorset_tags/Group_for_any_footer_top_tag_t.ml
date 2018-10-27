@@ -1,0 +1,2 @@
+
+type group_for_any_footer_top_tag = Group_for_any_footer_top_symbol_t.group_for_any_footer_top_symbol Tag_t.tag;;

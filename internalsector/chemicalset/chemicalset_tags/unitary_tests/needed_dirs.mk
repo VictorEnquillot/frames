@@ -1,0 +1,6 @@
+NEEDED_DIRS := \
+	$(DATASTRUCTURES_DIR) \
+	$(UNITS_DIR) \
+	$(CHEMICALSET_SYMBOLS_DIR) \
+	$(realpath ..) \
+	

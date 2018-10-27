@@ -1,0 +1,9 @@
+empty_1                        7  7 string 	Empty_1                        7  7 string 
+seqres_record_serial_number    8 10 int 	Seqres_record_serial_number    8 10 int 
+empty_2                       11 11 string 	Empty_2                       11 11 string 
+seqres_chain_id               12 12 char 	Seqres_chain_id               12 12 char 
+empty_3                       13 13 string 	Empty_3                       13 13 string 
+seqres_sequence_length        14 17 int 	Seqres_sequence_length        14 17 int 
+empty_4                       18 19 string 	Empty_4                       18 19 string 
+seqres_thirteen_names         20 70 string  	Seqres_thirteen_names         20 70 string  
+empty_5                       71 80 string 	Empty_5                       71 80 string 

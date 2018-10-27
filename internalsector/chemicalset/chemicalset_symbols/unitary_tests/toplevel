@@ -1,0 +1,8 @@
+ledit -x -h ./.toplevel-history ocaml \
+-I ../../../general/basics \
+-I ../../../general/files \
+-I ../../../general/datastructures \
+-I ../ \
+unix.cma str.cma \
+../chemicalset_symbols.cma
+

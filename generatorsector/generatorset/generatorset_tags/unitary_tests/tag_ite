@@ -1,0 +1,9 @@
+let nam_ite = "???";;
+let sym_ite = Item_symbol_v.make nam_ite;;
+let idx_ite = Item_symbol_v.list_index_of_item_symbol sym_ite;;
+let soi_ite = Sole_index_v.make idx_ite soi_usf;;
+let gss_ite = Generatorset_symbol_v.generatorset_symbol_of_item_symbol sym_ite;;
+Generatorset_symbol_by_sole_index_production_provider_v.store soi_ite gss_ite;;
+
+let tag_ite_??? = Tag_v.make sym_ite soi_ite;;
+

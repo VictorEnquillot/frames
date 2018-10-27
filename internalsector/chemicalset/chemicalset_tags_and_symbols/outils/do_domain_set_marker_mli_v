@@ -1,0 +1,123 @@
+# creates *_marker_v.mli module
+
+. ${UTI}/do_capitalize_first
+. ${UTI}/do_category_name_abbreviation 
+. ${UTI}/do_category_off_category_extended
+. ${UTI}/do_category_type_abbreviation 
+. ${UTI}/do_category_argument_abbreviation
+. ${UTI}/do_category_value_abbreviation
+. ${UTI}/do_category_module_abbreviation
+. ${UTI}/do_domain_name
+. ${UTI}/do_domain_name_module_abbreviation 
+
+. do_module_abbreviation_all
+. do_argument_abbreviation_all
+
+# set -x 
+
+module_extension="v.mli"
+category="marker"
+Category=`capitalize_first ${category}`
+
+# -----------------  domain  --------------------------------
+
+domain_name=`domain_name`
+
+# ----------------- Usage category is marker ------------------------------
+
+if [ "$1" = "" ]
+then
+	echo "Usage :"
+	echo " $0 anything > ${domain_name}_marker_${module_extension}"
+	exit
+fi
+
+# -------------------- Entityset is Domain ----------------------------
+
+#set -x 
+
+entityset=${domain_name}
+Entityset=`capitalize_first ${entityset}`
+
+#echo "entityset=$entityset"
+
+# -------------------- Caml Code ----------------------------
+
+caa=`category_argument_abbreviation ${category}`
+cta=`category_type_abbreviation ${category}`
+cva=`category_value_abbreviation ${category}`
+cna=`category_name_abbreviation ${category}`
+Caa=`capitalize_first ${caa}`
+cma=`category_module_abbreviation ${category}`
+Cma=`capitalize_first ${cma}`
+
+echo "(** {3 The ${Category} functionalities for a ${entityset}.} *)"
+echo ""
+
+# ------------------------ Making -----------------------------
+
+echo "(** {6 Making.} *)"
+echo ""
+
+lag="  "
+echo "val make :"
+for c in "symbol" "index" 
+do
+	caa=`category_argument_abbreviation ${c}`
+	cta=`category_type_abbreviation ${c}`
+	cva=`category_value_abbreviation ${c}`
+	cam=`category_name_abbreviation ${c}`
+	echo "${lag}${Entityset}_${c}_${cta}.${entityset}_${c} ->"
+lag="${lag}  "
+done
+
+cta=`category_type_abbreviation ${category}`
+echo "${lag}${Entityset}_${category}_${cta}.${entityset}_${category}"
+echo ";;"
+echo ""
+
+echo "(** {6 Converting.} *)"
+
+echo ""
+echo "val name :"
+echo "  ${Entityset}_${category}_${cta}.${entityset}_${category} ->"
+echo "    string"
+echo ";;"
+
+echo ""
+echo "val print : Format.formatter ->"
+echo "  ${Entityset}_${category}_${cta}.${entityset}_${category} ->"
+echo "    unit"
+echo ";;"
+echo ""
+
+# ------------------------ Updating -----------------------------
+echo "(** {6 Updating.} *)"
+echo ""
+caa=`category_argument_abbreviation ${category}`
+
+esa=`argument_abbreviation ${entityset}`
+Esa=`capitalize_first ${esa}`
+ema=`module_abbreviation ${entityset}`
+Ema=`capitalize_first ${ema}`
+cna=`category_name_abbreviation ${category}`
+
+#echo "esa=$esa"
+#echo "ema=$ema"
+#echo "cna=$cna"
+     	
+for e in `do_modelset_elementset`
+do
+	E=`capitalize_first ${e}`
+	eaa=`argument_abbreviation ${e}`
+	echo "val ${entityset}_${category}_of_${e}_${category} :"
+	echo "  ${E}_${category}_t.${e}_${category} ->"
+	echo "    ${Entityset}_${category}_t.${entityset}_${category}"
+	echo ";;"
+	echo ""	
+done
+
+. ${UTI}/do_created
+echo ""
+
+exit

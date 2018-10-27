@@ -1,0 +1,5 @@
+type property_symbol =
+  | Property_energy_kinetic_symbol of Property_energy_kinetic_symbol_t.property_energy_kinetic_symbol
+  | Property_energy_potential_symbol of Property_energy_potential_symbol_t.property_energy_potential_symbol
+  | Property_energy_total_symbol of Property_energy_total_symbol_t.property_energy_total_symbol
+;;

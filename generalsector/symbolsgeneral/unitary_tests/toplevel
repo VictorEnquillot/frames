@@ -1,0 +1,8 @@
+ledit -x -h ./ocaml-history ocaml \
+-I ../../basics \
+-I ../../tools \
+-I ../ \
+-I ./ \
+unix.cma str.cma \
+../../basics/basics.cma \
+../symbolsgeneral.cma 

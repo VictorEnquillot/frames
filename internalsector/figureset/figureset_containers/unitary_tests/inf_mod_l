@@ -1,0 +1,28 @@
+test_number 2 (
+inf_mod_l
+(* : Model_information_t.model_information list *)
+=
+  [Model_information_t.Model_figureset_information
+    {Model_figureset_information_t.model_name = "triangle_equilateral";
+     Model_figureset_information_t.model_title = "a triangle equilateral";
+     Model_figureset_information_t.coordinate_what = "cartesian";
+     Model_figureset_information_t.coordinate_units_angle =
+      Units_angle_t.Radian;
+     Model_figureset_information_t.coordinate_units_length =
+      Units_length_t.Meter;
+     Model_figureset_information_t.database_name = "db1";
+     Model_figureset_information_t.entity_what =
+      "triangle_isoceles_equilateral";
+     Model_figureset_information_t.entity_name = "T"};
+   Model_information_t.Model_figureset_information
+    {Model_figureset_information_t.model_name = "triangle_scalene_right";
+     Model_figureset_information_t.model_title = "a triangle scalene right";
+     Model_figureset_information_t.coordinate_what = "cartesian";
+     Model_figureset_information_t.coordinate_units_angle =
+      Units_angle_t.Radian;
+     Model_figureset_information_t.coordinate_units_length =
+      Units_length_t.Meter;
+     Model_figureset_information_t.database_name = "db1";
+     Model_figureset_information_t.entity_what = "triangle_scalene_right";
+     Model_figureset_information_t.entity_name = "u"}]
+);;

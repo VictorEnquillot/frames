@@ -1,0 +1,5 @@
+let val_mod = List.find (fun m -> Model_figureset_value_v.model_name_off_model_figureset_value m = "triangle_equilateral") val_mod_l;; 
+let nam_wha = Model_figureset_value_v.entity_what_off_model_figureset_value val_mod;; 
+let nam_ent = Model_figureset_value_v.entity_name_off_model_figureset_value val_mod;; 
+
+let sym_ent = Figure_symbol_v.make nam_what nam_ent;;

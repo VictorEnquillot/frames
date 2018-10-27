@@ -1,0 +1,5 @@
+   "Definition : a Plug generalizes any Elementary Value";
+   "Definition : a Measure couples a float and an Elementary_fence_units_symbol";
+   "Definition : a Closure is a list of Plug. It valuates the Elementary_fence i.e. the Deepfence of any Domain";
+   "Definition : a Closure_units is a list of Plug_units (i.e. Measure)";
+   "Definition : a Trunc is a type with only constructors of constructor";

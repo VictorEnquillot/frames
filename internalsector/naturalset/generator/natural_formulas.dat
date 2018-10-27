@@ -1,0 +1,17 @@
+ builders variable:ofstring = list string
+ builders expression_composite = list string
+ builders leftparenthesis = list string
+ builders rightparenthesis = list string
+     builders successor = singlet string
+     builders addition = duo string
+     builders multiplication = duo string
+     builders zero = singlet string
+     builders one = singlet string
+     builders two = singlet string
+     builders three = singlet string
+     builders four = singlet string
+     builders five = singlet string
+     builders six = singlet string
+     builders seven = singlet string
+     builders eight = singlet string
+     builders nine = singlet string

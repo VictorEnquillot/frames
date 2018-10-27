@@ -1,0 +1,37 @@
+File : frames/generatorset/generatorset_datstructures/adb/README
+
+The purpose of this directory is to store code to read the data necessary to build any Target of the Generatorset Domain.
+
+The data are here Entityname.
+They are organized in a file corresponding to one domain as a protein file in the PDB database.
+
+Example :
+   chemicalset_constructors_symbol.set
+   geometryset_constructors_symbol.set
+   geometryset_constructors_formula.set
+
+entryadb : Here an entry is the doublet (domainset, symbols) 
+           or (domainset, formulas)
+           It corresponds to Pdb_ID and defines a database file.
+
+keyabd   : the name of an entity, which defines it uniquely  
+
+the trail associated list is used to define domainset category entity context
+when necessary.
+
+
+--- database  ---------
+
+word_list_by_entity_trail_provider_v.ml (tool)
+                |
+                v
+word_tree_by_category_trail_provider_v.ml   
+                |
+                v
+word_n_word_list_list_by_category_trail_provider_v.ml
+                |
+                v
+database_record_list_by_category_trail_provider_v.ml (basic data file)
+                |   
+                v
+database_filename_by_category_trail_provider_v.ml

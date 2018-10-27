@@ -1,0 +1,10 @@
+(* Db_1 *)
+
+let dt1_ldb = Local_database_db1_tag_by_unit_provider_v.provide ();;
+
+test_number 1 (
+ dt1_ldb 
+(* : Database_entity_db1_symbol_t.database_entity_db1_symbol Tag_t.tag *)
+=
+  (Database_entity_db1_symbol_t.Database_entity_db1_database "db1", [])
+);;

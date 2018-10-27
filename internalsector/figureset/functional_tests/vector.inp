@@ -1,0 +1,28 @@
+# input
+   model =
+     model_name = vector
+     model_title = "a vector"
+     database_name = db1
+     entity_what = vector
+     entity_name = bc
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+# output
+   target = 
+     domain_name = figure
+     target_name = vector
+     target_title = "a vector length"
+     property_file = vector_length.out 
+     property_name = vector_length
+     property_units_list = { meter }
+     model_list = { vector }
+   end # target
+
+
+# domain
+   domain =
+    domain_name = figure
+    target_list = { vector_length }
+   end # domain

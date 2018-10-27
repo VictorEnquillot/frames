@@ -1,0 +1,14 @@
+define P_a_tag 
+          external
+             external_name "A_A"
+             type [ "figure" "set" "fence" "point" "constructor" ]
+	     database "db1points"
+             domain "figure"
+	     category "tag"
+             end -- external
+       end -- define
+
+print "P_a_tag"
+      end -- print
+
+stop

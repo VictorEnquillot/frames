@@ -1,0 +1,2 @@
+let nam_dom = "figure";;
+let tag_dom = Domain_tag_v.make_of_domain_name_of_sole_index_up nam_dom [];;

@@ -1,0 +1,28 @@
+ledit -x -h ./.toplevel-history ocaml \
+-I ../../general/basics \
+-I ../../general/datastructures \
+-I ../../general/files \
+-I ../../commonset \
+-I ../../figureset/figureset_symbols \
+-I ../../figureset/figureset_tags \
+-I ../../figureset/figureset_databases \
+-I ../../figureset/figureset_interfaces \
+-I ../../figureset/figureset_formulas \
+-I ../../figureset/figureset_values \
+-I ../../figureset/figureset_properties \
+-I ./ \
+unix.cma str.cma \
+../../general/basics/basics.cma \
+../../general/datastructures/datastructures.cma \
+../../general/files/files.cma \
+../../commonset/commonset.cma \
+../../figureset/figureset_symbols/figureset_symbols.cma \
+../../figureset/figureset_tags/figureset_tags.cma \
+../../figureset/figureset_databases/common/common.cma \
+../../figureset/figureset_databases/db1/db1.cma \
+../../figureset/figureset_databases/figureset_databases.cma \
+../../figureset/figureset_interfaces/figureset_interfaces.cma \
+../../figureset/figureset_formulas/figureset_formulas.cma \
+../../figureset/figureset_values/figureset_values.cma \
+../../figureset/figureset_properties/figureset_properties.cma \
+ 

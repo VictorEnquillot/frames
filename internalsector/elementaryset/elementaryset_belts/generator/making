@@ -1,0 +1,8 @@
+(** {6 Making} *)
+
+let make tag_ttt =
+  let con_ttt = This_container_v.container_of_tag tag_ttt in
+  let env_ttt_d = Datstr_v.map Buldr_envelope_v.closure con_ttt in
+  Tuple_v.tuple_of_datstr env_ttt_d
+;;
+

@@ -1,0 +1,18 @@
+FILES_MLI := \
+Measured_float_tuple_list_by_property_operand_fence_external_tag_register_v.mli \
+Measured_float_tuple_list_by_property_operand_body_target_created_tag_register_v.mli \
+ \
+Measured_float_tuple_list_by_property_operand_fence_external_tag_provider_v.mli \
+Measure_by_basicname_operation_n_measured_float_tuple_list_provider_v.mli \
+Cofactor_basic_float_by_property_operator_fence_creation_toentity_tag_provider_v.mli \
+Cofactor_entity_measured_float_tuple_by_property_operator_fence_creation_toentity_tag_provider_v.mli \
+Measured_float_tuple_list_by_property_operand_body_target_created_tag_provider_v.mli \
+ \
+Property_operand_body_target_measured_value_t.mli \
+Property_target_body_implicit_tounit_value_t.mli \
+Property_operand_body_target_created_value_t.mli \
+ \
+Property_operand_body_target_measured_value_v.mli \
+Property_target_body_implicit_tounit_value_v.mli \
+Property_operand_body_target_created_value_v.mli \
+ 

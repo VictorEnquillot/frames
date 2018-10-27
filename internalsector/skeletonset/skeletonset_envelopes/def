@@ -1,0 +1,25 @@
+   "Definition : the B-Tree of any Entity is the Tree of the Entity Tags necessary to build its value";
+   "Definition : the Context gathers Entities at the top of the B-Tree of a Domain (Domain, Database, Datafile)";
+   "Definition : the Body gathers Entities of the B-Tree of a Domain being neither in Context nor in Fence";
+   "Definition : the Fence is the Tag list of the Leaf Entities of the B-Tree of a Domain";
+   "Definition : the Border is the Tag list of the father Entities of the Fence of the Elementary Domain";
+   "Definition : a Builder (for an Entity of a Domain) is a son of its B-Tree";
+   "Definition : a Containee is a Builder expressed in the lowest subtype compatible with the Datastructure of the Container";
+   "Definition : a Container is the Datastructure of the Containee of an Entity";
+   "Definition : a Containee is an element of the Datastructure of the Container of an Entity";
+   "Definition : a Building is the same Datastructure as Container but filled with Builders"; 
+   "Definition : a Stalk is a type with only one constructor of nothing";
+   "Definition : a Bud is a type with only one constructor of string";
+   "Definition : a Stem is a type with only constructors of string";
+   "Definition : a Branch is a type with only constructors of nothing";
+   "Definition : a Trunc is a type with only constructors of constructor";
+   "Definition : a Plug generalizes any Elementary Value";
+   "Definition : a Measure couples a float and an Elementary_fence_units_symbol";
+   "Definition : a Measure is also a Plug_units";
+   "Definition : a Closure is a list of Plug. It valuates the Elementary_fence i.e. the Deepfence of any Domain";
+   "Definition : a Closure_units is a list of Plug_units (i.e. Measure)";
+   "Definition : Closure, Plug and Measure are pure values Entities without any Symbol";
+   "Definition : a Bridge links a Lower Domain Body Entity and an Upper Domain Fence Entity"
+   "Definition : a Bridge provides the Body Tag associated with the Fence Tag argument"
+   "Definition : an Envelope has the same Datastructure as a Container";
+   "Definition : an Envelope is a Datastructure of Plug expressed in the lowest subtype compatible with its Datastructure";

@@ -1,0 +1,1 @@
+modify_string.pl 'Entity_symbol_t.Entity_proper "coordinate_cylindrical"' 'Entity_symbol_t.Entity_proper_symbol (Entity_proper_symbol_t.Entity_proper_with_sons "coordinate_cylindrical")' *ml

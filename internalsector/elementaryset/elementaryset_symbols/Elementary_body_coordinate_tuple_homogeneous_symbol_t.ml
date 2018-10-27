@@ -1,0 +1,16 @@
+(** {3 Elementary_body_coordinate_tuple_homogeneous_symbol_t} *)
+
+
+(** {6 Typing_for_symbol} *)
+
+type elementary_body_coordinate_tuple_homogeneous_symbol =
+  | Elementary_body_coordinate_tuple_homogeneous_cartesian_symbol of Elementary_body_coordinate_tuple_homogeneous_cartesian_symbol_t.elementary_body_coordinate_tuple_homogeneous_cartesian_symbol
+  | Elementary_body_coordinate_tuple_homogeneous_linear_symbol of Elementary_body_coordinate_tuple_homogeneous_linear_symbol_t.elementary_body_coordinate_tuple_homogeneous_linear_symbol
+  | Elementary_body_coordinate_tuple_homogeneous_planar_symbol of Elementary_body_coordinate_tuple_homogeneous_planar_symbol_t.elementary_body_coordinate_tuple_homogeneous_planar_symbol
+;;
+
+
+(** Elementary_body_coordinate_tuple_homogeneous_symbol_t at 9:52:6 on 27 Sep 2016. created by version v2.4 of generator *)
+
+
+

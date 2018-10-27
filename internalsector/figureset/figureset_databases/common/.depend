@@ -1,0 +1,64 @@
+Local_database_fullnameofdirectory_list_by_domain_tag_register_v.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Utilities_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Register_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Register_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/List_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/commonset/Domain_tag_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/commonset/Domain_tag_t.cmo
+Local_database_fullnameofdirectory_list_by_domain_tag_register_v.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Utilities_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Register_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Register_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/List_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/commonset/Domain_tag_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/commonset/Domain_tag_t.cmx
+Local_database_nameofdirectory_list_by_domain_tag_register_v.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Utilities_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Register_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Register_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/List_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/commonset/Domain_tag_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/commonset/Domain_tag_t.cmo
+Local_database_nameofdirectory_list_by_domain_tag_register_v.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Utilities_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Register_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Register_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/List_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/commonset/Domain_tag_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/commonset/Domain_tag_t.cmx
+Local_database_fullnameofdirectory_list_by_domain_tag_provider_v.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/basics/String_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/commonset/Parameters_figureset_general_provider_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmo \
+    Local_database_fullnameofdirectory_list_by_domain_tag_register_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/files/Frames_directories_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/general/files/Filecontentsymbol_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/commonset/Domain_tag_v.cmo
+Local_database_fullnameofdirectory_list_by_domain_tag_provider_v.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/basics/String_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/commonset/Parameters_figureset_general_provider_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmx \
+    Local_database_fullnameofdirectory_list_by_domain_tag_register_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/files/Frames_directories_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/files/Filecontentsymbol_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/commonset/Domain_tag_v.cmx
+Local_database_nameofdirectory_list_by_domain_tag_provider_v.cmo : \
+    /keep/sources/ocaml_top/setup/frames/commonset/Parameters_figureset_general_provider_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmo \
+    Local_database_nameofdirectory_list_by_domain_tag_register_v.cmo \
+    Local_database_fullnameofdirectory_list_by_domain_tag_provider_v.cmo
+Local_database_nameofdirectory_list_by_domain_tag_provider_v.cmx : \
+    /keep/sources/ocaml_top/setup/frames/commonset/Parameters_figureset_general_provider_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmx \
+    Local_database_nameofdirectory_list_by_domain_tag_register_v.cmx \
+    Local_database_fullnameofdirectory_list_by_domain_tag_provider_v.cmx

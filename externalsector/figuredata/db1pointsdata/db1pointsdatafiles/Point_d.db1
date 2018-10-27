@@ -1,0 +1,6 @@
+coordinates_units_length  bohr
+coordinates_units_angle   degree
+coordinates_kind          polar 
+figure_kind               point
+figure_name               D
+vertex D_D                1.  30.

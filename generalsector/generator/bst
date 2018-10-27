@@ -1,0 +1,6 @@
+bool_constructor_symbol
+float_constructor_symbol
+index_constructor_symbol
+integer_constructor_symbol
+ordinal_constructor_symbol
+string_constructor_symbol

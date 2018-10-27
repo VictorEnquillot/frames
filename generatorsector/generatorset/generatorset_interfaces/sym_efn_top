@@ -1,0 +1,4 @@
+  let sym_efn_top =
+    Entity_symbol_v.entity_fictive_nullary_symbol_off_entity_symbol
+      sym_ent_top
+  in

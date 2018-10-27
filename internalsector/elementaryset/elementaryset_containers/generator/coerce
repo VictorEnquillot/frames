@@ -1,0 +1,24 @@
+(** {6 Coercing Up Tag} *)
+
+let coerce_up_tag tag_ttt =
+  Tag_v.map_entity 
+    Maint_symbol_v.maint_symbol_of_this_symbol 
+    tag_ttt
+;;
+
+(** {6 Coercing Up Containee} *)
+
+let builder_tag_of_containee_tag tag_cnn =
+  Tag_v.map_entity 
+    Maint_symbol_v.maint_symbol_of_conee_1_symbol 
+    tag_cnn
+;;
+
+(** {6 Coercing Down Containee} *)
+
+let containee_tag_off_builder_tag tag_mmm =
+  Tag_v.map_entity
+    Maint_symbol_v.conee_1_symbol_off_maint_symbol
+    tag_mmm
+;;
+

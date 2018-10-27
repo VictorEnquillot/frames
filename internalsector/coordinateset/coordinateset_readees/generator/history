@@ -1,0 +1,39 @@
+#!/bin/bash
+
+cp $VPAR/generator/* .
+cp $VPAR/* $VCOO/
+
+modify_string.pl PARAMETER COORDINATE *mk
+modify_string.pl NWCHEM DB1POINTS *mk
+
+modify_strings_and_rename_files.sh set_fence_aopef_coefficient set_fence_heterogeneous_polar_rho *ml *mk
+modify_strings_and_rename_files.sh set_fence_aopef_exponent set_fence_heterogeneous_polar_theta *ml *mk
+
+modify_strings_and_rename_files.sh set_fence_ecppef_coefficient set_fence_homogeneous_planar_x *ml *mk
+modify_strings_and_rename_files.sh set_fence_ecppef_exponent set_fence_homogeneous_planar_y *ml *mk
+
+modify_strings_and_rename_files.sh set_body_tuple_aopef_tag set_body_tuple_heterogeneous_polar_tag *ml *mk
+modify_strings_and_rename_files.sh set_body_tuple_ecppef_tag set_body_tuple_homogeneous_planar_tag *ml *mk
+
+cp $BPAR/Parameter_context_database_sole_index_by_any_sole_index_provider_v.ml $BCOO
+cp $BPAR/Database_name_by_any_sole_index_provider_v.ml $BCOO/
+
+modify_strings_and_rename_files.sh Parameter_ Coordinate_ *ml *mk
+modify_strings_and_rename_files.sh parameter_ coordinate_ *ml *mk
+
+modify_strings_and_rename_files.sh _nwchem_ _db1points_ *ml *mk
+modify_strings_and_rename_files.sh Nwchem Db1points *ml *mk
+
+cp $DELE/Elementary_as_body_coordinate_tuple_symbol_subtree_from_db1pointsdata_as_body_sequence_float_tag_subtree_translator_v.ml .
+
+modify_word.pl VPAR VCOO *ml
+modify_word.pl nwchem db1points *ml
+modify_word.pl parameter coordinate *ml
+modify_word.pl Parameter Coordinate *ml
+
+modify_string.pl _pta _chp *ml
+modify_string.pl _nwc _db1 *ml
+modify_string.pl _db1hemdata_ _db1pointsdata_ *ml
+modify_string.pl " DPAR:Database_name_" " BCOO:Database_name_" *ml
+modify_string.pl " DPAR:Measure_list_from_" " VCOO:Measure_list_from_" *ml
+modify_string.pl " DPAR:Db1pointsdata" " BCOO:Db1pointsdata" *ml

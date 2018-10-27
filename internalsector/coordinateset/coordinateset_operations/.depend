@@ -1,0 +1,34 @@
+Coordinate_operation_float_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tuple_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Float_tuple_v.cmi
+Coordinate_operation_float_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tuple_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Float_tuple_v.cmx
+Coordinate_operation_measure_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Trio_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measured_float_tuple_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Duo_v.cmi \
+    Coordinate_operation_float_v.cmo
+Coordinate_operation_measure_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Trio_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measured_float_tuple_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Duo_v.cmx \
+    Coordinate_operation_float_v.cmx
+Coordinate_operation_measured_float_tuple_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_conversion_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measured_float_tuple_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Float_tuple_v.cmi \
+    Coordinate_operation_float_v.cmo
+Coordinate_operation_measured_float_tuple_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_conversion_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measured_float_tuple_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Float_tuple_v.cmx \
+    Coordinate_operation_float_v.cmx

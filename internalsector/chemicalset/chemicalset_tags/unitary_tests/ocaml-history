@@ -1,0 +1,772 @@
+#use "tmendeleev_symbol_v.ml";; 
+# load "../symbols.cma";;
+#use "tmendeleev_symbol_v.ml";; 
+Msy_v.allowed_valence_of_mendeleev_symbol mnd_s (Idx_p.four);;
+#use "tmendeleev_symbol_v.ml";; 
+Msy_v.allowed_valence_of_mendeleev_symbol mnd_s (Idx_p.one);;
+#use "tmendeleev_symbol_v.ml";; 
+ #use "tmolecule_symbol_v.ml";; 
+#use "tmendeleev_symbol_v.ml";; 
+ #use "tmolecule_symbol_v.ml";; 
+ #use "tmolecule_symbol_v.ml";; #use "tsimulation_symbol_v.ml";; 
+#use "tsimulation_symbol_v.ml";; 
+smb_sim ;;
+smb_php ;;
+#use "tsimulation_symbol_v.ml";; 
+smp_php;;
+#use "tsimulation_symbol_v.ml";; 
+  #use "tatomset_symbol_v.ml";; 
+Ass_v.name set_smb_atm;;
+  #use "tatomset_index_v.ml";; 
+Asi_v.name idx_wbr ;;
+  #use "tatomset_tag_v.ml";; 
+ssb_ile;;
+Ass_v.name ssb_ile;;
+ssb_ile;;
+Ass_v.name ssb_ile;;
+  #use "tatomset_tag_v.ml";; 
+sst_ile;;
+AsS_v.name sst_ile;;
+sid_ile;;
+Asi_v.name sid_ile;;
+stg_ile;;
+Ast_v.name stg_ile;;
+  #use "tatomset_tag_v.ml";; 
+#use "../bridge_designator_v.ml";;
+#use "../bridge_state_v.ml";;
+#use "../bridge_state_t.ml";;
+#use "../bond_state_t.ml";;
+#use "multiplicity.ml";;
+#use "../../../general/tools/multiplicity.ml";;
+#use "../bond_state_t.ml";;
+#use "../../../general/tools/multiplicity_t.ml";;
+#use "../../../general/tools/multiplicity_v.ml";;
+#use "../bond_state_t.ml";;
+#use "../../../general/tools/multiplicity_t.ml";;
+#use "../bond_state_t.ml";;
+#use "tmolecule_symbol_v.ml";; 
+let smb_oh2 = Mls_v.read "Oh2";;
+#use "tmolecule_symbol_v.ml";; 
+Mls_v.name smb_oh2;;
+#use "tmolecule_symbol_v.ml";; 
+#use "tchemicalset_tag_v.ml";; 
+esb_ile;;
+#use "tchemicalset_tag_v.ml";; 
+ssb_ile;;
+Ass_v.name ssb_ile;;
+#use "tchemicalset_tag_v.ml";; 
+stg_ile;;
+#use "tchemicalset_tag_v.ml";; 
+ #use "tmolecule_c8h8_path_p.ml";; 
+quit
+ #use "taminoacid_designator_v.ml";;
+ #use "taminoacid_state_v.ml";;
+AaS_v.name sta_ama;;
+ #use "taminoacid_state_v.ml";;
+sta_ama;;
+ #use "taminoacid_state_v.ml";;
+  #use "tchemicalset_tag_v.ml";; 
+Ass_v.name ssb_ile;;
+ssb_ile;;
+  #use "tchemicalset_tag_v.ml";; 
+stg_ile;;
+Ast_v.name stg_ile;;
+  #use "tchemicalset_tag_v.ml";; 
+q
+  #use "tfragment_tag_v.ml";; 
+dsg_frg;;
+tag_frg ;;
+  #use "tfragment_tag_v.ml";; 
+ #use "tfragment_designator_v.ml";; 
+ #use "tfragment_tag_v.ml";; 
+dsg_frg;;
+ #use "tfragment_bridge_tag_v.ml";; 
+dsg_frg;;
+tag_frg ;;
+ #use "tfragment_bridge_tag_v.ml";; 
+ #use "tfragment_tag_v.ml";; 
+dsg_frg;;
+tag_frg ;;
+ #use "tfragment_tag_v.ml";; 
+tag_frg ;;
+ #use "tfragment_tag_v.ml";; 
+#use "tresidue_embedded_proline_symbol_formula_v.ml";; 
+#use "tbridge_symbol_v.ml";; 
+smb_bdg;;
+Bds_v.name smb_bdg;;
+Brs_v.name smb_bdg;;
+#use "tbridge_symbol_v.ml";; 
+Brs_v.name smb_bdg;;
+#use "tweb_index_v.ml";; 
+let rec apply i = function
+  | Tre_t.Empty -> Tre_t.Empty
+  | Tre_t.Leaf lf -> i
+  | Tre_t.Tree (rot, tre_l) -> 
+      let idx_l = Wbi_v.web_index_list_off_list tre_l in
+      Tre_t.Tree (i, List.map2 apply idx_l tre_l) 
+in
+apply Wbi_t.Forth tre
+  
+;;
+#use "tweb_index_v.ml";; 
+let rec apply i = function
+  | Tre_t.Empty -> Tre_t.Empty
+  | Tre_t.Leaf lf -> i
+  | Tre_t.Tree (rot, tre_l) -> 
+      let idx_l = Wbi_v.web_index_list_off_list tre_l in
+      Tre_t.Tree (i, List.map2 apply idx_l tre_l) 
+in
+apply Wbi_t.Forth tre
+  
+;;
+let web_index_tree_off_tree tre =
+let rec apply i = function
+  | Tre_t.Empty -> Tre_t.Empty
+  | Tre_t.Leaf lf -> i
+  | Tre_t.Tree (rot, tre_l) -> 
+      let idx_l = Wbi_v.web_index_list_off_list tre_l in
+      Tre_t.Tree (i, List.map2 apply idx_l tre_l) 
+in
+apply Wbi_t.Forth tre
+  
+;;
+let web_index_tree_off_tree tre =
+  let rec apply i = function
+    | Tre_t.Empty -> Tre_t.Empty
+    | Tre_t.Leaf lf ->  Tre_t.Leaf i
+    | Tre_t.Tree (rot, tre_l) -> 
+	let idx_l = Wbi_v.web_index_list_off_list tre_l in
+	Tre_t.Tree (i, List.map2 apply idx_l tre_l) 
+  in
+  
+  apply Wbi_t.Forth tre
+    
+;;
+#use "tweb_index_v.ml";; 
+web_index_tree_off_tree a;;
+#use "tweb_index_v.ml";; 
+let wbi_t = Wbi_v.web_index_tree_off_tree a;;
+Tre_v.name wbi_t;;
+#use "tweb_index_v.ml";; 
+Tre_v.name wbi_t;;
+Tre_v.name Wbi_v.name wbi_t;;
+let a_l = Tre_v.list_off_tree a;;
+Wbi_v.web_index_list_off_list a_l;;
+let e_l = Tre_v.list_off_tree e;;
+Wbi_v.web_index_list_off_list e_l;;
+#use "tweb_index_v.ml";; 
+Lst_v.name Wbi_v.name wbi_e_l;;
+#use "tweb_index_v.ml";; 
+Lst_v.name Wbi_v.name wbi_e_l;;
+(
+Lst_v.name Wbi_v.name wbi_e_l
+=
+"flud"
+);;
+#use "tweb_index_v.ml";; 
+wbi_a_t;;
+#use "tweb_index_v.ml";; 
+wbi_a_t;;
+Tre_v.name Wbi_v.name wbi_a_t;;
+#use "tweb_index_v.ml";; 
+idx_frg_s_b;;
+#use "tweb_index_v.ml";; 
+Bch_v.name Fri_v.name idx_frg_s_b ;;
+ #use "tchemicalset_tag_v.ml";; 
+stg_ile;;
+ #use "tchemicalset_tag_v.ml";; 
+stg_ile;;
+ #use "tatom_tag_v.ml";; 
+tag_atm;;
+ #use "tatom_tag_v.ml";; 
+testi 0 (
+tag_atm
+=
+);;
+tag_atm;;
+ #use "tatom_tag_v.ml";; 
+tag_atm;;
+Att_v.name tag_atm;;
+ #use "tatom_tag_v.ml";; 
+ #use "tfragment_bridge_tag_v.ml";;
+dsg_frg ;;
+tag_frg 
+  ;;
+ #use "tfragment_bridge_tag_v.ml";;
+tag_frg ;;
+ #use "tfragment_tag_v.ml";;
+dsg_frg;;
+tag_frg;;
+ #use "tfragment_tag_v.ml";;
+ #use "tmolecule_symbol_v.ml";;
+smb_oh2 ;;
+Mls_v.name smb_oh2;;
+ #use "tmolecule_symbol_v.ml";;
+smb_oh2 ;;
+ #use "tmolecule_symbol_v.ml";;
+type a =
+| A
+| B
+type t =
+| A of a
+| B of b
+and a =
+| Ca
+| C
+and b
+| Ca
+| D
+;;
+ #use "tatom_symbol_v.ml";;
+Bds_v.compare dsg_bnd_2 dsg_bnd_1;;
+Ats_v.valence_of_atom_symbol Ats_v.nq;;
+ #use "tatom_symbol_v.ml";;
+ #use "tmendeleev_symbol_v.ml";;
+he;;
+ #use "tmendeleev_symbol_v.ml";;
+Mns_v.read (Scanf.Scanning.from_string "Uuu");;
+Mns_v.read (Scanf.Scanning.from_string "Uux");;
+Mns_v.read (Scanf.Scanning.from_string "Uuw");;
+Mns_v.read (Scanf.Scanning.from_string "Wuw");;
+ #use "tmendeleev_symbol_v.ml";;
+Mns_v.read (Scanf.Scanning.from_string "Wuw");;
+Mns_v.read (Scanf.Scanning.from_string "W");;
+Mns_v.read (Scanf.Scanning.from_string "Wx");;
+ #use "tmendeleev_symbol_v.ml";;
+Mns_v.read (Scanf.Scanning.from_string "Wx");;
+Mns_v.read (Scanf.Scanning.from_string "Vx");;
+Mns_v.read (Scanf.Scanning.from_string "Ux");;
+ #use "tmendeleev_symbol_v.ml";;
+Mns_v.read (Scanf.Scanning.from_string "Ux");;
+Mns_v.read (Scanf.Scanning.from_string "Rx");;
+Mns_v.read (Scanf.Scanning.from_string "Rf");;
+Mns_v.read (Scanf.Scanning.from_string "Re");;
+ #use "tmendeleev_symbol_v.ml";;
+Mns_v.read (Scanf.Scanning.from_string "Re");;
+Mns_v.read (Scanf.Scanning.from_string "Rx");;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "abc" "%s") (fun s -> s);;
+ #use "tmendeleev_symbol_v.ml";;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "abc") "%s" (fun s -> s);;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "abc") "%s%!" (fun s -> s);;
+ #use "tmendeleev_symbol_v.ml";;
+b;;
+s;;
+let (s, b) = Scanf.bscanf (Scanf.Scanning.from_string "abc") "%s%n" (fun s b -> (s, b));;
+let (s, b) = Scanf.bscanf (Scanf.Scanning.from_string "abc") "%s%!" (fun s b -> (s, b));;
+let s = Scanf.sscanf "abc" "%1s"  (fun s -> s);;
+let s = Scanf.sscanf "abc" "%5s"  (fun s -> s);;
+let s = Scanf.sscanf "abc" " %5s "  (fun s -> s);;
+ #use "tmendeleev_symbol_v.ml";;
+Mns_v.read (Scanf.Scanning.from_string "Rx");;
+Mns_v.read (Scanf.Scanning.from_string "U");;
+Mns_v.read (Scanf.Scanning.from_string "Uv");;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "abc") "%sb%!" (fun s-> s );;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "abc") "%sb" (fun s-> s );;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%s" (fun s-> s );;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%s%_" (fun s-> s );;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%sb" (fun s-> s );;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%sb%s" (fun s-> s );;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%sb%s" (fun s t -> s^t );;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "ab_c" (fun s -> s );;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "ab_x" (fun s -> s );;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%2s_%1s" (fun s -> s );;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%2s_%1s" (fun s t -> s ^ t);;
+Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%2s_%1s" (fun s t -> [s; t]);;
+Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%s_%s" (fun s t -> [s; t]);;
+Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%s!_%s" (fun s t -> [s; t]);;
+Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%s!_%s!" (fun s t -> [s; t]);;
+Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%s!_" (fun s -> s );;
+Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%s%!_" (fun s -> s );;
+Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%5s_%5s" (fun s t -> [s; t]);;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%s_" (fun s -> s);;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%s" (fun s -> s);;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%sb" (fun s -> s);;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%sc" (fun s -> s);;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%s!" (fun s -> s);;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%s%!" (fun s -> s);;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%s%!%s" (fun s -> s);;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%s%!%s" (fun s t -> (s, t));;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%s%s" (fun s t -> (s, t));;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%5s%!%s" (fun s t -> (s, t));;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%5s%!" (fun s -> s );;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%5s" (fun s -> s );;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%2s" (fun s -> s );;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%2s%!" (fun s -> s );;
+let s = Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%4s%!" (fun s -> s );;
+let s = try Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%2s%!" (fun s -> s )
+with Failure "scanf: bad input at char number 2: end of input not found" -> "ici"
+;;
+let s = try Scanf.bscanf (Scanf.Scanning.from_string "ab_c") "%2s%!" (fun s -> s )
+with Scanf.Scan_failure "scanf: bad input at char number 2: end of input not found" -> "ici"
+;;
+#use "tmolecule_symbol_v.ml";; 
+Mls_v.name smb_oh2;;
+Mls_v.water;;
+#use "tbridge_symbol_v.ml";; 
+Brs_v.name smb_bdg;;
+#use "tbridge_symbol_v.ml";; 
+mty ;;
+#use "tbridge_symbol_v.ml";; 
+sta_bnd;;
+exit
+#use "tsegment_symbol_v.ml";; 
+let smb_sgb = Sgs_t.Buried_segment_symbol
+    (Sgs_t.Oneone_segment_symbol Sgs_t.Oo_CdodN_h_C_h_2)
+;;
+let smb_sgh = Sgs_t.Head_segment_symbol
+    (Sgs_t.Zeroone_segment_symbol Sgs_t.Zo_N_h_C_h_2)
+;;
+let smb_sgh = Sgs_t.Head_segment_symbol
+    (Sgs_t.Zeroone_segment_symbol Sgs_t.Zo_N_h_2C_h_2)
+;;
+#use "tsegment_symbol_v.ml";; 
+let smb_frx_1 = Frs_v.fragment_symbol_extension_of_segment_symbol_of_fragment_symbol smb_sgh smb_frg_pce;;
+#use "tsegment_symbol_v.ml";; 
+smb_fgh_ppe;;
+#use "tsegment_symbol_v.ml";; 
+smb_sgh;;
+ smb_frg_pce;;
+smb_frg_ppe;;
+Frs_v.fragment_symbol_extension_of_segment_symbol_of_fragment_symbol smb_sgh smb_frg_ppe;;
+smb_fgh_ppe ;;
+#use "tsegment_symbol_v.ml";; 
+smb_fge_pce ;;
+#use "tsegment_symbol_v.ml";; 
+smb_fge_ppe;;
+#use "tsegment_symbol_v.ml";; 
+#use "talanine_residue_embedded_symbol_v.ml";; 
+(
+smb_res 
+=
+Rss_t.Residue_embedded_symbol
+ (Aminoacid_symbol_t.Regular_symbol Aminoacid_symbol_t.Alanine)
+);;
+smb_res ;;
+smb_pce ;;
+smb_rse;;
+ smb_pce;;
+ smb_pca;;
+#use "talanine_residue_embedded_symbol_v.ml";; 
+smb_sdc;;
+#use "talanine_aminoacid_symbol_v.ml";; 
+sscanf "ABC   345" "%s %d" (fun s i -> s, i);;
+open Scanf;;
+sscanf "ABC   345" "%s %d" (fun s i -> s, i);;
+sscanf "Ssth_Cl" "%s%_%s" (fun s t -> s, t);;
+sscanf "Ssth_Cl" "%s_%s" (fun s t -> s, t);;
+sscanf "Ssth Cl" "%s_%s" (fun s t -> s, t);;
+sscanf "Ssth Cl" "%s %s" (fun s t -> s, t);;
+sscanf "Ssth_Cl" "%__%s" (fun s -> s);;
+sscanf "Ssth_Cl" "%_%s" (fun s -> s);;
+sscanf "Ssth_Cl" "%_s_%s" (fun s -> s);;
+sscanf "Ssth_Cl" "%_s%s" (fun s -> s);;
+sscanf "Ssth_Cl" "%_sC%s" (fun s -> s);;
+sscanf "Ssth_Cl" "%_s%[_]%s" (fun s -> s);;
+sscanf "Ssth_Cl" "%_s%[_]%s" (fun s t -> s , t);;
+sscanf "Ssth_Cl" "%_s\"_\"%s" (fun s t -> s , t);;
+sscanf "Ssth_Cl" "%_s\"_\"%s" (fun s  -> s );;
+sscanf "Ssth_Cl" "%_s\"C\"%s" (fun s  -> s );;
+sscanf "Ssth_Cl" "%_sC%s" (fun s  -> s );;
+sscanf "Ssth_Cl" "%_sh%s" (fun s  -> s );;
+sscanf "SsthCl" "%_sh%s" (fun s  -> s );;
+sscanf "SsthCl" "%sh%s" (fun s t -> s, t );;
+sscanf "SsthCl" "%s%h%s" (fun s t -> s, t );;
+sscanf "SsthCl" "%sh%s" (fun s t -> s, t );;
+sscanf "SsthCl" "%sh%s!" (fun s t -> s, t );;
+sscanf "Price = 1 $" "Price = %d $" (fun p -> p);;
+sscanf "Price _ 1 $" "Price _ %d $" (fun p -> p);;
+sscanf "Price _ Cl $" "Price _ %s $" (fun p -> p);;
+sscanf "Price _ Cl $" "Price _ %s" (fun p -> p);;
+sscanf "Price _ Cl" "Price _ %s" (fun p -> p);;
+sscanf "Price _Cl" "Price _%s" (fun p -> p);;
+sscanf "Price_Cl" "Price_%s" (fun p -> p);;
+sscanf "Price_Cl" "%s_%s" (fun s p -> s , p);;
+sscanf "Ssth_Cl" "%s_%s" (fun s p -> s , p);;
+sscanf "SsthCl" "%sh%s" (fun s p -> s , p);;
+sscanf "SsthCl" "Ssth%s" (fun s -> s);;
+sscanf "abc" "ab%s" (fun s -> s);;
+sscanf "abc" "%sb%s" (fun s t -> s, t);;
+sscanf "abc" "%sb%s" (fun s t -> (s, t));;
+sscanf "abc" "%s_b%s" (fun s -> s);;
+sscanf "abc" "%_sb%s" (fun s -> s);;
+sscanf "abc" "a%_sb%s" (fun s -> s);;
+sscanf "abc" "ab%_s%s" (fun s -> s);;
+sscanf "Price = 1 $" "Price = %d $" (fun p -> p);;
+sscanf "Price = 1 $" "%_s%d $" (fun p -> p);;
+sscanf "Price = 1 $" "%_s %d $" (fun p -> p);;
+sscanf "Price = 1 $" "%_s = %d $" (fun p -> p);;
+sscanf "Priceabc1 $" "%_sabc%d $" (fun p -> p);;
+sscanf "abc1" "%_sb%s" (fun p -> p);;
+sscanf "abc" "%s" (fun p -> p);;
+sscanf "a_c" "%s" (fun p -> p);;
+sscanf "a_b" "%s" (fun s -> s);;
+sscanf "a_b" "%_s_%s" (fun s -> s);;
+sscanf "a_b" "%_s\_%s" (fun s -> s);;
+sscanf "axb" "%_sx%s" (fun s -> s);;
+#use "tatom_symbol_v.ml";; 
+let smb_atm = Ats_v.dstw_c;;
+let vln_smb_atm = Ats_v.valence_of_atom_symbol smb_atm;;
+Ats_v.valence_of_atom_symbol Ats_v.dstw_c;;
+Ats_v.name Ats_v.dstw_c ;;
+#use "tatom_symbol_v.ml";; 
+#use "tmolecule_symbol_v.ml";; 
+smb_oh2;;
+Mls_v.name smb_oh2;;
+#use "tmolecule_symbol_v.ml";; 
+Bls_v.zz_c_h_4;;
+Block_symbol_v.zz_c_h_4;;
+#use "tmolecule_symbol_v.ml";; 
+smb_oh2;;
+let smb_water = Mls_v.make_of_string "water";;
+#use "tmolecule_symbol_v.ml";; 
+Mls_v.name smb_water;;
+#use "tmolecule_symbol_v.ml";; 
+#use "tpeptideca_extended_symbol_v.ml";; 
+smb_pcx_ala;;
+let smb_pcxx_ala = Pxs_v.extend_with_glycine_of_peptideca_extended_symbol smb_pcx_ala;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+ smb_pce;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+smb_pce_pro;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+Pxs_v.count smb_pcxx_gly;;
+Pxs_v.name smb_pcxx_gly;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+Pxs_v.name smb_pcxx_gly;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+smb_pce_pro;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+Pxs_v.make_peptideca_embedded_symbol;;
+ smb_pce_ala;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+smb_pce_ala;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+smb_pce_ala;;
+smb_pcx_ala ;;
+smb_pcxx_ala;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+smb_px2_ala;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+smb_pce_pro;;
+smb_pcx_pro;;
+smb_px1_pro;;
+smb_px2_pro;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+Pxs_v.count smb_px2_pro ;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+#use "talanine_residue_embedded_symbol_v.ml";; 
+ smb_pce;;
+ smb_pca;;
+#use "talanine_residue_embedded_symbol_v.ml";; 
+#use "tpeptideca_extended_symbol_v.ml";; 
+Pxs_v.name smb_px2_pro;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+Pxs_v.name smb_px2_pro;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+Pxs_v.name smb_px2_pro;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+Pxs_v.name smb_px2_pro;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+Pxs_v.aminoacid_regular_symbol_off_peptideca_extended_symbol smb_px2_pro;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+#use "tresidue_extended_symbol_v.ml";; 
+ smb_rse_ala;;
+#use "tresidue_extended_symbol_v.ml";; 
+smb_rse_ala;;
+smb_rsx_ala;;
+smb_rx1_ala;;
+smb_rx2_ala;;
+smb_rse_pro ;;
+smb_rsx_pro;;
+smb_rx1_pro::
+smb_rx1_pro;;
+smb_rx2_pro;;
+#use "tresidue_extended_symbol_v.ml";; 
+#use "tresidue_extended_symbol_v.ml";; #use "tpeptideca_extended_symbol_v.ml";; 
+#use "tpeptideca_extended_symbol_v.ml";; 
+smb_pce_ala;;
+ Pxs_v.make_of_aminoacid_regular_nterminal_symbol Aas_t.Alanine;;
+ Pxs_v.extend_with_glycine_of_peptideca_extended_symbol smb_pnx_ala;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+ Pxs_v.extend_with_glycine_of_peptideca_extended_symbol smb_pnx_ala;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+let smb_pnx_ala = Pxs_v.make_of_aminoacid_regular_nterminal_symbol Aas_t.Alanine;; 
+let smb_px1_ala = Pxs_v.extend_with_glycine_of_peptideca_extended_symbol smb_pnx_ala;;
+let smb_px2_ala = Pxs_v.extend_with_glycine_of_peptideca_extended_symbol smb_px1_ala;;
+smb_px2_ala =smb_px1_ala;;
+smb_px2_ala =smb_pnx_ala;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+let smb_prn_ala = Pns_v.make_of_aminoacid_regular_symbol Aas_t.Alanine;; 
+ Aas_t.Alanine;;
+let smb_reg_ala = Aas_t.Alanine;; 
+#use "tpeptideca_extended_symbol_v.ml";; 
+smb_reg_pro;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+smb_pcx_pro;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+Pxs_v.count smb_px2_pro ;;
+Pxs_v.aminoacid_regular_symbol_off_peptideca_extended_symbol smb_px2_pro;;
+Pxs_v.name smb_px2_pro;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+smb_px2_ala ;;
+smb_px2_pro ;;
+let smb_pcx_pro = Pxs_v.make_of_aminoacid_regular_embedded_symbol smb_reg_pro;; 
+let smb_px1_pro = Pxs_v.extend_with_glycine_of_peptideca_extended_symbol smb_pcx_pro;;
+let smb_px2_pro = Pxs_v.extend_with_glycine_of_peptideca_extended_symbol smb_px1_pro;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+Pxs_v.name smb_px2_ala;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+      let rec apply = function
+	| Pxs_t.Unchanged _ -> 0
+	| Pxs_t.Extended smb as smb_pcx ->
+;;
+      let rec apply = function
+	| Pxs_t.Unchanged _ -> 0
+	| Pxs_t.Extended smb as smb_pcx ->
+	  (apply smb_pcx) + 1;;
+apply smb_pcx_pro
+;;
+smb_pcx_pro;;
+;;
+let count = function
+  | Pxs_t.Regular_nterminal _ -> 0
+  | Pxs_t.Regular_embedded smb_xpe ->
+      let rec apply = function
+	| Pxs_t.Unchanged _ -> 0
+	| Pxs_t.Extended smb as smb_pcx ->
+	  (apply smb_pcx) + 1
+      in
+      apply smb_xpe
+;;
+      count smb_xpe
+;;
+count smb_pcx_pro;;
+count smb_px1_pro;;
+smb_px1_pro;;
+let count = function
+  | Pxs_t.Regular_nterminal _ -> 0
+  | Pxs_t.Regular_embedded smb_xpe ->
+      let rec apply = function
+	| Pxs_t.Unchanged _ -> 0
+	| Pxs_t.Extended smb ->
+	  (apply smb) + 1
+      in
+      apply smb_xpe
+;;
+count smb_px1_pro;;
+count smb_px2_pro;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+smb_pcx_pro;;
+Pxs_v.aminoacid_regular_symbol_off_peptideca_extended_symbol smb_pcx_pro;;
+Pxs_v.aminoacid_regular_symbol_off_peptideca_extended_symbol smb_px1_pro;;
+smb_px1_pro;;
+smb_px2_pro;;
+Pxs_v.aminoacid_regular_symbol_off_peptideca_extended_symbol smb_px2_pro;;
+smb_px2_pro;;
+Pxs_v.name smb_pcx_pro;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+Pxs_v.name smb_px2_pro;;
+#use "tpeptideca_extended_symbol_v.ml";; 
+Pxs_v.name smb_px2_pro;;
+Pxs_v.name smb_pcx_pro;;
+Pxs_v.name smb_px1_pro;;
+#use "talanine_residue_embedded_symbol_v.ml";;  
+#use "tpeptideca_extended_symbol_v.ml";; 
+smb_px2_pro ;;
+Rxs_v.count smb_px1_pro ;;
+Pxs_v.count smb_px1_pro ;;
+  #use "tsegment_symbol_v.ml";; 
+let smb_soo = Sgs_t.Oneone_segment_symbol Sgs_t.Oo_CdodN_h_C_h_2;;
+  #use "tsegment_symbol_v.ml";; 
+smb_1gly ;;
+let smb_2gly = Sgs_t.Buried_Polymer smb_1gly;;
+  #use "tsegment_symbol_v.ml";; 
+Sgs_v.name smb_sgh;;
+Sgs_v.name smb_2gly;;
+  #use "tsegment_symbol_v.ml";; 
+Sgs_v.name_buried_segment_symbol smb_2gly;;
+  #use "tsegment_symbol_v.ml";; 
+Sgs_v.name_buried_segment_symbol smb_2gly ;;
+Sgs_v.count_buried_segment_symbol smb_2gly ;;
+  #use "tsegment_symbol_v.ml";; 
+Sgs_v.name_buried_segment_symbol smb_2gly;;
+  #use "tsegment_symbol_v.ml";; 
+  #use "talanine_residue_embedded_symbol_v.ml";;  
+smb_res;;
+  #use "talanine_residue_embedded_symbol_v.ml";;  
+#use "talanine_aminoacid_symbol_v.ml";; 
+smb_sdc;;
+  #use "talanine_residue_embedded_symbol_v.ml";;  
+smb_rse;;
+  #use "talanine_residue_embedded_symbol_v.ml";;  
+smb_res;;
+  #use "talanine_residue_embedded_symbol_v.ml";;  
+  #use "tpeptideca_extended_symbol_v.ml";; 
+Pxs_v.peptideca_regular_nterminal_symbol_off_peptideca_extended_symbol smb_px2_ala;;
+  #use "tpeptideca_extended_symbol_v.ml";; 
+Pxs_v.peptideca_regular_nterminal_symbol_off_peptideca_extended_symbol smb_px2_ala;;
+Pxs_v.peptideca_regular_embedded_symbol_off_peptideca_extended_symbol smb_px2_pro;;
+Scanf.sscanf "abcde"     "%3s"  (function s -> s);; 
+   #use "talanine_aminoacid_symbol_v.ml";;  
+smb_amr;;
+   #use "talanine_aminoacid_symbol_v.ml";;  
+smb_amr;;
+let smb_ama = Aas_v.make_of_aminoacid_regular_symbol smb_amr;;
+   #use "talanine_aminoacid_symbol_v.ml";;  
+smb_ama;;
+Aas_v.aminoacid_regular_symbol_off_aminoacid_symbol smb_ama 
+;;
+(
+Aas_v.aminoacid_regular_symbol_off_aminoacid_symbol smb_ama 
+(* : Aminoacid_symbol_t.aminoacid_regular_symbol *)
+ = 
+smb_amr
+;;
+   #use "talanine_aminoacid_symbol_v.ml";;  
+Aas_v.aminoacid_nonglycine_symbol_off_aminoacid_symbol smb_ama ;;
+   #use "talanine_aminoacid_symbol_v.ml";;  
+Aas_v.aminoacid_nonglycine_symbol_off_aminoacid_symbol smb_ama 
+   #use "talanine_aminoacid_symbol_v.ml";;  
+Aas_v.aminoacid_nonglycine_symbol_off_aminoacid_symbol smb_ama ;;
+   #use "talanine_aminoacid_symbol_v.ml";;  
+Aas_v.is_aminoacid_regular smb_ama;;
+   #use "talanine_aminoacid_symbol_v.ml";;  
+Aas_v.name smb_ama;;
+   #use "talanine_aminoacid_symbol_v.ml";;  
+Aas_v.aminoacid_olc_symbol_of_aminoacid_symbol smb_ama;;
+Aas_v.aminoacid_tlc_symbol_of_aminoacid_symbol smb_ama;;
+Aminoacid_tlc_symbol_v.ala;;
+Aminoacid_tlc_symbol_v;;
+   #use "talanine_aminoacid_symbol_v.ml";;  
+smb_amn;;
+   #use "talanine_aminoacid_symbol_v.ml";;  
+(
+Aas_v.alanine 
+=
+smb_ama
+);;
+   #use "talanine_aminoacid_symbol_v.ml";;  
+Aas_v.alanine ;;
+Aas_v.read (Scanf.Scanning.from_string "alaNIne") ;;
+   #use "talanine_sidechain_symbol_v.ml";;  
+Scs_v.aminoacid_regular_symbol_off_sidechain_symbol smb_sdc;;
+   #use "talanine_sidechain_symbol_v.ml";;  
+type integer_symbol =
+| Zero | One | Two | Thre;;
+type integer_symbol_formula =
+| F_0 of Zero
+| Successor of integer_symbol_formula 
+;;
+type integer_symbol_formula =
+| F_0 of Zero
+;;
+type integer_symbol_formula = F_0 of Zero;;
+let x = Zero;;
+type integer_symbol_formula =
+| Z
+| Successor of integer_symbol_formula 
+;;
+type integer_symbol_formula = | Z | Successor of integer_symbol_formula ;;
+type integer_symbol_formula = | Z of Zero | Successor of integer_symbol_formula ;;
+type integer_symbol_formula = | Z  | Successor of integer_symbol_formula ;;
+let rec retrieve = function
+| Z -> Zero
+| One ->  Successor Z
+| Two ->  Successor (retrieve One)
+| Three -> Successor (retrieve Two);;
+let rec retrieve = function
+| Zero -> Z
+| One ->  Successor Z
+| Two ->  Successor (retrieve One)
+| Three -> Successor (retrieve Two)
+;;
+type integer_symbol =
+| Zero | One | Two | Three
+;;
+let rec retrieve = function
+| Zero -> Z
+| One ->  Successor Z
+| Two ->  Successor (retrieve One)
+| Three -> Successor (retrieve Two)
+;;
+ #use "tclosed_fragment_symbol_v.ml";; 
+smb_frc_gly;;
+ #use "tclosed_fragment_symbol_v.ml";; 
+smb_frc_gly;;
+smb_frg_gly;;
+smb_frc_x;;
+ #use "tclosed_fragment_symbol_v.ml";; 
+smb_sgh;;
+lxb ;;
+smb_frc_x ;;
+ #use "tclosed_fragment_symbol_v.ml";; 
+smb_frg;;
+ #use "tclosed_fragment_symbol_v.ml";; 
+smb_frg ;;
+let a = List_v.cut_off_last_element_of_list [1;2;3];;
+#use "talanine_aminoacid_leftextended_symbol_v.ml";; 
+Als_v.name smb_alx_g2a;;
+#use "talanine_aminoacid_leftextended_symbol_v.ml";; 
+Als_v.name smb_alx_g0a,,
+Als_v.name smb_alx_g0a;;
+#use "talanine_aminoacid_leftextended_symbol_v.ml";; 
+Als_v.name smb_alx_g0a;;
+
+#use "tclosed_fragment_symbol_v.ml";; 
+let brl = Brl_v.make_of_extension_of_boot smb_sgh smb_frl;;
+Frs_t.Head_segment_extends_leaf_fragment_symbol brl;;
+#use "tclosed_fragment_symbol_v.ml";; 
+extends_of_head_segment_symbol_of_fragment_symbol smb_fzz_gly;;
+Frs_v.extends_of_head_segment_symbol_of_fragment_symbol smb_fzz_gly;;
+Frs_v.extends_of_head_segment_symbol_of_fragment_symbol;;
+smb_sgh;;
+Frs_v.extends_of_head_segment_symbol_of_fragment_symbol smb_sgh smb_fzz_gly;;
+smb_frg_gly;;
+Frs_v.extends_of_head_segment_symbol_of_fragment_symbol smb_sgh smb_frg_gly;;
+smb_frc_gly;;
+smb_frl;;
+smb_sgh;;
+#use "tclosed_fragment_symbol_v.ml";; 
+dbt ;;
+#use "tclosed_fragment_symbol_v.ml";; 
+dbt;;
+smb_frc_x;;
+#use "tclosed_fragment_symbol_v.ml";; 
+smb_frc_x;;
+#use "tclosed_fragment_symbol_v.ml";; 
+smb_frg;;
+#use "tclosed_fragment_symbol_v.ml";; 
+ #use "tvaline_molecule_aminoacid_symbol_v.ml";; 
+ #use "talanine_molecule_aminoacid_symbol_v.ml";; 
+#use "talanine_molecule_aminoacid_leftextended_symbol_v.ml";; 
+smb_alx_g2a ;;
+let smb_mar = Mas_v.alanine_f;;
+Mals_v.make_of_index_of_molecule_aminoacid_fragmented_symbol Idx_p.two smb_mar;;
+#use "talanine_molecule_aminoacid_leftextended_symbol_v.ml";; 
+smb_alx_g2a ;;
+#use "talanine_molecule_aminoacid_leftextended_symbol_v.ml";; 
+Mals_v.shortname smb_malx_g2a;;
+#use "talanine_molecule_aminoacid_leftextended_symbol_v.ml";; 
+Mals_v.shortname smb_malx_g2a;;
+smb_malx_g0a;;
+Mals_v.shortname smb_malx_g0a;;
+#use "talanine_molecule_aminoacid_leftextended_symbol_v.ml";; 
+#use "tatom_symbol_v.ml";; 
+smb;;
+#use "tatom_symbol_v.ml";; 
+#use "tvaline_molecule_aminoacid_symbol_v.ml";; 
+let smb_ama = Mas_v.valine;;
+ #use "tvaline_molecule_aminoacid_symbol_v.ml";; 
+*)smb_amn;;
+let smb_ama = Mas_v.valine;;
+smb_ama ;;
+let smb_amr = Mas_v.molecule_aminoacid_regular_symbol_off_molecule_aminoacid_symbol smb_ama;;
+smb_amr;;
+(
+smb_amr (* : Mas_t.molecule_aminoacid_regular_symbol *)
+  = 
+Mas_t.Valine
+);;
+ #use "tvaline_molecule_aminoacid_symbol_v.ml";; 
+smb_amn;;
+smb_amr;;

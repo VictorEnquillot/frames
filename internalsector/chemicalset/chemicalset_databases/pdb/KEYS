@@ -1,0 +1,50 @@
+CONECT
+CRYST1
+END
+ENDMDL
+FORMUL
+HETNAM
+HETSYN
+MASTER
+MODEL
+MTRIX1
+MTRIX2
+MTRIX3
+NUMMDL
+ORIGX1
+ORIGX2
+ORIGX3
+SCALE1
+SCALE2
+SCALE3
+AUTHOR 
+CAVEAT 
+COMPND 
+EXPDTA 
+HEADER 
+JRNL 
+KEYWDS 
+OBSLTE 
+REMARK 
+REVDAT 
+SOURCE 
+SPLIT 
+SPRSDE 
+TITLE 
+ANISOU of char
+ATOM of char
+DBREF1 of char
+DBREF2 of char
+DBREF of char
+HELIX of char
+HETATM of char
+HET of char
+MODRES of char
+SEQADV of char
+SEQRES of char
+TER of char
+SHEET of char 
+CISPEP of char * char
+LINK of char * char
+SSBOND of char * char
+SITE of char * char * char * char

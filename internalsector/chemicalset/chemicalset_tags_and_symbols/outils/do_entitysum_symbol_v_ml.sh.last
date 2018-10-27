@@ -1,0 +1,781 @@
+category="symbol"
+. ${UTI}/do_header.sh
+
+# ---- module file extension : t.ml v.ml v.mli ----------------
+
+module_extension=`module_extension $0`
+
+# -----------------  Usage category = $1  ---------------------
+
+. do_usage.inc
+
+# -------------- Check input -----------------------------------
+
+check_is_entity_code_buildable ${entitysum}
+
+# -------------- Caml Code -------------------------------------
+
+echo "(** {3 A ${Category} for a ${Entitysum}.} *)"
+echo ""
+echo "let nam_mod = \"${Entitysum}_${category}_v\";;"
+echo ""
+
+# -------------- Modules  --------------------------------------
+
+echo "(** {6 Modules.} *)"
+echo ""
+
+echo "module ${Emodat} = ${Emodulet}" > temp_modules
+
+for f in `do_${entitysum}_constructor_set`
+do
+    flevel=`constructor_level ${f}`
+    fhascs=`has_entity_constructor_set ${f}`
+    case ${flevel} in
+	1) 
+	    . ${UTI}/do_entitysum_${category}_variables_f.inc
+
+	    echo "module ${Fmodat} = ${Fmodulet}" >> temp_modules
+	    echo "module ${Fmodav} = ${Fmodulev}" >> temp_modules
+#--- g
+	    for g in `do_${f}_constructor_set`
+	    do
+		glevel=`constructor_level ${g}`
+		ghascs=`has_entity_constructor_set ${g}`
+		case ${glevel} in
+		    1) 
+			. ${UTI}/do_entitysum_${category}_variables_g.inc
+			
+			echo "module ${Gmodat} = ${Gmodulet}" >> temp_modules
+			echo "module ${Gmodav} = ${Gmodulev}" >> temp_modules
+#--- h
+			for h in `do_${g}_constructor_set`
+			do
+			    hlevel=`constructor_level ${h}`
+			    hhascs=`has_entity_constructor_set ${h}`
+			    case ${hlevel} in
+				1) 
+				    . ${UTI}/do_entitysum_${category}_variables_h.inc
+				    
+				    echo "module ${Hmodat} = ${Hmodulet}" >> temp_modules
+				    echo "module ${Hmodav} = ${Hmodulev}" >> temp_modules
+				    ;;
+				[0bs])
+#				    echo " (* With a $H constructor no module can be defined. *)"
+				    ;;
+ 				d) # doublet_l_r
+				    doublet_module_lines_in_v_ml ${h} >> temp_modules
+				    ;;
+				*) 
+				    echo " Error: in script $0"
+				    echo "        in paragraph h Modules"
+				    echo " hlevel >${hlevel}< for constructor $h is unknown";
+				    exit
+				    ;;
+			    esac # h
+			done # h
+			;;
+#----
+		    [0bhs])
+#			echo " (* With a $G constructor no module can be defined. *)"
+		    ;;
+ 		    d) # doublet_l_r
+			doublet_module_lines_in_v_ml ${g} >>  temp_modules
+			;;
+		    *) 
+		    echo " Error: in script $0"
+		    echo "        in paragraph g Modules"
+		    echo " glevel >${glevel}< for constructor $g is unknown";
+		    exit
+		    ;;
+		esac # g
+	    done # g
+	    ;;
+#----
+	[0bs])
+#	    echo " (* With a $F constructor no module can be defined. *)"
+	    ;;
+	d) # doublet_l_r
+	    doublet_module_lines_in_v_ml ${f} >>  temp_modules
+	    ;;
+	*) 
+	    echo " Error: in script $0"
+	    echo "        in paragraph f Modules"
+	    echo " flevel >${flevel}< for constructor $f is unknown";
+	    exit
+	    ;;
+    esac # f
+done # f
+
+sort -u temp_modules
+echo ""
+
+# -------------- end of Modules  --------------------------------------
+
+# -------------- Displaying -------------------------------------------
+
+echo "(** {6 Displaying.} *)"
+echo ""
+
+# ------------- including moment specific file ---------------------
+
+# case 
+# . do_moment_${category}_converting_v_ml.inc
+
+# -------------- Displaying ----------------------------------------
+
+echo "let name = function"
+for f in `do_${entitysum}_constructor_set`
+do
+    F=`capitalize_first ${f}`
+    flevel=`constructor_level ${f}`
+    case ${flevel} in
+	1) 
+	    . ${UTI}/do_entitysum_${category}_variables_f.inc
+
+	    echo "  | ${Emodat}.${Fmodule} ${farg} -> "
+	    echo "      ${Fmodav}.name ${farg}"
+	    ;;
+	0)
+	    bare=`entity_without_constructor_set_name ${f}`
+	    echo "  | ${Emodat}.${F} -> Format.sprintf \"%s\" \"${bare}\""
+	    ;;
+	b)
+	    echo "  | ${Emodat}.Bool b -> Format.sprintf \"%b\" b"
+	    ;;
+ 	d) # doublet_l_r
+	    echo "  | ${Emodat}.Doublet dbt ->"
+	    doublet_name_line $f
+	    ;;
+	s)
+	    echo "  | ${Emodat}.String str -> Format.sprintf \"%s\" str"
+	    ;;
+    	*) 
+	    error_message_for_case_xlevel Displaying f ${flevel} ${f}
+	    ;;
+    esac
+done
+echo ";;"
+echo ""
+
+echo "let print ppf = function"
+for f in `do_${entitysum}_constructor_set`
+do
+    F=`capitalize_first ${f}`
+    flevel=`constructor_level ${f}`
+    case ${flevel} in
+	1) 
+	    . ${UTI}/do_entitysum_${category}_variables_f.inc
+	    
+	    echo "  | ${Emodat}.${Fmodule} ${farg} -> "
+	    echo "      ${Fmodav}.print ppf ${farg}"
+	    ;;
+	0)
+	    bare=`entity_without_constructor_set_name ${f}`
+	    echo "  | ${Emodat}.${F} -> Format.fprintf ppf \"%s\" \"${bare}\""
+	    ;;
+	b)
+	    echo "  | ${Emodat}.Bool b -> Format.fprintf ppf \"%b\" b"
+	    ;;
+ 	d) # doublet_l_r
+	    echo "  | ${Emodat}.Doublet dbt ->"
+	    doublet_print_line $f
+	    ;;
+	s)
+	    echo "  | ${Emodat}.String str -> Format.fprintf ppf \"%s\" str"
+	    ;;
+     	*) 
+	    error_message_for_case_xlevel Displaying f ${flevel} ${f}
+	    ;;
+    esac
+done
+echo ";;"
+echo ""
+
+# --------------- Extracting -------------------
+
+echo "(** {6 Extracting.} *)"
+echo ""
+
+fcount=`entity_constructor_count ${e}`
+if [ ${fcount} -gt 1 ] 
+then
+    echo "let print_fatal_error nam_fun nam_exp nam_fnd ="
+    echo "  Format.fprintf"
+    echo "    Format.err_formatter"
+    echo "    \"@.@[<hov>%s.%s: --- Fatal Error ---\\"
+    echo "     @.    expecting Level One subtype >%s<.\\"
+    echo "     @.    found ${emodule} >%s<.\\"
+    echo "     @.    cure : check.@]@.\""
+    echo "     nam_mod nam_fun nam_exp nam_fnd;"
+    echo "     assert false;"
+    echo ";;"
+    echo ""
+fi
+
+ehascs=`has_entity_constructor_set ${e}`
+elevel=`constructor_level ${e}`
+
+if [ ${ehascs} = "y" ] 
+then 
+    for f in `do_${entitysum}_constructor_set`
+    do
+    . ${UTI}/do_entitysum_${category}_variables_f.inc
+
+    fhascs=`has_entity_constructor_set ${f}`
+    flevel=`constructor_level ${f}`
+
+    echo "(** {6 Extracting ${F} from ${E}.} *)"
+    echo ""
+
+    if [ ${fhascs} = "n" ]
+    then 
+	case ${flevel} in
+	    [bs])
+		echo "let ${e}_${f}_off_${emodule} = function"
+		echo "  | ${Emodat}.${F} ${flevel} -> ${flevel}" 
+		if [ ${fcount} -gt 1 ] 
+		then
+		    echo "  | s ->  print_fatal_error"
+		    echo "      \"${fmodule}_off_${emodule}\"" 
+		    echo "      \"${Fmodule}\" (name s)" 
+		fi
+		echo ";;"
+		echo ""
+		;;
+	    [0dh]) 
+		no_action Extraction $f $flevel
+		;;
+	    *)
+		error_message_for_case_xlevel Extracting f ${flevel} ${f}
+		;;
+	esac # f
+
+    else # [ $fhascs -ge 0 ]
+
+	echo "let ${fmodule}_off_${emodule} = function"
+	echo "  | ${Emodat}.${Fmodule} ${farg} -> ${farg}" 
+	if [ ${fcount} -gt 1 ] 
+	then
+	    echo "  | s ->  print_fatal_error"
+	    echo "      \"${fmodule}_off_${emodule}\"" 
+	    echo "      \"${Fmodule}\" (name s)" 
+	fi 
+	echo ";;"
+	echo ""
+	
+	for g in `do_${f}_constructor_set`    # hascs 
+	do
+	    . ${UTI}/do_entitysum_${category}_variables_g.inc
+	    
+	    glevel=`constructor_level ${g}`
+	    ghascs=`has_entity_constructor_set ${g}`
+	    
+	    echo "(** {9 Extracting ${G} from ${F} from ${E}.} *)"
+	    echo ""
+
+	    if [ ${ghascs} = "n" ]
+	    then 
+		case ${glevel} in
+		    [bs])
+			echo "let ${f}_${g}_off_${emodule} ${earg} ="
+			echo "  let ${farg} = ${fmodule}_off_${emodule} ${earg} in"
+			echo "    ${Fmodav}.${f}_${g}_off_${fmodule} ${farg}" 
+			echo ";;"
+			echo ""
+			;;
+		    [0dh])
+			no_action Extraction $g $glevel
+			;;
+    		    *) 
+			error_message_for_case_xlevel Extracting g $glevel $g
+			;;
+		esac # ${glevel}  
+		
+	    else # [ $ghascs -eq 0 ]
+	    	
+		echo "let ${gmodule}_off_${emodule} ${earg} ="
+		echo "  let ${farg} = ${fmodule}_off_${emodule} ${earg} in"
+		echo "    ${Fmodav}.${gmodule}_off_${fmodule} ${farg}" 
+		echo ";;"
+		echo ""
+		
+		for h in `do_${g}_constructor_set`    
+		do
+		    . ${UTI}/do_entitysum_${category}_variables_h.inc
+		    
+		    hlevel=`constructor_level ${h}`
+		    hhascs=`has_entity_constructor_set ${h}`
+		    
+		    echo "(** {12 Extracting ${H} from ${G} from ${F} from ${E}.} *)"
+		    echo ""
+		    if [ ${hhascs} = "n" ]
+		    then 
+			case ${hlevel} in
+			    [bs])
+				echo "let ${g}_${h}_off_${emodule} ${earg} ="
+				echo "  let ${garg} = ${gmodule}_off_${emodule} ${earg} in"
+				echo "    ${Gmodav}.${g}_${h}_off_${gmodule} ${garg}" 
+				echo ";;"
+				echo ""
+				;;
+			    [0dh])
+				no_action Extraction $h $hlevel
+				;;
+			    
+    			    *) 
+				error_message_for_case_xlevel Extracting h $hlevel $h
+				;;
+			esac # ${hlevel}  		    
+			
+		    else # $hhascs 
+	    		
+			echo "let ${hmodule}_off_${emodule} ${earg} ="
+			echo "  let ${garg} = ${gmodule}_off_${emodule} ${earg} in"
+			echo "    ${Gmodav}.${hmodule}_off_${gmodule} ${garg}" 
+			echo ";;"
+			echo ""
+
+			for i in `do_${h}_constructor_set`    
+			do
+			    . ${UTI}/do_entitysum_${category}_variables_i.inc
+			    
+			    ilevel=`constructor_level ${i}`
+			    ihascs=`has_entity_constructor_set ${i}`
+			    
+			    echo "(** {15 Extracting ${J} from ${I} from ${H} from ${F} from ${E}.} *)"
+			    echo ""
+			    if [ ${ihascs} = "n" ]
+			    then 
+				case ${ilevel} in
+				    [bs])
+					echo "let ${h}_${i}_off_${emodule} ${earg} ="
+					echo "  let ${harg} = ${hmodule}_off_${emodule} ${earg} in"
+					echo "    ${Hmodav}.${h}_${i}_off_${hmodule} ${harg}" 
+					echo ";;"
+					echo ""
+					;;
+				    [0dh])
+					no_action Extraction $i $ilevel
+					;;
+				    
+    				    *) 
+					error_message_for_case_xlevel Extracting i $ilevel $i
+					;;
+				esac # ${ilevel}  		    
+				
+			    else # $ihascs 
+	    			
+				echo "let ${imodule}_off_${emodule} ${earg} ="
+				echo "  let ${harg} = ${hmodule}_off_${emodule} ${earg} in"
+				echo "    ${Hmodav}.${imodule}_off_${hmodule} ${harg}" 
+				echo ";;"
+				echo ""
+				for j in `do_${i}_constructor_set`    
+				do
+				    . ${UTI}/do_entitysum_${category}_variables_j.inc
+				    
+				    jlevel=`constructor_level ${j}`
+				    jhascs=`has_entity_constructor_set ${j}`
+				    
+				    echo "(** {15 Extracting ${I} from ${J} from ${H} from $[G} from ${F} from ${E}.} *)"
+				    echo ""
+				    if [ ${jhascs} = "n" ]
+				    then 
+					case ${jlevel} in
+					    [bs])
+						echo "let ${i}_${j}_off_${emodule} ${earg} ="
+						echo "  let ${iarg} = ${imodule}_off_${emodule} ${earg} in"
+						echo "    ${Imodav}.${i}_${j}_off_${imodule} ${iarg}" 
+						echo ";;"
+						echo ""
+						;;
+					    [0dh])
+						no_action Extraction $j $jlevel
+						;;
+					    
+    					    *) 
+						error_message_for_case_xlevel Extracting j $jlevel $j
+						;;
+					esac # ${jlevel}  		    
+					
+				    else # $jhascs 
+	    				
+					echo "let ${jmodule}_off_${emodule} ${earg} ="
+					echo "  let ${iarg} = ${imodule}_off_${emodule} ${earg} in"
+					echo "    ${Imodav}.${jmodule}_off_${imodule} ${iarg}" 
+					echo ";;"
+					echo ""
+
+					for k in `do_${j}_constructor_set`    
+					do
+					    . ${UTI}/do_entitysum_${category}_variables_k.inc
+					    
+					    klevel=`constructor_level ${k}`
+					    khascs=`has_entity_constructor_set ${k}`
+					    
+					    echo "(** {18 Extracting ${K} from ${I} from ${J} from ${H} from $[G} from ${F} from ${E}.} *)"
+					    echo ""
+					    if [ ${khascs} = "n" ]
+					    then 
+						case ${klevel} in
+						    [bs])
+							echo "let ${j}_${k}_off_${emodule} ${earg} ="
+							echo "  let ${jarg} = ${jmodule}_off_${emodule} ${earg} in"
+							echo "    ${Jmodav}.${j}_${k}_off_${jmodule} ${jarg}" 
+							echo ";;"
+							echo ""
+							;;
+						    [0dh])
+							no_action Extraction $k $klevel
+							;;
+						    
+    						    *) 
+							error_message_for_case_xlevel Extracting k $klevel $k
+							;;
+						esac # ${klevel}  		    
+						
+					    else # $khascs 
+	    					
+						echo "let ${kmodule}_off_${emodule} ${earg} ="
+						echo "  let ${jarg} = ${jmodule}_off_${emodule} ${earg} in"
+						echo "    ${Jmodav}.${kmodule}_off_${jmodule} ${jarg}" 
+						echo ";;"
+						echo "ERROR"
+exit
+					    fi # k
+					done # k
+				    fi # j
+				done # j
+			    fi # i
+			done # i
+		    fi # h
+		done # h
+	    fi # g
+	done # g
+    fi # f
+    done # f
+fi # e
+
+# ------------- end of Extracting -------------------------------
+
+# -------------------- Querying needs Extracting ----------------
+
+echo "(** {6 Querying.} *)"
+echo ""
+
+ehascs=`has_entity_constructor_set ${e}`
+elevel=`constructor_level ${e}`
+fcount=`entity_constructor_count ${e}`
+
+if [ ${ehascs} = "y" ] 
+then 
+    for f in `do_${entitysum}_constructor_set`
+    do
+    . ${UTI}/do_entitysum_${category}_variables_f.inc
+
+    fhascs=`has_entity_constructor_set ${f}`
+    flevel=`constructor_level ${f}`
+
+    echo "(** {6 Querying ${F} in ${E}.} *)"
+    echo ""
+
+    if [ ${fhascs} = "n" ]
+    then 
+	case ${flevel} in
+	    [bs])
+		if [ ${fcount} -gt 1 ] 
+		then
+		    echo "let is_${e}_${f}_off_${emodule} = function"
+		    echo "  | ${Emodat}.${F} _ -> true"
+		    echo "  | _ -> false"
+		    echo ";;"
+		    echo ""
+		else # $f is unique Constructor of $e
+		    echo "let is_${e}_${f}_off_${emodule} ${earg} = true"
+		    echo ";;"
+		    echo ""
+		fi 
+		;;
+	    [0dh])
+		no_action Query $f $flevel
+		;;
+	    *)
+		error_message_for_case_xlevel Querying f ${flevel} ${f}
+		;;
+	esac # f
+
+    else # [ $fhascs -ge 0 ]
+
+	if [ ${fcount} -gt 1 ] 
+	then
+	    echo "let is_${fmodule}_off_${emodule} = function"
+	    echo "  | ${Emodat}.${Fmodule} _ -> true" 
+	    echo "  | _ -> false"
+	    echo ";;"
+	    echo ""
+	else # $f is unique Constructor of $e and is not bfis (ex: moment )
+	    echo "let is_${fmodule}_off_${emodule} ${earg} = true"
+	    echo ";;"
+	    echo ""
+	fi 
+
+	for g in `do_${f}_constructor_set`    # hascs 
+	do
+	    . ${UTI}/do_entitysum_${category}_variables_g.inc
+	    
+	    glevel=`constructor_level ${g}`
+	    ghascs=`has_entity_constructor_set ${g}`
+	    
+	    echo "(** {9 Querying ${G} in ${F} in ${E}.} *)"
+	    echo ""
+
+	    if [ ${ghascs} = "n" ]
+	    then 
+		case ${glevel} in
+		    [bs])
+			echo "let is_${f}_${g}_off_${emodule} ${earg} ="
+			echo "  if not (is_${fmodule}_off_${emodule} ${earg})"
+			echo "  then false"
+			echo "  else"
+			echo "    begin"
+			echo "      let ${farg} = ${fmodule}_off_${emodule} ${earg} in"
+			echo "      ${Fmodav}.is_${f}_${g}_off_${fmodule} ${farg}" 
+			echo "    end"
+			echo ";;"
+			echo ""
+			;;
+		    [0dh])
+			no_action Query $g ${glevel} 
+			echo ""
+			;;
+    		    *) 
+			error_message_for_case_xlevel Querying g ${glevel} ${g}
+			;;
+		esac # ${glevel}  
+		
+	    else # [ $ghascs -eq 0 ]
+	    	
+		echo "let is_${gmodule}_off_${emodule} ${earg} ="
+		echo "  if not (is_${fmodule}_off_${emodule} ${earg})"
+		echo "  then false"
+		echo "  else"
+		echo "    begin"
+		echo "      let ${farg} = ${fmodule}_off_${emodule} ${earg} in"
+		echo "      ${Fmodav}.is_${gmodule}_off_${fmodule} ${farg}" 
+		echo "    end"
+		echo ";;"
+		echo ""
+		
+		for h in `do_${g}_constructor_set`    
+		do
+		    . ${UTI}/do_entitysum_${category}_variables_h.inc
+		    
+		    hlevel=`constructor_level ${h}`
+		    hhascs=`has_entity_constructor_set ${h}`
+		    
+		    echo "(** {12 Querying ${H} in ${G} in ${F} in ${E}.} *)"
+		    echo ""
+		    if [ ${hhascs} = "n" ]
+		    then 
+			case ${hlevel} in
+			    [bs])
+				echo "let is_${g}_${h}_off_${emodule} ${earg} ="
+				echo "  if not (is_${gmodule}_off_${emodule} ${earg})"
+				echo "  then false"
+				echo "  else"
+				echo "    begin"
+				echo "      let ${garg} = ${gmodule}_off_${emodule} ${earg} in"
+				echo "      ${Gmodav}.is_${g}_${h}_off_${gmodule} ${garg}" 
+				echo "    end"
+				echo ";;"
+				echo ""
+				;;
+			    [0dh])
+				no_action Query $h $hlevel
+				;;
+    			    *) 
+				error_message_for_case_xlevel Querying h ${hlevel} ${h}
+				;;
+			esac # ${hlevel}  		    
+			
+		    else # [ $hhascs -eq 0 ]
+	    		
+			echo "let is_${hmodule}_off_${emodule} ${earg} ="
+			echo "  if not (is_${gmodule}_off_${emodule} ${earg})"
+			echo "  then false"
+			echo "  else"
+			echo "    begin"
+			echo "      let ${garg} = ${gmodule}_off_${emodule} ${earg} in"
+			echo "      ${Gmodav}.is_${hmodule}_off_${gmodule} ${garg}" 
+			echo "    end"
+			echo ";;"
+			echo ""
+
+		    fi # h
+		done # h
+	    fi # g
+	done # for g
+    fi # f
+    done # f
+fi # e
+
+# ------------------ end of Querying. --------------------------------
+
+# ------------------------- Upgrading -----------------------
+
+ehascs=`has_entity_constructor_set ${e}`
+elevel=`constructor_level ${e}`
+
+if [ ${ehascs} = "y" ] 
+then 
+    for f in `do_${e}_constructor_set`
+    do
+	. ${UTI}/do_entitysum_${category}_variables_f.inc
+	
+	flevel=`constructor_level ${f}`
+	fhascs=`has_entity_constructor_set ${f}`
+	
+	echo "(** {6 Upgrading from ${F} to ${E}.} *)"
+	echo ""
+
+	if [ ${fhascs} = "n" ]
+	then 
+	    case ${flevel} in
+		0)
+		    abbrev=`bare_constructor_abbreviation_name $f` 
+		    echo "let ${abbrev} = ${Emodat}.${F};;"
+		    echo ""
+		    ;;
+		[bs])
+		    echo "let make ${flevel} ="
+		    echo "  ${Emodat}.${F} ${flevel}" 
+		    echo ";;"
+		    echo ""
+		    echo "let ${emodule}_of_${e}_${f} ${flevel} ="
+		    echo "  ${Emodat}.${F} ${flevel}" 
+		    echo ";;"
+		    echo ""
+		    ;;
+		[dh])
+		    no_action Upgrade $f $flevel
+		;;
+		
+    		*)
+ 		    error_message_for_case_xlevel_upgrade ${flevel} ${f}
+		    ;;
+	    esac # flevel
+	    
+	else # f
+
+	    echo "let ${emodule}_of_${fmodule} ${farg} ="
+	    echo "  ${Emodat}.${Fmodule} ${farg}" 
+	    echo ";;"
+	    echo ""
+
+	    for g in `do_${f}_constructor_set`    # hascs 
+	    do
+		. ${UTI}/do_entitysum_${category}_variables_g.inc
+		
+		glevel=`constructor_level ${g}`
+		ghascs=`has_entity_constructor_set ${g}`
+
+		echo "(** {9 Upgrading from ${G} through ${F} to ${E}.} *)"
+		echo ""
+		
+		if [ ${ghascs} = "n" ]
+		then 
+		    case ${glevel} in
+			0)
+			    abbrev=`bare_constructor_abbreviation_name $g` 
+			    echo "let ${abbrev} = ${emodule}_of_${fmodule} ${Fmodat}.${G};;"
+			    echo ""
+			    ;;
+			[bs])
+			    echo "let ${emodule}_of_${f}_${g} ${glevel} ="
+			    echo "  let ${farg} = ${Fmodav}.${fmodule}_of_${f}_${g} ${glevel} in"
+			    echo "  ${emodule}_of_${fmodule} ${farg}" 
+			    echo ";;"
+			    echo ""
+			    ;;
+			[dh])
+			    no_action Upgrade $g $glevel
+			    ;;
+    			*) 
+			    error_message_for_case_xlevel Upgrading g ${glevel} ${g}
+			    ;;
+		    esac # ${glevel}  
+		    
+		else # g
+		    
+		    echo "let ${emodule}_of_${gmodule} ${garg} ="
+		    echo "  let ${farg} = ${Fmodav}.${fmodule}_of_${gmodule} ${garg} in"
+		    echo "  ${emodule}_of_${fmodule} ${farg}" 
+		    echo ";;"
+		    echo ""
+
+		    for h in `do_${g}_constructor_set`    
+		    do
+			. ${UTI}/do_entitysum_${category}_variables_h.inc
+			
+			 hlevel=`constructor_level ${h}`
+			 hhascs=`has_entity_constructor_set ${h}`
+
+			echo "(** {12 Upgrading from ${H} through ${G} through ${F} to ${E}.} *)"
+			echo ""
+
+			if [ ${hhascs} = "n" ] 
+			then
+			    case ${hlevel} in
+				0)
+				    abbrev=`bare_constructor_abbreviation_name $h` 
+				    echo "let ${abbrev} = ${emodule}_of_${gmodule} ${Gmodat}.${H};;"
+				    echo ""
+				    ;;
+				[bs])
+				    echo "let ${emodule}_of_${g}_${h} ${hlevel} ="
+				    echo "  let ${garg} = ${Gmodav}.${gmodule}_of_${g}_${h} ${hlevel} in"
+				    echo "  ${emodule}_of_${gmodule} ${garg}" 
+				    echo ";;"
+				    echo ""
+				    ;;
+				[dh])
+				    no_action Upgrade $h $hlevel
+				    ;;
+    				*) 
+				    error_message_for_case_xlevel Upgrading h ${hlevel} ${}
+				    ;;
+			    esac # h
+			    
+			else # h
+			    
+			    echo "let ${emodule}_of_${hmodule} ${harg} ="
+			    echo "  let ${garg} = ${Gmodav}.${gmodule}_of_${hmodule} ${harg} in"
+			    echo "    ${emodule}_of_${gmodule} ${garg}" 
+			    echo ";;"
+			    echo ""
+			fi # h
+		    done # for h
+		fi # g
+	    done # for g
+	fi # f
+    done # for f
+fi # e
+
+# --------------- Including ---------------------------------------
+
+emodulev=`echo ${Emodulev} | tr A-Z a-z`
+filinc="cat_${emodulev}_ml.inc"
+if [ -f ${filinc} ]
+then
+    cat ${filinc}
+    echo ""
+fi
+
+# --------------- Dating ---------------------------------------
+
+    . ${UTI}/do_created.sh
+    echo ""
+    
+    exit
+    

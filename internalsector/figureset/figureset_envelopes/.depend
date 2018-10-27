@@ -1,0 +1,58 @@
+Figure_set_fence_envelope_t.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_tuple_t.cmo
+Figure_set_fence_envelope_t.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_tuple_t.cmx
+Figure_set_fence_envelope_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tuple_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tuple_list_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Measured_float_tuple_by_coordinate_tag_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_builder_trees/Figure_bridge_by_figure_set_fence_tag_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_symbols/Coordinate_symbol_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_tags/Coordinate_set_body_tag_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_set_body_envelope_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_tuple_v.cmo
+Figure_set_fence_envelope_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tuple_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tuple_list_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Measured_float_tuple_by_coordinate_tag_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_builder_trees/Figure_bridge_by_figure_set_fence_tag_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_symbols/Coordinate_symbol_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_tags/Coordinate_set_body_tag_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_set_body_envelope_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_tuple_v.cmx
+Figure_envelope_t.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_tuple_t.cmo
+Figure_envelope_t.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_tuple_t.cmx
+Figure_envelope_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tuple_list_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_builder_trees/Figure_son_tag_list_by_figure_father_tag_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_tags/Figure_set_fence_tag_v.cmo \
+    Figure_set_fence_envelope_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_containers/Figure_container_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_tuple_v.cmo
+Figure_envelope_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tuple_list_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_builder_trees/Figure_son_tag_list_by_figure_father_tag_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_tags/Figure_set_fence_tag_v.cmx \
+    Figure_set_fence_envelope_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/figureset/figureset_containers/Figure_container_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_envelopes/Coordinate_envelopee_tuple_v.cmx

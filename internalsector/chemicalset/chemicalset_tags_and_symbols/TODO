@@ -1,0 +1,52 @@
+1. use designator to transfer states
+
+  (symbol + environment state) -> designator 
+
+--------------------------------------------------
+
+symbol / state -> symbol normalization
+
+--------------------------------------------------
+Block Symbols : if central atom is charged : Mendeleev+p    Mendeleev+m
+
+  Nh      neutral (np p nor m)
+  Nph     p : notes the + charge on on N
+  Crmoo   r : notes the e- delocalization, m : notes the - charge on C (conjugation)
+
+
+2. May be inverse subsymbol order in residue and peptideca:
+
+  type residue_symbol =
+   | Glycine_symbol of glycine_symbol	      
+   | Proline_symbol of proline_symbol	      	      
+   | Regular_symbol of regular_symbol	      
+
+  and glycine_symbol = 
+  | Embedded_glycine_symbol of embedded_glycine_symbol
+  | Nterminal_glycine_symbol of nterminal_glycine_symbol 
+    
+  and proline_symbol = 
+   | Embedded_proline_symbol of embedded_proline_symbol
+   | Nterminal_proline_symbol of nterminal_proline_symbol 
+
+  and regular_symbol = 
+  | Embedded_regular_symbol of embedded_regular_symbol
+  | Nterminal_regular_symbol of nterminal_regular_symbol
+
+
+3. Revisiting Blocks.
+   A block type must tell how many and what bonds are done ahead and backwards.
+   Therefore collecting bonds is done from block list.  
+
+4. All residue stuff needs simplifications.
+
+5. Symbols are independently defined entities :
+   - polypeptide_symbol and protein_symbol defined independently.
+   - aminoacid, residue, sidechain should be.
+
+6. is GLX an aminoacid or some PDB avatar ?
+
+7. Sidechain_symbol is option aminoacid_regular_symbol ?
+
+8. modify the "_" in c_ and h_ ...
+

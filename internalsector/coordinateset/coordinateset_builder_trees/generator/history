@@ -1,0 +1,30 @@
+ms _v.coordinate_body _v.coordinate_set_body *ml
+ms _v.coordinate_fence _v.coordinate_set_fence *ml
+ms _v.is_coordinate_fence _v.is_coordinate_set_fence *ml
+ms _v.is_coordinate_body _v.is_coordinate_set_body *ml
+
+
+ms "Coordinate_symbol_t.Coordinate_fence_symbol" "Coordinate_symbol_t.Coordinate_set_symbol (Coordinate_set_symbol_t.Coordinate_set_fence_symbol" *ml
+
+ms "Coordinate_symbol_t.Coordinate_body_symbol" "Coordinate_symbol_t.Coordinate_set_symbol (Coordinate_set_symbol_t.Coordinate_set_body_symbol" *ml
+
+msrf Coordinate_as_body_coordinate_tuple Coordinate_as_body_tuple *ml *mk
+ms tag_ele tag_coo *ml
+ms sym_ele sym_coo *ml
+ms soi_ele soi_coo *ml
+ms Parameter Coordinate *ml 
+ms parameter coordinate *ml 
+
+cp $BPAR/Nwchemdata_as_set_body_node_aoset_numericalvalues_tag_by_parameter_set_body_tuple_aopef_tag_provider_v.ml  Db1pointsdata_as_set_body_sequence_float_tag_by_coordinate_set_body_tuple_tag_provider_v.ml
+
+cp $BPAR/Databox_name_by_any_sole_index_provider_v.ml .
+cp $BPAR/Parameter_context_databox_sole_index_by_any_sole_index_provider_v.ml Coordinate_context_databox_sole_index_by_any_sole_index_provider_v.ml
+cp $BPAR/Parameter_context_databox_symbol_by_any_sole_index_provider_v.ml Coordinate_context_databox_symbol_by_any_sole_index_provider_v.ml
+cp $BPAR/Parameter_context_databox_tag_by_any_sole_index_provider_v.ml Coordinate_context_databox_tag_by_any_sole_index_provider_v.ml
+
+   "Author : François Colonna 24 avril 2017 at 16:30:06+02:00";
+
+
+msrf vertex_name_n_databox_name_ basicname_vertex_n_basicname_databox_ *ml *mk
+
+Error Coordinate_as_set_body_tuple_symbol_subtree_by_basicname_vertex_n_basicname_databox_provider_v.ml:

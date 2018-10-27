@@ -1,0 +1,40 @@
+Property_operand_fence_external_envelope_t.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/elementaryset/elementaryset_envelopes/Elementary_envelopee_t.cmo
+Property_operand_fence_external_envelope_t.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/elementaryset/elementaryset_envelopes/Elementary_envelopee_t.cmx
+Property_operand_body_target_created_envelope_t.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/elementaryset/elementaryset_envelopes/Elementary_envelopee_t.cmo
+Property_operand_body_target_created_envelope_t.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/elementaryset/elementaryset_envelopes/Elementary_envelopee_t.cmx
+Property_operand_fence_external_envelope_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tuple_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Trio_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Trio_list_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tag_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/productsector/propertyset/propertyset_tags/Property_operand_fence_external_tag_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/productsector/propertyset/propertyset_interdomains/Elementary_envelopee_tuple_list_by_basicname_variable_external_n_basicname_inputbox_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Duo_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Duo_list_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_inputbox_by_any_sole_index_provider_v.cmo
+Property_operand_fence_external_envelope_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tuple_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Trio_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Trio_list_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tag_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/productsector/propertyset/propertyset_tags/Property_operand_fence_external_tag_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/productsector/propertyset/propertyset_interdomains/Elementary_envelopee_tuple_list_by_basicname_variable_external_n_basicname_inputbox_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Duo_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Duo_list_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_inputbox_by_any_sole_index_provider_v.cmx
+Property_operand_body_target_created_envelope_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/productsector/propertyset/propertyset_tags/Property_operand_body_target_created_tag_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi
+Property_operand_body_target_created_envelope_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/productsector/propertyset/propertyset_tags/Property_operand_body_target_created_tag_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx

@@ -1,0 +1,152 @@
+HEADER    NEUROPEPTIDE                            11-JUL-01   1JK4              
+TITLE     DES 1-6 BOVINE NEUROPHYSIN II COMPLEX WITH VASOPRESSIN                
+COMPND    MOL_ID: 1;                                                            
+COMPND   2 MOLECULE: NEUROPHYSIN 2;                                             
+COMPND   3 CHAIN: A;                                                            
+COMPND   4 MOL_ID: 2;                                                           
+COMPND   5 MOLECULE: LYS VASOPRESSIN;                                           
+COMPND   6 CHAIN: B;                                                            
+COMPND   7 ENGINEERED: YES                                                      
+SOURCE    MOL_ID: 1;                                                            
+SOURCE   2 ORGANISM_SCIENTIFIC: BOS TAURUS;                                     
+SOURCE  10 TAURUS (BOVINE).                                                     
+KEYWDS    COMPLEX (HORMONE TRANSPORT/HORMONE), HYPOTHALAMUS,                    
+KEYWDS   2 NEUROPEPTIDE                                                         
+EXPDTA    X-RAY DIFFRACTION                                                     
+AUTHOR    J.P.ROSE,B.-C.WANG                                                    
+REVDAT   2   24-FEB-09 1JK4    1       VERSN                                    
+REVDAT   1   04-FEB-03 1JK4    0                                                
+JRNL        AUTH   C.K.WU,B.HU,J.P.ROSE,Z.J.LIU,T.L.NGUYEN,C.ZENG,              
+JRNL        AUTH 2 E.BRESLOW,B.C.WANG                                           
+JRNL        PMID   11514677                                                     
+JRNL        DOI    10.1110/PS.10601                                             
+REMARK   1                                                                      
+REMARK   1 REFERENCE 1                                                          
+REMARK   1  AUTH   J.P.ROSE,C.K.WU,C.D.HSIAO,E.BRESLOW,B.C.WANG                 
+REMARK   1  TITL   CRYSTAL STRUCTURE OF THE NEUROPHYSIN-OXYTOCIN                
+REMARK   1  TITL 2 COMPLEX                                                      
+REMARK   1  REF    NAT.STRUCT.BIOL.              V.   3   163 1996              
+REMARK   1  REFN                   ISSN 1072-8368                               
+REMARK   1 REFERENCE 2                                                          
+REMARK ....................................................
+REMARK 900 UNCOMPLEXED DES 1-6 BOVINE NEUROPHYSIN                               
+DBREF  1JK4 A    7    95  UNP    P01180   NEU2_BOVIN      38    126             
+DBREF  1JK4 B    1     9  GB     229092   229092           1      9             
+SEQRES   1 A   89  LEU ARG GLN CYS LEU PRO CYS GLY PRO GLY GLY LYS GLY          
+SEQRES   2 A   89  ARG CYS PHE GLY PRO SER ILE CYS CYS GLY ASP GLU LEU          
+SEQRES   3 A   89  GLY CYS PHE VAL GLY THR ALA GLU ALA LEU ARG CYS GLN          
+SEQRES   4 A   89  GLU GLU ASN TYR LEU PRO SER PRO CYS GLN SER GLY GLN          
+SEQRES   5 A   89  LYS PRO CYS GLY SER GLY GLY ARG CYS ALA ALA ALA GLY          
+SEQRES   6 A   89  ILE CYS CYS ASN ASP GLU SER CYS VAL THR GLU PRO GLU          
+SEQRES   7 A   89  CYS ARG GLU GLY VAL GLY PHE PRO ARG ARG VAL                  
+SEQRES   1 B    9  CYS TYR PHE GLN ASN CYS PRO LYS GLY                          
+HET     CD  A 301       1                                                       
+HET     CD  A 302       1                                                       
+HET     CD  A 303       1                                                       
+HETNAM      CD CADMIUM ION                                                      
+FORMUL   3   CD    3(CD 2+)                                                     
+FORMUL   6  HOH   *29(H2 O)                                                     
+HELIX    1   1 GLY A   14  LYS A   18  5                                   5    
+HELIX    2   2 THR A   38  LEU A   50  5                                  13    
+SHEET    1   A 4 PRO A  12  CYS A  13  0                                        
+SHEET    2   A 4 GLY A  19  GLY A  23 -1  O  GLY A  19   N  CYS A  13           
+SHEET    3   A 4 ILE A  26  GLY A  29 -1  O  ILE A  26   N  PHE A  22           
+SHEET    4   A 4 GLY A  33  VAL A  36 -1  N  GLY A  33   O  GLY A  29           
+SHEET    1   B 4 PRO A  60  CYS A  61  0                                        
+SHEET    2   B 4 GLY A  65  ALA A  69 -1  N  GLY A  65   O  CYS A  61           
+SHEET    3   B 4 ILE A  72  CYS A  74 -1  O  ILE A  72   N  ALA A  68           
+SHEET    4   B 4 CYS A  79  THR A  81 -1  O  VAL A  80   N  CYS A  73           
+SSBOND   1 CYS A   10    CYS A   54                          1555   1555  2.03  
+SSBOND   2 CYS A   13    CYS A   27                          1555   1555  2.03  
+SSBOND   3 CYS A   21    CYS A   44                          1555   1555  2.03  
+SSBOND   4 CYS A   28    CYS A   34                          1555   1555  2.04  
+SSBOND   5 CYS A   61    CYS A   73                          1555   1555  2.03  
+SSBOND   6 CYS A   67    CYS A   85                          1555   1555  2.04  
+SSBOND   7 CYS A   74    CYS A   79                          1555   1555  2.03  
+SSBOND   8 CYS B    1    CYS B    6                          1555   1555  2.03  
+LINK        CD    CD A 301                 OD1 ASP A  76     1555   1555  2.23  
+LINK        CD    CD A 301                 O   HOH B 212     1555   1555  2.88  
+LINK        CD    CD A 301                 OD2 ASP A  76     1555   1555  2.48  
+SITE     1 AC1  3 GLU A  31  ASP A  76  HOH B 212                               
+SITE     1 AC2  3 ASP A  30  GLU A  31  GLU A  77                               
+SITE     1 AC3  2 LEU A   7  GLU A  46                                          
+CRYST1   50.900   50.900  105.800  90.00  90.00 120.00 P 61 2 2     12          
+ORIGX1      1.000000  0.000000  0.000000        0.00000                         
+ORIGX2      0.000000  1.000000  0.000000        0.00000                         
+ORIGX3      0.000000  0.000000  1.000000        0.00000                         
+SCALE1      0.019646  0.011343  0.000000        0.00000                         
+SCALE2      0.000000  0.022686  0.000000        0.00000                         
+SCALE3      0.000000  0.000000  0.009452        0.00000                         
+ATOM      1  N   LEU A   7      33.701 -32.008 -32.042  1.00 36.63           N  
+ATOM      2  CA  LEU A   7      34.188 -30.804 -31.310  1.00 36.64           C  
+ATOM      3  C   LEU A   7      33.054 -29.927 -30.810  1.00 36.03           C  
+ATOM      4  O   LEU A   7      32.364 -29.266 -31.589  1.00 35.76           O  
+ATOM      5  CB  LEU A   7      35.107 -29.971 -32.196  1.00 37.66           C  
+ATOM      6  CG  LEU A   7      36.526 -30.501 -32.348  1.00 38.96           C  
+ATOM      7  CD1 LEU A   7      37.346 -29.527 -33.186  1.00 38.74           C  
+ATOM      8  CD2 LEU A   7      37.144 -30.673 -30.965  1.00 38.99           C  
+ATOM      9  N   ARG A   8      32.879 -29.898 -29.497  1.00 35.34           N  
+ATOM     10  CA  ARG A   8      31.823 -29.093 -28.910  1.00 33.83           C  
+ATOM     11  C   ARG A   8      32.232 -28.564 -27.553  1.00 32.72           C  
+ATOM     12  O   ARG A   8      33.075 -29.154 -26.862  1.00 32.52           O  
+ATOM     13  CB  ARG A   8      30.540 -29.924 -28.764  1.00 34.10           C  
+ATOM     14  CG  ARG A   8      30.754 -31.280 -28.079  1.00 33.06           C  
+ATOM     15  CD  ARG A   8      29.452 -32.055 -27.900  1.00 33.41           C  
+ATOM     16  NE  ARG A   8      28.631 -31.515 -26.822  1.00 31.99           N  
+ATOM     17  CZ  ARG A   8      28.444 -32.110 -25.648  1.00 31.92           C  
+ATOM     18  NH1 ARG A   8      29.013 -33.275 -25.381  1.00 31.81           N  
+ATOM     19  NH2 ARG A   8      27.694 -31.528 -24.733  1.00 32.48           N  
+ATOM    543  N   CYS A  85      45.818 -15.467 -19.283  1.00 25.72           N  
+ATOM    544  CA  CYS A  85      44.438 -15.597 -19.750  1.00 23.86           C  
+ATOM    545  C   CYS A  85      43.686 -14.267 -19.766  1.00 23.69           C  
+ATOM    546  O   CYS A  85      44.278 -13.241 -19.359  1.00 23.51           O  
+ATOM    547  CB  CYS A  85      43.658 -16.603 -18.905  1.00 23.97           C  
+ATOM    548  SG  CYS A  85      44.132 -18.351 -19.116  1.00 23.60           S  
+TER     549      CYS A  85                                                      
+ATOM    550  N   CYS B   1      29.994 -35.459 -21.864  1.00 28.03           N  
+ATOM    551  CA  CYS B   1      30.950 -35.697 -20.748  1.00 28.13           C  
+ATOM    552  C   CYS B   1      32.207 -34.862 -20.930  1.00 27.47           C  
+ATOM    553  O   CYS B   1      32.614 -34.550 -22.053  1.00 26.90           O  
+ATOM    554  CB  CYS B   1      31.322 -37.188 -20.645  1.00 28.14           C  
+ATOM    555  SG  CYS B   1      31.905 -37.936 -22.205  1.00 28.06           S  
+ATOM    556  N   TYR B   2      32.805 -34.491 -19.806  1.00 26.45           N  
+ATOM    557  CA  TYR B   2      34.024 -33.718 -19.816  1.00 26.04           C  
+ATOM    558  C   TYR B   2      35.127 -34.629 -20.296  1.00 27.17           C  
+ATOM    559  O   TYR B   2      35.242 -35.768 -19.851  1.00 27.47           O  
+ATOM    560  CB  TYR B   2      34.298 -33.175 -18.424  1.00 23.78           C  
+ATOM    561  CG  TYR B   2      33.206 -32.242 -18.000  1.00 22.06           C  
+ATOM    562  CD1 TYR B   2      32.280 -32.605 -17.023  1.00 21.95           C  
+ATOM    563  CD2 TYR B   2      33.039 -31.021 -18.642  1.00 21.08           C  
+ATOM    564  CE1 TYR B   2      31.219 -31.773 -16.709  1.00 21.88           C  
+ATOM    565  CE2 TYR B   2      31.985 -30.186 -18.332  1.00 20.89           C  
+ATOM    566  CZ  TYR B   2      31.082 -30.564 -17.373  1.00 20.58           C  
+ATOM    567  OH  TYR B   2      30.048 -29.720 -17.076  1.00 21.18           O  
+ATOM    588  N   ASN B   5      36.893 -37.051 -18.411  1.00 32.06           N  
+ATOM    589  CA  ASN B   5      35.926 -37.824 -17.619  1.00 32.68           C  
+ATOM    590  C   ASN B   5      35.291 -38.926 -18.461  1.00 32.30           C  
+ATOM    591  O   ASN B   5      34.852 -39.952 -17.933  1.00 33.36           O  
+ATOM    592  CB  ASN B   5      34.834 -36.900 -17.065  1.00 34.47           C  
+ATOM    593  CG  ASN B   5      33.855 -37.628 -16.155  1.00 35.87           C  
+ATOM    594  OD1 ASN B   5      34.026 -37.650 -14.936  1.00 37.48           O  
+ATOM    595  ND2 ASN B   5      32.819 -38.222 -16.745  1.00 37.60           N  
+ATOM    596  N   CYS B   6      35.227 -38.700 -19.770  1.00 31.89           N  
+ATOM    597  CA  CYS B   6      34.660 -39.666 -20.702  1.00 30.95           C  
+ATOM    598  C   CYS B   6      35.461 -40.962 -20.675  1.00 30.96           C  
+ATOM    599  O   CYS B   6      36.693 -40.863 -20.861  1.00 31.21           O  
+ATOM    600  CB  CYS B   6      34.686 -39.100 -22.118  1.00 30.60           C  
+ATOM    601  SG  CYS B   6      33.881 -37.483 -22.293  1.00 29.81           S  
+TER     602      CYS B   6                                                      
+HETATM  603 CD    CD A 301      39.122 -34.612 -14.540  1.00 23.09          CD  
+HETATM  604 CD    CD A 302      42.176 -34.850 -11.431  1.00 29.24          CD  
+HETATM  605 CD    CD A 303      32.364 -29.533 -33.938  1.00 48.31          CD  
+HETATM  606  O   HOH A 203      45.448 -25.874 -13.671  0.91 18.56           O  
+HETATM  607  O   HOH A 204      34.225 -29.080 -11.402  0.99 14.33           O  
+HETATM  634  O   HOH B 226      33.190 -42.245 -19.604  1.06 51.43           O  
+CONECT    4  605                                                                
+CONECT   34  342                                                                
+CONECT  603  481  482  632                                                      
+CONECT  604  490  491                                                           
+CONECT  605    4                                                                
+CONECT  632  603                                                                
+MASTER      365    0    3    2    8    0    3    6  632    2   25    8          
+END                                                                             

@@ -1,0 +1,33 @@
+# Makefile for general/units/test 
+
+UP_DIR = ..
+UP_LIB = $(UP_DIR)/integrals
+
+SETUP_DIR = ../../../..
+MAKEFILES_DIR = $(SETUP_DIR)/Mk
+
+# All directories and libraries
+include $(MAKEFILES_DIR)/All_directories_and_libraries.mk
+
+# libs (without TOOLS_LIB)
+LIBS  = $(TOOLS_LIB) \
+	$(UP_LIB)
+
+LIBS_CMA = $(LIBS:%=%.cma)
+
+# Include the generic setup for Caml applications.
+include $(MAKEFILES_DIR)/Config.mk
+
+# BYTOBJS
+include ocaml_files_t_ml.mk
+
+WITH_BYT_LIBS = $(WITHBYTUNIX) $(WITHBYTSTR) $(LIBS_CMA)
+
+# CAMLCINCLUDES without TOOLS_DIR
+CAMLCINCLUDES = -I $(TOOLS_DIR) \
+		-I $(UP_DIR) 
+
+# Create runtest.byt
+include $(MAKEFILES_DIR)/Bytecode.mk
+
+include $(MAKEFILES_DIR)/Caml.mk

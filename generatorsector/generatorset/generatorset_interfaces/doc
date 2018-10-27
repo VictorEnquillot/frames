@@ -1,0 +1,11 @@
+  | Camlparagraph_for_any_function_symbol_t.Let_documentation -> 
+      let sym_hea = Section_for_any_header_top_symbol_v.let_documentation in
+      let sym_bod = Section_for_any_body_top_symbol_v.documentation_list in
+      let sym_foo = Section_for_any_footer_constant_symbol_v.double_semicolon in
+
+      [
+       Section_symbol_v.section_symbol_of_section_for_any_header_top_symbol sym_hea;
+       Section_symbol_v.section_symbol_of_section_for_any_body_top_symbol sym_bod;
+       Section_symbol_v.section_symbol_of_section_for_any_footer_constant_symbol sym_foo;
+     ]
+	

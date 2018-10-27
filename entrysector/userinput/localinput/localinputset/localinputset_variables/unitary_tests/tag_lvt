@@ -1,0 +1,36 @@
+let tag_loi_l = Localinput_tag_all_list_by_inputbox_name_provider_v.provide nam_ibo;;
+
+let pre_tag_loi_sof_lvt sof (s, i) = 
+(Localinput_symbol_v.is_localinput_set_body_list_variable_type_constructor s)
+&&
+  (Localinput_symbol_v.string_off s = sof)
+;;
+
+let tag_loi_lvt = List_v.only_element_of_predicate_off_list (pre_tag_loi_sof_lvt nam_var) tag_loi_l;;
+
+test_number 1 (
+( tag_loi_lvt : Localinput_symbol_t.localinput_symbol Tag_t.tag ) =
+  (Localinput_symbol_t.Localinput_set_symbol
+    (Localinput_set_symbol_t.Localinput_set_body_symbol
+      (Localinput_set_body_symbol_t.Localinput_set_body_list_symbol
+        (Localinput_set_body_list_symbol_t.Localinput_set_body_list_variable_type_symbol
+          (Localinput_set_body_list_variable_type_symbol_t.Localinput_set_body_list_variable_type_constructor
+            "Seg_bc")))),
+   [2; 1; 2; 2; 2; 3; 41; 1; 22; 1])
+);;
+
+(* Argument *)
+
+let tag_lvt = (* Coerce Down *)
+  Localinput_set_body_list_variable_type_tag_v.localinput_set_body_list_variable_type_tag_off_localinput_tag
+    tag_loi_lvt;;
+
+test_number 2 (
+( tag_lvt :
+    Localinput_set_body_list_variable_type_symbol_t.localinput_set_body_list_variable_type_symbol
+    Tag_t.tag ) =
+  (Localinput_set_body_list_variable_type_symbol_t.Localinput_set_body_list_variable_type_constructor
+    "Seg_bc",
+   [2; 1; 2; 2; 2; 3; 41; 1; 22; 1])
+);;
+

@@ -1,0 +1,60 @@
+  | "is_skeleton_context_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_context_symbol_off_skeleton_symbol
+  | "is_skeleton_body_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_body_symbol_off_skeleton_symbol
+  | "is_skeleton_fence_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_fence_symbol_off_skeleton_symbol
+  | "is_skeleton_fence_periodic" ->
+     Skeleton_symbol_v.is_skeleton_fence_periodic
+  | "is_skeleton_context_database_constructor" ->
+     Skeleton_symbol_v.is_skeleton_context_database_constructor
+  | "is_skeleton_context_datafile_constructor" ->
+     Skeleton_symbol_v.is_skeleton_context_datafile_constructor
+  | "is_skeleton_context_domain_constructor" ->
+     Skeleton_symbol_v.is_skeleton_context_domain_constructor
+  | "is_skeleton_body_centered_aopefset_onecenter_constructor" ->
+     Skeleton_symbol_v.is_skeleton_body_centered_aopefset_onecenter_constructor
+  | "is_skeleton_body_centered_aopefset_anycenter_constructor" ->
+     Skeleton_symbol_v.is_skeleton_body_centered_aopefset_anycenter_constructor
+  | "is_skeleton_body_centered_aopefset_shellsymmetry_constructor" ->
+     Skeleton_symbol_v.is_skeleton_body_centered_aopefset_shellsymmetry_constructor
+  | "is_skeleton_body_centered_aopefset_shellordinal_constructor" ->
+     Skeleton_symbol_v.is_skeleton_body_centered_aopefset_shellordinal_constructor
+  | "is_skeleton_body_centered_ecppefset_constructor" ->
+     Skeleton_symbol_v.is_skeleton_body_centered_ecppefset_constructor
+  | "is_skeleton_body_periodic_blochwave" ->
+     Skeleton_symbol_v.is_skeleton_body_periodic_blochwave
+  | "is_skeleton_body_periodic_wavelet" ->
+     Skeleton_symbol_v.is_skeleton_body_periodic_wavelet
+  | "is_skeleton_fence_centered_aopef_constructor" ->
+     Skeleton_symbol_v.is_skeleton_fence_centered_aopef_constructor
+  | "is_skeleton_fence_centered_ecppef_constructor" ->
+     Skeleton_symbol_v.is_skeleton_fence_centered_ecppef_constructor
+  | "is_skeleton_context_database_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_context_database_symbol_off_skeleton_symbol
+  | "is_skeleton_context_datafile_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_context_datafile_symbol_off_skeleton_symbol
+  | "is_skeleton_context_domain_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_context_domain_symbol_off_skeleton_symbol
+  | "is_skeleton_body_centered_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_body_centered_symbol_off_skeleton_symbol
+  | "is_skeleton_body_centered_aopefset_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_body_centered_aopefset_symbol_off_skeleton_symbol
+  | "is_skeleton_body_centered_aopefset_onecenter_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_body_centered_aopefset_onecenter_symbol_off_skeleton_symbol
+  | "is_skeleton_body_centered_aopefset_anycenter_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_body_centered_aopefset_anycenter_symbol_off_skeleton_symbol
+  | "is_skeleton_body_centered_aopefset_shellsymmetry_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_body_centered_aopefset_shellsymmetry_symbol_off_skeleton_symbol
+  | "is_skeleton_body_centered_aopefset_shellordinal_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_body_centered_aopefset_shellordinal_symbol_off_skeleton_symbol
+  | "is_skeleton_body_centered_ecppefset_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_body_centered_ecppefset_symbol_off_skeleton_symbol
+  | "is_skeleton_body_periodic_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_body_periodic_symbol_off_skeleton_symbol
+  | "is_skeleton_fence_centered_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_fence_centered_symbol_off_skeleton_symbol
+  | "is_skeleton_fence_centered_aopef_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_fence_centered_aopef_symbol_off_skeleton_symbol
+  | "is_skeleton_fence_centered_ecppef_symbol_off_skeleton_symbol" ->
+     Skeleton_symbol_v.is_skeleton_fence_centered_ecppef_symbol_off_skeleton_symbol

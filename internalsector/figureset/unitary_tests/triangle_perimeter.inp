@@ -1,0 +1,18 @@
+# input for a Run
+# Triangle Equilateral Model
+   model =
+     model_name = triangle_equilateral
+     model_title = "a triangle equilateral"
+     database_name = db_1
+     entity_what = triangle
+     entity_name = T
+     coordinate_what = cartesian
+     coordinate_units = meter
+   end # model
+
+   target = 
+     target_name = triangle_equilateral_perimeter
+     target_title = "triangle equilateral perimeter" 
+     property_name = perimeter 
+     model_list = { triangle_equilateral }
+   end # target

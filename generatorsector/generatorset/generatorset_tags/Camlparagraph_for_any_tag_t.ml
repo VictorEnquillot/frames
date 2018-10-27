@@ -1,0 +1,1 @@
+type camlparagraph_for_any_tag = Camlparagraph_for_any_symbol_t.camlparagraph_for_any_symbol Tag_t.tag;;

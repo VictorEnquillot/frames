@@ -1,0 +1,5 @@
+NEEDED_DIRS := \
+	$(FILES_DIR) \
+	$(COMMONSET_DIR) \
+  
+

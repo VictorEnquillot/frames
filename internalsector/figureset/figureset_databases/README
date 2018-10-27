@@ -1,0 +1,23 @@
+let documentation () = 
+[
+ "Current : DFIG:Local_entity_symbol_v";
+ "What-is-it: it defines all Symbol used in the B-Tree merging Db1 ... dbn B-Tree after translation";
+ "What-is-it: Local_entity Database information is Complete : no other source of information is used";
+ "What-is-it: Therefore : Units, Coordinates kind and Coordinate_tuple which are B-Tree sons of Components";
+ "What-is-it:             are defined as Local_entity_data_symbol of Elementary_symbol";
+ "What-is-it: B-Tree or Local_entity_tag_tree  <--|Translation DFIG from D1FIG|  Db1_entity_tag_tree ";
+ "What-is-it: let tag_den_t = Db1_entity_tag_tree_by_db1_entity_local_database_tag_provider_v.provide tag_eld;; ";
+ "What-is-it: This tree is a Complete representation of all the Db1 Data and of their Building relation. ";
+ "What-is-it: This tree needs only the knowledge of Db1_entity_local_database_tag ";
+ "What-is-it: The translation of Db1 Tree and Db2 Tree are merged into Local_entity_tag_tree. ";
+ "What-is-it: This tree is a Complete representation of all the Db1 ... Dbn Data and of their Building relation ";
+ "What-is-it: This tree provides any Formula to IFIG  ";
+ "What-is-it: This tree provides any Value   to VFIG from the Values of its Closure :";
+ "What-is-it:    Closure are :  Units_value (Close of Elementary_value B-Tree";
+ "What-is-it:    any element of the Closure are stored in a specific register";
+ "What-is-it:    Elementary_value_tree_closure_by_elementary_tag_tree_closure_register_v";
+ "What-is-it:    i.e. Units_value_by_units_tag_register_v";
+ "What-is-it:    where tag are those from any Calculation (PFIG, VFIG)";
+ "What-is-it: This tree needs only the knowledge of the Domain Tag ";
+ "What-is-it: let tag_len_t = Local_entity_tag_tree_by_domain_tag_provider_v.provide tag_dom;; ";
+]

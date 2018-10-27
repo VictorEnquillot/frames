@@ -1,0 +1,12 @@
+ledit -x -h ./ocaml-history ocaml \
+-I ../../../general/basics \
+-I ../../../general/tools \
+-I ../../../tags/chemicalset_tags \
+-I ../pdb \
+-I ../ \
+-I ./ \
+unix.cma str.cma \
+../../../general/basics/basics.cma \
+../../../tags/chemicalset_tags/chemicalset_tags.cma \
+../chemicalset_databases.cma \
+../pdb/pdb.cma 

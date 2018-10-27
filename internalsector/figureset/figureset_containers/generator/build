@@ -1,0 +1,13 @@
+let build tag_xxx =
+   let tag_ele_xxx = Tag_v.map_entity (* Coerce Up *)
+       Elementary_symbol_v.elementary_symbol_of_coordinate_tuple_kind_symbol
+       tag_xxx
+   in
+
+  let tag_ele_son_l = Son_elementary_tag_list_by_father_elementary_tag_provider_v.provide tag_ele_xxx in
+
+  List.map 
+    (Tag_v.map_entity (* coerce down *)
+       Elementary_symbol_v.coordinate_kind_symbol_off_elementary_symbol)
+    tag_ele_son_l
+;;

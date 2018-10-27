@@ -1,0 +1,20 @@
+file_extension ()
+{
+case ${1} in
+     do_entitysum_symbol_v_mli.sh ) res="v.mli";;
+     do_domainset_symbol_v_mli.sh ) res="v.mli";;
+     do_domainset_marker_v_mli.sh ) res="v.mli";;
+     do_entitysum_symbol_v_ml.sh ) res="v.ml";;
+     do_domainset_symbol_v_ml.sh ) res="v.ml";;
+     do_domainset_marker_v_ml.sh ) res="v.ml";;
+     do_entitystring_symbol_v_ml.sh ) res="v.ml";;
+     do_entitysum_symbol_t_ml.sh ) res="t.ml";;
+     do_domainset_symbol_t_ml.sh ) res="t.ml";;
+     do_domainset_marker_t_ml.sh ) res="t.ml";;
+     do_entitystring_symbol_t_ml.sh ) res="t.ml";;
+     *) echo "";echo -n "Error in do_file_extension : unknown script >$1<";res="";;
+esac
+echo "$res"
+}
+
+

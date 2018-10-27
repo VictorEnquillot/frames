@@ -1,0 +1,35 @@
+(** {6 Fence Tag of Tag (Self) } *)
+
+let fence_list tag_ttt =
+  let tag_fig = This_tag_v.figure_tag_of_this_tag tag_ttt in
+  Fnc_tag_fence_by_figure_tag_provider_v.provide tag_fig
+;;
+
+let fence_tuple tag_ttt =
+  let fen_l = fence_list tag_ttt in
+  Tuple_v.tuple_of_list fen_l
+;;
+
+let fence_tuple_list tag_ttt =
+  let fen_l = fence_list tag_ttt in
+  Tuple_list_v.make fen_l
+;;
+
+(** {6 Deepfence Tag off Tag (Builder) } *)
+
+let deepfence_list tag_ttt =
+  let tag_fig = This_tag_v.figure_tag_of_this_tag tag_ttt in
+  Deepfn_tag_deepfence_by_figure_tag_provider_v.provide tag_fig
+;;
+
+let deepfence_tuple_list tag_ttt =
+  let dfe_l = deepfence_list tag_ttt in
+  Tuple_list_v.make dfe_l
+;;
+
+let deepfence_tuple_tuple tag_ttt =
+  let dfe_tl = deepfence_tuple_list tag_ttt in
+  Tuple_v.tuple_of_list dfe_tl
+;;
+
+

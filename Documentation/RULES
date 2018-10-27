@@ -1,0 +1,153 @@
+== Specific Entities ==
+
+Rule Symbol :
+     Any string of a symbol constructor "of string" is NON empty 
+
+Rule Tag :
+     Any property of an Entity is accessible from its Tag.
+
+Rule Set 
+     Each Constructor Tree has two main subtrees : Context and Set
+     Set subtree collects all Entities of the Domain
+     Set subtype is the Containee of Context Box.  
+
+Rule Bridge :
+     Only Fence Values are Built from a sub Domain Entity Value.
+     Fence Entity String_off = Bridged Entity String_off      
+
+Rule Deepfence (obsolete ?):
+     There is NO more Deepfence sub_type.
+     There are ONLY deepfence function in Values Modules.
+
+Rule Envelope :
+     An Envelope type is NOT Coerced. 
+     It is always an Elementary_envelopee list
+
+Rule Measure :
+     Each Domain has its own set of Measure_canonical (vs Measure_specific) 
+     Measures are converted to canonical as soon as they are read
+
+     As a consequence an Envelope is made of Measure_canonical.
+
+Rule Closure :
+     A closure concerns a Value it is NOT a Tag.
+
+Rule Bud_of_string : 
+     in a Bud the string of the "of string" constructor NEVER refers to any value.
+     It only refers to some name.
+
+Rule Constructor of string :
+     Only Buds are made with "Some_constructor of string"
+     Therefore there is NO "Some_constructor of string" in other Construction Design
+
+Rule Constructor Tree-leaf Symbol :
+     Any Constructor Tree-leaf symbol has a "Some_constructor of string" type constructor. 
+
+Rule Localinput_set_fence_variable_name_symbol list is unique
+
+== Architecture, Module Design and Programming ==
+
+Rule Separable Program :
+     Two Programs are algoritmically separable iff there exists an 
+     algorithm which take the two programs as data and answers yes
+     if the two programs compute the same function and else no.
+
+Rule Domains are homogeneous :
+     In a Domain any Entity is built from other Entities of the same Domain : the Fence subtype.
+     Therefore, Fence Entities are self-contained and self-built  
+     Only Values directories have reference to other Entity Domains.
+
+Rule Builder_trees directory :
+     It refers to the Database 
+     Nodes are <Domain>_set_body
+     Leaves are <Domain>_set_fence
+
+Rule Never use pure string :
+     Type a string as a specific Basicname
+
+Rule Information available :
+     Any kind of information available to precisely define an Entity must be used (see Rule Fence_symbol)
+
+Rule No comment in the code :
+     Use clear function names instead.
+     Unless when automatic documentation tag (** ... *) is used.
+     
+Rule Module Documentation :
+     Each Module starts with a Documentation list manageable by the program.
+
+Rule Code homogeneity
+     Module internal organisation is always the same : the same sequence of functions
+     As much as possible generated code automatically 
+     Provider Module starts from build function : any other tools should be a Provider.
+
+Rule Abbreviation 
+     Never use abbreviation in function or module name
+     Use computable abbreviation for variables.
+
+Rule Use try whenever a Failure may occur in List.hd, List.nth etc ...
+
+== Names ==
+
+Rule Entity Type Name :
+     Each "_" must reflects the Constructor Tree structure.
+     Therefore function_name_that => functionname_that 
+     Exception : the suffixes of Constructor Tree leaves may use "_". 
+     That is before _constructor suffix : a_b_c_function_name_constructor 
+
+Rule Module Name :
+     Domain_structure_subtype_category_by_domain_structure_subtype_category_provider_v 
+     Do NOT use _by_..._string_off_provider USE _by_basicname_..._provider or _by_..._tag_provider
+     To ensure that the type of the argument is correct.
+
+Rule Function Name :
+     domain_structure_subtype_category_of_domain_structure_subtype_category 
+     always specify the argument : at least ..._of_tag ..._of_symbol
+     exception for pervasives function whose argument is always of the same type : provide, name, build ...
+
+Rule External Files Names :
+     A file name contains no blank
+     A file name extension has 3 characters
+     A file name uses any case 
+
+== Entities ==
+
+Rule Measure :
+     Any measure is converted in Measure_canonical immediately after reading.
+
+Rule Fence Builder :
+     a Builder of a fence Container is its own Tag Coerced Up.
+
+Rule Containers are Coerced type :
+     To allow the finest sub-type of a Bud Container.
+     Only Buds (Constructor Tree leaves) have containers defined as a Datastructure.
+     All upper subtypes follow Symbol Coercion.
+     Consequence : a Non-Bud container type has a container_of_tag function done from patter matching.
+
+Rule Completeness of Trees : 
+     Constructor Tree-Trees and B-Trees are Complete (each Node is different)
+     Therefore Bud Symbols should differ by their string.
+
+Rule Provider : 
+     Use the strictiest subtype as argument of a provider
+     Provides the strictiest subtype.
+
+Rule Target type :
+     There is NO Target type.
+     Target_implicit belongs to Target  and NOT to Operand
+     Target_explicit belongs to Operand and to Target
+       
+     Entity_external belongs to Operand
+ 
+Rule Operator definition :
+     An Operator is linked to a specific Domain (ondomain  keyword).
+     Therefore an Operator is defined by a Bud of its operation (e.g. "homothety")
+     This avoids inter-domain dependencies
+
+Rule Operator Constructor Tree-Tree :
+     Operator Constructor Tree-Tree is extracted from BLOI B-Tree.
+
+Rule Context_Tags Tuple :
+     In any Domain Context tags tuple is first built from Contextset Information.
+     Databaseset have a quatuor of context_tags : Domain (Databaseset) Domaindata Database Databox
+     Entityset have a trio of context_tags : Domain (Entityset) Database Databox
+

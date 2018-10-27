@@ -1,0 +1,192 @@
+(** {3 The Symbol for an Atom } *)
+
+(**
+  Atom symbol are designed to meet Block constraints i.e.
+  - Core atom 
+  - Leaf atoms have not to be mixed up.
+  - Raregas is an other case. 
+
+Abbreviating in two parts
+
+  bbtt_a
+
+bb characterize the bonds :
+  ss singlesigma 
+  ds doublesigma
+  ts triplesigma 
+
+  sn singlenonsigma
+
+tt characterize the ties :
+  tw twotied
+  th threetied
+  
+a is mendeleev symbol.
+
+*)
+
+module Hbs_t = Halfbridge_symbol_t
+
+type atom_symbol =
+  | Leaf_atom_symbol of leaf_atom_symbol  (* one tie *)
+  | Core_atom_symbol of core_atom_symbol  (* more than one tie *)
+
+and core_atom_symbol =
+  | Closed_atom_symbol of closed_atom_symbol
+  | Onetied_atom_symbol of onetied_atom_symbol
+  | Twotied_atom_symbol of twotied_atom_symbol
+  | Threetied_atom_symbol of threetied_atom_symbol
+  | Fourtied_atom_symbol of fourtied_atom_symbol 
+  | Fivetied_atom_symbol of fivetied_atom_symbol 
+  | Sixtied_atom_symbol of sixtied_atom_symbol 
+
+and leaf_atom_symbol =
+  | Single_leaf_atom_symbol of single_leaf_atom_symbol
+  | Double_leaf_atom_symbol of double_leaf_atom_symbol
+  | Triple_leaf_atom_symbol of triple_leaf_atom_symbol
+  | Nonsigma_leaf_atom_symbol of nonsigma_leaf_atom_symbol
+
+(** {6 Closed_atom.} *)
+
+and closed_atom_symbol =
+  | Raregas_symbol of raregas_symbol
+  | Anion_symbol of anion_symbol 
+  | Cation_symbol of cation_symbol
+  | Halfbridge_atom_symbol of Hbs_t.halfbridge_symbol
+
+(** {6 Raregas.} *)
+
+and raregas_symbol =
+  | Rg_Ar (* Ar *)
+  | Rg_He 
+  | Rg_Kr (* Kr *)
+  | Rg_Ne (* Ne *)
+  | Rg_Xe (* Xe *)
+
+and anion_symbol =
+  | Minus_one_anion_symbol of minus_one_anion_symbol
+
+and cation_symbol = 
+  | Plus_one_anion_symbol of plus_one_anion_symbol
+  | Plus_two_anion_symbol of plus_two_anion_symbol
+  | Plus_three_anion_symbol of plus_three_anion_symbol
+
+and minus_one_anion_symbol =
+  | Mon_F   (* F- *)
+
+and plus_one_anion_symbol =
+  | Pon_H   (* H+ *)
+  | Pon_Na  (* Na+ *)
+
+and plus_two_anion_symbol =
+  | Ptw_Ca  (* Ca++ *)
+  | Ptw_Fe  (* Fe++ *)
+
+and plus_three_anion_symbol =
+  | Pth_Fe  (* Fe+++ *)
+
+(** {6 Leaf of Block.} *)
+
+and nonsigma_leaf_atom_symbol =
+  | Nlf_O   (* O.- in -Coo anion. *)
+
+and single_leaf_atom_symbol =
+  | Slf_H   (* H- in h-H molecule *)
+  | Slf_F   (* F- in f-H molecule *)
+
+and double_leaf_atom_symbol =
+  | Dlf_O   (* O=  in Co2 molecule *)
+
+and triple_leaf_atom_symbol =
+  | Tlf_N   (* N#  in h-c#N *)
+  | Tlf_O   (* O#  in Co molecule *)
+
+(** {6 Core of Block.} *)
+
+and onetied_atom_symbol =
+  | Sigma_onetied_atom_symbol of sigma_onetied_atom_symbol
+
+and twotied_atom_symbol =
+  | Sigma_twotied_atom_symbol of sigma_twotied_atom_symbol
+  | Nonsigma_twotied_atom_symbol of nonsigma_twotied_atom_symbol
+
+and threetied_atom_symbol =
+  | Sigma_threetied_atom_symbol of sigma_threetied_atom_symbol
+  | Nonsigma_threetied_atom_symbol of nonsigma_threetied_atom_symbol
+
+and fourtied_atom_symbol =
+  | Fo_C   (* -C<-  Methane *)
+  | Fo_N   (* -N+<- Ammonium *)
+  | Fo_S   (* -S<- Sf4 molecule See_saw *)
+  | Fo_Xe  (* -Xe<- XeF4 molecule Square_planar *)
+
+and fivetied_atom_symbol =
+  | Fi_Cl  (* >Cl<- Clf5 molecule Square_pyramidal *)
+
+and sixtied_atom_symbol =
+  | Si_S   (* ->S<- Sf6 molecule Octahedral *)
+
+and sigma_onetied_atom_symbol =
+  | Single_sigma_onetied_atom_symbol of singlesigma_onetied_atom_symbol
+
+and sigma_twotied_atom_symbol =
+  | Single_sigma_twotied_atom_symbol of singlesigma_twotied_atom_symbol
+  | Double_sigma_twotied_atom_symbol of doublesigma_twotied_atom_symbol
+  | Triple_sigma_twotied_atom_symbol of triplesigma_twotied_atom_symbol
+
+and sigma_threetied_atom_symbol =
+  | Single_sigma_threetied_atom_symbol of singlesigma_threetied_atom_symbol
+  | Double_sigma_threetied_atom_symbol of doublesigma_threetied_atom_symbol
+
+and nonsigma_threetied_atom_symbol =
+  | Singlenonsigma_threetied_atom_symbol of singlenonsigma_threetied_atom_symbol
+  | Doublenonsigma_threetied_atom_symbol of doublenonsigma_threetied_atom_symbol
+
+(** {9 Sigma Onetied.} *)
+
+and singlesigma_onetied_atom_symbol =
+  | Sson_H    (* H-  in h-h molecule *)
+  | Sson_F    (* F-  in Fh *)
+  | Sson_Cl   (* Cl- in Clf *)
+
+(** {9 Sigma Twotied.} *)
+
+and singlesigma_twotied_atom_symbol =
+  | Sstw_O    (* -O-   in h-O-h molecule *)
+  | Sstw_S    (* -S-   h-S-h molecule *)
+
+and doublesigma_twotied_atom_symbol =
+  | Dstw_C    (* =C=   in o=C=o molecule *)
+  | Dstw_N    (* =N-   in Guanidine C=N-H *)
+  | Dstw_S    (* =S=   o=S=o sulfur dioxide molecule *)
+
+and triplesigma_twotied_atom_symbol =
+  | Tstw_C    (* #C-   in n#Ch molecule  *)
+  | Tstw_N    (* #N+-  in ??? molecule  *)
+
+(** {9 Sigma Threetied.} *)
+
+and singlesigma_threetied_atom_symbol =
+  | Ssth_N    (* -N<  Nh3 molecule Trigonal_pyramidal *)
+  | Ssth_Cl   (* ClF3 molecule Tshaped *)
+
+and doublesigma_threetied_atom_symbol =
+  | Dsth_C    (* =C< in Ethylene molecule *)
+  | Dsth_N    (* =N+<  *)
+  | Dsth_S    (* =S<< in So3 sulfur trioxide molecule planar *)
+
+(** {9 Nonsigma Twotied.} *)
+
+and nonsigma_twotied_atom_symbol =
+  | Ntw_N   (* -N.-  in o-N.-o anion *)
+  | Ntw_O   (* -O.-  in o-O.-o molecule *)
+
+(** {9 Nonsigma Threetied.} *)
+
+and singlenonsigma_threetied_atom_symbol =
+  | Snth_C    (* -C.< in Co3 carbonate anion trigonal_planar *)
+  | Snth_N    (* -N+.< in Guanidinium trigonal_planar ??? *)
+
+and doublenonsigma_threetied_atom_symbol =
+  | Dnth_S    (* =S< in o=S< Sulfinyl group (covalent/ionic) *)
+;;

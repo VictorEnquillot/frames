@@ -1,0 +1,8 @@
+let sym_inp_t = Input_symbol_tree_by_input_fullnameoffile_provider_v.provide fno_inp;;
+let sym_tso_l = Tree_v.topson_tree_list_off_tree sym_inp_t;;
+
+let pre_tre =
+  let pre_lea = Input_symbol_v.is_input_variable_name in
+  let pre_nod = Input_symbol_v.is_input_keyword_operator_constructor in
+  Tree_v.has_a_topson_leaf_and_a_topson_node_of_leaf_predicate_of_node_predicate_off_tree pre_lea pre_nod 
+;;

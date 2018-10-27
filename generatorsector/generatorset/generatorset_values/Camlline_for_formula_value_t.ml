@@ -1,0 +1,7 @@
+type camlline_for_formula_value =
+  | Camlline_for_formula_datastructure_value of Camlline_for_formula_datastructure_value_t.camlline_for_formula_datastructure_value
+  | Camlline_for_formula_duo_value of Camlline_for_formula_duo_value_t.camlline_for_formula_duo_value
+  | Camlline_for_formula_trio_value of Camlline_for_formula_trio_value_t.camlline_for_formula_trio_value
+  | Camlline_for_formula_uno_value of Camlline_for_formula_uno_value_t.camlline_for_formula_uno_value
+;;
+

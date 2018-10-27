@@ -1,0 +1,46 @@
+
+msrf by_variable_name_n_inputbox_name   by_basicname_variable_n_basicname_inputbox *ml *mk
+
+
+
+msrf by_domain_name_n_databox_name_n_variable_name by_basicname_databox_n_basicname_variable_n_basicname_domain *ml *mk
+
+msrf by_database_name_n_databox_name    by_basicname_databox_n_basicname_database *ml *mk
+
+let bna_dom = Basicname_v.basicname_domain_of_string nam_dom in
+let bna_ibo = Basicname_v.basicname_inputbox_of_string nam_ibo in
+let bna_iba = Basicname_v.basicname_inputbase_of_string nam_iba in
+let bna_var = Basicname_v.basicname_variable_of_string nam_var in
+
+ms "let nam_ibo = Basicname" "let bna_ibo = Basicname" *ml
+
+ms "(nam_ibo, sof_ptc)" "(bna_ibo, bna_var)" *ml
+ms "(nam_dba, nam_dbo)" "(bna_dbo, bna_dba)" *ml
+
+ms "(nam_ibo, sof_poe)" "(bna_ibo, bna_var)" *ml
+
+ms "(nam_box, nam_bas)" "(bna_dbo, bna_dba)"  *ml
+ms "(nam_dba, nam_dom, nam_sec)" "(bna_dba, bna_dom, bna_sec)" *ml
+ms "(nam_dbo, nam_dba)" "(bna_dbo, bna_dba)"  *ml
+ms "(nam_dom, nam_sec)" "(bna_dom, bna_sec)"  *ml
+ms "(nam_iba, nam_dom, nam_sec)" "(bna_iba, bna_dom, bna_sec)" *ml
+ms "(nam_ibo, nam_iba)" "(bna_ibo, bna_iba)"  *ml
+ms "(nam_ibo, nam_iba, nam_pcd, nam_pcs)" "(bna_dbo, bna_dba, bna_dom, bna_sec)" *ml
+ms "(nam_ibo, nam_var)" "(bna_ibo, bna_var)"  *ml
+ms "(nam_nbo, nam_iba, nam_dom, nam_sec)" "(bna_nbo, bna_iba, bna_dom, bna_sec)" *ml
+ms "(nam_pbo, nam_pba)" "(bna_dbo, bna_dba)"  *ml
+ms "(nam_pbo, nam_pba, nam_dom, nam_sec)" "(bna_dbo, bna_dba, bna_dom, bna_sec)" *ml
+ms "(nam_pcd, nam_pcs)" "(bna_dom, bna_sec)"  *ml
+
+msrf Inputbase_name_by               Basicname_inputbase_by *ml *mk
+msrf Inputbox_name_by                Basicname_inputbox_by *ml *mk
+msrf Inputbox_name_n_inputbase_name  Basicname_inputbox_n_basicname_inputbase *ml *mk
+
+msrf Property_context_basicname_     Property_basicname_ *ml *mk
+
+
+let bna_var = Basicname_v.basicname_variable_of_string nam_var in
+
+msrf by_basicname_databox_n_basicname_variable_n_basicname_domain   by_basicname_variable_n_basicname_inputbox_n_basicname_domain  *ml *mk
+
+msrf Property_envelope_by_basicname_variable_n_basicname_inputbox   Property_envelope_by_basicname_variable_external_n_basicname_inputbox *ml *mk

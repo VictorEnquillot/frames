@@ -1,0 +1,20 @@
+let tag_inp_tso_stl = Tree_v.topson_tree_list_off_tree sym_inp_t;;
+
+let tag_pre_tre =
+  let pre_lea t = Input_symbol_v.is_input_variable_name (Tag_v.entity_off_tag t) in
+  let pre_nod t = Input_symbol_v.is_input_keyword_operator_constructor (Tag_v.entity_off_tag t)in
+  Tree_v.has_a_topson_leaf_and_a_topson_node_of_leaf_predicate_of_node_predicate_off_tree pre_lea pre_nod 
+;;
+
+let tag_inp_ope_st = List_v.only_element_of_predicate_off_list tag_pre_tre tag_inp_tso_stl;;
+
+
+let sym_inp_t = Input_symbol_tree_by_input_fullnameoffile_provider_v.provide fno_inp;;
+let sym_inp_tso_stl = Tree_v.topson_tree_list_off_tree sym_inp_t;;
+
+let pre_tre =
+  let pre_lea = Input_symbol_v.is_input_variable_name in
+  let pre_nod = Input_symbol_v.is_input_keyword_operator_constructor in
+  Tree_v.has_a_topson_leaf_and_a_topson_node_of_leaf_predicate_of_node_predicate_off_tree pre_lea pre_nod 
+;;
+let sym_inp_ope_st = List_v.only_element_of_predicate_off_list pre_tre sym_inp_tso_stl;;

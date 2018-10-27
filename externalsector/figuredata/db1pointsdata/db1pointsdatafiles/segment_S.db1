@@ -1,0 +1,6 @@
+coordinates_units_length   angstrom 
+coordinates_kind           cartesian
+figure_kind segment 
+figure_name S
+vertex S_B       0.  1.  1.
+vertex S_C       1.  0.  0.

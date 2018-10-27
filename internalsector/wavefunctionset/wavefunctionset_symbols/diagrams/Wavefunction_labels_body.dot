@@ -1,0 +1,26 @@
+	digraph wavefunction_labels {
+		size="14,14";
+		node [
+		     color=yellow, style=filled,
+		     fontsize=24, fontname="Palatino-Italic",fontcolor=black
+		     ];
+		edge [
+        	fontname = "Bitstream Vera Sans"
+        	fontsize = 25
+        	arrowsize="0.7"
+		dir = "down"
+	    ];
+
+	    Title [label = "The Constructor Tree Body\nfor Wavefunction Set" shape="record" color=lightblue, style=filled];
+	    Title -> "Wf\nbody"  [style="invis"];
+
+	"Wf\nbody"          -> {"Wf\nspatial\nmanye" "Wf\ntotal"}; 
+   "Wf\nspatial\nmanye" ->  {"Wf\nspatial\nmanye\nanalytic" "Wf\nspatial\nmanye\ndeterminant" "Wf\nspatial\nmanye\nnumerical" "Wf\nspatial\nmanye\nfragment"};
+   "Wf\nspatial\nmanye\ndeterminant" ->  {"Wf\nspatial\nmanye\ndeterminant\nbare" "Wf\nspatial\nmanye\ndeterminant\nscaled"};
+   "Wf\nspatial\nmanye\ndeterminant\nbare" ->  {"Wf\nspatial\nmanye\ndeterminant\nbare\ncc\nof string" "Wf\nspatial\nmanye\ndeterminant\nbare\nci\nof string" "Wf\nspatial\nmanye\ndeterminant\nbare\nhf\nof string" "Wf\nspatial\nmanye\ndeterminant\nbare\nmcscf\nof string" "Wf\nspatial\nmanye\ndeterminant\nbare\nrhf\nof string" "Wf\nspatial\nmanye\ndeterminant\nbare\nuhf\nof string"};
+   "Wf\nspatial\nmanye\nfragment" ->  {"Wf\nspatial\nmanye\nfragment\nbare\nof string" "Wf\nspatial\nmanye\nfragment\ncsf\nof string" "Wf\nspatial\nmanye\nfragment\njastrowed\nof string" "Wf\nspatial\nmanye\nfragment\njastrowed\nscaled\nof string"};
+   "Wf\ntotal" ->  {"Wf\ntotal\nmanye" "Wf\ntotal\norbital"};
+   "Wf\ntotal\nmanye" ->  {"Wf\ntotal\nmanye\nanalytic" "Wf\ntotal\nmanye\ndeterminant" "Wf\ntotal\nmanye\nnumerical"};
+   "Wf\ntotal\norbital" ->  {"Wf\ntotal\norbital\nanalytic\nof string" "Wf\ntotal\norbital\nnumerical\nof string"};
+
+		}

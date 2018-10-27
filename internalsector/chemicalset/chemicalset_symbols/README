@@ -1,0 +1,12 @@
+
+Frames world         versus      Pdb world 
+
+polypeptide_subunit              residue
+peptideca + sidegroup            c_nh_s_chR_s_co_c
+
+sidegroup                        sidechain
+(grouping)                       
+
+
+Chemicalset_symbols ignores Residue and Sidechain 
+Chemicalset_interfaces translates Residue sequence to polypeptide_subunit

@@ -1,0 +1,15 @@
+empty_1                                                7  7 string 	Empty_1                                                7  7 string 
+dbref1_id                                              8 11 string 	Dbref1_id                                              8 11 string 
+empty_2                                               12 12 string  	Empty_2                                               12 12 string  
+dbref1_chain_id                                       13 13 char 	Dbref1_chain_id                                       13 13 char 
+empty_3                                               14 14 string  	Empty_3                                               14 14 string  
+dbref1_pdb_sequence_segment_initial_sequence_number   15 18 int 	Dbref1_pdb_sequence_segment_initial_sequence_number   15 18 int 
+dbref1_pdb_sequence_segment_initial_insertion_code    19 19 char 	Dbref1_pdb_sequence_segment_initial_insertion_code    19 19 char 
+empty_4                                               20 20 string  	Empty_4                                               20 20 string  
+dbref1_pdb_sequence_segment_final_sequence_number     21 24 int 	Dbref1_pdb_sequence_segment_final_sequence_number     21 24 int 
+dbref1_pdb_sequence_segment_final_insertion_code      25 25 char 	Dbref1_pdb_sequence_segment_final_insertion_code      25 25 char 
+empty_5                                               26 26 string  	Empty_5                                               26 26 string  
+dbref1_sequence_database_name                         27 32 string 	Dbref1_sequence_database_name                         27 32 string 
+empty_6                                               33 47 string  	Empty_6                                               33 47 string  
+dbref1_sequence_database_identification_code          48 67 string 	Dbref1_sequence_database_identification_code          48 67 string 
+empty_7                                               68 80 string  	Empty_7                                               68 80 string  

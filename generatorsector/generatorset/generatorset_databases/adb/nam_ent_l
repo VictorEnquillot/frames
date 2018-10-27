@@ -1,0 +1,10 @@
+	if ( not (List.mem nam_ent nam_ent_l) )
+	then
+	  Error_messages_v.print_fatal_error nam_cod "build_n_store"
+            (Format.sprintf "Current Entity name >%s< were a Leaf of the Constructor Tree" nam_ent)
+	    "it is NOT" 
+	    (Format.sprintf "Check list of Entity leaf :@.     %s" 
+	       ((List_v.name_with_separator Utils_v.identity ";\n      ") nam_ent_l) 
+	    )
+	else
+	  begin

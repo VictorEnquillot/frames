@@ -1,0 +1,48 @@
+(** {6 Builder Tag of Container} *)
+
+let builder_tag_tuple_off_this_container = function
+  | This_container_t.Sibling_1_container con_sib_1 ->
+      Sibling_1_container_v.builder_tag_tuple_off_sibling_1_container con_sib_1
+
+  | This_container_t.Sibling_2_container con_sib_2 ->
+      Sibling_2_container_v.builder_tag_tuple_off_sibling_2_container con_sib_2
+
+  | This_container_t.Sibling_3_container con_sib_3 ->
+      Sibling_3_container_v.builder_tag_tuple_off_sibling_3_container con_sib_3
+;;
+
+let builder_tag_list_off_this_container = function
+  | This_container_t.Sibling_1_container con_sib_1 ->
+      Sibling_1_container_v.builder_tag_list_off_sibling_1_container con_sib_1
+
+  | This_container_t.Sibling_2_container con_sib_2 ->
+      Sibling_2_container_v.builder_tag_list_off_sibling_2_container con_sib_2
+
+  | This_container_t.Sibling_3_container con_sib_3 ->
+      Sibling_3_container_v.builder_tag_list_off_sibling_3_container con_sib_3
+;;
+
+(** {6 Closure Tag} *)
+
+let units_tag_tuple_off_this_container = function
+  | This_container_t.Sibling_1_container con_sib_1 ->
+      Sibling_1_container_v.units_tag_tuple_off_sibling_1_container con_sib_1
+
+  | This_container_t.Sibling_2_container con_sib_2 ->
+      Sibling_2_container_v.units_tag_tuple_off_sibling_2_container con_sib_2
+
+  | This_container_t.Sibling_3_container con_sib_3 ->
+      Sibling_3_container_v.units_tag_tuple_off_sibling_3_container con_sib_3
+;;
+
+let units_tag_list_off_this_container = function
+  | This_container_t.Sibling_1_container con_sib_1 ->
+      Sibling_1_container_v.units_tag_list_off_sibling_1_container con_sib_1
+
+  | This_container_t.Sibling_2_container con_sib_2 ->
+      Sibling_2_container_v.units_tag_list_off_sibling_2_container con_sib_2
+
+  | This_container_t.Sibling_3_container con_sib_3 ->
+      Sibling_3_container_v.units_tag_list_off_sibling_3_container con_sib_3
+;;
+

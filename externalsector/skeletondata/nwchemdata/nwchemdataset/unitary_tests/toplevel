@@ -1,0 +1,24 @@
+ledit -x -h ./.toplevel-history ocaml \
+-I $BAS \
+-I $DAT \
+-I $FIL \
+-I $COM \
+-I $COMDBA \
+-I $LEXDGN \
+-I $SDGN \
+-I $PARDGN \
+-I $TDGN \
+-I $DGN \
+unix.cma str.cma \
+$BAS/basics.cma \
+$FIL/files.cma \
+$DAT/datastructures.cma \
+$COM/commonset.cma \
+$COMDBA/databaseset_common.cma \
+$LEXDGN/dgn_lexer.cma \
+$SDGN/dgn_symbols.cma \
+$PARDGN/dgn_parser.cma \
+$TDGN/dgn_tags.cma \
+$DGN/database_gaussian_nwchem.cma \
+ 
+  

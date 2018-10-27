@@ -1,0 +1,6 @@
+#!/bin/bash
+ocamlopt \
+-I ../ \
+unix.cmxa str.cmxa \
+../basics.cmxa $1 -o run.bin
+echo run.bin

@@ -1,0 +1,16 @@
+cp -p $VCOO/generator/do_envelope_as_list_t.sh .
+cp -p $VCOO/generator/template_envelope_as_list_t.ml .
+
+cp -p $VCOO/generator/do_envelope_all_v.sh do_all_vcoo
+
+cp -p $VCOO/generator/do_envelope_as_list_fence_bud_v.sh .
+cp -p $VCOO/generator/do_envelope_as_list_fence_trunc_up_up_v.sh .
+cp -p $VCOO/generator/do_envelope_as_list_fence_trunc_up_v.sh .
+
+cp -p $VCOO/generator/template_envelope_as_list_fence_bud_v.ml .
+cp -p $VCOO/generator/template_envelope_as_list_fence_trunc_up_up_v.ml .
+cp -p $VCOO/generator/template_envelope_as_list_fence_trunc_up_v.ml .
+
+cp -p $FPRO/generator/script_end.sh .
+cp -p $FPRO/generator/do_container_all_v.sh .
+

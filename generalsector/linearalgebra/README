@@ -1,0 +1,11 @@
+This directory contains modules for generic entities. 
+It is a kind of library.
+There is no Path : these entities are not being managed by IRP.
+
+As far as concern Quantum Mechanics Operator Matrices these are IRP managed entities with a Path. So are the MOs etc... even if they have a nature of vector or matrix.
+
+A point is also without IRP it is part of Affine space 
+
+Quaternions need to be implemented.
+
+Vector must be redefined not using Array module.

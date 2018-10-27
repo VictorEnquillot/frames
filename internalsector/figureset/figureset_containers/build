@@ -1,0 +1,16 @@
+let build tag_ftr =
+  let soi_ftr = Tag_v.sole_index_off_tag tag_ftr in
+  let sym_ftr = Tag_v.entity_off_tag tag_ftr in
+  match sym_ftr with
+  | Figure_triangle_symbol_t.Figure_triangle_isosceles_symbol sym_fti ->
+      Figure_triangle_isosceles_container_v.build (sym_fti, soi_ftr)
+
+  | Figure_triangle_symbol_t.Figure_triangle_scalene_symbol sym_fts ->
+      Figure_triangle_scalene_container_v.build (sym_fts, soi_ftr)
+;;
+
+let evaluate tag_ftr =
+  let tag_bui_l = build tag_ftr in
+  List.map Figure_point_container_v.evaluate tag_bui_l
+;;
+

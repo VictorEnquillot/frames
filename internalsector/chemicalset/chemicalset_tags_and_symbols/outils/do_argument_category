@@ -1,0 +1,16 @@
+argument_category ()
+{
+case ${1} in	
+     database ) res="dbs";;
+     designator ) res="dsg";;
+     formula ) res="fml";;
+     index ) res="idx";;
+     path ) res="pth";;
+     state ) res="sta";;
+     symbol ) res="smb";;
+     tag ) res="tag";;
+     value ) res="vlu";;
+     *) echo "";echo -n "do_argument_category : unknown category >$1<";echo "";exit;;
+esac
+echo "$res"
+}

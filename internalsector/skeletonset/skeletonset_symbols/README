@@ -1,0 +1,30 @@
+(**
+{[  
+
+CEFP Centered_elementary_function_prototype 
+
+Example for Sto_3g and O and H Atomic Centers                                
+
+                                   example Sto_3g
+                                          |         
+bas                                    basisset   
+                                        Sto_3g   
+                            ---------------------------
+                           /                           \     
+center                   pack                          pack 
+             ------------ o ---------                    h
+            /                        \                   |    
+l        cluster                   cluster            cluster 
+           o_s                       o_p                h_s
+          -----                       |                  |
+         /     \                      |                  |     
+n     single  single                single             single
+      o_1s    o_2s                   o_2p               h_1s 
+       |       |                      |                  |
+EFP -------------------------------------------------------------------- 
+       |         |                    |                  |   
+     expanded  expanded            expanded           expanded  ???
+       |         |                    |                  |   
+     single    single               single             single  
+      o_1s      o_2s                 o_2p               h_1s   
+]}*)

@@ -1,0 +1,156 @@
+ --- Creating  Generatorset_symbol_by_sole_index_register_v.register --- 
+26 records read from Database file :
+   >/keep/sources/ocaml_top/setup/frames/figureset/generator/figureset_formulas.set<
+21 records read from Database file :
+   >/keep/sources/ocaml_top/setup/frames/figureset/generator/figureset_symbols.set<
+module V coordinate Cpu 0.100006 Total 0.132008
+module V coordinate_cartesian Cpu 0.068004 Total 0.200012
+module V coordinate_cylindrical Cpu 0.068004 Total 0.268016
+module V coordinate_polar Cpu 0.052004 Total 0.320020
+module V coordinate_spherical Cpu 0.064004 Total 0.384024
+module V domainset Cpu 0.068004 Total 0.452028
+module V fake Cpu 0.028002 Total 0.480030
+module V fake_son Cpu 0.032002 Total 0.512032
+module V float Cpu 0.032002 Total 0.544034
+module V point Cpu 0.040002 Total 0.584036
+module V triangle Cpu 0.060004 Total 0.644040
+module V triangle_isoceles Cpu 0.080005 Total 0.724045
+module V triangle_scalene Cpu 0.068004 Total 0.792049
+module V vector Cpu 0.036002 Total 0.828051
+module T coordinate Cpu 11.620727 Total 12.448778
+module T coordinate_cartesian Cpu 11.880742 Total 24.333520
+module T coordinate_cylindrical Cpu 12.156760 Total 36.490280
+module T coordinate_polar Cpu 12.420777 Total 48.915057
+module T coordinate_spherical Cpu 12.668791 Total 61.583848
+module T domainset Cpu 12.952809 Total 74.540658
+module T fake Cpu 13.268829 Total 87.809487
+module T fake_son Cpu 13.472842 Total 101.282329
+module T float Cpu 13.696856 Total 114.979185
+module T point Cpu 13.920870 Total 128.904056
+module T triangle Cpu 14.164885 Total 143.072941
+module T triangle_isoceles Cpu 14.416901 Total 157.493842
+module T triangle_scalene Cpu 14.748922 Total 172.242764
+module T vector Cpu 15.036940 Total 187.279704
+
+--- Creating  Generatorset_symbol_by_sole_index_register_v.register --- 
+26 records read from Database file :
+   >/keep/sources/ocaml_top/setup/frames/figureset/generator/figureset_formulas.set<
+21 records read from Database file :
+   >/keep/sources/ocaml_top/setup/frames/figureset/generator/figureset_symbols.set<
+module T coordinate Cpu 0.016001 Total 0.052003
+module T coordinate_cartesian Cpu 0.008001 Total 0.064004
+module T coordinate_cylindrical Cpu 0.008000 Total 0.076004
+module T coordinate_polar Cpu 0.008000 Total 0.088005
+module T coordinate_spherical Cpu 0.008001 Total 0.100006
+module T domainset Cpu 0.012001 Total 0.116007
+module T fake Cpu 0.004000 Total 0.124007
+module T fake_son Cpu 0.004000 Total 0.132008
+module T float Cpu 0.004000 Total 0.140008
+module T point Cpu 0.004000 Total 0.148009
+module T triangle Cpu 0.008001 Total 0.160010
+module T triangle_isoceles Cpu 0.012000 Total 0.172010
+module T triangle_scalene Cpu 0.012000 Total 0.188011
+module T vector Cpu 0.008001 Total 0.196012
+module V coordinate Cpu 0.392024 Total 0.588036
+module V coordinate_cartesian Cpu 0.752047 Total 1.344084
+module V coordinate_cylindrical Cpu 1.292080 Total 2.636164
+module V coordinate_polar Cpu 1.984124 Total 4.624289
+module V coordinate_spherical Cpu 2.760172 Total 7.388461
+module V domainset Cpu 3.768235 Total 11.160697
+module V fake Cpu 4.748297 Total 15.912994
+module V fake_son Cpu 5.352335 Total 21.269329
+module V float Cpu 6.176386 Total 27.445715
+module V point Cpu 7.088443 Total 34.538158
+module V triangle Cpu 8.376524 Total 42.914682
+module V triangle_isoceles Cpu 9.620601 Total 52.539283
+module V triangle_scalene Cpu 11.664729 Total 64.204012
+
+toplevel :
+module V coordinate Cpu 0.116007 Total 1.884117
+module V coordinate_cartesian Cpu 0.332021 Total 2.216138
+module V coordinate_cylindrical Cpu 0.888056 Total 3.104194
+module V coordinate_polar Cpu 1.756110 Total 4.864304
+module V coordinate_spherical Cpu 2.808175 Total 7.672479
+module V point Cpu 4.272267 Total 11.948746
+module V triangle Cpu 5.672355 Total 17.621101
+module V triangle_isoceles Cpu 7.228452 Total 24.849553
+module V triangle_scalene Cpu 9.732608 Total 34.582161
+module V vector Cpu 12.340771 Total 46.926932
+module V fake Cpu 14.616914 Total 61.543846
+module V fake_son Cpu 16.077005 Total 77.620851
+module V float Cpu 18.073129 Total 95.697980
+
+toplevel :
+module V coordinate Cpu 0.480030 Total 1.820113
+module V coordinate_cartesian Cpu 0.884056 Total 2.704169
+module V coordinate_cylindrical Cpu 1.464091 Total 4.168260
+module V coordinate_polar Cpu 2.200138 Total 6.372398
+module V coordinate_spherical Cpu 3.016188 Total 9.388586
+module V domainset Cpu 4.072255 Total 13.460841
+module V fake Cpu 5.092318 Total 18.557159
+module V fake_son Cpu 5.712357 Total 24.269516
+module V float Cpu 6.564411 Total 30.833927
+module V point Cpu 7.492468 Total 38.330395
+module V triangle Cpu 8.780549 Total 47.110944
+module V triangle_isoceles Cpu 10.120632 Total 57.231576
+module V triangle_scalene Cpu 12.192762 Total 69.428339
+module V vector Cpu 14.232889 Total 83.661228
+
+toplevel :
+rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Triangle_formula_v.ml
+module V triangle Cpu 0.076005 Total 1.128070
+
+toplevel nouvel ordre :
+module V domainset Cpu 0.068004 Total 1.076067
+module V triangle Cpu 0.152010 Total 1.232077
+module V triangle_isoceles Cpu 0.344021 Total 1.580098
+module V triangle_scalene Cpu 0.752047 Total 2.332145
+module V coordinate Cpu 1.336083 Total 3.672229
+module V coordinate_cartesian Cpu 2.016126 Total 5.688355
+module V coordinate_cylindrical Cpu 2.880180 Total 8.572535
+module V coordinate_polar Cpu 3.896244 Total 12.468779
+module V coordinate_spherical Cpu 4.964310 Total 17.437089
+module V fake Cpu 6.264392 Total 23.701481
+module V fake_son Cpu 6.948434 Total 30.649915
+module V float Cpu 7.900494 Total 38.554409
+module V point Cpu 8.900556 Total 47.454965
+module V vector Cpu 10.272642 Total 57.731608
+
+---------------------------------------------
+
+make :
+
+module V domainset Cpu 0.068004 Total 0.100006
+module V triangle Cpu 0.060004 Total 0.160010
+module V triangle_isoceles Cpu 0.076005 Total 0.240015
+module V triangle_scalene Cpu 0.060004 Total 0.304019
+module V coordinate Cpu 0.096006 Total 0.400025
+module V coordinate_cartesian Cpu 0.072004 Total 0.476029
+module V coordinate_cylindrical Cpu 0.064004 Total 0.540033
+module V coordinate_polar Cpu 0.056004 Total 0.596037
+module V coordinate_spherical Cpu 0.064004 Total 0.660041
+module V fake Cpu 0.032002 Total 0.692043
+module V fake_son Cpu 0.032002 Total 0.724045
+module V float Cpu 0.036002 Total 0.760047
+module V point Cpu 0.040003 Total 0.800050
+module V vector Cpu 0.040002 Total 0.844052
+
+make : 2 étapes
+module V domainset Cpu 0.068005 Total 0.096006
+module V triangle Cpu 0.064004 Total 0.160010
+module V triangle_isoceles Cpu 0.080005 Total 0.240015
+module V triangle_scalene Cpu 0.068004 Total 0.308019
+module V coordinate Cpu 0.096006 Total 0.404025
+module V coordinate_cartesian Cpu 0.068004 Total 0.472029
+module V coordinate_cylindrical Cpu 0.064004 Total 0.536033
+module V coordinate_polar Cpu 0.056004 Total 0.592037
+module V coordinate_spherical Cpu 0.064004 Total 0.656041
+module V fake Cpu 0.032002 Total 0.688043
+module V fake_son Cpu 0.036002 Total 0.724045
+module V float Cpu 0.032002 Total 0.756047
+module V point Cpu 0.044003 Total 0.800050
+module V vector Cpu 0.040002 Total 0.840052
+Cpu 23.217451 Total 24.057503 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Domainset_formula_v.ml
+Cpu 23.221451 Total 47.278954 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Triangle_formula_v.ml
+Cpu 23.245452 Total 70.528407 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Triangle_isoceles_formula_v.ml
+...

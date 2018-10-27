@@ -1,0 +1,18 @@
+  | Camlline_for_any_uno_top_symbol_t.Sprintf_for_any_fullname ->
+   (*  Format.sprintf "%s \"%s\"" (longname sym_geo) (string_off sym_geo) *)
+
+      let str = "%s \\\"%s\\\"\"" in
+      Format.sprintf 
+	"  Format.sprintf \"%s (longname sym_%s) (string_off sym_%s)"
+	str
+	(abbreviation_argument sym_ent)  
+	(abbreviation_argument sym_ent)  
+
+  | Camlline_for_any_uno_top_symbol_t.Sprintf_for_any_longname ->
+   (*  Format.sprintf "Geometry_symbol_t.%s" (String.capitalize (name sym_geo)) *)
+
+      Format.sprintf 
+	"  Format.sprintf \"%s_t.%%s\" (String.capitalize (name sym_%s))" 
+	(module_name_capitalized sym_cat sym_ent)  
+	(abbreviation_argument sym_ent)  
+

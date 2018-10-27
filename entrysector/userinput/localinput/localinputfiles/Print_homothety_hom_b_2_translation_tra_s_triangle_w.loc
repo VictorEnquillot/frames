@@ -1,0 +1,109 @@
+define Con_bc
+       context
+         databox "segment_BC"
+         database "db1points"
+         domain "figure"
+         sector "internal"
+         end -- context
+       end -- define
+
+define Con_s
+       context
+         databox "segment_S"
+         database "db1points"
+         domain "figure"
+         sector "internal"
+         end -- context
+       end -- define
+
+define Con_tw
+       context
+         databox "triangle_w"
+         database "db1points"
+         domain "figure"
+         sector "internal"
+         end -- context
+       end -- define
+
+define Cen_b
+       external 
+         type [ "figure" "set" "fence" "point" "constructor" ]
+         external_name "BC_B"
+         external_context Con_bc
+         end -- external
+       end -- define
+
+define Seg_bc
+       external 
+         type [ "figure" "set" "body" "segment" "constructor" ]
+         external_name "BC"
+         external_context Con_bc
+         end -- external
+       end -- define
+
+define Seg_s
+       external 
+         type [ "figure" "set" "body" "segment" "constructor" ]
+         external_name "S"
+         external_context Con_s
+         end -- external
+       end -- define
+
+define Tra_s
+       operator 
+         type [ "operator" "set" "body" "creation" "transformation" "constructor" ]
+         operation "translation"
+         ondomain "figure"  
+         cofactor 
+           cofactor_entity Seg_s
+           end -- cofactor	
+         end -- operator
+       end -- define
+
+define Hom_b_2
+       operator 
+         type [ "operator" "set" "body" "creation" "transformation" "constructor" ]
+         operation "homothety"
+         ondomain "figure"
+         cofactor 
+           cofactor_entity Cen_b 
+           cofactor_basic 2.0 
+	   end -- cofactor
+         end -- operator
+       end -- define
+
+define Tri_w        
+       external 
+         type [ "figure" "set" "body" "triangle" "scalene" "acute" "constructor" ]
+         external_name "W"
+         external_context Con_tw
+         end -- external
+       end -- define
+
+define Tri_h
+       target 
+         type [ "property" "operand" "body" "target" "created" "constructor" ]
+         target_operator Hom_b_2
+         target_operand Tri_w
+         end -- target
+       end -- define
+
+define Tri_t
+       target 
+         type [ "property" "operand" "body" "target" "created" "constructor" ]
+         target_operator Tra_s
+         target_operand Tri_h
+         end -- target
+       end -- define
+
+define Uni_len
+       external 
+         type [ "units" "length" "bohr" ]
+         end -- external
+       end -- define
+
+print Tri_t
+      units [ Uni_len ]
+      end -- print
+
+stop

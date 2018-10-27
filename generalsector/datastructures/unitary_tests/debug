@@ -1,0 +1,5 @@
+ledit -x -h ./.debug-history ocamldebug -I ../../../general/basics -I ../../../general/files -I ../../../general/datastructures runtest.byt
+
+# 
+# display wrd_l
+# print wrd_l ledit -x -h ~/.ocaml-debug-history ocamldebug runtest.byt

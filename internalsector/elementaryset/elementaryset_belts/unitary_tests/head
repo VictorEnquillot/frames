@@ -1,0 +1,14 @@
+let nam_dba = "nwchem";;
+let nam_dbo = "test_ao";;
+let nam_cal = "quantum";;
+
+let nam_mod = "Elementary_fence_units_actual_length_belt_v";;
+
+Parameters_general_register_v.store nam_mod "database-name" nam_dba;;
+Parameters_general_register_v.store nam_mod "databox-name" nam_dbo;;
+
+let tag_ele_l = Elementary_tag_all_list_by_database_name_n_databox_name_provider_v.provide (nam_dba, nam_dbo);;
+
+let pre_tag_efu_soi soi (s, i) = 
+  (Elementary_symbol_v.is_bohr s) && (soi = i) 
+;;

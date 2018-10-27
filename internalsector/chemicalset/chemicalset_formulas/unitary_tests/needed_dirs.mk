@@ -1,0 +1,2 @@
+NEEDED_DIRS := \
+	$(realpath ..) \

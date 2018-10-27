@@ -1,0 +1,7 @@
+coordinates_units_length   angstrom 
+coordinates_units_angle    degree
+coordinates_kind           cylindrical  
+figure_kind segment 
+figure_name BC
+vertex BC_B       1.  0.  0.
+vertex BC_C       1. 90.  1.

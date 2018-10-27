@@ -1,0 +1,10 @@
+     builders local_measure = singlet string
+     builders local_databasedb1_constructor:ofstring = singlet string
+     builders triangledb1_constructor:ofstring = singlet string
+     builders vectordb1_constructor:ofstring = singlet string
+     builders vertexdb1_constructor:ofstring = singlet string
+     builders local_databasedb2_constructor:ofstring = singlet string
+     builders triangledb2_constructor:ofstring = singlet string
+     builders basisdb2_constructor:ofstring = singlet string
+     builders summitdb2_constructor:ofstring = singlet string
+

@@ -1,0 +1,8 @@
+let tag_fen_sca = List_v.only_element_of_predicate_off_list 
+    (fun (s, i) -> 
+      (Skeleton_symbol_v.is_skeleton_fence_centered_aopef_constructor s)
+	&&
+      (Skeleton_symbol_v.string_off s = "he p 2 2")
+    )
+    tag_fen;;
+

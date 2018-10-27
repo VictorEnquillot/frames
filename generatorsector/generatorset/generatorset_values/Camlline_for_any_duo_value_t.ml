@@ -1,0 +1,14 @@
+(** {6 Typing} *)
+
+type camlline_for_any_duo_value =
+  | Camlline_for_any_duo_current_son_value of Camlline_for_any_duo_current_son_value_t.camlline_for_any_duo_current_son_value
+  | Camlline_for_any_duo_current_top_value of Camlline_for_any_duo_current_top_value_t.camlline_for_any_duo_current_top_value
+  | Camlline_for_any_duo_datastructure_value of Camlline_for_any_duo_datastructure_value_t.camlline_for_any_duo_datastructure_value
+  | Camlline_for_any_duo_son_top_bare_value of Camlline_for_any_duo_son_top_bare_value_t.camlline_for_any_duo_son_top_bare_value
+  | Camlline_for_any_duo_son_top_ofstring_value of Camlline_for_any_duo_son_top_ofstring_value_t.camlline_for_any_duo_son_top_ofstring_value
+  | Camlline_for_any_duo_son_top_notleaf_value of Camlline_for_any_duo_son_top_notleaf_value_t.camlline_for_any_duo_son_top_notleaf_value
+  | Camlline_for_any_duo_top_main_value of Camlline_for_any_duo_top_main_value_t.camlline_for_any_duo_top_main_value
+;;
+
+
+

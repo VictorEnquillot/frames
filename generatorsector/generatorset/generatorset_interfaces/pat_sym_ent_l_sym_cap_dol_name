@@ -1,0 +1,12 @@
+	(Format.sprintf "Doublet_list is:@.      %s" 
+	   (Doublet_list_v.name_with_separator 
+              (List_v.name_with_separator 
+		 (List_v.name_with_separator 
+		    Entity_symbol_v.fullname "; "
+		 ) 
+              "; "
+	      ) 
+ 	      Camlparagraph_symbol_v.fullname 
+              ";\n      "
+              pat_sym_ent_l_sym_cap_dol
+           ) )

@@ -1,0 +1,93 @@
+digraph dgn {
+    size="14,14";
+
+
+    edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+    node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+    Title [label = "BNF Tree\nfor Operator Hom_b_2\napplied to Poi_a\n" fontsize=24, shape="record", color=lightblue, style=filled];
+
+
+  "<cell_cofactor_basic>";
+  "<cell_cofactor_entity>";
+
+  "type" [color=lightblue] ;
+  "Hom_b_2" [color=green] ;
+  ">operator<" [color=green] ;
+  ">body<" [color=green] ;
+  ">creation<" [color=green] ;
+  ">transformation<" [color=green] ;
+
+  "<handle_command_define>";
+  "<handle_command_print>";
+  "<handle_variable_kind>";
+
+    "print" [color=lightblue];
+    "<block_print>";
+
+    "end_define" [color=lightblue];
+
+    "stop" [color=lightblue];
+
+    "define" [color=lightblue];
+    "operator" [color=lightblue] ;
+    "cofactor" [color=lightblue] ;
+
+    "<block_variable_operator>";
+    "<block_define>";
+
+    "<input_block>\nfor input_file" -> {"<handle_command_define>" "<handle_command_print>" "stop"};
+
+subgraph cluster_0 {
+  "<handle_command_define>"       -> {"define" "<block_define>"};
+  "<block_define>"         -> {"Hom_b_2" "<handle_variable_kind>" "end_define"};
+  "<handle_variable_kind>" -> {"operator" "<block_variable_operator>"};
+
+subgraph cluster_01 {
+  "<block_variable_operator>"   ->  {"<box_type>"};
+  "<block_variable_operator>"   ->  {"<handle_cofactor>"};
+
+  "<handle_cofactor>"           ->  { "cofactor" "<block_operator_cofactor>"};
+
+  "<cell_ondomain> [color=yellow] ";
+  "<cell_operation> [color=yellow]";
+
+  "<block_variable_operator>"   ->  {"<cell_operation>"};
+  "<block_variable_operator>"   ->  {"<cell_ondomain>"};
+
+  "end_cofactor" [color=lightblue];
+  "<block_operator_cofactor>"   ->  {"<cell_cofactor_entity>" "<cell_cofactor_basic>" "end_cofactor"};
+
+  "end_operator" [color=lightblue];
+
+  "<block_variable_operator>"   ->  {"end_operator"};
+
+
+  "<box_type>"                  ->  {"type"  ">operator<" ">body<" ">creation<" ">transformation<" };
+
+  "operation" [color=yellow];
+  "ondomain" [color=yellow];
+  ">homothety<" [color=green] ;
+  ">figure<" [color=green] ;
+
+  "<cell_ondomain>"             ->  {"ondomain" ">figure<"};
+  "<cell_operation>"            ->  {"operation" ">homothety<"};
+
+ "cofactor_basic" [color=lightblue];
+ "cofactor_entity" [color=lightblue];
+
+ "2.0" [color=green] ;
+ "Poi_a" [color=green] ;
+
+ "<cell_cofactor_basic>"        -> { "cofactor_basic" "2.0"};
+ "<cell_cofactor_entity>"       -> { "cofactor_entity" "Poi_a"}
+}
+}
+
+subgraph cluster_1 {
+  "<handle_command_print>"        -> {"print" "<block_print>"};
+
+}
+}
+

@@ -1,0 +1,1182 @@
+File "Camlline_datastructure_camltype_value_u_figureset_symbol_triangle_isoceles_typing.ml", line 21, characters 18-53:
+Error: Unbound value Camlline_symbol_v.is_type_est_equal
+File "_none_", line 1:
+Error: Cannot find file Camlline_datastructure_camltype_value_u_figureset_symbol_triangle_isoceles_typing.cmx
+Camlline_datastructure_camltype_value_u_figureset_symbol_triangle_isoceles_typing
+File "Camlline_duo_function_value_u_figureset_formula_figureset_typing.ml", line 19, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_duo_function_value_u_figureset_formula_figureset_typing.cmx
+Camlline_duo_function_value_u_figureset_formula_figureset_typing
+File "Camlline_duo_function_value_u_figureset_formula_triangle_typing.ml", line 19, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_duo_function_value_u_figureset_formula_triangle_typing.cmx
+Camlline_duo_function_value_u_figureset_formula_triangle_typing
+File "Camlline_duo_function_value_u_figureset_symbol_figureset_typing.ml", line 19, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_duo_function_value_u_figureset_symbol_figureset_typing.cmx
+Camlline_duo_function_value_u_figureset_symbol_figureset_typing
+File "Camlline_duo_function_value_u_figureset_symbol_triangle_isoceles_typing.ml", line 18, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_duo_function_value_u_figureset_symbol_triangle_isoceles_typing.cmx
+Camlline_duo_function_value_u_figureset_symbol_triangle_isoceles_typing
+File "Camlline_duo_function_value_u_figureset_symbol_triangle_typing.ml", line 19, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_duo_function_value_u_figureset_symbol_triangle_typing.cmx
+Camlline_duo_function_value_u_figureset_symbol_triangle_typing
+File "Camlline_uno_camltype_value_u_figureset_symbol_triangle_isoceles_typing.ml", line 18, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_uno_camltype_value_u_figureset_symbol_triangle_isoceles_typing.cmx
+Camlline_uno_camltype_value_u_figureset_symbol_triangle_isoceles_typing
+File "Camlline_value_u_figureset_formula_coordinate_builder_tag_listing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_coordinate_builder_tag_listing.cmx
+Camlline_value_u_figureset_formula_coordinate_builder_tag_listing
+File "Camlline_value_u_figureset_formula_coordinate_builder_tag_listing_off_formula.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_coordinate_builder_tag_listing_off_formula.cmx
+Camlline_value_u_figureset_formula_coordinate_builder_tag_listing_off_formula
+File "Camlline_value_u_figureset_formula_coordinate_builder_tag_listing_off_tag.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_coordinate_builder_tag_listing_off_tag.cmx
+Camlline_value_u_figureset_formula_coordinate_builder_tag_listing_off_tag
+File "Camlline_value_u_figureset_formula_coordinate_data_tag_listing.ml", line 19, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_coordinate_data_tag_listing.cmx
+Camlline_value_u_figureset_formula_coordinate_data_tag_listing
+File "Camlline_value_u_figureset_formula_coordinate_polar_building_and_storing.ml", line 18, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_coordinate_polar_building_and_storing.cmx
+Camlline_value_u_figureset_formula_coordinate_polar_building_and_storing
+File "Camlline_value_u_figureset_formula_coordinate_polar_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_coordinate_polar_typing.cmx
+Camlline_value_u_figureset_formula_coordinate_polar_typing
+File "Camlline_value_u_figureset_formula_coordinate_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_coordinate_typing.cmx
+Camlline_value_u_figureset_formula_coordinate_typing
+File "Camlline_value_u_figureset_formula_fake_son_making_for_formula.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_fake_son_making_for_formula.cmx
+Camlline_value_u_figureset_formula_fake_son_making_for_formula
+File "Camlline_value_u_figureset_formula_fake_son_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_fake_son_typing.cmx
+Camlline_value_u_figureset_formula_fake_son_typing
+File "Camlline_value_u_figureset_formula_fake_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_fake_typing.cmx
+Camlline_value_u_figureset_formula_fake_typing
+File "Camlline_value_u_figureset_formula_figureset_builder_tag_listing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_figureset_builder_tag_listing.cmx
+Camlline_value_u_figureset_formula_figureset_builder_tag_listing
+File "Camlline_value_u_figureset_formula_figureset_builder_tag_listing_off_formula.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_figureset_builder_tag_listing_off_formula.cmx
+Camlline_value_u_figureset_formula_figureset_builder_tag_listing_off_formula
+File "Camlline_value_u_figureset_formula_figureset_making.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_figureset_making.cmx
+Camlline_value_u_figureset_formula_figureset_making
+File "Camlline_value_u_figureset_formula_figureset_symbolizing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_figureset_symbolizing.cmx
+Camlline_value_u_figureset_formula_figureset_symbolizing
+File "Camlline_value_u_figureset_formula_figureset_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_figureset_typing.cmx
+Camlline_value_u_figureset_formula_figureset_typing
+File "Camlline_value_u_figureset_formula_point_2d_making.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_point_2d_making.cmx
+Camlline_value_u_figureset_formula_point_2d_making
+File "Camlline_value_u_figureset_formula_point_2d_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_point_2d_typing.cmx
+Camlline_value_u_figureset_formula_point_2d_typing
+File "Camlline_value_u_figureset_formula_point_builder_tag_listing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_point_builder_tag_listing.cmx
+Camlline_value_u_figureset_formula_point_builder_tag_listing
+File "Camlline_value_u_figureset_formula_point_builder_tag_listing_off_formula.ml", line 18, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_point_builder_tag_listing_off_formula.cmx
+Camlline_value_u_figureset_formula_point_builder_tag_listing_off_formula
+File "Camlline_value_u_figureset_formula_point_builder_tag_listing_off_tag.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_point_builder_tag_listing_off_tag.cmx
+Camlline_value_u_figureset_formula_point_builder_tag_listing_off_tag
+File "Camlline_value_u_figureset_formula_point_data_tag_listing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_point_data_tag_listing.cmx
+Camlline_value_u_figureset_formula_point_data_tag_listing
+File "Camlline_value_u_figureset_formula_point_data_tag_listing_off_formula.ml", line 18, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_point_data_tag_listing_off_formula.cmx
+Camlline_value_u_figureset_formula_point_data_tag_listing_off_formula
+File "Camlline_value_u_figureset_formula_point_data_tag_listing_off_tag.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_point_data_tag_listing_off_tag.cmx
+Camlline_value_u_figureset_formula_point_data_tag_listing_off_tag
+File "Camlline_value_u_figureset_formula_point_making.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_point_making.cmx
+Camlline_value_u_figureset_formula_point_making
+File "Camlline_value_u_figureset_formula_point_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_point_typing.cmx
+Camlline_value_u_figureset_formula_point_typing
+File "Camlline_value_u_figureset_formula_polar_rho_building_and_storing.ml", line 18, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_polar_rho_building_and_storing.cmx
+Camlline_value_u_figureset_formula_polar_rho_building_and_storing
+File "Camlline_value_u_figureset_formula_polar_rho_making.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_polar_rho_making.cmx
+Camlline_value_u_figureset_formula_polar_rho_making
+File "Camlline_value_u_figureset_formula_triangle_builder_tag_listing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_triangle_builder_tag_listing.cmx
+Camlline_value_u_figureset_formula_triangle_builder_tag_listing
+File "Camlline_value_u_figureset_formula_triangle_builder_tag_listing_off_tag.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_triangle_builder_tag_listing_off_tag.cmx
+Camlline_value_u_figureset_formula_triangle_builder_tag_listing_off_tag
+File "Camlline_value_u_figureset_formula_triangle_data_tag_listing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_triangle_data_tag_listing.cmx
+Camlline_value_u_figureset_formula_triangle_data_tag_listing
+File "Camlline_value_u_figureset_formula_triangle_isoceles_building_and_storing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_triangle_isoceles_building_and_storing.cmx
+Camlline_value_u_figureset_formula_triangle_isoceles_building_and_storing
+File "Camlline_value_u_figureset_formula_triangle_isoceles_making.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_triangle_isoceles_making.cmx
+Camlline_value_u_figureset_formula_triangle_isoceles_making
+File "Camlline_value_u_figureset_formula_triangle_isoceles_typing.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_triangle_isoceles_typing.cmx
+Camlline_value_u_figureset_formula_triangle_isoceles_typing
+File "Camlline_value_u_figureset_formula_triangle_making.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_triangle_making.cmx
+Camlline_value_u_figureset_formula_triangle_making
+File "Camlline_value_u_figureset_formula_triangle_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_triangle_typing.cmx
+Camlline_value_u_figureset_formula_triangle_typing
+File "Camlline_value_u_figureset_formula_vector_2d_making.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_vector_2d_making.cmx
+Camlline_value_u_figureset_formula_vector_2d_making
+File "Camlline_value_u_figureset_formula_vector_data_tag_listing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_vector_data_tag_listing.cmx
+Camlline_value_u_figureset_formula_vector_data_tag_listing
+File "Camlline_value_u_figureset_formula_vector_making.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_vector_making.cmx
+Camlline_value_u_figureset_formula_vector_making
+File "Camlline_value_u_figureset_formula_vector_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_vector_typing.cmx
+Camlline_value_u_figureset_formula_vector_typing
+File "Camlline_value_u_figureset_formula_x_2d_iterating.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_x_2d_iterating.cmx
+Camlline_value_u_figureset_formula_x_2d_iterating
+File "Camlline_value_u_figureset_formula_x_2d_making.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_x_2d_making.cmx
+Camlline_value_u_figureset_formula_x_2d_making
+File "Camlline_value_u_figureset_formula_x_2d_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_x_2d_typing.cmx
+Camlline_value_u_figureset_formula_x_2d_typing
+File "Camlline_value_u_figureset_formula_x_iterating.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_x_iterating.cmx
+Camlline_value_u_figureset_formula_x_iterating
+File "Camlline_value_u_figureset_formula_x_making.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_x_making.cmx
+Camlline_value_u_figureset_formula_x_making
+File "Camlline_value_u_figureset_formula_x_naming.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_x_naming.cmx
+Camlline_value_u_figureset_formula_x_naming
+File "Camlline_value_u_figureset_formula_x_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_formula_x_typing.cmx
+Camlline_value_u_figureset_formula_x_typing
+File "Camlline_value_u_figureset_symbol_coordinate_abbreviating_topson_bare.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_coordinate_abbreviating_topson_bare.cmx
+Camlline_value_u_figureset_symbol_coordinate_abbreviating_topson_bare
+File "Camlline_value_u_figureset_symbol_coordinate_cartesian_abbreviating_topson_ofstring.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_coordinate_cartesian_abbreviating_topson_ofstring.cmx
+Camlline_value_u_figureset_symbol_coordinate_cartesian_abbreviating_topson_ofstring
+File "Camlline_value_u_figureset_symbol_coordinate_spherical_abbreviating_topson_bare.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_coordinate_spherical_abbreviating_topson_bare.cmx
+Camlline_value_u_figureset_symbol_coordinate_spherical_abbreviating_topson_bare
+File "Camlline_value_u_figureset_symbol_fake_querying_topson_notleaf.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_fake_querying_topson_notleaf.cmx
+Camlline_value_u_figureset_symbol_fake_querying_topson_notleaf
+File "Camlline_value_u_figureset_symbol_figureset_abbreviating_grandson_bare.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_abbreviating_grandson_bare.cmx
+Camlline_value_u_figureset_symbol_figureset_abbreviating_grandson_bare
+File "Camlline_value_u_figureset_symbol_figureset_abbreviating_grandson_ofstring.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_abbreviating_grandson_ofstring.cmx
+Camlline_value_u_figureset_symbol_figureset_abbreviating_grandson_ofstring
+File "Camlline_value_u_figureset_symbol_figureset_abbreviating_topson_bare.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_abbreviating_topson_bare.cmx
+Camlline_value_u_figureset_symbol_figureset_abbreviating_topson_bare
+File "Camlline_value_u_figureset_symbol_figureset_abbreviating_topson_ofstring.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_abbreviating_topson_ofstring.cmx
+Camlline_value_u_figureset_symbol_figureset_abbreviating_topson_ofstring
+File "Camlline_value_u_figureset_symbol_figureset_documenting.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_documenting.cmx
+Camlline_value_u_figureset_symbol_figureset_documenting
+File "Camlline_value_u_figureset_symbol_figureset_extracting_grandson.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_extracting_grandson.cmx
+Camlline_value_u_figureset_symbol_figureset_extracting_grandson
+File "Camlline_value_u_figureset_symbol_figureset_extracting.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_extracting.cmx
+Camlline_value_u_figureset_symbol_figureset_extracting
+File "Camlline_value_u_figureset_symbol_figureset_extracting_topson.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_extracting_topson.cmx
+Camlline_value_u_figureset_symbol_figureset_extracting_topson
+File "Camlline_value_u_figureset_symbol_figureset_making_bare.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_making_bare.cmx
+Camlline_value_u_figureset_symbol_figureset_making_bare
+File "Camlline_value_u_figureset_symbol_figureset_making_both.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_making_both.cmx
+Camlline_value_u_figureset_symbol_figureset_making_both
+File "Camlline_value_u_figureset_symbol_figureset_making_for_symbol.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_making_for_symbol.cmx
+Camlline_value_u_figureset_symbol_figureset_making_for_symbol
+File "Camlline_value_u_figureset_symbol_figureset_making.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_making.cmx
+Camlline_value_u_figureset_symbol_figureset_making
+File "Camlline_value_u_figureset_symbol_figureset_making_notleaf.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_making_notleaf.cmx
+Camlline_value_u_figureset_symbol_figureset_making_notleaf
+File "Camlline_value_u_figureset_symbol_figureset_making_ofstring.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_making_ofstring.cmx
+Camlline_value_u_figureset_symbol_figureset_making_ofstring
+File "Camlline_value_u_figureset_symbol_figureset_making_son_leaf.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_making_son_leaf.cmx
+Camlline_value_u_figureset_symbol_figureset_making_son_leaf
+File "Camlline_value_u_figureset_symbol_figureset_making_son_notleaf.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_making_son_notleaf.cmx
+Camlline_value_u_figureset_symbol_figureset_making_son_notleaf
+File "Camlline_value_u_figureset_symbol_figureset.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset.cmx
+Camlline_value_u_figureset_symbol_figureset
+File "Camlline_value_u_figureset_symbol_figureset_naming_4items.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_naming_4items.cmx
+Camlline_value_u_figureset_symbol_figureset_naming_4items
+File "Camlline_value_u_figureset_symbol_figureset_naming_argument.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_naming_argument.cmx
+Camlline_value_u_figureset_symbol_figureset_naming_argument
+File "Camlline_value_u_figureset_symbol_figureset_naming_bare.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_naming_bare.cmx
+Camlline_value_u_figureset_symbol_figureset_naming_bare
+File "Camlline_value_u_figureset_symbol_figureset_naming_both.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_naming_both.cmx
+Camlline_value_u_figureset_symbol_figureset_naming_both
+File "Camlline_value_u_figureset_symbol_figureset_naming_for_symbol.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_naming_for_symbol.cmx
+Camlline_value_u_figureset_symbol_figureset_naming_for_symbol
+File "Camlline_value_u_figureset_symbol_figureset_naming.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_naming.cmx
+Camlline_value_u_figureset_symbol_figureset_naming
+File "Camlline_value_u_figureset_symbol_figureset_naming_notleaf.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_naming_notleaf.cmx
+Camlline_value_u_figureset_symbol_figureset_naming_notleaf
+File "Camlline_value_u_figureset_symbol_figureset_naming_ofstring.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_naming_ofstring.cmx
+Camlline_value_u_figureset_symbol_figureset_naming_ofstring
+File "Camlline_value_u_figureset_symbol_figureset_naming_son_leaf.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_naming_son_leaf.cmx
+Camlline_value_u_figureset_symbol_figureset_naming_son_leaf
+File "Camlline_value_u_figureset_symbol_figureset_naming_son_notleaf.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_naming_son_notleaf.cmx
+Camlline_value_u_figureset_symbol_figureset_naming_son_notleaf
+File "Camlline_value_u_figureset_symbol_figureset_querying_grandson_bare.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_querying_grandson_bare.cmx
+Camlline_value_u_figureset_symbol_figureset_querying_grandson_bare
+File "Camlline_value_u_figureset_symbol_figureset_querying.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_querying.cmx
+Camlline_value_u_figureset_symbol_figureset_querying
+File "Camlline_value_u_figureset_symbol_figureset_querying_topson_bare.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_querying_topson_bare.cmx
+Camlline_value_u_figureset_symbol_figureset_querying_topson_bare
+File "Camlline_value_u_figureset_symbol_figureset_querying_topson_notleaf.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_querying_topson_notleaf.cmx
+Camlline_value_u_figureset_symbol_figureset_querying_topson_notleaf
+File "Camlline_value_u_figureset_symbol_figureset_querying_topson_ofstring.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_querying_topson_ofstring.cmx
+Camlline_value_u_figureset_symbol_figureset_querying_topson_ofstring
+File "Camlline_value_u_figureset_symbol_figureset_string_offing_4items.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_string_offing_4items.cmx
+Camlline_value_u_figureset_symbol_figureset_string_offing_4items
+File "Camlline_value_u_figureset_symbol_figureset_string_offing_argument.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_string_offing_argument.cmx
+Camlline_value_u_figureset_symbol_figureset_string_offing_argument
+File "Camlline_value_u_figureset_symbol_figureset_string_offing_bare.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_string_offing_bare.cmx
+Camlline_value_u_figureset_symbol_figureset_string_offing_bare
+File "Camlline_value_u_figureset_symbol_figureset_string_offing_both.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_string_offing_both.cmx
+Camlline_value_u_figureset_symbol_figureset_string_offing_both
+File "Camlline_value_u_figureset_symbol_figureset_string_offing_for_symbol.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_string_offing_for_symbol.cmx
+Camlline_value_u_figureset_symbol_figureset_string_offing_for_symbol
+File "Camlline_value_u_figureset_symbol_figureset_string_offing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_string_offing.cmx
+Camlline_value_u_figureset_symbol_figureset_string_offing
+File "Camlline_value_u_figureset_symbol_figureset_string_offing_notleaf.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_string_offing_notleaf.cmx
+Camlline_value_u_figureset_symbol_figureset_string_offing_notleaf
+File "Camlline_value_u_figureset_symbol_figureset_string_offing_ofstring.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_string_offing_ofstring.cmx
+Camlline_value_u_figureset_symbol_figureset_string_offing_ofstring
+File "Camlline_value_u_figureset_symbol_figureset_string_offing_son_leaf.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_string_offing_son_leaf.cmx
+Camlline_value_u_figureset_symbol_figureset_string_offing_son_leaf
+File "Camlline_value_u_figureset_symbol_figureset_string_offing_son_notleaf.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_string_offing_son_notleaf.cmx
+Camlline_value_u_figureset_symbol_figureset_string_offing_son_notleaf
+File "Camlline_value_u_figureset_symbol_figureset_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_typing.cmx
+Camlline_value_u_figureset_symbol_figureset_typing
+File "Camlline_value_u_figureset_symbol_figureset_upgrading.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_figureset_upgrading.cmx
+Camlline_value_u_figureset_symbol_figureset_upgrading
+File "Camlline_value_u_figureset_symbol_point_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_point_typing.cmx
+Camlline_value_u_figureset_symbol_point_typing
+File "Camlline_value_u_figureset_symbol_triangle_abbreviating.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_triangle_abbreviating.cmx
+Camlline_value_u_figureset_symbol_triangle_abbreviating
+File "Camlline_value_u_figureset_symbol_triangle_naming.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_triangle_naming.cmx
+Camlline_value_u_figureset_symbol_triangle_naming
+File "Camlline_value_u_figureset_symbol_triangle_typing.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_triangle_typing.cmx
+Camlline_value_u_figureset_symbol_triangle_typing
+File "Camlline_value_u_figureset_symbol_vector_querying_topson_bare.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_vector_querying_topson_bare.cmx
+Camlline_value_u_figureset_symbol_vector_querying_topson_bare
+File "Camlline_value_u_figureset_symbol_vector_upgrading.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_symbol_vector_upgrading.cmx
+Camlline_value_u_figureset_symbol_vector_upgrading
+File "Camlline_value_u_figureset_tag_triangle_isoceles_making.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_tag_triangle_isoceles_making.cmx
+Camlline_value_u_figureset_tag_triangle_isoceles_making
+File "Camlline_value_u_figureset_tag_triangle_isoceles_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_value_u_figureset_tag_triangle_isoceles_typing.cmx
+Camlline_value_u_figureset_tag_triangle_isoceles_typing
+File "Camlparagraph_endmarked_type_value_u_figureset_symbol_triangle_isoceles_typing.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_endmarked_type_value_u_figureset_symbol_triangle_isoceles_typing.cmx
+Camlparagraph_endmarked_type_value_u_figureset_symbol_triangle_isoceles_typing
+File "Camlparagraph_value_u_figureset_formula_triangle_isoceles_typing.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_value_u_figureset_formula_triangle_isoceles_typing.cmx
+Camlparagraph_value_u_figureset_formula_triangle_isoceles_typing
+File "Camlparagraph_value_u_figureset_symbol_figureset.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_value_u_figureset_symbol_figureset.cmx
+Camlparagraph_value_u_figureset_symbol_figureset
+File "Camlparagraph_value_u_figureset_tag_triangle_isoceles_making.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_value_u_figureset_tag_triangle_isoceles_making.cmx
+Camlparagraph_value_u_figureset_tag_triangle_isoceles_making
+File "Camlparagraph_value_u_figureset_tag_triangle_isoceles_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_value_u_figureset_tag_triangle_isoceles_typing.cmx
+Camlparagraph_value_u_figureset_tag_triangle_isoceles_typing
+rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/files_mli.mk
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Domainset_formula_v.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Triangle_formula_v.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Triangle_isoceles_formula_v.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Triangle_scalene_formula_v.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Coordinate_formula_v.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Coordinate_cartesian_formula_v.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Coordinate_cylindrical_formula_v.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Coordinate_polar_formula_v.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Coordinate_spherical_formula_v.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Fake_formula_v.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Fake_son_formula_v.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Float_formula_v.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Point_formula_v.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Vector_formula_v.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Domainset_formula_t.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Triangle_formula_t.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Triangle_isoceles_formula_t.ml
+Cpu 0.004000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Triangle_scalene_formula_t.ml
+Cpu 0.000000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Coordinate_formula_t.ml
+Cpu 0.000000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Coordinate_cartesian_formula_t.ml
+Cpu 0.000000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Coordinate_cylindrical_formula_t.ml
+Cpu 0.004000 Total 0.012000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Coordinate_polar_formula_t.ml
+Cpu 0.000000 Total 0.012000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Coordinate_spherical_formula_t.ml
+Cpu 0.000000 Total 0.012000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Fake_formula_t.ml
+Cpu 0.000000 Total 0.012000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Fake_son_formula_t.ml
+Cpu 0.000000 Total 0.012000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Float_formula_t.ml
+Cpu 0.004001 Total 0.016001 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Point_formula_t.ml
+Cpu 0.000000 Total 0.016001 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_formulas/Vector_formula_t.ml
+File "Do_figureset_symbols_files_mli_mk.ml", line 16, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Do_figureset_symbols_files_mli_mk.cmx
+Do_figureset_symbols_files_mli_mk
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Figureset_symbol_v.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Coordinate_symbol_v.ml
+Cpu 0.000000 Total 0.004000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Coordinate_cartesian_symbol_v.ml
+Cpu 0.004000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Coordinate_cylindrical_symbol_v.ml
+Cpu 0.000000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Coordinate_polar_symbol_v.ml
+Cpu 0.000000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Coordinate_spherical_symbol_v.ml
+Cpu 0.000000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Domainset_symbol_v.ml
+Cpu 0.000000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Fake_symbol_v.ml
+Cpu 0.000000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Fake_son_symbol_v.ml
+Cpu 0.000000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Float_symbol_v.ml
+Cpu 0.000000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Point_symbol_v.ml
+Cpu 0.000000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Triangle_symbol_v.ml
+Cpu 0.000000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Triangle_isoceles_symbol_v.ml
+Cpu 0.000000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Triangle_scalene_symbol_v.ml
+Cpu 0.000000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Vector_symbol_v.ml
+Cpu 0.000000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Figureset_symbol_t.ml
+Cpu 0.000000 Total 0.008000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Coordinate_symbol_t.ml
+Cpu 0.004000 Total 0.012000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Coordinate_cartesian_symbol_t.ml
+Cpu 0.000000 Total 0.012000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Coordinate_cylindrical_symbol_t.ml
+Cpu 0.000000 Total 0.012000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Coordinate_polar_symbol_t.ml
+Cpu 0.000000 Total 0.012000 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Coordinate_spherical_symbol_t.ml
+Cpu 0.004001 Total 0.016001 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Domainset_symbol_t.ml
+Cpu 0.000000 Total 0.016001 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Fake_symbol_t.ml
+Cpu 0.000000 Total 0.016001 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Fake_son_symbol_t.ml
+Cpu 0.000000 Total 0.016001 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Float_symbol_t.ml
+Cpu 0.000000 Total 0.016001 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Point_symbol_t.ml
+Cpu 0.004000 Total 0.020001 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Triangle_symbol_t.ml
+Cpu 0.000000 Total 0.020001 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Triangle_isoceles_symbol_t.ml
+Cpu 0.000000 Total 0.020001 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Triangle_scalene_symbol_t.ml
+Cpu 0.000000 Total 0.020001 rm /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Vector_symbol_t.ml
+File "Do_figureset_tags_files_mli_mk.ml", line 19, characters 76-83:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Do_figureset_tags_files_mli_mk.cmx
+Do_figureset_tags_files_mli_mk
+File "Do_figureset_tags_tv.ml", line 23, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Do_figureset_tags_tv.cmx
+Do_figureset_tags_tv
+File "Item_value_u_figureset_formula_triangle_isoceles_making.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_formula_triangle_isoceles_making.cmx
+Item_value_u_figureset_formula_triangle_isoceles_making
+File "Item_value_u_figureset_formula_triangle_isoceles_naming.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_formula_triangle_isoceles_naming.cmx
+Item_value_u_figureset_formula_triangle_isoceles_naming
+File "Item_value_u_figureset_formula_triangle_isoceles_typing.ml", line 19, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_formula_triangle_isoceles_typing.cmx
+Item_value_u_figureset_formula_triangle_isoceles_typing
+File "Item_value_u_figureset_formula_triangle_making.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_formula_triangle_making.cmx
+Item_value_u_figureset_formula_triangle_making
+File "Item_value_u_figureset_symbol_figureset_abbreviating.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_figureset_abbreviating.cmx
+Item_value_u_figureset_symbol_figureset_abbreviating
+File "Item_value_u_figureset_symbol_figureset_documenting.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_figureset_documenting.cmx
+Item_value_u_figureset_symbol_figureset_documenting
+File "Item_value_u_figureset_symbol_figureset_extracting.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_figureset_extracting.cmx
+Item_value_u_figureset_symbol_figureset_extracting
+File "Item_value_u_figureset_symbol_figureset_fullnaming.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_figureset_fullnaming.cmx
+Item_value_u_figureset_symbol_figureset_fullnaming
+File "Item_value_u_figureset_symbol_figureset_heading.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_figureset_heading.cmx
+Item_value_u_figureset_symbol_figureset_heading
+File "Item_value_u_figureset_symbol_figureset_longnaming.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_figureset_longnaming.cmx
+Item_value_u_figureset_symbol_figureset_longnaming
+File "Item_value_u_figureset_symbol_figureset_making.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_figureset_making.cmx
+Item_value_u_figureset_symbol_figureset_making
+File "Item_value_u_figureset_symbol_figureset_naming.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_figureset_naming.cmx
+Item_value_u_figureset_symbol_figureset_naming
+File "Item_value_u_figureset_symbol_figureset_querying.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_figureset_querying.cmx
+Item_value_u_figureset_symbol_figureset_querying
+File "Item_value_u_figureset_symbol_figureset_string_offing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_figureset_string_offing.cmx
+Item_value_u_figureset_symbol_figureset_string_offing
+File "Item_value_u_figureset_symbol_figureset_upgrading.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_figureset_upgrading.cmx
+Item_value_u_figureset_symbol_figureset_upgrading
+File "Item_value_u_figureset_symbol_triangle_isoceles_abbreviating.ml", line 22, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_triangle_isoceles_abbreviating.cmx
+Item_value_u_figureset_symbol_triangle_isoceles_abbreviating
+File "Item_value_u_figureset_symbol_triangle_isoceles_making.ml", line 18, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_triangle_isoceles_making.cmx
+Item_value_u_figureset_symbol_triangle_isoceles_making
+File "Item_value_u_figureset_symbol_triangle_isoceles_naming.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_triangle_isoceles_naming.cmx
+Item_value_u_figureset_symbol_triangle_isoceles_naming
+File "Item_value_u_figureset_symbol_triangle_isoceles_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_triangle_isoceles_typing.cmx
+Item_value_u_figureset_symbol_triangle_isoceles_typing
+File "Item_value_u_figureset_symbol_triangle_isoceles_upgrading.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_triangle_isoceles_upgrading.cmx
+Item_value_u_figureset_symbol_triangle_isoceles_upgrading
+File "Item_value_u_figureset_symbol_triangle_querying.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_triangle_querying.cmx
+Item_value_u_figureset_symbol_triangle_querying
+File "Item_value_u_figureset_symbol_triangle_scalene_querying.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_triangle_scalene_querying.cmx
+Item_value_u_figureset_symbol_triangle_scalene_querying
+File "Item_value_u_figureset_symbol_triangle_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_triangle_typing.cmx
+Item_value_u_figureset_symbol_triangle_typing
+File "Item_value_u_figureset_symbol_triangle_upgrading.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_symbol_triangle_upgrading.cmx
+Item_value_u_figureset_symbol_triangle_upgrading
+File "Item_value_u_figureset_tag_triangle_isoceles_making.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_tag_triangle_isoceles_making.cmx
+Item_value_u_figureset_tag_triangle_isoceles_making
+File "Item_value_u_figureset_tag_triangle_isoceles_typing.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_value_u_figureset_tag_triangle_isoceles_typing.cmx
+Item_value_u_figureset_tag_triangle_isoceles_typing
+File "Usagefile_value_u_figureset_formula_coordinate_value_alone.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_formula_coordinate_value_alone.cmx
+Usagefile_value_u_figureset_formula_coordinate_value_alone
+File "Usagefile_value_u_figureset_formula_fake_son_constructor_value_alone.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_formula_fake_son_constructor_value_alone.cmx
+Usagefile_value_u_figureset_formula_fake_son_constructor_value_alone
+File "Usagefile_value_u_figureset_formula_fake_son_value_alone.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_formula_fake_son_value_alone.cmx
+Usagefile_value_u_figureset_formula_fake_son_value_alone
+File "Usagefile_value_u_figureset_formula_fake_value_alone.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_formula_fake_value_alone.cmx
+Usagefile_value_u_figureset_formula_fake_value_alone
+File "Usagefile_value_u_figureset_formula_figureset_value_alone.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_formula_figureset_value_alone.cmx
+Usagefile_value_u_figureset_formula_figureset_value_alone
+File "Usagefile_value_u_figureset_formula_triangle_isoceles_type_alone.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_formula_triangle_isoceles_type_alone.cmx
+Usagefile_value_u_figureset_formula_triangle_isoceles_type_alone
+File "Usagefile_value_u_figureset_formula_triangle_isoceles_value_alone.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_formula_triangle_isoceles_value_alone.cmx
+Usagefile_value_u_figureset_formula_triangle_isoceles_value_alone
+File "Usagefile_value_u_figureset_formula_triangle_value_alone.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_formula_triangle_value_alone.cmx
+Usagefile_value_u_figureset_formula_triangle_value_alone
+File "Usagefile_value_u_figureset_formula_x_2d_value_alone.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_formula_x_2d_value_alone.cmx
+Usagefile_value_u_figureset_formula_x_2d_value_alone
+File "Usagefile_value_u_figureset_formula_x_value_alone.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_formula_x_value_alone.cmx
+Usagefile_value_u_figureset_formula_x_value_alone
+File "Usagefile_value_u_figureset_symbol_figureset_type_alone.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_symbol_figureset_type_alone.cmx
+Usagefile_value_u_figureset_symbol_figureset_type_alone
+File "Usagefile_value_u_figureset_symbol_figureset_value_alone.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_symbol_figureset_value_alone.cmx
+Usagefile_value_u_figureset_symbol_figureset_value_alone
+File "Usagefile_value_u_figureset_symbol_triangle_isoceles_type_alone.ml", line 20, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_symbol_triangle_isoceles_type_alone.cmx
+Usagefile_value_u_figureset_symbol_triangle_isoceles_type_alone
+File "Usagefile_value_u_figureset_symbol_triangle_isoceles_value_alone.ml", line 19, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_symbol_triangle_isoceles_value_alone.cmx
+Usagefile_value_u_figureset_symbol_triangle_isoceles_value_alone
+File "Usagefile_value_u_figureset_symbol_triangle_type_alone.ml", line 21, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_symbol_triangle_type_alone.cmx
+Usagefile_value_u_figureset_symbol_triangle_type_alone
+File "Usagefile_value_u_figureset_tag_triangle_isoceles_type_alone.ml", line 19, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_tag_triangle_isoceles_type_alone.cmx
+Usagefile_value_u_figureset_tag_triangle_isoceles_type_alone
+File "Usagefile_value_u_figureset_tag_triangle_isoceles_value_alone.ml", line 19, characters 64-71:
+Error: This expression has type string -> Domainset_symbol_t.domainset_symbol
+       but an expression was expected of type
+         Domainset_symbol_t.domainset_symbol
+File "_none_", line 1:
+Error: Cannot find file Usagefile_value_u_figureset_tag_triangle_isoceles_value_alone.cmx
+Usagefile_value_u_figureset_tag_triangle_isoceles_value_alone
+Do_generatorset_symbols_files_mli_mk
+Do_generatorset_symbols_files_mli_mk
+Do_generatorset_symbols_files_mli_mk
+Do_generatorset_symbols_files_mli_mk

@@ -1,0 +1,38 @@
+ledit -x -h ./.toplevel-history ocaml \
+-I ../../../general/basics \
+-I ../../../general/datastructures \
+-I ../../../general/files \
+-I ../../../commonset \
+-I ../../../elementaryset/elementaryset_symbols \
+-I ../../../elementaryset/elementaryset_tags \
+-I ../../../elementaryset/elementaryset_databases \
+-I ../../../elementaryset/elementaryset_formulas \
+-I ../../../elementaryset/elementaryset_values \
+-I ../../../elementaryset/elementaryset_properties \
+-I ../../../databaseset/databaseset_common \
+-I ../../../databaseset/database_db1 \
+-I ../../../inputset/inputset_common \
+-I ../../../inputset/inputset_lexer \
+-I ../../../inputset/inputset_symbols \
+-I ../../../inputset/inputset_tags \
+-I ../../../inputset/inputset_parser \
+-I ../../../inputset/inputset_providers \
+unix.cma str.cma \
+../../../general/basics/basics.cma \
+../../../general/datastructures/datastructures.cma \
+../../../general/files/files.cma \
+../../../commonset/commonset.cma \
+../../../databaseset/databaseset_common/databaseset_common.cma \
+../../../databaseset/database_db1/database_db1.cma \
+../../../inputset/inputset_common/inputset_common.cma \
+../../../inputset/inputset_lexer/inputset_lexer.cma \
+../../../inputset/inputset_symbols/inputset_symbols.cma \
+../../../inputset/inputset_tags/inputset_tags.cma \
+../../../inputset/inputset_parser/inputset_parser.cma \
+../../../elementaryset/elementaryset_symbols/elementaryset_symbols.cma \
+../../../elementaryset/elementaryset_tags/elementaryset_tags.cma \
+../../../elementaryset/elementaryset_databases/elementaryset_databases.cma \
+../../../elementaryset/elementaryset_formulas/elementaryset_formulas.cma \
+../../../elementaryset/elementaryset_values/elementaryset_values.cma \
+../../../elementaryset/elementaryset_properties/elementaryset_properties.cma \
+ 

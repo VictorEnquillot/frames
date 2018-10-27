@@ -1,0 +1,46 @@
+(** {6 Upgrading.} *)
+
+
+let molecule_aminoacid_proline = residue_buried_fragmented_symbol_of_residue_buried_fragmented_symbol Rbfs_t.Molecule_aminoacid_proline;;
+
+let residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol smb_mar =
+Rbfs_t.Molecule_aminoacid_regular_symbol smb_mar
+;;
+
+let alanine = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Alanine;;
+
+let arginine = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Arginine;;
+
+let asparagine = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Asparagine;;
+
+let aspartic = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Aspartic;;
+
+let cysteine = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Cysteine;;
+
+let glutamine = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Glutamine;;
+
+let glutamic = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Glutamic;;
+
+let histidine = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Histidine;;
+
+let isoleucine = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Isoleucine;;
+
+let leucine = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Leucine;;
+
+let lysine = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Lysine;;
+
+let methionine = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Methionine;;
+
+let phenylalanine = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Phenylalanine;;
+
+let serine = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Serine;;
+
+let threonine = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Threonine;;
+
+let tryptophan = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Tryptophan;;
+
+let tyrosine = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Tyrosine;;
+
+let valine = residue_buried_fragmented_symbol_of_molecule_aminoacid_regular_symbol Mars_t.Valine;;
+
+

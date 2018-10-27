@@ -1,0 +1,10 @@
+INCLUDED_DIRS := \
+        $(BASICS_DIR) \
+        $(DATASTRUCTURES_DIR) \
+        $(FILES_DIR) \
+        $(COMMONSET_DIR) \
+        $(FIGURESET_DATABASES_DIR) \
+        $(FIGURESET_SYMBOLS_DIR) \
+        $(FIGURESET_TAGS_DIR) \
+        $(FIGURESET_INTERFACES_DIR) \
+  

@@ -1,0 +1,26 @@
+constructors   figure                        =   local_entity 
+
+constructors   local_entity                  =   local_entity_data   local_entity_upper
+
+constructors   local_entity_upper            =   local_entity_database   local_entity_domain   local_entity_figure
+
+constructors   local_entity_database         =   local_entity_database_constructor:ofstring
+
+constructors   local_entity_domain           =   local_entity_domain_constructor:ofstring
+
+constructors   local_entity_figure           =   local_triangle   local_vector   local_point 
+
+constructors   local_triangle                =   local_triangle_isosceles   local_triangle_scalene
+
+constructors   local_triangle_isosceles      =   local_triangle_isosceles_equilateral:ofstring   local_triangle_isosceles_right:ofstring   local_triangle_isosceles_acute:ofstring  local_triangle_isosceles_obtuse:ofstring
+
+constructors   local_triangle_scalene        =   local_triangle_scalene_right:ofstring   local_triangle_scalene_acute:ofstring   local_triangle_scalene_obtuse:ofstring
+
+constructors   local_vector                  =   local_vector_constructor:ofstring
+
+constructors   local_point                   =   local_point_constructor:ofstring
+
+constructors   local_entity_data             =   local_entity_data_elementary
+
+constructors   local_entity_data_elementary  =   elementary
+

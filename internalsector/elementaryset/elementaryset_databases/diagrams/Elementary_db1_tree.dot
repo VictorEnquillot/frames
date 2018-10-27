@@ -1,0 +1,34 @@
+digraph dgn {
+  size="14,14";
+  node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+  edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+  Title [label = "The Tag Tree\nfor Ao_basis\nin DGN (NwChem)\nSubdomain" shape="record" color=lightblue, style=filled];
+
+   "ao_basis_block\nLANL2DZ"    -> { comment_block  "ao_set_block\nLANL2DZ" }; 
+
+   "ao_set_block\nLANL2DZ"      ->  { "ao_set_definition\nLANL2DZ" "ao_set_for_any_center_block\nLANL2DZ"  END };
+   "ao_set_definition\nLANL2DZ" ->  { BASIS basis_set_local_name PRINT };
+   "ao_set_for_any_center_block\nLANL2DZ" -> { "ao_set_for_a_center_block\nNe" } [color=red arrowsize="2" label = "Repeat on all Centers"];
+
+   "ao_set_for_a_center_block\nNe"  -> { "ao_set_center_contraction_scheme\nNe" "ao_set_for_any_shell_block\nNe" }; 
+
+   "ao_set_for_any_shell_block\nNe" -> { "ao_set_for_a_shell_block\nNe S 1 GAUSSIAN" "ao_set_for_a_shell_block\nNe P 5 GAUSSIAN"} [color=red arrowsize="2" label = "Repeat on all Shells"];
+
+   "ao_set_for_a_shell_block\nNe S 1 GAUSSIAN" -> { "center_and_shell_name\nNe S 1 GAUSSIAN" "ao_set_numerical_values_block\nNe S 1 GAUSSIAN"} ;
+
+   "ao_set_for_a_shell_block\nNe P 5 GAUSSIAN" -> { "center_and_shell_name\nNe P 5 GAUSSIAN" "ao_set_numerical_values_block\nNe P 5 GAUSSIAN"} ;
+
+   "center_and_shell_name\nNe S 1 GAUSSIAN" ->  { "Ne" "S"} ;
+   "center_and_shell_name\nNe P 5 GAUSSIAN" ->  { "Ne " "P"} ;
+
+   "ao_set_numerical_values_block\nNe S 1 GAUSSIAN" -> { "ao_set_numerical_values\nne s 1 1"  "ao_set_numerical_values\nNe S 1 GAUSSIAN 2" } [color=red arrowsize="2" label = "Repeat on all gaussians"];
+
+   "ao_set_numerical_values_block\nNe P 5 GAUSSIAN" -> { "ao_set_numerical_values\nNe P 5 GAUSSIAN 1"} [color=red arrowsize="2" label = "Repeat on all gaussians"];
+
+   "ao_set_numerical_values\nne s 1 1" -> { "float_positive\n12100.00000" "float_positive\n0.0012000"} ;
+   "ao_set_numerical_values\nNe S 1 GAUSSIAN 2" -> { "float_positive\n432.8000000" "float_positive\n0.0413050"} ;
+
+   "ao_set_numerical_values\nNe P 5 GAUSSIAN 1" -> { "float_positive\n0.3444000" "float_positive\n1.00000"} ;
+
+}

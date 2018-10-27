@@ -1,0 +1,22 @@
+# 1st model
+   model =
+     model_name = triangle_equilateral
+     model_title = "a triangle equilateral"
+     database_name = db1
+     entity_what = triangle_isosceles_equilateral
+     entity_name = T
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+# 2nd model
+   model =
+     model_name = triangle_scalene_right
+     model_title = "a triangle scalene right" 
+     database_name = db1
+     entity_what = triangle_scalene_right
+     entity_name = u
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+

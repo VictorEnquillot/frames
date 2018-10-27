@@ -1,0 +1,17 @@
+(** {3 The Symbol for a Pack in Pdb File} *)
+
+
+type clusterpdb_symbol =  
+  | Bookkeeping_clusterpdb_symbol of Bookkeeping_clusterpdb_symbol_t.bookkeeping_clusterpdb_symbol
+  | Connectivity_clusterpdb_symbol of Connectivity_clusterpdb_symbol_t.connectivity_clusterpdb_symbol
+  | Connectivity_annotations_clusterpdb_symbol of Connectivity_annotations_clusterpdb_symbol_t.connectivity_annotations_clusterpdb_symbol
+  | Coordinate_clusterpdb_symbol of Coordinate_clusterpdb_symbol_t.coordinate_clusterpdb_symbol
+  | Coordinate_transformation_clusterpdb_symbol of Coordinate_transformation_clusterpdb_symbol_t.coordinate_transformation_clusterpdb_symbol
+  | Crystallographic_clusterpdb_symbol of Crystallographic_clusterpdb_symbol_t.crystallographic_clusterpdb_symbol
+  | Heterogen_clusterpdb_symbol of Heterogen_clusterpdb_symbol_t.heterogen_clusterpdb_symbol
+  | Miscellaneous_features_clusterpdb_symbol of Miscellaneous_features_clusterpdb_symbol_t.miscellaneous_features_clusterpdb_symbol
+  | Primary_structure_clusterpdb_symbol of Primary_structure_clusterpdb_symbol_t.primary_structure_clusterpdb_symbol
+  | Secondary_structure_clusterpdb_symbol of Secondary_structure_clusterpdb_symbol_t.secondary_structure_clusterpdb_symbol
+  | Title_section_clusterpdb_symbol of Title_section_clusterpdb_symbol_t.title_section_clusterpdb_symbol
+;;
+

@@ -1,0 +1,20 @@
+(** {3 Localinput_set_fence_keyword_command_symbol_t} *)
+
+
+(** {6 Typing_for_symbol} *)
+
+type localinput_set_fence_keyword_command_symbol =
+  | Localinput_set_fence_keyword_command_define_symbol of Localinput_set_fence_keyword_command_define_symbol_t.localinput_set_fence_keyword_command_define_symbol
+  | Localinput_set_fence_keyword_command_print_symbol of Localinput_set_fence_keyword_command_print_symbol_t.localinput_set_fence_keyword_command_print_symbol
+  | Localinput_set_fence_keyword_command_read_symbol of Localinput_set_fence_keyword_command_read_symbol_t.localinput_set_fence_keyword_command_read_symbol
+  | Localinput_set_fence_keyword_command_set_symbol of Localinput_set_fence_keyword_command_set_symbol_t.localinput_set_fence_keyword_command_set_symbol
+  | Localinput_set_fence_keyword_command_stop_symbol of Localinput_set_fence_keyword_command_stop_symbol_t.localinput_set_fence_keyword_command_stop_symbol
+  | Localinput_set_fence_keyword_command_title_symbol of Localinput_set_fence_keyword_command_title_symbol_t.localinput_set_fence_keyword_command_title_symbol
+  | Localinput_set_fence_keyword_command_write_symbol of Localinput_set_fence_keyword_command_write_symbol_t.localinput_set_fence_keyword_command_write_symbol
+;;
+
+
+(** Localinput_set_fence_keyword_command_symbol_t at 11:19:21 on 15 May 2017. created by version v2.4 of generator *)
+
+
+

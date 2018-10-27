@@ -1,0 +1,18 @@
+(** {6 Deepfence Tag off Tag (Builder) } *)
+
+let deepfence_as_list tag_ttt =
+  let tag_mmm = maint_tag_of_this_tag tag_ttt in
+  Deepfn_tag_deepfence_by_maint_tag_provider_v.provide tag_mmm
+;;
+
+let deepfence_as_tuple_list tag_ttt =
+  let dfe_l = deepfence_as_list tag_ttt in
+  Tuple_list_v.make dfe_l
+;;
+
+let deepfence_as_tuple_tuple tag_ttt =
+  let dfe_tl = deepfence_as_tuple_list tag_ttt in
+  Tuple_v.tuple_of_list dfe_tl
+;;
+
+

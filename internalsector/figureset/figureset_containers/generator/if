@@ -1,0 +1,5 @@
+if [ "${sib_3}" == "" ] 
+then 
+    echo "$0 : sib_3 (8th argument) is missing"
+    exit
+fi

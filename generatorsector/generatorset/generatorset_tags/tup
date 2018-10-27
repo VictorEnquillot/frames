@@ -1,0 +1,9 @@
+let camlparagraph_for_symbol_let_argument_septup_off_camlparagraph_for_symbol_let_argument_tag tag_cla =
+  let sym_cla = Tag_v.symbol_off_tag tag_cla in
+  let soi_cap = Tag_v.sole_index_off_tag tag_cla in
+  let soi_ite = List.tl soi_cap in
+  let sym_ite = Generatorset_symbol_by_sole_index_provider_v.item_symbol_off_sole_index soi_ite in
+  let tag_ite = Tag_v.make sym_ite soi_ite in
+  let sex_ite = Item_tag_v.item_sextup_off_item_tag tag_ite in
+  Septuplet_v.make_of_left_of_sextuplet sym_cla sex_ite
+;;

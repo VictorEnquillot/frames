@@ -1,0 +1,37 @@
+
+  Pdf Rue89
+  Pdf LeMondeDiplomatique
+  Url Rue89
+  Url LeMondeDiplomatique
+
+
+  Rue89 Pdf
+
+
+  Le Pdf -> External_text 
+  . lire comme une "string list"
+  . nettoyer :
+
+Entity :
+    sentence_begin
+    footnote
+    saut_de_page 
+    sentence_end
+
+---------- pdftotext ------------------------
+s désirées, à juste titre ou non, n’ont rien à
+Voir Félix Ovejero, « La ignorancia de los indignados », El País, 12 juin 2011 (http://politica.elpais.com/politica/2011/06/12/actualidad/1307897977_059122.html). D’ailleurs, et peut-être influencés par le titre, les journalistes du Monde ont mal interprété les thèses d’Ovejero et ont prêté à cet article un sens exactement contraire.
+1
+
+2
+
+voir avec des préférences théoriques ou académiques. Ensuite, et surtout, parce que rien dans le républicanisme de Pettit ne s’oppose aux réclamations du mouvement du 15M.
+
+----------------------------------
+1 --> footnote_number
+2 --> page_number
+
+
+    sentence_begin 
+    . no_dot at the end of a paragraph.
+    . ends with an integer (footnote_number) space ^Lsome lowercase text.

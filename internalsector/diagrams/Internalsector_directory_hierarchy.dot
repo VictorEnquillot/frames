@@ -1,0 +1,35 @@
+        digraph Frames {
+                size="40,15";
+                node [fontsize=50];
+                edge [arrowhead = "vee", arrowsize = "2.0", style="solid", taillabel = ""];
+
+        Title [
+            label = "Internal Sector Hierarchy", shape=box, fontname=Courier, fontsize=90, color=yellow, style=filled
+            ];
+
+	    "Internalsector\nINS" [color=green];
+
+    		Title -> "Internalsector\nINS"  [style="invis"];
+		node [color=beige, style=filled];
+		"Internalsector\nINS" -> "Commonset\nCOMS";
+
+		node [color=grey, style=filled];
+		"Internalsector\nINS" -> "Contextset\nCONS";
+
+		node [color=lightpink, style=filled];
+		"Internalsector\nINS" -> "Figureset\nFIGS";
+		"Figureset\nFIGS" -> "Figureset\nSymbols\nSFIG";
+		"Figureset\nFIGS" -> "Figureset\nTags\nTFIG";
+		"Figureset\nFIGS" -> "Figureset\nBuilder_trees\nBFIG";
+		"Figureset\nFIGS" -> "Figureset\nContainers\nCFIG";
+		"Figureset\nFIGS" -> "Figureset\nValues\nVFIG";
+
+		node [color=lightblue2, style=filled];
+		"Internalsector\nINS" -> "Skeletonset\nSKES";
+		"Skeletonset\nSKES" -> "Skeletonset\nSymbols\nSSKE";
+		"Skeletonset\nSKES" -> "Skeletonset\nTags\nTSKE";
+		"Skeletonset\nSKES" -> "Skeletonset\nBuilder_trees\nBSKE";
+		"Skeletonset\nSKES" -> "Skeletonset\nContainers\nCSKE";
+		"Skeletonset\nSKES" -> "Skeletonset\nValues\nVSKE";
+
+}

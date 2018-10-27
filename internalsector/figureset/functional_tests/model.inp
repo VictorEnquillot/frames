@@ -1,0 +1,11 @@
+ =
+      model_name = triangle_equilateral
+     model_title = "a triangle equilateral"
+     database_name = db1
+     entity_what = triangle_isosceles_equilateral
+     entity_name = T
+     coordinate_what = cartesian
+     coordinate_units_length = meter
+   end # model
+
+   target = 

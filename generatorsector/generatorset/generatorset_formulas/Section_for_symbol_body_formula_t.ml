@@ -1,0 +1,9 @@
+(** {6 Typing} *)
+
+type section_for_symbol_body_formula =
+  | Section_for_symbol_body_current_son_top_formula of Section_for_symbol_body_current_son_top_formula_t.section_for_symbol_body_current_son_top_formula
+  | Section_for_symbol_body_son_formula of Section_for_symbol_body_son_formula_t.section_for_symbol_body_son_formula
+  | Section_for_symbol_body_son_top_formula of Section_for_symbol_body_son_top_formula_t.section_for_symbol_body_son_top_formula
+  | Section_for_symbol_body_top_formula of Section_for_symbol_body_top_formula_t.section_for_symbol_body_top_formula
+;;
+

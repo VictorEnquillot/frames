@@ -1,0 +1,2 @@
+
+type section_for_formula_header_constant_tag = Section_for_formula_header_constant_symbol_t.section_for_formula_header_constant_symbol Tag_t.tag;;

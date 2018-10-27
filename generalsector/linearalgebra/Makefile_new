@@ -1,0 +1,67 @@
+# Makefile for directory setup/frames/general/linear_algebra
+
+LIB = linear_algebra
+
+SETUP_DIR = ../../..
+
+# setup dir
+MAKEFILES_DIR = $(SETUP_DIR)/Mk
+FRAMES_DIR = $(SETUP_DIR)/frames
+
+# setup/frames dir
+GENERAL_DIR = $(FRAMES_DIR)/general
+PATHS_DIR = $(FRAMES_DIR)/paths
+
+# setup/frames/general dir
+UNITS_DIR = $(GENERAL_DIR)/units
+TOOLS_DIR = $(GENERAL_DIR)/tools
+
+# setup/frames/paths dir
+SIMULATIONS_PATH_DIR = $(PATHS_DIR)/simulations_path
+
+# general lib
+UNITS_LIB = $(UNITS_DIR)/units
+TOOLS_LIB = $(TOOLS_DIR)/tools
+
+# paths lib
+SIMULATIONS_PATH_LIB = $(SIMULATIONS_PATH_DIR)/simulations_path
+
+# test
+SUBDIRS = test 
+
+
+
+
+SETUP_DIR = ../../..
+
+#setup
+MAKEFILES_DIR = $(SETUP_DIR)/Mk
+FRAMES_DIR = $(SETUP_DIR)/frames
+GENERAL_DIR = $(FRAMES_DIR)/general
+
+# general dir
+TOOLS_DIR = $(GENERAL_DIR)/tools
+
+# general lib
+TOOLS_LIB = $(TOOLS_DIR)/tools
+
+SUB_DIRS = test
+
+NEEDEDDIRS = $(TOOLS_DIR)
+LIBS = $(TOOLS_LIB) 
+NEEDED_LIBS = $(LIBS:%=%.cma)
+
+# Include the generic configuration for Caml applications.
+include $(MAKEFILES_DIR)/Config.mk
+
+# CAMLINTFILES (*.mli) from include 
+include ocaml_files_mli.mk
+
+# implementation files
+CAMLIMPFILES = $(CAMLINTFILES:.mli=.ml) 
+
+# -I ../dir ...
+CAMLCINCLUDES = -I $(TOOLS_DIR) 
+
+# making library
+include $(MAKEFILES_DIR)/Library.mk

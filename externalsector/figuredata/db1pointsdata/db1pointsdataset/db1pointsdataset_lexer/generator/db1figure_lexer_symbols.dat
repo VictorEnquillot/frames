@@ -1,0 +1,38 @@
+constructors  figure                             =   db1figure_lexer 
+
+constructors  db1figure_lexer                    =   db1figure_lexer_basic   db1figure_lexer_keyword   db1figure_lexer_token
+
+constructors  db1figure_lexer_basic              =   db1figure_lexer_basic_float   db1figure_lexer_basic_string   db1figure_lexer_basic_word
+
+constructors  db1figure_lexer_basic_float        =   db1figure_lexer_basic_float_constructor:ofstring   
+constructors  db1figure_lexer_basic_string       =   db1figure_lexer_basic_string_constructor:ofstring   
+constructors  db1figure_lexer_basic_word         =   db1figure_lexer_basic_word_anycase   db1figure_lexer_basic_word_capitalized   db1figure_lexer_basic_word_lowercase   db1figure_lexer_basic_word_uppercase
+
+constructors  db1figure_lexer_basic_word_anycase     =   db1figure_lexer_basic_word_anycase_constructor:ofstring
+constructors  db1figure_lexer_basic_word_capitalized =   db1figure_lexer_basic_word_capitalized_constructor:ofstring
+constructors  db1figure_lexer_basic_word_lowercase   =   db1figure_lexer_basic_word_lowercase_constructor:ofstring
+constructors  db1figure_lexer_basic_word_uppercase   =   db1figure_lexer_basic_word_uppercase_constructor:ofstring
+
+# lexer_keyword
+
+constructors  db1figure_lexer_keyword                  =   db1figure_lexer_keyword_character   db1figure_lexer_keyword_coordinates   db1figure_lexer_keyword_figure   db1figure_lexer_keyword_vertex
+
+constructors  db1figure_lexer_keyword_character        =   db1figure_lexer_keyword_character_eof   db1figure_lexer_keyword_character_eol
+
+constructors  db1figure_lexer_keyword_coordinates      =   db1figure_lexer_keyword_coordinates_units   db1figure_lexer_keyword_coordinates_kind
+
+constructors  db1figure_lexer_keyword_coordinates_units=   db1figure_lexer_keyword_coordinates_units_angle   db1figure_lexer_keyword_coordinates_units_length
+
+constructors  db1figure_lexer_keyword_figure           =   db1figure_lexer_keyword_figure_kind   db1figure_lexer_keyword_figure_name
+
+constructors  db1figure_lexer_token               =   db1figure_lexer_token_figure   db1figure_lexer_token_units
+
+constructors  db1figure_lexer_token_figure        =   db1figure_lexer_token_figure_kind   db1figure_lexer_token_figure_name
+
+constructors  db1figure_lexer_token_figure_kind   =   db1figure_lexer_token_figure_kind_point   db1figure_lexer_token_figure_kind_segment   db1figure_lexer_token_figure_kind_triangle
+
+constructors  db1figure_lexer_token_units         =   db1figure_lexer_token_units_angle   db1figure_lexer_token_units_length
+ 
+constructors  db1figure_lexer_token_units_angle   =   db1figure_lexer_token_units_angle_degree   db1figure_lexer_token_units_angle_radian
+
+constructors  db1figure_lexer_token_units_length  =   db1figure_lexer_token_units_length_angstrom   db1figure_lexer_token_units_length_bohr   db1figure_lexer_token_units_length_meter

@@ -1,0 +1,12 @@
+title = "Calculate some properties of a scalene triangle" end
+
+
+define 
+       help
+       entity = triangle 
+end
+
+display 
+	
+
+end

@@ -1,0 +1,22 @@
+(** {6 Naming} *)
+
+let name for_eee =
+  let sym_eee = symbol_of_formula for_eee in
+  Nnn_symbol_v.name sym_eee
+;;
+(* ***
+let longname for_eee =
+  let sym_eee = symbol_of_formula for_eee in
+  Nnn_symbol_v.longname sym_eee
+;;
+
+let string_off for_eee =
+  let sym_eee = symbol_of_formula for_eee in
+  Nnn_symbol_v.string_off sym_eee
+;;
+
+let fullname for_eee =
+  let sym_eee = symbol_of_formula for_eee in
+  Nnn_symbol_v.longname sym_eee
+;;
+*** *)

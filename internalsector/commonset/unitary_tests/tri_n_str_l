@@ -1,0 +1,53 @@
+  [(("domain", "figure", "target_list"),
+    "triangle_equilateral_homothety triangle_equilateral_translation");
+   (("domain", "figure", "domain_name"), "figure");
+   (("model", "vector_bc", "coordinate_what"), "cartesian");
+   (("model", "vector_bc", "coordinate_units_list"), "meter");
+   (("model", "vector_bc", "entity_name"), "bc");
+   (("model", "vector_bc", "entity_what"), "vector");
+   (("model", "vector_bc", "database_name"), "db1");
+   (("model", "vector_bc", "model_title"), "a vector for a translation");
+   (("model", "vector_bc", "model_name"), "vector_bc");
+   (("model", "center_a", "coordinate_what"), "cartesian");
+   (("model", "center_a", "coordinate_units_list"), "meter");
+   (("model", "center_a", "entity_name"), "a");
+   (("model", "center_a", "entity_what"), "point");
+   (("model", "center_a", "database_name"), "db1");
+   (("model", "center_a", "model_title"), "a point for an homothety");
+   (("model", "center_a", "model_name"), "center_a");
+   (("model", "triangle_equilateral", "coordinate_what"), "cartesian");
+   (("model", "triangle_equilateral", "coordinate_units_list"), "meter");
+   (("model", "triangle_equilateral", "entity_name"), "T");
+   (("model", "triangle_equilateral", "entity_what"),
+    "triangle_isoceles_equilateral");
+   (("model", "triangle_equilateral", "database_name"), "db1");
+   (("model", "triangle_equilateral", "model_title"),
+    "a triangle equilateral");
+   (("model", "triangle_equilateral", "model_name"), "triangle_equilateral");
+   (("target", "triangle_equilateral_translation", "model_list"),
+    "triangle_equilateral vector_bc");
+   (("target", "triangle_equilateral_translation", "property_units_list"),
+    "meter");
+   (("target", "triangle_equilateral_translation", "property_name"),
+    "triangle_translation");
+   (("target", "triangle_equilateral_translation", "property_file"),
+    "triangle_equilateral_translation.out");
+   (("target", "triangle_equilateral_translation", "target_title"),
+    "triangle equilateral translation");
+   (("target", "triangle_equilateral_translation", "target_name"),
+    "triangle_equilateral_translation");
+   (("target", "triangle_equilateral_translation", "domain_name"), "figure");
+   (("target", "triangle_equilateral_homothety", "model_list"),
+    "triangle_equilateral center_a");
+   (("target", "triangle_equilateral_homothety", "property_file"),
+    "triangle_equilateral_homothety.out");
+   (("target", "triangle_equilateral_homothety", "property_scalar"), "2.");
+   (("target", "triangle_equilateral_homothety", "property_units_list"),
+    "meter radian");
+   (("target", "triangle_equilateral_homothety", "property_name"),
+    "triangle_homothety");
+   (("target", "triangle_equilateral_homothety", "target_title"),
+    "triangle equilateral homothety");
+   (("target", "triangle_equilateral_homothety", "target_name"),
+    "triangle_equilateral_homothety");
+   (("target", "triangle_equilateral_homothety", "domain_name"), "figure")]

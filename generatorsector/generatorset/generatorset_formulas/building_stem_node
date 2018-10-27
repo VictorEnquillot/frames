@@ -1,0 +1,34 @@
+(** {6 Building_and_storing_proper_sons} *)
+
+(* camlparagraph_for_formula_let_argument : let_build_n_store_proper_sons *)
+
+(* Section_for_formula_header_top_main : let_build_n_store_proper_sons  *)
+(* Group_for_formula_header_top_main : let_build_n_store_proper_sons  *)
+let build_n_store sym_top soi_mai =
+
+(* Section_for_formula_body_top_main_builder : builder_node_sole_index_builder_list  *)
+(* Group_for_formula_body_top_main : main_tag_off_top_symbol *)
+  let sym_mai = Main_symbol_v.main_symbol_of_top_symbol sym_top in
+  let tag_mai = Tag_v.make sym_mai soi_mai in        (* let_tag_am_equal_tag_vdot_make_sym_am_soi_am_in *)
+
+(* Group_for_formula_body_main_builder : builder_node_symbol_builder_list *)
+  let sym_bui_l = Builder_symbol_list_by_main_tag_provider_v.provide tag_mai in
+
+(* Group_for_formula_body_main_builder : sole_index_builder_list  *)
+  let soi_bui_l =
+    Sole_index_v.son_sole_index_list_of_int_of_length_of_sole_index
+      1 (List.length sym_bui_l) soi_mai in
+
+(* Section_for_formula_body_domainset_builder : builder_tag_list  *)
+
+(* Group_for_formula_body_domainset_builder : domainset_symbol_builder_list *)
+  let dss_of_sym = Domainset_symbol_v.domainset_symbol_of_builder_symbol in
+  let dss_bui_l = List.map dss_of_sym sym_bui_l in
+
+(* Group_for_formula_body_domainset_builder : store_builder_tag_list *)
+  List.iter2 Domainset_symbol_by_sole_index_provider_v.store soi_bui_l gss_bui_l;
+  
+(* Group_for_formula_body_builder_alone : make_builder_tag_list *)
+  List.map2 Tag_v.make sym_bui_l soi_bui_l
+;;
+

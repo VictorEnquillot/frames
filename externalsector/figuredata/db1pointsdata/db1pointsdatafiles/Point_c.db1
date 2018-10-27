@@ -1,0 +1,6 @@
+coordinates_units_length  bohr
+coordinates_units_angle   degree
+coordinates_kind          cylindrical 
+figure_kind               point
+figure_name               C
+vertex C_C       1.  30.  0.5

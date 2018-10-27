@@ -1,0 +1,28 @@
+  with Failure ("Already_stored:register_v.ml:store") ->
+    let str_old_l = retrieve tra_ent in
+    if str_old_l <> str_l
+    then
+      begin
+	let nam_ent = Trail_v.value_of_key_off_trail "entity" tra_ent in
+	let tra_cat = Trail_v.trail_of_key_off_trail "category" tra_ent in
+	let nam_fil = domainset_categorys_set_file_name tra_cat in
+	Error_messages_v.print_fatal_error 
+	  nam_cod 
+          "store"
+          (Format.sprintf "for key >%s<@.    already stored value >%s< equal new one"
+             (Trail_v.name tra_ent)
+ 	     (List_v.name_with_separator Utils_v.identity "; " str_l) )
+     
+	  (Format.sprintf "this value >%s<"
+ 	     (List_v.name_with_separator Utils_v.identity "; " str_old_l) )
+
+	  (Format.sprintf "check for duplicated entry >%s< in file:@.       >%s<" nam_ent nam_fil)
+      end
+    else 
+      Error_messages_v.print_warning
+	nam_cod 
+        "store"
+        (Format.sprintf "for key >%s<@.    already stored value >%s<"
+           (Trail_v.name tra_ent)
+           (List_v.name_with_separator Utils_v.identity "; " str_old_l) )
+;;

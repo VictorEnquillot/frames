@@ -1,0 +1,7 @@
+set debug 
+      module "Input_lexical_analysis_v"
+      function "input_lexeme_basic_word_symbol_of_string"
+      end -- debug
+    end -- set 
+
+stop

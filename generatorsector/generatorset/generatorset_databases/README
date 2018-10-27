@@ -1,0 +1,57 @@
+File : frames/generatorset/generatorset_databases/README
+
+= The Data world =
+
+Four Camltypes need to be defined by the User : 
+     
+  Symbol Formula Value and Property
+
+  Tag and Path are derived automatically from the Symbols.
+
+
+== Data : Symbol ==
+
+  This concerns only Symbols, that is to say Essential Camltypes.
+
+  The User stores the information in File : 
+
+  domainset_tags/outils/domainset_symbols_constructor.set
+
+  frames/geometryset/geometryset_tags/outils/geometryset_symbols_constructor.set
+
+  One line for each entity, like this :
+
+  entity-name :<status>: entity-name entity-name ... entity-name 
+  
+ <status> is Uncontrained|Constrained  (private type)
+	
+  an entity-name appearing at the left of ":" is a Camltype
+  an entity-name appearing at the right of ":" is a Constructor
+  an entity-name being a Camltype is a Unary Constructor  ( | O of o )
+  an entity-name not being a Camltype is a Nullary Constructor ( | N )
+
+Remark :
+  The Entity Domainset is not a Constructor 
+  Some entities are only Constructors and never Camltypes 
+ 
+  Camltypes and Constructors are defined from the same Entity-name
+  with different syntaxic positions :
+
+  a Camltype is found after "type"
+  a Constructor is found after "|"
+
+
+== Data : Formula ==
+
+  This concerns only Formulas, that is to say Container Camltypes.
+
+  The User stores the information in File : 
+  domainset_formulas/outils/domainset_formulas_constructor.set
+  
+  One line for each entity, like this :
+  entity-name :<status>: [constructor-name] datastructure entity-name entity-name ... entity-name [constructor-name] datastructure entity-name entity-name ... entity-name 
+  
+  all entity-name are Camltypes
+  constructor-name is empty for Monoconstructor and an abritrary 
+  fictive Entity name for Polyconstructors
+

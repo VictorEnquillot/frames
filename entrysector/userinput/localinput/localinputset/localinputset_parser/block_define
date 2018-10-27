@@ -1,0 +1,437 @@
+let block_variable_context_subtree_list_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack nam_ibo wor_cap sym_lex_s =
+    let nam_fun = "block_variable_context_subtree_list_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack" in
+    
+ (* <block_variable_context>           ::= <cell_domain>      *)
+ (*                                        <cell_database>    *)
+ (*                                      [ <cell_databox> ]   *)
+ (*                                      [ <cell_createdby> ] *)
+ (*                                        end -- context     *)
+
+ (* <cell_database>                    ::= database >database_name< *)
+ (* <cell_domain>                      ::= domain >domain_name< *)
+
+    Localinput_parser_tools_v.debug_what_string "wor_cap" nam_mod nam_fun wor_cap;
+    Localinput_parser_tools_v.debug_what_lexer "input" nam_mod nam_fun (Stack.top sym_lex_s);
+    
+    let rec apply acc_tl lex_s =
+      
+      let sym_lex_cur = Stack.pop sym_lex_s in  
+      
+      Localinput_parser_tools_v.debug_what_lexer "recursive pop" nam_mod nam_fun sym_lex_cur;
+      
+      match sym_lex_cur with
+      | Localinput_lexer_symbol_t.Localinput_lexer_keyword_symbol
+	  (Localinput_lexer_keyword_symbol_t.Localinput_lexer_keyword_named_symbol
+	    (Localinput_lexer_keyword_named_symbol_t.Localinput_lexer_keyword_named_database_symbol
+	       (Localinput_lexer_keyword_named_database_symbol_t.Localinput_lexer_keyword_named_database_constructor sof))) ->
+
+(* Improve redo *)
+
+	       let sym_loi_f =
+		 Localinput_parser_structure_v.localinput_set_fence_cell_leaf_inside_doublequote_of_what_of_localinput_lexer_symbol_stack 
+		   "database" 
+		   lex_s 
+	       in
+	       
+	       apply (acc_tl @ [sym_loi_f]) lex_s
+		 
+      | Localinput_lexer_symbol_t.Localinput_lexer_keyword_symbol
+	  (Localinput_lexer_keyword_symbol_t.Localinput_lexer_keyword_named_symbol
+	    (Localinput_lexer_keyword_named_symbol_t.Localinput_lexer_keyword_named_databox_symbol
+	       (Localinput_lexer_keyword_named_databox_symbol_t.Localinput_lexer_keyword_named_databox_constructor sof))) ->
+	    
+	    let sym_loi_f =
+	      Localinput_parser_structure_v.localinput_set_fence_cell_leaf_inside_doublequote_of_what_of_localinput_lexer_symbol_stack 
+		"databox" 
+		lex_s 
+	    in
+	    apply (acc_tl @ [sym_loi_f]) lex_s 
+
+      | Localinput_lexer_symbol_t.Localinput_lexer_keyword_symbol
+	  (Localinput_lexer_keyword_symbol_t.Localinput_lexer_keyword_named_symbol
+	    (Localinput_lexer_keyword_named_symbol_t.Localinput_lexer_keyword_named_domain_symbol
+	       (Localinput_lexer_keyword_named_domain_symbol_t.Localinput_lexer_keyword_named_domain_constructor sof))) ->
+	    let sym_loi_f =
+	      Localinput_parser_structure_v.localinput_set_fence_cell_leaf_inside_doublequote_of_what_of_localinput_lexer_symbol_stack 
+		"domain" 
+		lex_s 
+	    in
+	    apply (acc_tl @ [sym_loi_f]) lex_s 
+
+      | Localinput_lexer_symbol_t.Localinput_lexer_keyword_symbol
+	  (Localinput_lexer_keyword_symbol_t.Localinput_lexer_keyword_named_symbol
+	    (Localinput_lexer_keyword_named_symbol_t.Localinput_lexer_keyword_named_createdby_symbol
+	       (Localinput_lexer_keyword_named_createdby_symbol_t.Localinput_lexer_keyword_named_createdby_constructor sof))) ->
+	    let sym_loi_f =
+	      Localinput_parser_structure_v.localinput_set_fence_cell_leaf_with_variable_name_of_what_of_localinput_lexer_symbol_stack 
+		"createdby" 
+		lex_s 
+	    in
+
+	    apply (acc_tl @ [sym_loi_f]) lex_s 
+
+      | Localinput_lexer_symbol_t.Localinput_lexer_keyword_symbol
+	  (Localinput_lexer_keyword_symbol_t.Localinput_lexer_keyword_named_symbol
+	    (Localinput_lexer_keyword_named_symbol_t.Localinput_lexer_keyword_named_end_symbol
+	       (Localinput_lexer_keyword_named_end_symbol_t.Localinput_lexer_keyword_named_end_constructor sof_end))) ->
+	     let sym_loi = Localinput_symbol_v.localinput_set_fence_keyword_word_end_constructor sof_end in
+	     let sym_loi_f = Tree_v.make_of_leaf sym_loi in 
+
+	     (acc_tl @ [sym_loi_f])
+
+      | _ ->
+	  Error_messages_v.print_syntax_error nam_mod nam_fun
+	    "Keyword database | databox | domain | createdby | end" 
+	    (Format.sprintf "Lexeme >%s<" (Localinput_lexer_symbol_v.fullname sym_lex_cur))
+	    "Check input file"
+	    
+    in
+    
+    apply [] sym_lex_s
+      
+;;
+
+let block_variable_external_subtree_list_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack nam_ibo wor_cap sym_lex_s =
+  let nam_fun = "block_variable_external_subtree_list_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack" in
+
+ (* Stack top is Localinput_lexer_keyword_type *)
+
+ (* <block_variable_external>    ::= <box_type>                   *)
+ (*                                  <cell_entity_external_name>  *)
+ (*                                  <cell_external_context> *)
+ (*                                  [ <cell_category> ] *)
+ (*                                  end *)
+  Localinput_parser_tools_v.debug_what_string "wor_cap" nam_mod nam_fun wor_cap;
+  Localinput_parser_tools_v.debug_what_lexer "input" nam_mod nam_fun (Stack.top sym_lex_s);
+
+  let sof_cur = "external" in
+  
+  let rec apply acc_tl lex_s =
+    
+    let sym_lex_cur = Stack.pop sym_lex_s in  
+    
+    Localinput_parser_tools_v.debug_what_lexer " pop " nam_mod nam_fun sym_lex_cur;
+
+    match sym_lex_cur with
+    | w when Localinput_lexer_symbol_v.is_localinput_lexer_keyword_named_type_constructor w ->
+	  
+	  Stack.push sym_lex_cur lex_s; (* Improve *)
+	  let sym_loi_st = 
+	    Localinput_parser_structure_v.box_type_subtree_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack
+	      nam_ibo
+	      wor_cap
+	      lex_s
+	  in 
+	  
+	  apply (acc_tl @ [sym_loi_st]) lex_s
+	    
+    | w when Localinput_lexer_symbol_v.is_localinput_lexer_keyword_named_external_name_constructor w ->
+	  
+	  let sym_loi_f =
+	    Localinput_parser_structure_v.localinput_set_fence_cell_leaf_inside_doublequote_of_what_of_localinput_lexer_symbol_stack 
+	      "external_name" 
+	      lex_s 
+	  in
+	  apply (acc_tl @ [sym_loi_f]) lex_s 
+	    
+    | w when Localinput_lexer_symbol_v.is_localinput_lexer_keyword_named_category_constructor w ->
+	  
+	  let sym_loi_f =
+	    Localinput_parser_structure_v.localinput_set_fence_cell_leaf_inside_doublequote_of_what_of_localinput_lexer_symbol_stack 
+	      "category" 
+	      lex_s 
+	  in
+	  apply (acc_tl @ [sym_loi_f]) lex_s 
+
+    | w when Localinput_lexer_symbol_v.is_localinput_lexer_keyword_named_external_context_constructor w ->
+
+	  let sym_loi_f =
+	    Localinput_parser_structure_v.localinput_set_fence_cell_leaf_with_variable_name_of_what_of_localinput_lexer_symbol_stack
+	      "external_context" 
+	      lex_s 
+	  in
+	  apply (acc_tl @ [sym_loi_f]) lex_s 
+	      
+    | w when Localinput_lexer_symbol_v.is_localinput_lexer_keyword_named_end_constructor w ->
+
+	let sym_loi = Localinput_symbol_v.localinput_set_fence_keyword_word_end_constructor sof_cur in
+	let sym_loi_f = Tree_v.make_of_leaf sym_loi in 
+	(acc_tl @ [sym_loi_f])
+	  
+(* Syntax Errors *)
+
+    | w when Localinput_lexer_symbol_v.is_localinput_lexer_variable_kind_context_constructor w ->
+
+	    Error_messages_v.print_syntax_error nam_mod nam_fun
+	      "Lexeme Localinput_lexer_keyword_external_context"
+	      (Format.sprintf "Lexeme >%s<" (Localinput_lexer_symbol_v.fullname sym_lex_cur))
+	      (Format.sprintf "In input file : %s@.      in define external command:@.      substitute \"context\" by \"external_context\"" nam_ibo)
+	      
+      | _ ->
+	  Error_messages_v.print_syntax_error nam_mod nam_fun
+	    "Lexeme were : category | external_context | external_name | type" 
+	    (Format.sprintf "Lexeme >%s<" (Localinput_lexer_symbol_v.fullname sym_lex_cur))
+	      (Format.sprintf "Check input file : %s@.      in define external command:@.      substitute \"context\" by \"external_context\"" nam_ibo)
+    in
+    
+    apply [] sym_lex_s
+      
+;;
+
+let block_variable_target_subtree_list_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack nam_ibo wor_cap sym_lex_s =
+  let nam_fun = "block_variable_target_subtree_list_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack" in
+
+ (* Stack top is Whatever *)
+
+ (* <block_variable_target>      ::= <box_type>             *)
+ (*                                  <cell_target_operator> *)
+ (*                                  <cell_target_operand>  *)
+ (*                                  end                    *)
+
+ (* <cell_target_operator>       ::= target_operator >variable_name_operator<  *)
+ (* <cell_target_operand>        ::= target_operand >variable_name_operand<  *)
+  Localinput_parser_tools_v.debug_what_string "wor_cap" nam_mod nam_fun wor_cap;
+  Localinput_parser_tools_v.debug_what_lexer "input" nam_mod nam_fun (Stack.top sym_lex_s);
+
+  let sof_cur = "target" in
+  let rec apply acc_tl lex_s =
+    
+    let sym_lex_cur = Stack.pop lex_s in  
+    
+    Localinput_parser_tools_v.debug_what_lexer " pop " nam_mod nam_fun sym_lex_cur;
+      
+      match sym_lex_cur with
+      | w when Localinput_lexer_symbol_v.is_localinput_lexer_keyword_named_type_constructor w ->
+	  
+	  Stack.push sym_lex_cur lex_s; (* Improve *)
+	  let sym_loi_st = 
+	    Localinput_parser_structure_v.box_type_subtree_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack
+	      nam_ibo
+	      wor_cap
+	      lex_s
+	  in 
+	  
+	  apply (acc_tl @ [sym_loi_st]) lex_s
+
+      | w when Localinput_lexer_symbol_v.is_localinput_lexer_keyword_named_target_operator_constructor w ->
+
+	  let sym_loi_f = 
+	    Localinput_parser_structure_v.localinput_set_fence_cell_leaf_with_variable_name_of_what_of_localinput_lexer_symbol_stack 
+	      "target_operator" 
+	      lex_s
+	  in
+	  
+	  apply (acc_tl @ [sym_loi_f]) lex_s
+	      
+      | w when Localinput_lexer_symbol_v.is_localinput_lexer_keyword_named_target_operand_constructor w ->
+
+	  let sym_loi_f = 
+	    Localinput_parser_structure_v.localinput_set_fence_cell_leaf_with_variable_name_of_what_of_localinput_lexer_symbol_stack 
+	      "target_operand" 
+	      lex_s
+	  in
+	  
+	  apply (acc_tl @ [sym_loi_f]) lex_s
+	  
+    | w when Localinput_lexer_symbol_v.is_localinput_lexer_keyword_named_end_constructor w ->    
+
+	    let sym_loi = Localinput_symbol_v.localinput_set_fence_keyword_word_end_constructor sof_cur in
+	    let sym_loi_f = Tree_v.make_of_leaf sym_loi in 
+	    (acc_tl @ [sym_loi_f])
+
+(* Syntax Errors *)
+	      
+      | w when Localinput_lexer_symbol_v.is_localinput_lexer_variable_kind_operator_constructor w ->
+
+	    Error_messages_v.print_syntax_error nam_mod nam_fun
+	      "Lexeme Localinput_lexer_symbol_v.localinput_lexer_keyword_target_operator"
+	      (Format.sprintf "Lexeme >%s<" (Localinput_lexer_symbol_v.fullname sym_lex_cur))
+	      (Format.sprintf "In input file : %s@.      in cofactor block:@.      substitute \"operator\" by \"target_operator\"" nam_ibo)
+
+      | w when w = Localinput_lexer_symbol_v.localinput_lexer_basic_word_bare_lowercase_constructor "operand" ->
+
+	    Error_messages_v.print_syntax_error nam_mod nam_fun
+	      "Lexeme Localinput_lexer_symbol_v.localinput_lexer_keyword_target_operand"
+	      (Format.sprintf "Lexeme >%s<" (Localinput_lexer_symbol_v.fullname sym_lex_cur))
+	      (Format.sprintf "In input file : %s@.      in cofactor block:@.      substitute \"operand\" by \"target_operand\"" nam_ibo)
+
+
+      | _ ->
+	  Error_messages_v.print_syntax_error nam_mod nam_fun
+	    "Lexeme type | operator | operand | end" 
+	    (Format.sprintf "Lexeme >%s<" (Localinput_lexer_symbol_v.fullname sym_lex_cur))
+	    "Check input file"
+	    
+    in
+    
+    apply [] sym_lex_s
+      
+;;
+
+let handle_variable_kind_subtree_list_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack nam_ibo  wor_cap sym_lex_s =
+  let nam_fun = "handle_variable_kind_subtree_list_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack" in
+
+ (* Stack top is Localinput_lexer_variable_kind_                  *)
+
+ (* <handle_variable_kind>  ::= | <handle_variable_context>  *)
+ (*                             | <handle_variable_external> *)
+ (*                             | <handle_variable_operator> *)
+ (*                             | <handle_variable_target>   *)
+  Localinput_parser_tools_v.debug_what_string "wor_cap" nam_mod nam_fun wor_cap;
+  Localinput_parser_tools_v.debug_what_lexer "input" nam_mod nam_fun (Stack.top sym_lex_s);  
+
+  let sym_lex_cur = Stack.pop sym_lex_s in    
+  
+  Localinput_parser_tools_v.debug_what_lexer " pop " nam_mod nam_fun sym_lex_cur;  
+  
+  let sym_lvk = (* Coerce Down *) 
+    Localinput_lexer_symbol_v.localinput_lexer_variable_kind_symbol_off_localinput_lexer_symbol
+      sym_lex_cur
+  in
+  
+  match sym_lvk with
+  | Localinput_lexer_variable_kind_symbol_t.Localinput_lexer_variable_kind_context_symbol 
+      (Localinput_lexer_variable_kind_context_symbol_t.Localinput_lexer_variable_kind_context_constructor _ ) ->
+      
+      block_variable_context_subtree_list_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack
+	nam_ibo
+	wor_cap 
+	sym_lex_s
+	
+  | Localinput_lexer_variable_kind_symbol_t.Localinput_lexer_variable_kind_external_symbol 
+      (Localinput_lexer_variable_kind_external_symbol_t.Localinput_lexer_variable_kind_external_constructor _ ) ->
+      
+      block_variable_external_subtree_list_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack
+	nam_ibo
+	wor_cap
+	sym_lex_s
+	
+  | Localinput_lexer_variable_kind_symbol_t.Localinput_lexer_variable_kind_operator_symbol 
+      (Localinput_lexer_variable_kind_operator_symbol_t.Localinput_lexer_variable_kind_operator_constructor _ ) ->
+      
+      let sym_loi_st = 
+	Localinput_parser_block_variable_operator_subtree_by_inputbox_name_n_localinput_lexer_symbol_stack_n_variable_name_provider_v.provide 
+	  (nam_ibo, sym_lex_s, wor_cap)
+      in
+      [sym_loi_st]
+
+  | Localinput_lexer_variable_kind_symbol_t.Localinput_lexer_variable_kind_target_symbol 
+      (Localinput_lexer_variable_kind_target_symbol_t.Localinput_lexer_variable_kind_target_constructor _ ) ->
+      
+      block_variable_target_subtree_list_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack 
+	nam_ibo
+	wor_cap
+	sym_lex_s
+;;
+
+let handle_variable_kind_subtree_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack nam_ibo wor_cap sym_lex_s =
+  let nam_fun = "handle_variable_kind_subtree_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack" in
+
+ (* Stack top is >variable_kind< *)
+
+ (* <handle_variable_kind>  ::=  >variable_kind< <block_variable_kind>  *)
+
+ (* <handle_variable_kind>  ::= | context <block_variable_context>   *)
+ (*                             | external <block_variable_external> *)
+ (*                             | operator <block_variable_operator> *)
+ (*                             | target <bloack_variable_target>    *)
+
+  Localinput_parser_tools_v.debug_what_string "wor_cap" nam_mod nam_fun wor_cap;
+  Localinput_parser_tools_v.debug_what_lexer " top " nam_mod nam_fun (Stack.top sym_lex_s);  
+
+  let sym_lex_cur = Stack.pop sym_lex_s in    
+  
+  Localinput_parser_tools_v.debug_what_lexer " pop " nam_mod nam_fun sym_lex_cur;  
+  
+  let sym_lvk = (* coerce down *) 
+    Localinput_lexer_symbol_v.localinput_lexer_variable_kind_symbol_off_localinput_lexer_symbol
+      sym_lex_cur
+  in
+  
+  match sym_lvk with
+  | Localinput_lexer_variable_kind_symbol_t.Localinput_lexer_variable_kind_context_symbol 
+      (Localinput_lexer_variable_kind_context_symbol_t.Localinput_lexer_variable_kind_context_constructor _ ) ->
+
+      let sym_loi_fvk = 
+	Localinput_as_set_fence_variable_kind_symbol_by_localinput_lexer_variable_kind_symbol_provider_v.provide 
+	  sym_lvk 
+      in
+      let sym_loi_f = Tree_v.make_of_leaf sym_loi_fvk in
+
+      let sym_loi_bvc = Localinput_symbol_v.localinput_set_body_block_variable_context_constructor wor_cap in
+      let sym_loi_stl = 
+	block_variable_context_subtree_list_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack
+	  nam_ibo
+	  wor_cap
+	  sym_lex_s
+      in
+      let sym_loi_st = Tree_v.make_of_node sym_loi_bvc sym_loi_stl in
+
+      let sym_loi_evc = Localinput_symbol_v.localinput_set_body_handle_variable_context_constructor wor_cap in
+
+      Tree_v.make_of_node sym_loi_evc [sym_loi_f; sym_loi_st]
+	
+  | Localinput_lexer_variable_kind_symbol_t.Localinput_lexer_variable_kind_external_symbol 
+      (Localinput_lexer_variable_kind_external_symbol_t.Localinput_lexer_variable_kind_external_constructor _ ) ->
+      
+      let sym_loi_fvk = 
+	Localinput_as_set_fence_variable_kind_symbol_by_localinput_lexer_variable_kind_symbol_provider_v.provide 
+	  sym_lvk 
+      in
+      let sym_loi_f = Tree_v.make_of_leaf sym_loi_fvk in
+
+      let sym_loi_bve = Localinput_symbol_v.localinput_set_body_block_variable_external_constructor wor_cap in
+      let sym_loi_stl = 
+	block_variable_external_subtree_list_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack
+	  nam_ibo
+	  wor_cap
+	  sym_lex_s
+      in
+      let sym_loi_st = Tree_v.make_of_node sym_loi_bve sym_loi_stl in
+
+      let sym_loi_eve = Localinput_symbol_v.localinput_set_body_handle_variable_external_constructor wor_cap in
+
+      Tree_v.make_of_node sym_loi_eve [sym_loi_f; sym_loi_st]
+ 	
+  | Localinput_lexer_variable_kind_symbol_t.Localinput_lexer_variable_kind_operator_symbol 
+      (Localinput_lexer_variable_kind_operator_symbol_t.Localinput_lexer_variable_kind_operator_constructor _ ) ->
+      
+     let sym_loi_fvk = 
+	Localinput_as_set_fence_variable_kind_symbol_by_localinput_lexer_variable_kind_symbol_provider_v.provide 
+	 sym_lvk 
+      in
+      let sym_loi_f = Tree_v.make_of_leaf sym_loi_fvk in
+
+      let sym_loi_bvo = Localinput_symbol_v.localinput_set_body_block_variable_operator_constructor wor_cap in
+      let sym_loi_lvo_st = 
+	Localinput_parser_block_variable_operator_subtree_by_inputbox_name_n_localinput_lexer_symbol_stack_n_variable_name_provider_v.provide (nam_ibo, sym_lex_s, wor_cap)
+      in
+
+      let sym_loi_st = Tree_v.make_of_node sym_loi_bvo [sym_loi_lvo_st] in
+      let sym_loi_hvo = Localinput_symbol_v.localinput_set_body_handle_variable_operator_constructor wor_cap in
+
+      Tree_v.make_of_node sym_loi_hvo [sym_loi_f; sym_loi_st]
+ 	
+  | Localinput_lexer_variable_kind_symbol_t.Localinput_lexer_variable_kind_target_symbol 
+      (Localinput_lexer_variable_kind_target_symbol_t.Localinput_lexer_variable_kind_target_constructor _ ) ->
+	
+     let sym_loi_fvk = 
+	Localinput_as_set_fence_variable_kind_symbol_by_localinput_lexer_variable_kind_symbol_provider_v.provide 
+	 sym_lvk 
+      in
+      let sym_loi_f = Tree_v.make_of_leaf sym_loi_fvk in
+
+      let sym_loi_bvt = Localinput_symbol_v.localinput_set_body_block_variable_target_constructor wor_cap in
+      let sym_loi_stl = 
+	block_variable_target_subtree_list_of_inputbox_name_of_variable_name_of_localinput_lexer_symbol_stack
+	  nam_ibo
+	  wor_cap
+	  sym_lex_s
+      in
+      let sym_loi_st = Tree_v.make_of_node sym_loi_bvt sym_loi_stl in
+
+      let sym_loi_evt = Localinput_symbol_v.localinput_set_body_handle_variable_target_constructor wor_cap in
+
+      Tree_v.make_of_node sym_loi_evt [sym_loi_f; sym_loi_st]
+ 	
+;;

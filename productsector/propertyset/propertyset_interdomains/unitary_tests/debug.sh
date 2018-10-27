@@ -1,0 +1,59 @@
+#!/bin/bash
+
+ledit -x -h ./.ocamldebug-history ocamldebug \
+-I $BAS \
+-I $DAT \
+-I $FIL \
+-I $COMS \
+-I $UNI \
+-I $MEA \
+-I $REA \
+-I $QUA \
+-I $CONS \
+-I $LEXLOI \
+-I $LANLOI \
+-I $SLOI \
+-I $TLOI \
+-I $PARLOI \
+-I $BLOI \
+-I $VARLOI \
+-I $LEXNWC \
+-I $SNWC \
+-I $TNWC \
+-I $PARNWC \
+-I $BNWC \
+-I $LEXDB1 \
+-I $SDB1 \
+-I $TDB1 \
+-I $PARDB1 \
+-I $BDB1 \
+-I $SCOO \
+-I $TCOO \
+-I $BCOO \
+-I $CCOO \
+-I $RCOO \
+-I $ECOO \
+-I $OCOO \
+-I $SPAR \
+-I $TPAR \
+-I $BPAR \
+-I $CPAR \
+-I $RPAR \
+-I $EPAR \
+-I $SFIG \
+-I $TFIG \
+-I $BFIG \
+-I $CFIG \
+-I $EFIG \
+-I $SSKE \
+-I $TSKE \
+-I $BSKE \
+-I $CSKE \
+-I $ESKE \
+-I $SPRO \
+-I $TPRO \
+-I $BPRO \
+-I $CPRO \
+-I $IPRO \
+runtest.byt
+ 

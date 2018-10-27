@@ -1,0 +1,28 @@
+define Con_tao 
+       context
+	 databox "try_ao"
+	 database "nwchem"
+         domain "skeleton"
+	 end -- context
+       end -- define
+
+define Aopef_hes11	
+       external 
+         type [ "skeleton" "fence_centered" "aopef" "constructor" ]
+         external_name "he s 1 1"
+         external_context Con_tao
+         end -- external
+       end -- define
+
+define Uni_len
+       external 
+         type [ "units" "length" "bohr" ]
+         external_context Con_tao
+         end -- external
+       end -- define
+
+print Aopef_hes11 
+      units [ Uni_len ]
+      end -- print
+
+stop

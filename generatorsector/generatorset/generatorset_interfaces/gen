@@ -1,0 +1,10 @@
+  
+  Generatorset_symbol_by_sole_index_provider_v.build_n_store_son_list 
+    Generatorset_symbol_v.generatorset_symbol_of_camlparagraph_symbol
+    soi_ite
+    sym_cap_l
+    ;
+
+  let tag_cap_l = Tag_v.make_son_list sym_cap_l soi_ite in
+  
+  Doublet_list_v.make sym_enc_l tag_cap_l

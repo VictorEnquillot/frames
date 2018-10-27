@@ -1,0 +1,34 @@
+digraph prt {
+  size="14,14";
+  node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+  edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+  Title [label = "Prototype for Elementary Function (PEF)\nCentered Ao-kind\nDependence Tree (Builder-Tree)" shape="record" color=lightblue, style=filled];
+
+  "context\ndatabox"  -> { "aopefset\nanycenter" "ecppefset\nanycenter"} 
+
+  "aopefset\nanycenter"  -> { "aopefset\nonecenter\nHe" "aopefset\nonecenter\nNe"} [color=red arrowsize="2" label = "Repeat on all Shell"];
+   
+  "aopefset\nonecenter\nHe" -> { "aopefset\nshellsymmetry\nHe S" "aopefset\nshellsymmetry\nHe P"} [color=red arrowsize="2" label = "Repeat on all Shells"];
+
+  "aopefset\nonecenter\nNe" -> { "aopefset\nshellsymmetry\nNe S" "aopefset\nshellsymmetry\nNe P"} [color=red arrowsize="2" label = "Repeat on all Shell Symmetry S P D ..."];
+
+  "aopefset\nshellsymmetry\nHe S" -> { "aopefset\nshellordinal\nHe S 1" "aopefset\nshellordinal\nHe S 2"} [color=red arrowsize="2" label = "Repeat on all Shell Ordinal 1 2 ... "];
+
+  "aopefset\nshellsymmetry\nNe S" -> { "aopefset\nshellordinal\nNe S 1" "aopefset\nshellordinal\nNe S 2"} [color=red arrowsize="2" label = "Repeat on all Shell Ordinal 1 2 ... "];
+
+  "aopefset\nshellordinal\nHe S 1" -> { "aopef\nHe S 1 1" "aopef\nHe S 1 2" } [color=red arrowsize="2" label = "Repeat on all Scaled aopef"];
+
+  "aopefset\nshellordinal\nNe S 1" -> { "aopef\nNe S 1 1" "aopef\nNe S 1 2" } [color=red arrowsize="2" label = "Repeat on all Scaled aopef"];
+
+  node [color=lightblue, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+ 
+  "aopef\nHe S 1 1" -> { "Elementary\nparameter_tuple\naopef" } [color=blue arrowsize="3" label = "Transdomain"];
+
+  "aopef\nHe S 1 2" -> { "Elementary\nparameter_tuple\naopef " } [color=blue arrowsize="3" label = "Transdomain"];
+
+  "aopef\nNe S 1 1" -> { "Elementary\nparameter_tuple\naopef  " } [color=blue arrowsize="3" label = "Transdomain"];
+
+  "aopef\nNe S 1 2" -> { "Elementary\nparameter_tuple\naopef   " } [color=blue arrowsize="3" label = "Transdomain"];
+
+}

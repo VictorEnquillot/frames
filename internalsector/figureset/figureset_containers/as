@@ -1,0 +1,19 @@
+let name for_fig =
+  let sym = symbol_of_formula for_fig in
+  Figure_symbol_v.name sym
+;;
+
+let string_off for_fig =
+  let sym = symbol_of_formula for_fig in
+  Figure_symbol_v.string_off sym
+;;
+
+let fullname for_fig =
+  let sym = symbol_of_formula for_fig in
+  Figure_symbol_v.fullname sym
+;;
+
+let longname for_fig =
+  let sym = symbol_of_formula for_fig in
+  Figure_symbol_v.longname sym
+;;

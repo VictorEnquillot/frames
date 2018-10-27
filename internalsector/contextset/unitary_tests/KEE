@@ -1,0 +1,415 @@
+open Make_test_v;;
+
+testing "Nameofcodefile_list_by_fullnameofdirectory_provider_v
+   Nameofcodefile_list_by_fullnameofdirectory_provider_u_any.ml";;
+
+(* Deleting Registers *)
+Register_v.delete Box_name_n_base_name_by_sole_index_register_v.register;;
+Register_v.delete Context_name_by_context_nameofdirectory_register_v.register;;
+Register_v.delete Context_name_by_context_nameoffile_register_v.register;;
+Register_v.delete Context_name_list_by_unit_register_v.register;;
+Register_v.delete Databasefiles_fullnameofdirectory_list_by_domaindata_fullnameofdirectory_register_v.register;;
+Register_v.delete Databasefiles_nameofdirectory_by_database_fullnameofdirectory_register_v.register;;
+Register_v.delete Databasefiles_nameofdirectory_by_database_nameofdirectory_register_v.register;;
+Register_v.delete Databasefiles_nameofdirectory_list_by_domaindata_fullnameofdirectory_register_v.register;;
+Register_v.delete Databasefiles_nameofdirectory_list_by_domaindata_nameofdirectory_register_v.register;;
+Register_v.delete Database_fullnameofdirectory_list_by_domaindata_fullnameofdirectory_register_v.register;;
+Register_v.delete Database_nameofdirectory_list_by_domaindata_fullnameofdirectory_register_v.register;;
+Register_v.delete Database_nameofdirectory_list_by_domaindata_nameofdirectory_register_v.register;;
+Register_v.delete Database_ordinal_by_database_name_register_v.register;;
+Register_v.delete Databaseset_nameofdirectory_by_database_fullnameofdirectory_register_v.register;;
+Register_v.delete Databaseset_nameofdirectory_by_database_nameofdirectory_register_v.register;;
+Register_v.delete Databaseset_nameofdirectory_list_by_domaindata_fullnameofdirectory_register_v.register;;
+Register_v.delete Databaseset_nameofdirectory_list_by_domaindata_nameofdirectory_register_v.register;;
+Register_v.delete Databox_nameoffile_list_by_databasefiles_fullnameofdirectory_register_v.register;;
+Register_v.delete Databox_nameoffile_list_by_databasefiles_nameofdirectory_register_v.register;;
+Register_v.delete Databox_ordinal_by_databox_name_register_v.register;;
+Register_v.delete Domaindata_fullnameofdirectory_list_by_externalsector_fullnameofdirectory_register_v.register;;
+Register_v.delete Domaindata_nameofdirectory_list_by_externalsector_fullnameofdirectory_register_v.register;;
+Register_v.delete Domaindata_nameofdirectory_list_in_externalsector_by_unit_register_v.register;;
+Register_v.delete Domaininput_nameofdirectory_list_in_entrysector_by_unit_register_v.register;;
+Register_v.delete Domain_name_list_by_unit_register_v.register;;
+Register_v.delete Domain_ordinal_by_domain_name_register_v.register;;
+Register_v.delete Domainset_nameofdirectory_list_by_unit_register_v.register;;
+Register_v.delete Domainset_nameofdirectory_list_in_internalsector_by_unit_register_v.register;;
+Register_v.delete Domainset_nameofdirectory_list_in_productsector_by_unit_register_v.register;;
+Register_v.delete Fullnameoffile_list_by_fullnameofdirectory_register_v.register;;
+Register_v.delete Inputbasefiles_fullnameofdirectory_list_by_domaininput_fullnameofdirectory_register_v.register;;
+Register_v.delete Inputbasefiles_nameofdirectory_list_by_domaininput_fullnameofdirectory_register_v.register;;
+Register_v.delete Inputbasefiles_nameofdirectory_list_by_domaininput_nameofdirectory_register_v.register;;
+Register_v.delete Inputbase_nameofdirectory_list_by_domaininput_fullnameofdirectory_register_v.register;;
+Register_v.delete Inputbase_nameofdirectory_list_by_domaininput_nameofdirectory_register_v.register;;
+Register_v.delete Inputbaseset_fullnameofdirectory_list_by_domaininput_fullnameofdirectory_register_v.register;;
+Register_v.delete Inputbaseset_nameofdirectory_by_inputbase_fullnameofdirectory_register_v.register;;
+Register_v.delete Inputbaseset_nameofdirectory_by_inputbase_nameofdirectory_register_v.register;;
+Register_v.delete Inputbaseset_nameofdirectory_list_by_domaininput_fullnameofdirectory_register_v.register;;
+Register_v.delete Inputbaseset_nameofdirectory_list_by_domaininput_nameofdirectory_register_v.register;;
+Register_v.delete Inputbox_nameoffile_list_by_inputbasefiles_fullnameofdirectory_register_v.register;;
+Register_v.delete Inputbox_ordinal_by_inputbox_name_register_v.register;;
+Register_v.delete Nameofcodefile_list_by_fullnameofdirectory_register_v.register;;
+Register_v.delete Nameofdirectory_list_by_fullnameofdirectory_register_v.register;;
+Register_v.delete Nameoffile_list_by_fullnameofdirectory_register_v.register;;
+Register_v.delete Nameofusedfile_list_by_fullnameofdirectory_register_v.register;;
+Register_v.delete Sector_fullnameofdirectory_list_by_unit_register_v.register;;
+Register_v.delete Sector_name_list_by_unit_register_v.register;;
+Register_v.delete Sector_nameofdirectory_list_by_unit_register_v.register;;
+Register_v.delete Sector_ordinal_by_sector_name_register_v.register;;
+
+
+
+
+(* Tracing *)
+
+(* toplevel 
+   #use "Nameofcodefile_list_by_fullnameofdirectory_provider_u_any.ml";;
+
+*)
+
+open Nameofcodefile_list_by_fullnameofdirectory_provider_v;;
+
+let fnd_fra = Fullnameofdirectory_by_environment_variable_provider_v.provide "FRA";;
+
+test_number 1 (
+(fnd_fra : string ) =
+"/home/colonna/sources/ocaml_top/setup/frames"
+);;
+
+let npf_fra_l = provide fnd_fra;;
+
+test_number 2 (
+(npf_fra_l : String.t list ) =
+  ["fake_v.ml"]
+);;
+
+let fnd_con = Fullnameofdirectory_by_environment_variable_provider_v.provide "CONS";;
+
+test_number 3 (
+(fnd_con : string ) =
+  "/home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset"
+);;
+
+let npf_con_l = provide fnd_con;;
+
+test_number 4 (
+(npf_con_l : string list ) =
+  ["Context_database_fullnameofdirectory_by_database_name_provider_v.ml";
+   "Context_database_fullnameofdirectory_list_by_domaindata_fullnameofdirectory_provider_v.ml";
+   "Context_database_fullnameofdirectory_list_by_domaindata_fullnameofdirectory_register_v.ml";
+   "Context_database_fullnameofdirectory_list_by_unit_provider_v.ml";
+   "Context_database_fullnameofdirectory_list_by_unit_register_v.ml";
+   "Context_database_index_by_database_name_provider_v.ml";
+   "Context_database_index_by_database_name_register_v.ml";
+   "Context_database_name_by_context_database_index_provider_v.ml";
+   "Context_database_name_list_by_context_domain_name_provider_v.ml";
+   "Context_database_name_list_by_unit_provider_v.ml";
+   "Context_database_name_list_by_unit_register_v.ml";
+   "Context_database_nameoffile_list_by_domaindata_fullnameofdirectory_provider_v.ml";
+   "Context_database_nameoffile_list_by_domaindata_fullnameofdirectory_register_v.ml";
+   "Context_databaseset_fullnameofdirectory_by_unit_provider_v.ml";
+   "Context_databaseset_fullnameofdirectory_by_unit_register_v.ml";
+   "Context_databox_fullnameoffile_by_databox_name_n_database_name_provider_v.ml";
+   "Context_databox_fullnameoffile_by_databox_name_n_database_name_register_v.ml";
+   "Context_databox_fullnameoffile_by_databox_name_n_database_name_provider_v.ml";
+   "Context_databox_fullnameoffile_list_by_database_fullnameofdirectory_provider_v.ml";
+   "Context_databox_fullnameoffile_list_by_database_fullnameofdirectory_register_v.ml";
+   "Context_databox_fullnameoffile_list_by_unit_provider_v.ml";
+   "Context_databox_name_list_by_context_database_name_provider_v.ml";
+   "Context_databox_name_list_by_unit_provider_v.ml";
+   "Context_databox_nameoffile_by_databox_name_n_database_name_provider_v.ml";
+   "Context_databox_nameoffile_list_by_database_fullnameofdirectory_provider_v.ml";
+   "Context_databox_nameoffile_list_by_database_fullnameofdirectory_register_v.ml";
+   "Context_databox_nameoffile_list_by_unit_provider_v.ml";
+   "Context_databox_sole_index_by_databox_name_n_database_name_provider_v.ml";
+   "Context_domain_name_list_by_unit_register_v.ml";
+   "Context_domaindata_fullnameofdirectory_list_by_domain_name_provider_v.ml";
+   "Context_domaindata_fullnameofdirectory_list_by_unit_provider_v.ml";
+   "Context_domaindata_fullnameofdirectory_list_by_unit_register_v.ml";
+   "Context_domaindata_namedata_list_by_unit_provider_v.ml";
+   "Context_fullnameoffile_by_context_nameoffile_provider_v.ml";
+   "Context_fullnameoffile_by_context_nameoffile_register_v.ml";
+   "Context_fullnameoffile_by_nameoffile_provider_v.ml";
+   "Context_fullnameoffile_by_nameoffile_register_v.ml";
+   "Context_fullnameoffile_list_by_unit_provider_v.ml";
+   "Context_fullnameoffile_list_by_unit_register_v.ml";
+   "Context_fullnameoffile_tree_by_unit_provider_v.ml";
+   "Context_fullnameoffile_tree_by_unit_register_v.ml";
+   "Context_index_by_context_nameoffile_provider_v.ml";
+   "Context_index_by_context_nameoffile_register_v.ml";
+   "Context_index_tree_by_unit_provider_v.ml";
+   "Context_name_by_context_nameoffile_provider_v.ml";
+   "Context_name_by_context_nameoffile_register_v.ml";
+   "Context_name_by_context_sole_index_provider_v.ml";
+   "Context_name_by_databaseset_sole_index_provider_v.ml";
+   "Context_name_n_context_sole_index_subtree_by_context_name_provider_v.ml";
+   "Context_name_n_context_sole_index_tree_by_unit_provider_v.ml";
+   "Context_name_sibling_list_by_context_name_provider_v.ml";
+   "Context_name_son_list_by_context_name_provider_v.ml";
+   "Context_name_subtree_by_context_name_provider_v.ml";
+   "Context_name_tree_by_context_name_provider_v.ml";
+   "Context_name_tree_by_sector_name_n_context_name_provider_v.ml";
+   "Context_name_tree_by_sector_name_provider_v.ml";
+   "Context_name_tree_by_unit_provider_v.ml";
+   "Context_name_tree_by_unit_register_v.ml";
+   "Context_nameoffile_by_context_sole_index_provider_v.ml";
+   "Context_nameoffile_list_by_unit_provider_v.ml";
+   "Context_nameoffile_n_context_sole_index_tree_by_unit_provider_v.ml";
+   "Context_nameoffile_n_index_list_by_unit_provider_v.ml";
+   "Context_nameoffile_n_index_tree_by_unit_provider_v.ml";
+   "Context_nameoffile_sibling_list_by_context_nameoffile_provider_v.ml";
+   "Context_nameoffile_son_list_by_context_nameoffile_provider_v.ml";
+   "Context_nameoffile_tree_by_unit_provider_v.ml";
+   "Context_node_fullnameofdirectory_tree_by_unit_provider_v.ml";
+   "Context_ordinallocal_by_father_name_n_son_name_provider_v.ml";
+   "Context_sole_index_by_context_name_provider_v.ml";
+   "Context_sole_index_by_context_nameoffile_provider_v.ml";
+   "Context_sole_index_subtree_by_sector_name_n_context_name_provider_v.ml";
+   "Context_sole_index_tree_by_context_name_provider_v.ml";
+   "Context_sole_index_tree_by_sector_name_provider_v.ml";
+   "Context_sole_index_tree_by_unit_provider_v.ml"; "Context_symbol_v.ml";
+   "Database_name_as_databaseset_list_by_domaindata_nameofdirectory_provider_v.ml";
+   "Database_name_as_databaseset_list_by_unit_provider_v.ml";
+   "Database_name_by_databaseset_nameofdirectory_provider_v.ml";
+   "Database_name_list_by_domain_name_provider_v.ml";
+   "Database_name_list_by_unit_provider_v.ml";
+   "Databox_name_n_database_name_by_sole_index_provider_v.ml";
+   "Databox_name_n_database_name_by_sole_index_register_v.ml";
+   "Databox_name_n_database_name_list_by_database_name_provider_v.ml";
+   "Databox_name_n_database_name_list_by_unit_provider_v.ml";
+   "Database_ordinal_by_database_name_provider_v.ml";
+   "Database_ordinal_by_database_name_register_v.ml";
+   "Database_ordinal_n_databox_ordinal_by_databox_name_n_database_name_provider_v.ml";
+   "Database_ordinal_n_databox_ordinal_by_databox_name_n_database_name_register_v.ml";
+   "Database_ordinallocal_by_domain_name_n_database_name_provider_v.ml";
+   "Databasefiles_fullnameofdirectory_by_databasefiles_name_provider_v.ml";
+   "Databasefiles_fullnameofdirectory_by_databasefiles_nameofdirectory_provider_v.ml";
+   "Databasefiles_fullnameofdirectory_list_by_domaindata_fullnameofdirectory_provider_v.ml";
+   "Databasefiles_fullnameofdirectory_list_by_domaindata_fullnameofdirectory_register_v.ml";
+   "Databasefiles_fullnameofdirectory_list_by_unit_provider_v.ml";
+   "Databasefiles_nameofdirectory_list_by_domaindata_fullnameofdirectory_provider_v.ml";
+   "Databasefiles_nameofdirectory_list_by_domaindata_fullnameofdirectory_register_v.ml";
+   "Databasefiles_nameofdirectory_list_by_domaindata_nameofdirectory_provider_v.ml";
+   "Databasefiles_nameofdirectory_list_by_domaindata_nameofdirectory_register_v.ml";
+   "Databasefiles_nameofdirectory_list_by_unit_provider_v.ml";
+   "Databaseset_fullnameofdirectory_by_databaseset_nameofdirectory_provider_v.ml";
+   "Databaseset_fullnameofdirectory_list_by_domaindata_fullnameofdirectory_provider_v.ml";
+   "Databaseset_fullnameofdirectory_list_by_unit_provider_v.ml";
+   "Databaseset_name_list_by_domaindata_nameofdirectory_provider_v.ml";
+   "Databaseset_name_list_by_domaindata_nameofdirectory_register_v.ml";
+   "Databaseset_nameofdirectory_list_by_domaindata_fullnameofdirectory_provider_v.ml";
+   "Databaseset_nameofdirectory_list_by_domaindata_fullnameofdirectory_register_v.ml";
+   "Databaseset_nameofdirectory_list_by_domaindata_nameofdirectory_provider_v.ml";
+   "Databaseset_nameofdirectory_list_by_domaindata_nameofdirectory_register_v.ml";
+   "Databaseset_nameofdirectory_list_by_unit_provider_v.ml";
+   "Databox_fullnameoffile_by_databox_nameoffile_provider_v.ml";
+   "Databox_fullnameoffile_list_by_databasefiles_fullnameofdirectory_provider_v.ml";
+   "Databox_fullnameoffile_list_by_unit_provider_v.ml";
+   "Context_name_by_context_nameoffile_provider_v.ml";
+   "Databox_name_list_by_database_name_provider_v.ml";
+   "Databox_name_list_by_unit_provider_v.ml";
+   "Databox_nameofdirectory_list_by_databasefiles_fullnameofdirectory_provider_v.ml";
+   "Databox_nameoffile_list_by_databasefiles_fullnameofdirectory_provider_v.ml";
+   "Databox_nameoffile_list_by_databasefiles_fullnameofdirectory_register_v.ml";
+   "Databox_nameoffile_list_by_databasefiles_nameofdirectory_provider_v.ml";
+   "Databox_nameoffile_list_by_databasefiles_nameofdirectory_register_v.ml";
+   "Databox_nameoffile_list_by_unit_provider_v.ml";
+   "Databox_ordinal_by_databox_name_provider_v.ml";
+   "Databox_ordinal_by_databox_name_register_v.ml";
+   "Databox_ordinallocal_by_databox_name_n_database_name_provider_v.ml";
+   "Domain_name_as_domaindata_list_by_unit_provider_v.ml";
+   "Domain_name_as_domainfiles_list_by_unit_provider_v.ml";
+   "Domain_name_as_domainset_list_by_unit_provider_v.ml";
+   "Domain_name_by_domaindata_nameofdirectory_provider_v.ml";
+   "Context_name_by_context_nameofdirectory_provider_v.ml";
+   "Domain_name_list_by_sector_name_provider_v.ml";
+   "Domain_name_list_by_unit_provider_v.ml";
+   "Domain_name_list_by_unit_register_v.ml";
+   "Domain_name_n_database_name_list_by_domain_name_provider_v.ml";
+   "Domain_name_n_database_name_list_by_unit_provider_v.ml";
+   "Domain_ordinal_by_domain_name_provider_v.ml";
+   "Domain_ordinal_by_domain_name_register_v.ml";
+   "Domain_ordinal_by_sector_name_register_v.ml";
+   "Domain_ordinallocal_by_domain_name_provider_v.ml";
+   "Domain_ordinallocal_by_domain_name_n_sector_name_provider_v.ml";
+   "Domaindata_fullnameofdirectory_by_domaindata_nameofdirectory_provider_v.ml";
+   "Domaindata_fullnameofdirectory_by_externalsector_fullnameofdirectory_provider_v.ml";
+   "Domaindata_fullnameofdirectory_list_by_externalsector_fullnameofdirectory_provider_v.ml";
+   "Domaindata_fullnameofdirectory_list_by_externalsector_fullnameofdirectory_register_v.ml";
+   "Domaindata_fullnameofdirectory_list_by_unit_provider_v.ml";
+   "Domaindata_nameofdirectory_list_by_externalsector_fullnameofdirectory_provider_v.ml";
+   "Domaindata_nameofdirectory_list_by_externalsector_fullnameofdirectory_register_v.ml";
+   "Domaindata_nameofdirectory_list_by_unit_provider_v.ml";
+   "Domaindata_nameofdirectory_list_in_externalsector_by_unit_provider_v.ml";
+   "Domaindata_nameofdirectory_list_in_externalsector_by_unit_register_v.ml";
+   "Domainfiles_fullnameofdirectory_by_domainfiles_nameofdirectory_provider_v.ml";
+   "Domainfiles_fullnameofdirectory_list_by_entrysector_fullnameofdirectory_provider_v.ml";
+   "Domainfiles_fullnameofdirectory_list_by_entrysector_fullnameofdirectory_register_v.ml";
+   "Domainfiles_fullnameofdirectory_list_by_unit_provider_v.ml";
+   "Domainfiles_nameofdirectory_list_by_entrysector_fullnameofdirectory_provider_v.ml";
+   "Domainfiles_nameofdirectory_list_by_entrysector_fullnameofdirectory_register_v.ml";
+   "Domainfiles_nameofdirectory_list_by_unit_provider_v.ml";
+   "Domainfiles_nameofdirectory_list_in_entrysector_by_unit_provider_v.ml";
+   "Domainfiles_nameofdirectory_list_in_entrysector_by_unit_register_v.ml";
+   "Domainset_nameofdirectory_list_by_unit_provider_v.ml";
+   "Domainset_nameofdirectory_list_by_unit_register_v.ml";
+   "Domaininput_nameofdirectory_list_in_entrysector_by_unit_provider_v.ml";
+   "Domaininput_nameofdirectory_list_in_entrysector_by_unit_register_v.ml";
+   "Domainset_nameofdirectory_list_in_externalsector_by_unit_provider_v.ml";
+   "Domainset_nameofdirectory_list_in_externalsector_by_unit_register_v.ml";
+   "Domainset_nameofdirectory_list_in_internalsector_by_unit_provider_v.ml";
+   "Domainset_nameofdirectory_list_in_internalsector_by_unit_register_v.ml";
+   "Domainset_nameofdirectory_list_in_productsector_by_unit_provider_v.ml";
+   "Domainset_nameofdirectory_list_in_productsector_by_unit_register_v.ml";
+   "Entrysector_fullnameofdirectory_by_unit_provider_v.ml";
+   "Externalsector_fullnameofdirectory_by_unit_provider_v.ml";
+   "Frames_fullnameofdirectory_by_unit_provider_v.ml";
+   "Fullnameofdirectory_by_environment_variable_provider_v.ml";
+   "Fullnameoffile_list_by_fullnameofdirectory_provider_v.ml";
+   "Fullnameoffile_list_by_fullnameofdirectory_register_v.ml";
+   "Global_databox_sole_index_by_databox_name_n_database_name_provider_v.ml";
+   "Global_databox_sole_index_by_databox_name_n_database_name_register_v.ml";
+   "Global_domainset_fullnameofdirectory_list_by_unit_provider_v.ml";
+   "Global_domainset_index_by_domain_name_provider_v.ml";
+   "Global_domainset_index_by_domain_name_register_v.ml";
+   "Global_domainset_name_list_by_unit_provider_v.ml";
+   "Global_domainset_name_list_by_unit_register_v.ml";
+   "Global_domainset_nameset_list_by_unit_provider_v.ml";
+   "Global_domainset_nameset_list_by_unit_register_v.ml";
+   "Global_domainset_sole_index_by_domain_name_provider_v.ml";
+   "Global_sole_index_by_context_name_provider_v.ml";
+   "Global_sole_index_by_context_name_register_v.ml";
+   "Global_sole_index_by_context_nameoffile_provider_v.ml";
+   "Localinput_name_as_inputbaseset_list_by_unit_provider_v.ml";
+   "Localinput_name_list_by_unit_provider_v.ml";
+   "Inputbox_name_n_inputbase_name_list_by_unit_provider_v.ml";
+   "Inputbox_fullnameoffile_by_inputbox_nameoffile_provider_v.ml";
+   "Inputbox_fullnameoffile_list_by_inputbasefiles_fullnameofdirectory_provider_v.ml";
+   "Inputbox_fullnameoffile_list_by_unit_provider_v.ml";
+   "Context_name_by_context_nameoffile_provider_v.ml";
+   "Inputbox_name_list_by_unit_provider_v.ml";
+   "Inputbox_nameoffile_list_by_inputbasefiles_fullnameofdirectory_provider_v.ml";
+   "Inputbox_nameoffile_list_by_inputbasefiles_fullnameofdirectory_register_v.ml";
+   "Inputbox_nameoffile_list_by_inputbasefiles_nameofdirectory_provider_v.ml";
+   "Inputbox_nameoffile_list_by_unit_provider_v.ml";
+   "Inputbasefiles_fullnameofdirectory_by_inputbasefiles_nameofdirectory_provider_v.ml";
+   "Inputbasefiles_fullnameofdirectory_list_by_domainfiles_fullnameofdirectory_provider_v.ml";
+   "Inputbasefiles_fullnameofdirectory_list_by_unit_provider_v.ml";
+   "Inputbasefiles_nameofdirectory_list_by_domainfiles_fullnameofdirectory_provider_v.ml";
+   "Inputbasefiles_nameofdirectory_list_by_domainfiles_nameofdirectory_provider_v.ml";
+   "Inputbasefiles_nameofdirectory_list_by_unit_provider_v.ml";
+   "Inputbaseset_nameofdirectory_list_by_unit_provider_v.ml";
+   "Internalsector_fullnameofdirectory_by_unit_provider_v.ml";
+   "Nameofcodefile_list_by_fullnameofdirectory_provider_v.ml";
+   "Nameofcodefile_list_by_fullnameofdirectory_register_v.ml";
+   "Nameofdirectory_list_by_fullnameofdirectory_provider_v.ml";
+   "Nameofdirectory_list_by_fullnameofdirectory_register_v.ml";
+   "Nameoffile_list_by_fullnameofdirectory_provider_v.ml";
+   "Nameoffile_list_by_fullnameofdirectory_register_v.ml";
+   "Nameofpurefile_list_by_fullnameofdirectory_provider_v.ml";
+   "Nameofpurefile_list_by_fullnameofdirectory_register_v.ml";
+   "Nameofsetfile_list_by_unit_provider_v.ml";
+   "Nameofusedfile_list_by_fullnameofdirectory_provider_v.ml";
+   "Nameofusedfile_list_by_fullnameofdirectory_register_v.ml";
+   "Productsector_fullnameofdirectory_by_unit_provider_v.ml";
+   "Sector_fullnameofdirectory_by_sector_nameofdirectory_provider_v.ml";
+   "Sector_index_by_sector_name_provider_v.ml";
+   "Sector_name_list_by_unit_provider_v.ml";
+   "Sector_name_list_by_unit_register_v.ml";
+   "Domain_name_n_sector_name_list_by_sector_name_provider_v.ml";
+   "Domain_name_n_sector_name_list_by_unit_provider_v.ml";
+   "Sector_name_n_domainset_nameofdirectory_list_by_sector_name_provider_v.ml";
+   "Sector_name_n_domainset_nameofdirectory_list_by_unit_provider_v.ml";
+   "Sector_name_n_domainset_nameofdirectory_list_by_unit_register_v.ml";
+   "Sector_nameofdirectory_list_by_unit_provider_v.ml";
+   "Sector_nameofdirectory_list_by_unit_register_v.ml";
+   "Sector_ordinal_by_sector_name_provider_v.ml";
+   "Sector_ordinallocal_by_sector_name_provider_v.ml";
+   "Son_context_name_list_by_context_name_provider_v.ml";
+   "Son_context_name_list_by_context_name_register_v.ml"]
+);;
+
+let fnd_sdb1 = Fullnameofdirectory_by_environment_variable_provider_v.provide "SDB1";;
+
+test_number 5 (
+(fnd_sdb1 : string ) =
+  "/home/colonna/sources/ocaml_top/setup/frames/externalsector/figuredata/db1pointsdata/db1pointsdataset/db1pointsdataset_symbols"
+);;
+
+let npf_sdb1_l = provide fnd_sdb1;;
+
+test_number 6 (
+(npf_sdb1_l : string list ) =
+  ["Db1figure_body_bundle_symbol_t.ml"; "Db1figure_body_bundle_symbol_v.ml";
+   "Db1figure_body_cluster_information_symbol_t.ml";
+   "Db1figure_body_cluster_information_symbol_v.ml";
+   "Db1figure_body_cluster_symbol_t.ml";
+   "Db1figure_body_cluster_symbol_v.ml";
+   "Db1figure_body_cluster_vertex_symbol_t.ml";
+   "Db1figure_body_cluster_vertex_symbol_v.ml";
+   "Db1figure_body_name_symbol_t.ml"; "Db1figure_body_name_symbol_v.ml";
+   "Db1figure_body_name_vertex_symbol_t.ml";
+   "Db1figure_body_name_vertex_symbol_v.ml";
+   "Db1figure_body_record_symbol_t.ml"; "Db1figure_body_record_symbol_v.ml";
+   "Db1figure_body_record_vertex_symbol_t.ml";
+   "Db1figure_body_record_vertex_symbol_v.ml";
+   "Db1figure_body_sequence_float_symbol_t.ml";
+   "Db1figure_body_sequence_float_symbol_v.ml";
+   "Db1figure_body_sequence_symbol_t.ml";
+   "Db1figure_body_sequence_symbol_v.ml"; "Db1figure_body_symbol_t.ml";
+   "Db1figure_body_symbol_v.ml"; "Db1figure_context_database_symbol_t.ml";
+   "Db1figure_context_database_symbol_v.ml";
+   "Db1figure_context_databox_symbol_t.ml";
+   "Db1figure_context_databox_symbol_v.ml";
+   "Db1figure_context_domain_symbol_t.ml";
+   "Db1figure_context_domain_symbol_v.ml";
+   "Db1figure_context_domaindata_symbol_t.ml";
+   "Db1figure_context_domaindata_symbol_v.ml";
+   "Db1figure_context_symbol_t.ml"; "Db1figure_context_symbol_v.ml";
+   "Db1figure_fence_basic_numerical_float_symbol_t.ml";
+   "Db1figure_fence_basic_numerical_float_symbol_v.ml";
+   "Db1figure_fence_basic_numerical_integer_symbol_t.ml";
+   "Db1figure_fence_basic_numerical_integer_symbol_v.ml";
+   "Db1figure_fence_basic_numerical_symbol_t.ml";
+   "Db1figure_fence_basic_numerical_symbol_v.ml";
+   "Db1figure_fence_basic_symbol_t.ml"; "Db1figure_fence_basic_symbol_v.ml";
+   "Db1figure_fence_basic_word_anycase_symbol_t.ml";
+   "Db1figure_fence_basic_word_anycase_symbol_v.ml";
+   "Db1figure_fence_basic_word_capitalized_symbol_t.ml";
+   "Db1figure_fence_basic_word_capitalized_symbol_v.ml";
+   "Db1figure_fence_basic_word_lowercase_symbol_t.ml";
+   "Db1figure_fence_basic_word_lowercase_symbol_v.ml";
+   "Db1figure_fence_basic_word_symbol_t.ml";
+   "Db1figure_fence_basic_word_symbol_v.ml";
+   "Db1figure_fence_basic_word_uppercase_symbol_t.ml";
+   "Db1figure_fence_basic_word_uppercase_symbol_v.ml";
+   "Db1figure_fence_cell_coordinates_symbol_t.ml";
+   "Db1figure_fence_cell_coordinates_symbol_v.ml";
+   "Db1figure_fence_cell_coordinates_units_symbol_t.ml";
+   "Db1figure_fence_cell_coordinates_units_symbol_v.ml";
+   "Db1figure_fence_cell_figure_symbol_t.ml";
+   "Db1figure_fence_cell_figure_symbol_v.ml";
+   "Db1figure_fence_cell_symbol_t.ml"; "Db1figure_fence_cell_symbol_v.ml";
+   "Db1figure_fence_keyword_coordinates_symbol_t.ml";
+   "Db1figure_fence_keyword_coordinates_symbol_v.ml";
+   "Db1figure_fence_keyword_coordinates_units_symbol_t.ml";
+   "Db1figure_fence_keyword_coordinates_units_symbol_v.ml";
+   "Db1figure_fence_keyword_symbol_t.ml";
+   "Db1figure_fence_keyword_symbol_v.ml"; "Db1figure_fence_symbol_t.ml";
+   "Db1figure_fence_symbol_v.ml";
+   "Db1figure_fence_token_coordinates_kind_symbol_t.ml";
+   "Db1figure_fence_token_coordinates_kind_symbol_v.ml";
+   "Db1figure_fence_token_coordinates_symbol_t.ml";
+   "Db1figure_fence_token_coordinates_symbol_v.ml";
+   "Db1figure_fence_token_coordinates_units_angle_symbol_t.ml";
+   "Db1figure_fence_token_coordinates_units_angle_symbol_v.ml";
+   "Db1figure_fence_token_coordinates_units_length_symbol_t.ml";
+   "Db1figure_fence_token_coordinates_units_length_symbol_v.ml";
+   "Db1figure_fence_token_coordinates_units_symbol_t.ml";
+   "Db1figure_fence_token_coordinates_units_symbol_v.ml";
+   "Db1figure_fence_token_figure_kind_symbol_t.ml";
+   "Db1figure_fence_token_figure_kind_symbol_v.ml";
+   "Db1figure_fence_token_figure_symbol_t.ml";
+   "Db1figure_fence_token_figure_symbol_v.ml";
+   "Db1figure_fence_token_symbol_t.ml"; "Db1figure_fence_token_symbol_v.ml";
+   "Db1figure_symbol_t.ml"; "Db1figure_symbol_v.ml"]
+);;
+

@@ -1,0 +1,109 @@
+1. CrhNhCr is correct : CrhNrhCr is not  
+
+2. Need to introduce the Geometrical state :
+
+   a. Spin state
+      H2C=CH2  is singlet
+      H2Cr-CrH2 is triplet state (rotation by 90°)
+
+      the same for O=C=O and O=Cr-O
+
+   b. Chiral state
+      L and D Ch state is induced by the Residue Chiral State L or D 
+      This state defines the Fragment Index which is then Left or Right
+
+      there must exist a function 
+
+     val chiral : chiral_state -> fragment_index 
+     inside  Fri_v.fragment_index_tree_off_tree
+     of molecule_tag_formula
+
+3. not databases but formulas
+
+4. symbol_formula and designator_formula and path_formula
+
+   designator is (symbol, state)
+   does a molecule_symbol_formula exist ?
+  
+   Yes.
+
+5. atom state
+   - protonation
+   - connection state
+      -- bonding valence 
+      -- linking tie 
+         c_ <=> (C, valence = 3, tie = 3) : potentiality linked to extended-symbol
+         actual state is (C, valence = 0, tie = 0) : designator
+
+
+    bond : state -> state
+
+   block state 
+   - protonation --> implies --> atomic protonation
+   - connection potentiality --> implies --> atomic connection
+
+6. Molecule formula should be expressed as a CLOSED tree.
+   i.e. a tree with a head_fragment as top
+               with tail_fragments as leaves.
+   ( a bridge is always a tail_fragment ) 
+
+7. in category_formula 
+   val map : ('a -> 'b) -> 'a category -> 'b category 
+
+8. Naming
+
+   In formulas instead of rn use ()n
+
+   ChChr4 => Ch(Ch)4 
+
+   {tree}
+   [list of trees]
+   (n Blocks repetition)n 
+
+9. Aminoacid starts with OhCo ends with ChNh2 ( or ChNh in Proline) 
+
+10. Fully symmetrical structures have to be defined by specific operators :
+    Ex. :  cch_cy6  => benzene
+           c_h_thd  => tetrahedrane 
+   postfixed or prefixed ?
+
+11. create polymer_molecule_symbol_formula_t.ml like symmetric_molecule_symbol_formula
+*** done ***
+
+
+12. residue -> peptideca (gly (embedded, nterminal), pro (embedded, nterminal), regular (embedded, nterminal)) 
+
+13. Capped_leafed_tree replace list by tuple to speciy in type the number and kind of sons.
+
+ a bifork block -> bifork fragment -> two sons in tree of specific type.
+* cap is very specific.
+* a son is always a grouping.
+
+molecule formula = cap * grouping_formula 
+
+grouping formula = 
+| fragment * grouping_forwards * grouping_sidewards
+| fragment * grouping_forwards * grouping_leftwards * grouping_rightwards
+
+
+Purpose : to type chilarity by associating the position in tuple to that in space.
+
+ 
+14. Peptide group  Ccoc Nch_
+
+15. Build segments by extension of Blocks.
+
+16. Build fragments from segments.
+
+17. Isolate database from code. 
+    polypeptide sequence
+    block segment fragment grouping formula lowest level 
+
+18. instead of a tree of marker
+    tree of symbol
+    instead of node list for sons (the list lose relative position)
+       Fork of one, two, three, four son in a well defined relative position
+
+    | Forth of  
+    | Left of , Right of, Left of Right of ... North, West, East ...
+

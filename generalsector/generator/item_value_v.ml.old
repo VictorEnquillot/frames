@@ -1,0 +1,67 @@
+(** {3 The functionalities for a Value for a Item.}  *)
+
+let nam_mod = "Item_value_v";;
+
+(** {6 Modules.} *)
+
+module Cmtp_v = Constructor_marker_tree_provider_v
+module Cls_v = Caml_line_symbol_v
+module Clv_v = Caml_line_value_v
+module Cns_v = Constructor_symbol_v
+module Cpm_v = Caml_paragraph_marker_v
+module Cps_t = Caml_paragraph_symbol_t
+module Cps_v = Caml_paragraph_symbol_v
+module Cpv_v = Caml_paragraph_value_v
+module Dbt_v = Doublet_v
+module Ecm_v = Entitycategorymodule_v
+module Fln_v = Filename_p
+module Itf_t = Item_formula_t
+module Itf_v = Item_formula_v
+module Its_t = Item_symbol_t
+module Its_v = Item_symbol_v
+module Itv_t = Item_value_t
+module Kyl_v = Key_list_v
+module Lst_v = List_v
+module Tre_t = Tree_t
+module Tre_v = Tree_v
+
+(** {6 Making.} *)
+
+let make kyl_itm =
+  let frm_itm = Itf_v.retrieve kyl_itm in
+  Tre_v.map Cpv_v.make frm_itm
+;;
+
+(** {6 Extracting.} *)
+
+(** {6 Naming.} *)
+
+let name_tree val_itm =
+  Tre_v.map Cpv_v.name val_itm
+;;
+
+let name_list kyl_itm =
+  let frm_itm = Itf_v.retrieve kyl_itm in
+  let smb_cli_l = 
+    Itf_v.caml_line_symbol_list_off_item_formula frm_itm 
+  in 
+  List.map Clv_v.make smb_cli_l
+;;
+
+let name kyl_itm =
+  let str_l = name_list kyl_itm in
+  Lst_v.name (Format.sprintf "%s") str_l
+;;
+
+(** {6 Printing.} *)
+
+let print ppf kyl_itm =
+  Format.fprintf ppf "%s" (name kyl_itm)
+;;
+
+(** {6 Writing.} *)
+
+let write oc kyl_itm =
+  output_string oc (name kyl_itm) 
+;;
+

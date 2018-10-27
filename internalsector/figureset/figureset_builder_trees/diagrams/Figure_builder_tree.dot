@@ -1,0 +1,54 @@
+        digraph Frames {
+                size="40,15";
+                node [fontsize=50];
+                edge [arrowhead = "vee", arrowsize = "2.0", style="solid", taillabel = ""];
+
+  Title [
+  	label = "The Builder Tree\nDomain Figure\nDatabase Db1points", shape=box, fontname=Courier, color=yellow, style=filled
+  ];
+
+
+  "Context\nSector\nExternal"  [color=blue];
+  "Context\nDomain\nFigure" [color=blue];
+  "Context\nDomain\nFigure" [color=blue];
+  "Context\nDatabase\nDb1points" [color=lightpink, style=filled];
+  "Context\nDatabase\nDb2points" [color=lightpink, style=filled];
+  "Context\nDatabox\nTriangle_T" [color=lightskyblue2, style=filled];
+  "Context\nDatabox\nSegment_S"  [color=lightskyblue1, style=filled];
+  "Context\nDatabox\nPoint"      [color=lavender, style=filled];
+
+  "Set Body Triangle T"  [color=lightskyblue2, style=filled];
+  "Set Body Segment S"   [color=lightskyblue1, style=filled];
+  "Set Fence Point P"    [color=lavender, style=filled];
+
+  "Set Fence Point T_a"  [color=lavender, style=filled];
+  "Set Fence Point T_b"  [color=lavender, style=filled];
+  "Set Fence Point T_c"  [color=lavender, style=filled];
+  "Set Fence Point S_a"  [color=lavender, style=filled];
+  "Set Fence Point S_b"  [color=lavender, style=filled];
+  "Set Fence Point P_a"  [color=lavender, style=filled];
+
+  Title -> "Context\nSector\nExternal" [ style="invis"];
+
+  "Context\nSector\nExternal" -> "Context\nDomain\nFigure";	
+  "Context\nDomain\nFigure" -> "Context\nDatabase\nDb1points";
+  "Context\nDomain\nFigure" -> "Context\nDatabase\nDb2points";
+  "Context\nDatabase\nDb1points" -> "Context\nDatabox\nTriangle_T"; 
+
+  "Context\nDatabox\nTriangle_T" -> "Set Body Triangle T";
+  "Set Body Triangle T" -> "Set Fence Point T_a";
+  "Set Body Triangle T" -> "Set Fence Point T_b";
+  "Set Body Triangle T" -> "Set Fence Point T_c";
+
+  "Context\nDatabase\nDb1points" -> "Context\nDatabox\nSegment_S"; 
+  "Context\nDatabox\nSegment_S" -> "Set Body Segment S";	 
+  "Set Body Segment S" -> "Set Fence Point S_a";
+  "Set Body Segment S" -> "Set Fence Point S_b";
+
+  "Context\nDatabase\nDb1points" -> "Context\nDatabox\nPoint"; 
+  "Context\nDatabox\nPoint" -> "Set Fence Point P";	 
+  "Set Fence Point P" -> "Set Fence Point P_a";
+
+
+}
+

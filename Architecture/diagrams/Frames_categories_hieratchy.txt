@@ -1,0 +1,22 @@
+       Target
+         |
+         v
+       Property (Ex. : Perimeter if a Triangle)
+         |
+         V
+       Value    (A Datastructure filled with the sons values; 
+         |       necessary to calculate a property)        
+         |
+         v
+       Formula  (A Datastructure filled with the sons Tags)
+         |
+         v
+       Interface
+     /           \
+    /             \
+   v               v
+Tag (Symbol)      Database  
+                  /     \                                     
+                 v       v                        
+         Alien Database  Input file  
+

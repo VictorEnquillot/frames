@@ -1,0 +1,11 @@
+coordinates_units_length  nanometer 
+coordinates_kind  cartesian 
+figure_kind triangle 
+figure_name T
+vertex T_A       0.1 0.2 -0.2
+vertex T_B       0.  0.  -0.2
+vertex T_C       0.2 0.  -0.2
+
+
+
+# 1.73205080756887719

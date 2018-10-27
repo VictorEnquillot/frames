@@ -1,0 +1,71 @@
+Program Wikitool.
+File : $FRM/wikitoolset/README
+
+---- But ----
+Ce programme cherche à :
+* lire un document en PDF ou depuis une URL
+* le transformer en texte ascii.
+* gérer les références pour produire des références MediaWiki
+* produire un document au format MediaWiki
+
+---- Définitions ----
+
+Entities :
+
+* DocumentPdf
+Quels sont les types de Document PDF que l'on doit manipuler ? (Symbol)
+ - Rue89
+ - LeMondeDiplomatique
+
+* DocumentText
+
+* DocumentMediaWiki
+
+Comment est constitué Document ? (Formula)
+* une Line est une liste de Word
+* un Paragraph est une liste de Line. Les Paragraph sont séparés par une Line blanche ou <CR>.
+* un TitledParagraph est une liste de Paragraph
+* un Document est un Tree de Paragraph 
+* une Picture
+* un Table
+* un Web_link
+
+* Format 
+il dépend du Site et défini la forme du Document
+
+* Reference des textes
+Il y en a de plusieurs sortes selon les Sites: Rue89, LeMondeDiplomatique
+
+* ReferenceText 
+* ReferenceIndex
+[4]  ou [ab] ou [a] ou [ab1] ou [1aa] ou [a1] ou [1a]
+C'est un Number entier positif ou un Word ou une Letter ou un Word_number ou un Number_word
+ou une Letter_number or un Number_letter
+* Url
+
+------------------------ Target -----------------------
+
+                 [ Page MediaWiki ]
+ 
+                         |
+                         v
+
+                [ Reference Mediawiki ]
+
+                         |
+                         v
+
+                [ Reference Text ]
+
+                         |
+                         v
+            ------ (Leaf Data) ------
+                  [ Document Text ]   
+            ------------------------- 
+                         | 
+                         v
+                  [ Document Pdf ]   
+
+                         |
+                         v
+                    [ Url Pdf ]

@@ -1,0 +1,117 @@
+constructors generatorset                     = section
+
+constructors section                          = section_for_any section_for_formula section_for_symbol
+ 
+constructors section_for_any                  = section_for_any_body  section_for_any_header  section_for_any_footer
+
+constructors section_for_any_body             = section_for_any_body_son  section_for_any_body_top  section_for_any_body_top_main 
+
+constructors section_for_any_body_son         = pipe_topson_any_type_notleaf_constructors 
+constructors section_for_any_body_top         = sprintf_for_any_fullname sprintf_for_any_longname 
+
+constructors section_for_any_body_top_main    = make_tag_top 
+
+constructors section_for_any_footer           = ending double_semicolon 
+
+constructors section_for_any_header           = section_for_any_header_constant section_for_any_header_top
+
+constructors section_for_any_header_constant  = let_documentation let_nam_cod_equal type_et_any_equal
+
+constructors section_for_any_header_top       = camlfile_title item_title let_name_argument_equal let_longname_argument_equal let_fullname_argument_equal let_retrieve_tag_top_equal let_string_off_argument_equal
+
+# --------------------------------------------- for_formula
+
+constructors section_for_formula                       =  section_for_formula_body   section_for_formula_header
+
+constructors section_for_formula_body                  =   section_for_formula_body_builder_data   section_for_formula_body_domain_builder   section_for_formula_body_domain_data   section_for_formula_body_son_builder   section_for_formula_body_son_top   section_for_formula_body_son_top_builder section_for_formula_body_son_top_data   section_for_formula_body_son_top_main section_for_formula_body_son_top_main_builder   section_for_formula_body_top   section_for_formula_body_top_builder   section_for_formula_body_top_builder_data   section_for_formula_body_top_data   section_for_formula_body_top_main_builder   section_for_formula_body_top_main_data
+
+constructors section_for_formula_body_builder_data      = data_formula_list
+
+constructors section_for_formula_body_domain_builder = builder_tag_list
+
+constructors section_for_formula_body_domain_data    = data_tag_list
+
+constructors section_for_formula_body_son_builder       = pipe_topson_formula_type_bare_constructors pipe_topson_formula_type_ofstring_constructors 
+
+constructors section_for_formula_body_son_top           = symbol_of_formula_topson_pattern_bare symbol_of_formula_topson_pattern_notleaf symbol_of_formula_topson_pattern_ofstring
+
+constructors section_for_formula_body_son_top_builder   = builder_tag_list_topson_pattern_bare_for_formula  builder_tag_list_topson_pattern_notleaf_for_formula  builder_tag_list_topson_pattern_ofstring_for_formula
+
+constructors section_for_formula_body_son_top_data      = data_tag_list_topson_pattern_bare_for_formula  data_tag_list_topson_pattern_notleaf_for_formula  data_tag_list_topson_pattern_ofstring_for_formula
+
+constructors section_for_formula_body_son_top_main      = make_topson_pattern_notleaf_for_formula
+
+constructors section_for_formula_body_son_top_main_builder = make_topson_pattern_bare_for_formula make_topson_pattern_ofstring_for_formula
+
+constructors section_for_formula_body_top               =   symbol_of_formula_in_name_top  symbol_of_formula_in_string_off_top
+
+constructors section_for_formula_body_top_builder       =   builder_formula_list builder_tag_list_of_tag_for_formula    iter2_on_builder_tag_list    iter_on_builder_tag_list   map2_on_builder_tag_list   map_on_builder_tag_list
+
+constructors section_for_formula_body_top_builder_data  =   documentation_list_for_formula
+
+constructors section_for_formula_body_top_data          =   data_tag_list_of_tag_for_formula 
+
+constructors section_for_formula_body_top_main_builder  =   builder_node_sole_index_builder_list   
+
+constructors section_for_formula_body_top_main_data     =   builder_stem_sole_index_data_list   
+
+
+
+
+constructors section_for_formula_header                = section_for_formula_header_constant   section_for_formula_header_top_builder   section_for_formula_header_top_data   section_for_formula_header_top_main
+
+constructors section_for_formula_header_constant       = let_symbol_of_formula_equal_function
+
+constructors section_for_formula_header_top_builder    = let_builder_tag_list_off_top_formula let_builder_tag_list_off_top_tag let_iter2_for_formula let_iter_for_formula let_map2_for_formula let_map_for_formula
+
+constructors section_for_formula_header_top_data       = let_data_tag_list_off_top_formula let_data_tag_list_off_top_tag
+
+constructors section_for_formula_header_top_main       = let_build_n_store_basic_sons  let_build_n_store_proper_sons  let_make_arguments_equal_match_with
+
+# --------------------------------------------- for_symbol
+
+constructors section_for_symbol                        = section_for_symbol_header section_for_symbol_body section_for_symbol_footer
+
+# for_symbol_header
+
+constructors section_for_symbol_header                 = section_for_symbol_header_constant section_for_symbol_header_current_son_top section_for_symbol_header_current_top section_for_symbol_header_son section_for_symbol_header_son_top 
+
+constructors section_for_symbol_header_constant        =   let_make_equal_function   let_make_nam_s_equal   let_make_of_topson_bare_nam_equal   let_make_of_topson_notleaf_nam_s_equal   let_make_of_topson_ofstring_nam_s_equal   let_name_equal_function   let_name_of_topson_bare_equal_function   let_name_of_topson_notleaf_equal_function   let_name_of_topson_ofstring_equal_function   let_string_off_equal_function   let_string_off_of_topson_bare_equal_function   let_string_off_of_topson_notleaf_equal_function   let_string_off_of_topson_ofstring_equal_function
+
+constructors section_for_symbol_header_current_son_top =   let_abbreviate_grandson_bare   let_abbreviate_grandson_ofstring 
+
+constructors section_for_symbol_header_son             =   let_is_topson_bare   let_is_topson_ofstring
+
+constructors section_for_symbol_header_son_top         =   let_abbreviate_topson_bare   let_abbreviate_topson_ofstring   let_is_topson_notleaf_symbol_off_top_symbol_equal_function   let_topson_notleaf_symbol_off_top_symbol_equal_function   let_top_symbol_of_topson_notleaf_symbol_argument_equal 
+
+constructors section_for_symbol_header_current_top     =   let_grandson_notleaf_symbol_off_top_symbol_argument_equal   let_is_grandson_bare   let_is_grandson_notleaf_symbol_off_top_symbol_argument_equal   let_is_grandson_ofstring   let_top_symbol_of_grandson_notleaf_symbol_argument_equal
+ 
+# for_symbol_body
+
+constructors section_for_symbol_body                   =   section_for_symbol_body_current_son_top  section_for_symbol_body_son  section_for_symbol_body_son_top  section_for_symbol_body_top
+
+constructors section_for_symbol_body_current_son_top   =   grandson_symbol_off_topson_notleaf_symbol_off_top_symbol   if_not_is_topson_begin_bare_end   if_not_is_topson_begin_ofstring_end   if_not_is_topson_begin_notleaf_end   upgrade_grandson_symbol 
+
+constructors section_for_symbol_body_son               =   section_for_symbol_body_son_bare   section_for_symbol_body_son_ofstring 
+
+constructors section_for_symbol_body_son_bare          =   make_ecstring_pattern_bare_for_symbol   pipe_topson_symbol_type_bare_constructors
+
+constructors section_for_symbol_body_son_ofstring      =   make_ecstring_pattern_ofstring_for_symbol   pipe_topson_symbol_type_ofstring_constructors
+
+constructors section_for_symbol_body_son_top           =   is_one_topson_bare_off_pattern_for_symbol   is_one_topson_notleaf_off_pattern_for_symbol   is_one_topson_ofstring_off_pattern_for_symbol   is_onlyson_bare_off_pattern_for_symbol   is_onlyson_notleaf_off_pattern_for_symbol   is_onlyson_ofstring_off_pattern_for_symbol   name_topson_pattern_bare_for_symbol   name_topson_pattern_notleaf_for_symbol   name_topson_pattern_ofstring_for_symbol   one_topson_off_pattern_for_symbol   onlyson_off_pattern_for_symbol   string_off_topson_pattern_bare_for_symbol   string_off_topson_pattern_notleaf_for_symbol   string_off_topson_pattern_ofstring_for_symbol   try_make_of_topson_with_failure_arrow   try_name_of_topson_with_failure_arrow   try_string_off_of_topson_with_failure_arrow   try_top_of_topson_with_failure_arrow   upgrade_topson_symbol
+
+constructors section_for_symbol_body_top               =   documentation_list_for_symbol
+
+# for_symbol_footer
+
+constructors section_for_symbol_footer                 =   section_for_symbol_footer_top
+
+constructors section_for_symbol_footer_top             =   failwith_not_a_topson_notleaf   let_underscore_print_error_failwith_make   let_underscore_print_error_failwith_name   let_underscore_print_error_failwith_string_off   pipe_underscore_failwith_not_a_topson_bare_make   pipe_underscore_failwith_not_a_topson_bare_name   pipe_underscore_failwith_not_a_topson_bare_string_off   pipe_underscore_failwith_not_a_topson_notleaf_make   pipe_underscore_failwith_not_a_topson_notleaf_name   pipe_underscore_failwith_not_a_topson_notleaf_string_off   pipe_underscore_failwith_not_a_topson_ofstring_make   pipe_underscore_failwith_not_a_topson_ofstring_name   pipe_underscore_failwith_not_a_topson_ofstring_string_off   print_fatal_error_make   print_fatal_error_name   print_fatal_error_string_off
+
+# for_tag
+
+# for_tag_header
+
+# for_tag_body
+
+# for_tag_footer

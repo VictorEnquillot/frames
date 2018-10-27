@@ -1,0 +1,50 @@
+constructors figure                          =   wavefunction 
+
+constructors wavefunction                    =   wavefunction_body   wavefunction_context   wavefunction_closure
+
+constructors wavefunction_context            =   wavefunction_context_createdby   wavefunction_context_domain
+
+constructors wavefunction_context_domain     =   wavefunction_context_domain_constructor:ofstring
+
+constructors wavefunction_context_createdby  =   wavefunction_context_database:ofstring   wavefunction_context_input_file:ofstring
+
+
+# body
+
+
+constructors wavefunction_body                                   =   wavefunction_body_spatial_manye   wavefunction_body_total 
+
+constructors wavefunction_body_spatial_manye                     =   wavefunction_body_spatial_manye_analytic   wavefunction_body_spatial_manye_determinant    wavefunction_body_spatial_manye_numerical   wavefunction_body_spatial_manye_fragment
+
+constructors wavefunction_body_spatial_manye_determinant         =   wavefunction_body_spatial_manye_determinant_bare  wavefunction_body_spatial_manye_determinant_scaled  
+
+constructors wavefunction_body_spatial_manye_determinant_bare    =   wavefunction_body_spatial_manye_determinant_bare_cc:ofstring   wavefunction_body_spatial_manye_determinant_bare_ci:ofstring   wavefunction_body_spatial_manye_determinant_bare_hf:ofstring   wavefunction_body_spatial_manye_determinant_bare_mcscf:ofstring   wavefunction_body_spatial_manye_determinant_bare_rhf:ofstring   wavefunction_body_spatial_manye_determinant_bare_uhf:ofstring
+
+constructors wavefunction_body_spatial_manye_fragment            =    wavefunction_body_spatial_manye_fragment_bare:ofstring   wavefunction_body_spatial_manye_fragment_csf:ofstring   wavefunction_body_spatial_manye_fragment_jastrowed:ofstring   wavefunction_body_spatial_manye_fragment_jastrowed_scaled:ofstring
+
+
+
+constructors wavefunction_body_total         =   wavefunction_body_total_manye   wavefunction_body_total_orbital
+
+constructors wavefunction_body_total_manye   =   wavefunction_body_total_manye_analytic   wavefunction_body_total_manye_determinant    wavefunction_body_total_manye_numerical
+
+constructors wavefunction_body_total_orbital =   wavefunction_body_total_orbital_analytic:ofstring   wavefunction_body_total_orbital_numerical:ofstring
+
+# closure 
+
+constructors wavefunction_closure                           =   wavefunction_closure_coefficient   wavefunction_closure_jastrow_factor   wavefunction_closure_spatial_orbital   wavefunction_closure_spin   
+
+constructors wavefunction_closure_jastrow_factor            =   wavefunction_closure_jastrow_factor_constructor:ofstring
+
+
+constructors wavefunction_closure_spatial_orbital           =   wavefunction_closure_spatial_orbital_mo   wavefunction_closure_spatial_orbital_so   wavefunction_closure_spatial_orbital_numerical
+
+constructors wavefunction_closure_spin                      =   wavefunction_closure_spin_up:ofstring   wavefunction_closure_spin_down:ofstring
+
+constructors wavefunction_closure_spatial_orbital_numerical =   wavefunction_closure_spatial_orbital_numerical_constructor:ofstring
+
+constructors wavefunction_closure_spatial_orbital_mo        =   wavefunction_closure_spatial_orbital_mo_constructor:ofstring
+
+constructors wavefunction_closure_spatial_orbital_so        =   wavefunction_closure_spatial_orbital_so_constructor:ofstring
+
+constructors wavefunction_closure_coefficient               =   wavefunction_closure_coefficient_determinant:ofstring   wavefunction_closure_coefficient_jastrow:ofstring   wavefunction_closure_coefficient_fragment:ofstring

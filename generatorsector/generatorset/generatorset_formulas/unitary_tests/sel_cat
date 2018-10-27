@@ -1,0 +1,7 @@
+let sel_cat =
+  match nam_cat with
+  | "symbol" -> Category_symbol_v.is_symbol_off_category_symbol
+  | "formula" -> Category_symbol_v.is_formula_off_category_symbol
+  | _ -> failwith ("nam_cat >"^nam_cat^"< is not defined")
+;;
+ 

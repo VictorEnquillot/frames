@@ -1,0 +1,1446 @@
+  generation of >mli< code
+result  >(
+, module Mty_t = Multiplicity_t
+, module Brs_t = Bridge_symbol_t
+, 
+,     and zero or several 'onetied' atoms exclusively bonded to it. 
+, 
+,     A Block is never closed (only Molecules are closed) as an element of
+,     the bonding system.
+, 
+,     - A Block Symbol may be an arbitrary name it is NOT a chemical formula. 
+,       For convenience it is built according to these rules :
+, 
+,       1. The first part is the atom_symbol of the core atom.
+,       2. then follows the concatenation of the `leaf' atom_symbol
+,          the order ( if needed ) is F(orth), L(eft), U(p), R(ight), D(own).
+,       3. repeated atom_symbols are indicated by an integer (C_h_4, Oh2)
+, 
+,       4. the charge if any is indicated by 
+,           -- adding p to the atom symbol for cation Np (N+), Capp (Ca++)
+,           -- adding m to the atom symbol or block for anion Ccoc2 (Cdodo-)
+, 
+,       5. the conjugation is noted by adding r to the atom symbol
+, 
+,       6. to simplify Arp is noted As (Ns of Guanidinium)
+, 
+,       7. Sometimes it is necessary to tell how many ties a symbol makes :
+,          C makes 4 ties 
+,          Cd make 3 ties 
+,          Ct make two ties        
+, 
+,     - A Block Symbol caracterizes the chemical formula 
+,                                   and the bonding properties of the Block ??? 
+, 
+,      Ndodmenclature
+, 
+,      zero, one, fork mean no, one tie of whatever bond, one fork of any kind.
+, 
+,      onefork is one tie at left and a fork at right.
+, 
+,      Symbol                        
+, 
+,      c   conjugation 
+,      s   conjugation for N+ (rp = s) in Guanidinium
+,      d   double bond                =
+,      t   triple bond                #
+,      u   N+ and triple bond         #
+,      p   cation
+,      m   anion
+, 
+,      bifork with 2 _            <
+,      bifork with 1 = and 1 _    <.
+,      bifork with 1 = and 1 =    <<
+,      trifork with 3 _           <-
+,      quadrifork with 4 _        <:
+, 
+, *) 
+, 
+, type block_symbol =
+,   | Zeroone_block_symbol of zeroone_block_symbol     (* o|-                 zo *)
+,   | Zeroend_block_symbol of zeroend_block_symbol     (* o|o or o|<          ze *)
+,   | Oneone_block_symbol of oneone_block_symbol       (* -|-                 oo *)
+,   | Oneend_block_symbol of oneend_block_symbol       (* -|< or -|<- or -|o  oe *)
+, 
+, and zeroend_block_symbol = (* o|o or o|< ze *)
+,   | Zerozero_block_symbol of zerozero_block_symbol   (* o|o                 zz *)
+,   | Zerofork_block_symbol of zerofork_block_symbol   (* o|< or o|<- or o|<: zf *)
+, 
+, and zerozero_block_symbol = (* o|o *)
+,   | Zz_C_h_4   (* Ch4 *)
+,   | Zz_Ccoc2h_ (* Formate anion *)
+,   | Zz_Cdod2   (* Co2 *)
+,   | Zz_Nph_4   (* N+h4 *)
+,   | Zz_N_h_3   (* Nh3 *)
+,   | Zz_H_h_    (* H2 *)
+,   | Zz_Odod    (* O2 *)
+,   | Zz_O_h_2   (* Oh2 *)
+,   | Zz_S_h_2   (* Sh2 *)
+,   | Zz_Odsto_  (* So2 O=S-O *)
+, 
+, and zerofork_block_symbol = 
+,   | Zerobifork_block_symbol of zerobifork_block_symbol         (* o|< *)
+,   | Zerotrifork_block_symbol of zerotrifork_block_symbol       (* o|<- *)
+,   | Zeroquadrifork_block_symbol of zeroquadrifork_block_symbol (* o|<: *)
+, 
+, and zerobifork_block_symbol = (* o|< *)
+,   | Zerobiforksinglesingle_block_symbol of zerobiforksinglesingle_block_symbol
+,   | Zerobiforksingledouble_block_symbol of zerobiforksingledouble_block_symbol
+,   | Zerobiforkdoubledouble_block_symbol of zerobiforkdoubledouble_block_symbol
+,   
+, and zerobiforksinglesingle_block_symbol =  (* B< bifork with 1 _ and 1 _ *)
+,   | Zbss_C_h_2  (* C_h_2< *)
+,   | Zbss_Cdod   (* Cdod< *)
+,   | Zbss_Cch_   (* Cch_< *)
+,   | Zbss_N_h_   (* Nh< *)
+,   | Zbss_Nsh_2  (* N+h2< Guanidinium *)
+,   | Zbss_Nc     (* Nc< *)
+,   | Zbss_Nsh_   (* Nsh< *)
+, 
+, and zerobiforksingledouble_block_symbol =  (* B<. bifork with 1 = and 1 _ *)
+,   | Zbsd_C_h_   (* C_h_<. *)
+,   | Zbsd_Cc     (* Cc<. *)
+,   | Zbsd_Nph_   (* N+h<. *)
+,   | Zbsd_Ns     (* Ns<. *)
+, 
+, and zerobiforkdoubledouble_block_symbol =  (* B<< bifork with 1 = and 1 _ *)
+,   | Zbdd_Cq     (* C<< *)  
+,   | Zbdd_Nq     (* N+<< *)
+, 
+, and zerotrifork_block_symbol = (* o|< *)
+,   | Zt_C_h_     (* C_h_<- *)
+,   | Zt_Cc       (* Cc<- *)
+,   | Zt_N_       (* N<- *)
+,   | Zt_Nph_     (* N+h<- *)
+,   | Zt_Ns       (* Ns<-  N+ in conjugation *)
+, 
+, and zeroquadrifork_block_symbol = (* o|.< *)
+,   | Zq_C_       (* C<: *)
+,   | Zq_Np       (* N+<: *)
+, 
+, and zeroone_block_symbol =
+,   | Zeroonesingle_block_symbol of zeroonesingle_block_symbol 
+,   | Zeroonedouble_block_symbol of zeroonedouble_block_symbol
+,   | Zeroonetriple_block_symbol of zeroonetriple_block_symbol
+, 
+, and zeroonesingle_block_symbol =
+,   | Zos_C_h_3    (* C_h_3-  *)
+,   | Zos_Cdodh_   (* Cdodh- *)
+,   | Zos_Ccoc2    (* Coo- anion *)
+,   | Zos_Cch_2    (* Ch2- *)
+,   | Zos_N_h_2    (* N_h_2- *) 
+,   | Zos_Ndod     (* Ndod- *)
+,   | Zos_Nsoc2    (* Nsoc2- *) 
+,   | Zos_Nph_3    (* N+h3- *)
+,   | Zos_Nsh_2    (* Nsh_2- *)
+,   | Zos_O_h_     (* O_h_- *)
+,   | Zos_S_h_     (* S_h_- *)
+,   | Zos_S_o_     (* S_o_- *)
+, 
+, and zeroonedouble_block_symbol =
+,   | Zod_Cdh_2    (* Cdh2= *)
+,   | Zod_Cdod     (* Co= *)
+,   | Zod_Ndh_     (* Nh= *)
+,   | Zod_Noh_2    (* Noh2=  No is N+ and N= *) 
+, 
+, and zeroonetriple_block_symbol =
+,   | Zot_Cth_     (* Ch_# *)
+, 
+, and oneend_block_symbol =  (* -|< or -|<- or -|o  of *)
+,   | Onefork_block_symbol of onefork_block_symbol     (* -|< or -|<-    of *)
+,   | Onezero_block_symbol of onezero_block_symbol     (* -|o            oz *)
+, 
+, and onezero_block_symbol =
+,   | Onesinglezero_block_symbol of onesinglezero_block_symbol 
+,   | Onedoublezero_block_symbol of onedoublezero_block_symbol
+,   | Onetriplezero_block_symbol of onetriplezero_block_symbol
+,   | Halfbridge_block_symbol of Brs_t.bridge_symbol
+, 
+, and onesinglezero_block_symbol =
+,   | Osz_C_h_3   (* -C_h_3  *)
+,   | Osz_Cch_2   (* -Cch_2 *)
+,   | Osz_Ccoc2   (* -Coo Carboxyl anion *)
+,   | Osz_Cdod    (* -Coo Carbonyl *)
+,   | Osz_Cdodh_  (* -Coh *)
+,   | Osz_N_h_2   (* -Nh2 *) 
+,   | Osz_Ndod    (* -No *)
+,   | Osz_Nph_3   (* -N+h_3 *)
+,   | Osz_Nsh_2   (* -Nh2 *)
+,   | Osz_Nsoc2   (* -Noo *) 
+,   | Osz_O_h_    (* -Oh Hydroxyl *)
+,   | Osz_S_h_    (* -Sh *)
+,   | Osz_Sdod    (* -So *)
+, 
+, and onedoublezero_block_symbol =
+,   | Odz_Cdh_2    (* =Ch2 *)
+,   | Odz_Cdod     (* =Co *)
+,   | Odz_Ndh_     (* =Nh *)
+,   | Odz_Nph_2    (* =N+h2 *) 
+, 
+, and onetriplezero_block_symbol =
+,   | Otz_Cth_     (* #Cth_ *)
+, 
+, and oneone_block_symbol = 
+,   | Onesingleonesingle_block_symbol of onesingleonesingle_block_symbol 
+,   | Onesingleonedouble_block_symbol of onesingleonedouble_block_symbol
+,   | Onesingleonetriple_block_symbol of onesingleonetriple_block_symbol
+,   | Onedoubleonesingle_block_symbol of onedoubleonesingle_block_symbol
+,   | Onedoubleonedouble_block_symbol of onedoubleonedouble_block_symbol
+,   | Onetripleonesingle_block_symbol of onetripleonesingle_block_symbol
+, 
+, and onesingleonesingle_block_symbol = (* -B- *)
+,   | Osos_C_h_2   (* -C_h_2- *)
+,   | Osos_Cdod    (* -Cdod- *)
+,   | Osos_Cch_    (* -Cch_- *) 
+,   | Osos_N_h_    (* -Nh- *)
+,   | Osos_Nph_2   (* -N+h2- *)
+,   | Osos_Nsh_    (* -Nh-  Nsh Guanidinium radical *)
+,   | Osos_Nc      (* -Nc- *)
+,   | Osos_O_      (* -O- *)
+,   | Osos_S_      (* -S- *)
+, 
+, and onesingleonedouble_block_symbol = (* -B= *)
+,   | Osod_C_h_    (* -Ch= *)
+,   | Osos_Nd      (* -N= *)
+,   | Osod_Nph_    (* -N+h= *)
+, 
+, and onesingleonetriple_block_symbol = (* -B# *)
+,   | Osot_Ct      (* -C# *)
+,   | Osot_Nu      (* -N# *)
+, 
+, and onedoubleonesingle_block_symbol =
+,   | Odos_Cdh_    (* =Ch_- *)
+,   | Odos_Nd      (* =N- *)
+,   | Odos_Nph_    (* =N+h_- *)
+, 
+, and onedoubleonedouble_block_symbol =
+,   | Odod_Cd      (* =Cd= *)
+,   | Odod_Nq      (* =N+= *)
+, 
+, and onetripleonesingle_block_symbol =
+,   | Otos_Ct      (* #C- *)
+,   | Otos_Nu      (* #N+- *)
+, 
+, and onefork_block_symbol =
+,   | Onebifork_block_symbol of onebifork_block_symbol
+,   | Onetrifork_block_symbol of onetrifork_block_symbol
+, 
+, and onebifork_block_symbol = (* -|< *)
+,   | Onesinglebiforksinglesingle_block_symbol of onesinglebiforksinglesingle_block_symbol
+,   | Onedoublebiforksinglesingle_block_symbol of onedoublebiforksinglesingle_block_symbol
+, 
+, and onesinglebiforksinglesingle_block_symbol = (* -B< *)
+,   | Osbss_C_h_   (* -Ch< *)
+,   | Osbss_Cc     (* -Cc< *)
+,   | Osbss_N_     (* -N< *)
+,   | Osbss_Ndcd   (* -N=C< *)
+,   | Osbss_Nph_   (* -N+h< *)
+,   | Osbss_Nsh_   (* -Nsh< cation Guanidinium *)
+, 
+, and onedoublebiforksinglesingle_block_symbol = (* =B< *)
+,   | Odbss_Cd     (* =C< *)
+,   | Odbss_No     (* =N+< *)
+, 
+, and onetrifork_block_symbol = (* -|<- *)
+,   | Onesingletriforksinglesinglesingle_block_symbol of onesingletriforksinglesinglesingle_block_symbol
+, 
+, and onesingletriforksinglesinglesingle_block_symbol = (* -B<- *)
+,   | Ostsss_C_    (* -C<- *)
+,   | Ostsss_Np    (* -N+<- *)
+, ;;
+)<
+here: entity_name >block<
+here: category_name >symbol<
+                          "Halfbridge_block_symbol" : onezero_block_symbol
+                                         "Odbss_Cd" : onedoublebiforksinglesingle_block_symbol
+                                         "Odbss_No" : onedoublebiforksinglesingle_block_symbol
+                                          "Odod_Cd" : onedoubleonedouble_block_symbol
+                                          "Odod_Nq" : onedoubleonedouble_block_symbol
+                                        "Odos_Cdh_" : onedoubleonesingle_block_symbol
+                                          "Odos_Nd" : onedoubleonesingle_block_symbol
+                                        "Odos_Nph_" : onedoubleonesingle_block_symbol
+                                        "Odz_Cdh_2" : onedoublezero_block_symbol
+                                         "Odz_Cdod" : onedoublezero_block_symbol
+                                         "Odz_Ndh_" : onedoublezero_block_symbol
+                                        "Odz_Nph_2" : onedoublezero_block_symbol
+                           "Onebifork_block_symbol" : onefork_block_symbol
+         "Onedoublebiforksinglesingle_block_symbol" : onebifork_block_symbol
+                  "Onedoubleonedouble_block_symbol" : oneone_block_symbol
+                  "Onedoubleonesingle_block_symbol" : oneone_block_symbol
+                       "Onedoublezero_block_symbol" : onezero_block_symbol
+                              "Oneend_block_symbol" : block_symbol
+                             "Onefork_block_symbol" : oneend_block_symbol
+                              "Oneone_block_symbol" : block_symbol
+         "Onesinglebiforksinglesingle_block_symbol" : onebifork_block_symbol
+                  "Onesingleonedouble_block_symbol" : oneone_block_symbol
+                  "Onesingleonesingle_block_symbol" : oneone_block_symbol
+                  "Onesingleonetriple_block_symbol" : oneone_block_symbol
+  "Onesingletriforksinglesinglesingle_block_symbol" : onetrifork_block_symbol
+                       "Onesinglezero_block_symbol" : onezero_block_symbol
+                          "Onetrifork_block_symbol" : onefork_block_symbol
+                  "Onetripleonesingle_block_symbol" : oneone_block_symbol
+                       "Onetriplezero_block_symbol" : onezero_block_symbol
+                             "Onezero_block_symbol" : oneend_block_symbol
+                                       "Osbss_C_h_" : onesinglebiforksinglesingle_block_symbol
+                                         "Osbss_Cc" : onesinglebiforksinglesingle_block_symbol
+                                         "Osbss_N_" : onesinglebiforksinglesingle_block_symbol
+                                       "Osbss_Ndcd" : onesinglebiforksinglesingle_block_symbol
+                                       "Osbss_Nph_" : onesinglebiforksinglesingle_block_symbol
+                                       "Osbss_Nsh_" : onesinglebiforksinglesingle_block_symbol
+                                        "Osod_C_h_" : onesingleonedouble_block_symbol
+                                        "Osod_Nph_" : onesingleonedouble_block_symbol
+                                       "Osos_C_h_2" : onesingleonesingle_block_symbol
+                                        "Osos_Cch_" : onesingleonesingle_block_symbol
+                                        "Osos_Cdod" : onesingleonesingle_block_symbol
+                                        "Osos_N_h_" : onesingleonesingle_block_symbol
+                                          "Osos_Nc" : onesingleonesingle_block_symbol
+                                          "Osos_Nd" : onesingleonedouble_block_symbol
+                                       "Osos_Nph_2" : onesingleonesingle_block_symbol
+                                        "Osos_Nsh_" : onesingleonesingle_block_symbol
+                                          "Osos_O_" : onesingleonesingle_block_symbol
+                                          "Osos_S_" : onesingleonesingle_block_symbol
+                                          "Osot_Ct" : onesingleonetriple_block_symbol
+                                          "Osot_Nu" : onesingleonetriple_block_symbol
+                                        "Ostsss_C_" : onesingletriforksinglesinglesingle_block_symbol
+                                        "Ostsss_Np" : onesingletriforksinglesinglesingle_block_symbol
+                                        "Osz_C_h_3" : onesinglezero_block_symbol
+                                        "Osz_Cch_2" : onesinglezero_block_symbol
+                                        "Osz_Ccoc2" : onesinglezero_block_symbol
+                                         "Osz_Cdod" : onesinglezero_block_symbol
+                                       "Osz_Cdodh_" : onesinglezero_block_symbol
+                                        "Osz_N_h_2" : onesinglezero_block_symbol
+                                         "Osz_Ndod" : onesinglezero_block_symbol
+                                        "Osz_Nph_3" : onesinglezero_block_symbol
+                                        "Osz_Nsh_2" : onesinglezero_block_symbol
+                                        "Osz_Nsoc2" : onesinglezero_block_symbol
+                                         "Osz_O_h_" : onesinglezero_block_symbol
+                                         "Osz_S_h_" : onesinglezero_block_symbol
+                                         "Osz_Sdod" : onesinglezero_block_symbol
+                                          "Otos_Ct" : onetripleonesingle_block_symbol
+                                          "Otos_Nu" : onetripleonesingle_block_symbol
+                                         "Otz_Cth_" : onetriplezero_block_symbol
+                                          "Zbdd_Cq" : zerobiforkdoubledouble_block_symbol
+                                          "Zbdd_Nq" : zerobiforkdoubledouble_block_symbol
+                                        "Zbsd_C_h_" : zerobiforksingledouble_block_symbol
+                                          "Zbsd_Cc" : zerobiforksingledouble_block_symbol
+                                        "Zbsd_Nph_" : zerobiforksingledouble_block_symbol
+                                          "Zbsd_Ns" : zerobiforksingledouble_block_symbol
+                                       "Zbss_C_h_2" : zerobiforksinglesingle_block_symbol
+                                        "Zbss_Cch_" : zerobiforksinglesingle_block_symbol
+                                        "Zbss_Cdod" : zerobiforksinglesingle_block_symbol
+                                        "Zbss_N_h_" : zerobiforksinglesingle_block_symbol
+                                          "Zbss_Nc" : zerobiforksinglesingle_block_symbol
+                                        "Zbss_Nsh_" : zerobiforksinglesingle_block_symbol
+                                       "Zbss_Nsh_2" : zerobiforksinglesingle_block_symbol
+                          "Zerobifork_block_symbol" : zerofork_block_symbol
+              "Zerobiforkdoubledouble_block_symbol" : zerobifork_block_symbol
+              "Zerobiforksingledouble_block_symbol" : zerobifork_block_symbol
+              "Zerobiforksinglesingle_block_symbol" : zerobifork_block_symbol
+                             "Zeroend_block_symbol" : block_symbol
+                            "Zerofork_block_symbol" : zeroend_block_symbol
+                             "Zeroone_block_symbol" : block_symbol
+                       "Zeroonedouble_block_symbol" : zeroone_block_symbol
+                       "Zeroonesingle_block_symbol" : zeroone_block_symbol
+                       "Zeroonetriple_block_symbol" : zeroone_block_symbol
+                      "Zeroquadrifork_block_symbol" : zerofork_block_symbol
+                         "Zerotrifork_block_symbol" : zerofork_block_symbol
+                            "Zerozero_block_symbol" : zeroend_block_symbol
+                                        "Zod_Cdh_2" : zeroonedouble_block_symbol
+                                         "Zod_Cdod" : zeroonedouble_block_symbol
+                                         "Zod_Ndh_" : zeroonedouble_block_symbol
+                                        "Zod_Noh_2" : zeroonedouble_block_symbol
+                                        "Zos_C_h_3" : zeroonesingle_block_symbol
+                                        "Zos_Cch_2" : zeroonesingle_block_symbol
+                                        "Zos_Ccoc2" : zeroonesingle_block_symbol
+                                       "Zos_Cdodh_" : zeroonesingle_block_symbol
+                                        "Zos_N_h_2" : zeroonesingle_block_symbol
+                                         "Zos_Ndod" : zeroonesingle_block_symbol
+                                        "Zos_Nph_3" : zeroonesingle_block_symbol
+                                        "Zos_Nsh_2" : zeroonesingle_block_symbol
+                                        "Zos_Nsoc2" : zeroonesingle_block_symbol
+                                         "Zos_O_h_" : zeroonesingle_block_symbol
+                                         "Zos_S_h_" : zeroonesingle_block_symbol
+                                         "Zos_S_o_" : zeroonesingle_block_symbol
+                                         "Zot_Cth_" : zeroonetriple_block_symbol
+                                            "Zq_C_" : zeroquadrifork_block_symbol
+                                            "Zq_Np" : zeroquadrifork_block_symbol
+                                          "Zt_C_h_" : zerotrifork_block_symbol
+                                            "Zt_Cc" : zerotrifork_block_symbol
+                                            "Zt_N_" : zerotrifork_block_symbol
+                                          "Zt_Nph_" : zerotrifork_block_symbol
+                                            "Zt_Ns" : zerotrifork_block_symbol
+                                         "Zz_C_h_4" : zerozero_block_symbol
+                                       "Zz_Ccoc2h_" : zerozero_block_symbol
+                                         "Zz_Cdod2" : zerozero_block_symbol
+                                          "Zz_H_h_" : zerozero_block_symbol
+                                         "Zz_N_h_3" : zerozero_block_symbol
+                                         "Zz_Nph_4" : zerozero_block_symbol
+                                         "Zz_O_h_2" : zerozero_block_symbol
+                                          "Zz_Odod" : zerozero_block_symbol
+                                        "Zz_Odsto_" : zerozero_block_symbol
+                                         "Zz_S_h_2" : zerozero_block_symbol
+main::do_top_type_abbreviation_list Topta_l list Zz_C_h_4 Zz_Ccoc2h_ Zz_Cdod2 Zz_Nph_4 Zz_N_h_3 Zz_H_h_ Zz_Odod Zz_O_h_2 Zz_S_h_2 Zz_Odsto_ Zbss_C_h_2 Zbss_Cdod Zbss_Cch_ Zbss_N_h_ Zbss_Nsh_2 Zbss_Nc Zbss_Nsh_ Zbsd_C_h_ Zbsd_Cc Zbsd_Nph_ Zbsd_Ns Zbdd_Cq Zbdd_Nq Zt_C_h_ Zt_Cc Zt_N_ Zt_Nph_ Zt_Ns Zq_C_ Zq_Np Zos_C_h_3 Zos_Cdodh_ Zos_Ccoc2 Zos_Cch_2 Zos_N_h_2 Zos_Ndod Zos_Nsoc2 Zos_Nph_3 Zos_Nsh_2 Zos_O_h_ Zos_S_h_ Zos_S_o_ Zod_Cdh_2 Zod_Cdod Zod_Ndh_ Zod_Noh_2 Zot_Cth_ Osz_C_h_3 Osz_Cch_2 Osz_Ccoc2 Osz_Cdod Osz_Cdodh_ Osz_N_h_2 Osz_Ndod Osz_Nph_3 Osz_Nsh_2 Osz_Nsoc2 Osz_O_h_ Osz_S_h_ Osz_Sdod Odz_Cdh_2 Odz_Cdod Odz_Ndh_ Odz_Nph_2 Otz_Cth_ Osos_C_h_2 Osos_Cdod Osos_Cch_ Osos_N_h_ Osos_Nph_2 Osos_Nsh_ Osos_Nc Osos_O_ Osos_S_ Osod_C_h_ Osos_Nd Osod_Nph_ Osot_Ct Osot_Nu Odos_Cdh_ Odos_Nd Odos_Nph_ Odod_Cd Odod_Nq Otos_Ct Otos_Nu Osbss_C_h_ Osbss_Cc Osbss_N_ Osbss_Ndcd Osbss_Nph_ Osbss_Nsh_ Odbss_Cd Odbss_No Ostsss_C_ Ostsss_Np
+main::do_upper_type_abbreviation_list Global Topta_l Zz_C_h_4 Zz_Ccoc2h_ Zz_Cdod2 Zz_Nph_4 Zz_N_h_3 Zz_H_h_ Zz_Odod Zz_O_h_2 Zz_S_h_2 Zz_Odsto_ Zbss_C_h_2 Zbss_Cdod Zbss_Cch_ Zbss_N_h_ Zbss_Nsh_2 Zbss_Nc Zbss_Nsh_ Zbsd_C_h_ Zbsd_Cc Zbsd_Nph_ Zbsd_Ns Zbdd_Cq Zbdd_Nq Zt_C_h_ Zt_Cc Zt_N_ Zt_Nph_ Zt_Ns Zq_C_ Zq_Np Zos_C_h_3 Zos_Cdodh_ Zos_Ccoc2 Zos_Cch_2 Zos_N_h_2 Zos_Ndod Zos_Nsoc2 Zos_Nph_3 Zos_Nsh_2 Zos_O_h_ Zos_S_h_ Zos_S_o_ Zod_Cdh_2 Zod_Cdod Zod_Ndh_ Zod_Noh_2 Zot_Cth_ Osz_C_h_3 Osz_Cch_2 Osz_Ccoc2 Osz_Cdod Osz_Cdodh_ Osz_N_h_2 Osz_Ndod Osz_Nph_3 Osz_Nsh_2 Osz_Nsoc2 Osz_O_h_ Osz_S_h_ Osz_Sdod Odz_Cdh_2 Odz_Cdod Odz_Ndh_ Odz_Nph_2 Otz_Cth_ Osos_C_h_2 Osos_Cdod Osos_Cch_ Osos_N_h_ Osos_Nph_2 Osos_Nsh_ Osos_Nc Osos_O_ Osos_S_ Osod_C_h_ Osos_Nd Osod_Nph_ Osot_Ct Osot_Nu Odos_Cdh_ Odos_Nd Odos_Nph_ Odod_Cd Odod_Nq Otos_Ct Otos_Nu Osbss_C_h_ Osbss_Cc Osbss_N_ Osbss_Ndcd Osbss_Nph_ Osbss_Nsh_ Odbss_Cd Odbss_No Ostsss_C_ Ostsss_Np
+ block top Zz_C_h_4 => upp Ze_C_h_4
+ block top Zz_Ccoc2h_ => upp Ze_Ccoc2h_
+ block top Zz_Cdod2 => upp Ze_Cdod2
+ block top Zz_Nph_4 => upp Ze_Nph_4
+ block top Zz_N_h_3 => upp Ze_N_h_3
+ block top Zz_H_h_ => upp Ze_H_h_
+ block top Zz_Odod => upp Ze_Odod
+ block top Zz_O_h_2 => upp Ze_O_h_2
+ block top Zz_S_h_2 => upp Ze_S_h_2
+ block top Zz_Odsto_ => upp Ze_Odsto_
+ block top Zbss_C_h_2 => upp Ze_C_h_2
+ block top Zbss_Cdod => upp Ze_Cdod
+ block top Zbss_Cch_ => upp Ze_Cch_
+ block top Zbss_N_h_ => upp Ze_N_h_
+ block top Zbss_Nsh_2 => upp Ze_Nsh_2
+ block top Zbss_Nc => upp Ze_Nc
+ block top Zbss_Nsh_ => upp Ze_Nsh_
+ block top Zbsd_C_h_ => upp Ze_C_h_
+ block top Zbsd_Cc => upp Ze_Cc
+ block top Zbsd_Nph_ => upp Ze_Nph_
+ block top Zbsd_Ns => upp Ze_Ns
+ block top Zbdd_Cq => upp Ze_Cq
+ block top Zbdd_Nq => upp Ze_Nq
+ block top Zt_C_h_ => upp Ze_C_h_
+ block top Zt_Cc => upp Ze_Cc
+ block top Zt_N_ => upp Ze_N_
+ block top Zt_Nph_ => upp Ze_Nph_
+ block top Zt_Ns => upp Ze_Ns
+ block top Zq_C_ => upp Ze_C_
+ block top Zq_Np => upp Ze_Np
+ block top Zos_C_h_3 => upp Zo_C_h_3
+ block top Zos_Cdodh_ => upp Zo_Cdodh_
+ block top Zos_Ccoc2 => upp Zo_Ccoc2
+ block top Zos_Cch_2 => upp Zo_Cch_2
+ block top Zos_N_h_2 => upp Zo_N_h_2
+ block top Zos_Ndod => upp Zo_Ndod
+ block top Zos_Nsoc2 => upp Zo_Nsoc2
+ block top Zos_Nph_3 => upp Zo_Nph_3
+ block top Zos_Nsh_2 => upp Zo_Nsh_2
+ block top Zos_O_h_ => upp Zo_O_h_
+ block top Zos_S_h_ => upp Zo_S_h_
+ block top Zos_S_o_ => upp Zo_S_o_
+ block top Zod_Cdh_2 => upp Zo_Cdh_2
+ block top Zod_Cdod => upp Zo_Cdod
+ block top Zod_Ndh_ => upp Zo_Ndh_
+ block top Zod_Noh_2 => upp Zo_Noh_2
+ block top Zot_Cth_ => upp Zo_Cth_
+ block top Osz_C_h_3 => upp Oe_C_h_3
+ block top Osz_Cch_2 => upp Oe_Cch_2
+ block top Osz_Ccoc2 => upp Oe_Ccoc2
+ block top Osz_Cdod => upp Oe_Cdod
+ block top Osz_Cdodh_ => upp Oe_Cdodh_
+ block top Osz_N_h_2 => upp Oe_N_h_2
+ block top Osz_Ndod => upp Oe_Ndod
+ block top Osz_Nph_3 => upp Oe_Nph_3
+ block top Osz_Nsh_2 => upp Oe_Nsh_2
+ block top Osz_Nsoc2 => upp Oe_Nsoc2
+ block top Osz_O_h_ => upp Oe_O_h_
+ block top Osz_S_h_ => upp Oe_S_h_
+ block top Osz_Sdod => upp Oe_Sdod
+ block top Odz_Cdh_2 => upp Oe_Cdh_2
+ block top Odz_Cdod => upp Oe_Cdod
+ block top Odz_Ndh_ => upp Oe_Ndh_
+ block top Odz_Nph_2 => upp Oe_Nph_2
+ block top Otz_Cth_ => upp Oe_Cth_
+ block top Osos_C_h_2 => upp Oo_C_h_2
+ block top Osos_Cdod => upp Oo_Cdod
+ block top Osos_Cch_ => upp Oo_Cch_
+ block top Osos_N_h_ => upp Oo_N_h_
+ block top Osos_Nph_2 => upp Oo_Nph_2
+ block top Osos_Nsh_ => upp Oo_Nsh_
+ block top Osos_Nc => upp Oo_Nc
+ block top Osos_O_ => upp Oo_O_
+ block top Osos_S_ => upp Oo_S_
+ block top Osod_C_h_ => upp Oo_C_h_
+ block top Osos_Nd => upp Oo_Nd
+ block top Osod_Nph_ => upp Oo_Nph_
+ block top Osot_Ct => upp Oo_Ct
+ block top Osot_Nu => upp Oo_Nu
+ block top Odos_Cdh_ => upp Oo_Cdh_
+ block top Odos_Nd => upp Oo_Nd
+ block top Odos_Nph_ => upp Oo_Nph_
+ block top Odod_Cd => upp Oo_Cd
+ block top Odod_Nq => upp Oo_Nq
+ block top Otos_Ct => upp Oo_Ct
+ block top Otos_Nu => upp Oo_Nu
+ block top Osbss_C_h_ => upp Oe_C_h_
+ block top Osbss_Cc => upp Oe_Cc
+ block top Osbss_N_ => upp Oe_N_
+ block top Osbss_Ndcd => upp Oe_Ndcd
+ block top Osbss_Nph_ => upp Oe_Nph_
+ block top Osbss_Nsh_ => upp Oe_Nsh_
+ block top Odbss_Cd => upp Oe_Cd
+ block top Odbss_No => upp Oe_No
+ block top Ostsss_C_ => upp Oe_C_
+ block top Ostsss_Np => upp Oe_Np
+    "Odbss_Cd" : Oe_Cd
+    "Odbss_No" : Oe_No
+     "Odod_Cd" : Oo_Cd
+     "Odod_Nq" : Oo_Nq
+   "Odos_Cdh_" : Oo_Cdh_
+     "Odos_Nd" : Oo_Nd
+   "Odos_Nph_" : Oo_Nph_
+   "Odz_Cdh_2" : Oe_Cdh_2
+    "Odz_Cdod" : Oe_Cdod
+    "Odz_Ndh_" : Oe_Ndh_
+   "Odz_Nph_2" : Oe_Nph_2
+  "Osbss_C_h_" : Oe_C_h_
+    "Osbss_Cc" : Oe_Cc
+    "Osbss_N_" : Oe_N_
+  "Osbss_Ndcd" : Oe_Ndcd
+  "Osbss_Nph_" : Oe_Nph_
+  "Osbss_Nsh_" : Oe_Nsh_
+   "Osod_C_h_" : Oo_C_h_
+   "Osod_Nph_" : Oo_Nph_
+  "Osos_C_h_2" : Oo_C_h_2
+   "Osos_Cch_" : Oo_Cch_
+   "Osos_Cdod" : Oo_Cdod
+   "Osos_N_h_" : Oo_N_h_
+     "Osos_Nc" : Oo_Nc
+     "Osos_Nd" : Oo_Nd
+  "Osos_Nph_2" : Oo_Nph_2
+   "Osos_Nsh_" : Oo_Nsh_
+     "Osos_O_" : Oo_O_
+     "Osos_S_" : Oo_S_
+     "Osot_Ct" : Oo_Ct
+     "Osot_Nu" : Oo_Nu
+   "Ostsss_C_" : Oe_C_
+   "Ostsss_Np" : Oe_Np
+   "Osz_C_h_3" : Oe_C_h_3
+   "Osz_Cch_2" : Oe_Cch_2
+   "Osz_Ccoc2" : Oe_Ccoc2
+    "Osz_Cdod" : Oe_Cdod
+  "Osz_Cdodh_" : Oe_Cdodh_
+   "Osz_N_h_2" : Oe_N_h_2
+    "Osz_Ndod" : Oe_Ndod
+   "Osz_Nph_3" : Oe_Nph_3
+   "Osz_Nsh_2" : Oe_Nsh_2
+   "Osz_Nsoc2" : Oe_Nsoc2
+    "Osz_O_h_" : Oe_O_h_
+    "Osz_S_h_" : Oe_S_h_
+    "Osz_Sdod" : Oe_Sdod
+     "Otos_Ct" : Oo_Ct
+     "Otos_Nu" : Oo_Nu
+    "Otz_Cth_" : Oe_Cth_
+     "Zbdd_Cq" : Ze_Cq
+     "Zbdd_Nq" : Ze_Nq
+   "Zbsd_C_h_" : Ze_C_h_
+     "Zbsd_Cc" : Ze_Cc
+   "Zbsd_Nph_" : Ze_Nph_
+     "Zbsd_Ns" : Ze_Ns
+  "Zbss_C_h_2" : Ze_C_h_2
+   "Zbss_Cch_" : Ze_Cch_
+   "Zbss_Cdod" : Ze_Cdod
+   "Zbss_N_h_" : Ze_N_h_
+     "Zbss_Nc" : Ze_Nc
+   "Zbss_Nsh_" : Ze_Nsh_
+  "Zbss_Nsh_2" : Ze_Nsh_2
+   "Zod_Cdh_2" : Zo_Cdh_2
+    "Zod_Cdod" : Zo_Cdod
+    "Zod_Ndh_" : Zo_Ndh_
+   "Zod_Noh_2" : Zo_Noh_2
+   "Zos_C_h_3" : Zo_C_h_3
+   "Zos_Cch_2" : Zo_Cch_2
+   "Zos_Ccoc2" : Zo_Ccoc2
+  "Zos_Cdodh_" : Zo_Cdodh_
+   "Zos_N_h_2" : Zo_N_h_2
+    "Zos_Ndod" : Zo_Ndod
+   "Zos_Nph_3" : Zo_Nph_3
+   "Zos_Nsh_2" : Zo_Nsh_2
+   "Zos_Nsoc2" : Zo_Nsoc2
+    "Zos_O_h_" : Zo_O_h_
+    "Zos_S_h_" : Zo_S_h_
+    "Zos_S_o_" : Zo_S_o_
+    "Zot_Cth_" : Zo_Cth_
+       "Zq_C_" : Ze_C_
+       "Zq_Np" : Ze_Np
+     "Zt_C_h_" : Ze_C_h_
+       "Zt_Cc" : Ze_Cc
+       "Zt_N_" : Ze_N_
+     "Zt_Nph_" : Ze_Nph_
+       "Zt_Ns" : Ze_Ns
+    "Zz_C_h_4" : Ze_C_h_4
+  "Zz_Ccoc2h_" : Ze_Ccoc2h_
+    "Zz_Cdod2" : Ze_Cdod2
+     "Zz_H_h_" : Ze_H_h_
+    "Zz_N_h_3" : Ze_N_h_3
+    "Zz_Nph_4" : Ze_Nph_4
+    "Zz_O_h_2" : Ze_O_h_2
+     "Zz_Odod" : Ze_Odod
+   "Zz_Odsto_" : Ze_Odsto_
+    "Zz_S_h_2" : Ze_S_h_2
+main::do_upper_to_top_abbreviation_hash: upp Oe_O_h_ => top Osz_O_h_
+main::do_upper_to_top_abbreviation_hash: upp Oo_Ct => top Otos_Ct
+main::do_upper_to_top_abbreviation_hash: upp Oo_Ct => top Osot_Ct
+main::do_upper_to_top_abbreviation_hash: upp Oe_C_h_ => top Osbss_C_h_
+main::do_upper_to_top_abbreviation_hash: upp Zo_Ndod => top Zos_Ndod
+main::do_upper_to_top_abbreviation_hash: upp Oe_S_h_ => top Osz_S_h_
+main::do_upper_to_top_abbreviation_hash: upp Oe_Ndcd => top Osbss_Ndcd
+main::do_upper_to_top_abbreviation_hash: upp Zo_C_h_3 => top Zos_C_h_3
+main::do_upper_to_top_abbreviation_hash: upp Ze_Nph_ => top Zbsd_Nph_
+main::do_upper_to_top_abbreviation_hash: upp Ze_Cdod2 => top Zz_Cdod2
+main::do_upper_to_top_abbreviation_hash: upp Ze_N_h_ => top Zbss_N_h_
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nph_ => top Odos_Nph_
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nd => top Osos_Nd
+main::do_upper_to_top_abbreviation_hash: upp Ze_Ns => top Zt_Ns
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nsh_ => top Osos_Nsh_
+main::do_upper_to_top_abbreviation_hash: upp Ze_O_h_2 => top Zz_O_h_2
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nu => top Otos_Nu
+main::do_upper_to_top_abbreviation_hash: upp Zo_Ndh_ => top Zod_Ndh_
+main::do_upper_to_top_abbreviation_hash: upp Oe_Cdod => top Osz_Cdod
+main::do_upper_to_top_abbreviation_hash: upp Oo_Cdh_ => top Odos_Cdh_
+main::do_upper_to_top_abbreviation_hash: upp Oe_No => top Odbss_No
+main::do_upper_to_top_abbreviation_hash: upp Ze_Nph_ => top Zt_Nph_
+main::do_upper_to_top_abbreviation_hash: upp Oe_Nsh_ => top Osbss_Nsh_
+main::do_upper_to_top_abbreviation_hash: upp Ze_Cdod => top Zbss_Cdod
+main::do_upper_to_top_abbreviation_hash: upp Ze_Ns => top Zbsd_Ns
+main::do_upper_to_top_abbreviation_hash: upp Ze_Cq => top Zbdd_Cq
+main::do_upper_to_top_abbreviation_hash: upp Ze_Nsh_ => top Zbss_Nsh_
+main::do_upper_to_top_abbreviation_hash: upp Oe_Cdh_2 => top Odz_Cdh_2
+main::do_upper_to_top_abbreviation_hash: upp Zo_Nsh_2 => top Zos_Nsh_2
+main::do_upper_to_top_abbreviation_hash: upp Oe_Cdod => top Odz_Cdod
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nd => top Odos_Nd
+main::do_upper_to_top_abbreviation_hash: upp Ze_Nsh_2 => top Zbss_Nsh_2
+main::do_upper_to_top_abbreviation_hash: upp Oo_N_h_ => top Osos_N_h_
+main::do_upper_to_top_abbreviation_hash: upp Ze_Cc => top Zt_Cc
+main::do_upper_to_top_abbreviation_hash: upp Ze_H_h_ => top Zz_H_h_
+main::do_upper_to_top_abbreviation_hash: upp Oo_C_h_ => top Osod_C_h_
+main::do_upper_to_top_abbreviation_hash: upp Oo_C_h_2 => top Osos_C_h_2
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nq => top Odod_Nq
+main::do_upper_to_top_abbreviation_hash: upp Zo_Nph_3 => top Zos_Nph_3
+main::do_upper_to_top_abbreviation_hash: upp Ze_Cch_ => top Zbss_Cch_
+main::do_upper_to_top_abbreviation_hash: upp Zo_Ccoc2 => top Zos_Ccoc2
+main::do_upper_to_top_abbreviation_hash: upp Oo_Cd => top Odod_Cd
+main::do_upper_to_top_abbreviation_hash: upp Zo_S_o_ => top Zos_S_o_
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nph_ => top Osod_Nph_
+main::do_upper_to_top_abbreviation_hash: upp Ze_C_ => top Zq_C_
+main::do_upper_to_top_abbreviation_hash: upp Oe_Nsoc2 => top Osz_Nsoc2
+main::do_upper_to_top_abbreviation_hash: upp Ze_N_ => top Zt_N_
+main::do_upper_to_top_abbreviation_hash: upp Oe_N_ => top Osbss_N_
+main::do_upper_to_top_abbreviation_hash: upp Ze_S_h_2 => top Zz_S_h_2
+main::do_upper_to_top_abbreviation_hash: upp Zo_O_h_ => top Zos_O_h_
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nph_2 => top Osos_Nph_2
+main::do_upper_to_top_abbreviation_hash: upp Ze_C_h_4 => top Zz_C_h_4
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nc => top Osos_Nc
+main::do_upper_to_top_abbreviation_hash: upp Oe_Cc => top Osbss_Cc
+main::do_upper_to_top_abbreviation_hash: upp Zo_Cch_2 => top Zos_Cch_2
+main::do_upper_to_top_abbreviation_hash: upp Oe_Cdodh_ => top Osz_Cdodh_
+main::do_upper_to_top_abbreviation_hash: upp Oe_Nph_2 => top Odz_Nph_2
+main::do_upper_to_top_abbreviation_hash: upp Oe_C_ => top Ostsss_C_
+main::do_upper_to_top_abbreviation_hash: upp Ze_C_h_2 => top Zbss_C_h_2
+main::do_upper_to_top_abbreviation_hash: upp Zo_S_h_ => top Zos_S_h_
+main::do_upper_to_top_abbreviation_hash: upp Ze_Cc => top Zbsd_Cc
+main::do_upper_to_top_abbreviation_hash: upp Ze_Nc => top Zbss_Nc
+main::do_upper_to_top_abbreviation_hash: upp Ze_Np => top Zq_Np
+main::do_upper_to_top_abbreviation_hash: upp Oe_Nph_ => top Osbss_Nph_
+main::do_upper_to_top_abbreviation_hash: upp Oe_Sdod => top Osz_Sdod
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nu => top Osot_Nu
+main::do_upper_to_top_abbreviation_hash: upp Zo_Cdh_2 => top Zod_Cdh_2
+main::do_upper_to_top_abbreviation_hash: upp Oe_Cd => top Odbss_Cd
+main::do_upper_to_top_abbreviation_hash: upp Zo_Cdod => top Zod_Cdod
+main::do_upper_to_top_abbreviation_hash: upp Zo_N_h_2 => top Zos_N_h_2
+main::do_upper_to_top_abbreviation_hash: upp Ze_C_h_ => top Zbsd_C_h_
+main::do_upper_to_top_abbreviation_hash: upp Ze_Nq => top Zbdd_Nq
+main::do_upper_to_top_abbreviation_hash: upp Oo_Cdod => top Osos_Cdod
+main::do_upper_to_top_abbreviation_hash: upp Oe_Cch_2 => top Osz_Cch_2
+main::do_upper_to_top_abbreviation_hash: upp Ze_Odod => top Zz_Odod
+main::do_upper_to_top_abbreviation_hash: upp Ze_Odsto_ => top Zz_Odsto_
+main::do_upper_to_top_abbreviation_hash: upp Zo_Cdodh_ => top Zos_Cdodh_
+main::do_upper_to_top_abbreviation_hash: upp Ze_Ccoc2h_ => top Zz_Ccoc2h_
+main::do_upper_to_top_abbreviation_hash: upp Ze_Nph_4 => top Zz_Nph_4
+main::do_upper_to_top_abbreviation_hash: upp Oe_Nph_3 => top Osz_Nph_3
+main::do_upper_to_top_abbreviation_hash: upp Oe_Np => top Ostsss_Np
+main::do_upper_to_top_abbreviation_hash: upp Zo_Noh_2 => top Zod_Noh_2
+main::do_upper_to_top_abbreviation_hash: upp Oe_Ndod => top Osz_Ndod
+main::do_upper_to_top_abbreviation_hash: upp Oe_Ndh_ => top Odz_Ndh_
+main::do_upper_to_top_abbreviation_hash: upp Ze_C_h_ => top Zt_C_h_
+main::do_upper_to_top_abbreviation_hash: upp Oe_Nsh_2 => top Osz_Nsh_2
+main::do_upper_to_top_abbreviation_hash: upp Oe_Ccoc2 => top Osz_Ccoc2
+main::do_upper_to_top_abbreviation_hash: upp Oe_N_h_2 => top Osz_N_h_2
+main::do_upper_to_top_abbreviation_hash: upp Oe_Cth_ => top Otz_Cth_
+main::do_upper_to_top_abbreviation_hash: upp Oe_C_h_3 => top Osz_C_h_3
+main::do_upper_to_top_abbreviation_hash: upp Zo_Nsoc2 => top Zos_Nsoc2
+main::do_upper_to_top_abbreviation_hash: upp Oo_O_ => top Osos_O_
+main::do_upper_to_top_abbreviation_hash: upp Zo_Cth_ => top Zot_Cth_
+main::do_upper_to_top_abbreviation_hash: upp Oo_Cch_ => top Osos_Cch_
+main::do_upper_to_top_abbreviation_hash: upp Ze_N_h_3 => top Zz_N_h_3
+main::do_upper_to_top_abbreviation_hash: upp Oo_S_ => top Osos_S_
+       "Oe_C_" : Ostsss_C_
+     "Oe_C_h_" : Osbss_C_h_
+    "Oe_C_h_3" : Osz_C_h_3
+       "Oe_Cc" : Osbss_Cc
+    "Oe_Cch_2" : Osz_Cch_2
+    "Oe_Ccoc2" : Osz_Ccoc2
+       "Oe_Cd" : Odbss_Cd
+    "Oe_Cdh_2" : Odz_Cdh_2
+     "Oe_Cdod" : Odz_Cdod
+   "Oe_Cdodh_" : Osz_Cdodh_
+     "Oe_Cth_" : Otz_Cth_
+       "Oe_N_" : Osbss_N_
+    "Oe_N_h_2" : Osz_N_h_2
+     "Oe_Ndcd" : Osbss_Ndcd
+     "Oe_Ndh_" : Odz_Ndh_
+     "Oe_Ndod" : Osz_Ndod
+       "Oe_No" : Odbss_No
+       "Oe_Np" : Ostsss_Np
+     "Oe_Nph_" : Osbss_Nph_
+    "Oe_Nph_2" : Odz_Nph_2
+    "Oe_Nph_3" : Osz_Nph_3
+     "Oe_Nsh_" : Osbss_Nsh_
+    "Oe_Nsh_2" : Osz_Nsh_2
+    "Oe_Nsoc2" : Osz_Nsoc2
+     "Oe_O_h_" : Osz_O_h_
+     "Oe_S_h_" : Osz_S_h_
+     "Oe_Sdod" : Osz_Sdod
+     "Oo_C_h_" : Osod_C_h_
+    "Oo_C_h_2" : Osos_C_h_2
+     "Oo_Cch_" : Osos_Cch_
+       "Oo_Cd" : Odod_Cd
+     "Oo_Cdh_" : Odos_Cdh_
+     "Oo_Cdod" : Osos_Cdod
+       "Oo_Ct" : Osot_Ct
+     "Oo_N_h_" : Osos_N_h_
+       "Oo_Nc" : Osos_Nc
+       "Oo_Nd" : Odos_Nd
+     "Oo_Nph_" : Osod_Nph_
+    "Oo_Nph_2" : Osos_Nph_2
+       "Oo_Nq" : Odod_Nq
+     "Oo_Nsh_" : Osos_Nsh_
+       "Oo_Nu" : Osot_Nu
+       "Oo_O_" : Osos_O_
+       "Oo_S_" : Osos_S_
+       "Ze_C_" : Zq_C_
+     "Ze_C_h_" : Zt_C_h_
+    "Ze_C_h_2" : Zbss_C_h_2
+    "Ze_C_h_4" : Zz_C_h_4
+       "Ze_Cc" : Zbsd_Cc
+     "Ze_Cch_" : Zbss_Cch_
+  "Ze_Ccoc2h_" : Zz_Ccoc2h_
+     "Ze_Cdod" : Zbss_Cdod
+    "Ze_Cdod2" : Zz_Cdod2
+       "Ze_Cq" : Zbdd_Cq
+     "Ze_H_h_" : Zz_H_h_
+       "Ze_N_" : Zt_N_
+     "Ze_N_h_" : Zbss_N_h_
+    "Ze_N_h_3" : Zz_N_h_3
+       "Ze_Nc" : Zbss_Nc
+       "Ze_Np" : Zq_Np
+     "Ze_Nph_" : Zt_Nph_
+    "Ze_Nph_4" : Zz_Nph_4
+       "Ze_Nq" : Zbdd_Nq
+       "Ze_Ns" : Zbsd_Ns
+     "Ze_Nsh_" : Zbss_Nsh_
+    "Ze_Nsh_2" : Zbss_Nsh_2
+    "Ze_O_h_2" : Zz_O_h_2
+     "Ze_Odod" : Zz_Odod
+   "Ze_Odsto_" : Zz_Odsto_
+    "Ze_S_h_2" : Zz_S_h_2
+    "Zo_C_h_3" : Zos_C_h_3
+    "Zo_Cch_2" : Zos_Cch_2
+    "Zo_Ccoc2" : Zos_Ccoc2
+    "Zo_Cdh_2" : Zod_Cdh_2
+     "Zo_Cdod" : Zod_Cdod
+   "Zo_Cdodh_" : Zos_Cdodh_
+     "Zo_Cth_" : Zot_Cth_
+    "Zo_N_h_2" : Zos_N_h_2
+     "Zo_Ndh_" : Zod_Ndh_
+     "Zo_Ndod" : Zos_Ndod
+    "Zo_Noh_2" : Zod_Noh_2
+    "Zo_Nph_3" : Zos_Nph_3
+    "Zo_Nsh_2" : Zos_Nsh_2
+    "Zo_Nsoc2" : Zos_Nsoc2
+     "Zo_O_h_" : Zos_O_h_
+     "Zo_S_h_" : Zos_S_h_
+     "Zo_S_o_" : Zos_S_o_
+main::do_upper_type_abbreviation_list list Oe_Ndh_ Ze_N_h_3 Oe_Cc Oe_Cch_2 Oe_C_ Oe_Ndcd Ze_C_h_2 Oo_Cdod Ze_Odsto_ Oo_C_h_ Zo_Nsh_2 Zo_Cch_2 Zo_O_h_ Ze_H_h_ Oo_N_h_ Oe_Cth_ Zo_S_h_ Oe_Nsh_ Oo_Nph_2 Oo_Nc Zo_N_h_2 Oe_Nph_ Ze_S_h_2 Ze_Odod Ze_Cdod2 Oo_C_h_2 Oo_Nph_ Ze_Cdod Ze_Nc Oo_Cd Oo_O_ Oe_Np Zo_Cth_ Oe_C_h_3 Oe_Nph_2 Ze_C_h_ Ze_C_ Ze_Cch_ Oe_O_h_ Oo_Cch_ Ze_N_h_ Oe_Nph_3 Oe_Cdh_2 Oe_Ccoc2 Oe_Nsh_2 Oe_Ndod Zo_Nph_3 Oe_S_h_ Oe_N_ Oe_Cdod Ze_Nsh_ Ze_C_h_4 Oe_Cd Oe_N_h_2 Oe_C_h_ Oo_Nd Oe_Cdodh_ Ze_Cq Oo_S_ Oo_Cdh_ Oe_Sdod Zo_Nsoc2 Ze_Nph_4 Oe_No Ze_Cc Ze_N_ Zo_C_h_3 Ze_Nph_ Ze_O_h_2 Zo_Ndod Zo_Cdod Oo_Nsh_ Zo_Noh_2 Oe_Nsoc2 Oo_Nq Zo_Cdh_2 Ze_Np Zo_Cdodh_ Oo_Nu Oo_Ct Ze_Ns Zo_Ccoc2 Zo_S_o_ Ze_Nsh_2 Ze_Ccoc2h_ Zo_Ndh_ Ze_Nq
+ block top Zz_C_h_4 => upp Ze_C_h_4
+ block top Zz_Ccoc2h_ => upp Ze_Ccoc2h_
+ block top Zz_Cdod2 => upp Ze_Cdod2
+ block top Zz_Nph_4 => upp Ze_Nph_4
+ block top Zz_N_h_3 => upp Ze_N_h_3
+ block top Zz_H_h_ => upp Ze_H_h_
+ block top Zz_Odod => upp Ze_Odod
+ block top Zz_O_h_2 => upp Ze_O_h_2
+ block top Zz_S_h_2 => upp Ze_S_h_2
+ block top Zz_Odsto_ => upp Ze_Odsto_
+ block top Zbss_C_h_2 => upp Ze_C_h_2
+ block top Zbss_Cdod => upp Ze_Cdod
+ block top Zbss_Cch_ => upp Ze_Cch_
+ block top Zbss_N_h_ => upp Ze_N_h_
+ block top Zbss_Nsh_2 => upp Ze_Nsh_2
+ block top Zbss_Nc => upp Ze_Nc
+ block top Zbss_Nsh_ => upp Ze_Nsh_
+ block top Zbsd_C_h_ => upp Ze_C_h_
+ block top Zbsd_Cc => upp Ze_Cc
+ block top Zbsd_Nph_ => upp Ze_Nph_
+ block top Zbsd_Ns => upp Ze_Ns
+ block top Zbdd_Cq => upp Ze_Cq
+ block top Zbdd_Nq => upp Ze_Nq
+ block top Zt_C_h_ => upp Ze_C_h_
+ block top Zt_Cc => upp Ze_Cc
+ block top Zt_N_ => upp Ze_N_
+ block top Zt_Nph_ => upp Ze_Nph_
+ block top Zt_Ns => upp Ze_Ns
+ block top Zq_C_ => upp Ze_C_
+ block top Zq_Np => upp Ze_Np
+ block top Zos_C_h_3 => upp Zo_C_h_3
+ block top Zos_Cdodh_ => upp Zo_Cdodh_
+ block top Zos_Ccoc2 => upp Zo_Ccoc2
+ block top Zos_Cch_2 => upp Zo_Cch_2
+ block top Zos_N_h_2 => upp Zo_N_h_2
+ block top Zos_Ndod => upp Zo_Ndod
+ block top Zos_Nsoc2 => upp Zo_Nsoc2
+ block top Zos_Nph_3 => upp Zo_Nph_3
+ block top Zos_Nsh_2 => upp Zo_Nsh_2
+ block top Zos_O_h_ => upp Zo_O_h_
+ block top Zos_S_h_ => upp Zo_S_h_
+ block top Zos_S_o_ => upp Zo_S_o_
+ block top Zod_Cdh_2 => upp Zo_Cdh_2
+ block top Zod_Cdod => upp Zo_Cdod
+ block top Zod_Ndh_ => upp Zo_Ndh_
+ block top Zod_Noh_2 => upp Zo_Noh_2
+ block top Zot_Cth_ => upp Zo_Cth_
+ block top Osz_C_h_3 => upp Oe_C_h_3
+ block top Osz_Cch_2 => upp Oe_Cch_2
+ block top Osz_Ccoc2 => upp Oe_Ccoc2
+ block top Osz_Cdod => upp Oe_Cdod
+ block top Osz_Cdodh_ => upp Oe_Cdodh_
+ block top Osz_N_h_2 => upp Oe_N_h_2
+ block top Osz_Ndod => upp Oe_Ndod
+ block top Osz_Nph_3 => upp Oe_Nph_3
+ block top Osz_Nsh_2 => upp Oe_Nsh_2
+ block top Osz_Nsoc2 => upp Oe_Nsoc2
+ block top Osz_O_h_ => upp Oe_O_h_
+ block top Osz_S_h_ => upp Oe_S_h_
+ block top Osz_Sdod => upp Oe_Sdod
+ block top Odz_Cdh_2 => upp Oe_Cdh_2
+ block top Odz_Cdod => upp Oe_Cdod
+ block top Odz_Ndh_ => upp Oe_Ndh_
+ block top Odz_Nph_2 => upp Oe_Nph_2
+ block top Otz_Cth_ => upp Oe_Cth_
+ block top Osos_C_h_2 => upp Oo_C_h_2
+ block top Osos_Cdod => upp Oo_Cdod
+ block top Osos_Cch_ => upp Oo_Cch_
+ block top Osos_N_h_ => upp Oo_N_h_
+ block top Osos_Nph_2 => upp Oo_Nph_2
+ block top Osos_Nsh_ => upp Oo_Nsh_
+ block top Osos_Nc => upp Oo_Nc
+ block top Osos_O_ => upp Oo_O_
+ block top Osos_S_ => upp Oo_S_
+ block top Osod_C_h_ => upp Oo_C_h_
+ block top Osos_Nd => upp Oo_Nd
+ block top Osod_Nph_ => upp Oo_Nph_
+ block top Osot_Ct => upp Oo_Ct
+ block top Osot_Nu => upp Oo_Nu
+ block top Odos_Cdh_ => upp Oo_Cdh_
+ block top Odos_Nd => upp Oo_Nd
+ block top Odos_Nph_ => upp Oo_Nph_
+ block top Odod_Cd => upp Oo_Cd
+ block top Odod_Nq => upp Oo_Nq
+ block top Otos_Ct => upp Oo_Ct
+ block top Otos_Nu => upp Oo_Nu
+ block top Osbss_C_h_ => upp Oe_C_h_
+ block top Osbss_Cc => upp Oe_Cc
+ block top Osbss_N_ => upp Oe_N_
+ block top Osbss_Ndcd => upp Oe_Ndcd
+ block top Osbss_Nph_ => upp Oe_Nph_
+ block top Osbss_Nsh_ => upp Oe_Nsh_
+ block top Odbss_Cd => upp Oe_Cd
+ block top Odbss_No => upp Oe_No
+ block top Ostsss_C_ => upp Oe_C_
+ block top Ostsss_Np => upp Oe_Np
+    "Odbss_Cd" : Oe_Cd
+    "Odbss_No" : Oe_No
+     "Odod_Cd" : Oo_Cd
+     "Odod_Nq" : Oo_Nq
+   "Odos_Cdh_" : Oo_Cdh_
+     "Odos_Nd" : Oo_Nd
+   "Odos_Nph_" : Oo_Nph_
+   "Odz_Cdh_2" : Oe_Cdh_2
+    "Odz_Cdod" : Oe_Cdod
+    "Odz_Ndh_" : Oe_Ndh_
+   "Odz_Nph_2" : Oe_Nph_2
+  "Osbss_C_h_" : Oe_C_h_
+    "Osbss_Cc" : Oe_Cc
+    "Osbss_N_" : Oe_N_
+  "Osbss_Ndcd" : Oe_Ndcd
+  "Osbss_Nph_" : Oe_Nph_
+  "Osbss_Nsh_" : Oe_Nsh_
+   "Osod_C_h_" : Oo_C_h_
+   "Osod_Nph_" : Oo_Nph_
+  "Osos_C_h_2" : Oo_C_h_2
+   "Osos_Cch_" : Oo_Cch_
+   "Osos_Cdod" : Oo_Cdod
+   "Osos_N_h_" : Oo_N_h_
+     "Osos_Nc" : Oo_Nc
+     "Osos_Nd" : Oo_Nd
+  "Osos_Nph_2" : Oo_Nph_2
+   "Osos_Nsh_" : Oo_Nsh_
+     "Osos_O_" : Oo_O_
+     "Osos_S_" : Oo_S_
+     "Osot_Ct" : Oo_Ct
+     "Osot_Nu" : Oo_Nu
+   "Ostsss_C_" : Oe_C_
+   "Ostsss_Np" : Oe_Np
+   "Osz_C_h_3" : Oe_C_h_3
+   "Osz_Cch_2" : Oe_Cch_2
+   "Osz_Ccoc2" : Oe_Ccoc2
+    "Osz_Cdod" : Oe_Cdod
+  "Osz_Cdodh_" : Oe_Cdodh_
+   "Osz_N_h_2" : Oe_N_h_2
+    "Osz_Ndod" : Oe_Ndod
+   "Osz_Nph_3" : Oe_Nph_3
+   "Osz_Nsh_2" : Oe_Nsh_2
+   "Osz_Nsoc2" : Oe_Nsoc2
+    "Osz_O_h_" : Oe_O_h_
+    "Osz_S_h_" : Oe_S_h_
+    "Osz_Sdod" : Oe_Sdod
+     "Otos_Ct" : Oo_Ct
+     "Otos_Nu" : Oo_Nu
+    "Otz_Cth_" : Oe_Cth_
+     "Zbdd_Cq" : Ze_Cq
+     "Zbdd_Nq" : Ze_Nq
+   "Zbsd_C_h_" : Ze_C_h_
+     "Zbsd_Cc" : Ze_Cc
+   "Zbsd_Nph_" : Ze_Nph_
+     "Zbsd_Ns" : Ze_Ns
+  "Zbss_C_h_2" : Ze_C_h_2
+   "Zbss_Cch_" : Ze_Cch_
+   "Zbss_Cdod" : Ze_Cdod
+   "Zbss_N_h_" : Ze_N_h_
+     "Zbss_Nc" : Ze_Nc
+   "Zbss_Nsh_" : Ze_Nsh_
+  "Zbss_Nsh_2" : Ze_Nsh_2
+   "Zod_Cdh_2" : Zo_Cdh_2
+    "Zod_Cdod" : Zo_Cdod
+    "Zod_Ndh_" : Zo_Ndh_
+   "Zod_Noh_2" : Zo_Noh_2
+   "Zos_C_h_3" : Zo_C_h_3
+   "Zos_Cch_2" : Zo_Cch_2
+   "Zos_Ccoc2" : Zo_Ccoc2
+  "Zos_Cdodh_" : Zo_Cdodh_
+   "Zos_N_h_2" : Zo_N_h_2
+    "Zos_Ndod" : Zo_Ndod
+   "Zos_Nph_3" : Zo_Nph_3
+   "Zos_Nsh_2" : Zo_Nsh_2
+   "Zos_Nsoc2" : Zo_Nsoc2
+    "Zos_O_h_" : Zo_O_h_
+    "Zos_S_h_" : Zo_S_h_
+    "Zos_S_o_" : Zo_S_o_
+    "Zot_Cth_" : Zo_Cth_
+       "Zq_C_" : Ze_C_
+       "Zq_Np" : Ze_Np
+     "Zt_C_h_" : Ze_C_h_
+       "Zt_Cc" : Ze_Cc
+       "Zt_N_" : Ze_N_
+     "Zt_Nph_" : Ze_Nph_
+       "Zt_Ns" : Ze_Ns
+    "Zz_C_h_4" : Ze_C_h_4
+  "Zz_Ccoc2h_" : Ze_Ccoc2h_
+    "Zz_Cdod2" : Ze_Cdod2
+     "Zz_H_h_" : Ze_H_h_
+    "Zz_N_h_3" : Ze_N_h_3
+    "Zz_Nph_4" : Ze_Nph_4
+    "Zz_O_h_2" : Ze_O_h_2
+     "Zz_Odod" : Ze_Odod
+   "Zz_Odsto_" : Ze_Odsto_
+    "Zz_S_h_2" : Ze_S_h_2
+main::do_upper_to_top_abbreviation_hash: upp Oe_O_h_ => top Osz_O_h_
+main::do_upper_to_top_abbreviation_hash: upp Oo_Ct => top Otos_Ct
+main::do_upper_to_top_abbreviation_hash: upp Oo_Ct => top Osot_Ct
+main::do_upper_to_top_abbreviation_hash: upp Oe_C_h_ => top Osbss_C_h_
+main::do_upper_to_top_abbreviation_hash: upp Zo_Ndod => top Zos_Ndod
+main::do_upper_to_top_abbreviation_hash: upp Oe_S_h_ => top Osz_S_h_
+main::do_upper_to_top_abbreviation_hash: upp Oe_Ndcd => top Osbss_Ndcd
+main::do_upper_to_top_abbreviation_hash: upp Zo_C_h_3 => top Zos_C_h_3
+main::do_upper_to_top_abbreviation_hash: upp Ze_Cdod2 => top Zz_Cdod2
+main::do_upper_to_top_abbreviation_hash: upp Ze_Nph_ => top Zbsd_Nph_
+main::do_upper_to_top_abbreviation_hash: upp Ze_N_h_ => top Zbss_N_h_
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nph_ => top Odos_Nph_
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nd => top Osos_Nd
+main::do_upper_to_top_abbreviation_hash: upp Ze_Ns => top Zt_Ns
+main::do_upper_to_top_abbreviation_hash: upp Ze_O_h_2 => top Zz_O_h_2
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nsh_ => top Osos_Nsh_
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nu => top Otos_Nu
+main::do_upper_to_top_abbreviation_hash: upp Zo_Ndh_ => top Zod_Ndh_
+main::do_upper_to_top_abbreviation_hash: upp Oe_Cdod => top Osz_Cdod
+main::do_upper_to_top_abbreviation_hash: upp Oo_Cdh_ => top Odos_Cdh_
+main::do_upper_to_top_abbreviation_hash: upp Oe_No => top Odbss_No
+main::do_upper_to_top_abbreviation_hash: upp Ze_Nph_ => top Zt_Nph_
+main::do_upper_to_top_abbreviation_hash: upp Oe_Nsh_ => top Osbss_Nsh_
+main::do_upper_to_top_abbreviation_hash: upp Ze_Cdod => top Zbss_Cdod
+main::do_upper_to_top_abbreviation_hash: upp Ze_Ns => top Zbsd_Ns
+main::do_upper_to_top_abbreviation_hash: upp Ze_Cq => top Zbdd_Cq
+main::do_upper_to_top_abbreviation_hash: upp Ze_Nsh_ => top Zbss_Nsh_
+main::do_upper_to_top_abbreviation_hash: upp Oe_Cdh_2 => top Odz_Cdh_2
+main::do_upper_to_top_abbreviation_hash: upp Zo_Nsh_2 => top Zos_Nsh_2
+main::do_upper_to_top_abbreviation_hash: upp Oe_Cdod => top Odz_Cdod
+main::do_upper_to_top_abbreviation_hash: upp Ze_Nsh_2 => top Zbss_Nsh_2
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nd => top Odos_Nd
+main::do_upper_to_top_abbreviation_hash: upp Oo_N_h_ => top Osos_N_h_
+main::do_upper_to_top_abbreviation_hash: upp Ze_H_h_ => top Zz_H_h_
+main::do_upper_to_top_abbreviation_hash: upp Ze_Cc => top Zt_Cc
+main::do_upper_to_top_abbreviation_hash: upp Oo_C_h_ => top Osod_C_h_
+main::do_upper_to_top_abbreviation_hash: upp Oo_C_h_2 => top Osos_C_h_2
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nq => top Odod_Nq
+main::do_upper_to_top_abbreviation_hash: upp Zo_Nph_3 => top Zos_Nph_3
+main::do_upper_to_top_abbreviation_hash: upp Ze_Cch_ => top Zbss_Cch_
+main::do_upper_to_top_abbreviation_hash: upp Zo_Ccoc2 => top Zos_Ccoc2
+main::do_upper_to_top_abbreviation_hash: upp Oo_Cd => top Odod_Cd
+main::do_upper_to_top_abbreviation_hash: upp Zo_S_o_ => top Zos_S_o_
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nph_ => top Osod_Nph_
+main::do_upper_to_top_abbreviation_hash: upp Ze_C_ => top Zq_C_
+main::do_upper_to_top_abbreviation_hash: upp Oe_Nsoc2 => top Osz_Nsoc2
+main::do_upper_to_top_abbreviation_hash: upp Ze_N_ => top Zt_N_
+main::do_upper_to_top_abbreviation_hash: upp Oe_N_ => top Osbss_N_
+main::do_upper_to_top_abbreviation_hash: upp Ze_S_h_2 => top Zz_S_h_2
+main::do_upper_to_top_abbreviation_hash: upp Zo_O_h_ => top Zos_O_h_
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nph_2 => top Osos_Nph_2
+main::do_upper_to_top_abbreviation_hash: upp Ze_C_h_4 => top Zz_C_h_4
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nc => top Osos_Nc
+main::do_upper_to_top_abbreviation_hash: upp Oe_Cc => top Osbss_Cc
+main::do_upper_to_top_abbreviation_hash: upp Zo_Cch_2 => top Zos_Cch_2
+main::do_upper_to_top_abbreviation_hash: upp Oe_Cdodh_ => top Osz_Cdodh_
+main::do_upper_to_top_abbreviation_hash: upp Oe_Nph_2 => top Odz_Nph_2
+main::do_upper_to_top_abbreviation_hash: upp Oe_C_ => top Ostsss_C_
+main::do_upper_to_top_abbreviation_hash: upp Ze_C_h_2 => top Zbss_C_h_2
+main::do_upper_to_top_abbreviation_hash: upp Zo_S_h_ => top Zos_S_h_
+main::do_upper_to_top_abbreviation_hash: upp Ze_Cc => top Zbsd_Cc
+main::do_upper_to_top_abbreviation_hash: upp Ze_Nc => top Zbss_Nc
+main::do_upper_to_top_abbreviation_hash: upp Ze_Np => top Zq_Np
+main::do_upper_to_top_abbreviation_hash: upp Oe_Sdod => top Osz_Sdod
+main::do_upper_to_top_abbreviation_hash: upp Oe_Nph_ => top Osbss_Nph_
+main::do_upper_to_top_abbreviation_hash: upp Oo_Nu => top Osot_Nu
+main::do_upper_to_top_abbreviation_hash: upp Zo_Cdh_2 => top Zod_Cdh_2
+main::do_upper_to_top_abbreviation_hash: upp Oe_Cd => top Odbss_Cd
+main::do_upper_to_top_abbreviation_hash: upp Zo_Cdod => top Zod_Cdod
+main::do_upper_to_top_abbreviation_hash: upp Zo_N_h_2 => top Zos_N_h_2
+main::do_upper_to_top_abbreviation_hash: upp Ze_C_h_ => top Zbsd_C_h_
+main::do_upper_to_top_abbreviation_hash: upp Ze_Nq => top Zbdd_Nq
+main::do_upper_to_top_abbreviation_hash: upp Oo_Cdod => top Osos_Cdod
+main::do_upper_to_top_abbreviation_hash: upp Ze_Odod => top Zz_Odod
+main::do_upper_to_top_abbreviation_hash: upp Oe_Cch_2 => top Osz_Cch_2
+main::do_upper_to_top_abbreviation_hash: upp Ze_Odsto_ => top Zz_Odsto_
+main::do_upper_to_top_abbreviation_hash: upp Zo_Cdodh_ => top Zos_Cdodh_
+main::do_upper_to_top_abbreviation_hash: upp Ze_Ccoc2h_ => top Zz_Ccoc2h_
+main::do_upper_to_top_abbreviation_hash: upp Ze_Nph_4 => top Zz_Nph_4
+main::do_upper_to_top_abbreviation_hash: upp Oe_Nph_3 => top Osz_Nph_3
+main::do_upper_to_top_abbreviation_hash: upp Oe_Np => top Ostsss_Np
+main::do_upper_to_top_abbreviation_hash: upp Zo_Noh_2 => top Zod_Noh_2
+main::do_upper_to_top_abbreviation_hash: upp Oe_Ndod => top Osz_Ndod
+main::do_upper_to_top_abbreviation_hash: upp Oe_Ndh_ => top Odz_Ndh_
+main::do_upper_to_top_abbreviation_hash: upp Ze_C_h_ => top Zt_C_h_
+main::do_upper_to_top_abbreviation_hash: upp Oe_Nsh_2 => top Osz_Nsh_2
+main::do_upper_to_top_abbreviation_hash: upp Oe_Ccoc2 => top Osz_Ccoc2
+main::do_upper_to_top_abbreviation_hash: upp Oe_N_h_2 => top Osz_N_h_2
+main::do_upper_to_top_abbreviation_hash: upp Oe_Cth_ => top Otz_Cth_
+main::do_upper_to_top_abbreviation_hash: upp Oe_C_h_3 => top Osz_C_h_3
+main::do_upper_to_top_abbreviation_hash: upp Zo_Nsoc2 => top Zos_Nsoc2
+main::do_upper_to_top_abbreviation_hash: upp Oo_O_ => top Osos_O_
+main::do_upper_to_top_abbreviation_hash: upp Zo_Cth_ => top Zot_Cth_
+main::do_upper_to_top_abbreviation_hash: upp Oo_Cch_ => top Osos_Cch_
+main::do_upper_to_top_abbreviation_hash: upp Ze_N_h_3 => top Zz_N_h_3
+main::do_upper_to_top_abbreviation_hash: upp Oo_S_ => top Osos_S_
+       "Oe_C_" : Ostsss_C_
+     "Oe_C_h_" : Osbss_C_h_
+    "Oe_C_h_3" : Osz_C_h_3
+       "Oe_Cc" : Osbss_Cc
+    "Oe_Cch_2" : Osz_Cch_2
+    "Oe_Ccoc2" : Osz_Ccoc2
+       "Oe_Cd" : Odbss_Cd
+    "Oe_Cdh_2" : Odz_Cdh_2
+     "Oe_Cdod" : Odz_Cdod
+   "Oe_Cdodh_" : Osz_Cdodh_
+     "Oe_Cth_" : Otz_Cth_
+       "Oe_N_" : Osbss_N_
+    "Oe_N_h_2" : Osz_N_h_2
+     "Oe_Ndcd" : Osbss_Ndcd
+     "Oe_Ndh_" : Odz_Ndh_
+     "Oe_Ndod" : Osz_Ndod
+       "Oe_No" : Odbss_No
+       "Oe_Np" : Ostsss_Np
+     "Oe_Nph_" : Osbss_Nph_
+    "Oe_Nph_2" : Odz_Nph_2
+    "Oe_Nph_3" : Osz_Nph_3
+     "Oe_Nsh_" : Osbss_Nsh_
+    "Oe_Nsh_2" : Osz_Nsh_2
+    "Oe_Nsoc2" : Osz_Nsoc2
+     "Oe_O_h_" : Osz_O_h_
+     "Oe_S_h_" : Osz_S_h_
+     "Oe_Sdod" : Osz_Sdod
+     "Oo_C_h_" : Osod_C_h_
+    "Oo_C_h_2" : Osos_C_h_2
+     "Oo_Cch_" : Osos_Cch_
+       "Oo_Cd" : Odod_Cd
+     "Oo_Cdh_" : Odos_Cdh_
+     "Oo_Cdod" : Osos_Cdod
+       "Oo_Ct" : Osot_Ct
+     "Oo_N_h_" : Osos_N_h_
+       "Oo_Nc" : Osos_Nc
+       "Oo_Nd" : Odos_Nd
+     "Oo_Nph_" : Osod_Nph_
+    "Oo_Nph_2" : Osos_Nph_2
+       "Oo_Nq" : Odod_Nq
+     "Oo_Nsh_" : Osos_Nsh_
+       "Oo_Nu" : Osot_Nu
+       "Oo_O_" : Osos_O_
+       "Oo_S_" : Osos_S_
+       "Ze_C_" : Zq_C_
+     "Ze_C_h_" : Zt_C_h_
+    "Ze_C_h_2" : Zbss_C_h_2
+    "Ze_C_h_4" : Zz_C_h_4
+       "Ze_Cc" : Zbsd_Cc
+     "Ze_Cch_" : Zbss_Cch_
+  "Ze_Ccoc2h_" : Zz_Ccoc2h_
+     "Ze_Cdod" : Zbss_Cdod
+    "Ze_Cdod2" : Zz_Cdod2
+       "Ze_Cq" : Zbdd_Cq
+     "Ze_H_h_" : Zz_H_h_
+       "Ze_N_" : Zt_N_
+     "Ze_N_h_" : Zbss_N_h_
+    "Ze_N_h_3" : Zz_N_h_3
+       "Ze_Nc" : Zbss_Nc
+       "Ze_Np" : Zq_Np
+     "Ze_Nph_" : Zt_Nph_
+    "Ze_Nph_4" : Zz_Nph_4
+       "Ze_Nq" : Zbdd_Nq
+       "Ze_Ns" : Zbsd_Ns
+     "Ze_Nsh_" : Zbss_Nsh_
+    "Ze_Nsh_2" : Zbss_Nsh_2
+    "Ze_O_h_2" : Zz_O_h_2
+     "Ze_Odod" : Zz_Odod
+   "Ze_Odsto_" : Zz_Odsto_
+    "Ze_S_h_2" : Zz_S_h_2
+    "Zo_C_h_3" : Zos_C_h_3
+    "Zo_Cch_2" : Zos_Cch_2
+    "Zo_Ccoc2" : Zos_Ccoc2
+    "Zo_Cdh_2" : Zod_Cdh_2
+     "Zo_Cdod" : Zod_Cdod
+   "Zo_Cdodh_" : Zos_Cdodh_
+     "Zo_Cth_" : Zot_Cth_
+    "Zo_N_h_2" : Zos_N_h_2
+     "Zo_Ndh_" : Zod_Ndh_
+     "Zo_Ndod" : Zos_Ndod
+    "Zo_Noh_2" : Zod_Noh_2
+    "Zo_Nph_3" : Zos_Nph_3
+    "Zo_Nsh_2" : Zos_Nsh_2
+    "Zo_Nsoc2" : Zos_Nsoc2
+     "Zo_O_h_" : Zos_O_h_
+     "Zo_S_h_" : Zos_S_h_
+     "Zo_S_o_" : Zos_S_o_
+                          "Halfbridge_block_symbol" : onezero_block_symbol
+                                         "Odbss_Cd" : onedoublebiforksinglesingle_block_symbol
+                                         "Odbss_No" : onedoublebiforksinglesingle_block_symbol
+                                          "Odod_Cd" : onedoubleonedouble_block_symbol
+                                          "Odod_Nq" : onedoubleonedouble_block_symbol
+                                        "Odos_Cdh_" : onedoubleonesingle_block_symbol
+                                          "Odos_Nd" : onedoubleonesingle_block_symbol
+                                        "Odos_Nph_" : onedoubleonesingle_block_symbol
+                                        "Odz_Cdh_2" : onedoublezero_block_symbol
+                                         "Odz_Cdod" : onedoublezero_block_symbol
+                                         "Odz_Ndh_" : onedoublezero_block_symbol
+                                        "Odz_Nph_2" : onedoublezero_block_symbol
+                           "Onebifork_block_symbol" : onefork_block_symbol
+         "Onedoublebiforksinglesingle_block_symbol" : onebifork_block_symbol
+                  "Onedoubleonedouble_block_symbol" : oneone_block_symbol
+                  "Onedoubleonesingle_block_symbol" : oneone_block_symbol
+                       "Onedoublezero_block_symbol" : onezero_block_symbol
+                              "Oneend_block_symbol" : block_symbol
+                             "Onefork_block_symbol" : oneend_block_symbol
+                              "Oneone_block_symbol" : block_symbol
+         "Onesinglebiforksinglesingle_block_symbol" : onebifork_block_symbol
+                  "Onesingleonedouble_block_symbol" : oneone_block_symbol
+                  "Onesingleonesingle_block_symbol" : oneone_block_symbol
+                  "Onesingleonetriple_block_symbol" : oneone_block_symbol
+  "Onesingletriforksinglesinglesingle_block_symbol" : onetrifork_block_symbol
+                       "Onesinglezero_block_symbol" : onezero_block_symbol
+                          "Onetrifork_block_symbol" : onefork_block_symbol
+                  "Onetripleonesingle_block_symbol" : oneone_block_symbol
+                       "Onetriplezero_block_symbol" : onezero_block_symbol
+                             "Onezero_block_symbol" : oneend_block_symbol
+                                       "Osbss_C_h_" : onesinglebiforksinglesingle_block_symbol
+                                         "Osbss_Cc" : onesinglebiforksinglesingle_block_symbol
+                                         "Osbss_N_" : onesinglebiforksinglesingle_block_symbol
+                                       "Osbss_Ndcd" : onesinglebiforksinglesingle_block_symbol
+                                       "Osbss_Nph_" : onesinglebiforksinglesingle_block_symbol
+                                       "Osbss_Nsh_" : onesinglebiforksinglesingle_block_symbol
+                                        "Osod_C_h_" : onesingleonedouble_block_symbol
+                                        "Osod_Nph_" : onesingleonedouble_block_symbol
+                                       "Osos_C_h_2" : onesingleonesingle_block_symbol
+                                        "Osos_Cch_" : onesingleonesingle_block_symbol
+                                        "Osos_Cdod" : onesingleonesingle_block_symbol
+                                        "Osos_N_h_" : onesingleonesingle_block_symbol
+                                          "Osos_Nc" : onesingleonesingle_block_symbol
+                                          "Osos_Nd" : onesingleonedouble_block_symbol
+                                       "Osos_Nph_2" : onesingleonesingle_block_symbol
+                                        "Osos_Nsh_" : onesingleonesingle_block_symbol
+                                          "Osos_O_" : onesingleonesingle_block_symbol
+                                          "Osos_S_" : onesingleonesingle_block_symbol
+                                          "Osot_Ct" : onesingleonetriple_block_symbol
+                                          "Osot_Nu" : onesingleonetriple_block_symbol
+                                        "Ostsss_C_" : onesingletriforksinglesinglesingle_block_symbol
+                                        "Ostsss_Np" : onesingletriforksinglesinglesingle_block_symbol
+                                        "Osz_C_h_3" : onesinglezero_block_symbol
+                                        "Osz_Cch_2" : onesinglezero_block_symbol
+                                        "Osz_Ccoc2" : onesinglezero_block_symbol
+                                         "Osz_Cdod" : onesinglezero_block_symbol
+                                       "Osz_Cdodh_" : onesinglezero_block_symbol
+                                        "Osz_N_h_2" : onesinglezero_block_symbol
+                                         "Osz_Ndod" : onesinglezero_block_symbol
+                                        "Osz_Nph_3" : onesinglezero_block_symbol
+                                        "Osz_Nsh_2" : onesinglezero_block_symbol
+                                        "Osz_Nsoc2" : onesinglezero_block_symbol
+                                         "Osz_O_h_" : onesinglezero_block_symbol
+                                         "Osz_S_h_" : onesinglezero_block_symbol
+                                         "Osz_Sdod" : onesinglezero_block_symbol
+                                          "Otos_Ct" : onetripleonesingle_block_symbol
+                                          "Otos_Nu" : onetripleonesingle_block_symbol
+                                         "Otz_Cth_" : onetriplezero_block_symbol
+                                          "Zbdd_Cq" : zerobiforkdoubledouble_block_symbol
+                                          "Zbdd_Nq" : zerobiforkdoubledouble_block_symbol
+                                        "Zbsd_C_h_" : zerobiforksingledouble_block_symbol
+                                          "Zbsd_Cc" : zerobiforksingledouble_block_symbol
+                                        "Zbsd_Nph_" : zerobiforksingledouble_block_symbol
+                                          "Zbsd_Ns" : zerobiforksingledouble_block_symbol
+                                       "Zbss_C_h_2" : zerobiforksinglesingle_block_symbol
+                                        "Zbss_Cch_" : zerobiforksinglesingle_block_symbol
+                                        "Zbss_Cdod" : zerobiforksinglesingle_block_symbol
+                                        "Zbss_N_h_" : zerobiforksinglesingle_block_symbol
+                                          "Zbss_Nc" : zerobiforksinglesingle_block_symbol
+                                        "Zbss_Nsh_" : zerobiforksinglesingle_block_symbol
+                                       "Zbss_Nsh_2" : zerobiforksinglesingle_block_symbol
+                          "Zerobifork_block_symbol" : zerofork_block_symbol
+              "Zerobiforkdoubledouble_block_symbol" : zerobifork_block_symbol
+              "Zerobiforksingledouble_block_symbol" : zerobifork_block_symbol
+              "Zerobiforksinglesingle_block_symbol" : zerobifork_block_symbol
+                             "Zeroend_block_symbol" : block_symbol
+                            "Zerofork_block_symbol" : zeroend_block_symbol
+                             "Zeroone_block_symbol" : block_symbol
+                       "Zeroonedouble_block_symbol" : zeroone_block_symbol
+                       "Zeroonesingle_block_symbol" : zeroone_block_symbol
+                       "Zeroonetriple_block_symbol" : zeroone_block_symbol
+                      "Zeroquadrifork_block_symbol" : zerofork_block_symbol
+                         "Zerotrifork_block_symbol" : zerofork_block_symbol
+                            "Zerozero_block_symbol" : zeroend_block_symbol
+                                        "Zod_Cdh_2" : zeroonedouble_block_symbol
+                                         "Zod_Cdod" : zeroonedouble_block_symbol
+                                         "Zod_Ndh_" : zeroonedouble_block_symbol
+                                        "Zod_Noh_2" : zeroonedouble_block_symbol
+                                        "Zos_C_h_3" : zeroonesingle_block_symbol
+                                        "Zos_Cch_2" : zeroonesingle_block_symbol
+                                        "Zos_Ccoc2" : zeroonesingle_block_symbol
+                                       "Zos_Cdodh_" : zeroonesingle_block_symbol
+                                        "Zos_N_h_2" : zeroonesingle_block_symbol
+                                         "Zos_Ndod" : zeroonesingle_block_symbol
+                                        "Zos_Nph_3" : zeroonesingle_block_symbol
+                                        "Zos_Nsh_2" : zeroonesingle_block_symbol
+                                        "Zos_Nsoc2" : zeroonesingle_block_symbol
+                                         "Zos_O_h_" : zeroonesingle_block_symbol
+                                         "Zos_S_h_" : zeroonesingle_block_symbol
+                                         "Zos_S_o_" : zeroonesingle_block_symbol
+                                         "Zot_Cth_" : zeroonetriple_block_symbol
+                                            "Zq_C_" : zeroquadrifork_block_symbol
+                                            "Zq_Np" : zeroquadrifork_block_symbol
+                                          "Zt_C_h_" : zerotrifork_block_symbol
+                                            "Zt_Cc" : zerotrifork_block_symbol
+                                            "Zt_N_" : zerotrifork_block_symbol
+                                          "Zt_Nph_" : zerotrifork_block_symbol
+                                            "Zt_Ns" : zerotrifork_block_symbol
+                                         "Zz_C_h_4" : zerozero_block_symbol
+                                       "Zz_Ccoc2h_" : zerozero_block_symbol
+                                         "Zz_Cdod2" : zerozero_block_symbol
+                                          "Zz_H_h_" : zerozero_block_symbol
+                                         "Zz_N_h_3" : zerozero_block_symbol
+                                         "Zz_Nph_4" : zerozero_block_symbol
+                                         "Zz_O_h_2" : zerozero_block_symbol
+                                          "Zz_Odod" : zerozero_block_symbol
+                                        "Zz_Odsto_" : zerozero_block_symbol
+                                         "Zz_S_h_2" : zerozero_block_symbol
+val oe_ndh_ : Block_symbol_t.oneend_block_symbol;;
+val ze_n_h_3 : Block_symbol_t.zeroend_block_symbol;;
+val oe_cc : Block_symbol_t.oneend_block_symbol;;
+val oe_cch_2 : Block_symbol_t.oneend_block_symbol;;
+val oe_c_ : Block_symbol_t.oneend_block_symbol;;
+val oe_ndcd : Block_symbol_t.oneend_block_symbol;;
+val ze_c_h_2 : Block_symbol_t.zeroend_block_symbol;;
+val oo_cdod : Block_symbol_t.oneone_block_symbol;;
+val ze_odsto_ : Block_symbol_t.zeroend_block_symbol;;
+val oo_c_h_ : Block_symbol_t.oneone_block_symbol;;
+val zo_nsh_2 : Block_symbol_t.zeroone_block_symbol;;
+val zo_cch_2 : Block_symbol_t.zeroone_block_symbol;;
+val zo_o_h_ : Block_symbol_t.zeroone_block_symbol;;
+val ze_h_h_ : Block_symbol_t.zeroend_block_symbol;;
+val oo_n_h_ : Block_symbol_t.oneone_block_symbol;;
+val oe_cth_ : Block_symbol_t.oneend_block_symbol;;
+val zo_s_h_ : Block_symbol_t.zeroone_block_symbol;;
+val oe_nsh_ : Block_symbol_t.oneend_block_symbol;;
+val oo_nph_2 : Block_symbol_t.oneone_block_symbol;;
+val oo_nc : Block_symbol_t.oneone_block_symbol;;
+val zo_n_h_2 : Block_symbol_t.zeroone_block_symbol;;
+val oe_nph_ : Block_symbol_t.oneend_block_symbol;;
+val ze_s_h_2 : Block_symbol_t.zeroend_block_symbol;;
+val ze_odod : Block_symbol_t.zeroend_block_symbol;;
+val ze_cdod2 : Block_symbol_t.zeroend_block_symbol;;
+val oo_c_h_2 : Block_symbol_t.oneone_block_symbol;;
+val oo_nph_ : Block_symbol_t.oneone_block_symbol;;
+val ze_cdod : Block_symbol_t.zeroend_block_symbol;;
+val ze_nc : Block_symbol_t.zeroend_block_symbol;;
+val oo_cd : Block_symbol_t.oneone_block_symbol;;
+val oo_o_ : Block_symbol_t.oneone_block_symbol;;
+val oe_np : Block_symbol_t.oneend_block_symbol;;
+val zo_cth_ : Block_symbol_t.zeroone_block_symbol;;
+val oe_c_h_3 : Block_symbol_t.oneend_block_symbol;;
+val oe_nph_2 : Block_symbol_t.oneend_block_symbol;;
+val ze_c_h_ : Block_symbol_t.zeroend_block_symbol;;
+val ze_c_ : Block_symbol_t.zeroend_block_symbol;;
+val ze_cch_ : Block_symbol_t.zeroend_block_symbol;;
+val oe_o_h_ : Block_symbol_t.oneend_block_symbol;;
+val oo_cch_ : Block_symbol_t.oneone_block_symbol;;
+val ze_n_h_ : Block_symbol_t.zeroend_block_symbol;;
+val oe_nph_3 : Block_symbol_t.oneend_block_symbol;;
+val oe_cdh_2 : Block_symbol_t.oneend_block_symbol;;
+val oe_ccoc2 : Block_symbol_t.oneend_block_symbol;;
+val oe_nsh_2 : Block_symbol_t.oneend_block_symbol;;
+val oe_ndod : Block_symbol_t.oneend_block_symbol;;
+val zo_nph_3 : Block_symbol_t.zeroone_block_symbol;;
+val oe_s_h_ : Block_symbol_t.oneend_block_symbol;;
+val oe_n_ : Block_symbol_t.oneend_block_symbol;;
+val oe_cdod : Block_symbol_t.oneend_block_symbol;;
+val ze_nsh_ : Block_symbol_t.zeroend_block_symbol;;
+val ze_c_h_4 : Block_symbol_t.zeroend_block_symbol;;
+val oe_cd : Block_symbol_t.oneend_block_symbol;;
+val oe_n_h_2 : Block_symbol_t.oneend_block_symbol;;
+val oe_c_h_ : Block_symbol_t.oneend_block_symbol;;
+val oo_nd : Block_symbol_t.oneone_block_symbol;;
+val oe_cdodh_ : Block_symbol_t.oneend_block_symbol;;
+val ze_cq : Block_symbol_t.zeroend_block_symbol;;
+val oo_s_ : Block_symbol_t.oneone_block_symbol;;
+val oo_cdh_ : Block_symbol_t.oneone_block_symbol;;
+val oe_sdod : Block_symbol_t.oneend_block_symbol;;
+val zo_nsoc2 : Block_symbol_t.zeroone_block_symbol;;
+val ze_nph_4 : Block_symbol_t.zeroend_block_symbol;;
+val oe_no : Block_symbol_t.oneend_block_symbol;;
+val ze_cc : Block_symbol_t.zeroend_block_symbol;;
+val ze_n_ : Block_symbol_t.zeroend_block_symbol;;
+val zo_c_h_3 : Block_symbol_t.zeroone_block_symbol;;
+val ze_nph_ : Block_symbol_t.zeroend_block_symbol;;
+val ze_o_h_2 : Block_symbol_t.zeroend_block_symbol;;
+val zo_ndod : Block_symbol_t.zeroone_block_symbol;;
+val zo_cdod : Block_symbol_t.zeroone_block_symbol;;
+val oo_nsh_ : Block_symbol_t.oneone_block_symbol;;
+val zo_noh_2 : Block_symbol_t.zeroone_block_symbol;;
+val oe_nsoc2 : Block_symbol_t.oneend_block_symbol;;
+val oo_nq : Block_symbol_t.oneone_block_symbol;;
+val zo_cdh_2 : Block_symbol_t.zeroone_block_symbol;;
+val ze_np : Block_symbol_t.zeroend_block_symbol;;
+val zo_cdodh_ : Block_symbol_t.zeroone_block_symbol;;
+val oo_nu : Block_symbol_t.oneone_block_symbol;;
+val oo_ct : Block_symbol_t.oneone_block_symbol;;
+val ze_ns : Block_symbol_t.zeroend_block_symbol;;
+val zo_ccoc2 : Block_symbol_t.zeroone_block_symbol;;
+val zo_s_o_ : Block_symbol_t.zeroone_block_symbol;;
+val ze_nsh_2 : Block_symbol_t.zeroend_block_symbol;;
+val ze_ccoc2h_ : Block_symbol_t.zeroend_block_symbol;;
+val zo_ndh_ : Block_symbol_t.zeroone_block_symbol;;
+val ze_nq : Block_symbol_t.zeroend_block_symbol;;
+val zz_c_h_4 : Block_symbol_t.block_symbol;;
+val zz_ccoc2h_ : Block_symbol_t.block_symbol;;
+val zz_cdod2 : Block_symbol_t.block_symbol;;
+val zz_nph_4 : Block_symbol_t.block_symbol;;
+val zz_n_h_3 : Block_symbol_t.block_symbol;;
+val zz_h_h_ : Block_symbol_t.block_symbol;;
+val zz_odod : Block_symbol_t.block_symbol;;
+val zz_o_h_2 : Block_symbol_t.block_symbol;;
+val zz_s_h_2 : Block_symbol_t.block_symbol;;
+val zz_odsto_ : Block_symbol_t.block_symbol;;
+val zbss_c_h_2 : Block_symbol_t.block_symbol;;
+val zbss_cdod : Block_symbol_t.block_symbol;;
+val zbss_cch_ : Block_symbol_t.block_symbol;;
+val zbss_n_h_ : Block_symbol_t.block_symbol;;
+val zbss_nsh_2 : Block_symbol_t.block_symbol;;
+val zbss_nc : Block_symbol_t.block_symbol;;
+val zbss_nsh_ : Block_symbol_t.block_symbol;;
+val zbsd_c_h_ : Block_symbol_t.block_symbol;;
+val zbsd_cc : Block_symbol_t.block_symbol;;
+val zbsd_nph_ : Block_symbol_t.block_symbol;;
+val zbsd_ns : Block_symbol_t.block_symbol;;
+val zbdd_cq : Block_symbol_t.block_symbol;;
+val zbdd_nq : Block_symbol_t.block_symbol;;
+val zt_c_h_ : Block_symbol_t.block_symbol;;
+val zt_cc : Block_symbol_t.block_symbol;;
+val zt_n_ : Block_symbol_t.block_symbol;;
+val zt_nph_ : Block_symbol_t.block_symbol;;
+val zt_ns : Block_symbol_t.block_symbol;;
+val zq_c_ : Block_symbol_t.block_symbol;;
+val zq_np : Block_symbol_t.block_symbol;;
+val zos_c_h_3 : Block_symbol_t.block_symbol;;
+val zos_cdodh_ : Block_symbol_t.block_symbol;;
+val zos_ccoc2 : Block_symbol_t.block_symbol;;
+val zos_cch_2 : Block_symbol_t.block_symbol;;
+val zos_n_h_2 : Block_symbol_t.block_symbol;;
+val zos_ndod : Block_symbol_t.block_symbol;;
+val zos_nsoc2 : Block_symbol_t.block_symbol;;
+val zos_nph_3 : Block_symbol_t.block_symbol;;
+val zos_nsh_2 : Block_symbol_t.block_symbol;;
+val zos_o_h_ : Block_symbol_t.block_symbol;;
+val zos_s_h_ : Block_symbol_t.block_symbol;;
+val zos_s_o_ : Block_symbol_t.block_symbol;;
+val zod_cdh_2 : Block_symbol_t.block_symbol;;
+val zod_cdod : Block_symbol_t.block_symbol;;
+val zod_ndh_ : Block_symbol_t.block_symbol;;
+val zod_noh_2 : Block_symbol_t.block_symbol;;
+val zot_cth_ : Block_symbol_t.block_symbol;;
+val osz_c_h_3 : Block_symbol_t.block_symbol;;
+val osz_cch_2 : Block_symbol_t.block_symbol;;
+val osz_ccoc2 : Block_symbol_t.block_symbol;;
+val osz_cdod : Block_symbol_t.block_symbol;;
+val osz_cdodh_ : Block_symbol_t.block_symbol;;
+val osz_n_h_2 : Block_symbol_t.block_symbol;;
+val osz_ndod : Block_symbol_t.block_symbol;;
+val osz_nph_3 : Block_symbol_t.block_symbol;;
+val osz_nsh_2 : Block_symbol_t.block_symbol;;
+val osz_nsoc2 : Block_symbol_t.block_symbol;;
+val osz_o_h_ : Block_symbol_t.block_symbol;;
+val osz_s_h_ : Block_symbol_t.block_symbol;;
+val osz_sdod : Block_symbol_t.block_symbol;;
+val odz_cdh_2 : Block_symbol_t.block_symbol;;
+val odz_cdod : Block_symbol_t.block_symbol;;
+val odz_ndh_ : Block_symbol_t.block_symbol;;
+val odz_nph_2 : Block_symbol_t.block_symbol;;
+val otz_cth_ : Block_symbol_t.block_symbol;;
+val osos_c_h_2 : Block_symbol_t.block_symbol;;
+val osos_cdod : Block_symbol_t.block_symbol;;
+val osos_cch_ : Block_symbol_t.block_symbol;;
+val osos_n_h_ : Block_symbol_t.block_symbol;;
+val osos_nph_2 : Block_symbol_t.block_symbol;;
+val osos_nsh_ : Block_symbol_t.block_symbol;;
+val osos_nc : Block_symbol_t.block_symbol;;
+val osos_o_ : Block_symbol_t.block_symbol;;
+val osos_s_ : Block_symbol_t.block_symbol;;
+val osod_c_h_ : Block_symbol_t.block_symbol;;
+val osos_nd : Block_symbol_t.block_symbol;;
+val osod_nph_ : Block_symbol_t.block_symbol;;
+val osot_ct : Block_symbol_t.block_symbol;;
+val osot_nu : Block_symbol_t.block_symbol;;
+val odos_cdh_ : Block_symbol_t.block_symbol;;
+val odos_nd : Block_symbol_t.block_symbol;;
+val odos_nph_ : Block_symbol_t.block_symbol;;
+val odod_cd : Block_symbol_t.block_symbol;;
+val odod_nq : Block_symbol_t.block_symbol;;
+val otos_ct : Block_symbol_t.block_symbol;;
+val otos_nu : Block_symbol_t.block_symbol;;
+val osbss_c_h_ : Block_symbol_t.block_symbol;;
+val osbss_cc : Block_symbol_t.block_symbol;;
+val osbss_n_ : Block_symbol_t.block_symbol;;
+val osbss_ndcd : Block_symbol_t.block_symbol;;
+val osbss_nph_ : Block_symbol_t.block_symbol;;
+val osbss_nsh_ : Block_symbol_t.block_symbol;;
+val odbss_cd : Block_symbol_t.block_symbol;;
+val odbss_no : Block_symbol_t.block_symbol;;
+val ostsss_c_ : Block_symbol_t.block_symbol;;
+val ostsss_np : Block_symbol_t.block_symbol;;
+ 520 lines written

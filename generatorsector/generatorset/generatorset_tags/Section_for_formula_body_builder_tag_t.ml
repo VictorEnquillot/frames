@@ -1,0 +1,2 @@
+
+type section_for_formula_body_builder_tag = Section_for_formula_body_builder_symbol_t.section_for_formula_body_builder_symbol Tag_t.tag;;

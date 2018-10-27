@@ -1,0 +1,26 @@
+constructors   figure                   =   input_entity 
+
+constructors   input_entity             =   input_entity_basic   input_entity_local   input_entity_frames   input_entity_property
+
+constructors   input_entity_local       =   input_entity_local_calculation:ofstring   input_entity_local_command   input_entity_local_constant   input_entity_local_expression   input_entity_local_keyword   input_entity_local_units   input_entity_local_variable   
+
+constructors   input_entity_frames      =   input_entity_frames_category:ofstring   input_entity_frames_database:ofstring   input_entity_frames_domain:ofstring   input_entity_frames_entity   input_entity_frames_file:ofstring   input_entity_frames_function:ofstring   input_entity_frames_module:ofstring   input_entity_frames_name:ofstring   input_entity_frames_what:ofstring
+
+constructors   input_entity_property         =   input_entity_property_category:ofstring   input_entity_property_center   input_entity_property_domain:ofstring   input_entity_property_entity   input_entity_property_file:ofstring   input_entity_property_on   input_entity_property_operator   input_entity_property_over   input_entity_property_name:ofstring   input_entity_property_ratio   input_entity_property_scale_factor   input_entity_property_what:ofstring
+
+constructors   input_entity_basic            =   input_entity_basic_boolean:ofstring   input_entity_basic_integer:ofstring   input_entity_basic_float:ofstring   input_entity_basic_float_value:ofstring   input_entity_basic_string:ofstring
+
+constructors   input_entity_local_command    =   input_command_define   input_command_print   input_command_provide   input_command_set   input_command_stop   input_command_write
+
+constructors   input_entity_local_constant   =   input_entity_local_constant_boolean:ofstring   input_entity_local_constant_integer:ofstring   input_entity_local_constant_float:ofstring   input_entity_local_constant_string:ofstring
+
+constructors   input_entity_local_expression =   input_expression_boolean   input_expression_string   input_expression_mathematical
+
+constructors   input_entity_local_keyword    =   input_applying   input_as   input_by   input_comment   input_debug   input_end   input_evaluating   input_extracting   input_for   input_needs   input_off   input_statistics   input_trace   input_to   input_units   input_with
+
+constructors   input_entity_local_units       =   input_units_angle:ofstring   input_units_energy:ofstring   input_units_length:ofstring   input_units_temperature:ofstring   input_units_time:ofstring
+
+constructors   input_entity_local_variable   =   input_entity_local_variable_reserved   input_entity_local_variable_free:ofstring
+
+constructors   input_entity_local_variable_reserved    =   input_cpu   input_date   input_run   input_time   input_title   input_user   
+

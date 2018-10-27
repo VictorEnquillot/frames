@@ -1,0 +1,21 @@
+ledit -x -h ./.debug-history ocamldebug \
+-I ../../../general/basics \
+-I ../../../general/files \
+-I ../../../general/datastructures \
+-I ../../../commonset \
+-I ../../../inputset/inputset_common \
+-I ../../../inputset/inputset_lexer \
+-I ../../../inputset/inputset_parser \
+-I ../../../inputset/inputset_symbols \
+-I ../../../inputset/inputset_tags \
+-I ../../../inputset/inputset_providers \
+-I ../../../figureset/figureset_symbols \
+-I ../../../elementaryset/elementaryset_symbols \
+-I ../../../propertyset/propertyset_symbols \
+-I ../../../propertyset/propertyset_tags \
+-I ../../../propertyset/propertyset_interfaces \
+runtest.byt
+
+# 
+# display wrd_l
+# print wrd_l 

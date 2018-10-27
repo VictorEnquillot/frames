@@ -1,0 +1,66 @@
+	digraph Frames {
+		size="40,15";
+		node [fontsize=50];
+		edge [arrowhead = "vee", arrowsize = "2.0", style="solid", taillabel = ""];
+
+	Title [
+	    label = "Frames Architecture\nSet Hierarchy", shape=box, fontname=Courier, fontsize=90, color=yellow, style=filled
+	    ];
+
+	    "Frames\nFRA" [color=black, shape="box"];
+ 	    "Entry\nsector\nENS"    [color=blue2];
+ 	    "Product\nsector\nPRS"  [color=brown];
+ 	    "Internal\nsector\nINS" [color=green2];
+ 	    "External\nsector\nEXS" [color=red];
+
+    		Title -> "Frames\nFRA" [ style="invis", width = 5];
+
+		node [color=blue2];
+		"Frames\nFRA" -> "Entry\nsector\nENS";
+
+		"Entry\nsector\nENS" -> "Userinput\nUSI";
+		"Userinput\nUSI" -> "Localinput\nLOI";		     
+		"Localinput\nLOI" -> "Localinputset\nLOIS";		     
+		
+		node [color=brown];
+		"Frames\nFRA" -> "Product\nsector\nPRS";
+		"Product\nsector\nPRS" -> "Propertyset\nPROS";
+		"Product\nsector\nPRS" -> "Operatorset\nOPES";
+
+		node [color=green2];
+		"Frames\nFRA" -> "Internal\nsector\nINS";
+		"Internal\nsector\nINS" -> "Figureset\nFIGS";
+		"Internal\nsector\nINS" -> "Skeletonset\nSKES";
+
+		node [color=red];
+		"Frames\nFRA" -> "External\nsector\nEXS";
+		"External\nsector\nEXS" -> "Figuredata\nFIGD";
+		"Figuredata\nFIGD" -> "Db1pointsdata\nDB1";
+
+		"Db1pointsdata\nDB1" -> "Db1pointsdataset\nDB1S";
+		"Figuredata\nFIGD" -> "Db2pointsdata\nDB2";
+		"Db2pointsdata\nDB2" -> "Db2pointsdataset\nDB2S";
+
+		"External\nsector\nEXS" -> "Skeletondata\nSKED";
+
+		"Skeletondata\nSKED" -> "Molprodata\nMPR";
+		"Molprodata\nMPR" -> "Molprodataset\nMPRS";
+
+		"Skeletondata\nSKED" -> "Nwchemdata\nNWC";
+		"Nwchemdata\nNWC" -> "Nwchemdataset\nNWCS";
+
+
+
+#		bases [shape=Mrecord label="{ Localinput\nLOI | Molprodata\nMPR | Nwchemdata\nNWC | Db1pointsdata\nDB1|Db2pointsdata\nDB2}"];
+
+}
+
+#	    "Userinput\nUSI" [color=blue2];
+#	    "Localinput\nLOI" [color=blue2];
+
+#	    "Operatorset\nOPES" [color=magenta];
+#	    "Propertyset\nPROS" [color=magenta];
+
+#	    "Figureset\nFIGS" [color=green];
+#	    "Skeletonset\nSKES" [color=red];
+

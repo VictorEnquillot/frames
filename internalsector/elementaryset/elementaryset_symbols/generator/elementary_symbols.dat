@@ -1,0 +1,100 @@
+constructors figure                     =   elementary 
+
+constructors elementary                 =   elementary_body   elementary_context   elementary_fence
+
+
+constructors elementary_context         =   elementary_context_database   elementary_context_databox   elementary_context_domain   elementary_context_sector   
+
+constructors elementary_context_database=   elementary_context_database_constructor:ofstring
+
+constructors elementary_context_databox =   elementary_context_databox_constructor:ofstring
+
+constructors elementary_context_domain  =   elementary_context_domain_constructor:ofstring
+constructors elementary_context_sector  =   elementary_context_sector_constructor:ofstring
+
+
+constructors elementary_body                                =   elementary_body_coordinate_tuple   elementary_body_parameter_tuple
+
+constructors elementary_body_coordinate_tuple               =   elementary_body_coordinate_tuple_heterogeneous   elementary_body_coordinate_tuple_homogeneous
+
+constructors elementary_body_coordinate_tuple_heterogeneous =   elementary_body_coordinate_tuple_heterogeneous_cylindrical   elementary_body_coordinate_tuple_heterogeneous_polar   elementary_body_coordinate_tuple_heterogeneous_spherical 
+
+constructors elementary_body_coordinate_tuple_heterogeneous_cylindrical    =   elementary_body_coordinate_tuple_heterogeneous_cylindrical_constructor:ofstring
+constructors elementary_body_coordinate_tuple_heterogeneous_polar          =   elementary_body_coordinate_tuple_heterogeneous_polar_constructor:ofstring
+constructors elementary_body_coordinate_tuple_heterogeneous_spherical      =   elementary_body_coordinate_tuple_heterogeneous_spherical_constructor:ofstring
+
+constructors elementary_body_coordinate_tuple_homogeneous   =   elementary_body_coordinate_tuple_homogeneous_cartesian   elementary_body_coordinate_tuple_homogeneous_linear   elementary_body_coordinate_tuple_homogeneous_planar
+
+constructors elementary_body_coordinate_tuple_homogeneous_cartesian   =   elementary_body_coordinate_tuple_homogeneous_cartesian_constructor:ofstring
+constructors elementary_body_coordinate_tuple_homogeneous_linear      =   elementary_body_coordinate_tuple_homogeneous_linear_constructor:ofstring
+constructors elementary_body_coordinate_tuple_homogeneous_planar      =   elementary_body_coordinate_tuple_homogeneous_planar_constructor:ofstring
+
+constructors elementary_body_parameter_tuple           =   elementary_body_parameter_tuple_aopef   elementary_body_parameter_tuple_ecppef
+
+constructors elementary_body_parameter_tuple_aopef     =   elementary_body_parameter_tuple_aopef_constructor:ofstring
+
+constructors elementary_body_parameter_tuple_ecppef    =   elementary_body_parameter_tuple_ecppef_constructor:ofstring
+
+
+constructors elementary_fence                          =   elementary_fence_coordinate  elementary_fence_parameter
+
+constructors elementary_fence_coordinate               =   elementary_fence_coordinate_heterogeneous   elementary_fence_coordinate_homogeneous
+
+constructors elementary_fence_coordinate_homogeneous   =   elementary_fence_coordinate_homogeneous_cartesian   elementary_fence_coordinate_homogeneous_linear   elementary_fence_coordinate_homogeneous_planar
+
+constructors elementary_fence_coordinate_heterogeneous   =   elementary_fence_coordinate_heterogeneous_cylindrical   elementary_fence_coordinate_heterogeneous_polar   elementary_fence_coordinate_heterogeneous_spherical 
+   
+constructors elementary_fence_coordinate_homogeneous_cartesian   =   elementary_fence_coordinate_homogeneous_cartesian_x   elementary_fence_coordinate_homogeneous_cartesian_y   elementary_fence_coordinate_homogeneous_cartesian_z
+
+constructors elementary_fence_coordinate_homogeneous_cartesian_x =   elementary_fence_coordinate_homogeneous_cartesian_x_constructor:ofstring
+constructors elementary_fence_coordinate_homogeneous_cartesian_y =   elementary_fence_coordinate_homogeneous_cartesian_y_constructor:ofstring
+constructors elementary_fence_coordinate_homogeneous_cartesian_z =   elementary_fence_coordinate_homogeneous_cartesian_z_constructor:ofstring
+
+constructors elementary_fence_coordinate_homogeneous_planar      =   elementary_fence_coordinate_homogeneous_planar_x   elementary_fence_coordinate_homogeneous_planar_y
+
+constructors elementary_fence_coordinate_homogeneous_planar_x    =   elementary_fence_coordinate_homogeneous_planar_x_constructor:ofstring
+constructors elementary_fence_coordinate_homogeneous_planar_y    =   elementary_fence_coordinate_homogeneous_planar_y_constructor:ofstring
+
+constructors elementary_fence_coordinate_homogeneous_linear      =   elementary_fence_coordinate_homogeneous_linear_x
+
+constructors elementary_fence_coordinate_homogeneous_linear_x    =   elementary_fence_coordinate_homogeneous_linear_x_constructor:ofstring
+
+constructors elementary_fence_coordinate_heterogeneous_cylindrical   =   elementary_fence_coordinate_heterogeneous_cylindrical_rho   elementary_fence_coordinate_heterogeneous_cylindrical_phi   elementary_fence_coordinate_heterogeneous_cylindrical_zed
+
+
+constructors elementary_fence_coordinate_heterogeneous_cylindrical_rho=   elementary_fence_coordinate_heterogeneous_cylindrical_rho_constructor:ofstring   
+
+constructors elementary_fence_coordinate_heterogeneous_cylindrical_phi=   elementary_fence_coordinate_heterogeneous_cylindrical_phi_constructor:ofstring   
+
+constructors elementary_fence_coordinate_heterogeneous_cylindrical_zed=   elementary_fence_coordinate_heterogeneous_cylindrical_zed_constructor:ofstring
+
+constructors elementary_fence_coordinate_heterogeneous_spherical      =   elementary_fence_coordinate_heterogeneous_spherical_rho  elementary_fence_coordinate_heterogeneous_spherical_phi  elementary_fence_coordinate_heterogeneous_spherical_theta   
+
+constructors elementary_fence_coordinate_heterogeneous_spherical_rho  =   elementary_fence_coordinate_heterogeneous_spherical_rho_constructor:ofstring
+
+constructors elementary_fence_coordinate_heterogeneous_spherical_phi  =   elementary_fence_coordinate_heterogeneous_spherical_phi_constructor:ofstring  
+
+constructors elementary_fence_coordinate_heterogeneous_spherical_theta=   elementary_fence_coordinate_heterogeneous_spherical_theta_constructor:ofstring   
+
+constructors elementary_fence_coordinate_heterogeneous_polar       =  elementary_fence_coordinate_heterogeneous_polar_rho  elementary_fence_coordinate_heterogeneous_polar_theta   
+
+constructors elementary_fence_coordinate_heterogeneous_polar_rho   =   elementary_fence_coordinate_heterogeneous_polar_rho_constructor:ofstring
+
+constructors elementary_fence_coordinate_heterogeneous_polar_theta =   elementary_fence_coordinate_heterogeneous_polar_theta_constructor:ofstring
+
+
+constructors elementary_fence_parameter                     =   elementary_fence_parameter_aopef   elementary_fence_parameter_ecppef
+
+constructors elementary_fence_parameter_aopef               =   elementary_fence_parameter_aopef_coefficient   elementary_fence_parameter_aopef_exponent
+
+constructors elementary_fence_parameter_aopef_coefficient   =   elementary_fence_parameter_aopef_coefficient_constructor:ofstring
+
+constructors elementary_fence_parameter_aopef_exponent      =   elementary_fence_parameter_aopef_exponent_constructor:ofstring
+
+constructors elementary_fence_parameter_ecppef              =   elementary_fence_parameter_ecppef_coefficient   elementary_fence_parameter_ecppef_exponent
+
+constructors elementary_fence_parameter_ecppef_coefficient  =   elementary_fence_parameter_ecppef_coefficient_constructor:ofstring
+
+constructors elementary_fence_parameter_ecppef_exponent     =   elementary_fence_parameter_ecppef_exponent_constructor:ofstring
+
+

@@ -1,0 +1,16 @@
+ builders formula_true = singlet string
+ builders formula_false = singlet string
+ builders variable:ofstring = list string
+ builders formula_composite = list string
+ builders signedformula_constructor = list turnstile 
+ builders signedformula_list_constructor = list signedformula
+ builders bethtree_constructor = list signedformula_list
+ builders negation = list string
+ builders conjunction = list string
+ builders disjunction = list string
+ builders implication = list string
+ builders leftparenthesis = list string
+ builders rightparenthesis = list string
+ builders turnstile_true = singlet string
+ builders turnstile_false = singlet string
+builders equivalence = singlet  string

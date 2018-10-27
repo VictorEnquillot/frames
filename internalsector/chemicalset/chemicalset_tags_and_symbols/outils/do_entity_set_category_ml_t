@@ -1,0 +1,74 @@
+# ls -C1 *symbol_t.ml | sed -e 's/_symbol_t.ml/ \\/' -e '/set/d'
+
+module_extension="t.ml"
+
+. ${UTI}/do_capitalize_first
+. ${UTI}/do_category_name_abbreviation 
+. ${UTI}/do_category_off_category_extended
+. ${UTI}/do_domain_name
+. ${UTI}/do_domain_module_abbreviation 
+. ${UTI}/do_category_type_abbreviation 
+. ${UTI}/do_category_argument_abbreviation
+. ${UTI}/do_category_value_abbreviation
+. do_module_abbreviation_all
+. do_argument_abbreviation_all
+
+# set -x 
+
+domain_name=`domain_name`
+Domain_name=`capitalize_first ${domain_name}`
+dma=`domain_module_abbreviation ${domain_name}`
+Dma=`capitalize_first ${dma}`
+domainset="${domain_name}set"
+Domainset="${Domain_name}set"
+dsa=${dma}s
+Dsa=${Dma}s
+
+if [ "$1" = "" ]
+then
+	echo "Usage :"
+	for c in `${UTI}/do_for_category`
+	do  
+		if [ "$c" != "tag" ]
+		then 
+		     echo " $0 $c > ${entityset}_${c}_t.ml"
+		fi
+	done
+	exit
+fi
+
+category=$1
+Category=`capitalize_first ${category}`
+caa=`category_argument_abbreviation ${category}`
+cta=`category_type_abbreviation ${category}`
+cva=`category_value_abbreviation ${category}`
+cam=`category_name_abbreviation ${category}`
+
+echo "(** {3 A ${Category} for a ${Entityset}.} *)"
+echo ""
+echo "(** {6 Modules.} *)"
+echo ""
+
+for e in `do_${entity_name}_elementset`
+do
+	E=`capitalize_first ${e}`
+	M=`module_abbreviation ${e}`
+	echo "module ${M}${cam}_${cta} = ${E}_${category}_${cta}"
+done
+
+echo ""
+echo "(** {6 Types.} *)"
+echo " "
+echo "type ${entityset}_${category} ="
+for e in  `do_${entity_name}_elementset`
+do
+	E=`capitalize_first ${e}`
+	M=`module_abbreviation ${e}`
+	echo "  | ${E}_${category} of ${M}${cam}_${cta}.${e}_${category}"
+done
+echo ";;"
+echo ""
+. ${UTI}/do_created
+echo ""
+
+exit

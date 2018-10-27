@@ -1,0 +1,13 @@
+b#!/bin/bash 
+PCWD=`pwd`
+
+for i in basics functions integrals linearalgebra polynomials symbolsgeneral tools units
+do 
+   cd $i
+   echo "$1 in `pwd`"
+   $1
+   cd test
+   echo "$1 in `pwd`"
+   $1
+   cd $PCWD
+done

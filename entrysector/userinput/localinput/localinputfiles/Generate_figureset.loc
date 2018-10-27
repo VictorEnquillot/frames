@@ -1,0 +1,44 @@
+set debug 
+      module "Input_parser_define_v"
+      module "Input_parser_v"
+      end -- debug
+    end -- set 
+
+generate 
+	modules 
+	    type symbols 
+	    value symbols 
+            type formulas
+        end -- module       
+        
+        constructors input_entity { input_entity_basic   input_entity_local   input_entity_frames }
+
+        for input_entity_local  
+        constructors  input_entity_local_command   input_entity_local_constant   input_entity_local_expression   input_entity_local_keyword   input_entity_local_variable }
+
+	for input_entity_frames   
+	constructors    input_entity_frames_category:ofstring   input_entity_frames_database:ofstring   input_entity_frames_domain:ofstring   input_entity_frames_entity:ofstring }
+ }
+
+        for	input_entity_local_expression 
+	constructors    input_expression_boolean   input_expression_string   input_expression_mathematical }
+
+  	for input_entity_local_command 
+        constructors    input_command_calculation   input_command_define   input_command_print   input_command_provide   input_command_set   input_command_stop   input_command_write }
+
+	for input_entity_local_constant
+        constructors    input_entity_local_constant_boolean:ofstring   input_entity_local_constant_integer:ofstring   input_entity_local_constant_float:ofstring   input_entity_local_constant_string:ofstring }
+
+        for input_entity_basic         
+        constructors    input_entity_basic_boolean:ofstring   input_entity_basic_integer:ofstring   input_entity_basic_float:ofstring   input_entity_basic_float_value:ofstring   input_entity_basic_string:ofstring }
+
+        for input_entity_local_keyword 
+        constructors    input_applying   input_as   input_by   input_comment   input_cpu   input_debug   input_end   input_evaluating   input_extracting   input_file   input_for   input_from   input_function   input_module   input_needs   input_off   input_trace   input_to   input_units   input_with }
+
+        for input_entity_local_variable 
+        constructors    input_entity_local_variable_reserved   input_entity_local_variable_free:ofstring }
+
+        for input_entity_local_variable_reserved 
+        constructors    input_Cpu   input_Date   input_Run   input_Time   input_Title   input_User    }
+
+stop

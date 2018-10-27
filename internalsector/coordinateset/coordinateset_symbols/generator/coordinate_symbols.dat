@@ -1,0 +1,90 @@
+constructors figure                     =   coordinate 
+
+constructors coordinate                 =   coordinate_context   coordinate_set
+
+constructors coordinate_set             =   coordinate_set_body   coordinate_set_fence
+
+
+constructors coordinate_context         =   coordinate_context_database   coordinate_context_databox   coordinate_context_domain   coordinate_context_sector   
+
+constructors coordinate_context_database=   coordinate_context_database_constructor:ofstring
+
+constructors coordinate_context_databox =   coordinate_context_databox_constructor:ofstring
+
+constructors coordinate_context_domain  =   coordinate_context_domain_constructor:ofstring
+constructors coordinate_context_sector  =   coordinate_context_sector_constructor:ofstring
+
+constructors coordinate_set_body            =   coordinate_set_body_tuple
+
+constructors coordinate_set_body_tuple      =   coordinate_set_body_tuple_heterogeneous   coordinate_set_body_tuple_homogeneous
+
+constructors coordinate_set_body_tuple_heterogeneous =   coordinate_set_body_tuple_heterogeneous_cylindrical   coordinate_set_body_tuple_heterogeneous_polar   coordinate_set_body_tuple_heterogeneous_spherical 
+
+constructors coordinate_set_body_tuple_heterogeneous_cylindrical    =   coordinate_set_body_tuple_heterogeneous_cylindrical_constructor:ofstring
+constructors coordinate_set_body_tuple_heterogeneous_polar          =   coordinate_set_body_tuple_heterogeneous_polar_constructor:ofstring
+constructors coordinate_set_body_tuple_heterogeneous_spherical      =   coordinate_set_body_tuple_heterogeneous_spherical_constructor:ofstring
+
+constructors coordinate_set_body_tuple_homogeneous   =   coordinate_set_body_tuple_homogeneous_cartesian   coordinate_set_body_tuple_homogeneous_linear   coordinate_set_body_tuple_homogeneous_planar
+
+constructors coordinate_set_body_tuple_homogeneous_cartesian   =   coordinate_set_body_tuple_homogeneous_cartesian_constructor:ofstring
+constructors coordinate_set_body_tuple_homogeneous_linear      =   coordinate_set_body_tuple_homogeneous_linear_constructor:ofstring
+constructors coordinate_set_body_tuple_homogeneous_planar      =   coordinate_set_body_tuple_homogeneous_planar_constructor:ofstring
+
+
+
+
+
+
+constructors coordinate_set_fence               =   coordinate_set_fence_heterogeneous   coordinate_set_fence_homogeneous
+
+constructors coordinate_set_fence_homogeneous   =   coordinate_set_fence_homogeneous_cartesian   coordinate_set_fence_homogeneous_linear   coordinate_set_fence_homogeneous_planar
+
+constructors coordinate_set_fence_heterogeneous   =   coordinate_set_fence_heterogeneous_cylindrical   coordinate_set_fence_heterogeneous_polar   coordinate_set_fence_heterogeneous_spherical 
+   
+constructors coordinate_set_fence_homogeneous_cartesian   =   coordinate_set_fence_homogeneous_cartesian_x   coordinate_set_fence_homogeneous_cartesian_y   coordinate_set_fence_homogeneous_cartesian_z
+
+constructors coordinate_set_fence_homogeneous_cartesian_x =   coordinate_set_fence_homogeneous_cartesian_x_constructor:ofstring
+constructors coordinate_set_fence_homogeneous_cartesian_y =   coordinate_set_fence_homogeneous_cartesian_y_constructor:ofstring
+constructors coordinate_set_fence_homogeneous_cartesian_z =   coordinate_set_fence_homogeneous_cartesian_z_constructor:ofstring
+
+constructors coordinate_set_fence_homogeneous_planar      =   coordinate_set_fence_homogeneous_planar_x   coordinate_set_fence_homogeneous_planar_y
+
+constructors coordinate_set_fence_homogeneous_planar_x    =   coordinate_set_fence_homogeneous_planar_x_constructor:ofstring
+constructors coordinate_set_fence_homogeneous_planar_y    =   coordinate_set_fence_homogeneous_planar_y_constructor:ofstring
+
+constructors coordinate_set_fence_homogeneous_linear      =   coordinate_set_fence_homogeneous_linear_x
+
+constructors coordinate_set_fence_homogeneous_linear_x    =   coordinate_set_fence_homogeneous_linear_x_constructor:ofstring
+
+constructors coordinate_set_fence_heterogeneous_cylindrical   =   coordinate_set_fence_heterogeneous_cylindrical_rho   coordinate_set_fence_heterogeneous_cylindrical_phi   coordinate_set_fence_heterogeneous_cylindrical_zed
+
+
+constructors coordinate_set_fence_heterogeneous_cylindrical_rho=   coordinate_set_fence_heterogeneous_cylindrical_rho_constructor:ofstring   
+
+constructors coordinate_set_fence_heterogeneous_cylindrical_phi=   coordinate_set_fence_heterogeneous_cylindrical_phi_constructor:ofstring   
+
+constructors coordinate_set_fence_heterogeneous_cylindrical_zed=   coordinate_set_fence_heterogeneous_cylindrical_zed_constructor:ofstring
+
+constructors coordinate_set_fence_heterogeneous_spherical      =   coordinate_set_fence_heterogeneous_spherical_rho  coordinate_set_fence_heterogeneous_spherical_phi  coordinate_set_fence_heterogeneous_spherical_theta   
+
+constructors coordinate_set_fence_heterogeneous_spherical_rho  =   coordinate_set_fence_heterogeneous_spherical_rho_constructor:ofstring
+
+constructors coordinate_set_fence_heterogeneous_spherical_phi  =   coordinate_set_fence_heterogeneous_spherical_phi_constructor:ofstring  
+
+constructors coordinate_set_fence_heterogeneous_spherical_theta=   coordinate_set_fence_heterogeneous_spherical_theta_constructor:ofstring   
+
+constructors coordinate_set_fence_heterogeneous_polar       =  coordinate_set_fence_heterogeneous_polar_rho  coordinate_set_fence_heterogeneous_polar_theta   
+
+constructors coordinate_set_fence_heterogeneous_polar_rho   =   coordinate_set_fence_heterogeneous_polar_rho_constructor:ofstring
+
+constructors coordinate_set_fence_heterogeneous_polar_theta =   coordinate_set_fence_heterogeneous_polar_theta_constructor:ofstring
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+Parameters_figureset_general_register_v.store_force "trace-build" "false";;
+Parameters_figureset_general_register_v.store_force "trace-store" "false";;
+Parameters_figureset_general_register_v.store_force "trace-retrieve" "false";;
+Parameters_figureset_general_register_v.store_force "trace-provide" "false";;
+Parameters_figureset_general_register_v.store_force "trace-extract" "false";;
+Parameters_figureset_general_register_v.store_force "trace-translate" "false";;

@@ -1,0 +1,10 @@
+#!/bin/bash
+ledit -x -h .toplevel-history \
+ocaml \
+-I ../../basics \
+-I ../../datastructures \
+-I ../ \
+unix.cma str.cma graphics.cma \
+../../basics/basics.cma \
+../../datastructures/datastructures.cma \
+../windows.cma

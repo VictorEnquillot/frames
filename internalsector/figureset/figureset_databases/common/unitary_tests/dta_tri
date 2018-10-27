@@ -1,0 +1,2 @@
+let nam_tri = "t";;
+let dta_tri = Doublet_list_v.find_if_left (fun s -> String.lowercase (Database_entity_symbol_v.string_off s) = nam_tri) dta_tri_l;;

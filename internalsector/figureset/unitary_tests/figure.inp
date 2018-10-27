@@ -1,0 +1,43 @@
+# input for a Run
+# 1st Model
+   model =
+     model_name = triangle_equilateral
+     model_title = "a triangle equilateral"
+     database_name = db_1
+     entity_what = triangle
+     entity_name = T
+     coordinate_what = cartesian
+     coordinate_units = meter
+   end # model
+
+# 2nd model
+   model =
+     model_name = triangle_scalene_right
+     model_title = "a triangle scalene right" 
+     database_name = db_1
+     entity_what = triangle
+     entity_name = u
+     coordinate_what = cartesian
+     coordinate_units = meter
+   end # model
+
+   target = 
+     target_name = triangle_equilateral_perimeter
+     target_title = "triangle equilateral perimeter" 
+     property_name = perimeter 
+     model_list = { triangle_equilateral }
+   end # target
+
+   target = 
+     target_name = triangle_scalene_right_surface
+     target_title = "triangle scalene right surface" 
+     property_name = surface 
+     model_list = { triangle_scalene_right }
+   end # target
+
+   target = 
+     target_name = triangles_surface_ratio
+     target_title = "triangles equilateral and scalene right surface ratio" 
+     property_name = surface_ratio 
+     model_list = { triangle_equilateral triangle_scalene_right }
+   end # target

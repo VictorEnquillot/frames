@@ -1,0 +1,22 @@
+(** {3 Group_for_formula_body_symbol_t} *)
+
+
+(** {6 Typing_for_symbol} *)
+
+type group_for_formula_body_symbol =
+  | Group_for_formula_body_builder_alone_symbol of Group_for_formula_body_builder_alone_symbol_t.group_for_formula_body_builder_alone_symbol
+  | Group_for_formula_body_builder_data_symbol of Group_for_formula_body_builder_data_symbol_t.group_for_formula_body_builder_data_symbol
+  | Group_for_formula_body_data_alone_symbol of Group_for_formula_body_data_alone_symbol_t.group_for_formula_body_data_alone_symbol
+  | Group_for_formula_body_localset_builder_symbol of Group_for_formula_body_localset_builder_symbol_t.group_for_formula_body_localset_builder_symbol
+  | Group_for_formula_body_localset_data_symbol of Group_for_formula_body_localset_data_symbol_t.group_for_formula_body_localset_data_symbol
+  | Group_for_formula_body_main_builder_symbol of Group_for_formula_body_main_builder_symbol_t.group_for_formula_body_main_builder_symbol
+  | Group_for_formula_body_main_data_symbol of Group_for_formula_body_main_data_symbol_t.group_for_formula_body_main_data_symbol
+  | Group_for_formula_body_son_symbol of Group_for_formula_body_son_symbol_t.group_for_formula_body_son_symbol
+  | Group_for_formula_body_top_symbol of Group_for_formula_body_top_symbol_t.group_for_formula_body_top_symbol
+;;
+
+
+(** Group_for_formula_body_symbol_t at 16:44:18 on 30 May 2013. created by version v1.13 of generator *)
+
+
+

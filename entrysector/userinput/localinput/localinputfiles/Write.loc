@@ -1,0 +1,28 @@
+print Seg_sym
+      end -- print
+
+-(-
+print S_t 
+      units
+	length meter
+	end -- units
+      end -- print
+
+print Phi_a 
+      units Umd
+      end -- print
+-)-
+
+print Tr_ha                        -- Units internally specified by set units .... end
+      end -- print
+
+define F_t 
+       end -- define
+
+write T_ha 
+      to F_t
+      end -- write 
+
+print statistics
+      end -- print
+

@@ -1,0 +1,14 @@
+let prototype_shell_symmetry_string_off_list_of_prototype_as_center_symbol sym_prt_cen =
+
+  let sof_dgn_she_l = dgn_shell_block_string_off_list_of_center_name nam_cen in
+  let sof_prt_ssy_l = List.map 
+      (fun s -> Scanf.sscanf (String.lowercase s) "%s %s" 
+	  (fun s t -> (Format.sprintf "%s %s" s t) )
+      )
+      sof_dgn_she_l
+  in
+  List.map
+    Prototype_symbol_v.prototype_body_centered_aopef_set_for_a_shell_symmetry
+    sof_prt_ssy_l
+;;
+

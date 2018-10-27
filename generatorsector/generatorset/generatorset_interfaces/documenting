@@ -1,0 +1,16 @@
+(** {6 Documenting} *)
+
+let documentation () = 
+  [
+   "Needs : ";
+   "Current : ";
+   "Needed-by : ";
+   "What-is-it : ";
+   "How-is-it-done : ";
+   "Remark : ";
+   "Improve : ";
+   "Example : ";
+ ]
+;;
+
+let nam_cod = Management_v.current_module_name (documentation ());;

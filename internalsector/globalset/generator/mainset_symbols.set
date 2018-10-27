@@ -1,0 +1,11 @@
+constructors mainset                 =   chemicalset   figureset   generatorset   musicset
+
+constructors chemicalset             =   molecule
+
+constructors figureset               =   coordinate
+
+constructors generatorset            =   camlline
+
+constructors musicset                =   musique
+
+

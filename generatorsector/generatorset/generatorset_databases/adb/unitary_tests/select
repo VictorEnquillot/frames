@@ -1,0 +1,35 @@
+let select_left nam dep1 dep2 wol =
+  let dep = List.length (String_v.split_of_character_of_string '_'  wol) in
+  String.length wol >= (String.length nam) 
+    && (String.sub wol 0 (String.length nam) = nam)
+    && dep >= dep1 
+    && dep <= dep2 
+;;
+
+let select_entity_off_singlet nam dep1 dep2 rcd =
+  let dep = List.length (String_v.split_of_character_of_string '_' rcd) in
+  String.length rcd >= (String.length nam) 
+    && (String.sub rcd 0 (String.length nam) = nam)
+    && dep >= dep1 
+    && dep <= dep2 
+;;
+
+let select_entity_off_doublet ent dep1 dep2 dou =
+  let (e, s) = dou in
+  let dep = List.length (String_v.split_of_character_of_string '_' e) in
+  String.length e >= (String.length ent) 
+    && (String.sub e 0 (String.length ent) = ent)
+    && dep >= dep1 
+    && dep <= dep2 
+;;
+
+let select_entity_off_triplet ent dep1 dep2 tri =
+  let (k, e, s) = tri in
+  (k = "type")
+    && (select_entity_off_doublet ent dep1 dep2 (e, s))
+;;
+
+let select_kind_off_triplet kin tri =
+  Triplet_list_v.filter_if_left (fun k ->k=kin) tri 
+;;
+

@@ -1,0 +1,10 @@
+ledit -x -h ./ocaml-history ocaml \
+-I ../tools \
+-I ../units \
+-I ../linear_algebra \
+-I ../integrals \
+-I ../functions \
+-I ../polynomials \
+-I .. \
+unix.cma str.cma \
+../general.cma 

@@ -1,0 +1,23 @@
+(** {3 A Data for a field in a HETATM Record of a Pdb file.} *)
+
+type hetatm_fieldpdb_data =
+  | Hetatm_serial_number of int (* 7-11 *)
+  | Empty_1 of string (* 12-12 *)
+  | Hetatm_symbol of string (* 13-16 *)
+  | Hetatm_alternate_location_id of char (* 17-17 *)
+  | Hetatm_molecule_name of string (* 18-20 *)
+  | Empty_2 of string (* 21-21 *)
+  | Hetatm_chain_id of char (* 22-22 *)
+  | Hetatm_molecule_number of int (* 23-26 *)
+  | Hetatm_insertion_code of char (* 27-27 *)
+  | Empty_3 of string (* 28-30 *)
+  | Hetatm_x of float (* 31-38 *)
+  | Hetatm_y of float (* 39-46 *)
+  | Hetatm_z of float (* 47-54 *)
+  | Hetatm_occupancy of float (* 55-60 *)
+  | Hetatm_b_factor of string (* 61-66 *)
+  | Empty_4 of string (* 67-76 *)
+  | Hetatam_element_symbol of string (* 77-78 *)
+  | Hetatm_charge of string (* 79-80 *)
+;;
+(** created by ./do_some_fieldpdp_data_t Hetatm Hafs 18 May 2010. *)

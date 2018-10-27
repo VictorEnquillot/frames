@@ -1,0 +1,6 @@
+let nam_dos = "geometryset";;
+let nam_cat = "formula";;
+
+let tra_dos = Trail_v.make "domainset" nam_dos [];;
+let tra_cat = Trail_v.make "category" nam_cat tra_dos;;
+

@@ -1,0 +1,30 @@
+let coordinate_cartesian_canister_trio_off_coordinate_spherical_canister_trio (val_rho, val_phi, val_theta) =
+  let mea_rho = measure_float_off val_rho in
+  let uni_rho = Measure_float_v.units_symbol_off_measure_float mea_rho in
+  let flo_rho = Measure_float_v.float_off mea_rho in
+ 
+  let mea_phi = measure_float_off val_phi in
+  let sym_uni_phi = Measure_float_v.units_symbol_off_measure_float mea_phi in
+  let flo = Measure_float_v.float_off mea_phi in
+  let flo_phi = flo *. (Units_symbol_v.radian_of_units_symbol sym_uni_phi) in
+  
+  let mea_theta = measure_float_off val_theta in
+  let sym_uni_theta = Measure_float_v.units_symbol_off_measure_float mea_theta in
+  let flo = Measure_float_v.float_off mea_theta in
+  let flo_theta = flo *. (Units_symbol_v.radian_of_units_symbol sym_uni_theta) in
+ 
+  let flo_x = flo_rho *. (sin flo_theta) *. (cos flo_phi) in
+  let flo_y = flo_rho *. (sin flo_theta) *. (sin flo_phi) in
+  let flo_z = flo_rho *. (cos flo_theta) in
+
+  let mea_x = Measure_float_v.measure_float_of_float_of_units_symbol flo_x uni_rho in 
+  let mea_y = Measure_float_v.measure_float_of_float_of_units_symbol flo_y uni_rho in 
+  let mea_z = Measure_float_v.measure_float_of_float_of_units_symbol flo_z uni_rho in 
+
+  let val_x = Doublet_v.make (Coordinate_cartesian_symbol_v.x "x") mea_x in
+  let val_y = Doublet_v.make (Coordinate_cartesian_symbol_v.y "y") mea_y in
+  let val_z = Doublet_v.make (Coordinate_cartesian_symbol_v.z "z") mea_z in
+
+  Trio_v.make val_x val_y val_z
+;;
+

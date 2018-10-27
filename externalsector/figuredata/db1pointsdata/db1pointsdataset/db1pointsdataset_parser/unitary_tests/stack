@@ -1,0 +1,4 @@
+let sym_lex_s = Stack.copy sym_lex_sta;;
+let sym_lex_s = Stack_v.delete_included_of_predicate_of_stack 
+    Dgn_lexer_symbol_v.is_dgn_lexer_keyword_end
+    sym_lex_s;;

@@ -1,0 +1,7 @@
+rm -f  generator  generator.cmo
+
+ocamlc -warn-error A -g -I /home/colonna/sources/ocaml_top/setup/frames/general/basics -I /home/colonna/sources/ocaml_top/setup/frames/general/tools -I /home/colonna/sources/ocaml_top/setup/frames/generator -c generator.ml
+
+ocamlc -g ../generator.cma generator.cmo -o generator 
+echo "generator generated"
+echo "try generator < t.inp"

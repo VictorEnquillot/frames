@@ -1,0 +1,84 @@
+REGISTERS_V_MLI := \
+Database_name_n_databox_name_by_<domain>_context_databox_tag_register_v.mli \
+Database_name_n_databox_name_by_<domain>_tag_register_v.mli \
+<Domain>_context_databox_tag_by_<domain>_tag_register_v.mli \
+<Domain>_creation_module_name_by_sole_index_register_v.mli \
+<Domain>_symbol_by_sole_index_register_v.mli \
+<Domain>_tag_all_list_by_database_name_n_databox_name_register_v.mli \
+<Domain>_tag_subtree_by_<domain>_tag_register_v.mli \
+<Domain>_tag_tree_by_database_name_n_databox_name_register_v.mli \
+Son_<domain>_tag_list_by_father_<domain>_tag_register_v.mli \
+
+REGISTERS_EXTRA_V_MLI := \
+<Domain>_fence_by_<domain>_tag_register_v.mli \
+String_by_<domain>_context_database_tag_register_v.mli \
+String_list_by_<domain>_context_database_tag_register_v.mli \
+  
+CONTEXT_NAMES_V_MLI := \
+<Domain>_database_name_by_unit_provider_v.mli \
+<Domain>_domain_name_by_unit_provider_v.mli \
+<Domain>_domaindata_name_by_unit_provider_v.mli \
+ 
+CONTEXT_TAGS_V_MLI := \
+<Domain>_context_domain_tag_by_unit_provider_v.mli \
+<Domain>_as_context_domain_tag_by_unit_provider_v.mli \
+ \
+<Domain>_context_domaindata_tag_by_unit_provider_v.mli \
+<Domain>_as_context_domaindata_tag_by_unit_provider_v.mli \
+ \
+<Domain>_context_database_tag_by_unit_provider_v.mli \
+<Domain>_as_context_database_tag_by_unit_provider_v.mli \
+<Domain>_as_context_database_tag_by_database_name_provider_v.mli \
+<Domain>_context_database_tag_by_database_name_provider_v.mli \
+ \
+<Domain>_as_context_databox_tag_by_database_name_n_databox_name_provider_v.mli \
+<Domain>_context_databox_tag_by_database_name_n_databox_name_provider_v.mli \
+<Domain>_context_databox_tag_by_databox_name_provider_v.mli \
+<Domain>_as_context_databox_tag_by_databox_name_provider_v.mli \
+ \
+<Domain>_context_databox_tag_by_<domain>_tag_provider_v.mli \
+<Domain>_as_context_databox_tag_by_<domain>_tag_provider_v.mli \
+Database_name_n_databox_name_by_<domain>_context_databox_tag_provider_v.mli \
+ 
+DATABASES_FILES_V_MLI := \
+<Domain>_fullnameoffile_by_database_name_n_databox_name_provider_v.mli \
+<Domain>_fullnameoffile_by_<domain>_context_databox_tag_provider_v.mli \
+ 
+CONTEXT_TRIO_V_MLI := \
+<Domain>_as_context_tag_trio_by_database_name_n_databox_name_provider_v.mli \
+<Domain>_context_tag_triplet_by_database_name_n_databox_name_provider_v.mli \
+
+TRANSLATORS_FROM_PARSER_V_MLI := \
+<Domain>_symbol_subtree_by_database_name_n_databox_name_provider_v.mli \
+<Domain>_symbol_subtree_by_<domain>_context_databox_tag_provider_v.mli \
+
+TREES_V_MLI := \
+<Domain>_tag_tree_by_database_name_n_databox_name_provider_v.mli \
+<Domain>_tag_tree_by_<domain>_context_databox_tag_provider_v.mli \
+ 
+INTERFACES_V_MLI := \
+<Domain>_tag_all_list_by_<domain>_context_databox_tag_provider_v.mli \
+<Domain>_tag_all_list_by_database_name_n_databox_name_provider_v.mli \
+ 
+EXTRACTORS_V_MLI := \
+<Domain>_any_category_by_sole_index_extractor_v.mli \
+Son_<domain>_tag_list_by_father_<domain>_tag_provider_v.mli \
+<Domain>_tag_subtree_by_<domain>_tag_provider_v.mli \
+Database_name_n_databox_name_by_<domain>_tag_provider_v.mli \
+ 
+FENCE_V_MLI := \
+<Domain>_fence_by_<domain>_tag_provider_v.mli \
+
+FILES_MLI := \
+$(REGISTERS_V_MLI) \
+$(REGISTERS_EXTRA_V_MLI) \
+$(CONTEXT_NAMES_V_MLI) \
+$(CONTEXT_TAGS_V_MLI) \
+$(DATABASES_FILES_V_MLI) \
+$(CONTEXT_TRIO_V_MLI) \
+$(TRANSLATORS_FROM_PARSER_V_MLI) \
+$(TREES_V_MLI) \
+$(INTERFACES_V_MLI) \
+$(EXTRACTORS_V_MLI) \
+$(FENCE_V_MLI) \
+ 

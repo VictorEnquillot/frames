@@ -1,0 +1,4 @@
+cd $SGNR; make
+cd $TGNR; make
+cd $DGNR; make
+cd $IGNR; make

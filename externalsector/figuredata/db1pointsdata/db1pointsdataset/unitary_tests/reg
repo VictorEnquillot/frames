@@ -1,0 +1,17 @@
+Register_v.delete  Common_symbol_by_sole_index_register_v.register;;
+Register_v.delete  Component_filename_list_by_database_db1_database_tag_register_v.register;;
+Register_v.delete  Database_db1_content_list_list_by_database_db1_database_tag_register_v.register;;
+Register_v.delete  Database_db1_creation_module_name_by_sole_index_register_v.register;;
+Register_v.delete  Database_db1_database_tag_by_domain_tag_register_v.register;;
+Register_v.delete  Database_db1_symbol_by_sole_index_register_v.register;;
+Register_v.delete  Database_db1_symbol_tree_by_database_db1_tag_register_v.register;;
+Register_v.delete  Database_db1_tag_all_list_by_database_db1_domain_tag_register_v.register;;
+Register_v.delete  Database_db1_tag_closure_by_database_db1_tag_register_v.register;;
+Register_v.delete  Database_db1_tag_n_value_float_closure_by_database_db1_tag_register_v.register;;
+Register_v.delete  Database_db1_tag_tree_by_database_db1_database_tag_register_v.register;;
+Register_v.delete  Database_db1_tag_tree_by_database_db1_tag_register_v.register;;
+Register_v.delete  Parameters_figureset_general_register_v.register;;
+Register_v.delete  Son_database_db1_tag_list_by_father_database_db1_tag_register_v.register;;
+Register_v.delete  String_by_database_db1_component_tag_register_v.register;;
+Register_v.delete  String_by_database_db1_database_tag_register_v.register;;
+Register_v.delete  String_list_by_database_db1_tag_register_v.register;;

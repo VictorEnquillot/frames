@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# The sub-directories where we run a configure script.
+SUB_DIRECTORIES="wikitoolset_databases wikitoolset_formulas wikitoolset_interfaces wikitoolset_tags wikitoolset_values "
+
+# The directory where we just configure .depend and .depend-rebuild.
+CURRENT_AND_TEST=". unitary_tests"
+
+# created by /keep/sources/ocaml_top/setup/utilities/do_configure_local_for_any_set.sh > configure_local

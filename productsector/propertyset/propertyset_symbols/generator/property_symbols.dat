@@ -1,0 +1,69 @@
+constructors  figure                              =   property
+
+constructors  property                            =   property_command   property_context   property_operand   property_operator   property_target
+
+constructors  property_context                    =   property_context_domain   property_context_inputbase   property_context_inputbox   property_context_sector
+
+constructors  property_context_sector             =   property_context_sector_constructor:ofstring
+constructors  property_context_domain             =   property_context_domain_constructor:ofstring
+constructors  property_context_inputbase          =   property_context_inputbase_constructor:ofstring
+constructors  property_context_inputbox           =   property_context_inputbox_constructor:ofstring
+
+constructors  property_command               =   property_command_body   
+constructors  property_command_body          =   property_command_body_debug   property_command_body_set   property_command_body_title   property_command_body_trace
+
+constructors  property_command_body_debug    =   property_command_body_debug_constructor:ofstring
+constructors  property_command_body_set      =   property_command_body_set_constructor:ofstring
+constructors  property_command_body_title    =   property_command_body_title_constructor:ofstring
+constructors  property_command_body_trace    =   property_command_body_trace_constructor:ofstring
+
+constructors  property_operand                         =   property_operand_body   property_operand_fence
+constructors  property_operand_body                    =   property_operand_body_target   
+
+constructors  property_operand_body_target             =   property_operand_body_target_calculated   property_operand_body_target_created   property_operand_body_target_measured
+
+constructors  property_operand_body_target_calculated  =   property_operand_body_target_calculated_constructor:ofstring
+
+constructors  property_operand_body_target_created     =   property_operand_body_target_created_constructor:ofstring
+
+constructors  property_operand_body_target_measured     =   property_operand_body_target_measured_constructor:ofstring
+
+constructors  property_operand_fence                    =   property_operand_fence_external
+
+constructors  property_operand_fence_external           =   property_operand_fence_external_constructor:ofstring
+
+
+constructors  property_operator                         =   property_operator_fence
+
+constructors  property_operator_fence                    =   property_operator_fence_creation   property_operator_fence_tounit
+
+constructors  property_operator_fence_creation           =   property_operator_fence_creation_toentity   property_operator_fence_creation_tomeasure   property_operator_fence_creation_tobasic
+
+constructors  property_operator_fence_creation_toentity  =   property_operator_fence_creation_toentity_constructor:ofstring
+
+constructors  property_operator_fence_creation_tomeasure =   property_operator_fence_creation_tomeasure_constructor:ofstring
+
+constructors  property_operator_fence_creation_tobasic   =   property_operator_fence_creation_tobasic_constructor:ofstring
+
+constructors  property_operator_fence_tounit             =   property_operator_fence_tounit_print   property_operator_fence_tounit_write
+
+constructors  property_operator_fence_tounit_write       =   property_operator_fence_tounit_write_constructor:ofstring
+
+constructors  property_operator_fence_tounit_print       =   property_operator_fence_tounit_print_constructor:ofstring
+
+constructors  property_target                            =   property_target_body
+
+constructors  property_target_body                       =   property_target_body_implicit
+
+constructors  property_target_body_implicit              =   property_target_body_implicit_tounit
+
+constructors  property_target_body_implicit_tounit       =   property_target_body_implicit_tounit_constructor:ofstring
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+Register_v.delete  Debug_by_module_name_register_v.register;;
+Register_v.delete  Input_creation_module_name_by_sole_index_register_v.register;;
+Register_v.delete  Input_symbol_by_sole_index_register_v.register;;
+Register_v.delete  Input_tag_all_list_by_input_fullnameoffile_register_v.register;;
+Register_v.delete  Input_tag_by_input_variable_name_register_v.register;;
+Register_v.delete  Input_tag_tree_by_input_fullnameoffile_register_v.register;;
+Register_v.delete  Input_tag_tree_by_input_tag_register_v.register;;
+Register_v.delete  Parameters_general_register_v.register;;
+Register_v.delete  Son_input_tag_list_by_father_input_tag_register_v.register;;

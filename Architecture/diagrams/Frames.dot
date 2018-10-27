@@ -1,0 +1,52 @@
+	digraph frames {
+		size="14,14";
+		node [color=lightblue2, style=filled];
+
+	    Title [label = "Frames Files" shape="record" color=lightblue, style=filled];
+
+    		Title -> "Frames"  [style="invis"];
+
+		"Frames" -> "Common"
+		"Frames" -> "General"
+		"Frames" -> "Database"
+		"Frames" -> "Elementary"
+		"Frames" -> "Figure"
+		"Frames" -> "Input"
+		"Frames" -> "Operator"
+		"Frames" -> "Property"
+
+
+		"Elementary" -> "Elementary\nLabels"
+		"Elementary" -> "Elementary\nTags"
+		"Elementary" -> "Elementary\nDatabases"
+		"Elementary" -> "Elementary\nContainers"
+		"Elementary" -> "Elementary\nEnvelopes"
+		"Elementary" -> "Elementary\nProperties"
+		"Figure" -> "Figure\nLabels"
+		"Figure" -> "Figure\nTags"
+		"Figure" -> "Figure\nDatabases"
+		"Figure" -> "Figure\nContainers"
+		"Figure" -> "Figure\nEnvelopes"
+		"Input" -> "Input\nFiles"
+		"Input" -> "Input\nCommon"
+		"Input" -> "Input\nLabels"
+		"Input" -> "Input\nTags"
+		"Input" -> "Input\nLexer"
+		"Input" -> "Input\nParser"
+		"Input" -> "Input\nProviders"
+		"Database" -> "Figure\nDb1"
+		"Database" -> "Figure\nDb2"
+		"Database" -> "Chemical\nPdb"
+
+		"Operator" -> "Operator\nLabels"
+		"Operator" -> "Operator\nTags"
+		"Operator" -> "Operator\nInterfaces"
+		"Operator" -> "Operator\nContainers"
+
+		"Property" -> "Property\nLabels"
+		"Property" -> "Property\nTags"
+		"Property" -> "Property\nInterfaces"
+		"Property" -> "Property\nContainers"
+		"Property" -> "Property\nEnvelopes"
+		}
+

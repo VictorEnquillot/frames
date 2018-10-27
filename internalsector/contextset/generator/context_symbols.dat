@@ -1,0 +1,14 @@
+constructors   figure        =   context
+
+constructors context         =   createdby   datafile   domain   domaindata   
+
+constructors createdby       =   database:ofstring   input_file:ofstring
+
+constructors datafile        =   basisset   figurefile
+
+constructors basisset        =   basisset_constructor:ofstring
+
+constructors figurefile      =   figurefile_constructor:ofstring
+
+constructors domain          =   domain_constructor:ofstring
+

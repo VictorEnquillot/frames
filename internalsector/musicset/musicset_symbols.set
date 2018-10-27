@@ -1,0 +1,54 @@
+type musicset = mp3_files
+
+type mp3_file = 
+
+type mp3_header =
+description mp3_header = 32_bits or 4 Characters 
+
+type mp3_data = mp3_data_audio mp3_data_video mp3_data_closed_caption
+
+type mp3_frame = mp3_frame_audio mp3_frame_video mp3_frame_closed_caption
+
+
+description mp3_frame = doublet mp3_header mp3_data
+
+type mp3_elementary_stream = mp3_elementary_stream_audio mp3_elementary_stream_video mp3_elementary_stream_closed_caption
+
+type mp3_header_tag = mp3_header_tag_onebit mp3_header_tag_twobits id3v2 mp3_header_tag_fourbits mp3_header_tag_twelvebits
+
+type id3v2 = id3v2_3_frame_specification id3v2_4_frame_specification
+
+# id3v2_frame_specification common features
+type id3v2_frame_specification = aenc apic comm comr encr equa etco geob grid ipls link mcdi mllt owne pcnt popm poss priv rbuf rvad rvrb sylt sytc talb tbpm tcom tcon tcop tdat tdly tenc text tflt time tit1 tit2 tit3 tkey tlan tlen tmed toal tofn toly tope tory town tpe1 tpe2 tpe3 tpe4 tpos tpub trck trda trsn trso tsiz tsrc tsse txxx tyer ufid user uslt wcom wcop woaf woar woas wors wpay wpub wxxx  
+
+# id3v2_3_frame_specification specific features
+type id3v2_3_frame_specification = aenc apic comm comr encr equa etco geob grid ipls link mcdi mllt owne pcnt popm poss priv rbuf rvad rvrb sylt sytc talb tbpm tcom tcon tcop tdat tdly tenc text tflt time tit1 tit2 tit3 tkey tlan tlen tmed toal tofn toly tope tory town tpe1 tpe2 tpe3 tpe4 tpos tpub trck trda trsn trso tsiz tsrc tsse txxx tyer ufid user uslt wcom wcop woaf woar woas wors wpay wpub wxxx  
+
+# id3v2_4_frame_specification specific features
+type id3v2_4_frame_specification = aspi equ2 rva2 seek sign tden tdor tdrc tdrl tdtg tipl tmcl tmoo tpro tsoa tsop tsot tsst 
+
+
+type mp3_header_tag_one_bit = version error_protection pad_bit intensity_stereo ms_stereo private_bit copy original  
+
+description ASPI = Audio
+description EQU2 = Equalisation
+description RVA2 = Relative
+description SEEK = Seek
+description SIGN = Signature
+description TDEN = Encoding
+description TDOR = Original
+description TDRC = Recording
+description TDRL = Release
+description TDTG = Tagging
+description TIPL = Involved
+description TMCL = Musician
+description TMOO = Mood
+description TPRO = Produced
+description TSOA = Album
+description TSOP = Performer
+description TSOT = Title
+description TSST = Set
+
+type mp3_header_element = mp3_sync_word version error_protection pad_bit intensity_stereo ms_stereo private_bit copyright original layer mode mode_extension frequency emphasis bit_rate sync
+
+type mp3_layout_tag = string_1 string_3 string_4 string_6 string_30 string_60

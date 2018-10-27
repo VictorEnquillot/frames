@@ -1,0 +1,455 @@
+(** {3 Entity_symbol_path_list_by_item_tag_provider_v} *)
+
+(** {6 Documenting} *)
+
+let documentation () = 
+  [
+   "Needs : IGNR:Entity_symbol_path_subtree_by_entity_proper_tag_provider_v";
+   "Current : IGNR:Entity_symbol_path_list_by_item_tag_provider_v";
+   "Needed-by : IGNR:Entity_symbol_path_list_camlparagraph_symbol_doublet_list_by_item_tag_provider_v.ml";
+   "What-is-it : It cannot be associated with an Entity_proper_symbol subtree";
+   "What-is-it : It defines each Entity_symbol Path list associated with each Item_tag";
+   "What-is-it : Each Head of each Entity_symbol_path will be associated with a Camlparagraph_symbol inside a given Item";
+   "What-is-it : a Camlparagraph_symbol inside a given Item may be associated with a Top, Top and Son, Notop Nonleaf, Leaves";
+ ]
+;;
+
+let nam_cod = Management_v.current_module_name (documentation ());;
+
+(** {6 Registering} *)
+
+let nam_reg = "entity_symbol_path_list_by_item_tag_register_v";;
+
+let entity_symbol_path_list_by_item_tag_register_v : 
+    (Item_tag_t.item_tag, 
+     Entity_symbol_t.entity_symbol list list)
+    Register_t.register = Register_v.make 137
+;;
+
+let store tag_ite pat_sym_ent_l =
+  try Register_v.store
+      entity_symbol_path_list_by_item_tag_register_v tag_ite pat_sym_ent_l
+  with Failure ("Already_stored:register_v.ml:store") ->
+    failwith ("Already_stored:"^nam_cod^":store")
+;;
+
+let is_stored tag_ite =
+  Register_v.is_stored 
+    entity_symbol_path_list_by_item_tag_register_v tag_ite
+;;
+
+let retrieve tag_ite =
+  try Register_v.retrieve 
+      entity_symbol_path_list_by_item_tag_register_v tag_ite
+  with Failure ("Not_stored:register_v.ml:retrieve") ->
+    failwith ("Not_stored:"^nam_cod^":retrieve")
+;;  
+
+let build_of_item_oneparagraph_tag sym_ito soi_ite =
+  let sym_ite = Item_symbol_v.item_symbol_of_item_oneparagraph_symbol sym_ito in
+  let tag_ite = Tag_v.make sym_ite soi_ite in
+  let sym_cat = Item_tag_v.category_symbol_off_item_tag tag_ite in
+  let sym_cof = Item_tag_v.contentfile_symbol_off_item_tag tag_ite in
+  let tag_enp = Item_tag_v.entity_proper_tag_off_item_tag tag_ite in
+  let sym_enp = Item_tag_v.entity_proper_symbol_off_item_tag tag_ite in
+  
+  let pat_sym_ent_t = 
+    Entity_symbol_path_subtree_by_entity_proper_tag_provider_v.provide 
+      tag_enp 
+  in
+
+  match sym_ito with
+  | Item_oneparagraph_symbol_t.Making ->
+
+      begin
+	match sym_cof with
+	| Contentfile_symbol_t.Type_n_value
+	| Contentfile_symbol_t.Value_alone ->
+
+	    begin
+	      match sym_cat with
+	      | Category_symbol_t.Formula 
+	      | Category_symbol_t.Symbol ->
+		  
+		  (Tree_v.topson_node_list_off_tree pat_sym_ent_t)
+
+	      | Category_symbol_t.Tag ->
+                  [[Entity_symbol_v.entity_symbol_of_entity_proper_symbol sym_enp]]
+
+	      | _ ->
+		  Error_messages_v.print_fatal_error
+		    nam_cod "build_of_item_oneparagraph_tag Making"
+		    "Category_symbol were Formula|Symbol|Tag"
+		    (Format.sprintf ">%s<" (Category_symbol_v.name sym_cat) )
+		    "Check or add it to menu"
+	    end 
+	  
+        | Contentfile_symbol_t.Type_alone ->
+	    Error_messages_v.print_fatal_error
+              nam_cod "build_of_item_oneparagraph_tag Constrained_making"
+              "Type_n_value|Value_alone"
+              "Type_alone"
+              "Check "
+      end
+
+
+  | Item_oneparagraph_symbol_t.Ending
+  | Item_oneparagraph_symbol_t.Heading -> 
+      
+      [(Tree_v.root_node_off_tree pat_sym_ent_t)]
+
+(*
+  | Item_oneparagraph_symbol_t.Making ->
+
+      begin
+	match sym_cof with
+	| Contentfile_symbol_t.Type_n_value
+	| Contentfile_symbol_t.Value_alone ->
+	    begin
+	      match sym_cat with
+	      | Category_symbol_t.Formula ->
+		  
+		  (Tree_v.topson_node_list_off_tree pat_sym_ent_t)
+
+	      | Category_symbol_t.Symbol ->
+		  begin
+		    match sym_enp with  (*** Improve  Self should have itself as unique son *)
+		    | Entity_proper_symbol_t.Selfentity s ->
+			
+			[[Entity_symbol_v.entity_symbol_of_entity_proper_symbol sym_enp]]
+			  
+		    | _ ->
+
+			let pat_sym_ent_l = 
+			  Tree_v.leaf_node_list_off_tree 
+			    pat_sym_ent_t
+			in
+			
+			List_v.select_path_list_with_once_leaf_off_path_list 
+			  pat_sym_ent_l
+			  
+		  end	 
+
+	      | Category_symbol_t.Tag ->
+
+		  [(Tree_v.root_node_off_tree pat_sym_ent_t)]
+		  
+
+	      | _ ->
+		  Error_messages_v.print_fatal_error
+		    nam_cod "build_of_item_oneparagraph_tag Making"
+		    "Category_symbol were formula|symbol|tag"
+		    (Format.sprintf ">%s<" (Category_symbol_v.name sym_cat) )
+		    "Check or add it to menu"
+	    end 
+	  
+        | Contentfile_symbol_t.Type_alone ->
+	    Error_messages_v.print_fatal_error
+              nam_cod "build_of_item_oneparagraph_tag Making"
+              "Type_n_value|Value_alone"
+              "Type_alone"
+              "Check "
+      end
+
+*)
+  | Item_oneparagraph_symbol_t.Naming -> 
+      begin
+	match sym_cof with
+	| Contentfile_symbol_t.Type_n_value
+	| Contentfile_symbol_t.Value_alone ->
+	    begin
+	      match sym_cat with
+	      | Category_symbol_t.Symbol ->
+
+		  begin
+		    match sym_enp with  (*** Improve  Self should have itself as unique son *)
+		    | Entity_proper_symbol_t.Selfentity s ->
+			
+			[[Entity_symbol_v.entity_symbol_of_entity_proper_symbol sym_enp]]
+			  
+		    | _ ->
+
+			(Tree_v.topson_node_list_off_tree pat_sym_ent_t)
+		  end	 
+
+	      | Category_symbol_t.Tag ->
+
+		  [(Tree_v.root_node_off_tree pat_sym_ent_t)]
+		    
+	      | _ ->
+		  Error_messages_v.print_fatal_error
+		    nam_cod "build_of_item_oneparagraph_tag Naming"
+		    "Category_symbol Symbol|Tag"
+		    (Format.sprintf ">%s<" (Category_symbol_v.name sym_cat) )
+		    "Check or add it to menu"
+	    end 
+	  
+        | Contentfile_symbol_t.Type_alone ->
+	    Error_messages_v.print_fatal_error
+              nam_cod "build_of_item_oneparagraph_tag Naming"
+              "Type_n_value|Value_alone"
+              "Type_alone"
+              "Check "
+      end
+
+  | Item_oneparagraph_symbol_t.Retrieving ->
+      begin
+	match sym_cof with
+	| Contentfile_symbol_t.Type_alone ->
+
+	    []
+
+	| Contentfile_symbol_t.Type_n_value
+	| Contentfile_symbol_t.Value_alone ->
+	    begin
+	      match sym_cat with
+	      | Category_symbol_t.Empty
+	      | Category_symbol_t.Value
+	      | Category_symbol_t.Provider
+	      |	Category_symbol_t.Property
+	      | Category_symbol_t.Path
+	      |	Category_symbol_t.Mark 
+	      | Category_symbol_t.Any
+	      | Category_symbol_t.Symbol
+	      | Category_symbol_t.Tag ->
+		  
+		  []
+		    
+	      | Category_symbol_t.Formula ->
+		  begin
+		    match sym_enp with 
+		    | Entity_proper_symbol_t.Entity_proper_top_symbol sym_ept ->
+			
+			begin
+			  match sym_ept with 
+			  | Entity_proper_top_symbol_t.Top_has_no_leaf_son str ->
+			      Utilities_v.not_yet_implemented nam_cod "build_of_item_oneparagraph_tag Entity_proper_top_symbol_t.Top_has_no_leaf_son"
+			  | Entity_proper_top_symbol_t.Top_has_some_leaf_son str -> 
+			      Utilities_v.not_yet_implemented nam_cod "build_of_item_oneparagraph_tag Entity_proper_top_symbol_t.Top_has_some_leaf_son"
+			end	 
+			  
+		    | Entity_proper_symbol_t.Entity_proper_son_symbol sym_eps ->
+			Utilities_v.not_yet_implemented nam_cod "build_of_item_oneparagraph_tag Entity_proper_symbol_t.Entity_proper_symbol_t"
+		    | Entity_proper_symbol_t.Currententity str ->
+			Utilities_v.not_yet_implemented nam_cod "build_of_item_oneparagraph_tag Entity_proper_symbol_t.Currentity"
+		    | Entity_proper_symbol_t.Selfentity str ->
+			Utilities_v.not_yet_implemented nam_cod "build_of_item_oneparagraph_tag Entity_proper_symbol_t.Selfentity"
+		  end	 
+	    end
+      end 
+
+  | Item_oneparagraph_symbol_t.Storing ->
+
+      []
+
+  | Item_oneparagraph_symbol_t.Typing -> 
+      begin
+	match sym_cof with
+        | Contentfile_symbol_t.Type_alone ->
+	    
+	    begin
+	      match sym_cat with
+	      | Category_symbol_t.Formula ->
+		  
+		  begin
+		    match sym_enp with 
+		    | Entity_proper_symbol_t.Entity_proper_top_symbol
+			(Entity_proper_top_symbol_t.Top_has_some_leaf_son s) ->
+			  
+			  (Tree_v.root_node_off_tree pat_sym_ent_t)
+			  ::	(	     Tree_v.topson_node_list_off_tree pat_sym_ent_t)
+			      
+		    | _ -> (* here same as for Symbol *)
+			
+			(Tree_v.root_node_off_tree pat_sym_ent_t)
+			:: (Tree_v.topson_node_list_off_tree pat_sym_ent_t)
+			    
+		  end	 
+		    
+	      | Category_symbol_t.Symbol ->
+		  (Tree_v.root_node_off_tree pat_sym_ent_t)
+		  :: (Tree_v.topson_node_list_off_tree pat_sym_ent_t)
+		      
+	      | Category_symbol_t.Tag ->
+		  [(Tree_v.root_node_off_tree pat_sym_ent_t)]
+		    
+	      | _ ->
+		  Error_messages_v.print_fatal_error
+		    nam_cod "build_of_item_oneparagraph_tag Typing"
+		    "Category_symbol formula|symbol|tag"
+		    (Format.sprintf ">%s<" (Category_symbol_v.name sym_cat) )
+		    "Check or add it to menu"
+	    end
+	      
+	| Contentfile_symbol_t.Type_n_value
+	| Contentfile_symbol_t.Value_alone ->
+	    Error_messages_v.print_fatal_error
+              nam_cod "build_of_item_oneparagraph_tag Typing"
+              "Type_alone"
+              (Format.sprintf ">%s<" (Contentfile_symbol_v.fullname sym_cof) )
+              "Check "
+      end
+;;
+
+let build_of_item_severalparagraph_tag sym_its soi_ite =
+  let sym_ite = Item_symbol_v.item_symbol_of_item_severalparagraph_symbol sym_its in
+  let tag_ite = Tag_v.make sym_ite soi_ite in
+  let sym_cat = Item_tag_v.category_symbol_off_item_tag tag_ite in
+  let sym_cof = Item_tag_v.contentfile_symbol_off_item_tag tag_ite in
+  let tag_enp = Item_tag_v.entity_proper_tag_off_item_tag tag_ite in
+
+  let pat_sym_ent_t = 
+    Entity_symbol_path_subtree_by_entity_proper_tag_provider_v.provide 
+      tag_enp 
+  in
+
+  match sym_its with
+  | Item_severalparagraph_symbol_t.Abbreviating ->
+	    begin
+	      match sym_cat with
+	      | Category_symbol_t.Symbol ->
+
+		  let pat_sym_ent_l = 
+		    Tree_v.leaf_node_list_off_tree 
+		      pat_sym_ent_t
+		  in
+                  
+		  List_v.select_path_list_with_once_leaf_off_path_list 
+		    pat_sym_ent_l
+
+	      | Category_symbol_t.Tag ->
+
+		  []
+	
+	      | _ ->
+		  Error_messages_v.print_fatal_error
+		    nam_cod "build_of_item_severalparagraph_tag Abbreviating"
+		    "Category_symbol Symbol"
+		    (Format.sprintf ">%s<" (Category_symbol_v.name sym_cat) )
+		    "Check or add it to menu"
+	    end
+
+  | Item_severalparagraph_symbol_t.Constrained_making -> 
+	    begin
+	      match sym_cat with
+	      | Category_symbol_t.Formula ->
+
+		  let pat_sym_ent_l = 
+		    Tree_v.leaf_node_list_off_tree 
+		      pat_sym_ent_t
+		  in
+                  
+		  List_v.select_path_list_with_once_leaf_off_path_list 
+		    pat_sym_ent_l
+
+	      | _ ->
+		  Error_messages_v.print_fatal_error
+		    nam_cod "build_of_item_severalparagraph_tag Constrained_making"
+		    "Category_symbol Formula"
+		    (Format.sprintf ">%s<" (Category_symbol_v.name sym_cat) )
+		    "Check or add it to menu"
+	    end
+
+  | Item_severalparagraph_symbol_t.Extracting  
+  | Item_severalparagraph_symbol_t.Querying 
+  | Item_severalparagraph_symbol_t.Upgrading -> 
+      begin
+	match sym_cat with
+	| Category_symbol_t.Symbol ->
+	    
+	    begin
+	      match sym_cof with
+	      | Contentfile_symbol_t.Type_n_value
+	      | Contentfile_symbol_t.Value_alone ->
+		  
+(*** Improve 
+
+ define this as 
+     let is_entity_symbol_selected_of_item_symbol_of_category_symbol_of_contentfile_symbol sym_ite sym_cat sym_cof =
+
+*)
+		  let fnd_sel pat_sym_ent =
+		    let sym_ent = List.hd pat_sym_ent in
+		    (Entity_symbol_v.is_entity_proper_selfentity_off_entity_symbol sym_ent)
+		      && 
+		    (List.length pat_sym_ent > 1)
+		  in
+		  let notself_l =
+		    Tree_v.noroot_noleaf_node_list_off_tree 
+		      pat_sym_ent_t
+		  in
+		  let leaves_l = 
+		    Tree_v.leaf_node_list_off_tree pat_sym_ent_t
+		  in
+		  let allself_l = 
+		    List.filter fnd_sel leaves_l
+		  in
+		  
+		  notself_l @ allself_l
+				
+              | Contentfile_symbol_t.Type_alone ->
+		  Error_messages_v.print_fatal_error
+		    nam_cod "build_of_item_severalparagraph_tag Naming"
+		    "Type_n_value|Value_alone"
+		    (Format.sprintf ">%s<" (Contentfile_symbol_v.fullname sym_cof) )
+		    "Check "
+	    end
+	      
+	| Category_symbol_t.Tag ->
+	    
+	    Tree_v.noroot_noleaf_node_list_off_tree pat_sym_ent_t
+	      
+	| _ ->
+	    Error_messages_v.print_fatal_error
+	      nam_cod "build_of_item_severalparagraph_tag Extracting|Querying|Upgrading"
+	      "Category_symbol Symbol"
+	      (Format.sprintf ">%s<" (Category_symbol_v.name sym_cat) )
+	      "Check or add it to menu"
+      end
+	
+  | Item_severalparagraph_symbol_t.Aliasing 
+  | Item_severalparagraph_symbol_t.Building 
+  | Item_severalparagraph_symbol_t.Converting 
+  | Item_severalparagraph_symbol_t.Including
+  | Item_severalparagraph_symbol_t.Providing 
+  | Item_severalparagraph_symbol_t.Registering  
+  | Item_severalparagraph_symbol_t.Tools -> 
+
+      [] 
+;;
+
+let build tag_ite =
+  let sym_ite = Tag_v.symbol_off_tag tag_ite in
+  let soi_ite = Tag_v.sole_index_off_tag tag_ite in
+  
+  match sym_ite with 
+  | Item_symbol_t.Item_leaf_list_symbol sym_ill ->
+      let tag_ill = Tag_v.make sym_ill soi_ite in
+      Entity_symbol_path_list_by_item_leaf_list_tag_provider_v.provide tag_ill
+
+  | Item_symbol_t.Item_nontop_nonleaf_list_symbol sym_nnl ->
+      let tag_nnl = Tag_v.make sym_nnl soi_ite in
+      Entity_symbol_path_list_by_item_nontop_nonleaf_list_tag_provider_v.provide tag_nnl
+
+  | Item_symbol_t.Item_only_top_symbol sym_iot ->
+      let tag_iot = Tag_v.make sym_nnl soi_ite in
+      Entity_symbol_path_list_by_item_only_top_tag_provider_v.provide tag_iot
+	
+  | Item_symbol_t.Item_topson_list_symbol sym_itl ->
+      let tag_itl = Tag_v.make sym_nnl soi_ite in 
+      Entity_symbol_path_list_by_item_topson_list_tag_provider_v.provide tag_itl
+;;
+
+let build_n_store tag_ite =
+  let pat_sym_ent_l = build tag_ite in
+  store tag_ite pat_sym_ent_l; 
+  pat_sym_ent_l
+;;
+
+let provide tag_ite =
+  if Register_v.is_stored entity_symbol_path_list_by_item_tag_register_v tag_ite 
+  then retrieve tag_ite
+  else build_n_store tag_ite 
+;;
+
+

@@ -1,0 +1,25 @@
+	digraph wavefunction_labels {
+		size="14,14";
+		node [
+		     color=yellow, style=filled,
+		     fontsize=24, fontname="Palatino-Italic",fontcolor=black
+		     ];
+		edge [
+        	fontname = "Bitstream Vera Sans"
+        	fontsize = 25
+        	arrowsize="0.7"
+		dir = "down"
+	    ];
+
+	    Title [label = "The Constructor Tree Closure\nfor Wavefunction Set" shape="record" color=lightblue, style=filled];
+	    Title -> "Wf\nclosure"  [style="invis"];
+
+   "Wf\nclosure" ->  {"Wf\ncoefficient" "Wf\njastrow\nfactor" "Wf\nspatial\norbital" "Wf\nspin"};
+   "Wf\njastrow\nfactor" ->  {"Wf\njastrow\nfactor\nconstructor\nof string"};
+   "Wf\nspatial\norbital" ->  {"Wf\nspatial\norbital\nmo" "Wf\nspatial\norbital\nso" "Wf\nspatial\norbital\nnumerical"};
+   "Wf\nspin" ->  {"Wf\nspin\nup\nof string" "Wf\nspin\ndown\nof string"};
+   "Wf\nspatial\norbital\nnumerical" ->  {"Wf\nspatial\norbital\nnumerical\nconstructor\nof string"};
+   "Wf\nspatial\norbital\nmo" ->  {"Wf\nspatial\norbital\nmo\nconstructor\nof string"};
+   "Wf\nspatial\norbital\nso" ->  {"Wf\nspatial\norbital\nso\nconstructor\nof string"};
+   "Wf\ncoefficient" ->  {"Wf\ncoefficient\ndeterminant\nof string" "Wf\ncoefficient\njastrow\nof string" "Wf\ncoefficient\nfragment\nof string"};
+		}

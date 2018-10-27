@@ -1,0 +1,6 @@
+coordinates_units_length  bohr
+coordinates_units_angle   degree
+coordinates_kind          spherical 
+figure_kind point
+figure_name B
+vertex B_B       1.  30.  60.

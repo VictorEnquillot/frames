@@ -1,0 +1,11 @@
+(** {6 Filling Register.} *)
+
+let fill_main_register () =
+  if (Register_v.is_empty main_register)
+  then 
+    begin
+      let fno_inp = Parameters_general_provider_v.provide "input-file" in
+      ignore (Property_tag_tree_by_input_fullnameoffile_provider_v.provide fno_inp)
+    end
+  else ()
+;;

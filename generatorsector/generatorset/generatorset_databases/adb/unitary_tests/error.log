@@ -1,0 +1,3007 @@
+
+Testing Builder_basename_list_by_constructor_leaf_trail_provider_v with
+   Builder_basename_list_by_constructor_leaf_trail_provider_u_generatorset_formula_list.ml
+
+Builder_basename_list_by_constructor_leaf_trail_provider_v.ml.provide: --- Fatal Error ---
+    expecting entity were a Leaf of the Constructor Tree at LHS of formulas.set file.
+    and found >point_constructor:ofstring<.
+cure :
+    Check formulas.set file >/keep/sources/ocaml_top/setup/frames/generatorset/generator/generatorset_formulas.set< 
+
+
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Builder_basename_list_by_constructor_leaf_trail_provider_v with
+   Builder_basename_list_by_constructor_leaf_trail_provider_u_generatorset_formula.ml
+
+Builder_basename_list_by_constructor_leaf_trail_provider_v.ml.provide: --- Fatal Error ---
+    expecting entity were a Leaf of the Constructor Tree at LHS of formulas.set file.
+    and found >point_constructor:ofstring<.
+cure :
+    Check formulas.set file >/keep/sources/ocaml_top/setup/frames/generatorset/generator/generatorset_formulas.set< 
+
+
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Builder_basename_list_by_constructor_leaf_trail_provider_v with
+   Builder_basename_list_by_constructor_leaf_trail_provider_u_generatorset_item_formula.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Builder_basename_list_by_constructor_leaf_trail_provider_v with
+   Builder_basename_list_by_constructor_leaf_trail_provider_u_generatorset_list.ml
+
+
+********* Builder_basename_list_by_constructor_leaf_trail_provider_v with
+   Builder_basename_list_by_constructor_leaf_trail_provider_u_generatorset_list.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Builder_basename_list_by_constructor_leaf_trail_provider_v with
+   Builder_basename_list_by_constructor_leaf_trail_provider_u_geometryset_formula_list.ml
+
+Testing results:
+Total: 10 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Builder_basename_list_by_constructor_leaf_trail_provider_v with
+   Builder_basename_list_by_constructor_leaf_trail_provider_u_geometryset_formula.ml
+
+
+********* Builder_basename_list_by_constructor_leaf_trail_provider_v with
+   Builder_basename_list_by_constructor_leaf_trail_provider_u_geometryset_formula.ml   Test number 4 failed ***********
+
+Testing results:
+Total: 4 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Builder_basename_list_by_constructor_leaf_trail_provider_v with
+   Builder_basename_list_by_constructor_leaf_trail_provider_u_geometryset_list.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Builder_basename_list_by_domainset_trail_provider_v with
+   Builder_basename_list_by_domainset_trail_provider_u_generatorset_formula.ml
+
+
+********* Builder_basename_list_by_domainset_trail_provider_v with
+   Builder_basename_list_by_domainset_trail_provider_u_generatorset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Builder_basename_list_by_domainset_trail_provider_v with
+   Builder_basename_list_by_domainset_trail_provider_u_generatorset_item_formula.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Builder_basename_list_by_domainset_trail_provider_v with
+   Builder_basename_list_by_domainset_trail_provider_u_generatorset_item.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Builder_basename_list_by_domainset_trail_provider_v with
+   Builder_basename_list_by_domainset_trail_provider_u_generatorset.ml
+
+
+********* Builder_basename_list_by_domainset_trail_provider_v with
+   Builder_basename_list_by_domainset_trail_provider_u_generatorset.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Builder_basename_list_by_domainset_trail_provider_v with
+   Builder_basename_list_by_domainset_trail_provider_u_geometryset_formula.ml
+
+
+********* Builder_basename_list_by_domainset_trail_provider_v with
+   Builder_basename_list_by_domainset_trail_provider_u_geometryset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Builder_basename_list_by_domainset_trail_provider_v with
+   Builder_basename_list_by_domainset_trail_provider_u_geometryset.ml
+
+
+********* Builder_basename_list_by_domainset_trail_provider_v with
+   Builder_basename_list_by_domainset_trail_provider_u_geometryset.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+File "Builder_basename_root_list_by_domainset_trail_provider_u_generatorset_item.ml", line 13, characters 17-81:
+Error: Unbound module Builder_basename_root_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_basename_root_list_by_domainset_trail_provider_u_generatorset_item.cmx
+Builder_basename_root_list_by_domainset_trail_provider_u_generatorset_item
+File "Builder_basename_root_list_by_domainset_trail_provider_u_generatorset.ml", line 13, characters 17-81:
+Error: Unbound module Builder_basename_root_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_basename_root_list_by_domainset_trail_provider_u_generatorset.cmx
+Builder_basename_root_list_by_domainset_trail_provider_u_generatorset
+File "Builder_basename_root_list_by_domainset_trail_provider_u_geometryset.ml", line 13, characters 17-81:
+Error: Unbound module Builder_basename_root_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_basename_root_list_by_domainset_trail_provider_u_geometryset.cmx
+Builder_basename_root_list_by_domainset_trail_provider_u_geometryset
+File "Builder_basename_subtree_by_constructor_leaf_trail_provider_u_generatorset_formula_triangle_isoceles_equilateral.ml", line 28, characters 18-87:
+Error: Unbound module Builder_basename_subtree_by_constructor_leaf_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_basename_subtree_by_constructor_leaf_trail_provider_u_generatorset_formula_triangle_isoceles_equilateral.cmx
+Builder_basename_subtree_by_constructor_leaf_trail_provider_u_generatorset_formula_triangle_isoceles_equilateral
+File "Builder_basename_subtree_by_constructor_leaf_trail_provider_u_generatorset_item.ml", line 15, characters 17-86:
+Error: Unbound module Builder_basename_subtree_by_constructor_leaf_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_basename_subtree_by_constructor_leaf_trail_provider_u_generatorset_item.cmx
+Builder_basename_subtree_by_constructor_leaf_trail_provider_u_generatorset_item
+File "Builder_basename_subtree_by_constructor_leaf_trail_provider_u_generatorset.ml", line 15, characters 17-86:
+Error: Unbound module Builder_basename_subtree_by_constructor_leaf_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_basename_subtree_by_constructor_leaf_trail_provider_u_generatorset.cmx
+Builder_basename_subtree_by_constructor_leaf_trail_provider_u_generatorset
+File "Builder_basename_subtree_by_constructor_leaf_trail_provider_u_geometryset_formula_triangle_isoceles_equilateral.ml", line 28, characters 18-87:
+Error: Unbound module Builder_basename_subtree_by_constructor_leaf_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_basename_subtree_by_constructor_leaf_trail_provider_u_geometryset_formula_triangle_isoceles_equilateral.cmx
+Builder_basename_subtree_by_constructor_leaf_trail_provider_u_geometryset_formula_triangle_isoceles_equilateral
+File "Builder_basename_subtree_by_constructor_leaf_trail_provider_u_geometryset.ml", line 15, characters 17-86:
+Error: Unbound module Builder_basename_subtree_by_constructor_leaf_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_basename_subtree_by_constructor_leaf_trail_provider_u_geometryset.cmx
+Builder_basename_subtree_by_constructor_leaf_trail_provider_u_geometryset
+File "Builder_basename_tree_list_by_domainset_trail_provider_u_generatorset_item.ml", line 21, characters 17-81:
+Error: Unbound module Builder_basename_tree_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_basename_tree_list_by_domainset_trail_provider_u_generatorset_item.cmx
+Builder_basename_tree_list_by_domainset_trail_provider_u_generatorset_item
+File "Builder_basename_tree_list_by_domainset_trail_provider_u_generatorset.ml", line 21, characters 17-81:
+Error: Unbound module Builder_basename_tree_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_basename_tree_list_by_domainset_trail_provider_u_generatorset.cmx
+Builder_basename_tree_list_by_domainset_trail_provider_u_generatorset
+File "Builder_basename_tree_list_by_domainset_trail_provider_u_geometryset.ml", line 21, characters 17-81:
+Error: Unbound module Builder_basename_tree_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_basename_tree_list_by_domainset_trail_provider_u_geometryset.cmx
+Builder_basename_tree_list_by_domainset_trail_provider_u_geometryset
+File "Builder_node_subtree_by_constructor_leaf_trail_provider_u_generatorset_formula_triangle_isoceles_equilateral.ml", line 28, characters 24-89:
+Error: Unbound module Builder_node_subtree_by_constructor_leaf_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_node_subtree_by_constructor_leaf_trail_provider_u_generatorset_formula_triangle_isoceles_equilateral.cmx
+Builder_node_subtree_by_constructor_leaf_trail_provider_u_generatorset_formula_triangle_isoceles_equilateral
+File "Builder_node_subtree_by_constructor_leaf_trail_provider_u_generatorset_formula_triangle_scalene.ml", line 27, characters 24-89:
+Error: Unbound module Builder_node_subtree_by_constructor_leaf_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_node_subtree_by_constructor_leaf_trail_provider_u_generatorset_formula_triangle_scalene.cmx
+Builder_node_subtree_by_constructor_leaf_trail_provider_u_generatorset_formula_triangle_scalene
+File "Builder_node_subtree_by_constructor_leaf_trail_provider_u_geometryset_formula_triangle_isoceles_equilateral.ml", line 28, characters 24-89:
+Error: Unbound module Builder_node_subtree_by_constructor_leaf_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_node_subtree_by_constructor_leaf_trail_provider_u_geometryset_formula_triangle_isoceles_equilateral.cmx
+Builder_node_subtree_by_constructor_leaf_trail_provider_u_geometryset_formula_triangle_isoceles_equilateral
+File "Builder_node_subtree_by_constructor_leaf_trail_provider_u_geometryset_formula_triangle_scalene.ml", line 27, characters 24-89:
+Error: Unbound module Builder_node_subtree_by_constructor_leaf_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_node_subtree_by_constructor_leaf_trail_provider_u_geometryset_formula_triangle_scalene.cmx
+Builder_node_subtree_by_constructor_leaf_trail_provider_u_geometryset_formula_triangle_scalene
+File "Builder_root_basename_list_by_domainset_trail_provider_u_generatorset_item.ml", line 13, characters 20-84:
+Error: Unbound module Builder_root_basename_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_root_basename_list_by_domainset_trail_provider_u_generatorset_item.cmx
+Builder_root_basename_list_by_domainset_trail_provider_u_generatorset_item
+File "Builder_root_basename_list_by_domainset_trail_provider_u_generatorset.ml", line 13, characters 20-84:
+Error: Unbound module Builder_root_basename_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_root_basename_list_by_domainset_trail_provider_u_generatorset.cmx
+Builder_root_basename_list_by_domainset_trail_provider_u_generatorset
+File "Builder_root_basename_list_by_domainset_trail_provider_u_geometryset.ml", line 13, characters 20-84:
+Error: Unbound module Builder_root_basename_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Builder_root_basename_list_by_domainset_trail_provider_u_geometryset.cmx
+Builder_root_basename_list_by_domainset_trail_provider_u_geometryset
+File "Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_generatorset_formula.ml", line 17, characters 26-115:
+Error: Unbound module Constructor_basename_description_string_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_generatorset_formula.cmx
+Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_generatorset_formula
+File "Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_generatorset_item_formula.ml", line 17, characters 26-115:
+Error: Unbound module Constructor_basename_description_string_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_generatorset_item_formula.cmx
+Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_generatorset_item_formula
+File "Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_generatorset_item_symbol.ml", line 17, characters 22-111:
+Error: Unbound module Constructor_basename_description_string_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_generatorset_item_symbol.cmx
+Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_generatorset_item_symbol
+File "Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_generatorset_symbol.ml", line 17, characters 22-111:
+Error: Unbound module Constructor_basename_description_string_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_generatorset_symbol.cmx
+Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_generatorset_symbol
+File "Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_geometryset_formula.ml", line 17, characters 26-115:
+Error: Unbound module Constructor_basename_description_string_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_geometryset_formula.cmx
+Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_geometryset_formula
+File "Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_geometryset_symbol.ml", line 17, characters 22-111:
+Error: Unbound module Constructor_basename_description_string_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_geometryset_symbol.cmx
+Constructor_basename_description_string_doublet_list_by_category_trail_provider_u_geometryset_symbol
+
+Testing Constructor_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_v with
+   Constructor_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_u_generatorset_formula_list.ml
+
+
+********* Constructor_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_v with
+   Constructor_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_u_generatorset_formula_list.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_v with
+   Constructor_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_u_generatorset_item_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_v with
+   Constructor_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_u_generatorset_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_v with
+   Constructor_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_u_geometryset_formula_list.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_v with
+   Constructor_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_u_geometryset_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+File "Constructor_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_u_generatorset_item.ml", line 14, characters 16-122:
+Error: Unbound module Constructor_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_u_generatorset_item.cmx
+Constructor_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_u_generatorset_item
+File "Constructor_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_u_generatorset.ml", line 14, characters 16-122:
+Error: Unbound module Constructor_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_u_generatorset.cmx
+Constructor_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_u_generatorset
+File "Constructor_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_u_geometryset.ml", line 14, characters 16-122:
+Error: Unbound module Constructor_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_u_geometryset.cmx
+Constructor_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_u_geometryset
+File "Constructor_basename_leaf_list_by_domainset_trail_provider_u_generatorset_item.ml", line 13, characters 16-84:
+Error: Unbound module Constructor_basename_leaf_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_leaf_list_by_domainset_trail_provider_u_generatorset_item.cmx
+Constructor_basename_leaf_list_by_domainset_trail_provider_u_generatorset_item
+File "Constructor_basename_leaf_list_by_domainset_trail_provider_u_generatorset.ml", line 13, characters 16-84:
+Error: Unbound module Constructor_basename_leaf_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_leaf_list_by_domainset_trail_provider_u_generatorset.cmx
+Constructor_basename_leaf_list_by_domainset_trail_provider_u_generatorset
+File "Constructor_basename_leaf_list_by_domainset_trail_provider_u_geometryset.ml", line 13, characters 16-84:
+Error: Unbound module Constructor_basename_leaf_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_leaf_list_by_domainset_trail_provider_u_geometryset.cmx
+Constructor_basename_leaf_list_by_domainset_trail_provider_u_geometryset
+
+Testing Constructor_basename_lefthandside_list_by_category_trail_provider_v
+   Constructor_basename_lefthandside_list_by_category_trail_provider_u_generatorset_formula_list.ml
+
+
+********* Constructor_basename_lefthandside_list_by_category_trail_provider_v
+   Constructor_basename_lefthandside_list_by_category_trail_provider_u_generatorset_formula_list.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_basename_lefthandside_list_by_category_trail_provider_v
+   Constructor_basename_lefthandside_list_by_category_trail_provider_u_generatorset_item_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_lefthandside_list_by_category_trail_provider_v
+   Constructor_basename_lefthandside_list_by_category_trail_provider_u_generatorset_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_lefthandside_list_by_category_trail_provider_v
+   Constructor_basename_lefthandside_list_by_category_trail_provider_u_geometryset_formula_list.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_lefthandside_list_by_category_trail_provider_v
+   Constructor_basename_lefthandside_list_by_category_trail_provider_u_geometryset_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+File "Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_u_generatorset_formula_list.ml", line 17, characters 26-116:
+Error: Unbound module Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_u_generatorset_formula_list.cmx
+Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_u_generatorset_formula_list
+File "Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_u_generatorset_item_symbol.ml", line 17, characters 22-112:
+Error: Unbound module Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_u_generatorset_item_symbol.cmx
+Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_u_generatorset_item_symbol
+File "Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_u_generatorset_symbol.ml", line 17, characters 22-112:
+Error: Unbound module Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_u_generatorset_symbol.cmx
+Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_u_generatorset_symbol
+File "Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_u_geometryset_formula_list.ml", line 17, characters 26-116:
+Error: Unbound module Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_u_geometryset_formula_list.cmx
+Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_u_geometryset_formula_list
+File "Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_u_geometryset_symbol.ml", line 17, characters 22-112:
+Error: Unbound module Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_u_geometryset_symbol.cmx
+Constructor_basename_lefthandside_string_doublet_list_by_category_trail_provider_u_geometryset_symbol
+
+Testing Constructor_basename_list_by_constructor_notleaf_trail_provider_v with
+   Constructor_basename_list_by_constructor_notleaf_trail_provider_u_generatorset_item.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_basename_list_by_constructor_notleaf_trail_provider_v with
+   Constructor_basename_list_by_constructor_notleaf_trail_provider_u_generatorset_item_symbol.ml
+
+Testing results:
+Total: 5 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_list_by_constructor_notleaf_trail_provider_v with
+   Constructor_basename_list_by_constructor_notleaf_trail_provider_u_generatorset.ml
+
+
+********* Constructor_basename_list_by_constructor_notleaf_trail_provider_v with
+   Constructor_basename_list_by_constructor_notleaf_trail_provider_u_generatorset.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_basename_list_by_constructor_notleaf_trail_provider_v with
+   Constructor_basename_list_by_constructor_notleaf_trail_provider_u_generatorset_symbol.ml
+
+Constructor_basename_list_by_constructor_notleaf_trail_provider_v.ml.constructor_basename_list_off_righthandside_string: --- Fatal Error ---
+    expecting Entity name >triangle< were an Entity_notleaf of the Constructor Tree.
+    and found it is NOT.
+cure :
+    Check file >generatorset_symbols.set< 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_basename_list_by_constructor_notleaf_trail_provider_v with
+   Constructor_basename_list_by_constructor_notleaf_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 5 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_list_by_constructor_notleaf_trail_provider_v with
+   Constructor_basename_list_by_constructor_notleaf_trail_provider_u_geometryset_symbol.ml
+
+Testing results:
+Total: 5 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_list_by_domainset_trail_provider_v with
+   Constructor_basename_list_by_domainset_trail_provider_u_generatorset_item.ml
+
+
+********* Constructor_basename_list_by_domainset_trail_provider_v with
+   Constructor_basename_list_by_domainset_trail_provider_u_generatorset_item.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_basename_list_by_domainset_trail_provider_v
+   Constructor_basename_list_by_domainset_trail_provider_u_generatorset_item_symbol.ml
+
+
+********* Constructor_basename_list_by_domainset_trail_provider_v
+   Constructor_basename_list_by_domainset_trail_provider_u_generatorset_item_symbol.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_basename_list_by_domainset_trail_provider_v with
+   Constructor_basename_list_by_domainset_trail_provider_u_generatorset.ml
+
+
+********* Constructor_basename_list_by_domainset_trail_provider_v with
+   Constructor_basename_list_by_domainset_trail_provider_u_generatorset.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_basename_list_by_domainset_trail_provider_v
+   Constructor_basename_list_by_domainset_trail_provider_u_generatorset_symbol.ml
+
+
+********* Constructor_basename_list_by_domainset_trail_provider_v
+   Constructor_basename_list_by_domainset_trail_provider_u_generatorset_symbol.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_basename_list_by_domainset_trail_provider_v with
+   Constructor_basename_list_by_domainset_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_list_by_domainset_trail_provider_v
+   Constructor_basename_list_by_domainset_trail_provider_u_geometryset_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+File "Constructor_basename_list_by_entity_trail_provider_u_chemicalset_formula.ml", line 20, characters 16-76:
+Error: Unbound module Constructor_basename_list_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_list_by_entity_trail_provider_u_chemicalset_formula.cmx
+Constructor_basename_list_by_entity_trail_provider_u_chemicalset_formula
+File "Constructor_basename_list_by_entity_trail_provider_u_chemicalset_symbol.ml", line 18, characters 16-76:
+Error: Unbound module Constructor_basename_list_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_list_by_entity_trail_provider_u_chemicalset_symbol.cmx
+Constructor_basename_list_by_entity_trail_provider_u_chemicalset_symbol
+File "Constructor_basename_list_by_entity_trail_provider_u_chemicalset_tag.ml", line 20, characters 16-76:
+Error: Unbound module Constructor_basename_list_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_list_by_entity_trail_provider_u_chemicalset_tag.cmx
+Constructor_basename_list_by_entity_trail_provider_u_chemicalset_tag
+File "Constructor_basename_list_by_entity_trail_provider_u_generatorset_formula.ml", line 19, characters 20-80:
+Error: Unbound module Constructor_basename_list_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_list_by_entity_trail_provider_u_generatorset_formula.cmx
+Constructor_basename_list_by_entity_trail_provider_u_generatorset_formula
+File "Constructor_basename_list_by_entity_trail_provider_u_generatorset_item_formula.ml", line 19, characters 20-80:
+Error: Unbound module Constructor_basename_list_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_list_by_entity_trail_provider_u_generatorset_item_formula.cmx
+Constructor_basename_list_by_entity_trail_provider_u_generatorset_item_formula
+File "Constructor_basename_list_by_entity_trail_provider_u_generatorset_item.ml", line 19, characters 20-80:
+Error: Unbound module Constructor_basename_list_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_list_by_entity_trail_provider_u_generatorset_item.cmx
+Constructor_basename_list_by_entity_trail_provider_u_generatorset_item
+File "Constructor_basename_list_by_entity_trail_provider_u_generatorset_item_symbol.ml", line 19, characters 20-80:
+Error: Unbound module Constructor_basename_list_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_list_by_entity_trail_provider_u_generatorset_item_symbol.cmx
+Constructor_basename_list_by_entity_trail_provider_u_generatorset_item_symbol
+File "Constructor_basename_list_by_entity_trail_provider_u_generatorset.ml", line 19, characters 20-80:
+Error: Unbound module Constructor_basename_list_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_list_by_entity_trail_provider_u_generatorset.cmx
+Constructor_basename_list_by_entity_trail_provider_u_generatorset
+File "Constructor_basename_list_by_entity_trail_provider_u_generatorset_symbol.ml", line 19, characters 20-80:
+Error: Unbound module Constructor_basename_list_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_list_by_entity_trail_provider_u_generatorset_symbol.cmx
+Constructor_basename_list_by_entity_trail_provider_u_generatorset_symbol
+File "Constructor_basename_list_by_entity_trail_provider_u_geometryset_formula.ml", line 19, characters 20-80:
+Error: Unbound module Constructor_basename_list_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_list_by_entity_trail_provider_u_geometryset_formula.cmx
+Constructor_basename_list_by_entity_trail_provider_u_geometryset_formula
+File "Constructor_basename_list_by_entity_trail_provider_u_geometryset.ml", line 19, characters 20-80:
+Error: Unbound module Constructor_basename_list_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_list_by_entity_trail_provider_u_geometryset.cmx
+Constructor_basename_list_by_entity_trail_provider_u_geometryset
+File "Constructor_basename_list_by_entity_trail_provider_u_geometryset_symbol.ml", line 19, characters 20-80:
+Error: Unbound module Constructor_basename_list_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_list_by_entity_trail_provider_u_geometryset_symbol.cmx
+Constructor_basename_list_by_entity_trail_provider_u_geometryset_symbol
+File "Constructor_basename_list_by_entity_trail_provider_u_moleculeset_formula.ml", line 34, characters 20-80:
+Error: Unbound module Constructor_basename_list_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_list_by_entity_trail_provider_u_moleculeset_formula.cmx
+Constructor_basename_list_by_entity_trail_provider_u_moleculeset_formula
+File "Constructor_basename_list_by_entity_trail_provider_u_moleculeset_symbol.ml", line 22, characters 22-77:
+Error: Unbound module Righthandside_string_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_list_by_entity_trail_provider_u_moleculeset_symbol.cmx
+Constructor_basename_list_by_entity_trail_provider_u_moleculeset_symbol
+
+Testing Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v
+   Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_u_generatorset_formula_list.ml
+
+
+********* Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v
+   Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_u_generatorset_formula_list.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v
+   Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_u_generatorset_formula.ml
+
+
+********* Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v
+   Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_u_generatorset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v
+   Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_u_generatorset_item_formula.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v
+   Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_u_generatorset_item_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v
+   Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_u_generatorset_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v
+   Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_u_geometryset_formula_list.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v
+   Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_u_geometryset_formula.ml
+
+
+********* Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v
+   Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_u_geometryset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v
+   Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_u_geometryset_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v
+   Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_u_moleculeset_formula.ml
+
+Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v.ml.provide: --- Fatal Error ---
+    expecting category trail.
+    and found [(kind, type); (category, formula); (domainset, moleculeset)] instead.
+cure :
+    Check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v
+   Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_u_moleculeset_symbol.ml
+
+Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v.ml.provide: --- Fatal Error ---
+    expecting category trail.
+    and found [(kind, type); (category, symbol); (domainset, moleculeset)] instead.
+cure :
+    Check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v
+   Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_u_musicset_symbol.ml
+
+
+********* Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v
+   Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_u_musicset_symbol.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+File "Constructor_basename_tree_by_domainset_trail_provider_u_chemicalset_formula.ml", line 36, characters 34-61:
+Error: Unbound value Tree_v.noleaf_root_off_tree
+File "_none_", line 1:
+Error: Cannot find file Constructor_basename_tree_by_domainset_trail_provider_u_chemicalset_formula.cmx
+Constructor_basename_tree_by_domainset_trail_provider_u_chemicalset_formula
+
+Testing Constructor_basename_tree_by_domainset_trail_provider_v with
+   Constructor_basename_tree_by_domainset_trail_provider_u_chemicalset_symbol.ml
+
+Constructor_basename_tree_by_domainset_trail_provider_v.ml.provide: --- Fatal Error ---
+    expecting domainset trail.
+    and found [(category, symbol); (domainset, chemicalset)] instead.
+cure :
+    Check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_basename_tree_by_domainset_trail_provider_v with
+   Constructor_basename_tree_by_domainset_trail_provider_u_chemicalset_tag.ml
+
+Constructor_basename_tree_by_domainset_trail_provider_v.ml.provide: --- Fatal Error ---
+    expecting domainset trail.
+    and found [(category, tag); (domainset, chemicalset)] instead.
+cure :
+    Check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_basename_tree_by_domainset_trail_provider_v with
+   Constructor_basename_tree_by_domainset_trail_provider_u_generatorset_formula.ml
+
+
+********* Constructor_basename_tree_by_domainset_trail_provider_v with
+   Constructor_basename_tree_by_domainset_trail_provider_u_generatorset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_basename_tree_by_domainset_trail_provider_v with
+   Constructor_basename_tree_by_domainset_trail_provider_u_generatorset_item_formula.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_basename_tree_by_domainset_trail_provider_v with
+   Constructor_basename_tree_by_domainset_trail_provider_u_generatorset_item.ml
+
+Testing results:
+Total: 3 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_tree_by_domainset_trail_provider_v with
+   Constructor_basename_tree_by_domainset_trail_provider_u_generatorset_item_symbol.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_basename_tree_by_domainset_trail_provider_v with
+   Constructor_basename_tree_by_domainset_trail_provider_u_generatorset.ml
+
+Testing results:
+Total: 3 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_tree_by_domainset_trail_provider_v with
+   Constructor_basename_tree_by_domainset_trail_provider_u_generatorset_symbol.ml
+
+
+********* Constructor_basename_tree_by_domainset_trail_provider_v with
+   Constructor_basename_tree_by_domainset_trail_provider_u_generatorset_symbol.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_basename_tree_by_domainset_trail_provider_v with
+   Constructor_basename_tree_by_domainset_trail_provider_u_geometryset_formula.ml
+
+
+********* Constructor_basename_tree_by_domainset_trail_provider_v with
+   Constructor_basename_tree_by_domainset_trail_provider_u_geometryset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_basename_tree_by_domainset_trail_provider_v with
+   Constructor_basename_tree_by_domainset_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 3 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_basename_tree_by_domainset_trail_provider_v with
+   Constructor_basename_tree_by_domainset_trail_provider_u_geometryset_symbol.ml
+
+
+********* Constructor_basename_tree_by_domainset_trail_provider_v with
+   Constructor_basename_tree_by_domainset_trail_provider_u_geometryset_symbol.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_basename_tree_by_domainset_trail_provider_v with
+   Constructor_basename_tree_by_domainset_trail_provider_u_moleculeset_formula.ml
+
+Constructor_basename_tree_by_domainset_trail_provider_v.ml.provide: --- Fatal Error ---
+    expecting domainset trail.
+    and found [(kind, type); (category, formula); (domainset, moleculeset)] instead.
+cure :
+    Check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_basename_tree_by_domainset_trail_provider_v.ml with 
+   Constructor_basename_tree_by_domainset_trail_provider_u_geometryset_symbol.ml
+
+Constructor_basename_tree_by_domainset_trail_provider_v.ml.provide: --- Fatal Error ---
+    expecting domainset trail.
+    and found [(category, symbol); (domainset, geometryset)] instead.
+cure :
+    Check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_leaf_basename_datastructure_basename_doublet_list_by_domainset_trail_provider_v with
+   Constructor_leaf_basename_datastructure_basename_doublet_list_by_domainset_trail_provider_u_generatorset_item.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_leaf_basename_datastructure_basename_doublet_list_by_domainset_trail_provider_v with
+   Constructor_leaf_basename_datastructure_basename_doublet_list_by_domainset_trail_provider_u_generatorset_list.ml
+
+
+********* Constructor_leaf_basename_datastructure_basename_doublet_list_by_domainset_trail_provider_v with
+   Constructor_leaf_basename_datastructure_basename_doublet_list_by_domainset_trail_provider_u_generatorset_list.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_leaf_basename_datastructure_basename_doublet_list_by_domainset_trail_provider_v with
+   Constructor_leaf_basename_datastructure_basename_doublet_list_by_domainset_trail_provider_u_generatorset.ml
+
+
+********* Constructor_leaf_basename_datastructure_basename_doublet_list_by_domainset_trail_provider_v with
+   Constructor_leaf_basename_datastructure_basename_doublet_list_by_domainset_trail_provider_u_generatorset.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_leaf_basename_datastructure_basename_doublet_list_by_domainset_trail_provider_v with
+   Constructor_leaf_basename_datastructure_basename_doublet_list_by_domainset_trail_provider_u_geometryset_list.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_leaf_basename_datastructure_basename_doublet_list_by_domainset_trail_provider_v with
+   Constructor_leaf_basename_datastructure_basename_doublet_list_by_domainset_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_leaf_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_v with
+   Constructor_leaf_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_u_generatorset_item.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_leaf_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_v with
+   Constructor_leaf_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_u_generatorset.ml
+
+
+********* Constructor_leaf_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_v with
+   Constructor_leaf_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_u_generatorset.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_leaf_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_v with
+   Constructor_leaf_basename_kind_basename_righthandside_string_triplet_list_by_domainset_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_leaf_basename_list_by_domainset_trail_provider_v
+   Constructor_leaf_basename_list_by_domainset_trail_provider_u_generatorset_item.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_leaf_basename_list_by_domainset_trail_provider_v
+   Constructor_leaf_basename_list_by_domainset_trail_provider_u_generatorset.ml
+
+
+********* Constructor_leaf_basename_list_by_domainset_trail_provider_v
+   Constructor_leaf_basename_list_by_domainset_trail_provider_u_generatorset.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_leaf_basename_list_by_domainset_trail_provider_v
+   Constructor_leaf_basename_list_by_domainset_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+File "Constructor_leaf_basename_list_by_domainset_trail_provider_u_musicset.ml", line 14, characters 20-142:
+Error: Unbound value Constructor_leaf_basename_list_by_domainset_trail_provider_v.constructor_leaf_basename_list_from_constructor_basename_list
+File "_none_", line 1:
+Error: Cannot find file Constructor_leaf_basename_list_by_domainset_trail_provider_u_musicset.cmx
+Constructor_leaf_basename_list_by_domainset_trail_provider_u_musicset
+
+Testing Constructor_leaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_v
+   Constructor_leaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset_item.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_leaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_v
+   Constructor_leaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset.ml
+
+
+********* Constructor_leaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_v
+   Constructor_leaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_leaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_v
+   Constructor_leaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_leaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_v
+   Constructor_leaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_musicset.ml
+
+Entity_basename_lefthandside_list_by_category_trail_provider_v.ml.is_once_list_of_entity_basename_lefthandside_list: --- Fatal Error ---
+    expecting Entity basename list were a Once_list.
+    and found these duplicated constructors :
+     [elementary_stream_audio].
+cure :
+    Extract them from file musicset_formulas.set 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+File "Constructor_node_basename_list_by_category_trail_provider_u_chemicalset_formula.ml", line 23, characters 23-90:
+Error: Unbound module Constructor_node_basename_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_node_basename_list_by_category_trail_provider_u_chemicalset_formula.cmx
+Constructor_node_basename_list_by_category_trail_provider_u_chemicalset_formula
+File "Constructor_node_basename_list_by_category_trail_provider_u_generatorset_formula.ml", line 18, characters 16-83:
+Error: Unbound module Constructor_node_basename_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_node_basename_list_by_category_trail_provider_u_generatorset_formula.cmx
+Constructor_node_basename_list_by_category_trail_provider_u_generatorset_formula
+File "Constructor_node_basename_list_by_category_trail_provider_u_generatorset_item_formula.ml", line 18, characters 16-83:
+Error: Unbound module Constructor_node_basename_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_node_basename_list_by_category_trail_provider_u_generatorset_item_formula.cmx
+Constructor_node_basename_list_by_category_trail_provider_u_generatorset_item_formula
+File "Constructor_node_basename_list_by_category_trail_provider_u_generatorset_item_symbol.ml", line 17, characters 16-83:
+Error: Unbound module Constructor_node_basename_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_node_basename_list_by_category_trail_provider_u_generatorset_item_symbol.cmx
+Constructor_node_basename_list_by_category_trail_provider_u_generatorset_item_symbol
+File "Constructor_node_basename_list_by_category_trail_provider_u_generatorset_symbol.ml", line 17, characters 16-83:
+Error: Unbound module Constructor_node_basename_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_node_basename_list_by_category_trail_provider_u_generatorset_symbol.cmx
+Constructor_node_basename_list_by_category_trail_provider_u_generatorset_symbol
+File "Constructor_node_basename_list_by_category_trail_provider_u_geometryset_formula.ml", line 18, characters 16-83:
+Error: Unbound module Constructor_node_basename_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_node_basename_list_by_category_trail_provider_u_geometryset_formula.cmx
+Constructor_node_basename_list_by_category_trail_provider_u_geometryset_formula
+File "Constructor_node_basename_list_by_category_trail_provider_u_geometryset_symbol.ml", line 17, characters 16-83:
+Error: Unbound module Constructor_node_basename_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_node_basename_list_by_category_trail_provider_u_geometryset_symbol.cmx
+Constructor_node_basename_list_by_category_trail_provider_u_geometryset_symbol
+File "Constructor_node_basename_list_by_category_trail_provider_u_moleculeset_formula.ml", line 21, characters 20-87:
+Error: Unbound module Constructor_node_basename_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_node_basename_list_by_category_trail_provider_u_moleculeset_formula.cmx
+Constructor_node_basename_list_by_category_trail_provider_u_moleculeset_formula
+File "Constructor_node_basename_list_by_category_trail_provider_u_moleculeset_symbol.ml", line 21, characters 20-87:
+Error: Unbound module Constructor_node_basename_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_node_basename_list_by_category_trail_provider_u_moleculeset_symbol.cmx
+Constructor_node_basename_list_by_category_trail_provider_u_moleculeset_symbol
+
+Testing Constructor_node_basename_list_by_domainset_trail_provider_v with
+   Constructor_node_basename_list_by_domainset_trail_provider_u_generatorset_item.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_node_basename_list_by_domainset_trail_provider_v
+   Constructor_node_basename_list_by_domainset_trail_provider_u_generatorset_item.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_node_basename_list_by_domainset_trail_provider_v with
+   Constructor_node_basename_list_by_domainset_trail_provider_u_generatorset.ml
+
+
+********* Constructor_node_basename_list_by_domainset_trail_provider_v with
+   Constructor_node_basename_list_by_domainset_trail_provider_u_generatorset.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_node_basename_list_by_domainset_trail_provider_v
+   Constructor_node_basename_list_by_domainset_trail_provider_u_generatorset.ml
+
+
+********* Constructor_node_basename_list_by_domainset_trail_provider_v
+   Constructor_node_basename_list_by_domainset_trail_provider_u_generatorset.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_node_basename_list_by_domainset_trail_provider_v with
+   Constructor_node_basename_list_by_domainset_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_node_basename_list_by_domainset_trail_provider_v
+   Constructor_node_basename_list_by_domainset_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+File "Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset_item.ml", line 14, characters 15-112:
+Error: Unbound module Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset_item.cmx
+Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset_item
+File "Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset_item_symbol.ml", line 14, characters 26-123:
+Error: Unbound module Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset_item_symbol.cmx
+Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset_item_symbol
+File "Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset.ml", line 14, characters 15-112:
+Error: Unbound module Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset.cmx
+Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset
+File "Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset_symbol.ml", line 14, characters 26-123:
+Error: Unbound module Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset_symbol.cmx
+Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset_symbol
+File "Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_geometryset.ml", line 14, characters 15-112:
+Error: Unbound module Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_geometryset.cmx
+Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_geometryset
+File "Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_geometryset_symbol.ml", line 14, characters 26-123:
+Error: Unbound module Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_geometryset_symbol.cmx
+Constructor_node_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_geometryset_symbol
+
+Testing Constructor_notleaf_basename_list_by_domainset_trail_provider_v with
+   Constructor_notleaf_basename_list_by_domainset_trail_provider_u_generatorset_item.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_notleaf_basename_list_by_domainset_trail_provider_v with
+   Constructor_notleaf_basename_list_by_domainset_trail_provider_u_generatorset.ml
+
+
+********* Constructor_notleaf_basename_list_by_domainset_trail_provider_v with
+   Constructor_notleaf_basename_list_by_domainset_trail_provider_u_generatorset.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_notleaf_basename_list_by_domainset_trail_provider_v with
+   Constructor_notleaf_basename_list_by_domainset_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_notleaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_v
+   Constructor_notleaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset_item.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Constructor_notleaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_v
+   Constructor_notleaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset.ml
+
+
+********* Constructor_notleaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_v
+   Constructor_notleaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_generatorset.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Constructor_notleaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_v
+   Constructor_notleaf_basename_righthandside_string_doublet_list_by_domainset_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_root_basename_by_domainset_trail_provider_v with
+   Constructor_root_basename_by_domainset_trail_provider_u_generatorset_item.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_root_basename_by_domainset_trail_provider_v with
+   Constructor_root_basename_by_domainset_trail_provider_u_generatorset.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Constructor_root_basename_by_domainset_trail_provider_v with
+   Constructor_root_basename_by_domainset_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+File "Content_kind_by_entity_trail_provider_u_moleculeset_formula.ml", line 15, characters 14-93:
+Error: Unbound module Content_kind_word_word_string_triplet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Content_kind_by_entity_trail_provider_u_moleculeset_formula.cmx
+Content_kind_by_entity_trail_provider_u_moleculeset_formula
+File "Content_kind_word_word_string_triplet_list_by_category_trail_provider_u_moleculeset_formula.ml", line 14, characters 14-93:
+Error: Unbound module Content_kind_word_word_string_triplet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Content_kind_word_word_string_triplet_list_by_category_trail_provider_u_moleculeset_formula.cmx
+Content_kind_word_word_string_triplet_list_by_category_trail_provider_u_moleculeset_formula
+
+Testing Database_filename_by_category_trail_provider_v with
+   Database_filename_by_category_trail_provider_u_any.ml
+
+Testing results:
+Total: 9 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Database_filename_by_category_trail_provider_v with
+   Database_filename_by_category_trail_provider_u_generatorset_item.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Database_filename_by_category_trail_provider_v with
+   Database_filename_by_category_trail_provider_u_generatorset.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Database_filename_by_category_trail_provider_v with
+   Database_filename_by_category_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_chemicalset_formula.ml
+
+
+********* Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_chemicalset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_chemicalset_symbol.ml
+
+
+********* Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_chemicalset_symbol.ml   Test number 2 failed ***********
+
+Testing results:
+Total: 2 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_chemicalset_tag.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_generatorset_formula_list.ml
+
+
+********* Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_generatorset_formula_list.ml   Test number 2 failed ***********
+
+Testing results:
+Total: 2 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_generatorset_formula.ml
+
+
+********* Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_generatorset_formula.ml   Test number 2 failed ***********
+
+Testing results:
+Total: 2 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_generatorset_item_formula.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_generatorset_item_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_generatorset_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_geometryset_formula_list.ml
+
+Testing results:
+Total: 2 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_geometryset_formula.ml
+
+
+********* Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_geometryset_formula.ml   Test number 2 failed ***********
+
+Testing results:
+Total: 2 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_geometryset_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_moleculeset_formula.ml
+
+
+********* Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_moleculeset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_moleculeset_symbol.ml
+
+
+********* Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_moleculeset_symbol.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_musicset_symbol.ml
+
+
+********* Database_record_list_by_category_trail_provider_v with
+   Database_record_list_by_category_trail_provider_u_musicset_symbol.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_u_generatorset_formula_list.ml
+
+Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_v.ml.provide: --- Fatal Error ---
+    expecting entity were a Leaf of the Constructor Tree.
+    and found >triangle_isoceles_equilateral<.
+cure :
+    Check file >/keep/sources/ocaml_top/setup/frames/generatorset/generator/generatorset_formulas.set< 
+
+
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_u_generatorset_formula.ml
+
+Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_v.ml.provide: --- Fatal Error ---
+    expecting entity were a Leaf of the Constructor Tree.
+    and found >triangle_isoceles_equilateral<.
+cure :
+    Check file >/keep/sources/ocaml_top/setup/frames/generatorset/generator/generatorset_formulas.set< 
+
+
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_u_generatorset_item_formula.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_u_generatorset_list.ml
+
+
+********* Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_u_generatorset_list.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_u_geometryset_formula_list.ml
+
+Testing results:
+Total: 6 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_u_geometryset_formula.ml
+
+
+********* Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_u_geometryset_formula.ml   Test number 2 failed ***********
+
+Testing results:
+Total: 2 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_u_geometryset_list.ml
+
+Testing results:
+Total: 3 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Datastructure_basename_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_by_constructor_leaf_trail_provider_u_generatorset_formula_list.ml
+
+
+********* Datastructure_basename_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_by_constructor_leaf_trail_provider_u_generatorset_formula_list.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Datastructure_basename_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_by_constructor_leaf_trail_provider_u_generatorset_formula.ml
+
+
+********* Datastructure_basename_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_by_constructor_leaf_trail_provider_u_generatorset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Datastructure_basename_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_by_constructor_leaf_trail_provider_u_generatorset_item_formula.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Datastructure_basename_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_by_constructor_leaf_trail_provider_u_generatorset_list.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Datastructure_basename_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_by_constructor_leaf_trail_provider_u_geometryset_formula_list.ml
+
+Testing results:
+Total: 11 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Datastructure_basename_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_by_constructor_leaf_trail_provider_u_geometryset_formula.ml
+
+
+********* Datastructure_basename_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_by_constructor_leaf_trail_provider_u_geometryset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Datastructure_basename_by_constructor_leaf_trail_provider_v with
+   Datastructure_basename_by_constructor_leaf_trail_provider_u_geometryset_list.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+File "Description_string_by_entity_trail_provider_u_generatorset_item_symbol.ml", line 14, characters 26-115:
+Error: Unbound module Constructor_basename_description_string_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Description_string_by_entity_trail_provider_u_generatorset_item_symbol.cmx
+Description_string_by_entity_trail_provider_u_generatorset_item_symbol
+File "Description_string_by_entity_trail_provider_u_generatorset_symbol.ml", line 14, characters 26-115:
+Error: Unbound module Constructor_basename_description_string_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Description_string_by_entity_trail_provider_u_generatorset_symbol.cmx
+Description_string_by_entity_trail_provider_u_generatorset_symbol
+File "Description_string_by_entity_trail_provider_u_geometryset_symbol.ml", line 14, characters 26-115:
+Error: Unbound module Constructor_basename_description_string_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Description_string_by_entity_trail_provider_u_geometryset_symbol.cmx
+Description_string_by_entity_trail_provider_u_geometryset_symbol
+File "Description_word_word_string_triplet_list_by_category_trail_provider_u_chemicalset_formula.ml", line 13, characters 14-92:
+Error: Unbound module Description_word_word_string_triplet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Description_word_word_string_triplet_list_by_category_trail_provider_u_chemicalset_formula.cmx
+Description_word_word_string_triplet_list_by_category_trail_provider_u_chemicalset_formula
+File "Description_word_word_string_triplet_list_by_category_trail_provider_u_moleculeset_formula.ml", line 13, characters 14-92:
+Error: Unbound module Description_word_word_string_triplet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Description_word_word_string_triplet_list_by_category_trail_provider_u_moleculeset_formula.cmx
+Description_word_word_string_triplet_list_by_category_trail_provider_u_moleculeset_formula
+
+Testing Entity_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_v with
+   Entity_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_u_generatorset_formula_list.ml
+
+
+********* Entity_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_v with
+   Entity_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_u_generatorset_formula_list.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Entity_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_v with
+   Entity_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_u_generatorset_item_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Entity_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_v with
+   Entity_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_u_generatorset_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Entity_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_v with
+   Entity_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_u_geometryset_formula_list.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Entity_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_v with
+   Entity_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_u_geometryset_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Entity_basename_lefthandside_list_by_category_trail_provider_v with
+   Entity_basename_lefthandside_list_by_category_trail_provider_u_generatorset_formula_list.ml
+
+
+********* Entity_basename_lefthandside_list_by_category_trail_provider_v with
+   Entity_basename_lefthandside_list_by_category_trail_provider_u_generatorset_formula_list.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Entity_basename_lefthandside_list_by_category_trail_provider_v with
+   Entity_basename_lefthandside_list_by_category_trail_provider_u_generatorset_item_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Entity_basename_lefthandside_list_by_category_trail_provider_v with
+   Entity_basename_lefthandside_list_by_category_trail_provider_u_generatorset_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Entity_basename_lefthandside_list_by_category_trail_provider_v with
+   Entity_basename_lefthandside_list_by_category_trail_provider_u_geometryset_formula_list.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Entity_basename_lefthandside_list_by_category_trail_provider_v with
+   Entity_basename_lefthandside_list_by_category_trail_provider_u_geometryset_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Entity_basename_righthandside_list_by_category_trail_provider_v with
+   Entity_basename_righthandside_list_by_category_trail_provider_u_generatorset_formula_list.ml
+
+
+********* Entity_basename_righthandside_list_by_category_trail_provider_v with
+   Entity_basename_righthandside_list_by_category_trail_provider_u_generatorset_formula_list.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Entity_basename_righthandside_list_by_category_trail_provider_v with
+   Entity_basename_righthandside_list_by_category_trail_provider_u_generatorset_item_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Entity_basename_righthandside_list_by_category_trail_provider_v with
+   Entity_basename_righthandside_list_by_category_trail_provider_u_generatorset_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Entity_basename_righthandside_list_by_category_trail_provider_v with
+   Entity_basename_righthandside_list_by_category_trail_provider_u_geometryset_formula_list.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Entity_basename_righthandside_list_by_category_trail_provider_v with
+   Entity_basename_righthandside_list_by_category_trail_provider_u_geometryset_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Entity_basic_basename_list_by_domainset_trail_provider_v with
+   Entity_basic_basename_list_by_domainset_trail_provider_u_generatorset_item.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Entity_basic_basename_list_by_domainset_trail_provider_v with
+   Entity_basic_basename_list_by_domainset_trail_provider_u_generatorset_list.ml
+
+
+********* Entity_basic_basename_list_by_domainset_trail_provider_v with
+   Entity_basic_basename_list_by_domainset_trail_provider_u_generatorset_list.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Entity_basic_basename_list_by_domainset_trail_provider_v with
+   Entity_basic_basename_list_by_domainset_trail_provider_u_generatorset.ml
+
+
+********* Entity_basic_basename_list_by_domainset_trail_provider_v with
+   Entity_basic_basename_list_by_domainset_trail_provider_u_generatorset.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Entity_basic_basename_list_by_domainset_trail_provider_v with
+   Entity_basic_basename_list_by_domainset_trail_provider_u_geometryset_list.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Entity_basic_basename_list_by_domainset_trail_provider_v with
+   Entity_basic_basename_list_by_domainset_trail_provider_u_geometryset.ml
+
+
+********* Entity_basic_basename_list_by_domainset_trail_provider_v with
+   Entity_basic_basename_list_by_domainset_trail_provider_u_geometryset.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+File "Kind_basename_by_constructor_trail_provider_u_generatorset_item.ml", line 15, characters 14-67:
+Error: Unbound module Kind_basename_by_constructor_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_basename_by_constructor_trail_provider_u_generatorset_item.cmx
+Kind_basename_by_constructor_trail_provider_u_generatorset_item
+File "Kind_basename_by_constructor_trail_provider_u_generatorset.ml", line 15, characters 14-67:
+Error: Unbound module Kind_basename_by_constructor_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_basename_by_constructor_trail_provider_u_generatorset.cmx
+Kind_basename_by_constructor_trail_provider_u_generatorset
+File "Kind_basename_by_constructor_trail_provider_u_geometryset.ml", line 15, characters 14-67:
+Error: Unbound module Kind_basename_by_constructor_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_basename_by_constructor_trail_provider_u_geometryset.cmx
+Kind_basename_by_constructor_trail_provider_u_geometryset
+
+Testing Kind_basename_list_by_category_trail_provider_v with
+   Kind_basename_list_by_category_trail_provider_u_generatorset_item.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Kind_basename_list_by_category_trail_provider_v with
+   Kind_basename_list_by_category_trail_provider_u_generatorset.ml
+
+
+********* Kind_basename_list_by_category_trail_provider_v with
+   Kind_basename_list_by_category_trail_provider_u_generatorset.ml   Test number 2 failed ***********
+
+Testing results:
+Total: 2 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Kind_basename_list_by_category_trail_provider_v with
+   Kind_basename_list_by_category_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 2 tests performed.
+
+
+All tests succeeded.
+
+File "Kind_name_by_constructor_leaf_trail_provider_u_generatorset_item.ml", line 27, characters 14-68:
+Error: Unbound module Kind_name_by_constructor_leaf_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_by_constructor_leaf_trail_provider_u_generatorset_item.cmx
+Kind_name_by_constructor_leaf_trail_provider_u_generatorset_item
+File "Kind_name_by_constructor_leaf_trail_provider_u_generatorset.ml", line 27, characters 14-68:
+Error: Unbound module Kind_name_by_constructor_leaf_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_by_constructor_leaf_trail_provider_u_generatorset.cmx
+Kind_name_by_constructor_leaf_trail_provider_u_generatorset
+File "Kind_name_by_constructor_leaf_trail_provider_u_geometryset.ml", line 27, characters 14-68:
+Error: Unbound module Kind_name_by_constructor_leaf_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_by_constructor_leaf_trail_provider_u_geometryset.cmx
+Kind_name_by_constructor_leaf_trail_provider_u_geometryset
+File "Kind_name_by_constructor_node_trail_provider_u_generatorset_item.ml", line 18, characters 14-68:
+Error: Unbound module Kind_name_by_constructor_node_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_by_constructor_node_trail_provider_u_generatorset_item.cmx
+Kind_name_by_constructor_node_trail_provider_u_generatorset_item
+File "Kind_name_by_constructor_node_trail_provider_u_generatorset.ml", line 18, characters 14-68:
+Error: Unbound module Kind_name_by_constructor_node_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_by_constructor_node_trail_provider_u_generatorset.cmx
+Kind_name_by_constructor_node_trail_provider_u_generatorset
+File "Kind_name_by_constructor_node_trail_provider_u_geometryset.ml", line 18, characters 14-68:
+Error: Unbound module Kind_name_by_constructor_node_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_by_constructor_node_trail_provider_u_geometryset.cmx
+Kind_name_by_constructor_node_trail_provider_u_geometryset
+
+Testing Kind_name_by_constructor_notleaf_trail_provider_v with
+   Kind_name_by_constructor_notleaf_trail_provider_u_generatorset_item.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Kind_name_by_constructor_notleaf_trail_provider_v with
+   Kind_name_by_constructor_notleaf_trail_provider_u_generatorset.ml
+
+Kind_name_by_constructor_notleaf_trail_provider_v.ml.provide: --- Fatal Error ---
+    expecting Entity >[(entity, point); (domainset, generatorset)]< were a Constructor_node.
+    and found it is NOT.
+cure :
+    Check LHS of equal in domainset_symbols.set 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Kind_name_by_constructor_notleaf_trail_provider_v with
+   Kind_name_by_constructor_notleaf_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+File "Kind_name_by_entity_trail_provider_u_chemicalset_formula.ml", line 50, characters 0-44:
+Error: Unbound module Kind_name_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_by_entity_trail_provider_u_chemicalset_formula.cmx
+Kind_name_by_entity_trail_provider_u_chemicalset_formula
+File "Kind_name_by_entity_trail_provider_u_generatorset_item_symbol.ml", line 54, characters 0-44:
+Error: Unbound module Kind_name_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_by_entity_trail_provider_u_generatorset_item_symbol.cmx
+Kind_name_by_entity_trail_provider_u_generatorset_item_symbol
+File "Kind_name_by_entity_trail_provider_u_generatorset_symbol.ml", line 54, characters 0-44:
+Error: Unbound module Kind_name_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_by_entity_trail_provider_u_generatorset_symbol.cmx
+Kind_name_by_entity_trail_provider_u_generatorset_symbol
+File "Kind_name_by_entity_trail_provider_u_geometryset_symbol.ml", line 54, characters 0-44:
+Error: Unbound module Kind_name_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_by_entity_trail_provider_u_geometryset_symbol.cmx
+Kind_name_by_entity_trail_provider_u_geometryset_symbol
+File "Kind_name_by_entity_trail_provider_u_moleculeset_formula.ml", line 34, characters 0-44:
+Error: Unbound module Kind_name_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_by_entity_trail_provider_u_moleculeset_formula.cmx
+Kind_name_by_entity_trail_provider_u_moleculeset_formula
+File "Kind_name_by_entity_trail_provider_u_moleculeset_formula_molecule_linear_diatomic.ml", line 16, characters 0-44:
+Error: Unbound module Kind_name_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_by_entity_trail_provider_u_moleculeset_formula_molecule_linear_diatomic.cmx
+Kind_name_by_entity_trail_provider_u_moleculeset_formula_molecule_linear_diatomic
+File "Kind_name_constructor_leaf_basename_doublet_list_by_domainset_trail_provider_u_generatorset_item.ml", line 14, characters 30-116:
+Error: Unbound module Kind_name_constructor_leaf_basename_doublet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_constructor_leaf_basename_doublet_list_by_domainset_trail_provider_u_generatorset_item.cmx
+Kind_name_constructor_leaf_basename_doublet_list_by_domainset_trail_provider_u_generatorset_item
+File "Kind_name_constructor_leaf_basename_doublet_list_by_domainset_trail_provider_u_generatorset.ml", line 14, characters 30-116:
+Error: Unbound module Kind_name_constructor_leaf_basename_doublet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_constructor_leaf_basename_doublet_list_by_domainset_trail_provider_u_generatorset.cmx
+Kind_name_constructor_leaf_basename_doublet_list_by_domainset_trail_provider_u_generatorset
+File "Kind_name_constructor_leaf_basename_doublet_list_by_domainset_trail_provider_u_geometryset.ml", line 14, characters 30-116:
+Error: Unbound module Kind_name_constructor_leaf_basename_doublet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_constructor_leaf_basename_doublet_list_by_domainset_trail_provider_u_geometryset.cmx
+Kind_name_constructor_leaf_basename_doublet_list_by_domainset_trail_provider_u_geometryset
+File "Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_generatorset_item.ml", line 14, characters 30-116:
+Error: Unbound module Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_generatorset_item.cmx
+Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_generatorset_item
+File "Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_generatorset_item_symbol.ml", line 14, characters 30-116:
+Error: Unbound module Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_generatorset_item_symbol.cmx
+Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_generatorset_item_symbol
+File "Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_generatorset.ml", line 14, characters 30-116:
+Error: Unbound module Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_generatorset.cmx
+Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_generatorset
+File "Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_generatorset_symbol.ml", line 14, characters 30-116:
+Error: Unbound module Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_generatorset_symbol.cmx
+Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_generatorset_symbol
+File "Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_geometryset.ml", line 14, characters 30-116:
+Error: Unbound module Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_geometryset.cmx
+Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_geometryset
+File "Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_geometryset_symbol.ml", line 14, characters 30-116:
+Error: Unbound module Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_geometryset_symbol.cmx
+Kind_name_constructor_node_basename_doublet_list_by_domainset_trail_provider_u_geometryset_symbol
+File "Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_generatorset_formula.ml", line 16, characters 26-101:
+Error: Unbound module Kind_name_entity_basename_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_generatorset_formula.cmx
+Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_generatorset_formula
+File "Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_generatorset_item_formula.ml", line 16, characters 26-101:
+Error: Unbound module Kind_name_entity_basename_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_generatorset_item_formula.cmx
+Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_generatorset_item_formula
+File "Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_generatorset_item_symbol.ml", line 16, characters 26-101:
+Error: Unbound module Kind_name_entity_basename_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_generatorset_item_symbol.cmx
+Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_generatorset_item_symbol
+File "Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_generatorset_symbol.ml", line 16, characters 26-101:
+Error: Unbound module Kind_name_entity_basename_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_generatorset_symbol.cmx
+Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_generatorset_symbol
+File "Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_geometryset_formula.ml", line 16, characters 26-101:
+Error: Unbound module Kind_name_entity_basename_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_geometryset_formula.cmx
+Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_geometryset_formula
+File "Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_geometryset_symbol.ml", line 16, characters 26-101:
+Error: Unbound module Kind_name_entity_basename_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_geometryset_symbol.cmx
+Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_geometryset_symbol
+File "Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_moleculeset_formula.ml", line 16, characters 26-101:
+Error: Unbound module Kind_name_entity_basename_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_moleculeset_formula.cmx
+Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_moleculeset_formula
+File "Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_moleculeset_symbol.ml", line 16, characters 26-101:
+Error: Unbound module Kind_name_entity_basename_doublet_list_by_category_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_moleculeset_symbol.cmx
+Kind_name_entity_basename_doublet_list_by_category_trail_provider_u_moleculeset_symbol
+File "Record_kind_by_entity_trail_provider_u_moleculeset_formula.ml", line 16, characters 0-46:
+Error: Unbound module Record_kind_by_entity_trail_provider_v
+File "_none_", line 1:
+Error: Cannot find file Record_kind_by_entity_trail_provider_u_moleculeset_formula.cmx
+Record_kind_by_entity_trail_provider_u_moleculeset_formula
+
+Testing Righthandside_string_by_constructor_leaf_trail_provider_v with
+   Righthandside_string_by_constructor_leaf_trail_provider_u_chemicalset_formula.ml
+
+Word_word_string_triplet_list_by_category_trail_provider_v.ml.word_word_string_off_record: --- Fatal Error ---
+    expecting a string at right-hand-side of '=' sign.
+    and found empty right-hand-side of '=' sign in record >builders z_nh3p1_s =  <.
+cure :
+    Check file >/keep/sources/ocaml_top/setup/frames/chemicalset/generator/chemicalset_formulas.set< 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Righthandside_string_by_constructor_leaf_trail_provider_v with
+   Righthandside_string_by_constructor_leaf_trail_provider_u_generatorset_formula_list.ml
+
+
+********* Righthandside_string_by_constructor_leaf_trail_provider_v with
+   Righthandside_string_by_constructor_leaf_trail_provider_u_generatorset_formula_list.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Righthandside_string_by_constructor_leaf_trail_provider_v with
+   Righthandside_string_by_constructor_leaf_trail_provider_u_generatorset_formula.ml
+
+
+********* Righthandside_string_by_constructor_leaf_trail_provider_v with
+   Righthandside_string_by_constructor_leaf_trail_provider_u_generatorset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Righthandside_string_by_constructor_leaf_trail_provider_v with
+   Righthandside_string_by_constructor_leaf_trail_provider_u_generatorset_item_formula.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+File "Righthandside_string_by_constructor_leaf_trail_provider_u_generatorset_item.ml", line 25, characters 1-12:
+Error: Unbound value rhs_str_poi
+File "_none_", line 1:
+Error: Cannot find file Righthandside_string_by_constructor_leaf_trail_provider_u_generatorset_item.cmx
+Righthandside_string_by_constructor_leaf_trail_provider_u_generatorset_item
+
+Testing Righthandside_string_by_constructor_leaf_trail_provider_v with
+   Righthandside_string_by_constructor_leaf_trail_provider_u_generatorset_list.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+Fatal error: exception Failure("Constructor_leaf_basename_not_found:Righthandside_string_by_constructor_leaf_trail_provider_v.ml:build")
+File "Righthandside_string_by_constructor_leaf_trail_provider_u_generatorset.ml", line 25, characters 1-12:
+Error: Unbound value rhs_str_poi
+File "_none_", line 1:
+Error: Cannot find file Righthandside_string_by_constructor_leaf_trail_provider_u_generatorset.cmx
+Righthandside_string_by_constructor_leaf_trail_provider_u_generatorset
+
+Testing Righthandside_string_by_constructor_leaf_trail_provider_v with
+   Righthandside_string_by_constructor_leaf_trail_provider_u_geometryset_formula_list.ml
+
+
+********* Righthandside_string_by_constructor_leaf_trail_provider_v with
+   Righthandside_string_by_constructor_leaf_trail_provider_u_geometryset_formula_list.ml   Failure Test number 12 incorrectly failed ***********
+
+Testing results:
+Total: 12 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Righthandside_string_by_constructor_leaf_trail_provider_v with
+   Righthandside_string_by_constructor_leaf_trail_provider_u_geometryset_formula.ml
+
+
+********* Righthandside_string_by_constructor_leaf_trail_provider_v with
+   Righthandside_string_by_constructor_leaf_trail_provider_u_geometryset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Righthandside_string_by_constructor_leaf_trail_provider_v with
+   Righthandside_string_by_constructor_leaf_trail_provider_u_geometryset_list.ml
+
+Testing results:
+Total: 11 tests performed.
+
+
+All tests succeeded.
+
+File "Righthandside_string_by_constructor_leaf_trail_provider_u_geometryset.ml", line 25, characters 1-12:
+Error: Unbound value rhs_str_poi
+File "_none_", line 1:
+Error: Cannot find file Righthandside_string_by_constructor_leaf_trail_provider_u_geometryset.cmx
+Righthandside_string_by_constructor_leaf_trail_provider_u_geometryset
+
+Testing Righthandside_string_by_constructor_leaf_trail_provider_v with
+   Righthandside_string_by_constructor_leaf_trail_provider_u_moleculeset_formula.ml
+
+Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v.ml.provide: --- Fatal Error ---
+    expecting category trail.
+    and found [(kind, type); (category, formula); (domainset, moleculeset)] instead.
+cure :
+    Check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Righthandside_string_by_constructor_notleaf_trail_provider_v with
+   Righthandside_string_by_constructor_notleaf_trail_provider_u_generatorset_item.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Righthandside_string_by_constructor_notleaf_trail_provider_v with
+   Righthandside_string_by_constructor_notleaf_trail_provider_u_generatorset_item_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+Fatal error: exception Failure("Constructor_notleaf_basename_not_found:Righthandside_string_by_constructor_notleaf_trail_provider_v.ml:build")
+
+Testing Righthandside_string_by_constructor_notleaf_trail_provider_v with
+   Righthandside_string_by_constructor_notleaf_trail_provider_u_generatorset.ml
+
+Testing results:
+Total: 2 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Righthandside_string_by_constructor_notleaf_trail_provider_v with
+   Righthandside_string_by_constructor_notleaf_trail_provider_u_generatorset_symbol.ml
+
+
+********* Righthandside_string_by_constructor_notleaf_trail_provider_v with
+   Righthandside_string_by_constructor_notleaf_trail_provider_u_generatorset_symbol.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Righthandside_string_by_constructor_notleaf_trail_provider_v with
+   Righthandside_string_by_constructor_notleaf_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 2 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Righthandside_string_by_constructor_notleaf_trail_provider_v with
+   Righthandside_string_by_constructor_notleaf_trail_provider_u_geometryset_symbol.ml
+
+Testing results:
+Total: 5 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Righthandside_string_by_constructor_notleaf_trail_provider_v with
+   Righthandside_string_by_constructor_notleaf_trail_provider_u_moleculeset_symbol.ml
+
+Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v.ml.provide: --- Fatal Error ---
+    expecting category trail.
+    and found [(kind, type); (category, symbol); (domainset, moleculeset)] instead.
+cure :
+    Check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Righthandside_string_list_by_category_trail_provider_v
+   Righthandside_string_list_by_category_trail_provider_u_generatorset_formula.ml
+
+
+********* Righthandside_string_list_by_category_trail_provider_v
+   Righthandside_string_list_by_category_trail_provider_u_generatorset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Righthandside_string_list_by_category_trail_provider_v
+   Righthandside_string_list_by_category_trail_provider_u_generatorset_formula.ml
+
+
+********* Righthandside_string_list_by_category_trail_provider_v
+   Righthandside_string_list_by_category_trail_provider_u_generatorset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Righthandside_string_list_by_category_trail_provider_v
+   Righthandside_string_list_by_category_trail_provider_u_generatorset_item_formula.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Righthandside_string_list_by_category_trail_provider_v
+   Righthandside_string_list_by_category_trail_provider_u_generatorset_item_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Righthandside_string_list_by_category_trail_provider_v
+   Righthandside_string_list_by_category_trail_provider_u_generatorset_symbol.ml
+
+
+********* Righthandside_string_list_by_category_trail_provider_v
+   Righthandside_string_list_by_category_trail_provider_u_generatorset_symbol.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Righthandside_string_list_by_category_trail_provider_v
+   Righthandside_string_list_by_category_trail_provider_u_geometryset_formula.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Righthandside_string_list_by_category_trail_provider_v
+   Righthandside_string_list_by_category_trail_provider_u_geometryset_formula.ml
+
+
+********* Righthandside_string_list_by_category_trail_provider_v
+   Righthandside_string_list_by_category_trail_provider_u_geometryset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Righthandside_string_list_by_category_trail_provider_v
+   Righthandside_string_list_by_category_trail_provider_u_geometryset_symbol.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_chemicalset_formula.ml
+
+Word_word_string_triplet_list_by_category_trail_provider_v.ml.word_word_string_off_record: --- Fatal Error ---
+    expecting a string at right-hand-side of '=' sign.
+    and found empty right-hand-side of '=' sign in record >builders z_nh3p1_s =  <.
+cure :
+    Check file >/keep/sources/ocaml_top/setup/frames/chemicalset/generator/chemicalset_formulas.set< 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_chemicalset_symbol.ml
+
+
+********* Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_chemicalset_symbol.ml   Test number 2 failed ***********
+
+Testing results:
+Total: 2 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+File "Word_word_string_triplet_list_by_category_trail_provider_u_chemicalset_tag.ml", line 28, characters 58-70:
+Error: This expression has type
+         (string, string, string) Triplet_list_t.triplet_list =
+           (string, string, string) Triplet_t.triplet list
+       but an expression was expected of type
+         (string, 'a) Doublet_list_t.doublet_list =
+           (string, 'a) Doublet_t.doublet list
+       Type
+         (string, string, string) Triplet_t.triplet =
+           string * string * string
+       is not compatible with type
+         (string, 'a) Doublet_t.doublet = string * 'a 
+File "_none_", line 1:
+Error: Cannot find file Word_word_string_triplet_list_by_category_trail_provider_u_chemicalset_tag.cmx
+Word_word_string_triplet_list_by_category_trail_provider_u_chemicalset_tag
+
+Testing Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_generatorset_formula_list.ml
+
+
+********* Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_generatorset_formula_list.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_generatorset_formula.ml
+
+
+********* Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_generatorset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_generatorset_item_formula.ml
+
+Database_filename_by_category_trail_provider_v.ml.build: --- Fatal Error ---
+    expecting directory exists.
+    and found >/keep/sources/ocaml_top/setup/frames/generatorset_item/generator/<.
+cure :
+    check 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_generatorset_item_symbol.ml
+
+Testing results:
+Total: 2 tests performed.
+
+
+All tests succeeded.
+
+File "Word_word_string_triplet_list_by_category_trail_provider_u_generatorset_list.ml", line 45, characters 25-50:
+Error: Unbound value select_entity_off_triplet
+File "_none_", line 1:
+Error: Cannot find file Word_word_string_triplet_list_by_category_trail_provider_u_generatorset_list.cmx
+Word_word_string_triplet_list_by_category_trail_provider_u_generatorset_list
+
+Testing Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_generatorset_symbol.ml
+
+Testing results:
+Total: 2 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_geometryset_formula_list.ml
+
+Testing results:
+Total: 2 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_geometryset_formula.ml
+
+
+********* Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_geometryset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+File "Word_word_string_triplet_list_by_category_trail_provider_u_geometryset_list.ml", line 45, characters 25-50:
+Error: Unbound value select_entity_off_triplet
+File "_none_", line 1:
+Error: Cannot find file Word_word_string_triplet_list_by_category_trail_provider_u_geometryset_list.cmx
+Word_word_string_triplet_list_by_category_trail_provider_u_geometryset_list
+
+Testing Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_geometryset_symbol.ml
+
+Testing results:
+Total: 2 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_moleculeset_formula.ml
+
+
+********* Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_moleculeset_formula.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_moleculeset_symbol.ml
+
+
+********* Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_moleculeset_symbol.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_musicset_symbol.ml
+
+
+********* Word_word_string_triplet_list_by_category_trail_provider_v with
+   Word_word_string_triplet_list_by_category_trail_provider_u_musicset_symbol.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Word_word_string_triplet_list_by_domainset_trail_provider_v with
+   Word_word_string_triplet_list_by_domainset_trail_provider_u_generatorset_item.ml
+
+Testing results:
+Total: 2 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Word_word_string_triplet_list_by_domainset_trail_provider_v with
+   Word_word_string_triplet_list_by_domainset_trail_provider_u_generatorset.ml
+
+Testing results:
+Total: 2 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Word_word_string_triplet_list_by_domainset_trail_provider_v with
+   Word_word_string_triplet_list_by_domainset_trail_provider_u_geometryset.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+

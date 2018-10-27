@@ -1,0 +1,7 @@
+1. check errors in formulas.set like "builters" instead of "builders"
+
+2. instead of "type" : "constructors" to be consistente with "builders"
+
+3. ofstring  = point_constructor
+
+4. offloat   = x y z

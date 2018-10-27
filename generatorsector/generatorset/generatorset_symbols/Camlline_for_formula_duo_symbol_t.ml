@@ -1,0 +1,25 @@
+(** {3 Camlline_for_formula_duo_symbol_t} *)
+
+
+(** {6 Typing_for_symbol} *)
+
+type camlline_for_formula_duo_symbol =
+  | Camlline_for_formula_duo_builder_data_symbol of Camlline_for_formula_duo_builder_data_symbol_t.camlline_for_formula_duo_builder_data_symbol
+  | Camlline_for_formula_duo_localset_builder_symbol of Camlline_for_formula_duo_localset_builder_symbol_t.camlline_for_formula_duo_localset_builder_symbol
+  | Camlline_for_formula_duo_localset_data_symbol of Camlline_for_formula_duo_localset_data_symbol_t.camlline_for_formula_duo_localset_data_symbol
+  | Camlline_for_formula_duo_main_builder_symbol of Camlline_for_formula_duo_main_builder_symbol_t.camlline_for_formula_duo_main_builder_symbol
+  | Camlline_for_formula_duo_main_data_symbol of Camlline_for_formula_duo_main_data_symbol_t.camlline_for_formula_duo_main_data_symbol
+  | Camlline_for_formula_duo_son_builder_symbol of Camlline_for_formula_duo_son_builder_symbol_t.camlline_for_formula_duo_son_builder_symbol
+  | Camlline_for_formula_duo_son_data_symbol of Camlline_for_formula_duo_son_data_symbol_t.camlline_for_formula_duo_son_data_symbol
+  | Camlline_for_formula_duo_son_main_symbol of Camlline_for_formula_duo_son_main_symbol_t.camlline_for_formula_duo_son_main_symbol
+  | Camlline_for_formula_duo_son_top_symbol of Camlline_for_formula_duo_son_top_symbol_t.camlline_for_formula_duo_son_top_symbol
+  | Camlline_for_formula_duo_top_builder_symbol of Camlline_for_formula_duo_top_builder_symbol_t.camlline_for_formula_duo_top_builder_symbol
+  | Camlline_for_formula_duo_top_data_symbol of Camlline_for_formula_duo_top_data_symbol_t.camlline_for_formula_duo_top_data_symbol
+  | Camlline_for_formula_duo_top_main_symbol of Camlline_for_formula_duo_top_main_symbol_t.camlline_for_formula_duo_top_main_symbol
+;;
+
+
+(** created by version v1.13 of ./generator camlline_for_formula_duo implementation_for_symbol symbol at 16:47 27 May 2013. *)
+
+
+

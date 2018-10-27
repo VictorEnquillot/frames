@@ -1,0 +1,5 @@
+cd $SGNR; make generatorset_symbols.cma 
+cd $TGNR; make generatorset_tags.cma 
+cd $DGNR; make generatorset_databases.cma 
+cd $IGNR; make generatorset_interfaces.cma 
+cd $FGNR; make generatorset_formulas.cma 

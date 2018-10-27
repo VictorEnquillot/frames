@@ -1,0 +1,10 @@
+  let nam_bas = 
+    let sym_dgn_t = List.find 
+	(Tree_v.has_node_of_node_predicate_off_tree Dgn_symbol_v.is_dgn_comment_header)
+	sym_dgn_tl 
+    in
+    let sym_dgn = Tree_v.leaf_of_leaf_predicate_of_node_predicate_off_tree Dgn_symbol_v.is_dgn_comment_header Dgn_symbol_v.is_dgn_body_node_comment_block sym_dgn_t in
+    
+    Dgn_symbol_v.string_off sym_dgn
+  in
+

@@ -1,0 +1,36 @@
+let print_error_char c mdn her =
+  Format.fprintf Format.err_formatter 
+    "@.@[<hov>%s.%s: --- Fatal Error ---@.\
+    char >%c< does not represent a one letter code symbol@]@."
+  mdn her c
+;;
+
+let fail_char c mdn her =
+  print_error_char c mdn her;
+  assert false
+;;
+
+let molecule_aminoacid_regular_olc_symbol_of_char chr =
+  let chu = Char.uppercase chr in
+  match chu with
+  | 'A' -> a
+  | 'R' -> r
+  | 'N' -> n
+  | 'D' -> d  
+  | 'C' -> c
+  | 'Q' -> q
+  | 'E' -> e
+  | 'H' -> h
+  | 'I' -> i
+  | 'L' -> l
+  | 'K' -> k
+  | 'M' -> m
+  | 'F' -> f
+  | 'S' -> s
+  | 'T' -> t
+  | 'W' -> w
+  | 'Y' -> y
+  | 'V' -> v
+  | c -> fail_char c nam_mod "molecule_aminoacid_olc_symbol_of_char"
+;;
+

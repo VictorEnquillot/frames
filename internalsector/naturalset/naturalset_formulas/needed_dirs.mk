@@ -1,0 +1,3 @@
+NEEDED_DIRS := \
+	$(NATURALSET_TAGS_DIR) \
+ 

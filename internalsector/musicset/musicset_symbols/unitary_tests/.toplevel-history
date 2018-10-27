@@ -1,0 +1,20 @@
+#use "id3v2_tag_symbol_u_any.ml";; 
+#use "id3v2_tag_symbol_u_any.ml";; 
+  #use "mp3_header_symbol_u_any.ml";; 
+#use "file_id3v1_symbol_u_any.ml";;
+#use "file_id3v1_symbol_u_any.ml";;
+#use "file_id3v1_symbol_u_any.ml";;
+   #use "mp3_header_symbol_u_any.ml";; 
+Mp3_header_symbol_v.name sym_hea;;
+let sym_hea = Mp3_header_symbol_v.make nam_hea;;
+let nam_hea = "mp3_header_1";;
+let sym_hea = Mp3_header_symbol_v.make nam_hea;;
+let sym_hea = Mp3_header_symbol_v.make nam_hea "";;
+(
+sym_hea
+(* : File_id3v1_symbol_t.mp3_header_symbol *)
+= 
+Mp3_header_symbol_t.Mp3_header_1
+);;
+Mp3_header_symbol_v.name sym_hea;;
+   #use "mp3_header_symbol_u_any.ml";; 

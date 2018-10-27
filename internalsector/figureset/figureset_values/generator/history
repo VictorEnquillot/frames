@@ -1,0 +1,36 @@
+mw Envelopee_t.envelopee Coordinate_envelopee_t.coordinate_envelopee *ml
+
+ms elementary_body_coordinate_tuple_ coordinate_set_body_tuple_ *ml
+ms Elementary_body_coordinate_tuple_ Coordinate_set_body_tuple_ *ml
+ms Elementary_symbol Coordinate_symbol *ml
+ms elementary_symbol coordinate_symbol *ml
+ms Elementary_tag Coordinate_tag *ml
+ms elementary_tag coordinate_tag *ml
+
+cp $VSKE/files_mli.mk .
+cp $VSKE/Skeleton*ml .
+
+msrf skeleton figure *ml *mk
+msrf Skeleton Figure *ml *mk
+
+ms parameter coordinate *ml
+ms Parameter Coordinate *ml
+
+ms SKE FIG *ml
+ms _ske _fig *ml
+ms _psf _csf *ml
+ms _ssf _fsf *ml
+ms _par _coo *ml
+
+
+ms parameter coordinate *mk *sh
+ms nwchem db1points *mk *sh *ml
+
+ms PARAMETER COORDINATE *mk 
+ms NWCHEM DB1POINTS *mk
+
+ms try_ao Point_a *ml
+
+
+ms hep22 A *ml
+ms hep   A *ml

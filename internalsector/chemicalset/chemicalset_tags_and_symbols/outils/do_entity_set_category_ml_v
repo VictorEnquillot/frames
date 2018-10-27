@@ -1,0 +1,122 @@
+# ls -C1 *symbol_t.ml | sed -e 's/_symbol_t.ml/ \\/' -e '/set/d'
+
+
+. ${UTI}/do_capitalize_first
+. ${UTI}/do_domainset_module_abbreviation
+. do_module_abbreviation_all
+. do_argument_abbreviation_all
+
+
+# -----------------  domain  --------------------------------
+
+. ${UTI}/do_domain_name
+. ${UTI}/do_domain_module_abbreviation 
+
+#set -x
+domain_name=`domain_name`
+Domain_name=`capitalize_first ${domain_name}`
+domainset="${domain_name}set"
+Domainset="${Domain_name}set"
+Dma=`domainset_module_abbreviation ${domain_name}`
+
+# -----------------  category  ------------------------------
+
+if [ "$1" = "" ]
+then
+	echo "Usage :"
+	for c in `${UTI}/do_tag_category_elementset`
+	do  
+	    echo " $0 $c > ${domainset}_${c}_t.ml"
+	done
+	exit
+fi
+
+. ${UTI}/do_category_name_abbreviation 
+. ${UTI}/do_category_type_abbreviation 
+. ${UTI}/do_category_argument_abbreviation
+. ${UTI}/do_category_value_abbreviation
+. ${UTI}/do_category_off_category_extended
+
+category=$1
+Category=`capitalize_first ${category}`
+caa=`category_argument_abbreviation ${category}`
+cta=`category_type_abbreviation ${category}`
+cva=`category_value_abbreviation ${category}`
+cam=`category_name_abbreviation ${category}`
+
+# -------------------- Caml Cdodde ----------------------------
+
+echo "(** {3 The ${Category} functionalities for a ${Entityset}.} *)"
+echo ""
+echo "(** {6 Modules.} *)"
+echo ""
+
+for e in `do_${domain_name}_elementset`
+do
+	E=`capitalize_first ${e}`
+	M=`module_abbreviation ${e}`
+	echo "module ${M}${cam}_${cta} = ${E}_${category}_${cta}"
+	echo "module ${M}${cam}_${cva} = ${E}_${category}_${cva}"
+done
+echo "module ${Dma}${cam}_${cta} = ${Domainset}_${category}_${cta}"
+
+echo ""
+echo "(** {6 Extracting.} *)"
+echo " "
+
+for e in `do_${domain_name}_elementset`
+do
+    E=`capitalize_first ${e}`
+    M=`module_abbreviation ${e}
+`   echo "let ${e}_${category}_off_${entityset}_${category} = function"
+    echo "  | ${Dma}${cam}_${cta}.${E}_${category} ${caa} -> ${caa}" 
+    echo "  | _ -> failwith \"Ndod_${E}_${category}:${e}_${category}_off_${entityset}_${category}\""
+    echo ";;"
+    echo " "
+done
+
+echo ""
+echo "(** {6 Upgrading.} *)"
+echo ""
+
+for e in `do_${domain_name}_elementset`
+do
+    E=`capitalize_first ${e}`
+    M=`module_abbreviation ${e}`
+    arg=`argument_abbreviation ${e}`
+    echo "let ${entityset}_${category}_of_${e}_${category} ${caa}_${arg} ="
+    echo "  ${Dma}${cam}_${cta}.${E}_${category} ${caa}_${arg}" 
+    echo ";;"
+    echo ""
+done
+
+echo ""
+echo "(** {6 Converting.} *)"
+echo ""
+echo "let print ppf = function"
+
+for e in `do_${domain_name}_elementset`
+do
+	E=`capitalize_first ${e}`
+	M=`module_abbreviation ${e}`
+	echo "  | ${Dma}${cam}_${cta}.${E}_${category} ${caa} ->" 
+	echo "     Format.fprintf ppf \"${M}_%a\" ${M}${cam}_${cva}.print ${caa}"
+done
+echo ";;"
+echo ""
+echo "let name = function"
+
+for e in `do_${domain_name}_elementset`
+
+do
+	E=`capitalize_first ${e}`
+	M=`module_abbreviation ${e}`
+	echo "  | ${Dma}${cam}_${cta}.${E}_${category} ${caa} ->" 
+	echo "     Format.sprintf \"${M}_%s\" (${M}${cam}_${cva}.name ${caa})"
+done
+
+echo ""
+. ${UTI}/do_created
+echo ""
+
+exit

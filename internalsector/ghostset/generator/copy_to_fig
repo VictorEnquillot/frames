@@ -1,0 +1,4 @@
+echo "copy figure_${1}_symbols.dat figure_symbols.dat"
+cp figure_${1}_symbols.dat figure_symbols.dat
+echo "copy figure_${1}_formulas.dat figure_formulas.dat"
+cp figure_${1}_formulas.dat figure_formulas.dat

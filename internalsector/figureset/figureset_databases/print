@@ -1,0 +1,4 @@
+let print () = 
+  Format.fprintf Format.std_formatter "\nRegister : %s\n" nam_mod; 
+  Register_v.print name_of_key name_of_value register;
+;;

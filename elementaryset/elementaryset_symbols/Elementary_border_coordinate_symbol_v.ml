@@ -1,0 +1,753 @@
+(** {3 Elementary_border_coordinate_symbol_v} *)
+
+
+(** {6 Documenting_for_symbol} *)
+
+let documentation () = 
+[
+  "Needs: ";
+  "Current : SFIG:Elementary_border_coordinate_symbol_v";
+  "Needed-by: ";
+  "What-is-it: ";
+  "How-is-it-done: ";
+  "Example: ";
+]
+;;
+
+let nam_cod = Management_v.current_module_name (documentation ());;
+
+
+(** {6 Naming_for_symbol} *)
+
+let name = function
+  | Elementary_border_coordinate_symbol_t.Elementary_border_coordinate_heterogeneous_symbol sym_ech ->
+    Elementary_border_coordinate_heterogeneous_symbol_v.name sym_ech
+  | Elementary_border_coordinate_symbol_t.Elementary_border_coordinate_homogeneous_symbol sym_ech ->
+    Elementary_border_coordinate_homogeneous_symbol_v.name sym_ech
+;;
+
+
+(** {6 String_offing_for_symbol} *)
+
+let string_off = function
+  | Elementary_border_coordinate_symbol_t.Elementary_border_coordinate_heterogeneous_symbol sym_ech ->
+  Elementary_border_coordinate_heterogeneous_symbol_v.string_off sym_ech
+  | Elementary_border_coordinate_symbol_t.Elementary_border_coordinate_homogeneous_symbol sym_ech ->
+  Elementary_border_coordinate_homogeneous_symbol_v.string_off sym_ech
+;;
+
+
+(** {6 Longnaming_for_symbol} *)
+
+let longname sym_ebc =
+  Format.sprintf "Elementary_border_coordinate_symbol_t.%s" (String.capitalize (name sym_ebc))
+;;
+
+
+(** {6 Fullnaming_for_symbol} *)
+
+let fullname sym_ebc =
+  Format.sprintf "%s \"%s\"" (longname sym_ebc) (string_off sym_ebc)
+;;
+
+
+(** {6 Extracting_topson_notleaf_for_symbol} *)
+
+let elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol = function
+  | Elementary_border_coordinate_symbol_t.Elementary_border_coordinate_heterogeneous_symbol sym_ech -> sym_ech
+  | sym_ebc -> Error_messages_v.print_fatal_error
+      nam_cod "elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol"
+      "Elementary_border_coordinate_heterogeneous_symbol"
+      (name sym_ebc) "check"
+;;
+
+let elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol = function
+  | Elementary_border_coordinate_symbol_t.Elementary_border_coordinate_homogeneous_symbol sym_ech -> sym_ech
+  | sym_ebc -> Error_messages_v.print_fatal_error
+      nam_cod "elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol"
+      "Elementary_border_coordinate_homogeneous_symbol"
+      (name sym_ebc) "check"
+;;
+
+
+(** {6 Extracting_grandson_notleaf_for_symbol} *)
+
+let elementary_border_coordinate_heterogeneous_cylindrical_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_cylindrical_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_heterogeneous_cylindrical_rho_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_cylindrical_rho_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_heterogeneous_cylindrical_phi_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_cylindrical_phi_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_heterogeneous_cylindrical_zed_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_cylindrical_zed_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_heterogeneous_polar_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_polar_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_heterogeneous_polar_rho_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_polar_rho_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_heterogeneous_polar_theta_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_polar_theta_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_heterogeneous_spherical_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_spherical_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_heterogeneous_spherical_rho_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_spherical_rho_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_heterogeneous_spherical_phi_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_spherical_phi_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_heterogeneous_spherical_theta_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_spherical_theta_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_homogeneous_cartesian_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_cartesian_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_homogeneous_cartesian_x_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_cartesian_x_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_homogeneous_cartesian_y_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_cartesian_y_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_homogeneous_cartesian_z_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_cartesian_z_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_homogeneous_linear_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_linear_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_homogeneous_linear_x_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_linear_x_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_homogeneous_planar_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_planar_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_homogeneous_planar_x_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_planar_x_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_homogeneous_planar_y_symbol_off_elementary_border_coordinate_symbol sym_ebc = 
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+    Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_planar_y_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+
+(** {6 Querying_topson_bare_for_symbol} *)
+
+
+(** {6 Querying_topson_ofstring_for_symbol} *)
+
+
+(** {6 Querying_topson_notleaf_for_symbol} *)
+
+let is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol = function
+  | Elementary_border_coordinate_symbol_t.Elementary_border_coordinate_heterogeneous_symbol _ -> true
+  | _ -> false
+;;
+
+let is_elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol = function
+  | Elementary_border_coordinate_symbol_t.Elementary_border_coordinate_homogeneous_symbol _ -> true
+  | _ -> false
+;;
+
+
+(** {6 Querying_grandson_bare_for_symbol} *)
+
+
+(** {6 Querying_grandson_ofstring_for_symbol} *)
+
+let is_elementary_border_coordinate_heterogeneous_cylindrical_rho_constructor sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+      let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+      Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_cylindrical_rho_constructor sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_cylindrical_phi_constructor sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+      let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+      Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_cylindrical_phi_constructor sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_cylindrical_zed_constructor sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+      let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+      Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_cylindrical_zed_constructor sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_polar_rho_constructor sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+      let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+      Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_polar_rho_constructor sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_polar_theta_constructor sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+      let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+      Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_polar_theta_constructor sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_spherical_rho_constructor sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+      let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+      Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_spherical_rho_constructor sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_spherical_phi_constructor sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+      let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+      Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_spherical_phi_constructor sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_spherical_theta_constructor sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+      let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+      Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_spherical_theta_constructor sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_homogeneous_cartesian_x_constructor sym_ebc =
+  if not (is_elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+      let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+      Elementary_border_coordinate_homogeneous_symbol_v.is_elementary_border_coordinate_homogeneous_cartesian_x_constructor sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_homogeneous_cartesian_y_constructor sym_ebc =
+  if not (is_elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+      let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+      Elementary_border_coordinate_homogeneous_symbol_v.is_elementary_border_coordinate_homogeneous_cartesian_y_constructor sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_homogeneous_cartesian_z_constructor sym_ebc =
+  if not (is_elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+      let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+      Elementary_border_coordinate_homogeneous_symbol_v.is_elementary_border_coordinate_homogeneous_cartesian_z_constructor sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_homogeneous_linear_x_constructor sym_ebc =
+  if not (is_elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+      let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+      Elementary_border_coordinate_homogeneous_symbol_v.is_elementary_border_coordinate_homogeneous_linear_x_constructor sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_homogeneous_planar_x_constructor sym_ebc =
+  if not (is_elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+      let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+      Elementary_border_coordinate_homogeneous_symbol_v.is_elementary_border_coordinate_homogeneous_planar_x_constructor sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_homogeneous_planar_y_constructor sym_ebc =
+  if not (is_elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+      let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+      Elementary_border_coordinate_homogeneous_symbol_v.is_elementary_border_coordinate_homogeneous_planar_y_constructor sym_ech
+    end
+;;
+
+
+(** {6 Querying_grandson_notleaf_for_symbol} *)
+
+let is_elementary_border_coordinate_heterogeneous_cylindrical_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_cylindrical_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_cylindrical_rho_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_cylindrical_rho_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_cylindrical_phi_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_cylindrical_phi_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_cylindrical_zed_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_cylindrical_zed_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_polar_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_polar_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_polar_rho_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_polar_rho_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_polar_theta_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_polar_theta_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_spherical_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_spherical_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_spherical_rho_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_spherical_rho_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_spherical_phi_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_spherical_phi_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_heterogeneous_spherical_theta_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_heterogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_heterogeneous_symbol_v.is_elementary_border_coordinate_heterogeneous_spherical_theta_symbol_off_elementary_border_coordinate_heterogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_homogeneous_cartesian_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_homogeneous_symbol_v.is_elementary_border_coordinate_homogeneous_cartesian_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_homogeneous_cartesian_x_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_homogeneous_symbol_v.is_elementary_border_coordinate_homogeneous_cartesian_x_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_homogeneous_cartesian_y_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_homogeneous_symbol_v.is_elementary_border_coordinate_homogeneous_cartesian_y_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_homogeneous_cartesian_z_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_homogeneous_symbol_v.is_elementary_border_coordinate_homogeneous_cartesian_z_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_homogeneous_linear_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_homogeneous_symbol_v.is_elementary_border_coordinate_homogeneous_linear_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_homogeneous_linear_x_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_homogeneous_symbol_v.is_elementary_border_coordinate_homogeneous_linear_x_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_homogeneous_planar_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_homogeneous_symbol_v.is_elementary_border_coordinate_homogeneous_planar_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_homogeneous_planar_x_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_homogeneous_symbol_v.is_elementary_border_coordinate_homogeneous_planar_x_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+    end
+;;
+
+let is_elementary_border_coordinate_homogeneous_planar_y_symbol_off_elementary_border_coordinate_symbol sym_ebc =
+  if not (is_elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc)
+  then false
+  else
+    begin
+  let sym_ech = elementary_border_coordinate_homogeneous_symbol_off_elementary_border_coordinate_symbol sym_ebc in
+  Elementary_border_coordinate_homogeneous_symbol_v.is_elementary_border_coordinate_homogeneous_planar_y_symbol_off_elementary_border_coordinate_homogeneous_symbol sym_ech
+    end
+;;
+
+
+(** {6 Upgrading_topson_notleaf_for_symbol} *)
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol sym_ech = 
+  Elementary_border_coordinate_symbol_t.Elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol sym_ech = 
+  Elementary_border_coordinate_symbol_t.Elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+
+(** {6 Upgrading_grandson_notleaf_for_symbol} *)
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_cylindrical_symbol sym_ehc = 
+  let sym_ech = Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_symbol_of_elementary_border_coordinate_heterogeneous_cylindrical_symbol sym_ehc in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_cylindrical_rho_symbol sym_ecr = 
+  let sym_ech = Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_symbol_of_elementary_border_coordinate_heterogeneous_cylindrical_rho_symbol sym_ecr in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_cylindrical_phi_symbol sym_ecp = 
+  let sym_ech = Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_symbol_of_elementary_border_coordinate_heterogeneous_cylindrical_phi_symbol sym_ecp in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_cylindrical_zed_symbol sym_ecz = 
+  let sym_ech = Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_symbol_of_elementary_border_coordinate_heterogeneous_cylindrical_zed_symbol sym_ecz in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_polar_symbol sym_ehp = 
+  let sym_ech = Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_symbol_of_elementary_border_coordinate_heterogeneous_polar_symbol sym_ehp in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_polar_rho_symbol sym_epr = 
+  let sym_ech = Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_symbol_of_elementary_border_coordinate_heterogeneous_polar_rho_symbol sym_epr in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_polar_theta_symbol sym_ept = 
+  let sym_ech = Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_symbol_of_elementary_border_coordinate_heterogeneous_polar_theta_symbol sym_ept in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_spherical_symbol sym_ehs = 
+  let sym_ech = Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_symbol_of_elementary_border_coordinate_heterogeneous_spherical_symbol sym_ehs in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_spherical_rho_symbol sym_esr = 
+  let sym_ech = Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_symbol_of_elementary_border_coordinate_heterogeneous_spherical_rho_symbol sym_esr in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_spherical_phi_symbol sym_esp = 
+  let sym_ech = Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_symbol_of_elementary_border_coordinate_heterogeneous_spherical_phi_symbol sym_esp in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_spherical_theta_symbol sym_est = 
+  let sym_ech = Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_symbol_of_elementary_border_coordinate_heterogeneous_spherical_theta_symbol sym_est in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_cartesian_symbol sym_ehc = 
+  let sym_ech = Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_symbol_of_elementary_border_coordinate_homogeneous_cartesian_symbol sym_ehc in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_cartesian_x_symbol sym_ecx = 
+  let sym_ech = Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_symbol_of_elementary_border_coordinate_homogeneous_cartesian_x_symbol sym_ecx in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_cartesian_y_symbol sym_ecy = 
+  let sym_ech = Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_symbol_of_elementary_border_coordinate_homogeneous_cartesian_y_symbol sym_ecy in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_cartesian_z_symbol sym_ecz = 
+  let sym_ech = Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_symbol_of_elementary_border_coordinate_homogeneous_cartesian_z_symbol sym_ecz in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_linear_symbol sym_ehl = 
+  let sym_ech = Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_symbol_of_elementary_border_coordinate_homogeneous_linear_symbol sym_ehl in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_linear_x_symbol sym_elx = 
+  let sym_ech = Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_symbol_of_elementary_border_coordinate_homogeneous_linear_x_symbol sym_elx in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_planar_symbol sym_ehp = 
+  let sym_ech = Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_symbol_of_elementary_border_coordinate_homogeneous_planar_symbol sym_ehp in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_planar_x_symbol sym_epx = 
+  let sym_ech = Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_symbol_of_elementary_border_coordinate_homogeneous_planar_x_symbol sym_epx in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+let elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_planar_y_symbol sym_epy = 
+  let sym_ech = Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_symbol_of_elementary_border_coordinate_homogeneous_planar_y_symbol sym_epy in
+    elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol sym_ech
+;;
+
+
+(** {6 Abbreviating_topson_bare_for_symbol} *)
+
+
+(** {6 Abbreviating_topson_ofstring_for_symbol} *)
+
+
+(** {6 Abbreviating_grandson_bare_for_symbol} *)
+
+
+(** {6 Abbreviating_grandson_ofstring_for_symbol} *)
+
+let elementary_border_coordinate_heterogeneous_cylindrical_rho_constructor s = elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol (Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_cylindrical_rho_constructor s);;
+
+let elementary_border_coordinate_heterogeneous_cylindrical_phi_constructor s = elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol (Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_cylindrical_phi_constructor s);;
+
+let elementary_border_coordinate_heterogeneous_cylindrical_zed_constructor s = elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol (Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_cylindrical_zed_constructor s);;
+
+let elementary_border_coordinate_heterogeneous_polar_rho_constructor s = elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol (Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_polar_rho_constructor s);;
+
+let elementary_border_coordinate_heterogeneous_polar_theta_constructor s = elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol (Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_polar_theta_constructor s);;
+
+let elementary_border_coordinate_heterogeneous_spherical_rho_constructor s = elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol (Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_spherical_rho_constructor s);;
+
+let elementary_border_coordinate_heterogeneous_spherical_phi_constructor s = elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol (Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_spherical_phi_constructor s);;
+
+let elementary_border_coordinate_heterogeneous_spherical_theta_constructor s = elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol (Elementary_border_coordinate_heterogeneous_symbol_v.elementary_border_coordinate_heterogeneous_spherical_theta_constructor s);;
+
+let elementary_border_coordinate_homogeneous_cartesian_x_constructor s = elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol (Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_cartesian_x_constructor s);;
+
+let elementary_border_coordinate_homogeneous_cartesian_y_constructor s = elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol (Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_cartesian_y_constructor s);;
+
+let elementary_border_coordinate_homogeneous_cartesian_z_constructor s = elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol (Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_cartesian_z_constructor s);;
+
+let elementary_border_coordinate_homogeneous_linear_x_constructor s = elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol (Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_linear_x_constructor s);;
+
+let elementary_border_coordinate_homogeneous_planar_x_constructor s = elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol (Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_planar_x_constructor s);;
+
+let elementary_border_coordinate_homogeneous_planar_y_constructor s = elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol (Elementary_border_coordinate_homogeneous_symbol_v.elementary_border_coordinate_homogeneous_planar_y_constructor s);;
+
+
+(** {6 Making_for_symbol_bare} *)
+
+let make_of_topson_bare nam =
+  let nam_low = String.lowercase nam in
+  match nam_low with
+  | _ ->
+  failwith "Not_a_topson_bare:Elementary_border_coordinate_symbol_v.ml:make_of_topson_bare"
+;;
+
+
+(** {6 Making_for_symbol_ofstring} *)
+
+let make_of_topson_ofstring nam s =
+  let nam_low = String.lowercase nam in
+  match nam_low with
+  | _ ->
+  failwith "Not_a_topson_ofstring:Elementary_border_coordinate_symbol_v.ml:make_of_topson_ofstring"
+;;
+
+
+(** {6 Making_for_symbol_notleaf} *)
+
+let make_of_topson_notleaf nam s =
+  try elementary_border_coordinate_symbol_of_elementary_border_coordinate_heterogeneous_symbol
+      (Elementary_border_coordinate_heterogeneous_symbol_v.make nam s)
+  with Failure "Not_a_elementary_border_coordinate_heterogeneous_symbol:Elementary_border_coordinate_heterogeneous_symbol_v.ml:make" ->
+  try elementary_border_coordinate_symbol_of_elementary_border_coordinate_homogeneous_symbol
+      (Elementary_border_coordinate_homogeneous_symbol_v.make nam s)
+  with Failure "Not_a_elementary_border_coordinate_homogeneous_symbol:Elementary_border_coordinate_homogeneous_symbol_v.ml:make" ->
+  failwith "Not_a_topson_notleaf:Elementary_border_coordinate_symbol_v.ml:make_of_topson_notleaf"
+;;
+
+
+(** {6 Making_for_symbol} *)
+
+let make nam s =
+  try make_of_topson_bare nam
+  with Failure "Not_a_topson_bare:Elementary_border_coordinate_symbol_v.ml:make_of_topson_bare" ->
+  try make_of_topson_ofstring nam s
+  with Failure "Not_a_topson_ofstring:Elementary_border_coordinate_symbol_v.ml:make_of_topson_ofstring" ->
+  try make_of_topson_notleaf nam s
+  with Failure "Not_a_topson_notleaf:Elementary_border_coordinate_symbol_v.ml:make_of_topson_notleaf" ->
+   let _ =
+      Error_messages_v.print_error nam_cod "make"
+      (Format.sprintf "strings \"%s\" and \"%s\" represent an existing Elementary_border_coordinate subtype" nam s)
+      "it does not exists"
+      "Check file Elementary_border_coordinate_symbol_v.ml"
+    in
+    failwith "Not_a_elementary_border_coordinate_symbol:Elementary_border_coordinate_symbol_v.ml:make"
+;;
+
+
+(** Elementary_border_coordinate_symbol_v at 11:52:20 on 9 May 2016. created by version v2.4 of generator *)
+
+
+

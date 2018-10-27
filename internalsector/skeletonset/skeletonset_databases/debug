@@ -1,0 +1,8 @@
+let debug () = Debug_v.debug (documentation ());;
+let debug_of_function_name_of_prototype_symbol nam_fun sym_prt =
+  if debug () then 
+    Format.fprintf Format.std_formatter "cur_sym_prt >%s< in %s.%s@." (Prototype_symbol_v.fullname sym_prt) nam_fun nam_mod ;
+
+    (* Format.fprintf Format.std_formatter "%s.%s: cur_sym_prt >%s< @." nam_mod nam_fun (Prototype_symbol_v.fullname sym_prt); *)
+;;
+

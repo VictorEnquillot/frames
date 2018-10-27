@@ -1,0 +1,31 @@
+constructors figure                          =   basisfunction 
+
+constructors basisfunction                   =   basisfunction_body   basisfunction_context   basisfunction_closure
+
+
+constructors basisfunction_context           =   basisfunction_context_createdby   basisfunction_context_domain
+
+constructors basisfunction_context_domain    =   basisfunction_context_domain_constructor:ofstring
+
+constructors basisfunction_context_createdby =   basisfunction_context_database:ofstring   basisfunction_context_input_file:ofstring
+
+
+
+
+
+
+constructors basisfunction_body              =   basisfunction_body_set_centered   basisfunction_body_set_periodic
+
+constructors basisfunction_body_set_centered =   basisfunction_body_set_centered_full   basisfunction_body_set_centered_c_indexed   basisfunction_body_set_centered_l_indexed   basisfunction_body_set_centered_n_indexed
+
+constructors basisfunction_body_set_periodic =   basisfunction_body_set_periodic_bloch
+
+
+
+
+constructors basisfunction_closure           =   basisfunction_closure_centered   basisfunction_closure_periodic 
+
+constructors basisfunction_closure_centered  =   basisfunction_closure_centered_m_indexed:ofstring   
+
+constructors basisfunction_closure_periodic  =   basisfunction_closure_periodicfunction:ofstring   basisfunction_closure_planewave:ofstring
+

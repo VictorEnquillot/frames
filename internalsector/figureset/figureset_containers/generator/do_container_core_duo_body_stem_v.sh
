@@ -1,0 +1,59 @@
+#!/bin/bash
+
+this=$1
+ttt=$2
+builder=$3
+bbb=$4
+bui_1=$5
+bui_2=$6
+
+if [ "${bui_2}" == "" ] 
+then 
+    echo "$0 : bui_2 (6th argument) is missing"
+    exit
+fi
+
+dat=`date`
+category="container"
+suffix="v"
+
+This=`capitalize_first.sh ${this}`
+Builder=`capitalize_first.sh ${builder}`
+Mainb=`capitalize_first.sh ${mainb}`
+
+template=`echo "$0" | sed -e 's/do_/template_/' -e 's/\.sh/.ml/'`
+supplement="${This}_${category}_supplement_${suffix}.ml"
+
+if [ ! -f ${template} ] 
+then 
+    echo "file ${template} is missing"
+    exit
+fi
+
+sed -e "s/this/$this/g" -e "s/This/$This/g" \
+    -e "s/builder/$builder/g" -e "s/Builder/$Builder/g" \
+    -e "s/ttt/$ttt/g"   -e "s/bbb/$bbb/g" -e "s/mbu/$mbu/g" \
+    -e "s/bui_1/$bui_1/g" -e "s/bui_2/$bui_2/g" -e "s/bui_3/$bui_3/g" \
+    ${template} > c
+
+if [ -f ${supplement} ]
+then
+    cat ${supplement} >> c
+fi
+
+echo "" >> c
+echo "(* generate/$0 ${this} ${ttt} ${builder} ${bbb} ${bui_1} ${bui_2} ${bui_3} *)" >> c
+echo "(* using ${template} *)" >> c
+
+if [ -f ${supplement} ] 
+then
+    echo "(* adding ${supplement} *)" >> c 
+fi
+
+echo "(* Done on ${dat} *)" >> c
+
+cp c ${This}_${category}_${suffix}.ml 
+
+echo cat ${This}_${category}_${suffix}.ml
+echo mv ${This}_${category}_${suffix}.ml ../
+echo make ${This}_${category}_${suffix}.cmo

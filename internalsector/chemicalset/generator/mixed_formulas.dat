@@ -1,0 +1,36 @@
+
+     builders closed_atom_constructor:ofstring = list string
+     builders closed_block_constructor:ofstring = list string
+     builders closed_segment_constructor:ofstring = list string
+     builders z_ch3_s = list string
+     builders z_ch2_d = list string
+     builders z_ch2_ss = list string
+     builders z_ch_t = list string
+     builders z_ch_sd = list string
+     builders z_nh2_s_ch2_s = list string
+     builders z_nh2_s_c_sd = list string
+     builders semi_closed_right_segment = list string
+     builders s_ch3_z = list string
+     builders d_ch2_z = list string
+     builders t_ch_z = list string
+     builders s_ch2_s = list string
+     builders s_ch2_d = list string
+     builders s_ch2_t = list string
+     builders s_co_c = list opened_atom
+     builders c_nh_s = list opened_atom
+     builders s_ch_ss = list opened_atom
+
+     builders s_ch2_s_nh_c_co_s = list opened_linear_block
+     builders s_co_c_nh_s_ch2_s = list opened_linear_block
+     builders s_c_sd = list string
+     builders s_co_c_nh_s_ch_ss = list string
+
+
+     builders closed_grouping_constructor:ofstring = list string
+     builders semi_closed_right_grouping_constructor:ofstring = list string
+
+     builders s_c_sss = list string
+     builders s_c_c = list string
+     builders s_o_s = list string
+     builders c_o_c = list string
+     builders z_o_d = list string

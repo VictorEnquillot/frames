@@ -1,0 +1,81 @@
+(* 1 Group_for_formula_body_top_builder_symbol_t.Builder_tag_list *)
+
+(* let tag_bui_l = builder_tag_list_off_top_formula for_top in *)
+(* let for_bui_l = List.map Builder_formula_v.retrieve tag_bui_l in *)
+
+let idx_gro = 1;;
+let tag_gro = List.nth tag_gro_l (idx_gro-1);;
+
+test_number 21 (
+tag_gro 
+(* : Group_symbol_t.group_symbol Tag_t.tag *)
+=
+  (Group_symbol_t.Group_for_formula_symbol
+    (Group_for_formula_symbol_t.Group_for_formula_body_symbol
+      (Group_for_formula_body_symbol_t.Group_for_formula_body_top_symbol
+        (Group_for_formula_body_top_symbol_t.Group_for_formula_body_top_builder_symbol
+          Group_for_formula_body_top_builder_symbol_t.Builder_tag_list))),
+   [1; 2; 2; 8; 1; 2; 11; 2; 4])
+);;
+
+let tag_cal_l = Group_formula_v.camlline_tag_list_off_group_tag tag_gro;;
+
+test_number 22 (
+tag_cal_l
+(* : Camlline_symbol_t.camlline_symbol Tag_t.tag list *)
+=
+ [(Camlline_symbol_t.Camlline_for_formula_symbol
+     (Camlline_for_formula_symbol_t.Camlline_for_formula_duo_symbol
+       (Camlline_for_formula_duo_symbol_t.Camlline_for_formula_duo_top_builder_symbol
+         Camlline_for_formula_duo_top_builder_symbol_t.Let_tag_ab_l_equal_eb_tag_list_off_et_formula_for_at_in)),
+    [1; 1; 2; 2; 8; 1; 2; 11; 2; 4])]
+);;
+
+(* 1 Camlline_for_formula_duo_top_builder_symbol_t.Let_tag_ab_l_equal_eb_tag_list_off_et_formula_for_at_in *)
+
+let idx_cal = 1;;
+let tag_cal = List.nth tag_cal_l (idx_cal-1);;
+
+test_number 23 (
+tag_cal 
+(* : Camlline_symbol_t.camlline_symbol Tag_t.tag *)
+=
+  (Camlline_symbol_t.Camlline_for_formula_symbol
+    (Camlline_for_formula_symbol_t.Camlline_for_formula_duo_symbol
+      (Camlline_for_formula_duo_symbol_t.Camlline_for_formula_duo_top_builder_symbol
+        Camlline_for_formula_duo_top_builder_symbol_t.Let_tag_ab_l_equal_eb_tag_list_off_et_formula_for_at_in)),
+   [1; 1; 2; 2; 8; 1; 2; 11; 2; 4])
+);;
+
+let tag_ent_l = Camlline_formula_v.entity_tag_list_off_camlline_tag tag_cal;;
+    
+test_number 24 (
+tag_ent_l 
+(* : Entity_symbol_t.entity_symbol Tag_t.tag list *)
+=
+ [(Entity_symbol_t.Entity_proper_symbol
+     (Entity_proper_symbol_t.Entity_proper_with_one_son "vector"),
+    [1; 1; 1; 2; 2; 8; 1; 2; 11; 2; 4]);
+   (Entity_symbol_t.Entity_proper_symbol
+     (Entity_proper_symbol_t.Entity_proper_with_one_son "point"),
+    [2; 1; 1; 2; 2; 8; 1; 2; 11; 2; 4])]
+);;
+
+let str = Camlline_value_v.string_off_camlline_tag tag_cal;;
+
+test_number 25 (
+str 
+(* : string *)
+  =
+ "  let tag_poi_l = point_tag_list_off_vector_formula for_vec in"
+);;
+
+let str_l = Group_value_v.string_list_off_group_tag tag_gro;; 
+
+test_number 26 (
+str_l
+(* : string list *)
+=
+ ["  let tag_poi_l = point_tag_list_off_vector_formula for_vec in"]
+);;
+

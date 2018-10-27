@@ -1,0 +1,6 @@
+(* Debugging *)
+
+Debug_by_module_name_register_v.store "Input_parser_v" "nodebug";;
+Debug_by_module_name_register_v.store "Input_parser_define_v" "nodebug";;
+Debug_by_module_name_register_v.store "Input_parser_operator_block_v" "nodebug";;
+Debug_by_module_name_register_v.store "Input_parser_tools_v" "nodebug";;

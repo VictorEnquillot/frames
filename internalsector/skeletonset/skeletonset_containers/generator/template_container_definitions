@@ -1,0 +1,9 @@
+   "Definition : a Builder (for an Entity of a Domain) is a son its Builder-Subtree";
+   "Definition : a Containee is a Builder expressed in the lowest subtype compatible with the Datastructure of the Container";
+   "Definition : a Container is the Datastructure of the Containee of an Entity";
+   "Definition : a Containee is an element of the Datastructure of the Container of an Entity";
+   "Definition : a Building is the Datastructure of the Builders of an Entity (Container with Builders)"; 
+   "Definition : a Trunc type has only constructors of constructor";
+   "Definition : a Branch type has only constructors of nothing";
+   "Definition : a Stem type has only constructor of string";
+   "Definition : a Bud type is a Stem type with only one constructor of string";

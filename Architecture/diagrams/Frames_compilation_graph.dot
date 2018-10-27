@@ -1,0 +1,66 @@
+	digraph compilation_graph {
+		size="8,8";
+		node [color=lightblue, style=filled, 
+		fontsize=15, fontname="Palatino", fontcolor=black];
+
+        "Frames Compilation\nGraph" -> "Propertyset\nEnvelopes"  [color=white];
+
+		node [color=yellow, style=filled, 
+		fontsize=12, fontname="Palatino-Italic",fontcolor=black];
+ 
+		"Propertyset\nEnvelopes" -> "Propertyset\nContainers";
+		"Propertyset\nEnvelopes" -> "Operatorset\nContainers";
+		"Propertyset\nEnvelopes" -> "Figureset\nEnvelopes";
+		"Propertyset\nContainers" -> "Propertyset\nInterfaces"
+		"Propertyset\nContainers" -> "Elementaryset\nProperties";
+		"Propertyset\nInterfaces" -> "Operatorset\nInterfaces";
+		"Propertyset\nInterfaces" -> "Propertyset\nTags";
+		"Propertyset\nTags" -> "Propertyset\nLabels";
+		"Propertyset\nLabels" -> "Inputset\nProviders";
+
+		"Operatorset\nContainers" -> "Operatorset\nInterfaces";
+		"Operatorset\nInterfaces" -> "Operatorset\nTags";
+		"Operatorset\nInterfaces" -> "Figureset\nContainers";
+		"Operatorset\nTags" -> "Operatorset\nLabels";
+		"Operatorset\nLabels" -> "Figureset\nTags";
+		"Operatorset\nLabels" -> "Elementaryset\nTags";
+
+		"Figureset\nEnvelopes" -> "Figureset\nContainers";
+		"Figureset\nContainers" -> "Figureset\nDatabases";
+		"Figureset\nContainers" -> "Elementaryset\nContainers";
+		"Figureset\nDatabases" -> "Figureset\nTags";
+		"Figureset\nTags" -> "Figureset\nLabels";
+		"Figureset\nLabels" -> "Elementaryset\nLabels";
+
+		"Elementaryset\nProperties" -> "Elementaryset\nEnvelopes";
+		"Elementaryset\nEnvelopes" -> "Elementaryset\nContainers";
+		"Elementaryset\nContainers" -> "Elementaryset\nDatabases";
+		"Elementaryset\nDatabases" -> "Inputset\nProviders";
+		"Elementaryset\nDatabases" -> "Elementaryset\nTags";
+		"Elementaryset\nTags" -> "Elementaryset\nLabels";
+		"Elementaryset\nLabels" -> "Commonset";
+
+
+		"Databaseset\nDgn" -> "Dgn_parser";
+		"Dgn_parser" -> "Dgn_lexer";
+		"Dgn_lexer" -> "Dgn_files";
+
+		"Databaseset\nDgn" -> "Databaseset\nCommon";
+		"Databaseset\nPdb" -> "Databaseset\nCommon";
+		"Databaseset\nDb1" -> "Databaseset\nCommon";
+
+		"Databaseset\nCommon" -> "Commonset";
+
+		"Inputset\nProviders" -> "Inputset\nParser";
+		"Inputset\nParser" -> "Inputset\nLexer";
+		"Inputset\nLexer" -> "Inputset\nTags";
+		"Inputset\nTags" -> "Inputset\nLabels";
+		"Inputset\nLabels" -> "Inputset\nCommons";
+		"Inputset\nCommons" -> "Commonset";
+
+		"Commonset" -> "Files";
+		"Files" -> "Datastructures";
+		"Datastructures" -> "Basics";
+
+		}
+

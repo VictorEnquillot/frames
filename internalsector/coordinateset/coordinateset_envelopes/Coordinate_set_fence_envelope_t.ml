@@ -1,0 +1,1 @@
+type coordinate_set_fence_envelope = Coordinate_envelopee_t.coordinate_envelopee;;

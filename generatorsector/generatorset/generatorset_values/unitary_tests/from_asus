@@ -1,0 +1,1 @@
+rsync -utv 82.226.95.82:/keep/sources/ocaml_top/setup/frames/generatorset/generatorset_values/test/$1 .

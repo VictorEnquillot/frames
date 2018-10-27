@@ -1,0 +1,8 @@
+include files_nwchemdata_symbols_mli.mk
+
+SYMBOLS_NWCHEMDATA_V_MLI := $(subst symbol_t,symbol_v,$(NWCHEMDATA_T_MLI))
+SYMBOLS_NWCHEMDATA_TV_MLI := $(SYMBOLS_NWCHEMDATA_T_MLI) $(SYMBOLS_NWCHEMDATA_V_MLI) 
+
+FILES_MLI := \
+$(SYMBOLS_NWCHEMDATA_TV_MLI) \
+ 

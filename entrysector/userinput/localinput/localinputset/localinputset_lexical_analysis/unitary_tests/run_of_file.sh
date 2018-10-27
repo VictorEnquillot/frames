@@ -1,0 +1,8 @@
+#!/bin/bash
+
+fileml=$1
+filecmo=`echo $fileml | sed 's/.ml/.cmo/'`
+
+ocamlc -warn-error A -annot -g -I /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics -I /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures -I /home/colonna/sources/ocaml_top/setup/frames/generalsector/files -I /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset -I /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset -I /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_lexer -c $fileml
+
+ocamlc -warn-error A -annot -g -I /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics -I /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures -I /home/colonna/sources/ocaml_top/setup/frames/generalsector/files -I /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset -I /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset -I /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_lexer -o runtest.byt unix.cma -cclib -lunix str.cma -cclib -lstr  /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/basics.cma   /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/datastructures.cma   /home/colonna/sources/ocaml_top/setup/frames/generalsector/files/files.cma   /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/commonset.cma   /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/contextset.cma   /home/colonna/sources/ocaml_top/setup/frames/entrysector/userinput/localinput/localinputset/localinputset_lexer/localinputset_lexer.cma $filecmo

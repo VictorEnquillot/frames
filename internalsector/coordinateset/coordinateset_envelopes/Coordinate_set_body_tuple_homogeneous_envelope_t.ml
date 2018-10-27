@@ -1,0 +1,1 @@
+type coordinate_set_body_tuple_homogeneous_envelope = Coordinate_envelopee_t.coordinate_envelopee list;;

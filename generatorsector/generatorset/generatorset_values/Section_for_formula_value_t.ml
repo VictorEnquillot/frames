@@ -1,0 +1,5 @@
+type section_for_formula_value =
+  | Section_for_formula_body_value of Section_for_formula_body_value_t.section_for_formula_body_value
+  | Section_for_formula_header_value of Section_for_formula_header_value_t.section_for_formula_header_value
+;;
+

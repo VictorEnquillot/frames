@@ -1,0 +1,32 @@
+let tag_fdo = Figure_domain_tag_by_unit_provider_v.provide ();;
+
+test_number 1 (
+tag_fdo 
+(* : Figure_domain_symbol_t.figure_domain_symbol Tag_t.tag *)
+=
+  (Figure_domain_symbol_t.Figure_domain_constructor, [6])
+);;
+
+let tag_ddo = Database_db1_domain_tag_by_unit_provider_v.provide ();;
+
+test_number 2 (
+tag_ddo
+(* : Database_db1_domain_symbol_t.database_db1_domain_symbol Tag_t.tag *)
+=
+(Database_db1_domain_symbol_t.Database_db1_domain_constructor, [3])
+);;
+
+let nam_dba = "db1";;
+let tag_fig_dba = Figure_as_database_tag_by_database_name_provider_v.provide nam_dba;;
+
+test_number 3 (
+tag_fig_dba 
+(* : Figure_symbol_t.figure_symbol Tag_t.tag *)
+=
+  (Figure_symbol_t.Figure_context_symbol
+    (Figure_context_symbol_t.Figure_database_symbol
+      (Figure_database_symbol_t.Figure_database_constructor "db1")),
+   [1; 6])
+);;
+
+

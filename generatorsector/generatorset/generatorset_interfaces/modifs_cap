@@ -1,0 +1,14 @@
+msrf let_is_msc_off_mst_argument query_current_symbol_off_top_symbol *ml *mk
+msrf query_current_symbol_off_top_symbol let_is_current_symbol_off_top_symbol *ml *mk
+msrf let_is_current_symbol_off_top_symbol let_is_grandson_symbol_off_top_symbol *ml *mk
+msrf let_msc_off_mst_argument let_grandson_symbol_off_top_symbol *ml *mk
+msrf let_mst_of_mss_argument let_top_symbol_of_topson_symbol *ml *mk
+msrf let_is_mss_off_mst_function_for_symbol let_is_topson_symbol_off_top_symbol *ml *mk
+msrf for_symbol_let_grandson for_symbol_let_argument_grandson *ml *mk
+msrf for_symbol_let_is_grandson for_symbol_let_argument_is_grandson *ml *mk
+msrf for_symbol_let_top_symbol for_symbol_let_argument_top_symbol *ml *mk
+msrf let_is_mss_off_mst_onlyson_for_symbol let_is_onlyson_symbol_off_top_symbol *ml *mk
+msrf let_mss_off_mst_onlyson_for_symbol let_onlyson_symbol_off_top_symbol *ml *mk
+msrf let_mss_off_mst_function_for_symbol let_topson_symbol_off_top_symbol *ml *mk
+msrf Couple_list_for_symbol_let_make_ Couple_list_for_symbol_let_argument_make_ *ml *mk
+msrf let_is_mtc_off_mtt_argument let_is_grandson_tag_off_top_tag *ml *mk

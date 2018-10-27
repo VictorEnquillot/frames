@@ -1,0 +1,88 @@
+let soi_n_gss_l_1 = Register_v.entry_list reg;; 
+
+test_number 1 (
+ soi_n_gss_l_1(* : (Sole_index_t.sole_index * Generatorset_symbol_t.generatorset_symbol) list *)
+=
+[([383488616; 7; 4],
+  Generatorset_symbol_t.Entity_proper_symbol
+    (Entity_proper_symbol_t.Entity_proper_top_symbol
+       (Entity_proper_top_symbol_t.Top_has_no_leaf_son "geometryset")));
+
+ ([1; 1; 383488616; 7; 4],
+  Generatorset_symbol_t.Usagefile_symbol Usagefile_symbol_t.Implementation);
+
+ ([7; 4], 
+  Generatorset_symbol_t.Category_symbol Category_symbol_t.Symbol);
+
+ ([1; 383488616; 7; 4],
+  Generatorset_symbol_t.Contentfile_symbol Contentfile_symbol_t.Type_alone);
+ 
+ ([26; 1; 1; 383488616; 7; 4],
+  Generatorset_symbol_t.Item_symbol
+    (Item_symbol_t.Item_all_topsons_symbol Item_all_topsons_symbol_t.Typing));
+ 
+ ([4],
+  Generatorset_symbol_t.Domainset_symbol Domainset_symbol_t.Geometryset)]
+);;
+
+let soi_n_gss_l_2 = Register_v.entry_list reg;; 
+
+test_number 2 (
+ soi_n_gss_l_2
+(* : (Sole_index_t.sole_index * Generatorset_symbol_t.generatorset_symbol) list *)
+=
+[([383488616; 7; 4],
+  Generatorset_symbol_t.Entity_proper_symbol
+    (Entity_proper_symbol_t.Entity_proper_top_symbol
+       (Entity_proper_top_symbol_t.Top_has_no_leaf_son "geometryset")));
+
+ ([1; 1; 383488616; 7; 4],
+  Generatorset_symbol_t.Usagefile_symbol Usagefile_symbol_t.Implementation);
+
+ ([7; 4], 
+  Generatorset_symbol_t.Category_symbol Category_symbol_t.Symbol);
+
+ ([1; 383488616; 7; 4],
+  Generatorset_symbol_t.Contentfile_symbol Contentfile_symbol_t.Type_alone);
+ 
+ ([26; 1; 1; 383488616; 7; 4],
+  Generatorset_symbol_t.Item_symbol
+    (Item_symbol_t.Item_all_topsons_symbol Item_all_topsons_symbol_t.Typing));
+ 
+ ([4],
+  Generatorset_symbol_t.Domainset_symbol Domainset_symbol_t.Geometryset)]
+);;
+
+test_number 3 (
+soi_n_gss_l_1 = soi_n_gss_l_2 
+);;
+
+
+let soi_n_gss_l = Register_v.entry_list reg;; 
+
+test_number 5 (
+ soi_n_gss_l
+(* : (Sole_index_t.sole_index * Generatorset_symbol_t.generatorset_symbol) list *)
+=
+[([383488616; 7; 4],
+  Generatorset_symbol_t.Entity_proper_symbol
+    (Entity_proper_symbol_t.Entity_proper_top_symbol
+       (Entity_proper_top_symbol_t.Top_has_no_leaf_son "geometryset")));
+
+ ([1; 1; 383488616; 7; 4],
+  Generatorset_symbol_t.Usagefile_symbol Usagefile_symbol_t.Implementation);
+
+ ([7; 4], 
+  Generatorset_symbol_t.Category_symbol Category_symbol_t.Symbol);
+
+ ([1; 383488616; 7; 4],
+  Generatorset_symbol_t.Contentfile_symbol Contentfile_symbol_t.Type_alone);
+ 
+ ([26; 1; 1; 383488616; 7; 4],
+  Generatorset_symbol_t.Item_symbol
+    (Item_symbol_t.Item_all_topsons_symbol Item_all_topsons_symbol_t.Typing));
+ 
+ ([4],
+  Generatorset_symbol_t.Domainset_symbol Domainset_symbol_t.Geometryset)]
+);;
+

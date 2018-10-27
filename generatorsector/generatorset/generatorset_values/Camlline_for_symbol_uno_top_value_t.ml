@@ -1,0 +1,36 @@
+type camlline_for_symbol_uno_top_value =
+  | Et_symbol_vdot_name_sym_at of string
+  | Et_symbol_vdot_string_off_sym_at of string
+  | Let_et_symbol_equal_et_symbol_tdot_et of string
+  | Let_sym_at_equal_tag_vdot_symbol_off_tag_tag_at_in of string
+  | Pipe_et_symbol_tdot_et_symbol_arrow_string of string
+  | Failwith_not_a_et_symbol_make of string
+  | Failwith_not_a_et_symbol_name of string
+  | Failwith_not_a_et_symbol_string_off of string
+  | Failwith_not_a_topson_bare_et_symbol_make of string
+  | Failwith_not_a_topson_bare_et_symbol_name of string
+  | Failwith_not_a_topson_bare_et_symbol_string_off of string
+  | Failwith_not_a_topson_notleaf_et_symbol_make of string
+  | Failwith_not_a_topson_notleaf_et_symbol_name of string
+  | Failwith_not_a_topson_notleaf_et_symbol_string_off of string
+  | Failwith_not_a_topson_ofstring_et_symbol_make of string
+  | Failwith_not_a_topson_ofstring_et_symbol_name of string
+  | Failwith_not_a_topson_ofstring_et_symbol_string_off of string
+  | Let_sym_at_equal_et_symbol_vdot_make_nam_at_s_in of string
+  | Let_underscore_print_error_make_et_of_string_of_string of string
+  | Let_underscore_print_error_name_et_of_string_of_string of string
+  | Let_underscore_print_error_string_off_et_of_string_of_string of string
+  | Print_fatal_error_make_et_of_string_of_string of string
+  | Print_fatal_error_name_et_of_string_of_string of string
+  | Print_fatal_error_string_off_et_of_string_of_string of string
+  | With_failure_not_a_topson_bare_et_symbol_arrow_make of string
+  | With_failure_not_a_topson_bare_et_symbol_arrow_name of string
+  | With_failure_not_a_topson_bare_et_symbol_arrow_string_off of string
+  | With_failure_not_a_topson_notleaf_et_symbol_arrow_make of string
+  | With_failure_not_a_topson_notleaf_et_symbol_arrow_name of string
+  | With_failure_not_a_topson_notleaf_et_symbol_arrow_string_off of string
+  | With_failure_not_a_topson_ofstring_et_symbol_arrow_make of string
+  | With_failure_not_a_topson_ofstring_et_symbol_arrow_name of string
+  | With_failure_not_a_topson_ofstring_et_symbol_arrow_string_off of string
+  | Match_sym_at_with of string
+;;

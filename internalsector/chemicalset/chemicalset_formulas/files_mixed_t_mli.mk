@@ -1,0 +1,21 @@
+MIXED_T_MLI :=  \
+  Forked_fragment_formula_t.mli \
+  Forked_block_formula_t.mli \
+ Forked_formula_t.mli \
+  Linear_segment_formula_t.mli \
+  Linear_block_formula_t.mli \
+ Linear_formula_t.mli \
+   Semi_closed_right_grouping_formula_t.mli \
+   Semi_closed_right_block_formula_t.mli \
+  Semi_closed_right_formula_t.mli \
+   Semi_closed_left_fragment_formula_t.mli \
+   Semi_closed_left_segment_formula_t.mli \
+   Semi_closed_left_block_formula_t.mli \
+  Semi_closed_left_formula_t.mli \
+ Semi_closed_formula_t.mli \
+  Closed_grouping_formula_t.mli \
+  Closed_segment_formula_t.mli \
+  Closed_block_formula_t.mli \
+  Closed_atom_formula_t.mli \
+ Closed_formula_t.mli \
+Chemical_formula_t.mli \

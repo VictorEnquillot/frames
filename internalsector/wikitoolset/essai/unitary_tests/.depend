@@ -1,0 +1,12 @@
+html_lexer_u_any.cmo: make_test_v.cmo
+html_lexer_u_any.cmx: make_test_v.cmx
+html_tree_u_any.cmo: make_test_v.cmo
+html_tree_u_any.cmx: make_test_v.cmx
+make_test_v.cmo:
+make_test_v.cmx:
+read_file_u_any.cmo:
+read_file_u_any.cmx:
+read_record_list_u_any.cmo: make_test_v.cmo
+read_record_list_u_any.cmx: make_test_v.cmx
+tools_u_any.cmo: make_test_v.cmo
+tools_u_any.cmx: make_test_v.cmx

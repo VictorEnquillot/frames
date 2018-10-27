@@ -1,0 +1,86 @@
+  
+CONTEXT_NAME_BY_UNIT_U_ML := \
+Skeleton_context_sector_name_by_unit_provider_u_any.ml \
+Skeleton_context_domain_name_by_unit_provider_u_any.ml \
+ 
+CONTEXT_TAG_BY_UNIT_U_ML := \
+Skeleton_context_sector_tag_by_unit_provider_u_any.ml \
+Skeleton_as_context_sector_tag_by_unit_provider_u_any.ml \
+ \
+Skeleton_context_domain_tag_by_unit_provider_u_any.ml \
+Skeleton_as_context_domain_tag_by_unit_provider_u_any.ml \
+ 
+CHECK_CONTEXT_NAME_CONSISTENCY_U_ML := \
+Check_consistency_by_databox_name_n_database_name_provider_u_any.ml \
+Check_consistency_by_skeleton_context_name_quatuor_provider_u_any.ml \
+ \
+Skeleton_context_name_quatuor_by_databox_name_n_database_name_provider_u_any.ml \
+ 
+CONTEXT_TAG_BY_DATABOX_NAME_N_DATABASE_NAME_U_ML := \
+Skeleton_context_database_tag_by_database_name_provider_u_any.ml \
+Skeleton_as_context_database_tag_by_database_name_provider_u_any.ml \
+ \
+Skeleton_context_databox_tag_by_databox_name_n_database_name_provider_u_any.ml \
+Skeleton_as_context_databox_tag_by_databox_name_n_database_name_provider_u_any.ml \
+ \
+Skeleton_context_tag_quadruplet_by_databox_name_n_database_name_provider_u_any.ml \
+Skeleton_as_context_tag_quatuor_by_databox_name_n_database_name_provider_u_any.ml \
+ \
+Database_name_by_skeleton_context_databox_tag_provider_u_any.ml \
+Databox_name_n_database_name_by_skeleton_context_databox_tag_provider_u_any.ml \
+ 
+TRANSLATION_FROM_NWCHEMDATA_U_ML := \
+Skeleton_symbol_from_nwchemdata_tag_translations_u_any.ml \
+# Skeleton_symbol_from_nwchemdata_context_databox_name_translations_u_any.ml \
+   
+SYMBOL_SUBTREE_BY_CONTEXT_NAME_U_ML := \
+Skeleton_symbol_subtree_by_databox_name_n_database_name_provider_u_any.ml \
+  
+TAG_TREE_U_ML := \
+Skeleton_tag_tree_by_databox_name_n_database_name_provider_u_any.ml \
+Skeleton_tag_tree_by_skeleton_context_databox_tag_provider_u_any.ml \
+ 
+INTERFACES_U_ML := \
+Skeleton_tag_all_list_by_databox_name_n_database_name_provider_u_any.ml \
+Skeleton_tag_all_list_by_skeleton_context_databox_tag_provider_u_any.ml \
+ 
+EXTRACTORS_U_ML := \
+Skeleton_symbol_by_sole_index_provider_u_any.ml \
+Skeleton_any_category_by_sole_index_extractor_u_any.ml \
+Skeleton_son_tag_list_by_skeleton_father_tag_provider_u_any.ml \
+Skeleton_tag_subtree_by_skeleton_tag_provider_u_any.ml \
+ 
+FENCE_U_ML := \
+Skeleton_fence_by_skeleton_tag_provider_u_any.ml \
+ 
+FROM_FILES_MLI := \
+$(CONTEXT_NAME_BY_UNIT_U_ML) \
+$(CONTEXT_TAG_BY_UNIT_U_ML) \
+$(CHECK_CONTEXT_NAME_CONSISTENCY_U_ML) \
+$(CONTEXT_TAG_BY_DATABOX_NAME_N_DATABASE_NAME_U_ML) \
+$(TRANSLATION_FROM_NWCHEMDATA_U_ML) \
+$(SYMBOL_SUBTREE_BY_CONTEXT_NAME_U_ML) \
+$(TAG_TREE_U_ML) \
+$(INTERFACES_U_ML) \
+$(EXTRACTORS_U_ML) \
+$(FENCE_U_ML) \
+
+EXTRA_FILES_ML := \
+Skeleton_symbol_subtree_by_skeleton_context_databox_tag_provider_u_cc_pvtz.ml \
+Skeleton_symbol_subtree_by_skeleton_context_databox_tag_provider_u_lanl2dz_analysis.ml \
+Skeleton_symbol_subtree_by_skeleton_context_databox_tag_provider_u_lanl2dz_cpu.ml \
+Skeleton_symbol_subtree_by_skeleton_context_databox_tag_provider_u_lanl2dz.ml \
+Skeleton_symbol_subtree_by_skeleton_context_databox_tag_provider_u_try_ao_analysis.ml \
+Skeleton_symbol_subtree_by_skeleton_context_databox_tag_provider_u_try_ao.ml \
+Skeleton_symbol_subtree_by_skeleton_context_databox_tag_provider_u_try_ao_trace.ml \
+Skeleton_tag_all_list_by_databox_name_n_database_name_provider_u_try_ao.ml \
+Skeleton_tag_all_list_by_skeleton_context_databox_tag_provider_u_try_ao.ml \
+Skeleton_tag_subtree_by_skeleton_tag_provider_u_lanl2dz.ml \
+Skeleton_tag_tree_by_databox_name_n_database_name_provider_u_cc_pvtz.ml \
+Skeleton_tag_tree_by_databox_name_n_database_name_provider_u_try_ao.ml \
+Skeleton_tag_tree_by_skeleton_context_databox_tag_provider_u_lanl2dz_analysis.ml \
+ 
+UNITARY_TESTS_FILES_ML := \
+$(FROM_FILES_MLI) \
+# $(EXTRA_FILES_ML) \
+

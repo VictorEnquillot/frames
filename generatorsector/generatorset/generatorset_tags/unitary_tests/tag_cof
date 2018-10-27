@@ -1,0 +1,15 @@
+(* Value_alone *)
+
+let nam_cof = "value_alone";;
+
+(* Type_alone *)
+
+let nam_cof = "type_alone";;
+
+let sym_cof = Contentfile_symbol_v.make nam_cof;;
+let idx_cof = Contentfile_symbol_v.list_index_of_contentfile_symbol sym_cof;;
+let soi_cof = Sole_index_v.make idx_cof soi_enp;;
+let gss_cof = Generatorset_symbol_v.generatorset_symbol_of_contentfile_symbol sym_cof;;
+Generatorset_symbol_by_sole_index_production_provider_v.store soi_cof gss_cof;;
+let tag_cof = Tag_v.make sym_cof soi_cof;;
+

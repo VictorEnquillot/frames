@@ -1,0 +1,69 @@
+        digraph Frames {
+                size="40,15";
+                node [fontsize=50];
+                edge [arrowhead = "vee", arrowsize = "2.0", style="solid", taillabel = ""];
+
+	    Title [label = "Nwchemdata Paths\nfor Aopef\nHe P 3 GAUSSIAN 1\nExponent and Coefficient", shape=box, fontname=Courier, fontsize=50, color=yellow, style=filled];
+
+
+       "context\nsector\nexternal\n[2]" [color=black, style="setlinewidth(5)"];
+
+       "context\ndomain\nskeleton\n[20; 2]" [color=black, style="setlinewidth(5)"];
+
+       "context\ndatabase\nnwchem\n[5; 20; 2]" [color=black, style="setlinewidth(5)"];
+
+       "context\ndatabox\ntry ao\n[22; 5; 20; 2]" [color=black, style="setlinewidth(5)"];
+
+           "set body node\naobasis\nblock\ntry ao\n[2; 22; 5; 20; 2]" [color=blue2, style="setlinewidth(5)"];
+
+             "set body node\naoset\nblock\ntry ao\n[2; 2; 22; 5; 20; 2]" [color=blue2, style="setlinewidth(5)"];
+
+             "set body node\naoset\nanycenter\nblock\ntry ao\n[2; 2; 2; 22; 5; 20; 2]" [color=blue2, style="setlinewidth(5)"];
+
+             "set body node\naoset\nonecenter\nblock\nHe\n[1; 2; 2; 2; 22; 5; 20; 2]" [color=blue2, style="setlinewidth(5)"];
+
+             "set body node\naoset\nanyshell\nblock\nHe\n[2; 1; 2; 2; 2; 22; 5; 20; 2]" [color=blue2, style="setlinewidth(5)"];
+
+             "set body node\naoset\noneshell\nblock\nHe P 3 GAUSSIAN\n[3; 2; 1; 2; 2; 2; 22; 5; 20; 2]" [color=blue2, style="setlinewidth(5)"];
+
+             "set body node\naoset\nnumericalvalues\nblock\nHe P 3 GAUSSIAN\n[2; 3; 2; 1; 2; 2; 2; 22; 5; 20; 2]" [color=blue2, style="setlinewidth(5)"];
+
+             "set body node\naoset\nnumericalvalues\nHe P 3 GAUSSIAN 1\n[1; 2; 3; 2; 1; 2; 2; 2; 22; 5; 20; 2]" [color=green, style="setlinewidth(8)"];
+
+           "set\nfence\nfloat\npositive\n2.2818700\n[1; 1; 2; 3; 2; 1; 2; 2; 2; 22; 5; 20; 2]" [color=red, style="setlinewidth(5)"];
+
+           "set\nfence\nfloat\npositive\n0.2311520\n[2; 1; 2; 3; 2; 1; 2; 2; 2; 22; 5; 20; 2]" [color=red, style="setlinewidth(5)"];
+
+
+
+    	Title -> "context\nsector\nexternal\n[2]" [ style="invis", width = 5];
+
+
+       "context\nsector\nexternal\n[2]" -> "context\ndomain\nskeleton\n[20; 2]"; 
+	
+       "context\ndomain\nskeleton\n[20; 2]" -> "context\ndatabase\nnwchem\n[5; 20; 2]"; 
+	
+       "context\ndatabase\nnwchem\n[5; 20; 2]" -> "context\ndatabox\ntry ao\n[22; 5; 20; 2]"; 
+	
+       "context\ndatabox\ntry ao\n[22; 5; 20; 2]" -> "set body node\naobasis\nblock\ntry ao\n[2; 22; 5; 20; 2]"; 
+	
+           "set body node\naobasis\nblock\ntry ao\n[2; 22; 5; 20; 2]" -> "set body node\naoset\nblock\ntry ao\n[2; 2; 22; 5; 20; 2]"; 
+	
+             "set body node\naoset\nblock\ntry ao\n[2; 2; 22; 5; 20; 2]" -> "set body node\naoset\nanycenter\nblock\ntry ao\n[2; 2; 2; 22; 5; 20; 2]"; 
+	
+             "set body node\naoset\nanycenter\nblock\ntry ao\n[2; 2; 2; 22; 5; 20; 2]" -> "set body node\naoset\nonecenter\nblock\nHe\n[1; 2; 2; 2; 22; 5; 20; 2]"; 
+	
+             "set body node\naoset\nonecenter\nblock\nHe\n[1; 2; 2; 2; 22; 5; 20; 2]" -> "set body node\naoset\nanyshell\nblock\nHe\n[2; 1; 2; 2; 2; 22; 5; 20; 2]"; 
+	
+             "set body node\naoset\nanyshell\nblock\nHe\n[2; 1; 2; 2; 2; 22; 5; 20; 2]" -> "set body node\naoset\noneshell\nblock\nHe P 3 GAUSSIAN\n[3; 2; 1; 2; 2; 2; 22; 5; 20; 2]"; 
+	
+             "set body node\naoset\noneshell\nblock\nHe P 3 GAUSSIAN\n[3; 2; 1; 2; 2; 2; 22; 5; 20; 2]" -> "set body node\naoset\nnumericalvalues\nblock\nHe P 3 GAUSSIAN\n[2; 3; 2; 1; 2; 2; 2; 22; 5; 20; 2]"; 
+	
+             "set body node\naoset\nnumericalvalues\nblock\nHe P 3 GAUSSIAN\n[2; 3; 2; 1; 2; 2; 2; 22; 5; 20; 2]" -> "set body node\naoset\nnumericalvalues\nHe P 3 GAUSSIAN 1\n[1; 2; 3; 2; 1; 2; 2; 2; 22; 5; 20; 2]"; 
+	
+             "set body node\naoset\nnumericalvalues\nHe P 3 GAUSSIAN 1\n[1; 2; 3; 2; 1; 2; 2; 2; 22; 5; 20; 2]" -> "set\nfence\nfloat\npositive\n2.2818700\n[1; 1; 2; 3; 2; 1; 2; 2; 2; 22; 5; 20; 2]"; 
+
+             "set body node\naoset\nnumericalvalues\nHe P 3 GAUSSIAN 1\n[1; 2; 3; 2; 1; 2; 2; 2; 22; 5; 20; 2]" -> "set\nfence\nfloat\npositive\n0.2311520\n[2; 1; 2; 3; 2; 1; 2; 2; 2; 22; 5; 20; 2]"; 
+
+}
+

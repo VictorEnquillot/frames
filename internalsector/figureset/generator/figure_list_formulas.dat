@@ -1,0 +1,10 @@
+builders point_constructor:ofstring = list coordinate_cartesian
+builders triangle_isosceles_acute:ofstring = list point
+builders triangle_isosceles_equilateral:ofstring = list point
+builders triangle_isosceles_obtuse:ofstring = list point
+builders triangle_isosceles_right:ofstring = list point
+builders triangle_scalene_acute:ofstring = list point
+builders triangle_scalene_obtuse:ofstring = list point
+builders triangle_scalene_right:ofstring = list point
+builders vector_constructor:ofstring = list point
+

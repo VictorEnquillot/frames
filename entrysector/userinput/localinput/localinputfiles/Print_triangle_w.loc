@@ -1,0 +1,29 @@
+define Con_tw
+       context
+         databox "triangle_w"
+         database "db1points"
+         domain "figure"
+         sector "internal"
+         end -- context
+       end -- define
+
+define Tri_w
+       external 
+       type [ "figure" "set" "body" "triangle" "scalene" "acute" "constructor"]
+         external_name "W"
+         external_context Con_tw
+         end -- external
+       end -- define
+
+define Uni_len
+       external 
+         type [ "units" "length" "bohr" ]
+         external_context Con_tw
+         end -- external
+       end -- define
+
+print Tri_w
+      units [ Uni_len ]
+      end -- print
+
+stop

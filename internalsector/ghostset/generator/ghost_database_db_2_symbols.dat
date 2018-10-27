@@ -1,0 +1,6 @@
+constructors   ghost                             =   database_entity_db_2  fake
+
+constructors   database_entity_db_2               =   database_entity_db_2_database:ofstring   database_entity_db_2_group_bsu   database_entity_db_2_float
+
+
+constructors   database_entity_db_2_group_bsu     =   database_entity_db_2_triangle:ofstring   database_entity_db_2_name:ofstring   database_entity_db_2_summit:ofstring   database_entity_db_2_basis:ofstring   database_entity_db_2_units:ofstring

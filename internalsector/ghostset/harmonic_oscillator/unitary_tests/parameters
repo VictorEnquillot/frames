@@ -1,0 +1,45 @@
+let reg_x = Coordinate_current_value_register_v.register;;
+let reg_vel = Velocity_value_register_v.register;;
+let reg_eki = Energy_kinetic_value_register_v.register;;
+let reg_epo = Energy_potential_value_register_v.register;;
+let reg_eto = Energy_total_value_register_v.register;;
+let reg_par = Parameters_value_register_v.register;;
+
+Register_v.delete reg_x;;
+Register_v.delete reg_vel;;
+Register_v.delete reg_eki;;
+Register_v.delete reg_eto;;
+Register_v.delete reg_epo;;
+Register_v.delete reg_par;;
+
+Parameters_value_register_v.store "first_step" (Parameters_value_v.make "first_step" "1");;
+Parameters_value_register_v.store "target_step" (Parameters_value_v.make"target_step" "5");;
+Parameters_value_register_v.store "initial_velocity_x" (Parameters_value_v.make "initial_velocity_x" "1.");;
+Parameters_value_register_v.store "mass" (Parameters_value_v.make "mass" "1.");;
+Parameters_value_register_v.store "force_constant" (Parameters_value_v.make "force_constant" "1.");;
+Parameters_value_register_v.store "time_step" (Parameters_value_v.make "time_step" "0.1");;
+Parameters_value_register_v.store "initial_x" (Parameters_value_v.make "initial_x" "0.0");;
+
+Parameters_value_register_v.dump ();;
+
+let target_step = Parameters_value_provider_v.provide_integer "target_step";;
+let first_step = Parameters_value_provider_v.provide_integer "first_step";;
+let c0_x = Parameters_value_provider_v.provide_float "initial_x";;
+let v0_x = Parameters_value_provider_v.provide_float "initial_velocity_x";;
+let dt = Parameters_value_provider_v.provide_float "time_step";;
+let k = Parameters_value_provider_v.provide_float "force_constant";;
+let omega = Parameters_value_provider_v.provide_float "omega";;
+let m = Parameters_value_provider_v.provide_float "mass";;
+
+test_number 1 (target_step (* : int *) = 5);;
+test_number 2 (first_step (* : int *) = 1);;
+test_number 3 (c0_x (* : float *) = 0.0);;
+test_number 4 (v0_x (* : float *) = 1.0);;
+test_number 5 (dt (* : float *) = 0.1);;
+test_number 6 (omega (* : float *) = 1.);;
+test_number 7 (m (* : float *) = 1.);;
+
+let step_last = Tools_har_v.last_done_step_of_register reg_epo;;
+
+test_number 8 (step_last (* : int *)  = 0);;
+

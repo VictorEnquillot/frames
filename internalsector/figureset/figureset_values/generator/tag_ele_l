@@ -1,0 +1,8 @@
+  let (nam_dba, nam_dbo) =
+    Database_name_n_databox_name_by_skeleton_tag_provider_v.provide 
+      tag_ttt 
+  in
+  let tag_ele_l = 
+    Elementary_tag_all_list_by_database_name_n_databox_name_provider_v.provide
+      (nam_dba, nam_dbo)
+  in

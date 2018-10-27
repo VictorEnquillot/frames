@@ -1,0 +1,20 @@
+
+let pre_sym_bod s = Input_symbol_v.is_input_body_symbol_off_input_symbol s;;
+let pre_sym_bty s = Input_symbol_v.is_input_body_box_type_constructor s;;
+let pre_sym_com s = Input_symbol_v.is_input_body_handle_command_symbol_off_input_symbol s;;
+let pre_sym_cto s = Input_symbol_v.is_input_fence_cell_target_operator_constructor s;;
+let pre_sym_def s = Input_symbol_v.is_input_body_handle_command_define_constructor s;;
+let pre_sym_hco s = Input_symbol_v.is_input_body_handle_cofactor s;;
+let pre_sym_kty s = Input_symbol_v.is_input_fence_keyword_word_type s;;
+let pre_sym_pri s = Input_symbol_v.is_input_body_handle_command_print s;;
+let pre_sym_pri s = Input_symbol_v.is_input_body_handle_command_print_constructor s;;
+let pre_sym_vna s = Input_symbol_v.is_input_fence_variable_name_symbol_off_input_symbol s;;
+let pre_sym_vna s = Input_symbol_v.is_input_fence_variable_name_symbol_off_input_symbol s;;
+
+let pre_sym_hvo_sof sof s = Input_symbol_v.input_body_handle_variable_operator_constructor sof = s;;
+let pre_sym_hcd_sof sof s = Input_symbol_v.input_body_handle_command_define_constructor sof = s;;
+let pre_sym_nee_sof sof s = Input_symbol_v.input_fence_variable_name_entity_external_constructor sof = s;;
+let pre_sym_bbu_sof sof s = Input_symbol_v.input_body_box_units_constructor sof = s;;
+let pre_sym_pri_sof sof s = Input_symbol_v.input_body_handle_command_print_constructor sof = s;;
+
+let sym_inp_con_hom_st = Tree_v.subtree_find_of_node_predicate_off_tree (pre_sym_hcd_sof "Con_hom") sym_inp_t;;

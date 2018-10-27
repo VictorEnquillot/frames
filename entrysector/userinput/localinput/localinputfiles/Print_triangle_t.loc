@@ -1,0 +1,36 @@
+define Con_tt
+       context
+         databox "triangle_t"
+         database "db1points"
+         domain "figure"
+         sector "internal"
+         end -- context
+       end -- define
+
+define Tri_t 
+       external 
+       type [ "figure" "set" "body" "triangle" "isosceles" "acute" "constructor"]
+         external_name "T"
+         external_context Con_tt
+         end -- external
+       end -- define
+
+define Uni_len
+       external 
+         type [ "units" "length" "bohr" ]
+         external_context Con_tt
+         end -- external
+       end -- define
+
+define Uni_ang
+       external 
+         type [ "units" "angle" "radian" ]
+         external_context Con_tt
+         end -- external
+       end -- define
+
+print Tri_t
+      units [ Uni_len Uni_ang ]
+      end -- print
+
+stop

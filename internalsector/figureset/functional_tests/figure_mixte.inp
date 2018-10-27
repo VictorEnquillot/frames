@@ -1,0 +1,74 @@
+# input for a Run
+# 1st Model
+   model =
+     model_name = triangle_equilateral
+     model_title = "a triangle equilateral"
+     database_name = db1
+     entity_what = triangle_isosceles_equilateral
+     entity_name = T
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+# 2nd model
+   model =
+     model_name = center_a
+     model_title = "a center for an homothety"
+     database_name = db1
+     entity_what = point
+     entity_name = a
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+# 3rd Model
+   model =
+     model_name = vector_bc
+     model_title = "a vector for a translation"
+     database_name = db1
+     entity_what = vector
+     entity_name = bc
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+# 1st target
+   target = 
+     domain_name = figure
+     target_name = triangle_equilateral_perimeter
+     target_title = "triangle equilateral perimeter" 
+     property_file = triangle_equilateral_perimeter.out 
+     property_name = triangle_perimeter 
+     property_units_list = { meter } 
+     model_list = { triangle_equilateral }
+   end # target
+
+#  2nd target
+   target = 
+     domain_name = figure
+     target_name = triangle_equilateral_homothety
+     target_title = "triangle equilateral homothety" 
+     property_name = triangle_homothety 
+     property_units_list = { meter radian } 
+     property_file = triangle_equilateral_homothety.out 
+     model_list = { triangle_equilateral center_a }
+     model_output = triangle_equilateral_homothetic
+   end # target
+
+# 3rd target
+   target = 
+     domain_name = figure
+     target_name = triangle_homothetic_perimeter
+     target_title = "triangle equilateral homothetic perimeter" 
+     property_file = triangle_equilateral_homothetic_perimeter.out 
+     property_name = triangle_perimeter 
+     property_units_list = { meter } 
+     model_list = { triangle_equilateral_homothetic }
+   end # target
+
+# domain
+   domain =
+    domain_name = figure
+    target_list = { triangle_equilateral_perimeter  triangle_equilateral_homothety  triangle_homothetic_perimeter}
+   end # domain
+  

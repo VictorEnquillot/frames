@@ -1,0 +1,5 @@
+#use "read_by_scanf.ml";;
+let ib = Scanf.Scanning.from_string "He";;
+read ib;;
+He;;
+String.sub;;

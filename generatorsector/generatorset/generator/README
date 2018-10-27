@@ -1,0 +1,4 @@
+to generate the Generator
+
+compile_bytcode.sh  Generator_for_domainset_category_usagefile
+cp -p Generator_for_domainset_category_usagefile.byt /keep/executables/Generator_for_domainset_category_usagefile_v2.3.byt

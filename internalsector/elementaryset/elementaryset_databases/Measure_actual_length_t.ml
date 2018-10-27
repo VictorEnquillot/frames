@@ -1,0 +1,2 @@
+type measure_actual_length = (float, Elementary_fence_units_actual_length_symbol_t.elementary_fence_units_actual_length_symbol) Doublet_t.doublet;;
+

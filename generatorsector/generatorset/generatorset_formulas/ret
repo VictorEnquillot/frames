@@ -1,0 +1,7 @@
+(** {6 Retrieving} *)
+
+let retrieve tag_gbc =
+  let soi_gro = Tag_v.sole_index_off_tag tag_gbc in
+  let sym_gbc = Tag_v.symbol_off_tag tag_gbc in
+  make sym_gbc soi_gro 
+;; 

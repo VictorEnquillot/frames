@@ -1,0 +1,27 @@
+digraph dgn {
+  size="14,14";
+  node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+  edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+  Title [label = "The Container Tree\nfor Ecp\nin Nwchem\nSubdomain" shape="record" color=lightblue, style=filled];
+
+   ecp_basis_block -> { comment_block  ecpset_block }; 
+
+   ecpset_block        ->  { ecpset_definition  ecpset_for_any_center_block  END };
+   ecpset_definition   ->  { ECP ecpset_local_name PRINT };
+
+   ecpset_for_any_center_block -> { ecpset_for_a_center_block } [color=red arrowsize="2" label = "Repeat on all Centers"];
+   ecpset_for_a_center_block -> { ecpset_electron_number ecpset_for_any_shell_block };
+   ecpset_electron_number -> {"Au " nelec 60};
+
+   ecpset_for_any_shell_block -> { ecpset_for_a_shell_block ecpset_for_a_shell_block ecpset_for_a_shell_block} [color=red arrowsize="2" label = "Repeat on all Shells"];
+
+   ecpset_for_a_shell_block	-> { ecpset_aoset_center_and_shell_name ecpset_numerical_values_block} ;
+
+   ecpset_aoset_center_and_shell_name ->  { Au ul} ;
+
+   ecpset_numerical_values_block -> { ecpset_numerical_value_line }[color=red arrowsize="2" label = "Repeat on all ecp"];
+
+   ecpset_numerical_value_line -> { integer positive_float float } 
+
+}

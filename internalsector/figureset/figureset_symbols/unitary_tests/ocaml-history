@@ -1,0 +1,184 @@
+  #use "ttriangle_symbol_v.ml";; 
+module Trs_t = Triangle_symbol_t
+module Trs_v = Triangle_symbol_v
+let smb_ioo = Trs_t.Isoceles_oblique_obtuse;;
+let smb_iso = Trs_t.Isoceles_oblique smb_ioo;;
+let smb_tri = Trs_t.Isoceles smb_iso;;
+let nam_tri = Trs_v.name smb_tri;;
+smb_tri ;;
+smb_ioo;;
+let smb_iso = Trs_t.Isoceles_oblique_obtuse;;
+let smb_tri = Trs_t.Isoceles smb_iso;;
+  #use "ttriangle_symbol_v.ml";; 
+  #use "ttriangle_formula_v.ml";; 
+Trf_v.retrieve tag_tri
+;;
+  #use "ttriangle_formula_v.ml";; 
+  #use "ttriangle_value_v.ml";; 
+testi 3 (
+Trv_v.make frm_tri
+=
+;;
+Trv_v.make frm_tri;;
+  #use "ttriangle_value_v.ml";; 
+Trv_v.make frm_tri;;
+  #use "ttriangle_value_v.ml";; 
+#use "triangle_value_v.ml";;
+  let tag_sum = Trf_v.summit_tag_off_triangle_formula frm_tri;;
+ let tag_bas = Trf_v.basis_tag_off_triangle_formula frm_tri ;;
+let val_sum = Pov_v.make tag_sum ;;
+  #use "ttriangle_value_v.ml";; 
+  #use "tvector_value_v.ml";; 
+  #use "tvector_tag_v.ml";; 
+tag_vec ;;
+exit
+  #use "tvector_tag_v.ml";; 
+tag_tri 
+(* : Tree_ca;;
+tag_tri 
+tag_tri;;
+  #use "tvector_tag_v.ml";; 
+let tag_tri = Tag_v.make smb_tri 1 [];;
+Tag_v.make;;
+  #use "tvector_tag_v.ml";; 
+tag_tri;;
+tag_vec ;;
+  #use  "tgeometryset_symbol_provider_v.ml";; 
+smb_gsp;;
+  #use  "tgeometryset_symbol_provider_v.ml";; 
+gss_tri;;
+Gsp_v.retrieve tci_tri ;;
+gss_vec;;
+gss_poi;;
+tci_tri;;
+tci_vec;;
+#use "ttriangle_symbol_v.ml";; 
+sym_tri ;;
+let sym_tri = Trt_v.make sym_tri tci_tri;;
+#use "ttriangle_symbol_v.ml";; 
+nam_tri;;
+#use "ttriangle_symbol_v.ml";; 
+Triangle_isoceles_symbol_v.name sym_tio;;
+Triangle_isoceles_symbol_v.name sym_tri;;
+Triangle_symbol_v.name sym_ioo;;
+#use "ttriangle_symbol_v.ml";; 
+Triangle_isoceles_oblique_symbol_v.name sym_ioo;;
+Triangle_isoceles_symbol_v.name sym_tio;;
+Triangle_symbol_v.name sym_tri;;
+#use "ttriangle_symbol_v.ml";; 
+#use "tvector_symbol_v.ml";; 
+Vector_symbol_v.name sym_vec;;
+#use "tgeometryset_symbol_by_sole_index_production_provider_v.ml";; 
+sym_tri;;
+let gss_tri = Geometryset_symbol_v.geometryset_symbol_of_triangle sym_tri;;
+Geometryset_symbol_v.vector;;
+ Geometryset_symbol_v.point;;
+#use "tgeometryset_symbol_by_sole_index_production_provider_v.ml";; 
+soi_tri;;
+gss_tri;;
+Geometryset_symbol_by_sole_index_production_provider_v.retrieve soi_tri ;;
+ (
+Geometryset_symbol_by_sole_index_production_provider_v.retrieve soi_tri 
+(* : Sole_index__t.tree_canonical_index *)
+= 
+gss_tri
+);;
+soi_vec;;
+gss_vec
+(* : Geo;;
+gss_vec;;
+Geometryset_symbol_by_sole_index_production_provider_v.retrieve soi_vec;;
+ (
+Geometryset_symbol_by_sole_index_production_provider_v.retrieve soi_vec
+=
+gss_vec
+);;
+soi_poi;;
+gss_poi;;
+(
+Geometryset_symbol_v.retrieve soi_poi 
+=
+gss_poi
+);;
+(
+Geometryset_symbol_v.retrieve soi_poi 
+=
+gss_poi
+);;
+Geometryset_symbol_by_sole_index_production_provider_v.retrieve soi_poi 
+Geometryset_symbol_by_sole_index_production_provider_v.retrieve soi_poi ;;
+ (
+Geometryset_symbol_by_sole_index_production_provider_v.retrieve soi_poi 
+=
+gss_poi
+);;
+#use "tpoint_symbol_v.ml";; 
+Point_symbol_v.name sym_poi;;
+#use "tpoint_symbol_v.ml";; 
+Point_symbol_v.name sym_poi;;
+#use "tpoint_symbol_v.ml";; 
+#use "triangle_symbol_u_any.ml";; 
+let sym_ioo = Triangle_symbol_v.make "triangle_isoceles_right"
+;;
+let sym_tir = Triangle_symbol_v.make "triangle_isoceles_right" "";;
+let sym_tir = Triangle_symbol_v.make "triangle_isoceles_right";;
+#use "triangle_symbol_u_any.ml";; 
+  #use "triangle_symbol_u_any.ml";; 
+let sym_tir = Triangle_symbol_v.make "triangle_isoceles_right";;
+let nam_tir = Triangle_symbol_v.name sym_tir;;
+let sym_tir = Triangle_symbol_v.make "triangle_isoceles_right";;
+let nam_tir = Triangle_symbol_v.name sym_tir;;
+  #use "triangle_symbol_u_any.ml";; 
+#use "vector_symbol_u_any.ml";;
+open Make_test_v;;
+testing "Vector_symbol_v with
+   vector_symbol_u_any.ml";;
+let sym_vec = Vector_symbol_v.make "Vector" "";;
+#use "vector_symbol_u_any.ml";;
+   #use "point_symbol_u_any.ml";; 
+let sym_poi = Point_symbol_v.make "point_3d" "A";;
+  #use "vector_symbol_u_any.ml";;
+Vector_symbol_v.name sym_vec;;
+  #use "Vector_symbol_u_any.ml";;
+ #use "Entity_name_fulltree_by_domainset_trail_provider_u_geometryset_symbol.ml";; 
+  #use "Vector_symbol_u_any.ml";;
+  #use "Triangle_symbol_u_any.ml";; 
+let sym_tir = Triangle_symbol_v.make "triangle_isoceles_right" "";;
+let sym_tir = Triangle_symbol_v.make "Triangle_isoceles_right" "";;
+  #use "Triangle_symbol_v.ml";; 
+let nam = "triangle_isoceles_right";;
+let s = "";;
+let nam_low = String.lowercase nam in
+;;
+let nam_low = String.lowercase nam;;
+make_of_topson_leaf nam s ;;
+  #use "Triangle_symbol_v.ml";; 
+  #use "Triangle_symbol_u_any.ml";; 
+let sym_x = Coordinate_symbol_v.make "x" float;;
+Coordinate_symbol_v.make;;
+  #use "Coordinate_symbol_u_any.ml";; 
+let z = Coordinate_symbol_v.z "meter";;
+let nam_z = Coordinate_symbol_v.name z;;
+  #use "Coordinate_symbol_u_any.ml";; 
+let str_z = Coordinate_symbol_v.string_off sym_z;;
+let lna_z = Coordinate_symbol_v.longname sym_z;;
+let fna_z = Coordinate_symbol_v.fullname sym_z;;
+let x = Coordinate_symbol_v.coordinate_cartesian_symbol_off_coordinate_symbol sym_x;;
+let is_cca_x = Coordinate_symbol_v.is_coordinate_cartesian_symbol_off_coordinate_symbol sym_x;;
+let is_x = Coordinate_symbol_v.is_x sym_x;;
+let sym_x = Coordinate_symbol_v.coordinate_symbol_of_coordinate_cartesian_symbol sym_cca_x;;
+sym_cca_x;;
+  #use "Coordinate_symbol_u_any.ml";; 
+   #use "Geometryset_symbol_u_any.ml";; 
+#use "Triangle_symbol_u_any.ml";; 
+sym_tir;;
+Triangle_symbol_v.string_off sym_tir;;
+#use "Triangle_symbol_u_any.ml";; 
+let sym_poi = Point_symbol_v.make "point_3d" "A";;
+   #use "Point_symbol_u_any.ml";; 
+   #use "Vector_symbol_u_any.ml";;
+  #use "Point_symbol_u_any.ml";; 
+  #use "Coordinate_symbol_u_any.ml";; 
+  #use "Coordinate_symbol_v.ml";; 
+nam_cod;;
+   #use "Figureset_symbol_u_any.ml";; 

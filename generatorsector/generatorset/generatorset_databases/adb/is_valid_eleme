@@ -1,0 +1,21 @@
+let is_valid_constructor_basename_of_constructor_trail tra_con =
+  let nam_fun = "is_valid_constructor_basename_of_constructor_trail" in
+  let tra_dos = Trail_v.trail_of_key_off_trail "domainset" tra_con in
+  let ban_con_l =  
+    Constructor_basename_list_by_domainset_trail_provider_v.provide tra_dos
+  in
+  let ban_con = Trail_v.value_of_key_off_trail "entity" tra_con in
+  let is_valid = List.mem ban_con ban_con_l in
+  if (not is_valid)
+  then
+    Error_messages_v.print_fatal_error nam_cod nam_fun
+      (Format.sprintf "Constructor_basename >%s< were valid" ban_con) 
+      (Format.sprintf "list of valid Constructor_basename is :@.       %s"
+	 (List_v.name_with_separator Utilities_v.identity ";\n  " ban_con_l)
+      ) 
+      "Check set file or add it to list"
+  else
+    ban_con
+;;
+
+

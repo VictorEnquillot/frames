@@ -1,0 +1,43 @@
+define Con_db1
+       context
+	 database "db1points"
+         domain "figure"
+	 end -- context
+       end -- define
+
+define Poi_a
+       external 
+         type [ "figure" "set" "fence" "point" "constructor" ]
+         external_name "T_A"
+         external_context Con_db1
+         end -- external
+       end -- define
+
+define Seg_bc
+       external 
+         type [ "figure" "set" "body" "segment" "constructor" ]
+         external_name "BC"
+         external_context Con_db1
+         end -- external
+       end -- define
+
+define Tra_bc
+       operator 
+         type [ "operator" "set" "body" "creation" "transformation" "constructor" ]
+         operation "translation"
+         ondomain "figure"
+	 cofactor 
+            cofactor_entity Seg_bc 
+            end -- cofactor
+         end -- operator
+       end -- define
+
+define Poi_t
+       target 
+         type [ "property" "operand" "body" "target" "created" "constructor" ]
+	 target_operator Tra_bc 
+         target_operand Poi_a
+	 end -- target
+       end -- define
+
+stop

@@ -1,0 +1,7 @@
+type camlline_for_tag_formula =
+  | Camlline_for_tag_datastructure_formula of Camlline_for_tag_datastructure_formula_t.camlline_for_tag_datastructure_formula
+  | Camlline_for_tag_uno_formula of Camlline_for_tag_uno_formula_t.camlline_for_tag_uno_formula
+  | Camlline_for_tag_duo_formula of Camlline_for_tag_duo_formula_t.camlline_for_tag_duo_formula
+  | Camlline_for_tag_trio_formula of Camlline_for_tag_trio_formula_t.camlline_for_tag_trio_formula
+;;
+

@@ -1,0 +1,39 @@
+	digraph Frames {
+		size="40,15";
+		node [fontsize=50];
+		edge [arrowhead = "vee", arrowsize = "2.0", style="solid", taillabel = ""];
+
+	    Title [label = "Frames Domains" shape="record" color="white", style=filled];
+
+	    "Frames\nFRA" [color=white];
+	    "Common\nCOM" [color=lightblue];
+	    "General\nGNL" [color=lightblue];
+
+	    "Database\nDBA" [color=yellow];
+	    "Elementary\nELE" [color=yellow]; 
+	    "Figure\nFIG" [color=yellow];
+	    "Primitive\nPRI" [color=yellow];
+	    "Prototype\nPRT" [color=yellow];
+	    "Wavefunction\nWAV" [color=yellow];
+
+	    "Input\nINP" [color=green];
+	    "Operator\nOPE" [color=green];
+	    "Property\nPRO" [color=green];
+
+    		Title -> "Frames\nFRA"  [style="invis"];
+
+		"Frames\nFRA" -> "Common\nCOM";
+		"Frames\nFRA" -> "General\nGNL";
+
+		"Frames\nFRA" -> "Database\nDBA" ;
+		"Frames\nFRA" -> "Elementary\nELE";
+		"Frames\nFRA" -> "Figure\nFIG";
+		"Frames\nFRA" -> "Prototype\nPRT";
+		"Frames\nFRA" -> "Primitive\nPRI";
+		"Frames\nFRA" -> "Wavefunction\nWAV";
+
+		"Frames\nFRA" -> "Userinput\nUSI";
+		"Frames\nFRA" -> "Operator\nOPE";
+		"Frames\nFRA" -> "Property\nPRO";
+		}
+

@@ -1,0 +1,2 @@
+SUB_DIRECTORIES="basisfunctionset_databases basisfunctionset_formulas basisfunctionset_symbols basisfunctionset_tags basisfunctionset_values"
+CURRENT_AND_TEST=". unitary_tests"

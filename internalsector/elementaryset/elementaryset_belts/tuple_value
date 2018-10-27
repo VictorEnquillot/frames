@@ -1,0 +1,435 @@
+(** {3 Coordinate_tuple_value_v.}  *)
+
+(** {6 Documenting} *)
+
+let documentation () = 
+  [
+   "Needs : VELE:";
+   "Current : VELE:Coordinate_tuple_value_v";
+   "Needed-by :";
+   "What-is-it : Up_coercion of Value type as Symbol type up_coercion";
+   "Remark : It is a Node type";
+ ]
+;;
+
+let nam_mod = Management_v.current_module_name (documentation ());;
+
+(** {6 Symbolizing} *)
+
+let symbol_off_value = function
+  | Coordinate_tuple_value_t.Coordinate_tuple_cartesian_value val_cca ->
+      Coordinate_tuple_symbol_v.coordinate_tuple_symbol_of_coordinate_tuple_cartesian_symbol  
+	(Coordinate_tuple_cartesian_value_v.symbol_off_value val_cca)
+
+  | Coordinate_tuple_value_t.Coordinate_tuple_cylindrical_value val_ccy ->
+      Coordinate_tuple_symbol_v.coordinate_tuple_symbol_of_coordinate_tuple_cylindrical_symbol  
+	(Coordinate_tuple_cylindrical_value_v.symbol_off_value val_ccy)
+
+  | Coordinate_tuple_value_t.Coordinate_tuple_spherical_value val_csp ->
+      Coordinate_tuple_symbol_v.coordinate_tuple_symbol_of_coordinate_tuple_spherical_symbol
+	(Coordinate_tuple_spherical_value_v.symbol_off_value val_csp)
+
+  | Coordinate_tuple_value_t.Coordinate_tuple_linear_value val_cpo ->
+      Coordinate_tuple_symbol_v.coordinate_tuple_symbol_of_coordinate_tuple_linear_symbol
+	(Coordinate_tuple_linear_value_v.symbol_off_value val_cpo)
+
+  | Coordinate_tuple_value_t.Coordinate_tuple_planar_value val_cpo ->
+      Coordinate_tuple_symbol_v.coordinate_tuple_symbol_of_coordinate_tuple_planar_symbol
+	(Coordinate_tuple_planar_value_v.symbol_off_value val_cpo)
+
+  | Coordinate_tuple_value_t.Coordinate_tuple_polar_value val_cpo ->
+      Coordinate_tuple_symbol_v.coordinate_tuple_symbol_of_coordinate_tuple_polar_symbol
+	(Coordinate_tuple_polar_value_v.symbol_off_value val_cpo)
+;;
+
+let tag_off_value = function
+  | Coordinate_tuple_value_t.Coordinate_tuple_cartesian_value val_cca ->
+      Tag_v.map_entity Coordinate_tuple_symbol_v.coordinate_tuple_symbol_of_coordinate_tuple_cartesian_symbol
+	(Coordinate_tuple_cartesian_value_v.tag_off_value val_cca)
+
+  | Coordinate_tuple_value_t.Coordinate_tuple_cylindrical_value val_ccy ->
+      Tag_v.map_entity Coordinate_tuple_symbol_v.coordinate_tuple_symbol_of_coordinate_tuple_cylindrical_symbol
+	(Coordinate_tuple_cylindrical_value_v.tag_off_value val_ccy)
+
+  | Coordinate_tuple_value_t.Coordinate_tuple_spherical_value val_csp ->
+      Tag_v.map_entity Coordinate_tuple_symbol_v.coordinate_tuple_symbol_of_coordinate_tuple_spherical_symbol
+	(Coordinate_tuple_spherical_value_v.tag_off_value val_csp)
+
+  | Coordinate_tuple_value_t.Coordinate_tuple_linear_value val_cpo ->
+      Tag_v.map_entity Coordinate_tuple_symbol_v.coordinate_tuple_symbol_of_coordinate_tuple_linear_symbol
+	(Coordinate_tuple_linear_value_v.tag_off_value val_cpo)
+
+  | Coordinate_tuple_value_t.Coordinate_tuple_planar_value val_cpo ->
+      Tag_v.map_entity Coordinate_tuple_symbol_v.coordinate_tuple_symbol_of_coordinate_tuple_planar_symbol
+	(Coordinate_tuple_planar_value_v.tag_off_value val_cpo)
+
+  | Coordinate_tuple_value_t.Coordinate_tuple_polar_value val_cpo ->
+      Tag_v.map_entity Coordinate_tuple_symbol_v.coordinate_tuple_symbol_of_coordinate_tuple_polar_symbol
+	(Coordinate_tuple_polar_value_v.tag_off_value val_cpo)
+;;
+
+(** {6 Naming} *)
+
+let name = function
+  | Coordinate_tuple_value_t.Coordinate_tuple_cartesian_value val_cca ->
+      (Coordinate_tuple_cartesian_value_v.name val_cca)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_cylindrical_value val_ccy ->
+      (Coordinate_tuple_cylindrical_value_v.name val_ccy)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_spherical_value val_csp ->
+      (Coordinate_tuple_spherical_value_v.name val_csp)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_linear_value val_cpo ->
+      (Coordinate_tuple_linear_value_v.name val_cpo)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_planar_value val_cpo ->
+      (Coordinate_tuple_planar_value_v.name val_cpo)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_polar_value val_cpo ->
+      (Coordinate_tuple_polar_value_v.name val_cpo)
+;;
+
+let string_off = function
+  | Coordinate_tuple_value_t.Coordinate_tuple_cartesian_value val_cca ->
+      (Coordinate_tuple_cartesian_value_v.string_off val_cca)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_cylindrical_value val_ccy ->
+      (Coordinate_tuple_cylindrical_value_v.string_off val_ccy)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_spherical_value val_csp ->
+      (Coordinate_tuple_spherical_value_v.string_off val_csp)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_linear_value val_cpo ->
+      (Coordinate_tuple_linear_value_v.string_off val_cpo)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_planar_value val_cpo ->
+      (Coordinate_tuple_planar_value_v.string_off val_cpo)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_polar_value val_cpo ->
+      (Coordinate_tuple_polar_value_v.string_off val_cpo)
+;;
+
+let longname = function
+  | Coordinate_tuple_value_t.Coordinate_tuple_cartesian_value val_cca ->
+      (Coordinate_tuple_cartesian_value_v.longname val_cca)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_cylindrical_value val_ccy ->
+      (Coordinate_tuple_cylindrical_value_v.longname val_ccy)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_spherical_value val_csp ->
+      (Coordinate_tuple_spherical_value_v.longname val_csp)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_linear_value val_cpo ->
+      (Coordinate_tuple_linear_value_v.longname val_cpo)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_planar_value val_cpo ->
+      (Coordinate_tuple_planar_value_v.longname val_cpo)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_polar_value val_cpo ->
+      (Coordinate_tuple_polar_value_v.longname val_cpo)
+;;
+
+let fullname = function
+  | Coordinate_tuple_value_t.Coordinate_tuple_cartesian_value val_cca ->
+      (Coordinate_tuple_cartesian_value_v.fullname val_cca)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_cylindrical_value val_ccy ->
+      (Coordinate_tuple_cylindrical_value_v.fullname val_ccy)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_spherical_value val_csp ->
+      (Coordinate_tuple_spherical_value_v.fullname val_csp)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_linear_value val_cpo ->
+      (Coordinate_tuple_linear_value_v.fullname val_cpo)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_planar_value val_cpo ->
+      (Coordinate_tuple_planar_value_v.fullname val_cpo)
+	
+  | Coordinate_tuple_value_t.Coordinate_tuple_polar_value val_cpo ->
+      (Coordinate_tuple_polar_value_v.fullname val_cpo)
+;;
+
+(** {6 Retrieving} *)
+
+let retrieve tag_coo =
+  let soi_coo = Tag_v.sole_index_off_tag tag_coo in
+  let sym_coo = Tag_v.entity_off_tag tag_coo in
+  match sym_coo with
+  | Coordinate_tuple_symbol_t.Coordinate_tuple_cartesian_symbol sym_cca ->
+      Coordinate_tuple_value_t.Coordinate_tuple_cartesian_value
+	(Coordinate_tuple_cartesian_value_v.retrieve (sym_cca, soi_coo))
+
+  | Coordinate_tuple_symbol_t.Coordinate_tuple_spherical_symbol sym_csp ->
+      Coordinate_tuple_value_t.Coordinate_tuple_spherical_value
+	(Coordinate_tuple_spherical_value_v.retrieve (sym_csp, soi_coo))
+
+  | Coordinate_tuple_symbol_t.Coordinate_tuple_cylindrical_symbol sym_ccy ->
+      Coordinate_tuple_value_t.Coordinate_tuple_cylindrical_value
+	(Coordinate_tuple_cylindrical_value_v.retrieve (sym_ccy, soi_coo))
+
+  | Coordinate_tuple_symbol_t.Coordinate_tuple_linear_symbol sym_cpo ->
+      Coordinate_tuple_value_t.Coordinate_tuple_linear_value
+	(Coordinate_tuple_linear_value_v.retrieve (sym_cpo, soi_coo))
+
+  | Coordinate_tuple_symbol_t.Coordinate_tuple_planar_symbol sym_cpo ->
+      Coordinate_tuple_value_t.Coordinate_tuple_planar_value
+	(Coordinate_tuple_planar_value_v.retrieve (sym_cpo, soi_coo))
+
+  | Coordinate_tuple_symbol_t.Coordinate_tuple_polar_symbol sym_cpo ->
+      Coordinate_tuple_value_t.Coordinate_tuple_polar_value
+	(Coordinate_tuple_polar_value_v.retrieve (sym_cpo, soi_coo))
+;;
+
+(** {6 Making} *)
+
+let make sym_coo soi_coo =
+  let tag_coo = Tag_v.make sym_coo soi_coo in
+  retrieve tag_coo
+;;
+
+(** {6 Coercing up} *)
+
+let coordinate_tuple_value_of_coordinate_tuple_cartesian_value val_cca =
+  Coordinate_tuple_value_t.Coordinate_tuple_cartesian_value val_cca 
+;;
+
+let coordinate_tuple_value_of_coordinate_tuple_cylindrical_value val_ccy =
+  Coordinate_tuple_value_t.Coordinate_tuple_cylindrical_value val_ccy
+;;
+
+let coordinate_tuple_value_of_coordinate_tuple_spherical_value val_csp =
+  Coordinate_tuple_value_t.Coordinate_tuple_spherical_value val_csp
+;;
+
+let coordinate_tuple_value_of_coordinate_tuple_linear_value val_cpo =
+  Coordinate_tuple_value_t.Coordinate_tuple_linear_value val_cpo 
+;;
+
+let coordinate_tuple_value_of_coordinate_tuple_planar_value val_cpo =
+  Coordinate_tuple_value_t.Coordinate_tuple_planar_value val_cpo 
+;;
+
+let coordinate_tuple_value_of_coordinate_tuple_polar_value val_cpo =
+  Coordinate_tuple_value_t.Coordinate_tuple_polar_value val_cpo 
+;;
+
+(** {6 Coercing down} *)
+
+let coordinate_tuple_cartesian_value_off_coordinate_tuple_value = function
+  | Coordinate_tuple_value_t.Coordinate_tuple_cartesian_value val_cca -> val_cca
+  | _ -> failwith "Not_a_coordinate_tuple_cartesian:Coordinate_tuple_value.coordinate_tuple_cartesian_value_off_coordinate_tuple_value"
+;;
+
+let coordinate_tuple_cylindrical_value_off_coordinate_tuple_value = function
+  | Coordinate_tuple_value_t.Coordinate_tuple_cylindrical_value val_ccy -> val_ccy
+  | _ -> failwith "Not_a_coordinate_tuple_cylindrical:Coordinate_tuple_value.coordinate_tuple_cylindrical_value_off_coordinate_tuple_value"
+;;
+
+let coordinate_tuple_spherical_value_off_coordinate_tuple_value = function
+  | Coordinate_tuple_value_t.Coordinate_tuple_spherical_value val_csp -> val_csp
+  | _ -> failwith "Not_a_coordinate_tuple_spherical:Coordinate_tuple_value.coordinate_tuple_spherical_value_off_coordinate_tuple_value"
+;;
+
+let coordinate_tuple_linear_value_off_coordinate_tuple_value = function
+  | Coordinate_tuple_value_t.Coordinate_tuple_linear_value val_cpo -> val_cpo
+  | _ -> failwith "Not_a_coordinate_tuple_linear:Coordinate_tuple_value.coordinate_tuple_linear_value_off_coordinate_tuple_value"
+;;
+
+let coordinate_tuple_planar_value_off_coordinate_tuple_value = function
+  | Coordinate_tuple_value_t.Coordinate_tuple_planar_value val_cpo -> val_cpo
+  | _ -> failwith "Not_a_coordinate_tuple_planar:Coordinate_tuple_value.coordinate_tuple_planar_value_off_coordinate_tuple_value"
+;;
+
+let coordinate_tuple_polar_value_off_coordinate_tuple_value = function
+  | Coordinate_tuple_value_t.Coordinate_tuple_polar_value val_cpo -> val_cpo
+  | _ -> failwith "Not_a_coordinate_tuple_polar:Coordinate_tuple_value.coordinate_tuple_polar_value_off_coordinate_tuple_value"
+;;
+
+(** {6 Coordinate_tag_canister conversions} *)
+
+let coordinate_tuple_planar_tag_off_coordinate_tuple_polar_tag tag_tpo =
+  let soi_tpo = Tag_v.sole_index_off_tag tag_tpo in
+  let sof_tpo = Coordinate_tuple_polar_tag_v.string_off tag_tpo in
+  let sym_tpl = Coordinate_tuple_planar_symbol_v.coordinate_tuple_planar_constructor sof_tpo in
+  Tag_v.make sym_tpl soi_tpo
+;;
+
+let coordinate_tuple_cartesian_tag_off_coordinate_tuple_spherical_tag tag_tsp =
+  let soi_tsp = Tag_v.sole_index_off_tag tag_tsp in
+  let sof_tsp = Coordinate_tuple_spherical_tag_v.string_off tag_tsp in
+  let sym_tca = Coordinate_tuple_cartesian_symbol_v.coordinate_tuple_cartesian_constructor sof_tsp in
+  Tag_v.make sym_tca soi_tsp
+;;
+
+let coordinate_tuple_cartesian_tag_off_coordinate_tuple_cylindrical_tag tag_tcy =
+  let soi_tcy = Tag_v.sole_index_off_tag tag_tcy in
+  let sof_tcy = Coordinate_tuple_cylindrical_tag_v.string_off tag_tcy in
+  let sym_tca = Coordinate_tuple_cartesian_symbol_v.coordinate_tuple_cartesian_constructor sof_tcy in
+  Tag_v.make sym_tca soi_tcy
+;;
+
+(** {6 Coordinate_tuple_canister conversions} *)
+
+let coordinate_tuple_planar_canister_off_coordinate_tuple_polar_canister can_tpo =
+  let val_uni_rho = Coordinate_tuple_polar_canister_v.units_value_rho_off_coordinate_tuple_polar_canister can_tpo in
+  let sym_uni_rho = Measure_float_v.units_symbol_off_units_value val_uni_rho in
+  let flo_rho = Units_value_v.float_off_value val_uni_rho in
+ 
+  let val_uni_theta = Coordinate_tuple_polar_canister_v.units_value_theta_off_coordinate_tuple_polar_canister can_tpo in
+  let sym_uni_theta = Measure_float_v.units_symbol_off_units_value val_uni_theta in
+  let flo = Units_value_v.float_off_value val_uni_theta in
+  let flo_theta = flo *. (Units_angle_symbol_v.radian_of_units_angle_symbol 
+			   (Units_symbol_v.units_angle_symbol_off_units_symbol sym_uni_theta)) 
+  in
+ 
+  let flo_x_2d = flo_rho *. (cos flo_theta) in
+  let flo_y_2d = flo_rho *. (sin flo_theta) in
+
+  let val_uni_x_2d = Measure_float_v.units_value_of_float_of_units_symbol flo_x_2d sym_uni_rho in 
+  let val_uni_y_2d = Measure_float_v.units_value_of_float_of_units_symbol flo_y_2d sym_uni_rho in 
+
+  let can_cpl_x_2d = Coordinate_planar_canister_v.make val_uni_x_2d in
+  let can_cpl_y_2d = Coordinate_planar_canister_v.make val_uni_y_2d in
+
+  Coordinate_tuple_planar_canister_v.make can_cpl_x_2d can_cpl_y_2d 
+;;
+
+
+let coordinate_tuple_cartesian_canister_off_coordinate_tuple_spherical_canister can_tsp =
+  let val_uni_rho = Coordinate_tuple_spherical_canister_v.units_value_rho_off_coordinate_tuple_spherical_canister can_tsp in
+  let sym_uni_rho = Measure_float_v.units_symbol_off_units_value val_uni_rho in
+  let flo_rho = Units_value_v.float_off_value val_uni_rho in
+ 
+  let val_uni_phi = Coordinate_tuple_spherical_canister_v.units_value_phi_off_coordinate_tuple_spherical_canister can_tsp in
+  let sym_uni_phi = Measure_float_v.units_symbol_off_units_value val_uni_phi in
+  let flo = Units_value_v.float_off_value val_uni_phi in
+  let flo_phi = flo *. (Units_angle_symbol_v.radian_of_units_angle_symbol 
+			   (Units_symbol_v.units_angle_symbol_off_units_symbol sym_uni_phi)) 
+  in
+
+  let val_uni_theta = Coordinate_tuple_spherical_canister_v.units_value_theta_off_coordinate_tuple_spherical_canister can_tsp in
+  let sym_uni_theta = Measure_float_v.units_symbol_off_units_value val_uni_theta in
+  let flo = Units_value_v.float_off_value val_uni_theta in
+  let flo_theta = flo *. (Units_angle_symbol_v.radian_of_units_angle_symbol 
+			   (Units_symbol_v.units_angle_symbol_off_units_symbol sym_uni_theta)) 
+  in
+ 
+  let flo_x_3d = flo_rho *. (sin flo_theta) *. (cos flo_phi) in
+  let flo_y_3d = flo_rho *. (sin flo_theta) *. (sin flo_phi) in
+  let flo_z_3d = flo_rho *. (cos flo_theta) in
+
+  let val_uni_x_3d = Measure_float_v.units_value_of_float_of_units_symbol flo_x_3d sym_uni_rho in 
+  let val_uni_y_3d = Measure_float_v.units_value_of_float_of_units_symbol flo_y_3d sym_uni_rho in 
+  let val_uni_z_3d = Measure_float_v.units_value_of_float_of_units_symbol flo_z_3d sym_uni_rho in 
+
+  let can_cca_x_3d = Coordinate_cartesian_canister_v.make val_uni_x_3d in
+  let can_cca_y_3d = Coordinate_cartesian_canister_v.make val_uni_y_3d in
+  let can_cca_z_3d = Coordinate_cartesian_canister_v.make val_uni_z_3d in
+
+  Coordinate_tuple_cartesian_canister_v.make can_cca_x_3d can_cca_y_3d can_cca_z_3d 
+;;
+
+
+let coordinate_tuple_cartesian_canister_off_coordinate_tuple_cylindrical_canister can_tcy =
+  let val_uni_rho = Coordinate_tuple_cylindrical_canister_v.units_value_rho_off_coordinate_tuple_cylindrical_canister can_tcy in
+  let sym_uni_rho = Measure_float_v.units_symbol_off_units_value val_uni_rho in
+  let flo_rho = Units_value_v.float_off_value val_uni_rho in
+ 
+  let val_uni_phi = Coordinate_tuple_cylindrical_canister_v.units_value_phi_off_coordinate_tuple_cylindrical_canister can_tcy in
+  let sym_uni_phi = Measure_float_v.units_symbol_off_units_value val_uni_phi in
+  let flo = Units_value_v.float_off_value val_uni_phi in
+  let flo_phi = flo *. (Units_angle_symbol_v.radian_of_units_angle_symbol 
+			   (Units_symbol_v.units_angle_symbol_off_units_symbol sym_uni_phi)) 
+  in
+
+  let val_uni_zed = Coordinate_tuple_cylindrical_canister_v.units_value_zed_off_coordinate_tuple_cylindrical_canister can_tcy in
+  let sym_uni_zed = Measure_float_v.units_symbol_off_units_value val_uni_zed in
+
+  if sym_uni_zed <> sym_uni_rho 
+  then 
+    begin
+      let nam_mod = Management_v.current_module_name (documentation ()) in
+      let nam_fun = "coordinate_tuple_cartesian_canister_off_coordinate_tuple_cylindrical_canister" in
+      Error_messages_v.print_fatal_error nam_mod nam_fun
+	(Format.sprintf "Rho Units %s were equal to Zed Units %s" 
+	   (Units_symbol_v.name sym_uni_rho) (Units_symbol_v.name sym_uni_zed)
+	)
+	"It is NOT True" "Check"
+    end
+  else
+    begin
+      let flo_zed = Units_value_v.float_off_value val_uni_zed in
+      let flo_x_3d = flo_rho *. (cos flo_phi) in
+      let flo_y_3d = flo_rho *. (sin flo_phi) in
+      let flo_z_3d = flo_zed in
+      
+      let val_uni_x_3d = Measure_float_v.units_value_of_float_of_units_symbol flo_x_3d sym_uni_rho in 
+      let val_uni_y_3d = Measure_float_v.units_value_of_float_of_units_symbol flo_y_3d sym_uni_rho in 
+      let val_uni_z_3d = Measure_float_v.units_value_of_float_of_units_symbol flo_z_3d sym_uni_rho in 
+      
+      let can_cca_x_3d = Coordinate_cartesian_canister_v.make val_uni_x_3d in
+      let can_cca_y_3d = Coordinate_cartesian_canister_v.make val_uni_y_3d in
+      let can_cca_z_3d = Coordinate_cartesian_canister_v.make val_uni_z_3d in
+      
+      Coordinate_tuple_cartesian_canister_v.make can_cca_x_3d can_cca_y_3d can_cca_z_3d 
+    end
+;;
+
+(** {Coordinate_value_canister conversions} *)
+
+let coordinate_tuple_planar_value_off_coordinate_tuple_polar_value val_tpo =
+  let tag_tpo = Coordinate_tuple_polar_value_v.tag_off_value val_tpo in
+  let tag_tpl = coordinate_tuple_planar_tag_off_coordinate_tuple_polar_tag tag_tpo in
+
+  let can_tpo = Coordinate_tuple_polar_value_v.canister_off_value val_tpo in
+  let can_tpl = coordinate_tuple_planar_canister_off_coordinate_tuple_polar_canister can_tpo in
+
+  Coordinate_tuple_planar_value_v.make tag_tpl can_tpl
+;;
+
+let coordinate_tuple_cartesian_value_off_coordinate_tuple_spherical_value val_tsp =
+  let tag_tsp = Coordinate_tuple_spherical_value_v.tag_off_value val_tsp in
+  let tag_tca = coordinate_tuple_cartesian_tag_off_coordinate_tuple_spherical_tag tag_tsp in
+
+  let can_tsp = Coordinate_tuple_spherical_value_v.canister_off_value val_tsp in
+  let can_tca = coordinate_tuple_cartesian_canister_off_coordinate_tuple_spherical_canister can_tsp in
+
+  Coordinate_tuple_cartesian_value_v.make tag_tca can_tca
+;;
+
+
+let coordinate_tuple_cartesian_value_off_coordinate_tuple_cylindrical_value val_tcy =
+  let tag_tcy = Coordinate_tuple_cylindrical_value_v.tag_off_value val_tcy in
+  let tag_tca = coordinate_tuple_cartesian_tag_off_coordinate_tuple_cylindrical_tag tag_tcy in
+
+  let can_tcy = Coordinate_tuple_cylindrical_value_v.canister_off_value val_tcy in
+  let can_tca = coordinate_tuple_cartesian_canister_off_coordinate_tuple_cylindrical_canister can_tcy in
+
+  Coordinate_tuple_cartesian_value_v.make tag_tca can_tca
+;;
+
+
+(** {6 Extracting_basic_value} *)
+
+let units_value_tuple_off_coordinate_tuple_value val_coo =
+  match val_coo with
+  | Coordinate_tuple_value_t.Coordinate_tuple_cartesian_value val_cca ->
+      Coordinate_tuple_cartesian_value_v.units_value_tuple_off_coordinate_tuple_cartesian_value val_cca
+
+  | Coordinate_tuple_value_t.Coordinate_tuple_spherical_value val_cca ->
+      Coordinate_tuple_spherical_value_v.units_value_tuple_off_coordinate_tuple_spherical_value val_cca
+
+  | Coordinate_tuple_value_t.Coordinate_tuple_cylindrical_value val_cca ->
+      Coordinate_tuple_cylindrical_value_v.units_value_tuple_off_coordinate_tuple_cylindrical_value val_cca
+
+  | Coordinate_tuple_value_t.Coordinate_tuple_linear_value val_cca ->
+      Coordinate_tuple_linear_value_v.units_value_tuple_off_coordinate_tuple_linear_value val_cca
+
+  | Coordinate_tuple_value_t.Coordinate_tuple_planar_value val_cca ->
+      Coordinate_tuple_planar_value_v.units_value_tuple_off_coordinate_tuple_planar_value val_cca
+
+  | Coordinate_tuple_value_t.Coordinate_tuple_polar_value val_cca ->
+      Coordinate_tuple_polar_value_v.units_value_tuple_off_coordinate_tuple_polar_value val_cca
+;;
+

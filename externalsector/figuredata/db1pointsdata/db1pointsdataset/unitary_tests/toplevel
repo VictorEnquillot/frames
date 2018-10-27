@@ -1,0 +1,14 @@
+ledit -x -h ./.toplevel-history ocaml \
+-I ../../../general/basics \
+-I ../../../general/datastructures \
+-I ../../../general/files \
+-I ../../../commonset \
+-I ../../../databaseset/databaseset_common \
+-I ../../../databaseset/database_db1 \
+unix.cma str.cma \
+../../../general/basics/basics.cma \
+../../../general/datastructures/datastructures.cma \
+../../../general/files/files.cma \
+../../../commonset/commonset.cma \
+../../../databaseset/databaseset_common/databaseset_common.cma \
+../../../databaseset/database_db1/database_db1.cma \

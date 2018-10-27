@@ -1,0 +1,40 @@
+# Improve : merge all CT introducing
+# triangle_flat (3 vector and summit aligned )
+# triangle_vector = vector (when vector reduces to a point)
+# triangle_point = vector_point
+# vector_point = point
+# type space = 1d 2d 3d
+
+type figureset               = coordinate point triangle vector fake
+
+# triangle
+type triangle                  = triangle_isoceles triangle_scalene
+type triangle_isoceles         = triangle_isoceles_equilateral triangle_isoceles_right triangle_isoceles_acute triangle_isoceles_obtuse
+type triangle_scalene          = triangle_scalene_right triangle_scalene_acute triangle_scalene_obtuse
+
+type fake                      = fake_son 
+
+type fake_son                  = fake_son_constructor
+
+# vector
+
+type vector                    = vector_constructor
+
+# point                         
+
+type point                     = point_constructor:ofstring
+
+# coordinate
+type coordinate                = coordinate_cartesian coordinate_cylindrical coordinate_polar coordinate_spherical 
+
+type coordinate_cartesian      = x:ofstring y:ofstring z:ofstring 
+type coordinate_cylindrical    = cylindrical_rho cylindrical_phi cylindrical_zed
+type coordinate_spherical      = spherical_rho spherical_phi spherical_theta 
+type coordinate_polar          = polar_rho polar_theta 
+
+description spherical_rho      = distance to origin
+description spherical_phi      = angular coordinate in xy plane
+description spherical_psi      = angular coordinate to z axis
+description cylindrical_rho    = distance to z axis
+description cylindrical_phi    = angular coordinate in xy plane
+description cylindrical_zed    = projection on z axis

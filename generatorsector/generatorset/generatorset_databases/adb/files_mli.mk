@@ -1,0 +1,84 @@
+FILES_GENERAL_MLI := \
+Invariants_v.mli \
+Database_filename_by_category_trail_provider_v.mli \
+Tools_agnr_1_v.mli \
+Database_record_list_by_category_trail_provider_v.mli \
+Word_word_string_triplet_list_by_category_trail_provider_v.mli \
+Word_word_string_triplet_list_by_domain_trail_provider_v.mli \
+Kind_basename_list_by_category_trail_provider_v.mli \
+ \
+Entity_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_v.mli \
+Entity_basename_lefthandside_list_by_category_trail_provider_v.mli \
+Entity_basename_righthandside_list_by_category_trail_provider_v.mli \
+ \
+Constructor_basename_kind_basename_righthandside_string_triplet_list_by_category_trail_provider_v.mli \
+Constructor_basename_righthandside_string_doublet_list_by_category_trail_provider_v.mli \
+Constructor_basename_lefthandside_list_by_category_trail_provider_v.mli \
+Constructor_basename_kind_basename_doublet_list_by_domain_trail_provider_v.mli \
+Constructor_basename_list_by_domain_trail_provider_v.mli \
+  
+FILES_CONSTRUCTOR_ROOT_MLI := \
+Constructor_root_basename_by_domain_trail_provider_v.mli \
+ 
+FILES_CONSTRUCTOR_NOTLEAF_MLI := \
+Constructor_notleaf_basename_list_by_domain_trail_provider_v.mli \
+Constructor_notleaf_basename_righthandside_string_doublet_list_by_domain_trail_provider_v.mli \
+Righthandside_string_by_constructor_notleaf_trail_provider_v.mli \
+Constructor_basename_list_by_constructor_notleaf_trail_provider_v.mli \
+Constructor_notleaf_basename_kind_basename_doublet_list_by_domain_trail_provider_v.mli \
+
+FILES_CONSTRUCTOR_NODE_MLI := \
+Constructor_node_basename_list_by_domain_trail_provider_v.mli \
+# Constructor_node_basename_lefthandside_string_doublet_list_by_category_trail_provider_v.mli \
+# Constructor_node_basename_kind_basename_doublet_list_by_domain_trail_provider_v.mli \
+ 
+FILES_CONSTRUCTOR_LEAF_MLI := \
+Constructor_leaf_basename_list_by_domain_trail_provider_v.mli \
+Constructor_leaf_basename_kind_basename_righthandside_string_triplet_list_by_domain_trail_provider_v.mli \
+Constructor_leaf_basename_righthandside_string_doublet_list_by_domain_trail_provider_v.mli \
+Constructor_leaf_basename_datastructure_basename_doublet_list_by_domain_trail_provider_v.mli \
+Righthandside_string_by_constructor_leaf_trail_provider_v.mli \
+Tools_agnr_2_v.mli \
+
+FILES_KIND_MLI := \
+Kind_name_by_constructor_notleaf_trail_provider_v.mli \
+
+FILES_BUILDER_MLI := \
+Righthandside_string_list_by_category_trail_provider_v.mli \
+Builder_basename_list_by_domain_trail_provider_v.mli \
+Entity_basic_basename_list_by_domain_trail_provider_v.mli \
+Datastructure_basename_builder_basename_list_doublet_by_constructor_leaf_trail_provider_v.mli \
+Datastructure_basename_by_constructor_leaf_trail_provider_v.mli \
+Builder_basename_list_by_constructor_leaf_trail_provider_v.mli \
+  \
+# Righthandside_string_by_constructor_leaf_trail_provider_v.mli \
+  
+FILES_CONSTRUCTOR_TREE_MLI := \
+Constructor_basename_list_by_constructor_trail_provider_v.mli \
+Constructor_basename_tree_by_domain_trail_provider_v.mli \
+  
+FILES_BUILDER_TREE_MLI := \
+Builder_root_basename_list_by_domain_trail_provider_v.mli \
+Builder_basename_subtree_by_constructor_leaf_trail_provider_v.mli \
+Builder_basename_tree_list_by_domain_trail_provider_v.mli \
+
+FILES_INACTIVE_MLI := \
+# Builder_node_subtree_by_constructor_leaf_trail_provider_v.mli \
+# Datastructure_basename_builder_basename_tree_by_category_trail_provider_v.mli \
+# Constructor_basename_description_string_doublet_list_by_category_trail_provider_v.mli \
+# Description_string_by_entity_trail_provider_v.mli \
+   
+FILES_MLI := \
+$(FILES_GENERAL_MLI) \
+$(FILES_CONSTRUCTOR_ROOT_MLI) \
+$(FILES_CONSTRUCTOR_NODE_MLI) \
+$(FILES_CONSTRUCTOR_NOTLEAF_MLI) \
+$(FILES_CONSTRUCTOR_LEAF_MLI) \
+$(FILES_KIND_MLI) \
+$(FILES_BUILDER_MLI) \
+$(FILES_CONSTRUCTOR_TREE_MLI) \
+$(FILES_BUILDER_TREE_MLI) \
+ 
+
+  
+

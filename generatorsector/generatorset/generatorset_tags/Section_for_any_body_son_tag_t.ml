@@ -1,0 +1,2 @@
+
+type section_for_any_body_son_tag = Section_for_any_body_son_symbol_t.section_for_any_body_son_symbol Tag_t.tag;;

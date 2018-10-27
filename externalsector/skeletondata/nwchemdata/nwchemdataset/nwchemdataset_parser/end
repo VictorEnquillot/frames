@@ -1,0 +1,20 @@
+    | Dgn_lexer_symbol_t.Dgn_lexer_basic_symbol (* Improve *)
+	(Dgn_lexer_basic_symbol_t.Dgn_lexer_basic_word_symbol
+	   (Dgn_lexer_basic_word_symbol_t.Dgn_lexer_basic_word_capitalized_symbol
+              (Dgn_lexer_basic_word_capitalized_symbol_t.Dgn_lexer_basic_word_capitalized_anyword
+		 "Options:Help:Feedback")))
+
+    | Dgn_lexer_symbol_t.Dgn_lexer_keyword_symbol
+	Dgn_lexer_keyword_symbol_t.Dgn_lexer_keyword_end_of_file ->  (* Correct ??? *)
+
+	  let sym_dgn = Dgn_symbol_v.dgn_body_keyword_end_of_file in
+	  let sym_dgn_t = Dgn_parser_tools_v.leaf_of_dgn_symbol_of_dgn_lexer_symbol_stack sym_dgn cur_lex_s in
+  	  (sym_dgn_t :: acc_tl) 
+
+    | Dgn_lexer_symbol_t.Dgn_lexer_keyword_symbol
+	Dgn_lexer_keyword_symbol_t.Dgn_lexer_keyword_end ->
+
+	  let sym_dgn = Dgn_symbol_v.dgn_body_directive_end in
+	  let sym_dgn_t = Dgn_parser_tools_v.leaf_of_dgn_symbol_of_dgn_lexer_symbol_stack sym_dgn cur_lex_s in
+	  (sym_dgn_t :: acc_tl)
+

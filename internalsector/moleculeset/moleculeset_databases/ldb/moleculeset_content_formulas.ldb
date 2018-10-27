@@ -1,0 +1,146 @@
+# Local (Frames) Formula Database for Chemicalset
+#
+# in bond _b_ b : s, c, d, t
+# halfbridge atom  : x
+# halfbridge block : y
+# atomic charge is mn or pn
+# A is element (? or more ?) + atomic charge (Ex.: Np1, Om2)
+
+# An Atom content is reduced to an Atom Tag or Mark   
+#
+# atom zerotied  : A
+# atom onetied   : A_b
+# atom twotied   : A_bb
+# atom threetied : A_bbb
+# atom fourtied  : A_bbbb
+
+# block    :   B     =   A...A       
+# block    : b_B     = b_A...A       
+# block    :   B_b   =   A...A_b       
+# block    : b_B_b   = b_A...A_b     
+# block    : b_B_bb  = b_A...A_bb    
+# block    : b_B_bbb = b_A...A_bbb  
+
+# segment  :   S     =   B_b..._b_B_b
+# segment  : b_S     = b_B_b..._b_B_b
+
+# fragment :   F     =   B_b..._b_B
+# fragment :   F_bb  =   B_b..._b_B_bb
+# fragment :   F_bbb =   B_b..._b_B_bbb
+# fragment : b_F_bb  = b_B_b..._b_B_bb  
+# fragment : b_F_bbb = b_B_b..._b_B_bbb  
+
+# grouping : b_G     = b_F 
+# grouping : b_G     = b_F_bb (b_G b_G)
+# grouping : b_G     = b_F_bbb (b_G b_G b_G)
+
+# molecule : M = A
+# molecule : M = B
+# molecule : M = F
+# molecule : M = F_bb (b_G b_G)
+# molecule : M = F_bbb (b_G b_G b_G)
+
+# block 
+
+content block d_c_d = c_dd:lin_c
+content block d_c_ss = c_dss:tpl_c
+content block s_c_ds = c_dss:tpl_c 
+content block s_c_sd  = c_dss:tpl_c
+content block s_c_sss = c_ssss:tet_c
+content block z_c_ssss = c_ssss:tet_c 
+content block s_c_t = c_ts:lin_c 
+
+content block z_he_z    = he:mon_c
+content block z_ne_z    = ne:mon_c
+content block z_fm1_z   = fm1:mon_c
+content block z_hm1_z   = hm1:mon_c
+content block z_clm1_z  = clm1:mon_c
+content block z_brm1_z  = brm1:mon_c
+content block z_im1_z   = im1:mon_c
+
+content block s_be_s  = be_ss:lin_c
+content block s_bf_s  = b_sss:tpl_c  s_f_s:tpl_l
+
+content block d_nh_z  = n_sd:tpl_c   h_s:tpl_l
+
+content block z_coh_s = c_ssd:tpl_c  o_d:tpl_i h_s:tpl_l 
+content block s_ch2_s = c_ssss:tet_c h_s:tet_l h_s:tet_r
+content block s_ch_d  = c_dss:tpl_c  h_s:tpl_l
+content block s_ch_ss = c_ssss:tet_c h_s:tet_o 
+
+content block s_nh2_z  = n_sss:tpl_c h_s:tpl_l h_s:tpl_r
+content block s_nhp1_c = n_ssc:tpl_c h_s:tpl_o
+content block c_hba_z  = hba_c:mon_c 
+content block c_hbb_z  = hbb_c:mon_c 
+content block s_hba_z  = hba_s:mon_c 
+content block s_hbb_z  = hbb_s:mon_c 
+
+# content block s_clf_s =
+# content block s_co_c =
+# content block s_im1_s =
+# content block s_n_ss =
+# content block s_nh_s =
+# content block s_o_s =
+# content block s_sf2_s =
+# content block z_becl2_z =
+# content block z_becl_s =
+# content block z_ccl2_z =
+# content block z_ccl_s =
+# content block z_ch2_d =
+content block z_ch3_s = c_ssss:tet_c h_s:tet_i h_s:tet_l h_s:tet_r 
+# content block z_ch4_z =
+# content block z_ch_t =
+# content block z_co_z =
+# content block z_coh2_z =
+# content block z_coh_s =
+# content block z_h_s =
+# content block z_i2m1_s =
+# content block z_i3m1_z =
+# content block z_n_t =
+# content block z_nh2_c =
+# content block z_nh2_s =
+# content block z_nh3_z =
+content block z_nh3p1_s =  
+# content block z_of2_z =
+# content block z_of_s =  n_ssss:tet_c h_s:tet_i h_s:tet_l h_s:tet_r 
+
+# content segment 
+
+content segment c_benzene_c  = c_ch_c c_ch_c c_ch_c c_ch_c c_ch_c 
+
+# content fragment 
+
+content fragment n_nh2_s_c_sd          = n_nh2_s s_c_sd
+content fragment s_nh2_z               = s_nh2_z
+content fragment d_nh_z                = d_nh_z
+
+content fragment s_ch2r3_s_chx_s       = s_ch2_s s_ch2_s s_ch2_s s_chx_s 
+content fragment s_ch2r3_s_nhp1_c_c_ss = s_ch2_s s_ch2_s s_ch2_s s_nph1_c c_c_ss
+content fragment z_oh_s_c_cc           = z_oh_s s_c_cc
+content fragment c_chr5_c_hba_z        = c_ch_c c_ch_c c_ch_c c_ch_c c_ch_c c_hba_z
+content fragment f_c_hba               = c_hba_z
+content fragment f_c_hbb               = c_hbb_z
+content fragment c_benzole_trp_cc      = c_ch_c c_ch_c c_ch_c c_ch_c c_ch_c c_c_cc
+content fragment c_pyrrole_trp_cc      = c_ch_c c_nh_c c_c_cc
+
+content fragment z_benzene_z           = z_hba_c c_ch_c c_ch_c c_ch_c c_ch_c c_ch_c c_ch_c _c_hba_z
+
+# content grouping
+
+content grouping g_c_hba               = f_c_hba
+content grouping g_benzole_trp         = c_benzole_trp_cc g_c_hba g_c_hbb
+content grouping g_guanidine           = s_nh_d_c_ss s_nh2_z s_nh2_z 
+content grouping g_arginine            = s_ch2r3_s_nhp1_c_c_ss s_nh2_z s_nh2_z 
+content grouping g_indole_trp          = f_pyrrole_trp f_c_hbb f_benzole_trp
+content grouping g_tryptophan          = s_ch2_s_ch_cc f_pyrrole_trp f_c_hba
+
+# content molecule 
+
+content molecule guanidine             = z_nh2_s_c_sd s_nh2_z d_nh_z
+content molecule benzene               = z_benzene_z
+content molecule phenol                = z_oh_s_c_cc c_chr5_c_hba_z c_hba_z
+
+
+description benzole_trp        = 6C-ring in tryptophan
+description benzene            = hba chr6 hba  correct ? linear content molecule
+description s_ch2r3_s_chx_s    = TriMetheneMethine Proline sidegroup

@@ -1,0 +1,68 @@
+#use "ttools_v.ml";;
+#use "ttools_v.ml";;
+#use "ttools_v.ml";;
+#use "ttools_v.ml";;
+#use "ttools_v.ml";;
+#use "ttools_v.ml";;
+#use "tread_record_list_v.ml"
+#use "ttools_v.ml";;
+ #use "tread_record_list_v.ml"
+ #use "tread_record_list_v.ml"
+ #use "tread_record_list_v.ml"
+ #use "tread_record_list_v.ml";;
+ #use "read_record_list_v.ml";;
+ #use "html_tree_v.ml";;
+ #use "thtml_tree_v.ml";;
+ #use "thtml_tree_v.ml";;
+ #use "thtml_tree_v.ml";;
+ #use "thtml_tree_v.ml";;
+ #use "ttools_v.ml";;
+ #use "ttools_v.ml";;
+ #use "tools_v.ml";;
+ #use "tools_v.ml";;
+ #use "ttools_v.ml";;
+ #use "tools_v.ml";;
+ #use "ttools_v.ml";;
+ #use "tread_record_list_v.ml";;
+ #use "ttools_v.ml";;
+#use "tread_record_list_v.ml";;
+#use "tread_record_list_v.ml";;
+#use "read_record_list_v.ml";;
+#use "tread_record_list_v.ml";;
+#use "tread_record_list_v.ml";;
+#use "read_record_list_v.ml";;
+#use "read_record_list_v.ml";;
+#use "read_record_list_v.ml";;
+#use "tread_record_list_v.ml";;
+#use "read_record_list_v.ml";;
+#use "tread_record_list_v.ml";;
+#use "read_record_list_v.ml";;
+#use "read_record_list_v.ml";;
+#use "tread_record_list_v.ml";;
+#use "tread_record_list_v.ml";;
+#use "tread_record_list_v.ml";;
+#use "read_record_list_v.ml";;
+#use "tread_record_list_v.ml";;
+#use "tread_record_list_v.ml";;
+#use "tread_record_list_v.ml";;
+#use "tread_record_list_v.ml";;
+#use "ttools_v.ml";;
+#use "ttools_v.ml";;
+#use "ttools_v.ml";;
+#use "ttools_v.ml";;
+#use "ttools_v.ml";; #use "thtml_lexer_v.ml"
+ #use "thtml_lexer_v.ml";;
+ #use "thtml_lexer_v.ml";;
+  #use "html_lexer_u_any.ml"
+#use "html_lexer_u_any.ml";;
+#use "html_lexer_u_any.ml";;
+let str = "abcd efgh\"";;
+ Scanf.sscanf str "%s" (fun s->s);;
+let ib=  let ib = Scanf.Scanning.from_string str;;
+let ib = Scanf.Scanning.from_string str;;
+ Scanf.bscanf ib "%s" (fun s->s);;
+let str "abdcd\"";;
+let str ="abdcd\"";;
+let ib = Scanf.Scanning.from_string str;;
+ Scanf.bscanf ib "%s" (fun s->s);;
+ Scanf.bscanf ib "%s" (fun s->s);;q

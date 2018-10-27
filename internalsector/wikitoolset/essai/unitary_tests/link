@@ -1,0 +1,1 @@
+ocamlc -warn-error A -g -I ../ -o runtest.byt unix.cma -cclib -lunix str.cma -cclib -lstr ../html_parser.cma make_test_v.cmo tread_record_list_v.cmo ttools_v.cmo

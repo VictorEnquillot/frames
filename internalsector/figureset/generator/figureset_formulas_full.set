@@ -1,0 +1,36 @@
+builders triangle_isoceles_equilateral = doublet point vector
+builders triangle_isoceles_right = doublet point vector
+builders triangle_isoceles_acute = doublet point vector
+builders triangle_isoceles_obtuse = doublet point vector
+builders triangle_scalene_right = doublet point vector
+builders triangle_scalene_acute = doublet point vector
+builders triangle_scalene_obtuse = doublet point vector
+
+builders point_constructor:ofstring = list coordinate_cartesian
+
+builders fake_son_constructor = singlet string
+
+builders vector_constructor = duo point
+
+builders x:ofstring = singlet float
+builders y:ofstring = singlet float
+builders z:ofstring = singlet float
+
+builders cylindrical_rho = singlet float
+builders cylindrical_phi = singlet float
+builders cylindrical_zed = singlet float
+
+builders polar_rho       = singlet float
+builders polar_theta     = singlet float
+
+builders spherical_rho  = singlet float
+builders spherical_phi  = singlet float
+builders spherical_theta = singlet float
+
+#builders 1d              = singlet integer
+#builders 2d              = singlet integer
+#builders 3d              = singlet integer
+
+# do not mix formula and value
+# formula is defined here (builders)
+# value is defined from some input database

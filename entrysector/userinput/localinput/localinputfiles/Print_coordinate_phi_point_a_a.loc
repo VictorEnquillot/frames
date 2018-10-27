@@ -1,0 +1,24 @@
+define P_a_a_tag 
+          external
+             external_name "A_A"
+             type [  "figure" "set" "fence" "point" "constructor" ]
+	     database "db1points"
+             domain "figure"
+	     category "tag"
+             end -- external
+       end -- define
+
+define Phi_a_a_tag 
+          external
+             external_name "phi"
+             type [  "spherical_phi"
+	     database "db1points"
+             domain "figure"
+	     category "tag"
+             end -- external
+       end -- define
+
+print Phi_a_a_tag
+      end -- print
+
+stop

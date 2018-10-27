@@ -1,0 +1,125 @@
+constructors chemical = atom 
+
+# constructors mendeleev = skipped
+
+
+# .atom
+constructors atom                           =   atom_onetied   atom_twotied   atom_threetied   atom_fourtied   atom_fivetied   atom_sixtied
+
+# ..atom_onetied ( A- )
+constructors atom_onetied                   =   atom_onetied_halfbridge   atom_onetied_single   atom_onetied_conjugated   atom_onetied_double   atom_onetied_triple
+
+# ...atom_onetied_halfbridge
+constructors atom_onetied_halfbridge        =   hb_s   hb_c   hb_d   hb_t
+
+# ...atom_onetied_single
+constructors atom_onetied_single            =   z_h_s   z_f_s   z_s_s
+
+# ...atom_onetied_conjugated
+constructors atom_onetied_conjugated        =   atom_onetied_conjugated_ax1en_diatomic
+
+# ....atom_onetied_conjugated_ax1en_diatomic
+constructors atom_onetied_conjugated_ax1en_diatomic =   z_o_c
+
+# ...atom_onetied_double
+constructors atom_onetied_double            =   z_o_d
+
+# ...atom_onetied_triple
+constructors atom_onetied_triple            =   z_c_t   z_n_t   z_o_t   z_s_t
+
+
+
+# ..atom_twotied ( -A- )
+constructors atom_twotied                   =   atom_twotied_singlesingle   atom_twotied_singleconjugated   atom_twotied_singledouble   atom_twotied_singletriple   atom_twotied_conjugatedconjugated   atom_twotied_conjugateddouble   atom_twotied_doubledouble
+
+# ...atom_twotied_singlesingle
+constructors atom_twotied_singlesingle     =   atom_twotied_singlesingle_ax1   atom_twotied_singlesingle_ax2 
+
+# ....atom_twotied_singlesingle_ax1
+constructors atom_twotied_singlesingle_ax1 =   atom_twotied_singlesingle_ax1en_diatomic:ofstring 
+
+# ....atom_twotied_singlesingle_ax2 
+constructors atom_twotied_singlesingle_ax2            =   atom_twotied_singlesingle_ax2e0_linear   atom_twotied_singlesingle_ax2e0_bent   atom_twotied_singlesingle_ax2e3_linear 
+
+# ....atom_twotied_singlesingle_ax2e0_linear 
+constructors atom_twotied_singlesingle_ax2e0_linear   =   s_be_s   s_hg_s 
+
+# ....atom_twotied_singlesingle_ax2e0_bent 
+constructors atom_twotied_singlesingle_ax2e0_bent     =   s_o_s   s_s_s 
+
+# ....atom_twotied_singlesingle_ax2e3_linear
+constructors atom_twotied_singlesingle_ax2e3_linear   =   s_im1_s   s_xe_s
+ 
+# ...atom_twotied_singleconjugated
+constructors atom_twotied_singleconjugated            =   s_n_c   s_o_c
+
+# ...atom_twotied_singledouble
+constructors atom_twotied_singledouble                =   s_n_d
+
+# ...atom_twotied_singletriple
+constructors atom_twotied_singletriple                =   atom_twotied_singletriple_ax2
+
+# ....atom_twotied_singletriple_ax2
+constructors atom_twotied_singletriple_ax2            =   atom_twotied_singletriple_ax2e0_linear
+
+# .....atom_twotied_singletriple_ax2e0_linear
+constructors atom_twotied_singletriple_ax2e0_linear   =   s_c_t   s_np1_t
+
+# ...atom_twotied_conjugatedconjugated 
+constructors atom_twotied_conjugatedconjugated        =   atom_twotied_conjugatedconjugated_ax2
+
+# ....atom_twotied_conjugatedconjugated_ax2
+constructors atom_twotied_conjugatedconjugated_ax2    =   atom_twotied_conjugatedconjugated_ax2e0_linear
+
+# .....atom_twotied_conjugatedconjugated_ax2e0_linear 
+constructors atom_twotied_conjugatedconjugated_ax2e0_linear =   c_n_c   c_o_c
+
+# ...atom_twotied_conjugateddouble
+constructors atom_twotied_conjugateddouble            =   atom_twotied_conjugateddouble_ax2
+
+# ....atom_twotied_conjugateddouble_ax2
+constructors atom_twotied_conjugateddouble_ax2        =   atom_twotied_conjugateddouble_ax2e0_linear
+
+# .....atom_twotied_conjugateddouble_ax2e0_linear
+constructors atom_twotied_conjugateddouble_ax2e0_linear = c_c_d
+
+# ...atom_twotied_doubledouble
+constructors atom_twotied_doubledouble                =   atom_twotied_doubledouble_ax2
+
+# ....atom_twotied_doubledouble_ax2
+constructors atom_twotied_doubledouble_ax2            =   atom_twotied_doubledouble_ax2_linear
+
+# .....atom_twotied_doubledouble_ax2_linear
+constructors atom_twotied_doubledouble_ax2_linear     =   d_c_d   d_np1_d   d_s_d
+
+# ..atom_threetied ( -A< )
+constructors atom_threetied                           =   atom_threetied_conjugatedconjugatedconjugated   atom_threetied_doubledoubledouble   atom_threetied_doublesinglesingle   atom_threetied_singleconjugatedconjugated   atom_threetied_singledoublesingle   atom_threetied_singlesingledouble   atom_threetied_singlesinglesingle
+
+constructors atom_threetied_conjugatedconjugatedconjugated =   c_c_cc   c_n_cc
+constructors atom_threetied_doubledoubledouble             =   d_s_dd
+constructors atom_threetied_singleconjugatedconjugated     =   s_c_cc   s_n_cc
+constructors atom_threetied_singlesinglesingle             =   s_n_ss   s_cl_ss
+constructors atom_threetied_singlesingledouble             =   s_c_sd   s_n_sd   s_s_sd
+
+
+# the order follows VSEPR index
+constructors atom_threetied_singledoublesingle     =   atom_threetied_singledoublesingle_ax3
+constructors atom_threetied_singledoublesingle_ax3 =   atom_threetied_singledoublesingle_ax3e0_trigonalplanar
+constructors atom_threetied_singledoublesingle_ax3e0_trigonalplanar =   s_c_ds
+
+constructors atom_threetied_doublesinglesingle     =   atom_threetied_doublesinglesingle_ax3
+constructors atom_threetied_doublesinglesingle_ax3 =   atom_threetied_doublesinglesingle_ax3e0_trigonalplanar
+constructors atom_threetied_doublesinglesingle_ax3e0_trigonalplanar =   d_c_ss   d_np1_ss
+
+
+# ..atom_fourtied ( >A< )
+constructors atom_fourtied                                =   atom_fourtied_singlesinglesinglesingle_ax4e1_tetrahedral
+
+constructors atom_fourtied_singlesinglesinglesingle_ax4e1_tetrahedral =   s_c_sss   s_np1_sss   s_n_sss   s_s_sss   s_xe_sss
+
+# ..atom_fivetied ( >A<- )
+constructors atom_fivetied                                =   s_cl_ssss
+
+# ..atom_sixtied ( ->A<- )
+constructors atom_sixtied                                 =   s_s_sssss
+

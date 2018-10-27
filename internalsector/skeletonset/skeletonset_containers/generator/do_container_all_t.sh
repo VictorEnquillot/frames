@@ -1,0 +1,65 @@
+# Coerced Containers
+
+do_container_from_symbol_this_t.sh skeleton_set_body_centered_aopefset
+do_container_from_symbol_this_t.sh skeleton_set_body_centered
+do_container_from_symbol_this_t.sh skeleton_set_body_periodic
+do_container_from_symbol_this_t.sh skeleton_set_body
+
+do_container_from_symbol_this_t.sh skeleton_set_fence_centered
+do_container_from_symbol_this_t.sh skeleton_set_fence_periodic
+do_container_from_symbol_this_t.sh skeleton_set_fence
+
+
+do_container_from_symbol_this_t.sh skeleton_set
+
+do_container_from_symbol_this_t.sh skeleton_context
+
+do_container_from_symbol_this_t.sh skeleton
+
+# Datastructure Containers
+# set_fence
+do_container_datastructure_t.sh skeleton_set_fence_centered_aopef  \
+skeleton_set_fence_centered_aopef uno
+
+do_container_datastructure_t.sh skeleton_set_fence_centered_ecppef \
+skeleton_set_fence_centered_ecppef uno
+
+do_container_datastructure_t.sh skeleton_set_fence_periodic_blochwave \
+skeleton_set_fence_periodic_blochwave uno 
+
+do_container_datastructure_t.sh skeleton_set_fence_periodic_wavelet \
+skeleton_set_fence_periodic_wavelet uno 
+
+
+# set_body
+do_container_datastructure_t.sh skeleton_set_body_periodic_blochwaveset \
+skeleton_set_fence_periodic_blochwave list
+
+do_container_datastructure_t.sh skeleton_set_body_periodic_waveletset \
+skeleton_set_fence_periodic_wavelet list
+
+do_container_datastructure_t.sh skeleton_set_body_centered_ecppefset \
+skeleton_set_fence_centered_ecppef list
+
+do_container_datastructure_t.sh skeleton_set_body_centered_aopefset_shellordinal  \
+skeleton_set_fence_centered_aopef list
+
+do_container_datastructure_t.sh skeleton_set_body_centered_aopefset_shellsymmetry \
+skeleton_set_body_centered_aopefset_shellordinal list
+
+do_container_datastructure_t.sh skeleton_set_body_centered_aopefset_onecenter     \
+skeleton_set_body_centered_aopefset_shellsymmetry list
+
+do_container_datastructure_t.sh skeleton_set_body_centered_aopefset_anycenter     \
+skeleton_set_body_centered_aopefset_onecenter list
+
+do_container_datastructure_t.sh skeleton_context_databox         skeleton_set_body list
+do_container_datastructure_t.sh skeleton_context_database        skeleton_context_databox list
+do_container_datastructure_t.sh skeleton_context_domain          skeleton_context_database list
+do_container_datastructure_t.sh skeleton_context_sector          skeleton_context_domain list
+
+echo ""
+echo " mv Skeleton*t.ml ../"
+echo ""
+
+exit

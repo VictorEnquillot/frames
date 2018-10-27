@@ -1,0 +1,199 @@
+(** {3 Registerpdb_value} *)
+
+open Make_test_v;;
+
+testing "0plw Registerpdb_data_v";;
+
+(* toplevel 
+   #use "0plw registerpdb_data_v.ml";; 
+*)
+
+
+let sym_enp = Entrypdb_symbol_t.ProteinID "0plw";;
+let fln = Entrypdb_data_v.filename_of_entrypdb_symbol sym_enp;;
+
+test_number 1 (
+fln 
+  =
+Filename_p.String
+  "/home/colonna/sources/ocaml_top/setup/databases/PDB/0plw.pdb"
+);;
+
+test_number 2 (
+  Entrypdb_data_v.data sym_enp
+(* : Entrypdb_data_t.entrypdb_value *)
+ =
+  [["HEADER    NEUROPEPTIDE                            09-JUN-03   1PLW              "];
+   ["TITLE     NMR STRUCTURE OF METHIONINE-ENKEPHALIN IN FAST TUMBLING               ";
+    "TITLE    2 DMPC/DHPC BICELLES                                                   "];
+   ["COMPND    MOL_ID: 1;                                                            ";
+    "COMPND   2 MOLECULE: MET-ENKEPHALIN 1;                                          ";
+    "COMPND   3 CHAIN: A;                                                            ";
+    "COMPND   4 ENGINEERED: YES                                                      "];
+   ["SOURCE    MOL_ID: 1;                                                            ";
+    "SOURCE   2 SYNTHETIC: YES;                                                      ";
+    "SOURCE   3 OTHER_DETAILS: THE PEPETIDE WAS CHEMICALLY SYNTHESIZED.              ";
+    "SOURCE   4 THE SEQUENCE OF THE PEPTIDE IS NATURALLY FOUND IN HOMO               ";
+    "SOURCE   5 SAPIENS (HUMAN)                                                      "];
+   ["KEYWDS    PEPTIDE, NEUROPEPTIDE                                                 "];
+   ["EXPDTA    SOLUTION NMR                                                          "];
+   ["NUMMDL    80                                                                    "];
+   ["AUTHOR    I.MARCOTTE,F.SEPAROVIC,M.AUGER,S.M.GAGNE                              "];
+   ["REVDAT   2   24-FEB-09 1PLW    1       VERSN                                    ";
+    "REVDAT   1   16-MAR-04 1PLW    0                                                "];
+   ["JRNL        AUTH   I.MARCOTTE,F.SEPAROVIC,M.AUGER,S.M.GAGNE                     ";
+    "JRNL        TITL   A MULTIDIMENSIONAL (1)H NMR INVESTIGATION OF THE             ";
+    "JRNL        TITL 2 CONFORMATION OF METHIONINE-ENKEPHALIN IN                     ";
+    "JRNL        TITL 3 FAST-TUMBLING BICELLES.                                      ";
+    "JRNL        REF    BIOPHYS.J.                    V.  86  1587 2004              ";
+    "JRNL        REFN                   ISSN 0006-3495                               ";
+    "JRNL        PMID   14990485                                                     "];
+   ["REMARK   1                                                                      ";
+    "REMARK   2                                                                      ";
+    "REMARK   2 RESOLUTION. NOT APPLICABLE.                                          ";
+    "REMARK   3                                                                      ";
+    "REMARK   3 REFINEMENT.                                                          ";
+    "REMARK   3   PROGRAM     : CNS 1.1                                              ";
+    "REMARK   3   AUTHORS     : AXEL T. BRUNGER                                      ";
+    "REMARK   3                                                                      ";
+    "REMARK   3  OTHER REFINEMENT REMARKS: THE STRUCTURES ARE BASED ON A TOTAL       ";
+    "REMARK   3  OF 2 PHI ANGLE AND 57 NOE-DERIVED DISTANCE CONSTRAINTS. 1000        ";
+    "REMARK   3  HIGH-TEMPERATURE STEPS WERE USED (15 PS) UP TO A FINAL              ";
+    "REMARK   3  TEMPERATURE OF 50000 K THEN 1000 COOLING STEPS (250 K, 15 PS)       ";
+    "REMARK   3  WERE APPLIED. FINALLY, 10 CYCLES OF 200 MINIMIZATION STEPS          ";
+    "REMARK   3  WERE PERFORMED. A REPEL CONSTANT VALUE OF 0.8 WAS USED              ";
+    "REMARK   4                                                                      ";
+    "REMARK   4 1PLW COMPLIES WITH FORMAT V. 3.15, 01-DEC-08                         ";
+    "REMARK 100                                                                      ";
+    "REMARK 100 THIS ENTRY HAS BEEN PROCESSED BY RCSB ON 12-JUN-03.                  ";
+    "REMARK 100 THE RCSB ID CODE IS RCSB019412.                                      ";
+    "REMARK 210                                                                      ";
+    "REMARK 210 EXPERIMENTAL DETAILS                                                 ";
+    "REMARK 210  EXPERIMENT TYPE                : NMR                                ";
+    "REMARK 210  TEMPERATURE           (KELVIN) : 295                                ";
+    "REMARK 210  PH                             : 4.5                                ";
+    "REMARK 210  IONIC STRENGTH                 : 9MM                                ";
+    "REMARK 210  PRESSURE                       : AMBIENT                            ";
+    "REMARK 210  SAMPLE CONTENTS                : 5.4UM MENK; DMPC/DHPC: 0.5:1       ";
+    "REMARK 210                                   (MOLAR RATIO); LIPID/PEPTIDE:      ";
+    "REMARK 210                                   25:1 (MOLAR RATIO); 10% W/V OF     ";
+    "REMARK 210                                   LIPIDS IN WATER; 90%H2O, 10%D2O    ";
+    "REMARK 210                                                                      ";
+    "REMARK 210  NMR EXPERIMENTS CONDUCTED      : 2D NOESY, G-COSY                   ";
+    "REMARK 210  SPECTROMETER FIELD STRENGTH    : 600 MHZ                            ";
+    "REMARK 210  SPECTROMETER MODEL             : INOVA                              ";
+    "REMARK 210  SPECTROMETER MANUFACTURER      : VARIAN                             ";
+    "REMARK 210                                                                      ";
+    "REMARK 210  STRUCTURE DETERMINATION.                                            ";
+    "REMARK 210   SOFTWARE USED                 : VNMR 6.1C, NMRPIPE 2.0 REV         ";
+    "REMARK 210                                   2001.117.12.48, NMRVIEW 5.0.4,     ";
+    "REMARK 210                                   CNS 1.1                            ";
+    "REMARK 210   METHOD USED                   : SIMULATED ANNEALING                ";
+    "REMARK 210                                                                      ";
+    "REMARK 210 CONFORMERS, NUMBER CALCULATED   : 200                                ";
+    "REMARK 210 CONFORMERS, NUMBER SUBMITTED    : 80                                 ";
+    "REMARK 210 CONFORMERS, SELECTION CRITERIA  : STRUCTURES WITH THE LOWEST         ";
+    "REMARK 210                                   ENERGY                             ";
+    "REMARK 210                                                                      ";
+    "REMARK 210 BEST REPRESENTATIVE CONFORMER IN THIS ENSEMBLE : 1                   ";
+    "REMARK 210                                                                      ";
+    "REMARK 210 REMARK: PFG EXPERIMENTS WERE ALSO PERFORMED ON THE SAMPLE            ";
+    "REMARK 215                                                                      ";
+    "REMARK 215 NMR STUDY                                                            ";
+    "REMARK 215 THE COORDINATES IN THIS ENTRY WERE GENERATED FROM SOLUTION           ";
+    "REMARK 215 NMR DATA.  PROTEIN DATA BANK CONVENTIONS REQUIRE THAT                ";
+    "REMARK 215 CRYST1 AND SCALE RECORDS BE INCLUDED, BUT THE VALUES ON              ";
+    "REMARK 215 THESE RECORDS ARE MEANINGLESS.                                       ";
+    "REMARK 900                                                                      ";
+    "REMARK 900 RELATED ENTRIES                                                      ";
+    "REMARK 900 RELATED ID: 1PLX   RELATED DB: PDB                                   ";
+    "REMARK 900 THE SAME PEPTIDE IN FAST TUMBLING BICELLES/DMPG                      "];
+   ["DBREF  1PLW A    1     5  UNP    P01210   PENK_HUMAN     100    104             "];
+   ["SEQRES   1 A    5  TYR GLY GLY PHE MET                                          "];
+   ["CRYST1    1.000    1.000    1.000  90.00  90.00  90.00 P 1           1          "];
+   ["ORIGX1      1.000000  0.000000  0.000000        0.00000                         "];
+   ["ORIGX2      0.000000  1.000000  0.000000        0.00000                         "];
+   ["ORIGX3      0.000000  0.000000  1.000000        0.00000                         "];
+   ["SCALE1      1.000000  0.000000  0.000000        0.00000                         "];
+   ["SCALE2      0.000000  1.000000  0.000000        0.00000                         "];
+   ["SCALE3      0.000000  0.000000  1.000000        0.00000                         "];
+   ["ATOM      1  N   TYR A   1       1.745   3.982   3.628  1.00  0.00           N  ";
+    "ATOM      2  CA  TYR A   1       0.807   3.643   2.527  1.00  0.00           C  ";
+    "ATOM      3  C   TYR A   1       0.956   4.609   1.356  1.00  0.00           C  ";
+    "ATOM      4  O   TYR A   1       1.689   5.595   1.440  1.00  0.00           O  ";
+    "ATOM      5  CB  TYR A   1      -0.622   3.693   3.070  1.00  0.00           C  ";
+    "ATOM      6  CG  TYR A   1      -1.629   2.970   2.205  1.00  0.00           C  ";
+    "ATOM      7  CD1 TYR A   1      -1.703   1.583   2.200  1.00  0.00           C  ";
+    "ATOM      8  CD2 TYR A   1      -2.504   3.678   1.390  1.00  0.00           C  ";
+    "ATOM      9  CE1 TYR A   1      -2.622   0.921   1.407  1.00  0.00           C  ";
+    "ATOM     10  CE2 TYR A   1      -3.426   3.023   0.595  1.00  0.00           C  ";
+    "ATOM     11  CZ  TYR A   1      -3.480   1.645   0.607  1.00  0.00           C  ";
+    "ATOM     12  OH  TYR A   1      -4.396   0.991  -0.184  1.00  0.00           O  ";
+    "ATOM     13  H1  TYR A   1       1.508   4.937   3.963  1.00  0.00           H  ";
+    "ATOM     14  H2  TYR A   1       2.711   3.948   3.242  1.00  0.00           H  ";
+    "ATOM     15  H3  TYR A   1       1.616   3.279   4.382  1.00  0.00           H  ";
+    "ATOM     16  HA  TYR A   1       1.022   2.641   2.187  1.00  0.00           H  ";
+    "ATOM     17  HB2 TYR A   1      -0.643   3.241   4.049  1.00  0.00           H  ";
+    "ATOM     18  HB3 TYR A   1      -0.932   4.724   3.147  1.00  0.00           H  ";
+    "ATOM     19  HD1 TYR A   1      -1.030   1.018   2.827  1.00  0.00           H  ";
+    "ATOM     20  HD2 TYR A   1      -2.458   4.756   1.382  1.00  0.00           H  ";
+    "ATOM     21  HE1 TYR A   1      -2.665  -0.158   1.417  1.00  0.00           H  ";
+    "ATOM     22  HE2 TYR A   1      -4.096   3.591  -0.032  1.00  0.00           H  ";
+    "ATOM     23  HH  TYR A   1      -5.275   1.335  -0.009  1.00  0.00           H  ";
+    "ATOM     24  N   GLY A   2       0.256   4.318   0.266  1.00  0.00           N  ";
+    "ATOM     25  CA  GLY A   2       0.315   5.161  -0.907  1.00  0.00           C  ";
+    "ATOM     26  C   GLY A   2      -0.088   4.423  -2.169  1.00  0.00           C  ";
+    "ATOM     27  O   GLY A   2      -0.467   5.041  -3.163  1.00  0.00           O  ";
+    "ATOM     28  H   GLY A   2      -0.309   3.524   0.260  1.00  0.00           H  ";
+    "ATOM     29  HA2 GLY A   2      -0.351   5.997  -0.764  1.00  0.00           H  ";
+    "ATOM     30  HA3 GLY A   2       1.323   5.529  -1.023  1.00  0.00           H  ";
+    "ATOM     31  N   GLY A   3      -0.011   3.095  -2.127  1.00  0.00           N  ";
+    "ATOM     32  CA  GLY A   3      -0.380   2.294  -3.278  1.00  0.00           C  ";
+    "ATOM     33  C   GLY A   3       0.790   1.523  -3.855  1.00  0.00           C  ";
+    "ATOM     34  O   GLY A   3       1.037   1.563  -5.060  1.00  0.00           O  ";
+    "ATOM     35  H   GLY A   3       0.295   2.657  -1.304  1.00  0.00           H  ";
+    "ATOM     36  HA2 GLY A   3      -1.142   1.591  -2.981  1.00  0.00           H  ";
+    "ATOM     37  HA3 GLY A   3      -0.781   2.943  -4.043  1.00  0.00           H  ";
+    "ATOM     38  N   PHE A   4       1.508   0.816  -2.991  1.00  0.00           N  ";
+    "ATOM     39  CA  PHE A   4       2.655   0.026  -3.411  1.00  0.00           C  ";
+    "ATOM     40  C   PHE A   4       2.341  -1.461  -3.298  1.00  0.00           C  ";
+    "ATOM     41  O   PHE A   4       2.771  -2.264  -4.126  1.00  0.00           O  ";
+    "ATOM     42  CB  PHE A   4       3.879   0.358  -2.553  1.00  0.00           C  ";
+    "ATOM     43  CG  PHE A   4       3.758   1.637  -1.773  1.00  0.00           C  ";
+    "ATOM     44  CD1 PHE A   4       4.135   2.846  -2.331  1.00  0.00           C  ";
+    "ATOM     45  CD2 PHE A   4       3.267   1.622  -0.478  1.00  0.00           C  ";
+    "ATOM     46  CE1 PHE A   4       4.023   4.021  -1.611  1.00  0.00           C  ";
+    "ATOM     47  CE2 PHE A   4       3.154   2.790   0.247  1.00  0.00           C  ";
+    "ATOM     48  CZ  PHE A   4       3.532   3.992  -0.319  1.00  0.00           C  ";
+    "ATOM     49  H   PHE A   4       1.258   0.823  -2.044  1.00  0.00           H  ";
+    "ATOM     50  HA  PHE A   4       2.867   0.265  -4.442  1.00  0.00           H  ";
+    "ATOM     51  HB2 PHE A   4       4.032  -0.440  -1.844  1.00  0.00           H  ";
+    "ATOM     52  HB3 PHE A   4       4.746   0.438  -3.192  1.00  0.00           H  ";
+    "ATOM     53  HD1 PHE A   4       4.519   2.868  -3.340  1.00  0.00           H  ";
+    "ATOM     54  HD2 PHE A   4       2.971   0.683  -0.035  1.00  0.00           H  ";
+    "ATOM     55  HE1 PHE A   4       4.320   4.959  -2.055  1.00  0.00           H  ";
+    "ATOM     56  HE2 PHE A   4       2.768   2.764   1.255  1.00  0.00           H  ";
+    "ATOM     57  HZ  PHE A   4       3.445   4.908   0.246  1.00  0.00           H  ";
+    "ATOM     58  N   MET A   5       1.590  -1.815  -2.261  1.00  0.00           N  ";
+    "ATOM     59  CA  MET A   5       1.215  -3.202  -2.022  1.00  0.00           C  ";
+    "ATOM     60  C   MET A   5       0.151  -3.657  -3.016  1.00  0.00           C  ";
+    "ATOM     61  O   MET A   5      -0.183  -2.869  -3.926  1.00  0.00           O  ";
+    "ATOM     62  CB  MET A   5       0.700  -3.371  -0.590  1.00  0.00           C  ";
+    "ATOM     63  CG  MET A   5       1.561  -2.682   0.457  1.00  0.00           C  ";
+    "ATOM     64  SD  MET A   5       2.792  -3.785   1.178  1.00  0.00           S  ";
+    "ATOM     65  CE  MET A   5       4.246  -2.740   1.142  1.00  0.00           C  ";
+    "ATOM     66  OXT MET A   5      -0.338  -4.797  -2.877  1.00  0.00           O  ";
+    "ATOM     67  H   MET A   5       1.283  -1.124  -1.637  1.00  0.00           H  ";
+    "ATOM     68  HA  MET A   5       2.096  -3.811  -2.152  1.00  0.00           H  ";
+    "ATOM     69  HB2 MET A   5      -0.298  -2.963  -0.529  1.00  0.00           H  ";
+    "ATOM     70  HB3 MET A   5       0.661  -4.425  -0.357  1.00  0.00           H  ";
+    "ATOM     71  HG2 MET A   5       2.072  -1.848  -0.003  1.00  0.00           H  ";
+    "ATOM     72  HG3 MET A   5       0.920  -2.317   1.247  1.00  0.00           H  ";
+    "ATOM     73  HE1 MET A   5       4.163  -2.035   0.328  1.00  0.00           H  ";
+    "ATOM     74  HE2 MET A   5       5.125  -3.350   1.001  1.00  0.00           H  ";
+    "ATOM     75  HE3 MET A   5       4.327  -2.203   2.076  1.00  0.00           H  "];
+   ["TER      76      MET A   5                                                      "];
+   ["ENDMDL                                                                          "];
+   ["MASTER       60    0    0    0    0    0    0    6 6000   80    0    1          "];
+  ["END                                                                             "]]
+);;

@@ -1,0 +1,1 @@
+grep and $1 | sed -e 's/_symbol =//' -e 's/and //' | sed -e 's/\(.*\)_block/block_\1/'

@@ -1,0 +1,17 @@
+ledit -x -h ./.debug-history ocamldebug \
+-I $BAS \
+-I $FIL \
+-I $DAT \
+-I $COM \
+-I $COMDBA \
+-I $DGEN/adb \
+-I $SGEN \
+-I $TGEN \
+-I $IGEN \
+-I $FGEN \
+-I ../ \
+runtest.byt
+
+# 
+# display wrd_l
+# print wrd_l 

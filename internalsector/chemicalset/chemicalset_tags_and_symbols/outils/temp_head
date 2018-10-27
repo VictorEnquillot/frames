@@ -1,0 +1,4 @@
+# DO NOT EDIT. created by do_build_do_has_entity_constructor_set.sh
+
+entity_without_constructor_set_name () {
+  case $1 in

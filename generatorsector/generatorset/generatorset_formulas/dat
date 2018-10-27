@@ -1,0 +1,4 @@
+  let sym_ent_dat = 
+    Tools_fgnr_v.entity_data_symbol_of_camlline_dectup
+      dec_cbd 
+  in

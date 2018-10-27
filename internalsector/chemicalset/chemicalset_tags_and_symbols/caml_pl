@@ -1,0 +1,9 @@
+set -x
+caml_t_ml_to_v_ml_or_mli.pl mli atom_symbol_t.ml  > ai
+caml_t_ml_to_v_ml_or_mli.pl ml atom_symbol_t.ml  > a
+caml_t_ml_to_v_ml_or_mli.pl mli block_symbol_t.ml  > bi
+caml_t_ml_to_v_ml_or_mli.pl ml block_symbol_t.ml  > b
+caml_t_ml_to_v_ml_or_mli.pl mli segment_symbol_t.ml  > si
+caml_t_ml_to_v_ml_or_mli.pl ml segment_symbol_t.ml  > s
+caml_t_ml_to_v_ml_or_mli.pl mli fragment_symbol_t.ml  > fi
+caml_t_ml_to_v_ml_or_mli.pl ml fragment_symbol_t.ml  > f

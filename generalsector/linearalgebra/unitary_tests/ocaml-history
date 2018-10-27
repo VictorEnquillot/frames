@@ -1,0 +1,98 @@
+#use "tpoint_3d_v.ml";; 
+let p1 = P3d_v.make "P1" 1.0 2.0 3.0;; 
+#use "tpoint_3d_v.ml";; 
+p2;;
+#use "tpoint_3d_v.ml";; 
+p2;;
+P3d_v.difference p1 p1;;
+#use "tpoint_3d_v.ml";; 
+ #use "tcoordinate_v.ml";; 
+Coordinate_v.make_internal;;
+ #use "tcoordinate_v.ml";; 
+Crd_v.make_internal (1.0, p1) (theta, p2) (chi, p3);;
+let zero len =
+;;
+let rec int_zero_list_of_length = function
+  | 0 -> []
+  | i -> 0 :: int_maxtomin_list_of_length (i-1)
+;;
+let rec int_zero_list_of_length = function
+  | 0 -> []
+  | i -> 0 :: int_zero_list_of_length (i-1)
+;;
+int_zero_list_of_length 3;;
+let rec same_int_list_of_length i = function
+  | 0 -> []
+  | len -> i :: int_zero_list_of_length (len-1)
+;;
+same_int_list_of_length  5 3;;
+let rec same_int_list_of_length i = function
+  | 0 -> []
+  | len -> i :: same_int_list_of_length (len-1)
+;;
+  | len -> i :: same_int_list_of_length (len-1)
+;;
+let rec same_int_list_of_length i = function
+  | 0 -> []
+  | len -> i :: same_int_list_of_length i (len-1)
+;;
+same_int_list_of_length  5 3;;
+ #use "tpoint_v.ml";; 
+(
+zero_4
+=
+[0.; 0.; 0.; 0.]
+);;
+Point_v.difference pnt_a pnt_b;;
+ #use "tpoint_v.ml";; 
+Point_v.difference pnt_a pnt_b;;
+Point_v.addition_with_vector pnt_a vct_b;;
+ #use "tvector_v.ml";; 
+Vct_v.unity_ith 2 4;;
+ #use "vector_v.ml";; 
+let nonzero_of_float_at_int_of_int f i len = 
+  if i = 0
+  then
+    f :: zero (len-1)
+  else
+    if i = len
+    then
+      zero (len-1) @ [f]
+    else
+      let v_1 = zero i in
+      let v_2 = zero (len-i) in
+      v_1 @ [f] @ v_2
+;; 
+nonzero_of_float_at_int_of_int 5. 3 5;;
+ #use "vector_v.ml";; 
+ #use "tvector_v.ml";; 
+ #use "vector_v.ml";; 
+Vec_v.nonzero_at_int_of_float_of_int 2 1. 5 ;;
+ #use "tvector_v.ml";; 
+ #use "vector_v.ml";; 
+nonzero_at_int_of_float_of_int 2 5. 5;;
+nonzero_at_int_of_float_of_int 1 5. 5;;
+nonzero_at_int_of_float_of_int 3 5. 5;;
+nonzero_at_int_of_float_of_int 4 5. 5;;
+ #use "vector_v.ml";; 
+nonzero_at_int_of_float_of_int 4 5. 5;;
+ #use "vector_v.ml";; 
+nonzero_at_int_of_float_of_int 4 5. 5;;
+nonzero_at_int_of_float_of_int 2 5. 5;;
+ #use "vector_v.ml";; 
+nonzero_at_int_of_float_of_int 2 5. 5;;
+ #use "vector_v.ml";; 
+nonzero_at_int_of_float_of_int 2 5. 5;;
+ #use "vector_v.ml";; 
+nonzero_at_int_of_float_of_int 2 5. 5;;
+nonzero_at_int_of_float_of_int 0 5. 5;;
+nonzero_at_int_of_float_of_int 4 5. 5;;
+nonzero_at_int_of_float_of_int 5 5. 5;;
+ #use "vector_v.ml";; 
+nonzero_at_int_of_float_of_int 5 5. 5;;
+nonzero_at_int_of_float_of_int 3 5. 5;;
+ #use "vector_v.ml";; 
+same_element_list_of_element_of_length 4 5;;
+ #use "list_v.ml";; 
+same_element_list_of_element_of_length 4 5;;
+int_maxtomin_list_of_length 5;;

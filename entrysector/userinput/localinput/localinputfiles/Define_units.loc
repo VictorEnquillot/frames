@@ -1,0 +1,15 @@
+define Uni_len
+       external 
+         type [ "units" "length" "bohr" ]
+         external_context Con_nwc
+         end -- external
+       end -- define
+
+define Uni_ang
+       external 
+         type [ "units" "angle" "radian" ]
+         external_context Con_nwc
+         end -- external
+       end -- define
+
+stop

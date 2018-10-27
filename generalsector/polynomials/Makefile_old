@@ -1,0 +1,26 @@
+# Makefile for directory general/polynomials
+
+LIB = polynomials
+
+SETUP_DIR = ../../..
+MAKEFILES_DIR = $(SETUP_DIR)/Mk
+
+# 1. All directories and libraries
+include $(MAKEFILES_DIR)/All_directories_and_libraries.mk
+
+# 2. Include the generic configuration for Caml applications.
+include $(MAKEFILES_DIR)/Config.mk
+
+# 3. needed libs and dirs
+NEEDED_DIRS = 
+NEEDED_LIBS =
+ 
+# 4. -I ../dir ...
+CAMLCINCLUDES = -I .
+
+# 5. CAMLFILES (*.mli and *.ml) from include
+include ocaml_files_mli.mk
+
+# 6. All needed_libs bytlib
+include $(MAKEFILES_DIR)/All_library.mk
+

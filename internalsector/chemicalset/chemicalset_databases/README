@@ -1,0 +1,26 @@
+Directory frames/databases/chemicalset_databases
+
+Module Sequencepdb_translation_v 
+
+module Cps_v : frames/databases/chemicalset_databases/pdb/clusterpdb_symbol_v
+module Psp_v : frames/databases/chemicalset_databases/pdb/protein_sequencepdb_v.ml
+
+             | Frames universe
+  molecule_aminoacid_symbol_list
+             |
+             | map molecule_aminoacid_symbol_of_residuepdb_symbol
+             v
+ ------------------------------------------------------------------
+             | Pdb universe
+             v
+  residuepdb_symbol_list
+             |
+             | Csp_v.residuepdb_symbol_list_off_chain_sequencepdb
+             v 
+  chain_sequencepdb
+             |
+             | chain_sequencepdb_of_polypeptide_symbol
+  ------------------------------------------------------------------
+             | Frames universe
+             v
+  polypeptide_symbol

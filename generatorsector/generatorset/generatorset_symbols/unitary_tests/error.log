@@ -1,0 +1,78 @@
+
+Testing Abbreviation_argument_u_any.ml
+
+Testing results:
+Total: 4 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Abbreviation_module_v
+   Abbreviation_module_u_any.ml
+
+Testing results:
+Total: 10 tests performed.
+
+
+All tests succeeded.
+
+File "Camlfile_implementation_symbol_u_any.ml", line 10, characters 15-72:
+Error: Unbound module Cis_t
+File "_none_", line 1:
+Error: Cannot find file Camlfile_implementation_symbol_u_any.cmx
+Camlfile_implementation_symbol_u_any
+File "Camlfile_symbol_u_any.ml", line 11, characters 15-72:
+Error: Unbound module Cis_t
+File "_none_", line 1:
+Error: Cannot find file Camlfile_symbol_u_any.cmx
+Camlfile_symbol_u_any
+
+Testing Camlline_constant_pervasive_symbol_u_any.ml
+
+Testing results:
+Total: 3 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Camlline_symbol_u with
+   Camlline_symbol_u_any.ml
+
+Testing results:
+Total: 2 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Camlparagraph_symbol_u with
+   Camlparagraph_symbol_u_any.ml
+
+Testing results:
+Total: 1 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Entity_symbol_u with
+   Entity_symbol_u_any.ml
+
+Testing results:
+Total: 14 tests performed.
+
+
+All tests succeeded.
+
+
+Testing Item_each_grandson_leaf_symbol_u with
+   Item_each_grandson_leaf_symbol_u_any.ml
+
+Testing results:
+Total: 3 tests performed.
+
+
+All tests succeeded.
+

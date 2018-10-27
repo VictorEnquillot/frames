@@ -1,0 +1,98 @@
+# https://en.wikipedia.org/wiki/MP3#File_structure
+# http://id3.org/id3v2.3.0
+# http://www.mp3-tech.org/programmer/frame_header.html
+
+# metadata == tag 
+
+# frame_specification_id3v2_3 specific features
+# frame_specification_id3v2_4 specific features
+# frame_specification_id3v2 common features
+# constructors   frequency = frequency_00 frequency_01 frequency_10 frequency_11
+
+constructors   music                              =   mp3_data   mp3_frame   mp3_elementary_stream   mp3_file   mp3_header   mp3_layout_tag   tag_id3
+
+constructors   mp3_file                           =   mp3_file_id3v1   mp3_file_id3v2
+
+constructors   mp3_file_id3v1                     =   mp3_file_id3v1_1   mp3_file_id3v1_2   mp3_file_id3v1_2_5
+
+constructors   mp3_file_id3v2                     =   mp3_file_id3v2_1   mp3_file_id3v2_2   mp3_file_id3v2_2_5
+
+
+
+
+constructors   mp3_frame                          =   mp3_frame_audio   mp3_frame_video   mp3_frame_closed_caption
+
+constructors   mp3_data                           =   mp3_data_audio   mp3_data_video   mp3_data_closed_caption
+
+constructors   mp3_elementary_stream              =   mp3_elementary_stream_audio    mp3_elementary_stream_video   mp3_elementary_stream_closed_caption
+
+
+constructors   mp3_header                         =   mp3_header_field   mp3_header_tag   mp3_header_1 mp3_header_2 mp3_header_2_5
+
+
+constructors   mp3_header_field                   =   mp3_header_field_onebit   mp3_header_field_twobits   mp3_header_field_fourbits   mp3_header_field_elevenbits
+
+constructors   mp3_header_field_onebit            =   version   error_protection   pad_bit   intensity_stereo ms_stereo   private_bit   copyright   original
+
+constructors   mp3_header_field_twobits           =   layer   frequency mode   mode_extension emphasis
+
+constructors   mp3_header_field_fourbits          =   bit_rate 
+
+constructors   mp3_header_field_elevenbits        =   sync_word
+
+constructors   mp3_header_tag                     =   mp3_header_tag_onebit   mp3_header_tag_twobits   id3v2   mp3_header_tag_fourbits    mp3_header_tag_twelvebits
+
+constructors   mp3_layout_tag                     =   string_1   string_3   string_4   string_6   string_30   string_60
+
+
+constructors   tag_id3                            =   tag_id3v1   tag_id3v2
+
+
+constructors   tag_id3v1                          =   tag_id3v1_128   tag_id3v1_227   tag_id3v1_0  tag_id3v1_1  tag_id3v1_extended
+
+constructors   tag_id3v2                          =   tag_id3v2_base   tag_id3v2_specific 
+
+constructors   tag_id3v2_base                     =   tag_id3v2_base_unique   tag_id3v2_base_multiple
+
+constructors   tag_id3v2_base_multiple            =   tpe1   tcom   text   toly   tope
+
+constructors   tag_id3v2_base_unique              =   aenc   apic   comm   comr   encr   etco   geob   grid   link   mcdi   mllt   owne   pcnt   popm   poss   priv   rbuf   rvrb   sylt   sytc   talb   tbpm   tcon   tcop   tdly   tenc   tflt   tit1   tit2   tit3   tkey   tlan   tlen   tmed   toal   tofn   town   tpe2   tpe3   tpe4   tpos   tpub   trck   trsn   trso   tsrc   tsse   txxx   ufid   user   uslt   wcom   wcop   woaf   woar   woas   wors   wpay   wpub   wxxx  
+
+constructors   tag_id3v2_specific                 =   tag_id3v2_3_specific   tag_id3v2_4_specific 
+
+constructors   tag_id3v2_3_specific               =   equa   ipls   rvad   tdat   time   tory   trda   tyer   tsiz   
+
+constructors   tag_id3v2_4_specific               =   aspi   equ2   rva2   seek   sign   tden   tdor   tdrc   tdrl   tdtg   tipl   tmcl   tmoo   tpro   tsoa   tsop   tsot   tsst 
+
+constructors   tag_id3v1_128                      =   header_3   title_30   artist_30   album_30   year_4   comment_28   comment_30   zero_byte_1   track_1   genre_1
+
+constructors   tag_id3v1_227                      =   header_4   title_60   artist_60   album_60   speed_1   genre_30   start_time_6   end_time_6
+
+
+constructors   version                            =   version_1   version_2   version_2_5
+
+
+description ASPI = Audio
+description EQU2 = Equalisation
+description RVA2 = Relative
+description SEEK = Seek
+description SIGN = Signature
+description TDEN = Encoding
+description TDOR = Original
+description TDRC = Recording
+description TDRL = Release
+description TDTG = Tagging
+description TIPL = Involved
+description TMCL = Musician
+description TMOO = Mood
+description TPRO = Produced
+description TSOA = Album
+description TSOP = Performer
+description TSOT = Title
+description TSST = Set
+description mp3_frame = doublet mp3_header mp3_data
+description mp3_header = 32_bits or 4 Characters 
+
+#constructors   tag_id3v2_base_unique             =   aenc   apic   comm   comr   encr   etco   geob   grid   link   mcdi   mllt   owne   pcnt   popm   poss   priv   rbuf   rvrb   sylt   sytc   talb   tbpm   tcon   tcop   tdly   tenc   tflt   tit1   tit2   tit3   tkey   tlan   tlen   tmed   toal   tofn   town   tpe2   tpe3   tpe4   tpos   tpub   trck   trsn   trso   tsrc   tsse   txxx   ufid   user   uslt   wcom   wcop   woaf   woar   woas   wors   wpay   wpub   wxxx  
+
+#constructors   mp3_header_element                 =   sync_word   version   error_protection   pad_bit   intensity_stereo   ms_stereo   private_bit   copyright   original   layer   mode   mode_extension   frequency   emphasis   bit_rate   sync

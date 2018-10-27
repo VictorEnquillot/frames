@@ -1,0 +1,6 @@
+let (sym_ent, sym_cat, sym_dos) = tri_ent in	
+
+     (Entity_symbol_t.entity_symbol, 
+      Category_symbol_t.category_symbol,
+      Domainset_symbol_t.domainset_symbol
+     ) Triplet_t.triplet

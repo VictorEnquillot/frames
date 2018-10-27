@@ -1,0 +1,160 @@
+REGISTERS_V_MLI := \
+<Domain>_as_son_tag_list_by_<domain>_as_father_tag_register_v.mli \
+<Domain>_context_sole_index_by_<domain>_context_symbol_register_v.mli \
+<Domain>_creation_module_name_by_sole_index_register_v.mli \
+<Domain>_symbol_by_sole_index_register_v.mli \
+<Domain>_tag_all_list_by_<domain>_fullnameoffile_register_v.mli \
+<Domain>_tag_by_<domain>_fence_variable_name_symbol_register_v.mli \
+<Domain>_tag_subtree_by_<domain>_as_root_tag_register_v.mli \
+<Domain>_tag_tree_by_<domain>_fullnameoffile_register_v.mli \
+ 
+REGISTERS_EXTRA_V_MLI := \
+<Domain>_as_body_handle_command_tag_subtree_by_<domain>_body_handle_command_tag_register_v.mli \
+<Domain>_body_handle_command_tag_list_by_<domain>_fullnameoffile_register_v.mli \
+<Domain>_as_body_handle_command_tag_subtree_list_by_<domain>_fullnameoffile_register_v.mli \
+<Domain>_fence_variable_name_tag_list_by_<domain>_fullnameoffile_register_v.mli \
+<Domain>_fence_variable_name_entity_tag_list_by_<domain>_fullnameoffile_register_v.mli \
+<Domain>_fence_variable_name_context_tag_list_by_<domain>_fullnameoffile_register_v.mli \
+<Domain>_fence_variable_name_operator_tag_list_by_<domain>_fullnameoffile_register_v.mli \
+<Domain>_fence_variable_name_entity_tag_list_by_<domain>_fence_variable_name_entity_string_off_register_v.mli \
+<Domain>_fence_cell_tag_list_by_<domain>_fullnameoffile_register_v.mli \
+<Domain>_fence_cell_target_operand_tag_list_by_<domain>_fullnameoffile_register_v.mli \
+<Domain>_fence_cell_target_operator_tag_list_by_<domain>_fullnameoffile_register_v.mli \
+<Domain>_fence_cell_external_context_tag_list_by_<domain>_fullnameoffile_register_v.mli \
+<Domain>_fence_cell_database_string_off_by_<domain>_fence_variable_name_entity_string_off_register_v.mli \
+<Domain>_fence_cell_databox_string_off_by_<domain>_fence_variable_name_entity_string_off_register_v.mli \
+<Domain>_fence_cell_domain_string_off_by_<domain>_fence_variable_name_entity_string_off_register_v.mli \
+  
+CONTEXT_TAGS_V_MLI := \
+<Domain>_as_context_domain_tag_by_unit_provider_v.mli \
+<Domain>_context_domain_tag_by_unit_provider_v.mli \
+ \
+<Domain>_as_context_file_tag_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_context_file_tag_by_<domain>_fullnameoffile_provider_v.mli \
+#  \
+# <Domain>_as_context_file_tag_by_<domain>_nameoffile_provider_v.mli \
+# <Domain>_context_file_tag_by_<domain>_nameoffile_provider_v.mli \
+ 
+INPUT_FILES_V_MLI := \
+<Domain>_fullnameoffile_by_<domain>_context_file_tag_provide_v.mli \
+ 
+TRANSLATORS_FROM_PARSER_V_MLI := \
+<Domain>_symbol_subtree_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_symbol_subtree_by_<domain>_context_file_tag_provider_v.mli \
+ 
+TREES_V_MLI := \
+<Domain>_tag_tree_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_tag_tree_by_<domain>_context_file_tag_provider_v.mli \
+  
+INTERFACES_V_MLI := \
+<Domain>_tag_all_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_tag_all_list_by_parameters_general_provider_v.mli \
+
+EXTRACTORS_V_MLI := \
+<Domain>_fullnameoffile_by_sole_index_provider_v.mli \
+<Domain>_symbol_by_sole_index_register_filler_v.mli \
+<Domain>_symbol_by_sole_index_provider_v.mli \
+<Domain>_any_category_by_sole_index_extractor_v.mli \
+<Domain>_fullnameoffile_by_<domain>_tag_provider_v.mli \
+Son_<domain>_tag_list_by_father_<domain>_tag_provider_v.mli \
+   
+SUBLISTS_V_MLI := \
+<Domain>_body_handle_command_tag_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_body_handle_command_unit_tag_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_body_handle_command_creation_define_tag_list_by_<domain>_fullnameoffile_provider_v.mli \
+ \
+<Domain>_fence_variable_name_tag_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_fence_variable_name_entity_tag_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_fence_variable_name_entity_tag_list_by_<domain>_fence_variable_name_entity_string_off_provider_v.mli \
+<Domain>_fence_variable_name_entity_implicit_tag_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_fence_variable_name_context_tag_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_fence_variable_name_operator_tag_list_by_<domain>_fullnameoffile_provider_v.mli \
+ \
+<Domain>_fence_cell_tag_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_fence_cell_external_context_tag_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_fence_cell_target_operand_tag_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_fence_cell_target_operator_tag_list_by_<domain>_fullnameoffile_provider_v.mli \
+ 
+SUBTREES_LIST_V_MLI := \
+<Domain>_as_body_handle_command_tag_subtree_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_as_body_handle_command_creation_define_tag_subtree_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_as_body_handle_command_creation_define_tag_context_subtree_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_as_body_handle_command_creation_define_tag_entity_external_subtree_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_as_body_handle_command_creation_define_tag_entity_target_subtree_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_as_body_handle_command_creation_define_tag_operator_subtree_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_as_body_handle_command_unit_tag_subtree_list_by_<domain>_fullnameoffile_provider_v.mli \
+<Domain>_as_body_handle_command_unit_print_tag_subtree_list_by_<domain>_fullnameoffile_provider_v.mli \
+ 
+SUBTREES_V_MLI := \
+<Domain>_as_body_handle_command_tag_subtree_by_<domain>_body_handle_command_tag_provider_v.mli \
+ \
+<Domain>_as_body_handle_command_creation_define_tag_subtree_by_<domain>_fence_variable_name_tag_provider_v.mli \
+<Domain>_as_body_handle_command_creation_define_tag_subtree_by_<domain>_fence_variable_name_string_off_provider_v.mli \
+ \
+<Domain>_as_body_handle_command_creation_define_tag_subtree_by_<domain>_fence_variable_name_entity_tag_provider_v.mli \
+<Domain>_as_body_handle_command_creation_define_tag_subtree_by_<domain>_fence_variable_name_entity_string_off_provider_v.mli \
+<Domain>_tag_subtree_by_<domain>_as_root_tag_provider_v.mli \
+ 
+COMMAND_DEFINES_V_MLI := \
+<Domain>_body_handle_command_creation_define_tag_by_<domain>_fence_variable_name_tag_provider_v.mli \
+<Domain>_body_handle_command_creation_define_tag_by_<domain>_fence_variable_name_entity_tag_provider_v.mli \
+ 
+COMMAND_UNITS_V_MLI := \
+<Domain>_body_handle_command_unit_tag_by_<domain>_fence_variable_name_entity_implicit_tag_provider_v.mli \
+ 
+FENCE_VARIABLE_NAMES_V_MLI := \
+<Domain>_fence_variable_name_entity_implicit_tag_by_<domain>_body_handle_command_unit_tag_provider_v.mli \
+<Domain>_fence_variable_name_entity_as_operand_tag_by_<domain>_fence_variable_name_entity_implicit_tag_provider_v.mli \
+<Domain>_as_fence_variable_name_entity_as_operand_tag_by_<domain>_fence_variable_name_entity_implicit_tag_provider_v.mli \
+<Domain>_fence_variable_name_entity_tag_by_<domain>_fence_cell_target_operand_tag_provider_v.mli \
+<Domain>_fence_variable_name_operator_tag_by_<domain>_fence_cell_target_operator_tag_provider_v.mli \
+<Domain>_fence_variable_name_context_tag_by_<domain>_fence_cell_external_context_tag_provider_v.mli \
+ \
+<Domain>_fence_cell_target_operator_tag_by_<domain>_fence_variable_name_entity_target_tag_provider_v.mli \
+<Domain>_fence_cell_target_operand_tag_by_<domain>_fence_variable_name_entity_target_tag_provider_v.mli \
+ \
+<Domain>_fence_cell_external_context_tag_by_<domain>_fence_variable_name_entity_tag_provider_v.mli \
+<Domain>_fence_cell_external_name_tag_by_<domain>_fence_variable_name_entity_tag_provider_v.mli \
+<Domain>_fence_cell_external_name_tag_by_<domain>_fence_variable_name_entity_string_off_provider_v.mli \
+<Domain>_fence_cell_external_name_string_off_by_<domain>_fence_variable_name_entity_string_off_provider_v.mli \
+ \
+<Domain>_fence_cell_databox_tag_by_<domain>_fence_variable_name_context_tag_provider_v.mli \
+<Domain>_fence_cell_databox_string_off_by_<domain>_fence_variable_name_context_tag_provider_v.mli \
+<Domain>_fence_cell_databox_tag_by_<domain>_fence_variable_name_entity_tag_provider_v.mli \
+<Domain>_fence_cell_databox_string_off_by_<domain>_fence_variable_name_entity_tag_provider_v.mli \
+<Domain>_fence_cell_databox_string_off_by_<domain>_fence_variable_name_entity_string_off_provider_v.mli \
+ \
+<Domain>_fence_cell_database_tag_by_<domain>_fence_variable_name_context_tag_provider_v.mli \
+<Domain>_fence_cell_database_string_off_by_<domain>_fence_variable_name_entity_string_off_provider_v.mli \
+<Domain>_fence_cell_domain_tag_by_<domain>_fence_variable_name_context_tag_provider_v.mli \
+<Domain>_fence_cell_domain_string_off_by_<domain>_fence_variable_name_entity_string_off_provider_v.mli \
+ 
+MAKE_ARGUMENTS_V_MLI := \
+<Domain>_body_box_type_string_list_by_<domain>_body_box_type_tag_provider_v.mli \
+<Domain>_body_box_type_string_list_by_<domain>_fence_variable_name_entity_tag_provider_v.mli \
+<Domain>_body_box_type_string_list_by_<domain>_fence_variable_name_entity_string_off_provider_v.mli \
+Make_argument_by_<domain>_body_box_type_tag_provider_v.mli \
+Make_argument_by_<domain>_fence_variable_name_entity_string_off_provider_v.mli \
+Make_argument_by_<domain>_fence_variable_name_entity_tag_provider_v.mli \
+ 
+FENCE_BUILDERS_V_MLI := \
+<Domain>_fence_by_<domain>_tag_provider_v.mli \
+ 
+FILES_MLI := \
+$(REGISTERS_V_MLI) \
+$(REGISTERS_EXTRA_V_MLI) \
+$(CONTEXT_TAGS_V_MLI) \
+$(INPUT_FILES_V_MLI) \
+$(TREES_V_MLI) \
+$(INTERFACES_V_MLI) \
+$(EXTRACTORS_V_MLI) \
+$(SUBLISTS_V_MLI) \
+$(SUBTREES_LIST_V_MLI) \
+$(SUBTREES_V_MLI) \
+$(COMMAND_DEFINES_V_MLI) \
+$(COMMAND_UNITS_V_MLI) \
+$(FENCE_VARIABLE_NAMES_V_MLI) \
+$(MAKE_ARGUMENTS_V_MLI) \
+$(FENCE_BUILDERS_V_MLI) \
+ 
+# done with do_dddd_symbol_by_sole_index_provider_register_files_mli.sh on vendredi 20 mai 2016, 13:41:14 (UTC+0200)

@@ -1,0 +1,29 @@
+digraph dgn {
+    size="14,14";
+
+    edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+    node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+    Title [label = "Builders Tree\nfor Target Implicit Poi_t\nfrom Target Poi_h\nfrom external Poi_a\n" fontsize=24, shape="record", color=lightblue, style=filled];
+
+  "property\nfor inputbox" -> {"target implicit\n Poi_t"};
+
+subgraph cluster_1 {
+  "target implicit\n Poi_t"    -> {"operand target\n Poi_t" "operator\n unit"};
+
+subgraph cluster_2 {
+  "operand target\n Poi_t"       -> {"operand target\n Poi_h" "operator\n Tra_bc"};
+
+subgraph cluster_3 {
+
+  "operand target\n Poi_h"       -> {"operand external\n Poi_a" "operator\n Hom_b_2"};
+
+  };
+
+  };
+
+  };
+
+};
+

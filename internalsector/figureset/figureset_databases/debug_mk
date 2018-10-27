@@ -1,0 +1,55 @@
+      Inutile de refabriquer la cible « Domain_tag_v.ml »..
+      Élagage du fichier « /keep/sources/ocaml_top/setup/frames/general/datastructures/Tag_v.cmi ».
+      Élagage du fichier « /keep/sources/ocaml_top/setup/frames/general/datastructures/Sole_index_v.cmi ».
+      Élagage du fichier « Domain_symbol_v.cmo ».
+      Élagage du fichier « Common_symbol_v.cmo ».
+      Élagage du fichier « Common_symbol_by_sole_index_register_v.cmo ».
+     Fin des dépendances du fichier cible « Domain_tag_v.cmo ».
+     La dépendance « Domain_tag_v.ml » est vieux que la cible « Domain_tag_v.cmo ».
+     La dépendance « /keep/sources/ocaml_top/setup/frames/general/datastructures/Tag_v.cmi » est vieux que la cible « Domain_tag_v.cmo ».
+     La dépendance « /keep/sources/ocaml_top/setup/frames/general/datastructures/Sole_index_v.cmi » est vieux que la cible « Domain_tag_v.cmo ».
+     La dépendance « Domain_symbol_v.cmo » est vieux que la cible « Domain_tag_v.cmo ».
+     La dépendance « Common_symbol_v.cmo » est vieux que la cible « Domain_tag_v.cmo ».
+     La dépendance « Common_symbol_by_sole_index_register_v.cmo » est vieux que la cible « Domain_tag_v.cmo ».
+    Inutile de refabriquer la cible « Domain_tag_v.cmo »..
+   Fin des dépendances du fichier cible « commonset.cma ».
+   Le fichier de dépendance « /keep/sources/ocaml_top/setup/frames/general/datastructures/datastructures.cma » de la cible « commonset.cma » n'existe pas.
+   Le fichier de dépendance « /keep/sources/ocaml_top/setup/frames/general/files/files.cma » de la cible « commonset.cma » n'existe pas.
+   La dépendance « Parameters_general_register_v.cmo » est vieux que la cible « commonset.cma ».
+   La dépendance « Parameters_general_provider_v.cmo » est vieux que la cible « commonset.cma ».
+   La dépendance « Debug_by_module_name_register_v.cmo » est vieux que la cible « commonset.cma ».
+   La dépendance « Debug_v.cmo » est vieux que la cible « commonset.cma ».
+   La dépendance « Domain_symbol_t.cmo » est vieux que la cible « commonset.cma ».
+   La dépendance « Domain_symbol_v.cmo » est vieux que la cible « commonset.cma ».
+   La dépendance « Parameter_symbol_t.cmo » est vieux que la cible « commonset.cma ».
+   La dépendance « Parameter_symbol_v.cmo » est vieux que la cible « commonset.cma ».
+   La dépendance « Common_symbol_t.cmo » est vieux que la cible « commonset.cma ».
+   La dépendance « Common_symbol_v.cmo » est vieux que la cible « commonset.cma ».
+   La dépendance « Common_symbol_by_sole_index_register_v.cmo » est vieux que la cible « commonset.cma ».
+   La dépendance « Common_symbol_main_register_v.cmo » est vieux que la cible « commonset.cma ».
+   La dépendance « Common_symbol_by_sole_index_extractor_v.cmo » est vieux que la cible « commonset.cma ».
+   La dépendance « Common_symbol_by_sole_index_provider_v.cmo » est vieux que la cible « commonset.cma ».
+   La dépendance « Domain_tag_t.cmo » est vieux que la cible « commonset.cma ».
+   La dépendance « Domain_tag_v.cmo » est vieux que la cible « commonset.cma ».
+  Il faut refabriquer la cible « commonset.cma ».
+ocamlc -I /keep/sources/ocaml_top/setup/frames/general/basics -I /keep/sources/ocaml_top/setup/frames/general/datastructures -I /keep/sources/ocaml_top/setup/frames/general/files -a -o commonset.cma  Parameters_general_register_v.cmo  Parameters_general_provider_v.cmo  Debug_by_module_name_register_v.cmo  Debug_v.cmo  Domain_symbol_t.cmo  Domain_symbol_v.cmo  Parameter_symbol_t.cmo  Parameter_symbol_v.cmo  Common_symbol_t.cmo  Common_symbol_v.cmo  Common_symbol_by_sole_index_register_v.cmo  Common_symbol_main_register_v.cmo  Common_symbol_by_sole_index_extractor_v.cmo  Common_symbol_by_sole_index_provider_v.cmo  Domain_tag_t.cmo  Domain_tag_v.cmo; 
+Ajout du processus fils 0x0870a6f0 (commonset.cma) PID 21776 à la chaîne.
+Processus fils actif 0x0870a6f0 (commonset.cma) PID 21776 
+Récupération du statut de sortie du processus fils 0x0870a6f0 PID 21776 
+Processus fils actif 0x0870a6f0 (commonset.cma) PID 21778 
+
+Byt_library.mk >commonset.cma< has been done.
+Récupération du statut de sortie du processus fils 0x0870a6f0 PID 21778 
+ls -alt commonset.cma; 
+Processus fils actif 0x0870a6f0 (commonset.cma) PID 21779 
+-rw-r--r-- 1 colonna www-data 107453 juil.  3 17:52 commonset.cma
+Récupération du statut de sortie du processus fils 0x0870a6f0 PID 21779 
+Processus fils actif 0x0870a6f0 (commonset.cma) PID 21781 
+
+Récupération du statut de sortie du processus fils 0x0870a6f0 PID 21781 
+Suppression du processus fils 0x0870a6f0 PID 21781 de la chaîne.
+  Refabrication du fichier cible « commonset.cma » réussie.
+ Fin des dépendances du fichier cible « all ».
+Il faut refabriquer la cible « all ».
+Refabrication du fichier cible « all » réussie.
+col@asu>

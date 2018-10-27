@@ -1,0 +1,27 @@
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Basis_db2_symbol_t.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Database_entity_symbol_t.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Local_database_db1_symbol_t.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Local_database_db2_symbol_t.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Local_database_symbol_t.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Local_figure_db1_symbol_t.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Local_figure_db2_symbol_t.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Local_figure_symbol_t.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Summit_db2_symbol_t.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Triangle_db1_symbol_t.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Triangle_db2_symbol_t.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Vector_db1_symbol_t.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Vertex_db1_symbol_t.ml .
+
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Basis_db2_symbol_v.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Database_entity_symbol_v.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Local_database_db1_symbol_v.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Local_database_db2_symbol_v.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Local_database_symbol_v.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Local_figure_db1_symbol_v.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Local_figure_db2_symbol_v.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Local_figure_symbol_v.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Summit_db2_symbol_v.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Triangle_db1_symbol_v.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Triangle_db2_symbol_v.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Vector_db1_symbol_v.ml .
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/Vertex_db1_symbol_v.ml .

@@ -1,0 +1,125 @@
+define Run 
+       end
+
+define Title 
+       end -- set
+
+set debug 
+       all 
+    end -- set 
+
+set trace 
+      module 
+         external_name "provider" 
+         except this
+         end -- module		
+      function 
+         external_name "build"
+         end -- function
+      end -- trace   
+    end -- set
+
+define Tr 
+          from 
+             domain figure	    
+             database "db1points"
+             end -- from
+       end -- define
+
+define P_a 
+          from 
+             domain figure
+             database "db1points"
+              end -- from
+       end -- define Point
+
+define H_a                              -- entity value by default 
+          from 
+	     domain property 
+       	     end -- from
+       needs 
+          center P_a 
+          ratio R
+          end -- needs 
+       end -- define
+
+define Tr_ha                            -- Tr transformed by H_a
+       by applying H_a 
+            on Tr
+	    end -- applying
+       end -- define
+
+define Tr_hb                            -- Tr transformed by H_a
+       by applying ( 
+       	    homothety "homothety_b"
+       	    from 
+               domain property 
+               end 
+       	    needs 
+	      center P_a                -- parameter
+       	      ratio R 
+              end
+            )	  
+            on Tr
+	    end -- applying
+       end -- define
+
+print Tr_hb
+      end 
+
+define X 
+       by evaluating 
+             ( (R_value * 4.5) + cos (Pi / 2) )
+          end -- by
+       end -- define
+
+define Phi
+       end -- define
+
+define Phi_a 
+       by extracting Phi                -- it is not a Property
+            off P_a                     -- extracting from Value-Tree of P_a
+            end -- extracting
+	  end -- by
+       end -- define
+
+define U_length                      
+             meter                     -- type Units / Elementaryset
+             end -- units
+       end -- define
+---              
+define U_angle                      
+             degree                    -- type Units / Elementaryset
+             end -- units
+       end -- define
+---
+
+define Seg_sym 
+          from 
+             domain figure
+             category symbol
+             end -- from
+       end -- define
+
+print Seg_sym
+      units 
+        degree
+        meter
+        end -- units
+      end -- print
+
+print Phi_a 
+      units 
+        U_length 
+        U_angle
+        end -- units
+      end -- print
+
+define F_t 
+       end -- define
+
+write Tr 
+      to F_t
+      end -- write 
+
+stop

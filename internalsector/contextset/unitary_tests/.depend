@@ -1,0 +1,14 @@
+test.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Quatuor_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Quatuor_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_quatuor_by_context_name_quatuor_provider_v.cmo
+test.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Quatuor_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Quatuor_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_quatuor_by_context_name_quatuor_provider_v.cmx

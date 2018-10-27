@@ -1,0 +1,32 @@
+let tag_edo = Elementary_domain_tag_by_unit_provider_v.provide ();;
+
+test_number 1 (
+tag_edo 
+(* : Elementary_domain_symbol_t.elementary_domain_symbol Tag_t.tag *)
+=
+  (Elementary_domain_symbol_t.Elementary_domain_constructor, [4])
+);;
+
+let tag_ddo = Database_db1_domain_tag_by_unit_provider_v.provide ();;
+
+test_number 2 (
+tag_ddo
+(* : Database_db1_domain_symbol_t.database_db1_domain_symbol Tag_t.tag *)
+=
+(Database_db1_domain_symbol_t.Database_db1_domain_constructor, [3])
+);;
+
+let nam_dba = "db1";;
+let tag_ele_dba = Elementary_as_database_tag_by_database_name_provider_v.provide nam_dba;;
+
+test_number 3 (
+tag_ele_dba 
+(* : Elementary_symbol_t.elementary_symbol Tag_t.tag *)
+=
+  (Elementary_symbol_t.Elementary_context_symbol
+    (Elementary_context_symbol_t.Elementary_database_symbol
+      (Elementary_database_symbol_t.Elementary_database_constructor "db1")),
+   [1; 4])
+);;
+
+

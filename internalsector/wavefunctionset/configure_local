@@ -1,0 +1,2 @@
+SUB_DIRECTORIES="wavefunctionset_databases wavefunctionset_formulas wavefunctionset_symbols wavefunctionset_tags wavefunctionset_values"
+CURRENT_AND_TEST=". unitary_tests"

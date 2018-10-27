@@ -1,0 +1,7 @@
+let nam_dba = "nwchem";;
+let nam_dbo = "cc_pvtz";;
+let nam_cal = "quantum";;
+
+Parameters_general_register_v.store "database-name" nam_dba;;
+Parameters_general_register_v.store "databox-name" nam_dbo;;
+Parameters_general_register_v.store "calculation-name" nam_cal;;

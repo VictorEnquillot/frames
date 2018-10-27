@@ -1,0 +1,58 @@
+== Trail ==
+* Trail keys must be typed to avoid a lot of preconditions in provide function
+
+type trail_key =
+  | Trail_domainset
+  | Trail_category
+  | Trail_entity
+  | Kind_entity
+;;
+
+type trail = (trail_key, string) Doublet_list_t.doublet_list;;
+ 
+== Register ==
+
+ (key, value) register
+
+  value = doublet data, information 
+  information = doublet_list date, module:function, md5sum ...
+
+ definition of equality of values 
+
+== Symbol -> Label ==
+
+== Label ==
+
+make -> label_of_name_of_string 
+
+name is a string giving the name the label.
+string is a eventual string argument.
+
+val label_of_name_of_string : string -> string -> label
+
+val label : string -> string -> label
+
+Triangle_label_v.label_of_name
+Triangle_label_v.label_of_name_of_string
+
+val name : label -> string
+
+== shortname ==
+
+add a systematic function shortname that gives "coefficient" for
+      Parameter_set_fence_aopef_coefficient_constructor
+
+
+== Formula ==
+
+retrieve function for formula -> formula
+
+formula : truc_tag -> truc_formula 
+
+truc_formula_of_truc_tag : truc_tag -> truc_formula 
+
+Triangle_formula_v.formula_of_triangle_tag
+
+== Value ==
+
+make -> value

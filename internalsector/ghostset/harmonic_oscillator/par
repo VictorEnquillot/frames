@@ -1,0 +1,12 @@
+Parameters_value_register_v.store "target_step" (Parameters_value_v.make"target_step" "100");;
+Parameters_value_register_v.store "initial_velocity_x" (Parameters_value_v.make "initial_velocity_x" "1.");;
+Parameters_value_register_v.store "mass" (Parameters_value_v.make "mass" "1.");;
+Parameters_value_register_v.store "force_constant" (Parameters_value_v.make "force_constant" "1.");;
+Parameters_value_register_v.store "time_step" (Parameters_value_v.make "time_step" "0.001");;
+
+let force_constant = Parameters_value_provider_v.provide_float "force_constant";;
+let mass = Parameters_value_provider_v.provide_float "mass";;
+let omega_2 = force_constant /. mass ;;
+
+let first_step = Parameters_value_provider_v.provide_integer "first_step";;
+

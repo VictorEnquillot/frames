@@ -1,0 +1,106 @@
+{[
+                                              Simulation
+
+                              System Model                        
+               Wavefunction  or  Force Field or  QM/MM
+                    |              |              |
+                    -------------------------------    
+                                   |
+                        System Physical Regions
+                                   |
+                            System Physical 
+                                   |
+                          Particules  or  Fields  
+
+
+}]
+
+
+{[                                                HSBF
+  
+Symbol 
+                                            Oh2 example Sto_3g
+   
+mol                                              molecule
+                                                   Oh2                      
+                                                    |                                         
+bas                                              basisset   
+                                                  Sto_3g   
+
+                                                  molbasis                                     heb             
+                                -----------------------------------------------       
+Pack                           /                                       \       \
+center                       pack                                     pack      pack           hep
+                               o                                         h1       h2
+                        ----------------                                  |        |
+Cluster                /                \                                 |        |
+Shell Ordinal n    cluster           cluster                         cluster  cluster          hec
+                     o_1               o_2                             h1_s     h2_s 
+                      |          -------------------                     |        |
+Bundle                |         /                   \                    |        |
+Shell Name    n,l   bundle   bundle               bundle              bundle   bundle          hep
+                     o_1s      o_2s                 o_2p               h1_1s    h2_1s
+                      |         |            ----------------            |        |
+Single                |         |           /        |       \           |        | 
+Quantum       l,m   single    single     single    single    single    single   single         hes
+                     o_1s      o_2s      o_2p+1    o_2p_0    o_2p-1    h1_1s    h2_1s
+---------------------------------------------------------------------------------------
+XFP                  /\        /\       /\         /\       /\         /\       /\ 
+Expanded            |  |      |  |     |  |       |  |     |  |       |  |     |  | array of   
+Quantum       l,m  expanded  expanded  expanded  expanded  expanded  expanded  expanded        xfx
+                   | |         |         |         |         |         |         | 
+Single             | v         |         |         |         |         |         |
+Quantum       l,m  | single    single    single    single    single    single    single         xfs
+                   | o_1s      o_2s      o_2p+1    o_2p_0    o_2p-1    h1_1s    h2_1s       
+                   |
+                   v
+            coefficient from efp_expanded_information
+                   |
+                   v
+                   Cefp Single (data base)
+]}*)
+
+(**
+{[                                     
+                                          Molecule 
+
+                                          Grouping
+
+                                          Fragment
+ 
+                                           Block
+ 
+                                           Atom 
+ 
+]}*)
+
+(**
+{[                                     
+
+Symbol                    CEFP
+
+                      example Sto_3g
+                           |         
+bas                     basisset                            ceb
+                         Sto_3g   
+                  ------------------
+                 /                  \     
+center        pack                 pack                     cep
+          ---- o ----                h
+         /           \               |    
+n    cluster       cluster        cluster                   cec
+       o_1          o_2             h_1
+        |          -----             |
+        |         /     \            |
+n,l  single   single  single      single                    ces
+      o_1s      o_2s     o_2p       h_1s 
+       |         |        |          |   
+EFP ---------------------------------------------------------------
+       /\        /\       /\         /\ 
+      |  |      |  |     |  |       |  |    array of   
+shape expanded  expanded expanded   expanded                efx
+        |         |        |          |   
+shape single    single   single     single                  efs
+      o_1s      o_2s     o_2p       h_1s   
+]}
+

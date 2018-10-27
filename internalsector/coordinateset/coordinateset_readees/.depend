@@ -1,0 +1,74 @@
+Measure_by_coordinate_set_fence_tag_register_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Register_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Register_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_tags/Coordinate_set_fence_tag_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_tags/Coordinate_set_fence_tag_t.cmo
+Measure_by_coordinate_set_fence_tag_register_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Register_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Register_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_tags/Coordinate_set_fence_tag_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_tags/Coordinate_set_fence_tag_t.cmx
+Measure_list_by_coordinate_set_body_tuple_tag_provider_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tag_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/externalsector/figuredata/db1pointsdata/db1pointsdataset/db1pointsdataset_builder_trees/Measure_list_by_db1pointsdata_set_body_sequence_float_tag_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_builder_trees/Db1pointsdata_set_body_sequence_float_tag_by_coordinate_set_body_tuple_tag_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Database_name_by_any_sole_index_provider_v.cmo
+Measure_list_by_coordinate_set_body_tuple_tag_provider_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tag_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/externalsector/figuredata/db1pointsdata/db1pointsdataset/db1pointsdataset_builder_trees/Measure_list_by_db1pointsdata_set_body_sequence_float_tag_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_builder_trees/Db1pointsdata_set_body_sequence_float_tag_by_coordinate_set_body_tuple_tag_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Database_name_by_any_sole_index_provider_v.cmx
+Measure_by_coordinate_set_fence_tag_provider_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tag_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Sole_index_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmo \
+    Measure_list_by_coordinate_set_body_tuple_tag_provider_v.cmo \
+    Measure_by_coordinate_set_fence_tag_register_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_tags/Coordinate_set_fence_tag_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_tags/Coordinate_set_body_tuple_tag_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_builder_trees/Coordinate_father_tag_by_coordinate_son_tag_provider_v.cmo
+Measure_by_coordinate_set_fence_tag_provider_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tag_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Sole_index_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_v.cmx \
+    Measure_list_by_coordinate_set_body_tuple_tag_provider_v.cmx \
+    Measure_by_coordinate_set_fence_tag_register_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_tags/Coordinate_set_fence_tag_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_tags/Coordinate_set_body_tuple_tag_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/coordinateset/coordinateset_builder_trees/Coordinate_father_tag_by_coordinate_son_tag_provider_v.cmx
+Readee_list_by_coordinate_set_body_tuple_tag_provider_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_v.cmo \
+    Measure_list_by_coordinate_set_body_tuple_tag_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi
+Readee_list_by_coordinate_set_body_tuple_tag_provider_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_v.cmx \
+    Measure_list_by_coordinate_set_body_tuple_tag_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx
+Readee_by_coordinate_set_fence_tag_provider_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_v.cmo \
+    Measure_by_coordinate_set_fence_tag_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmi
+Readee_by_coordinate_set_fence_tag_provider_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_v.cmx \
+    Measure_by_coordinate_set_fence_tag_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/commonset/Management_v.cmx

@@ -1,0 +1,8 @@
+let sym_efn_l = Entity_fictive_nullary_symbol_list_by_domainset_tag_provider_v.provide tag_dos;;
+
+let sym_efn = List.find (fun e -> Entity_fictive_nullary_symbol_v.string_off e = nam_efn) sym_efn_l;;
+let idx_efn = (List_v.index_of_element_of_list sym_efn sym_efn_l) + 1;; 
+let soi_efn = Sole_index_v.make idx_efn soi_cat;;
+let gss_efn = Generatorset_symbol_v.generatorset_symbol_of_entity_fictive_nullary_symbol sym_efn;;
+Generatorset_symbol_by_sole_index_provider_v.store soi_efn gss_efn;;
+let tag_efn = Tag_v.make sym_efn soi_efn;;

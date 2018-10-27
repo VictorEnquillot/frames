@@ -1,0 +1,98 @@
+(* $Id: tcoordinates.ml,v 1.3 2007-08-22 16:56:56 colonna Exp $ *)
+
+open Gentest;;
+open Coordinates;;
+
+testing "Coordinates";;
+
+let p1 = Point_3d.make "P1" Vector_3d.unity_x;;
+let p2 = Point_3d.make "P2" Vector_3d.unity_y;;
+let p3 = Point_3d.make "P3" Vector_3d.unity_z;;
+
+let pi = acos (-.1.0);;
+
+let r = 1.0;;
+let chi = pi /. 2.0;;
+let phi = pi /. 4.0;;
+let theta = (2.0 *. pi /. 3.0);;
+
+let x = r *. cos (phi) *. cos (theta) ;;
+let y = r *. cos (phi) *. sin (theta) ;; 
+let z = r *. sin (phi) ;;
+
+testi 0 (
+Coordinates.Cartesian_2d (Coordinates.make_cartesian_2d  x  y ) =
+Coordinates.Cartesian_2d
+ {Coordinates.x_2d = x;  Coordinates.y_2d = y}
+);;
+
+testi 1 (
+Coordinates.Cartesian_3d (Coordinates.make_cartesian_3d  x  y  z) =
+Coordinates.Cartesian_3d {Coordinates.x_3d = x; y_3d = y; z_3d = z;}
+);;
+
+
+testi 2 (
+Coordinates.Polar (Coordinates.make_polar r theta) =
+Coordinates.Polar {
+  Coordinates.r_pol = r;
+  theta_pol = theta;
+}
+);;
+
+testi 3 (
+Coordinates.Cylindrical (Coordinates.make_cylindrical r theta z) =
+Coordinates.Cylindrical {
+  Coordinates.r_cyl = r;
+  theta_cyl = theta;
+  z_cyl = z;
+}
+);;
+
+testi 4 (
+Coordinates.Spherical (Coordinates.make_spherical  r  phi  theta) =
+Coordinates.Spherical {
+  Coordinates.r_sph = r;
+  theta_sph = theta;
+  phi_sph = phi;
+}
+);;
+
+testi 5 ( 
+Coordinates.make_internal (1.0, p1) (theta, p2) (chi, p3) =
+  {Coordinates.bond =
+  (1., {Point_3d.name = "P1"; Point_3d.position = (1., 0., 0.)});
+     Coordinates.valence =
+  (2.09439510239319526,
+   {Point_3d.name = "P3"; Point_3d.position = (0., 0., 1.)});
+       Coordinates.dihedral =
+  (1.57079632679489656,
+   {Point_3d.name = "P3"; Point_3d.position = (0., 0., 1.)})}
+);;
+
+testi 6 (
+Coordinates.Cartesian_3d (Coordinates.absolute_to_cartesian_3d  
+(Coordinates.Spherical (Coordinates.make_spherical  r  phi  theta)) )
+ =
+Cartesian_3d
+ {x_3d = -0.35355339059327362; y_3d = 0.612372435695794581;
+  z_3d = 0.707106781186547462}
+);;
+
+
+testi 7 (
+Coordinates.Spherical (
+Coordinates.absolute_to_spherical 
+  (Coordinates.Cartesian_3d {
+   Coordinates.x_3d = x;
+   y_3d = y;
+   z_3d = z;
+ } )
+)
+  =
+Coordinates.Spherical
+  {Coordinates.r_sph = 0.999999999999999889;
+   Coordinates.phi_sph = -1.04719755119659785;
+   Coordinates.theta_sph = 0.785398163397448279;
+ }
+);;

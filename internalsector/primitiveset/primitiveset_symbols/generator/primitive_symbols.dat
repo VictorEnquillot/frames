@@ -1,0 +1,42 @@
+constructors  figure                    =   primitive
+
+constructors primitive                  =   primitive_context   primitive_body   primitive_fence
+
+constructors primitive_context          =   primitive_context_basisset   primitive_context_database   primitive_context_domain
+
+constructors primitive_context_basisset =   primitive_context_basisset_constructor:ofstring
+constructors primitive_context_database =   primitive_context_database_constructor:ofstring
+constructors primitive_context_domain   =   primitive_context_domain_constructor:ofstring
+
+# field_body
+
+constructors primitive_body             =   primitive_body_centered   primitive_body_periodic
+
+
+constructors primitive_body_centered    =   primitive_body_centered_aopef_set   primitive_body_centered_ecppef_set
+
+constructors primitive_body_centered_aopef_set   =   primitive_body_centered_aopef_set_for_a_center   primitive_body_centered_aopef_set_for_any_center   primitive_body_centered_aopef_set_for_a_shell_symmetry   primitive_body_centered_aopef_set_for_a_shell_ordinal
+
+constructors primitive_body_centered_aopef_set_for_a_center           =   primitive_body_centered_aopef_set_for_a_center_constructor:ofstring
+		 
+constructors primitive_body_centered_aopef_set_for_any_center         =   primitive_body_centered_aopef_set_for_any_center_constructor:ofstring
+		 
+constructors primitive_body_centered_aopef_set_for_a_shell_symmetry   =   primitive_body_centered_aopef_set_for_a_shell_symmetry_constructor:ofstring
+
+constructors primitive_body_centered_aopef_set_for_a_shell_ordinal    =   primitive_body_centered_aopef_set_for_a_shell_ordinal_constructor:ofstring
+
+constructors primitive_body_centered_ecppef_set   =   primitive_body_centered_ecppef_set_constructor:ofstring
+
+constructors primitive_body_periodic    =   primitive_body_periodic_blochwave:ofstring   primitive_body_periodic_wavelet:ofstring 
+
+
+constructors primitive_fence            =   primitive_fence_centered   primitive_fence_periodic
+
+constructors primitive_fence_centered   =   primitive_fence_centered_aopef   primitive_fence_centered_ecppef
+
+constructors primitive_fence_centered_aopef  = primitive_fence_centered_aopef_constructor:ofstring
+
+constructors primitive_fence_centered_ecppef = primitive_fence_centered_ecppef_constructor:ofstring
+
+
+

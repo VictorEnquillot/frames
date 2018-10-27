@@ -1,0 +1,7 @@
+(** {6 Coercing Up Tag} *)
+
+let maint_tag_of_this_tag tag_ttt =
+  Tag_v.map_entity 
+    Maint_symbol_v.maint_symbol_of_this_symbol 
+    tag_ttt 
+;;

@@ -1,0 +1,31 @@
+(* Measure_actual instead of Envelope *)
+
+let measure_actual_tuple_of_coordinate_set_body_tuple_heterogeneous_tag tag_cth =
+  let (sym_cth, soi_cth ) = tag_cth in
+  match sym_cth with
+  | Coordinate_set_body_tuple_heterogeneous_symbol_t.Coordinate_set_body_tuple_heterogeneous_cylindrical_symbol chc ->
+      let tag_chc = Tag_v.make chc soi_cth in
+      Coordinate_set_body_tuple_cylindrical_envelope_v.measure_actual_tuple_of_coordinate_set_body_tuple_cylindrical_tag tag_etc
+
+  | Coordinate_set_body_tuple_heterogeneous_t.Coordinate_set_body_tuple_polar etp ->
+      let tag_etp = Tag_v.make etp soi_cth in
+      Coordinate_set_body_tuple_polar_envelope_v.measure_actual_tuple_of_coordinate_set_body_tuple_polar_tag tag_etp
+
+  | Coordinate_set_body_tuple_heterogeneous_t.Coordinate_set_body_tuple_spherical ets ->
+      let tag_ets = Tag_v.make ets soi_cth in
+      Coordinate_set_body_tuple_spherical_envelope_v.measure_actual_tuple_of_coordinate_set_body_tuple_spherical_tag tag_ets
+;;
+
+let measure_actual_tuple_of_coordinate_set_body_tuple_tag tag_ect =
+  let soi_ect = Tag_v.sole_index_off_tag tag_ect in
+  let ect = Tag_v.entity_off_tag tag_ect in
+  match ect with
+  | Coordinate_set_body_tuple_t.Coordinate_set_body_tuple_heterogeneous ect_het ->
+      let tag_cth = Tag_v.make ect_het soi_ect in
+      measure_actual_tuple_of_coordinate_set_body_tuple_heterogeneous_tag tag_cth
+
+  | Coordinate_set_body_tuple_t.Coordinate_set_body_tuple_homogeneous ect_het ->
+      let tag_cth = Tag_v.make ect_het soi_ect in
+      Coordinate_set_body_tuple_homogeneous_envelope_v.measure_actual_tuple_of_coordinate_set_body_tuple_homogeneous_tag tag_cth
+;;
+

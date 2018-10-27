@@ -1,0 +1,5 @@
+ledit -x -h ./.debug-history ocamldebug -I ../../../general/basics -I ../../../general/files -I ../../../general/datastructures -I ../../generatorset_databases/adb -I ../../generatorset_symbols -I ../../generatorset_tags -I ../../generatorset_interfaces -I ../../generatorset_formulas -I ../ runtest.byt
+
+# 
+# display wrd_l
+# print wrd_l 

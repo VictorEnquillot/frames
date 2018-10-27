@@ -1,0 +1,444 @@
+(** {3 The Symbol functionalities for a Aminoacid.} *)
+
+let nam_mod = "Aminoacid_symbol_v";;
+
+module Aas_t = Aminoacid_symbol_t
+module Aos_t = Aminoacid_olc_symbol_t
+module Aos_v = Aminoacid_olc_symbol_v
+module Ats_t = Aminoacid_tlc_symbol_t
+module Ats_v = Aminoacid_tlc_symbol_v
+
+(** {6 Making.} *)
+
+let make_of_aminoacid_glycine_symbol smb_amg =
+  Aas_t.Aminoacid_glycine_symbol smb_amg
+;;
+
+let make_of_aminoacid_nonglycine_symbol smb_amn =
+  Aas_t.Aminoacid_nonglycine_symbol smb_amn
+;;
+
+let make_of_aminoacid_proline_symbol smb_amp =
+  make_of_aminoacid_nonglycine_symbol 
+    (Aas_t.Aminoacid_proline_symbol smb_amp)
+;;
+
+let make_of_aminoacid_regular_symbol smb_amr =
+  make_of_aminoacid_nonglycine_symbol 
+    (Aas_t.Aminoacid_regular_symbol smb_amr)
+;;
+
+let aminoacid_symbol_of_aminoacid_glycine_symbol =
+  make_of_aminoacid_glycine_symbol 
+;;
+
+let aminoacid_symbol_of_aminoacid_nonglycine_symbol =
+  make_of_aminoacid_nonglycine_symbol
+;;
+
+let aminoacid_symbol_of_aminoacid_proline_symbol =
+  make_of_aminoacid_proline_symbol
+;;
+
+let aminoacid_symbol_of_aminoacid_regular_symbol =
+  make_of_aminoacid_regular_symbol
+;;
+
+let aminoacid_glycine_symbol_of_string = function
+  | "Glycine" -> Aas_t.Glycine
+  | s -> failwith "Not_Glycine:Aas_v.aminoacid_glycine_symbol_of_string"
+;;
+
+let aminoacid_proline_symbol_of_string = function
+  | "Proline" -> Aas_t.Proline
+  | s -> failwith "Not_Proline:Aas_v.aminoacid_proline_symbol_of_string"
+;;
+
+let print_fatal_error nam_fun nam str =
+  let nam_ama_l = List.map name (aminoacid_symbol_list ()) in
+      Format.fprintf
+	Format.err_formatter
+	"@.@[<hov>%s.%s: --- Fatal Error ---\
+        @.    expecting an Aminoacid name.\
+        @.    found >%s<.\
+        @.    cure : check list of aminoacid name:@.%s@]@."
+	nam_mod nam_fun str (Lst_v.name_with_separator name "\n" nam_ama_l );
+        assert false;
+;;
+
+let aminoacid_regular_symbol_of_string str = 
+  let stc = String.capitalize (String.lowercase str) in
+  match stc with
+  | "Alanine" -> Aas_t.Alanine
+  | "Arginine" -> Aas_t.Arginine
+  | "Asparagine" -> Aas_t.Asparagine
+  | "Aspartic" -> Aas_t.Aspartic
+  | "Cysteine" -> Aas_t.Cysteine
+  | "Glutamine" -> Aas_t.Glutamine
+  | "Glutamic" -> Aas_t.Glutamic
+  | "Histidine" -> Aas_t.Histidine
+  | "Isoleucine" -> Aas_t.Isoleucine
+  | "Leucine" -> Aas_t.Leucine
+  | "Lysine" -> Aas_t.Lysine
+  | "Methionine" -> Aas_t.Methionine
+  | "Phenylalanine" -> Aas_t.Phenylalanine
+  | "Serine" -> Aas_t.Serine
+  | "Threonine" -> Aas_t.Threonine
+  | "Tryptophan" -> Aas_t.Tryptophan
+  | "Tyrosine" -> Aas_t.Tyrosine
+  | "Valine" -> Aas_t.Valine
+  | s -> print_fatal_error "aminoacid_symbol_of_string" 
+;;
+
+let aminoacid_symbol_of_string str = 
+  let str_len = String.length str in
+  match str_len with 
+  | 1 -> aminoacid_olc_symbol_of_string str
+  | 3 -> aminoacid_tlc_symbol_of_string str
+  | _ ->
+      let stc = String.capitalize (String.lowercase str) in
+      match stc with
+      | "Glycine" -> 
+	  make_of_aminoacid_glycine_symbol 
+	    (aminoacid_glycine_symbol_of_string stc) 
+	    
+      | "Proline" -> 
+	  make_of_aminoacid_proline_symbol 
+	    (aminoacid_proline_symbol_of_string stc)
+	    
+      | _ -> 
+	  make_of_aminoacid_regular_symbol 
+	    (aminoacid_regular_symbol_of_string stc)
+;;
+	
+let read ib =
+  let str = Scanf.bscanf ib "%s" (fun s -> s) in
+  Scanf.sscanf str "%s" aminoacid_symbol_of_string
+;;
+
+(** {6 Converting.} *)
+
+let name_aminoacid_glycine_symbol =  function
+  | Aas_t.Glycine -> Format.sprintf "%s" "G"
+;;
+
+let name_aminoacid_proline_symbol =  function
+  | Aas_t.Proline -> Format.sprintf "%s" "P"
+;;
+
+let name_aminoacid_regular_symbol smb_amr =
+  let smb_aor = 
+    aminoacid_regular_olc_symbol_of_aminoacid_regular_symbol smb_amr in
+  Aos_v.name_aminoacid_regular_olc_symbol smb_aor
+;;
+
+let name_aminoacid_nonglycine_symbol = function
+  | Aas_t.Aminoacid_proline_symbol smb_amp ->
+      name_aminoacid_proline_symbol smb_amp
+  | Aas_t.Aminoacid_regular_symbol smb_amn ->
+      name_aminoacid_regular_symbol smb_amn
+;;
+
+let name = function
+  | Aas_t.Aminoacid_glycine_symbol smb_amg -> 
+      name_aminoacid_glycine_symbol smb_amg
+  | Aas_t.Aminoacid_nonglycine_symbol smb_amn -> 
+      name_aminoacid_nonglycine_symbol smb_amn
+;;
+
+let print_aminoacid_glycine_symbol ppf =  function
+  | Aas_t.Glycine -> Format.fprintf ppf "%s" "Glycine"
+;;
+
+let print_aminoacid_proline_symbol ppf =  function
+  | Aas_t.Proline -> Format.fprintf ppf "%s" "Proline"
+;;
+
+let print_aminoacid_regular_symbol ppf = function
+  | Aas_t.Alanine -> Format.fprintf ppf "%s" "Alanine"
+  | Aas_t.Arginine -> Format.fprintf ppf "%s" "Arginine"
+  | Aas_t.Asparagine -> Format.fprintf ppf "%s" "Asparagine"
+  | Aas_t.Aspartic -> Format.fprintf ppf "%s" "Aspartic"
+  | Aas_t.Cysteine -> Format.fprintf ppf "%s" "Cysteine"
+  | Aas_t.Glutamine -> Format.fprintf ppf "%s" "Glutamine"
+  | Aas_t.Glutamic -> Format.fprintf ppf "%s" "Glutamic"
+  | Aas_t.Histidine -> Format.fprintf ppf "%s" "Histidine"
+  | Aas_t.Isoleucine -> Format.fprintf ppf "%s" "Isoleucine"
+  | Aas_t.Leucine -> Format.fprintf ppf "%s" "Leucine"
+  | Aas_t.Lysine -> Format.fprintf ppf "%s" "Lysine"
+  | Aas_t.Methionine -> Format.fprintf ppf "%s" "Methionine"
+  | Aas_t.Phenylalanine -> Format.fprintf ppf "%s" "Phenylalanine"
+  | Aas_t.Serine -> Format.fprintf ppf "%s" "Serine"
+  | Aas_t.Threonine -> Format.fprintf ppf "%s" "Threonine"
+  | Aas_t.Tryptophan -> Format.fprintf ppf "%s" "Tryptophan"
+  | Aas_t.Tyrosine -> Format.fprintf ppf "%s" "Tyrosine"
+  | Aas_t.Valine -> Format.fprintf ppf "%s" "Valine"
+;;
+
+let print_aminoacid_nonglycine_symbol ppf = function
+  | Aas_t.Aminoacid_proline_symbol smb_amp -> 
+      print_aminoacid_proline_symbol ppf smb_amp
+  | Aas_t.Aminoacid_regular_symbol smb_amr -> 
+      print_aminoacid_regular_symbol ppf smb_amr
+;;
+
+let print ppf = function
+  | Aas_t.Aminoacid_glycine_symbol smb_amg -> 
+      print_aminoacid_glycine_symbol ppf smb_amg
+  | Aas_t.Aminoacid_nonglycine_symbol smb_amn -> 
+      print_aminoacid_nonglycine_symbol ppf smb_amn
+;;
+
+
+(** {6 Downgrading.} *)
+
+let aminoacid_glycine_symbol_off_aminoacid_symbol = function
+  | Aas_t.Aminoacid_glycine_symbol smb_amg -> smb_amg
+  | Aas_t.Aminoacid_nonglycine_symbol _ ->
+      failwith "Glycine:Aas_v.aminoacid_glycine_symbol_off_aminoacid_symbol"
+;;
+
+let aminoacid_nonglycine_symbol_off_aminoacid_symbol = function
+  | Aas_t.Aminoacid_glycine_symbol smb_amg -> 
+      failwith "Not_Nonglycine:Aas_v.aminoacid_nonglycine_symbol_off_aminoacid_symbol"
+  | Aas_t.Aminoacid_nonglycine_symbol smb_amn -> smb_amn
+;;
+
+let aminoacid_regular_symbol_off_aminoacid_nonglycine_symbol = function
+  | Aas_t.Aminoacid_proline_symbol smb_amn -> 
+      failwith "Not_Regular:Aas_v.aminoacid_regular_symbol_off_aminoacid_nonglycine_symbol"
+  | Aas_t.Aminoacid_regular_symbol smb_amr -> smb_amr
+;;
+
+let aminoacid_regular_symbol_off_aminoacid_symbol = function
+  | Aas_t.Aminoacid_glycine_symbol smb_amg -> 
+      failwith "Not_Nonglycine:Aas_v.aminoacid_regular_symbol_off_aminoacid_symbol"
+  | Aas_t.Aminoacid_nonglycine_symbol smb_amn -> 
+      aminoacid_regular_symbol_off_aminoacid_nonglycine_symbol smb_amn
+;;
+
+(** {6 Querying.} *)
+
+let is_aminoacid_glycine = function
+  | Aas_t.Aminoacid_glycine_symbol _ -> true
+  | Aas_t.Aminoacid_nonglycine_symbol _ -> false 
+;;
+
+let is_aminoacid_nonglycine smb_ama =
+  not (is_aminoacid_glycine smb_ama)
+;;
+
+let is_aminoacid_proline_of_aminoacid_nonglycine_symbol = function
+  | Aas_t.Aminoacid_proline_symbol _ -> true
+  | Aas_t.Aminoacid_regular_symbol _ -> false
+;;
+
+let is_aminoacid_regular_of_aminoacid_nonglycine_symbol smb_amn =
+  not (is_aminoacid_proline_of_aminoacid_nonglycine_symbol smb_amn)
+;;
+
+let is_aminoacid_proline = function
+  | Aas_t.Aminoacid_glycine_symbol _ -> false
+  | Aas_t.Aminoacid_nonglycine_symbol smb_amn ->
+      is_aminoacid_proline_of_aminoacid_nonglycine_symbol smb_amn
+;;
+
+let is_aminoacid_regular = function
+  | Aas_t.Aminoacid_glycine_symbol _ -> false
+  | Aas_t.Aminoacid_nonglycine_symbol smb_amn ->
+      is_aminoacid_regular_of_aminoacid_nonglycine_symbol smb_amn
+;;
+
+(** {9 OLC.} *)
+
+let aminoacid_glycine_olc_symbol_of_aminoacid_glycine_symbol = function
+  | Aas_t.Glycine -> Aos_t.G
+;;
+
+let aminoacid_proline_olc_symbol_of_aminoacid_proline_symbol = function
+  | Aas_t.Proline -> Aos_t.P
+;;
+
+let aminoacid_regular_olc_symbol_of_aminoacid_regular_symbol = function
+  | Aas_t.Alanine -> Aos_t.A
+  | Aas_t.Arginine -> Aos_t.R
+  | Aas_t.Asparagine -> Aos_t.N
+  | Aas_t.Aspartic -> Aos_t.D
+  | Aas_t.Cysteine -> Aos_t.C
+  | Aas_t.Glutamine -> Aos_t.Q
+  | Aas_t.Glutamic -> Aos_t.E
+  | Aas_t.Histidine -> Aos_t.H
+  | Aas_t.Isoleucine -> Aos_t.I
+  | Aas_t.Leucine -> Aos_t.L
+  | Aas_t.Lysine -> Aos_t.K
+  | Aas_t.Methionine -> Aos_t.M
+  | Aas_t.Phenylalanine -> Aos_t.F
+  | Aas_t.Serine -> Aos_t.S
+  | Aas_t.Threonine -> Aos_t.T
+  | Aas_t.Tryptophan -> Aos_t.W
+  | Aas_t.Tyrosine -> Aos_t.Y
+  | Aas_t.Valine -> Aos_t.V
+;;
+
+let aminoacid_nonglycine_olc_symbol_of_aminoacid_nonglycine_symbol = function
+  | Aas_t.Aminoacid_proline_symbol smb_amp -> 
+      Aos_t.Aminoacid_proline_olc_symbol Aos_t.P
+  | Aas_t.Aminoacid_regular_symbol smb_amr ->
+      Aos_t.Aminoacid_regular_olc_symbol 
+	(aminoacid_regular_olc_symbol_of_aminoacid_regular_symbol smb_amr)
+;;
+
+let aminoacid_olc_symbol_of_aminoacid_symbol = function
+  | Aas_t.Aminoacid_glycine_symbol smb -> 
+      Aos_t.Aminoacid_glycine_olc_symbol 
+	(aminoacid_glycine_olc_symbol_of_aminoacid_glycine_symbol smb)
+  | Aas_t.Aminoacid_nonglycine_symbol smb_amr ->
+      Aos_t.Aminoacid_nonglycine_olc_symbol 
+	(aminoacid_nonglycine_olc_symbol_of_aminoacid_nonglycine_symbol smb_amr)
+;;
+
+(** {9 TLC.} *)
+
+let aminoacid_glycine_tlc_symbol_of_aminoacid_glycine_symbol = function
+  | Aas_t.Glycine -> Ats_t.Gly
+;;
+
+let aminoacid_proline_tlc_symbol_of_aminoacid_proline_symbol = function
+  | Aas_t.Proline -> Ats_t.Pro
+;;
+
+let aminoacid_regular_tlc_symbol_of_aminoacid_regular_symbol = function
+  | Aas_t.Alanine -> Ats_t.Ala
+  | Aas_t.Arginine -> Ats_t.Arg
+  | Aas_t.Asparagine -> Ats_t.Asn
+  | Aas_t.Aspartic -> Ats_t.Asp
+  | Aas_t.Cysteine -> Ats_t.Cys
+  | Aas_t.Glutamine -> Ats_t.Gln
+  | Aas_t.Glutamic -> Ats_t.Glu
+  | Aas_t.Histidine -> Ats_t.His
+  | Aas_t.Isoleucine -> Ats_t.Ile
+  | Aas_t.Leucine -> Ats_t.Leu
+  | Aas_t.Lysine -> Ats_t.Lys
+  | Aas_t.Methionine -> Ats_t.Met
+  | Aas_t.Phenylalanine -> Ats_t.Phe
+  | Aas_t.Serine -> Ats_t.Ser
+  | Aas_t.Threonine -> Ats_t.Thr
+  | Aas_t.Tryptophan -> Ats_t.Trp
+  | Aas_t.Tyrosine -> Ats_t.Tyr
+  | Aas_t.Valine -> Ats_t.Val
+;;
+
+let aminoacid_nonglycine_tlc_symbol_of_aminoacid_nonglycine_symbol = function
+  | Aas_t.Aminoacid_proline_symbol smb_amp -> 
+      Ats_t.Aminoacid_proline_tlc_symbol 
+	(aminoacid_proline_tlc_symbol_of_aminoacid_proline_symbol smb_amp)
+  | Aas_t.Aminoacid_regular_symbol smb_amr ->
+      Ats_t.Aminoacid_regular_tlc_symbol 
+	(aminoacid_regular_tlc_symbol_of_aminoacid_regular_symbol smb_amr)
+;;
+
+let aminoacid_tlc_symbol_of_aminoacid_symbol = function
+  | Aas_t.Aminoacid_glycine_symbol smb_amg -> 
+      Ats_t.Aminoacid_glycine_tlc_symbol 
+	(aminoacid_glycine_tlc_symbol_of_aminoacid_glycine_symbol smb_amg)
+  | Aas_t.Aminoacid_nonglycine_symbol smb_amn ->
+      Ats_t.Aminoacid_nonglycine_tlc_symbol 
+	(aminoacid_nonglycine_tlc_symbol_of_aminoacid_nonglycine_symbol smb_amn)
+;;
+
+(** {6 Abbreviating.} *)
+
+ let glycine_g = Aas_t.Glycine;;
+
+ let proline_p = Aas_t.Proline;;
+
+(** {9 Regular.} *)
+
+ let alanine_r = Aas_t.Alanine;;
+ let arginine_r = Aas_t.Arginine;;
+ let asparagine_r = Aas_t.Asparagine;;
+ let aspartic_r = Aas_t.Aspartic;;
+ let cysteine_r = Aas_t.Cysteine;;
+ let glutamine_r = Aas_t.Glutamine;;
+ let glutamic_r = Aas_t.Glutamic;;
+ let histidine_r = Aas_t.Histidine;;
+ let isoleucine_r = Aas_t.Isoleucine;;
+ let leucine_r = Aas_t.Leucine;;
+ let lysine_r = Aas_t.Lysine;;
+ let methionine_r = Aas_t.Methionine;;
+ let phenylalanine_r = Aas_t.Phenylalanine;;
+ let serine_r = Aas_t.Serine;;
+ let threonine_r = Aas_t.Threonine;;
+ let tryptophan_r = Aas_t.Tryptophan;;
+ let tyrosine_r = Aas_t.Tyrosine;;
+ let valine_r = Aas_t.Valine;;
+
+(** {9 Nonglycine.} *)
+
+ let proline_n = Aas_t.Aminoacid_proline_symbol Aas_t.Proline;;
+ let alanine_n = Aas_t.Aminoacid_regular_symbol Aas_t.Alanine;;
+ let arginine_n = Aas_t.Aminoacid_regular_symbol Aas_t.Arginine;;
+ let asparagine_n = Aas_t.Aminoacid_regular_symbol Aas_t.Asparagine;;
+ let aspartic_n = Aas_t.Aminoacid_regular_symbol Aas_t.Aspartic;;
+ let cysteine_n = Aas_t.Aminoacid_regular_symbol Aas_t.Cysteine;;
+ let glutamine_n = Aas_t.Aminoacid_regular_symbol Aas_t.Glutamine;;
+ let glutamic_n = Aas_t.Aminoacid_regular_symbol Aas_t.Glutamic;;
+ let histidine_n = Aas_t.Aminoacid_regular_symbol Aas_t.Histidine;;
+ let isoleucine_n = Aas_t.Aminoacid_regular_symbol Aas_t.Isoleucine;;
+ let leucine_n = Aas_t.Aminoacid_regular_symbol Aas_t.Leucine;;
+ let lysine_n = Aas_t.Aminoacid_regular_symbol Aas_t.Lysine;;
+ let methionine_n = Aas_t.Aminoacid_regular_symbol Aas_t.Methionine;;
+ let phenylalanine_n = Aas_t.Aminoacid_regular_symbol Aas_t.Phenylalanine;;
+ let serine_n = Aas_t.Aminoacid_regular_symbol Aas_t.Serine;;
+ let threonine_n = Aas_t.Aminoacid_regular_symbol Aas_t.Threonine;;
+ let tryptophan_n = Aas_t.Aminoacid_regular_symbol Aas_t.Tryptophan;;
+ let tyrosine_n = Aas_t.Aminoacid_regular_symbol Aas_t.Tyrosine;;
+ let valine_n = Aas_t.Aminoacid_regular_symbol Aas_t.Valine;;
+
+(** {9 Aminoacid.} *)
+
+ let glycine = make_of_aminoacid_glycine_symbol Aas_t.Glycine;;
+
+ let proline = make_of_aminoacid_proline_symbol Aas_t.Proline;;
+
+ let alanine = make_of_aminoacid_regular_symbol Aas_t.Alanine;;
+ let arginine = make_of_aminoacid_regular_symbol Aas_t.Arginine;;
+ let asparagine = make_of_aminoacid_regular_symbol Aas_t.Asparagine;;
+ let aspartic = make_of_aminoacid_regular_symbol Aas_t.Aspartic;;
+ let cysteine = make_of_aminoacid_regular_symbol Aas_t.Cysteine;;
+ let glutamine = make_of_aminoacid_regular_symbol Aas_t.Glutamine;;
+ let glutamic = make_of_aminoacid_regular_symbol Aas_t.Glutamic;;
+ let histidine = make_of_aminoacid_regular_symbol Aas_t.Histidine;;
+ let isoleucine = make_of_aminoacid_regular_symbol Aas_t.Isoleucine;;
+ let leucine = make_of_aminoacid_regular_symbol Aas_t.Leucine;;
+ let lysine = make_of_aminoacid_regular_symbol Aas_t.Lysine;;
+ let methionine = make_of_aminoacid_regular_symbol Aas_t.Methionine;;
+ let phenylalanine = make_of_aminoacid_regular_symbol Aas_t.Phenylalanine;;
+ let serine = make_of_aminoacid_regular_symbol Aas_t.Serine;;
+ let threonine = make_of_aminoacid_regular_symbol Aas_t.Threonine;;
+ let tryptophan = make_of_aminoacid_regular_symbol Aas_t.Tryptophan;;
+ let tyrosine = make_of_aminoacid_regular_symbol Aas_t.Tyrosine;;
+ let valine = make_of_aminoacid_regular_symbol Aas_t.Valine;;
+
+let aminoacid_symbol_list () =
+[
+ alanine;
+ arginine;
+ asparagine;
+ aspartic;
+ cysteine;
+ glutamine;
+ glutamic;
+ histidine;
+ isoleucine;
+ leucine;
+ lysine;
+ methionine;
+ phenylalanine;
+ serine;
+ threonine;
+ tryptophan;
+ tyrosine;
+ valine;
+]
+;;

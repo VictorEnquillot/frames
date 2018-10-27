@@ -1,0 +1,21 @@
+(** {6 Pattern matching} *)
+
+let container_of_tag tag_ttt =
+  let soi_ttt = Tag_v.sole_index_off_tag tag_ttt in
+  let sym_ttt = Tag_v.entity_off_tag tag_ttt in
+  match sym_ttt with
+  | This_symbol_t.Sibling_1_symbol sym_sib_1 ->
+      let tag_sib_1 = Tag_v.make sym_sib_1 soi_ttt in
+      This_container_t.Sibling_1_container
+	(Sibling_1_container_v.container_of_tag tag_sib_1)
+
+  | This_symbol_t.Sibling_2_symbol sym_sib_2 ->
+      let tag_sib_2 = Tag_v.make sym_sib_2 soi_ttt in
+      This_container_t.Sibling_2_container
+	(Sibling_2_container_v.container_of_tag tag_sib_2)
+
+  | This_symbol_t.Sibling_3_symbol sym_sib_3 ->
+      let tag_sib_3 = Tag_v.make sym_sib_3 soi_ttt in
+      This_container_t.Sibling_3_container
+	(Sibling_3_container_v.container_of_tag tag_sib_3)
+;;

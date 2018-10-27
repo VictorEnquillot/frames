@@ -1,0 +1,26 @@
+Factorial_formula_u_any.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Singlet_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Make_test_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_left_recursive/Factorial_tag_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_left_recursive/Factorial_symbol_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_left_recursive/Factorial_formula_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_left_recursive/Factorial_formula_t.cmo
+Factorial_formula_u_any.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Singlet_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Make_test_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_left_recursive/Factorial_tag_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_left_recursive/Factorial_symbol_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_left_recursive/Factorial_formula_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_left_recursive/Factorial_formula_t.cmx
+Factorial_value_propagator_u_any.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Singlet_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Make_test_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_left_recursive/Factorial_value_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_left_recursive/Factorial_value_provider_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_left_recursive/Factorial_value_propagator_v.cmo
+Factorial_value_propagator_u_any.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Singlet_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Make_test_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_left_recursive/Factorial_value_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_left_recursive/Factorial_value_provider_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/ghostset/factorial_left_recursive/Factorial_value_propagator_v.cmx

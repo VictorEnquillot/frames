@@ -1,0 +1,61 @@
+dir ../
+r
+Hm
+dir ../
+r
+dir ../
+r
+g 247943
+bt
+up
+n
+up
+g 247943
+up
+b
+display  str
+l
+bt
+r
+g 247943
+bt
+b
+display c
+display ib
+r
+g 247943
+ulet make_integer_field_format_string w =
+  Printf.sprintf " %%%d%,i" w
+;;
+r
+g 1557599
+dir ../
+g 1557599
+dir /home/colonna/sources/ocaml_top/setup/frames/general/tools
+g 1557599
+up
+display smb_enp;;
+display smb_enp
+dir ../
+r
+dir ../
+g 1787220
+bt
+up
+g 1787220
+up
+r
+g 1787217
+up
+n
+bt
+t
+r
+bt
+g 1787217
+bt
+dir ../
+r
+b
+bt
+module Fln_v = Filename_v;;

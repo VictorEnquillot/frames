@@ -1,0 +1,18 @@
+define Con_db1 
+       context []
+	 database "db1points"
+         domain "figure"
+	 end -- context
+       end -- define
+
+define P_a_a_val 
+        external [ "figure" "set" "fence" "point" "constructor" ]
+          external_name "A_A"
+	  external_context Con_db1
+       	  end -- external
+       end -- define
+
+print P_a_a_val
+      end -- print
+
+stop

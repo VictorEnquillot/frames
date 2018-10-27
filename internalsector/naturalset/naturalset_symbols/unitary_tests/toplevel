@@ -1,0 +1,13 @@
+ledit -x -h ./.toplevel-history ocaml \
+-I ../../../general/basics \
+-I ../../../general/datastructures \
+-I ../../../general/files \
+-I ../../../generatorset/generatorset_symbols \
+-I ../ \
+unix.cma str.cma \
+../../../general/basics/basics.cma \
+../../../general/datastructures/datastructures.cma \
+../../../general/files/files.cma \
+../../../generatorset/generatorset_symbols/generatorset_symbols.cma \
+../naturalset_symbols.cma \
+ 

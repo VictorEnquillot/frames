@@ -1,0 +1,22 @@
+(** {6 Border *)
+
+let border_as_list tag_ttt =
+  let tag_ele = coerce_up_tag tag_ttt in
+  Maint_border_by_maint_tag_provider_v.provide tag_ele
+;;
+
+let border_as_duo tag_ttt =
+  let bor_ttt = border_as_list tag_ttt in
+  Duo_v.duo_of_list bor_ttt
+;;
+
+let border_as_tuple tag_ttt =
+  let bor_l = border_as_list tag_ttt in
+  Tuple_v.tuple_of_list bor_l
+;;
+
+let border_as_tuple_list tag_ttt =
+  let bor_l = border_as_list tag_ttt in
+  Tuple_list_v.make bor_l
+;;
+

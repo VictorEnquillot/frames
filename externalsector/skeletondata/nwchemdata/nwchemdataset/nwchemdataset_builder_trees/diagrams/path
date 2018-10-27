@@ -1,0 +1,92 @@
+( tag_pat : Nwchemdata_symbol_t.nwchemdata_symbol Tag_t.tag list ) =
+  [(Nwchemdata_symbol_t.Nwchemdata_context_symbol
+     (Nwchemdata_context_symbol_t.Nwchemdata_context_sector_symbol
+       (Nwchemdata_context_sector_symbol_t.Nwchemdata_context_sector_constructor
+         "external")),
+    [2]);
+   (Nwchemdata_symbol_t.Nwchemdata_context_symbol
+     (Nwchemdata_context_symbol_t.Nwchemdata_context_domain_symbol
+       (Nwchemdata_context_domain_symbol_t.Nwchemdata_context_domain_constructor
+         "skeleton")),
+    [20; 2]);
+   (Nwchemdata_symbol_t.Nwchemdata_context_symbol
+     (Nwchemdata_context_symbol_t.Nwchemdata_context_database_symbol
+       (Nwchemdata_context_database_symbol_t.Nwchemdata_context_database_constructor
+         "nwchem")),
+    [5; 20; 2]);
+   (Nwchemdata_symbol_t.Nwchemdata_context_symbol
+     (Nwchemdata_context_symbol_t.Nwchemdata_context_databox_symbol
+       (Nwchemdata_context_databox_symbol_t.Nwchemdata_context_databox_constructor
+         "try_ao")),
+    [22; 5; 20; 2]);
+   (Nwchemdata_symbol_t.Nwchemdata_set_symbol
+     (Nwchemdata_set_symbol_t.Nwchemdata_set_body_symbol
+       (Nwchemdata_set_body_symbol_t.Nwchemdata_set_body_node_symbol
+         (Nwchemdata_set_body_node_symbol_t.Nwchemdata_set_body_node_aobasis_block_symbol
+           (Nwchemdata_set_body_node_aobasis_block_symbol_t.Nwchemdata_set_body_node_aobasis_block_constructor
+             "try_ao")))),
+    [2; 22; 5; 20; 2]);
+   (Nwchemdata_symbol_t.Nwchemdata_set_symbol
+     (Nwchemdata_set_symbol_t.Nwchemdata_set_body_symbol
+       (Nwchemdata_set_body_symbol_t.Nwchemdata_set_body_node_symbol
+         (Nwchemdata_set_body_node_symbol_t.Nwchemdata_set_body_node_aoset_symbol
+           (Nwchemdata_set_body_node_aoset_symbol_t.Nwchemdata_set_body_node_aoset_block_symbol
+             (Nwchemdata_set_body_node_aoset_block_symbol_t.Nwchemdata_set_body_node_aoset_block_constructor
+               "try_ao"))))),
+    [2; 2; 22; 5; 20; 2]);
+   (Nwchemdata_symbol_t.Nwchemdata_set_symbol
+     (Nwchemdata_set_symbol_t.Nwchemdata_set_body_symbol
+       (Nwchemdata_set_body_symbol_t.Nwchemdata_set_body_node_symbol
+         (Nwchemdata_set_body_node_symbol_t.Nwchemdata_set_body_node_aoset_symbol
+           (Nwchemdata_set_body_node_aoset_symbol_t.Nwchemdata_set_body_node_aoset_anycenter_block_symbol
+             (Nwchemdata_set_body_node_aoset_anycenter_block_symbol_t.Nwchemdata_set_body_node_aoset_anycenter_block_constructor
+               "try_ao"))))),
+    [2; 2; 2; 22; 5; 20; 2]);
+   (Nwchemdata_symbol_t.Nwchemdata_set_symbol
+     (Nwchemdata_set_symbol_t.Nwchemdata_set_body_symbol
+       (Nwchemdata_set_body_symbol_t.Nwchemdata_set_body_node_symbol
+         (Nwchemdata_set_body_node_symbol_t.Nwchemdata_set_body_node_aoset_symbol
+           (Nwchemdata_set_body_node_aoset_symbol_t.Nwchemdata_set_body_node_aoset_onecenter_block_symbol
+             (Nwchemdata_set_body_node_aoset_onecenter_block_symbol_t.Nwchemdata_set_body_node_aoset_onecenter_block_constructor
+               "He"))))),
+    [1; 2; 2; 2; 22; 5; 20; 2]);
+   (Nwchemdata_symbol_t.Nwchemdata_set_symbol
+     (Nwchemdata_set_symbol_t.Nwchemdata_set_body_symbol
+       (Nwchemdata_set_body_symbol_t.Nwchemdata_set_body_node_symbol
+         (Nwchemdata_set_body_node_symbol_t.Nwchemdata_set_body_node_aoset_symbol
+           (Nwchemdata_set_body_node_aoset_symbol_t.Nwchemdata_set_body_node_aoset_anyshell_block_symbol
+             (Nwchemdata_set_body_node_aoset_anyshell_block_symbol_t.Nwchemdata_set_body_node_aoset_anyshell_block_constructor
+               "He"))))),
+    [2; 1; 2; 2; 2; 22; 5; 20; 2]);
+   (Nwchemdata_symbol_t.Nwchemdata_set_symbol
+     (Nwchemdata_set_symbol_t.Nwchemdata_set_body_symbol
+       (Nwchemdata_set_body_symbol_t.Nwchemdata_set_body_node_symbol
+         (Nwchemdata_set_body_node_symbol_t.Nwchemdata_set_body_node_aoset_symbol
+           (Nwchemdata_set_body_node_aoset_symbol_t.Nwchemdata_set_body_node_aoset_oneshell_block_symbol
+             (Nwchemdata_set_body_node_aoset_oneshell_block_symbol_t.Nwchemdata_set_body_node_aoset_oneshell_block_constructor
+               "He P 3 GAUSSIAN"))))),
+    [3; 2; 1; 2; 2; 2; 22; 5; 20; 2]);
+   (Nwchemdata_symbol_t.Nwchemdata_set_symbol
+     (Nwchemdata_set_symbol_t.Nwchemdata_set_body_symbol
+       (Nwchemdata_set_body_symbol_t.Nwchemdata_set_body_node_symbol
+         (Nwchemdata_set_body_node_symbol_t.Nwchemdata_set_body_node_aoset_symbol
+           (Nwchemdata_set_body_node_aoset_symbol_t.Nwchemdata_set_body_node_aoset_numericalvalues_block_symbol
+             (Nwchemdata_set_body_node_aoset_numericalvalues_block_symbol_t.Nwchemdata_set_body_node_aoset_numericalvalues_block_constructor
+               "He P 3 GAUSSIAN"))))),
+    [2; 3; 2; 1; 2; 2; 2; 22; 5; 20; 2]);
+   (Nwchemdata_symbol_t.Nwchemdata_set_symbol
+     (Nwchemdata_set_symbol_t.Nwchemdata_set_body_symbol
+       (Nwchemdata_set_body_symbol_t.Nwchemdata_set_body_node_symbol
+         (Nwchemdata_set_body_node_symbol_t.Nwchemdata_set_body_node_aoset_symbol
+           (Nwchemdata_set_body_node_aoset_symbol_t.Nwchemdata_set_body_node_aoset_numericalvalues_symbol
+             (Nwchemdata_set_body_node_aoset_numericalvalues_symbol_t.Nwchemdata_set_body_node_aoset_numericalvalues_constructor
+               "He P 3 GAUSSIAN 1"))))),
+    [1; 2; 3; 2; 1; 2; 2; 2; 22; 5; 20; 2]);
+   (Nwchemdata_symbol_t.Nwchemdata_set_symbol
+     (Nwchemdata_set_symbol_t.Nwchemdata_set_fence_symbol
+       (Nwchemdata_set_fence_symbol_t.Nwchemdata_set_fence_float_symbol
+         (Nwchemdata_set_fence_float_symbol_t.Nwchemdata_set_fence_float_positive_symbol
+           (Nwchemdata_set_fence_float_positive_symbol_t.Nwchemdata_set_fence_float_positive_constructor
+             "2.2818700")))),
+    [1; 1; 2; 3; 2; 1; 2; 2; 2; 22; 5; 20; 2])]
+);;

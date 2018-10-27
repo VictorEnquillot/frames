@@ -1,0 +1,781 @@
+  generation of >mli< code
+result  >(
+, Atom symbol are design to meet Block constraints i.e.
+, 
+,   Core atom 
+,   Leaf atoms have not to be mixed up.
+,   Raregas is an other case. 
+, *)
+, 
+, type atom_symbol =
+,   | Closed_atom_symbol of closed_atom_symbol
+,   | Leaf_atom_symbol of leaf_atom_symbol
+,   | Core_atom_symbol of core_atom_symbol
+, 
+, and core_atom_symbol =
+,   | Twotied_atom_symbol of twotied_atom_symbol
+,   | Threetied_atom_symbol of threetied_atom_symbol
+,   | Fourtied_atom_symbol of fourtied_atom_symbol 
+,   | Fivetied_atom_symbol of fivetied_atom_symbol 
+,   | Sixtied_atom_symbol of sixtied_atom_symbol 
+, 
+, and leaf_atom_symbol =
+,   | Single_leaf_atom_symbol of single_leaf_atom_symbol
+,   | Double_leaf_atom_symbol of double_leaf_atom_symbol
+,   | Triple_leaf_atom_symbol of triple_leaf_atom_symbol
+,   | Nonsigma_leaf_atom_symbol of nonsigma_leaf_atom_symbol
+, 
+, 
+, and closed_atom_symbol =
+,   | Raregas_symbol of raregas_symbol
+,   | Anion_symbol of anion_symbol 
+,   | Cation_symbol of cation_symbol
+, 
+, and raregas_symbol =
+,   | Rg_Ar (* Ar *)
+,   | Rg_He 
+,   | Rg_Kr (* Kr *)
+,   | Rg_Ne (* Ne *)
+,   | Rg_Xe (* Xe *)
+, 
+, and anion_symbol =
+,   | Minus_one_anion_symbol of minus_one_anion_symbol
+, 
+, and cation_symbol = 
+,   | Plus_one_anion_symbol of plus_one_anion_symbol
+,   | Plus_two_anion_symbol of plus_two_anion_symbol
+,   | Plus_three_anion_symbol of plus_three_anion_symbol
+, 
+, and minus_one_anion_symbol =
+,   | Mon_F   (* F- *)
+,   | Mon_H   (* H- *)
+, 
+, and plus_one_anion_symbol =
+,   | Pon_H   (* H+ *)
+,   | Pon_Na  (* Na+ *)
+, 
+, and plus_two_anion_symbol =
+,   | Ptw_Ca  (* Ca++ *)
+,   | Ptw_Fe  (* Fe++ *)
+, 
+, and plus_three_anion_symbol =
+,   | Pth_Fe  (* Fe+++ *)
+, 
+, 
+, and nonsigma_leaf_atom_symbol =
+,   | Clf_O   (* O.- in -Coo anion. *)
+, 
+, and single_leaf_atom_symbol =
+,   | Slf_H   (* H- in h-H molecule *)
+,   | Slf_F   (* F- in f-H molecule *)
+, 
+, and double_leaf_atom_symbol =
+,   | Dlf_O   (* O=  in Co2 molecule *)
+, 
+, and triple_leaf_atom_symbol =
+,   | Tlf_N   (* N#  H-C#N *)
+, 
+, 
+, and twotied_atom_symbol =
+,   | Sigma_twotied_atom_symbol of sigma_twotied_atom_symbol
+,   | Nonsigma_twotied_atom_symbol of nonsigma_twotied_atom_symbol
+, 
+, and threetied_atom_symbol =
+,   | Sigma_threetied_atom_symbol of sigma_threetied_atom_symbol
+,   | Nonsigma_threetied_atom_symbol of nonsigma_threetied_atom_symbol
+, 
+, and fourtied_atom_symbol =
+,   | Fo_C   (* >C<  Methane *)
+,   | Fo_N   (* >N+< Ammonium *)
+,   | Fo_S   (* >S< Sf4 molecule See_saw *)
+,   | Fo_Xe  (* >Xe< XeF4 molecule Square_planar *)
+, 
+, and fivetied_atom_symbol =
+,   | Fi_Cl  (* >Cl<- Clf5 molecule Square_pyramidal *)
+, 
+, and sixtied_atom_symbol =
+,   | Si_S   (* ->S<- Sf6 molecule Octahedral *)
+, 
+, and sigma_twotied_atom_symbol =
+,   | Single_sigma_twotied_atom_symbol of single_sigma_twotied_atom_symbol
+,   | Double_sigma_twotied_atom_symbol of double_sigma_twotied_atom_symbol
+,   | Triple_sigma_twotied_atom_symbol of triple_sigma_twotied_atom_symbol
+, 
+, and sigma_threetied_atom_symbol =
+,   | Single_sigma_threetied_atom_symbol of single_sigma_threetied_atom_symbol
+,   | Double_sigma_threetied_atom_symbol of double_sigma_threetied_atom_symbol
+, 
+, and nonsigma_threetied_atom_symbol =
+,   | Single_nonsigma_threetied_atom_symbol of single_nonsigma_threetied_atom_symbol
+,   | Double_nonsigma_threetied_atom_symbol of double_nonsigma_threetied_atom_symbol
+, 
+, 
+, and single_sigma_twotied_atom_symbol =
+,   | Sstw_O    (* -O-   in h-O-h molecule *)
+,   | Sstw_S    (* -S-   h-S-h molecule *)
+, 
+, and double_sigma_twotied_atom_symbol =
+,   | Dstw_C    (* =C=   in o=C=o molecule *)
+,   | Dstw_N    (* =N-   in Guanidine C=N-H *)
+,   | Dstw_S    (* =S=   o=S=o sulfur dioxide molecule *)
+, 
+, and triple_sigma_twotied_atom_symbol =
+,   | Tstw_C    (* -C#   in h-C#n molecule  *)
+, 
+, 
+, and nonsigma_twotied_atom_symbol =
+,   | Nctw_N   (* -N.-  in o-N.-o anion *)
+,   | Nctw_O   (* -O.-  in o-O.-o molecule *)
+, 
+, 
+, and single_sigma_threetied_atom_symbol =
+,   | Ssth_N    (* -N<  Nh3 molecule Trigonal_pyramidal *)
+,   | Ssth_Cl   (* ClF3 molecule Tshaped *)
+, 
+, and double_sigma_threetied_atom_symbol =
+,   | Dsth_C    (* =C< in Ethylene molecule *)
+,   | Dsth_N    (* =N+<  *)
+,   | Dsth_S    (* =S<< in So3 sulfur trioxide molecule planar *)
+, 
+, 
+, and single_nonsigma_threetied_atom_symbol =
+,   | Snth_C    (* -C.< in Co3 carbonate anion planar *)
+, 
+, and double_nonsigma_threetied_atom_symbol =
+,   | Dnth_S    (* =S< in o=S< Sulfinyl group (covalent/ionic) *)
+, ;;
+)<
+here: entity_name >atom<
+here: category_name >symbol<
+                           "Anion_symbol" : closed_atom_symbol
+                          "Cation_symbol" : closed_atom_symbol
+                                  "Clf_O" : nonsigma_leaf_atom_symbol
+                     "Closed_atom_symbol" : atom_symbol
+                       "Core_atom_symbol" : atom_symbol
+                                  "Dlf_O" : double_leaf_atom_symbol
+                                 "Dnth_S" : double_nonsigma_threetied_atom_symbol
+                "Double_leaf_atom_symbol" : leaf_atom_symbol
+  "Double_nonsigma_threetied_atom_symbol" : nonsigma_threetied_atom_symbol
+     "Double_sigma_threetied_atom_symbol" : sigma_threetied_atom_symbol
+       "Double_sigma_twotied_atom_symbol" : sigma_twotied_atom_symbol
+                                 "Dsth_C" : double_sigma_threetied_atom_symbol
+                                 "Dsth_N" : double_sigma_threetied_atom_symbol
+                                 "Dsth_S" : double_sigma_threetied_atom_symbol
+                                 "Dstw_C" : double_sigma_twotied_atom_symbol
+                                 "Dstw_N" : double_sigma_twotied_atom_symbol
+                                 "Dstw_S" : double_sigma_twotied_atom_symbol
+                                  "Fi_Cl" : fivetied_atom_symbol
+                   "Fivetied_atom_symbol" : core_atom_symbol
+                                   "Fo_C" : fourtied_atom_symbol
+                                   "Fo_N" : fourtied_atom_symbol
+                                   "Fo_S" : fourtied_atom_symbol
+                                  "Fo_Xe" : fourtied_atom_symbol
+                   "Fourtied_atom_symbol" : core_atom_symbol
+                       "Leaf_atom_symbol" : atom_symbol
+                 "Minus_one_anion_symbol" : anion_symbol
+                                  "Mon_F" : minus_one_anion_symbol
+                                  "Mon_H" : minus_one_anion_symbol
+                                 "Nctw_N" : nonsigma_twotied_atom_symbol
+                                 "Nctw_O" : nonsigma_twotied_atom_symbol
+              "Nonsigma_leaf_atom_symbol" : leaf_atom_symbol
+         "Nonsigma_threetied_atom_symbol" : threetied_atom_symbol
+           "Nonsigma_twotied_atom_symbol" : twotied_atom_symbol
+                  "Plus_one_anion_symbol" : cation_symbol
+                "Plus_three_anion_symbol" : cation_symbol
+                  "Plus_two_anion_symbol" : cation_symbol
+                                  "Pon_H" : plus_one_anion_symbol
+                                 "Pon_Na" : plus_one_anion_symbol
+                                 "Pth_Fe" : plus_three_anion_symbol
+                                 "Ptw_Ca" : plus_two_anion_symbol
+                                 "Ptw_Fe" : plus_two_anion_symbol
+                         "Raregas_symbol" : closed_atom_symbol
+                                  "Rg_Ar" : raregas_symbol
+                                  "Rg_He" : raregas_symbol
+                                  "Rg_Kr" : raregas_symbol
+                                  "Rg_Ne" : raregas_symbol
+                                  "Rg_Xe" : raregas_symbol
+                                   "Si_S" : sixtied_atom_symbol
+            "Sigma_threetied_atom_symbol" : threetied_atom_symbol
+              "Sigma_twotied_atom_symbol" : twotied_atom_symbol
+                "Single_leaf_atom_symbol" : leaf_atom_symbol
+  "Single_nonsigma_threetied_atom_symbol" : nonsigma_threetied_atom_symbol
+     "Single_sigma_threetied_atom_symbol" : sigma_threetied_atom_symbol
+       "Single_sigma_twotied_atom_symbol" : sigma_twotied_atom_symbol
+                    "Sixtied_atom_symbol" : core_atom_symbol
+                                  "Slf_F" : single_leaf_atom_symbol
+                                  "Slf_H" : single_leaf_atom_symbol
+                                 "Snth_C" : single_nonsigma_threetied_atom_symbol
+                                "Ssth_Cl" : single_sigma_threetied_atom_symbol
+                                 "Ssth_N" : single_sigma_threetied_atom_symbol
+                                 "Sstw_O" : single_sigma_twotied_atom_symbol
+                                 "Sstw_S" : single_sigma_twotied_atom_symbol
+                  "Threetied_atom_symbol" : core_atom_symbol
+                                  "Tlf_N" : triple_leaf_atom_symbol
+                "Triple_leaf_atom_symbol" : leaf_atom_symbol
+       "Triple_sigma_twotied_atom_symbol" : sigma_twotied_atom_symbol
+                                 "Tstw_C" : triple_sigma_twotied_atom_symbol
+                    "Twotied_atom_symbol" : core_atom_symbol
+main::do_top_type_abbreviation_list Top_type_abb_l list 
+Rg_Ar
+Rg_He
+Rg_Kr
+Rg_Ne
+Rg_Xe
+Mon_F
+Mon_H
+Pon_H
+Pon_Na
+Ptw_Ca
+Ptw_Fe
+Pth_Fe
+Clf_O
+Slf_H
+Slf_F
+Dlf_O
+Tlf_N
+Fo_C
+Fo_N
+Fo_S
+Fo_Xe
+Fi_Cl
+Si_S
+Sstw_O
+Sstw_S
+Dstw_C
+Dstw_N
+Dstw_S
+Tstw_C
+Nctw_N
+Nctw_O
+Ssth_N
+Ssth_Cl
+Dsth_C
+Dsth_N
+Dsth_S
+Snth_C
+Dnth_S
+main::do_upper_type_abbreviation_list Global Top_type_abb_l Rg_Ar
+Rg_He
+Rg_Kr
+Rg_Ne
+Rg_Xe
+Mon_F
+Mon_H
+Pon_H
+Pon_Na
+Ptw_Ca
+Ptw_Fe
+Pth_Fe
+Clf_O
+Slf_H
+Slf_F
+Dlf_O
+Tlf_N
+Fo_C
+Fo_N
+Fo_S
+Fo_Xe
+Fi_Cl
+Si_S
+Sstw_O
+Sstw_S
+Dstw_C
+Dstw_N
+Dstw_S
+Tstw_C
+Nctw_N
+Nctw_O
+Ssth_N
+Ssth_Cl
+Dsth_C
+Dsth_N
+Dsth_S
+Snth_C
+Dnth_S
+ atom top Rg_Ar => upp Ar
+ atom top Rg_He => upp He
+ atom top Rg_Kr => upp Kr
+ atom top Rg_Ne => upp Ne
+ atom top Rg_Xe => upp Xe
+ atom top Mon_F => upp m_F
+ atom top Mon_H => upp m_H
+ atom top Pon_H => upp p_H
+ atom top Pon_Na => upp p_Na
+ atom top Ptw_Ca => upp pp_Ca
+ atom top Ptw_Fe => upp pp_Fe
+ atom top Pth_Fe => upp ppp_Fe
+ atom top Slf_H => upp lslf_H
+ atom top Slf_F => upp lslf_F
+ atom top Fo_C => upp cfo_C
+ atom top Fo_N => upp cfo_N
+ atom top Fo_S => upp cfo_S
+ atom top Fo_Xe => upp cfo_Xe
+ atom top Si_S => upp csi_S
+    "Clf_O" : cclf_o
+    "Dlf_O" : cdlf_o
+   "Dnth_S" : cdnth_s
+   "Dsth_C" : cdsth_c
+   "Dsth_N" : cdsth_n
+   "Dsth_S" : cdsth_s
+   "Dstw_C" : cdstw_c
+   "Dstw_N" : cdstw_n
+   "Dstw_S" : cdstw_s
+    "Fi_Cl" : cfi_cl
+     "Fo_C" : cfo_C
+     "Fo_N" : cfo_N
+     "Fo_S" : cfo_S
+    "Fo_Xe" : cfo_Xe
+    "Mon_F" : m_F
+    "Mon_H" : m_H
+   "Nctw_N" : cnctw_n
+   "Nctw_O" : cnctw_o
+    "Pon_H" : p_H
+   "Pon_Na" : p_Na
+   "Pth_Fe" : ppp_Fe
+   "Ptw_Ca" : pp_Ca
+   "Ptw_Fe" : pp_Fe
+    "Rg_Ar" : Ar
+    "Rg_He" : He
+    "Rg_Kr" : Kr
+    "Rg_Ne" : Ne
+    "Rg_Xe" : Xe
+     "Si_S" : csi_S
+    "Slf_F" : lslf_F
+    "Slf_H" : lslf_H
+   "Snth_C" : csnth_c
+  "Ssth_Cl" : cssth_cl
+   "Ssth_N" : cssth_n
+   "Sstw_O" : csstw_o
+   "Sstw_S" : csstw_s
+    "Tlf_N" : ctlf_n
+   "Tstw_C" : ctstw_c
+main::do_upper_to_top_abbreviation_hash: upp cnctw_o => top Nctw_O
+main::do_upper_to_top_abbreviation_hash: upp cdsth_n => top Dsth_N
+main::do_upper_to_top_abbreviation_hash: upp cdnth_s => top Dnth_S
+main::do_upper_to_top_abbreviation_hash: upp ppp_Fe => top Pth_Fe
+main::do_upper_to_top_abbreviation_hash: upp cfo_C => top Fo_C
+main::do_upper_to_top_abbreviation_hash: upp cnctw_n => top Nctw_N
+main::do_upper_to_top_abbreviation_hash: upp csi_S => top Si_S
+main::do_upper_to_top_abbreviation_hash: upp pp_Ca => top Ptw_Ca
+main::do_upper_to_top_abbreviation_hash: upp cdstw_s => top Dstw_S
+main::do_upper_to_top_abbreviation_hash: upp cfo_N => top Fo_N
+main::do_upper_to_top_abbreviation_hash: upp pp_Fe => top Ptw_Fe
+main::do_upper_to_top_abbreviation_hash: upp lslf_F => top Slf_F
+main::do_upper_to_top_abbreviation_hash: upp csstw_s => top Sstw_S
+main::do_upper_to_top_abbreviation_hash: upp cdlf_o => top Dlf_O
+main::do_upper_to_top_abbreviation_hash: upp m_H => top Mon_H
+main::do_upper_to_top_abbreviation_hash: upp cdsth_c => top Dsth_C
+main::do_upper_to_top_abbreviation_hash: upp m_F => top Mon_F
+main::do_upper_to_top_abbreviation_hash: upp ctlf_n => top Tlf_N
+main::do_upper_to_top_abbreviation_hash: upp cfo_Xe => top Fo_Xe
+main::do_upper_to_top_abbreviation_hash: upp Kr => top Rg_Kr
+main::do_upper_to_top_abbreviation_hash: upp p_H => top Pon_H
+main::do_upper_to_top_abbreviation_hash: upp cfo_S => top Fo_S
+main::do_upper_to_top_abbreviation_hash: upp p_Na => top Pon_Na
+main::do_upper_to_top_abbreviation_hash: upp csstw_o => top Sstw_O
+main::do_upper_to_top_abbreviation_hash: upp He => top Rg_He
+main::do_upper_to_top_abbreviation_hash: upp cdstw_c => top Dstw_C
+main::do_upper_to_top_abbreviation_hash: upp cdstw_n => top Dstw_N
+main::do_upper_to_top_abbreviation_hash: upp Ne => top Rg_Ne
+main::do_upper_to_top_abbreviation_hash: upp Xe => top Rg_Xe
+main::do_upper_to_top_abbreviation_hash: upp cssth_cl => top Ssth_Cl
+main::do_upper_to_top_abbreviation_hash: upp ctstw_c => top Tstw_C
+main::do_upper_to_top_abbreviation_hash: upp cfi_cl => top Fi_Cl
+main::do_upper_to_top_abbreviation_hash: upp cdsth_s => top Dsth_S
+main::do_upper_to_top_abbreviation_hash: upp csnth_c => top Snth_C
+main::do_upper_to_top_abbreviation_hash: upp cssth_n => top Ssth_N
+main::do_upper_to_top_abbreviation_hash: upp Ar => top Rg_Ar
+main::do_upper_to_top_abbreviation_hash: upp cclf_o => top Clf_O
+main::do_upper_to_top_abbreviation_hash: upp lslf_H => top Slf_H
+        "Ar" : Rg_Ar
+        "He" : Rg_He
+        "Kr" : Rg_Kr
+        "Ne" : Rg_Ne
+        "Xe" : Rg_Xe
+    "cclf_o" : Clf_O
+    "cdlf_o" : Dlf_O
+   "cdnth_s" : Dnth_S
+   "cdsth_c" : Dsth_C
+   "cdsth_n" : Dsth_N
+   "cdsth_s" : Dsth_S
+   "cdstw_c" : Dstw_C
+   "cdstw_n" : Dstw_N
+   "cdstw_s" : Dstw_S
+    "cfi_cl" : Fi_Cl
+     "cfo_C" : Fo_C
+     "cfo_N" : Fo_N
+     "cfo_S" : Fo_S
+    "cfo_Xe" : Fo_Xe
+   "cnctw_n" : Nctw_N
+   "cnctw_o" : Nctw_O
+     "csi_S" : Si_S
+   "csnth_c" : Snth_C
+  "cssth_cl" : Ssth_Cl
+   "cssth_n" : Ssth_N
+   "csstw_o" : Sstw_O
+   "csstw_s" : Sstw_S
+    "ctlf_n" : Tlf_N
+   "ctstw_c" : Tstw_C
+    "lslf_F" : Slf_F
+    "lslf_H" : Slf_H
+       "m_F" : Mon_F
+       "m_H" : Mon_H
+       "p_H" : Pon_H
+      "p_Na" : Pon_Na
+     "pp_Ca" : Ptw_Ca
+     "pp_Fe" : Ptw_Fe
+    "ppp_Fe" : Pth_Fe
+main::do_upper_type_abbreviation_list list cfo_N
+Ne
+pp_Fe
+Xe
+m_F
+cfi_cl
+He
+lslf_H
+csstw_o
+cdstw_s
+cdstw_c
+cclf_o
+ctstw_c
+cnctw_o
+pp_Ca
+m_H
+Kr
+cfo_C
+cssth_n
+p_Na
+cdsth_n
+ppp_Fe
+cdnth_s
+cnctw_n
+cfo_Xe
+csnth_c
+ctlf_n
+cssth_cl
+cdstw_n
+lslf_F
+Ar
+cdsth_c
+cdlf_o
+csstw_s
+cfo_S
+cdsth_s
+p_H
+csi_S
+ atom top Rg_Ar => upp Ar
+ atom top Rg_He => upp He
+ atom top Rg_Kr => upp Kr
+ atom top Rg_Ne => upp Ne
+ atom top Rg_Xe => upp Xe
+ atom top Mon_F => upp m_F
+ atom top Mon_H => upp m_H
+ atom top Pon_H => upp p_H
+ atom top Pon_Na => upp p_Na
+ atom top Ptw_Ca => upp pp_Ca
+ atom top Ptw_Fe => upp pp_Fe
+ atom top Pth_Fe => upp ppp_Fe
+ atom top Slf_H => upp lslf_H
+ atom top Slf_F => upp lslf_F
+ atom top Fo_C => upp cfo_C
+ atom top Fo_N => upp cfo_N
+ atom top Fo_S => upp cfo_S
+ atom top Fo_Xe => upp cfo_Xe
+ atom top Si_S => upp csi_S
+    "Clf_O" : cclf_o
+    "Dlf_O" : cdlf_o
+   "Dnth_S" : cdnth_s
+   "Dsth_C" : cdsth_c
+   "Dsth_N" : cdsth_n
+   "Dsth_S" : cdsth_s
+   "Dstw_C" : cdstw_c
+   "Dstw_N" : cdstw_n
+   "Dstw_S" : cdstw_s
+    "Fi_Cl" : cfi_cl
+     "Fo_C" : cfo_C
+     "Fo_N" : cfo_N
+     "Fo_S" : cfo_S
+    "Fo_Xe" : cfo_Xe
+    "Mon_F" : m_F
+    "Mon_H" : m_H
+   "Nctw_N" : cnctw_n
+   "Nctw_O" : cnctw_o
+    "Pon_H" : p_H
+   "Pon_Na" : p_Na
+   "Pth_Fe" : ppp_Fe
+   "Ptw_Ca" : pp_Ca
+   "Ptw_Fe" : pp_Fe
+    "Rg_Ar" : Ar
+    "Rg_He" : He
+    "Rg_Kr" : Kr
+    "Rg_Ne" : Ne
+    "Rg_Xe" : Xe
+     "Si_S" : csi_S
+    "Slf_F" : lslf_F
+    "Slf_H" : lslf_H
+   "Snth_C" : csnth_c
+  "Ssth_Cl" : cssth_cl
+   "Ssth_N" : cssth_n
+   "Sstw_O" : csstw_o
+   "Sstw_S" : csstw_s
+    "Tlf_N" : ctlf_n
+   "Tstw_C" : ctstw_c
+main::do_upper_to_top_abbreviation_hash: upp cnctw_o => top Nctw_O
+main::do_upper_to_top_abbreviation_hash: upp cdsth_n => top Dsth_N
+main::do_upper_to_top_abbreviation_hash: upp cdnth_s => top Dnth_S
+main::do_upper_to_top_abbreviation_hash: upp ppp_Fe => top Pth_Fe
+main::do_upper_to_top_abbreviation_hash: upp cfo_C => top Fo_C
+main::do_upper_to_top_abbreviation_hash: upp cnctw_n => top Nctw_N
+main::do_upper_to_top_abbreviation_hash: upp csi_S => top Si_S
+main::do_upper_to_top_abbreviation_hash: upp pp_Ca => top Ptw_Ca
+main::do_upper_to_top_abbreviation_hash: upp cfo_N => top Fo_N
+main::do_upper_to_top_abbreviation_hash: upp cdstw_s => top Dstw_S
+main::do_upper_to_top_abbreviation_hash: upp pp_Fe => top Ptw_Fe
+main::do_upper_to_top_abbreviation_hash: upp lslf_F => top Slf_F
+main::do_upper_to_top_abbreviation_hash: upp csstw_s => top Sstw_S
+main::do_upper_to_top_abbreviation_hash: upp cdlf_o => top Dlf_O
+main::do_upper_to_top_abbreviation_hash: upp m_H => top Mon_H
+main::do_upper_to_top_abbreviation_hash: upp cdsth_c => top Dsth_C
+main::do_upper_to_top_abbreviation_hash: upp m_F => top Mon_F
+main::do_upper_to_top_abbreviation_hash: upp ctlf_n => top Tlf_N
+main::do_upper_to_top_abbreviation_hash: upp cfo_Xe => top Fo_Xe
+main::do_upper_to_top_abbreviation_hash: upp Kr => top Rg_Kr
+main::do_upper_to_top_abbreviation_hash: upp p_H => top Pon_H
+main::do_upper_to_top_abbreviation_hash: upp cfo_S => top Fo_S
+main::do_upper_to_top_abbreviation_hash: upp p_Na => top Pon_Na
+main::do_upper_to_top_abbreviation_hash: upp csstw_o => top Sstw_O
+main::do_upper_to_top_abbreviation_hash: upp He => top Rg_He
+main::do_upper_to_top_abbreviation_hash: upp cdstw_c => top Dstw_C
+main::do_upper_to_top_abbreviation_hash: upp cdstw_n => top Dstw_N
+main::do_upper_to_top_abbreviation_hash: upp Ne => top Rg_Ne
+main::do_upper_to_top_abbreviation_hash: upp Xe => top Rg_Xe
+main::do_upper_to_top_abbreviation_hash: upp ctstw_c => top Tstw_C
+main::do_upper_to_top_abbreviation_hash: upp cssth_cl => top Ssth_Cl
+main::do_upper_to_top_abbreviation_hash: upp cfi_cl => top Fi_Cl
+main::do_upper_to_top_abbreviation_hash: upp cdsth_s => top Dsth_S
+main::do_upper_to_top_abbreviation_hash: upp csnth_c => top Snth_C
+main::do_upper_to_top_abbreviation_hash: upp Ar => top Rg_Ar
+main::do_upper_to_top_abbreviation_hash: upp cssth_n => top Ssth_N
+main::do_upper_to_top_abbreviation_hash: upp cclf_o => top Clf_O
+main::do_upper_to_top_abbreviation_hash: upp lslf_H => top Slf_H
+        "Ar" : Rg_Ar
+        "He" : Rg_He
+        "Kr" : Rg_Kr
+        "Ne" : Rg_Ne
+        "Xe" : Rg_Xe
+    "cclf_o" : Clf_O
+    "cdlf_o" : Dlf_O
+   "cdnth_s" : Dnth_S
+   "cdsth_c" : Dsth_C
+   "cdsth_n" : Dsth_N
+   "cdsth_s" : Dsth_S
+   "cdstw_c" : Dstw_C
+   "cdstw_n" : Dstw_N
+   "cdstw_s" : Dstw_S
+    "cfi_cl" : Fi_Cl
+     "cfo_C" : Fo_C
+     "cfo_N" : Fo_N
+     "cfo_S" : Fo_S
+    "cfo_Xe" : Fo_Xe
+   "cnctw_n" : Nctw_N
+   "cnctw_o" : Nctw_O
+     "csi_S" : Si_S
+   "csnth_c" : Snth_C
+  "cssth_cl" : Ssth_Cl
+   "cssth_n" : Ssth_N
+   "csstw_o" : Sstw_O
+   "csstw_s" : Sstw_S
+    "ctlf_n" : Tlf_N
+   "ctstw_c" : Tstw_C
+    "lslf_F" : Slf_F
+    "lslf_H" : Slf_H
+       "m_F" : Mon_F
+       "m_H" : Mon_H
+       "p_H" : Pon_H
+      "p_Na" : Pon_Na
+     "pp_Ca" : Ptw_Ca
+     "pp_Fe" : Ptw_Fe
+    "ppp_Fe" : Pth_Fe
+                           "Anion_symbol" : closed_atom_symbol
+                          "Cation_symbol" : closed_atom_symbol
+                                  "Clf_O" : nonsigma_leaf_atom_symbol
+                     "Closed_atom_symbol" : atom_symbol
+                       "Core_atom_symbol" : atom_symbol
+                                  "Dlf_O" : double_leaf_atom_symbol
+                                 "Dnth_S" : double_nonsigma_threetied_atom_symbol
+                "Double_leaf_atom_symbol" : leaf_atom_symbol
+  "Double_nonsigma_threetied_atom_symbol" : nonsigma_threetied_atom_symbol
+     "Double_sigma_threetied_atom_symbol" : sigma_threetied_atom_symbol
+       "Double_sigma_twotied_atom_symbol" : sigma_twotied_atom_symbol
+                                 "Dsth_C" : double_sigma_threetied_atom_symbol
+                                 "Dsth_N" : double_sigma_threetied_atom_symbol
+                                 "Dsth_S" : double_sigma_threetied_atom_symbol
+                                 "Dstw_C" : double_sigma_twotied_atom_symbol
+                                 "Dstw_N" : double_sigma_twotied_atom_symbol
+                                 "Dstw_S" : double_sigma_twotied_atom_symbol
+                                  "Fi_Cl" : fivetied_atom_symbol
+                   "Fivetied_atom_symbol" : core_atom_symbol
+                                   "Fo_C" : fourtied_atom_symbol
+                                   "Fo_N" : fourtied_atom_symbol
+                                   "Fo_S" : fourtied_atom_symbol
+                                  "Fo_Xe" : fourtied_atom_symbol
+                   "Fourtied_atom_symbol" : core_atom_symbol
+                       "Leaf_atom_symbol" : atom_symbol
+                 "Minus_one_anion_symbol" : anion_symbol
+                                  "Mon_F" : minus_one_anion_symbol
+                                  "Mon_H" : minus_one_anion_symbol
+                                 "Nctw_N" : nonsigma_twotied_atom_symbol
+                                 "Nctw_O" : nonsigma_twotied_atom_symbol
+              "Nonsigma_leaf_atom_symbol" : leaf_atom_symbol
+         "Nonsigma_threetied_atom_symbol" : threetied_atom_symbol
+           "Nonsigma_twotied_atom_symbol" : twotied_atom_symbol
+                  "Plus_one_anion_symbol" : cation_symbol
+                "Plus_three_anion_symbol" : cation_symbol
+                  "Plus_two_anion_symbol" : cation_symbol
+                                  "Pon_H" : plus_one_anion_symbol
+                                 "Pon_Na" : plus_one_anion_symbol
+                                 "Pth_Fe" : plus_three_anion_symbol
+                                 "Ptw_Ca" : plus_two_anion_symbol
+                                 "Ptw_Fe" : plus_two_anion_symbol
+                         "Raregas_symbol" : closed_atom_symbol
+                                  "Rg_Ar" : raregas_symbol
+                                  "Rg_He" : raregas_symbol
+                                  "Rg_Kr" : raregas_symbol
+                                  "Rg_Ne" : raregas_symbol
+                                  "Rg_Xe" : raregas_symbol
+                                   "Si_S" : sixtied_atom_symbol
+            "Sigma_threetied_atom_symbol" : threetied_atom_symbol
+              "Sigma_twotied_atom_symbol" : twotied_atom_symbol
+                "Single_leaf_atom_symbol" : leaf_atom_symbol
+  "Single_nonsigma_threetied_atom_symbol" : nonsigma_threetied_atom_symbol
+     "Single_sigma_threetied_atom_symbol" : sigma_threetied_atom_symbol
+       "Single_sigma_twotied_atom_symbol" : sigma_twotied_atom_symbol
+                    "Sixtied_atom_symbol" : core_atom_symbol
+                                  "Slf_F" : single_leaf_atom_symbol
+                                  "Slf_H" : single_leaf_atom_symbol
+                                 "Snth_C" : single_nonsigma_threetied_atom_symbol
+                                "Ssth_Cl" : single_sigma_threetied_atom_symbol
+                                 "Ssth_N" : single_sigma_threetied_atom_symbol
+                                 "Sstw_O" : single_sigma_twotied_atom_symbol
+                                 "Sstw_S" : single_sigma_twotied_atom_symbol
+                  "Threetied_atom_symbol" : core_atom_symbol
+                                  "Tlf_N" : triple_leaf_atom_symbol
+                "Triple_leaf_atom_symbol" : leaf_atom_symbol
+       "Triple_sigma_twotied_atom_symbol" : sigma_twotied_atom_symbol
+                                 "Tstw_C" : triple_sigma_twotied_atom_symbol
+                    "Twotied_atom_symbol" : core_atom_symbol
+val cfo_n : Atom_symbol_t.core_atom_symbol;;
+val ne : Atom_symbol_t.closed_atom_symbol;;
+val pp_fe : Atom_symbol_t.closed_atom_symbol;;
+val xe : Atom_symbol_t.closed_atom_symbol;;
+val m_f : Atom_symbol_t.closed_atom_symbol;;
+val cfi_cl : Atom_symbol_t.core_atom_symbol;;
+val he : Atom_symbol_t.closed_atom_symbol;;
+val lslf_h : Atom_symbol_t.leaf_atom_symbol;;
+val csstw_o : Atom_symbol_t.core_atom_symbol;;
+val cdstw_s : Atom_symbol_t.core_atom_symbol;;
+val cdstw_c : Atom_symbol_t.core_atom_symbol;;
+val cclf_o : Atom_symbol_t.leaf_atom_symbol;;
+val ctstw_c : Atom_symbol_t.core_atom_symbol;;
+val cnctw_o : Atom_symbol_t.core_atom_symbol;;
+val pp_ca : Atom_symbol_t.closed_atom_symbol;;
+val m_h : Atom_symbol_t.closed_atom_symbol;;
+val kr : Atom_symbol_t.closed_atom_symbol;;
+val cfo_c : Atom_symbol_t.core_atom_symbol;;
+val cssth_n : Atom_symbol_t.core_atom_symbol;;
+val p_na : Atom_symbol_t.closed_atom_symbol;;
+val cdsth_n : Atom_symbol_t.core_atom_symbol;;
+val ppp_fe : Atom_symbol_t.closed_atom_symbol;;
+val cdnth_s : Atom_symbol_t.core_atom_symbol;;
+val cnctw_n : Atom_symbol_t.core_atom_symbol;;
+val cfo_xe : Atom_symbol_t.core_atom_symbol;;
+val csnth_c : Atom_symbol_t.core_atom_symbol;;
+val ctlf_n : Atom_symbol_t.leaf_atom_symbol;;
+val cssth_cl : Atom_symbol_t.core_atom_symbol;;
+val cdstw_n : Atom_symbol_t.core_atom_symbol;;
+val lslf_f : Atom_symbol_t.leaf_atom_symbol;;
+val ar : Atom_symbol_t.closed_atom_symbol;;
+val cdsth_c : Atom_symbol_t.core_atom_symbol;;
+val cdlf_o : Atom_symbol_t.leaf_atom_symbol;;
+val csstw_s : Atom_symbol_t.core_atom_symbol;;
+val cfo_s : Atom_symbol_t.core_atom_symbol;;
+val cdsth_s : Atom_symbol_t.core_atom_symbol;;
+val p_h : Atom_symbol_t.closed_atom_symbol;;
+val csi_s : Atom_symbol_t.core_atom_symbol;;
+val rg_ar : Atom_symbol_t.atom_symbol;;
+
+val rg_he : Atom_symbol_t.atom_symbol;;
+
+val rg_kr : Atom_symbol_t.atom_symbol;;
+
+val rg_ne : Atom_symbol_t.atom_symbol;;
+
+val rg_xe : Atom_symbol_t.atom_symbol;;
+
+val mon_f : Atom_symbol_t.atom_symbol;;
+
+val mon_h : Atom_symbol_t.atom_symbol;;
+
+val pon_h : Atom_symbol_t.atom_symbol;;
+
+val pon_na : Atom_symbol_t.atom_symbol;;
+
+val ptw_ca : Atom_symbol_t.atom_symbol;;
+
+val ptw_fe : Atom_symbol_t.atom_symbol;;
+
+val pth_fe : Atom_symbol_t.atom_symbol;;
+
+val clf_o : Atom_symbol_t.atom_symbol;;
+
+val slf_h : Atom_symbol_t.atom_symbol;;
+
+val slf_f : Atom_symbol_t.atom_symbol;;
+
+val dlf_o : Atom_symbol_t.atom_symbol;;
+
+val tlf_n : Atom_symbol_t.atom_symbol;;
+
+val fo_c : Atom_symbol_t.atom_symbol;;
+
+val fo_n : Atom_symbol_t.atom_symbol;;
+
+val fo_s : Atom_symbol_t.atom_symbol;;
+
+val fo_xe : Atom_symbol_t.atom_symbol;;
+
+val fi_cl : Atom_symbol_t.atom_symbol;;
+
+val si_s : Atom_symbol_t.atom_symbol;;
+
+val sstw_o : Atom_symbol_t.atom_symbol;;
+
+val sstw_s : Atom_symbol_t.atom_symbol;;
+
+val dstw_c : Atom_symbol_t.atom_symbol;;
+
+val dstw_n : Atom_symbol_t.atom_symbol;;
+
+val dstw_s : Atom_symbol_t.atom_symbol;;
+
+val tstw_c : Atom_symbol_t.atom_symbol;;
+
+val nctw_n : Atom_symbol_t.atom_symbol;;
+
+val nctw_o : Atom_symbol_t.atom_symbol;;
+
+val ssth_n : Atom_symbol_t.atom_symbol;;
+
+val ssth_cl : Atom_symbol_t.atom_symbol;;
+
+val dsth_c : Atom_symbol_t.atom_symbol;;
+
+val dsth_n : Atom_symbol_t.atom_symbol;;
+
+val dsth_s : Atom_symbol_t.atom_symbol;;
+
+val snth_c : Atom_symbol_t.atom_symbol;;
+
+val dnth_s : Atom_symbol_t.atom_symbol;;
+
+ 397 lines written

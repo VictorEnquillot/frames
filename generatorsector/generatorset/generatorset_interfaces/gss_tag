@@ -1,0 +1,22 @@
+  let sym_cap = Camlparagraph_symbol_v.camlparagraph_for_formula_entity_fictive_nullary_type in
+  let tag_cap = Tag_v.make sym_cap soi_cap in
+
+  let gss_pre = Generatorset_symbol_v.is_entity_fictive_nullary_symbol_off_generatorset_symbol in
+  let (soi_ent_top, gss_ent_top) = 
+    Generatorset_symbol_by_sole_index_provider_v.sole_index_n_generatorset_symbol_of_generatorset_symbol_predicate_off_sole_index 
+      gss_pre  
+      soi_cap
+  in
+  let sym_efn_top = 
+    Generatorset_symbol_v.entity_fictive_nullary_symbol_off_generatorset_symbol
+      gss_ent_top
+  in
+  let tag_efn_top = Tag_v.make sym_efn_top soi_ent_top in
+
+  let sym_cof = 
+    Camlparagraph_tag_v.contentfile_symbol_off_camlparagraph_tag 
+      tag_cap 
+  in
+
+  translate_and_couple_for_entity_fictive_nullary sym_cof tag_cap tag_efn_top
+

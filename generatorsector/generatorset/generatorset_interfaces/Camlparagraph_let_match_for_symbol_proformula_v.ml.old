@@ -1,0 +1,611 @@
+(* Proformula for Camlparagraph_endmarked_let_function *)
+
+let nam_cod = "Camlparagraph_let_match_for_symbol_proformula_v.ml";;
+
+(** {6 Documenting} *)
+
+let documentation () = 
+  [
+   "Needs : IGNR:Entity_symbol_path_list_by_camlparagraph_tag_provider_v";
+   "Needed-by : IGNR:Entity_symbol_list_camlline_symbol_doublet_list_for_camlparagraph_symbol_v ";
+   "What-is-it : it Translates tag_cap and pat_sym_ent_l into Camlline Symbol";
+   "Improve : Only Making and Naming Items";
+   "Improve : it is a kind of translation : the module name does not conform to translating_...to_camlparagraph";
+   "Improve : Camlparagraph_for_symbol_symbol should exist";
+   "Example : ";
+ ]
+;;
+
+(** {6 Translating} *)
+
+(* Making : Camlparagraph_endmarked_let_function_make *)
+
+let doublet_list_for_each_pipe_camlline_in_let_make_function tag_cap pat_sym_ent =
+
+(*** Improve Context checking ****)
+
+  let sym_ite = Camlparagraph_tag_v.item_symbol_off_camlparagraph_tag tag_cap in
+  if (sym_ite <> Item_symbol_v.making)
+  then
+    Error_messages_v.print_fatal_error nam_cod 
+      "doublet_list_for_each_pipe_camlline_in_let_make_function"
+      "Item_symbol were making"
+      (Item_symbol_v.name sym_ite)
+      "Check"
+  else
+    begin
+      
+      let sym_ent_cur = List.hd pat_sym_ent in
+      
+      match sym_ent_cur with
+      | Entity_symbol_t.Entity_fictive_symbol sym_enf ->
+	  begin
+	    match sym_enf with 
+	    | Entity_fictive_symbol_t.Entity_fictive_basicnullary_symbol sym_efb ->
+		begin
+		  match sym_efb with
+		  | Entity_fictive_basicnullary_symbol_t.String s ->
+		      
+		      (* Ex.:   | "Cluster_fromid" -> cluster_fromid s *)
+		      [
+		       ([sym_ent_cur], Camlline_symbol_v.pipe_ecstring_arrow_ec_space_sarg );
+		     ]
+			
+		  | _ ->
+		      Error_messages_v.print_fatal_error nam_cod 
+			"doublet_list_for_each_pipe_camlline_in_let_make_function_equal_function"
+			"Entity_fictive_basicnullary_symbol_t.String"
+			(Format.sprintf ">%s<" (Entity_symbol_v.fullname sym_ent_cur))
+			"Check or add it"	 
+		end	
+		  
+	    | Entity_fictive_symbol_t.Entity_fictive_nullary_symbol sym_enf ->
+		begin
+		  match sym_enf with
+		  | Entity_fictive_nullary_symbol_t.Sonnullary s 
+		  | Entity_fictive_nullary_symbol_t.Nonsonnullary s ->
+		      
+		      (* Ex.:   | "he" -> he *)
+		      
+		      [
+		       ([sym_ent_cur], Camlline_symbol_v.pipe_ecstring_arrow_ec );
+		     ]
+			
+		  | Entity_fictive_nullary_symbol_t.Empty -> []
+		end
+	  end
+	    
+      | Entity_symbol_t.Entity_proper_symbol sym_enp ->
+	  
+	  (* Ex.: 
+	     try entity_symbol_of_entity_fictive_symbol 
+	     (Entity_fictive_symbol_v.make nam s)
+	     with Failure "Not_Entity_fictive_symbol:entity_fictive_symbol_v.ml:make" ->
+	   *)
+	  
+	  let sym_ent_top = 
+	    List_v.last_element_off_list pat_sym_ent 
+	  in
+	  [
+	   ( [sym_ent_cur; sym_ent_top], Camlline_symbol_v.try_mst_of_mss);
+	   ( [sym_ent_cur], Camlline_symbol_v.lpar_mss_vdot_make_of_string_of_string_rpar);
+	   ( [sym_ent_cur], Camlline_symbol_v.with_failure_not_ess_arrow);
+	 ]
+	    
+      | _ ->
+	  Error_messages_v.print_fatal_error nam_cod 
+	    "doublet_list_for_each_pipe_camlline_in_let_make_function_equal_function"
+	    "a Enity Symbol were entity_fictive|entity_proper"
+            (Format.sprintf ">%s<" (Entity_symbol_v.fullname sym_ent_cur))
+            "Check or add it to menu"	 
+    end
+;;
+
+(* Making : Camlparagraph_endmarked_let_function *)
+
+let is_principal_type_of_entity_proper_tag tag_enp =    (* *** Improve should be extracted at its own place *** *)
+  let sym_ent = Entity_proper_tag_v.entity_symbol_off_entity_proper_tag tag_enp in
+  let str_ent = Entity_symbol_v.string_off sym_ent in
+  
+  let tag_dos = Entity_proper_tag_v.domainset_tag_off_entity_proper_tag tag_enp in
+  let sym_ent_ft = Entity_symbol_fulltree_by_domainset_tag_provider_v.provide tag_dos in
+  let sym_ent_dos = Tree_v.root_node_off_tree sym_ent_ft in 
+  let str_ent_dos = Entity_symbol_v.string_off sym_ent_dos in
+  
+  if ( str_ent = str_ent_dos )
+  then true 
+  else 
+    begin
+      let sym_ent_l = Tree_v.topson_node_list_off_tree sym_ent_ft in
+      let str_ent_l = List.map Entity_symbol_v.string_off sym_ent_l in
+      ( List.mem str_ent str_ent_l )
+    end
+;;
+
+let couple_list_of_camlparagraph_endmarked_let_function_make_nam_s_for_symbol tag_cap = 
+(*** Improve Context checking ****)
+
+  let sym_ite = Camlparagraph_tag_v.item_symbol_off_camlparagraph_tag tag_cap in
+  if (sym_ite <> Item_symbol_v.making)
+  then
+    Error_messages_v.print_fatal_error nam_cod 
+      "doublet_list_for_each_pipe_camlline_in_let_make_function"
+      "Item_symbol were making"
+      (Item_symbol_v.name sym_ite)
+      "Check"
+  else
+    begin
+      let tag_enp = 
+	Camlparagraph_tag_v.entity_proper_tag_off_camlparagraph_tag 
+	  tag_cap 
+      in
+      let sym_enp = Tag_v.symbol_off_tag tag_enp in
+      
+(* *** Improve *** *)
+
+      let pat_sym_ent_l =
+	Entity_symbol_path_list_by_camlparagraph_tag_provider_v.provide 
+	  tag_cap 
+      in
+      
+      let pat_sym_enf_l = List.filter 
+	  (fun p -> Entity_symbol_v.is_entity_fictive_symbol_off_entity_symbol (List.hd p)) 
+	  pat_sym_ent_l
+      in
+
+      let pat_sym_inn_l = List.filter 
+	  (fun p -> not (Entity_symbol_v.is_entity_fictive_symbol_off_entity_symbol (List.hd p)) ) 
+	  pat_sym_ent_l
+      in
+
+      let efn_dol = List.flatten (List.map 
+	  (doublet_list_for_each_pipe_camlline_in_let_make_function tag_cap)
+	  pat_sym_enf_l) 
+      in
+
+      let inn_dol = List.flatten (List.map 
+	  (doublet_list_for_each_pipe_camlline_in_let_make_function tag_cap)
+	  pat_sym_inn_l)
+      in
+
+      let header =      
+	match sym_enp with 
+	| e when Entity_proper_symbol_v.is_top_has_no_leaf_son e ->
+	    [
+	     ([], Camlline_symbol_v.let_make_nam_s_equal);
+	   ] 
+	      
+	| e when Entity_proper_symbol_v.is_top_has_some_leaf_son e ->
+	    [
+	     ([], Camlline_symbol_v.let_make_nam_s_equal);
+	     ([], Camlline_symbol_v.match_capitalize_nam_with);
+	   ] 
+	  
+	| e ->
+	    Error_messages_v.print_fatal_error nam_cod 
+	      "doublet_list_for_each_pipe_camlline_in_let_make_function"
+	      "Entity_symbol had No leaf son"
+	      (Entity_proper_symbol_v.name e) "Check"
+      in  
+
+      let sym_ent_top = Entity_symbol_v.entity_symbol_of_entity_proper_symbol sym_enp in
+	
+      let body = 
+	if List_v.is_empty_of_list efn_dol
+	then inn_dol
+	else
+	  efn_dol @ [([], Camlline_symbol_v.pipe_underscore_arrow)] @ inn_dol
+      in
+      
+      let footer =      
+	if is_principal_type_of_entity_proper_tag tag_enp
+	then
+	[
+	 ( [sym_ent_top], Camlline_symbol_v.print_fatal_error_make_of_string_of_string); 
+	 ( [], Camlline_symbol_v.double_semicolon)
+       ]
+	else
+	[
+	 ( [sym_ent_top], Camlline_symbol_v.failwith_not_ess); 
+	 ( [], Camlline_symbol_v.double_semicolon)
+       ]
+     in  
+     
+     header @ (body @ footer)
+		 
+    end
+;;
+
+let couple_list_of_camlparagraph_endmarked_let_function_make_for_symbol tag_cap =
+
+(*** Improve Context checking ****)
+
+  let sym_ite = Camlparagraph_tag_v.item_symbol_off_camlparagraph_tag tag_cap in
+  if (sym_ite <> Item_symbol_v.making)
+  then
+    Error_messages_v.print_fatal_error nam_cod 
+      "doublet_list_for_each_pipe_camlline_in_let_make_function"
+      "Item_symbol were making"
+      (Item_symbol_v.name sym_ite)
+      "Check"
+  else
+    begin
+      let pat_sym_ent_l =
+	Entity_symbol_path_list_by_camlparagraph_tag_provider_v.provide 
+	  tag_cap 
+      in
+      
+      let dol = List.map 
+	  (doublet_list_for_each_pipe_camlline_in_let_make_function tag_cap)
+	  pat_sym_ent_l
+      in
+      
+      let header = ([], Camlline_symbol_v.let_make_equal_function) in  
+      let body = List.flatten dol in
+      
+      let sym_ent_top = List_v.last_element_off_list (List_v.last_element_off_list pat_sym_ent_l) in
+      let footer = 
+	[
+	 ( [sym_ent_top], Camlline_symbol_v.print_fatal_error_make_of_string_of_string); 
+	 ( [], Camlline_symbol_v.double_semicolon)
+       ]
+      in
+      
+      header :: (body @ footer)
+		 
+    end
+;;
+
+(* ----- end of Making ---------------------------------------------------------- *)
+
+(* Naming : Camlparagraph_endmarked_let_function_name *)
+
+let doublet_list_for_each_pipe_camlline_in_let_name_function tag_cap pat_sym_ent =
+
+(*** Improve Context checking ****)
+
+  let sym_ite = Camlparagraph_tag_v.item_symbol_off_camlparagraph_tag tag_cap in
+  if (sym_ite <> Item_symbol_v.naming)
+  then
+    Error_messages_v.print_fatal_error nam_cod 
+      "doublet_list_for_each_pipe_camlline_in_let_make_function"
+      "Item_symbol were naming"
+      (Item_symbol_v.name sym_ite)
+      "Check"
+  else
+    begin
+      let pat_dep = List.length pat_sym_ent in
+      let sym_ent_top = List_v.ultimate_element_off_list pat_sym_ent in 
+      let sym_ent_cur = List.hd pat_sym_ent in
+      
+      match sym_ent_cur with
+      |  Entity_symbol_t.Entity_proper_symbol 
+	  (Entity_proper_symbol_t.Entity_proper_son_symbol s) ->
+	    
+(* Ex.:   | Atom_zerotied_symbol_t.Atom_zerotied_raregas_symbol sym_atz -> 
+   Atom_zerotied_raregas_symbol_v.name sym_atz *)
+	    
+	    let sym_ent_son = List_v.penultimate_element_off_list pat_sym_ent in 
+	    [
+	     ([sym_ent_son; sym_ent_top], 
+	      Camlline_symbol_v.pipe_mst_tdot_mss_space_ass_arrow );
+	     ([sym_ent_son], 
+	      Camlline_symbol_v.mas_vdot_name_aas)
+	   ]
+	      
+      | Entity_symbol_t.Entity_proper_symbol 
+	  (Entity_proper_symbol_t.Selfentity _) ->
+	    begin
+	      match pat_dep with 
+		(*** Improve need two Symbols Topselfentity Sonselfentity *)
+	      | 1 ->
+		  (* Ex.:   
+                     let name = function
+                     | Vector_symbol_t.Vector -> "vector"
+                   *)
+		  [([sym_ent_top], 
+		    Camlline_symbol_v.pipe_mst_tdot_est_arrow_string)]
+	      | _ ->
+		  (* Ex.:   
+                     | Geometryset_symbol_t.Vector_symbol sym_vec ->
+                     Vector_symbol_v.name sym_vec
+                   *)
+		  let sym_ent_son = List_v.penultimate_element_off_list pat_sym_ent in 
+		  [
+		   ([sym_ent_son; sym_ent_top], 
+		    Camlline_symbol_v.pipe_mst_tdot_mss_space_ass_arrow );
+		   ([sym_ent_son], 
+		    Camlline_symbol_v.mas_vdot_name_aas)
+		 ]
+	    end    
+	      
+      | Entity_symbol_t.Entity_fictive_symbol 
+	  (Entity_fictive_symbol_t.Entity_fictive_nullary_symbol 
+	     (Entity_fictive_nullary_symbol_t.Sonnullary s)) ->
+	       
+	       [([sym_ent_cur; sym_ent_top], 
+		 Camlline_symbol_v.pipe_mst_tdot_esl_arrow_string)]
+		 
+      | Entity_symbol_t.Entity_fictive_symbol 
+	  (Entity_fictive_symbol_t.Entity_fictive_basicnullary_symbol _) ->
+	    
+	    [([sym_ent_cur; sym_ent_top], 
+	      Camlline_symbol_v.pipe_est_tdot_ess_underscore_arrow_string)]
+	      
+      | _ ->
+	  Error_messages_v.print_fatal_error nam_cod 
+	    "doublet_list_for_each_pipe_camlline_in_let_name_function"
+	"a valid Entity_symbol"
+            (Format.sprintf ">%s<" (Entity_symbol_v.fullname sym_ent_cur))
+            "Check or add it to menu"
+    end	 
+;;
+
+(* Camlparagraph_endmarked_name *)
+
+let couple_list_of_camlparagraph_endmarked_let_function_name_tag tag_cap =
+  let sym_ite = Camlparagraph_tag_v.item_symbol_off_camlparagraph_tag tag_cap in
+  if (sym_ite <> Item_symbol_v.naming)
+  then
+    Error_messages_v.print_fatal_error nam_cod 
+      "doublet_list_for_each_pipe_camlline_in_let_make_function"
+      "Item_symbol were naming"
+      (Item_symbol_v.name sym_ite)
+      "Check"
+  else
+    begin
+      let pat_sym_ent_l =
+	Entity_symbol_path_list_by_camlparagraph_tag_provider_v.provide 
+	  tag_cap 
+      in
+      let dol = List.map 
+	  (doublet_list_for_each_pipe_camlline_in_let_name_function tag_cap)
+	  pat_sym_ent_l
+      in
+      
+      let header = ([], Camlline_symbol_v.let_name_equal_function) in  
+      let body = List.flatten dol in
+      let footer = ([], Camlline_symbol_v.double_semicolon) in
+      
+      header :: (body @ [footer])
+
+    end
+;;
+
+let couple_list_of_camlparagraph_endmarked_let_function sym_elf soi_cap =
+  let tag_cap = 
+    Camlparagraph_tag_v.camlparagraph_tag_of_camlparagraph_endmarked_let_function_tag
+      (sym_elf, soi_cap) 
+  in
+
+(*** Improve Context checking ****)
+
+  let sym_cof = Camlparagraph_tag_v.contentfile_symbol_off_camlparagraph_tag tag_cap in
+  if Contentfile_symbol_v.is_type_alone sym_cof
+  then
+    Error_messages_v.print_fatal_error nam_cod 
+      "couple_list_of_camlparagraph_endmarked_let_function"
+      "Contentfile_symbol were type_n_value|value_alone"
+      (Contentfile_symbol_v.name sym_cof)
+      "Check"
+  else
+    begin
+      let pat_sym_ent_l =
+	Entity_symbol_path_list_by_camlparagraph_tag_provider_v.provide  
+	  tag_cap 
+      in
+      
+      let pat_sym_ent = List.hd pat_sym_ent_l in
+      let sym_ent_top = List_v.ultimate_element_off_list pat_sym_ent in 
+      let sym_ent_cur = List.hd pat_sym_ent in
+      
+      match sym_elf with
+      | Camlparagraph_endmarked_let_function_symbol_t.Let_mss_off_mst_function ->
+	  begin
+	    match sym_ent_cur with
+	    | Entity_symbol_t.Entity_proper_symbol 
+		(Entity_proper_symbol_t.Entity_proper_son_symbol _) 
+	    | Entity_symbol_t.Entity_proper_symbol 
+		(Entity_proper_symbol_t.Selfentity _) ->
+		  
+		  let sym_ent_son = 
+		    List_v.penultimate_element_off_list 
+		      (List.hd (pat_sym_ent_l)) 
+		  in 
+		  
+		  [
+		   ([sym_ent_son; sym_ent_top], 
+		    Camlline_symbol_v.let_mss_off_mst_equal_function);
+		   ([sym_ent_son; sym_ent_top], 
+		    Camlline_symbol_v.pipe_mst_tdot_mss_space_ass_arrow_ass);
+		   ([sym_ent_son; sym_ent_top], 
+		    Camlline_symbol_v.pipe_print_fatal_error_mss_off_mst_4_lines);
+		   ([], 
+		    Camlline_symbol_v.double_semicolon);
+		 ]
+		    
+	    | _ ->
+		Error_messages_v.print_fatal_error nam_cod 
+		  "couple_list_of_camlparagraph_endmarked_let_function Let_mss_off_mst_function"
+		  "Entity_symbol Sonentity|Selfentity"
+		  (Format.sprintf ">%s \"%s\"<" 
+		     (Entity_symbol_v.longname sym_ent_cur)
+		     (Entity_symbol_v.string_off sym_ent_cur))
+		  (Format.sprintf  "Check Path length = %i with Top entity >%s \"%s\"<"
+		     (List.length pat_sym_ent)  
+		     (Entity_symbol_v.longname sym_ent_top)
+		     (Entity_symbol_v.string_off sym_ent_top)) 
+	  end
+	    
+      | Camlparagraph_endmarked_let_function_symbol_t.Let_is_mss_off_mst_function ->
+	  begin     
+	    match sym_ent_cur with
+	    | Entity_symbol_t.Entity_proper_symbol 
+		(Entity_proper_symbol_t.Entity_proper_son_symbol _) 
+	    | Entity_symbol_t.Entity_proper_symbol 
+		(Entity_proper_symbol_t.Selfentity _) ->
+		  
+		  let sym_ent_son = 
+		    List_v.penultimate_element_off_list 
+		      (List.hd (pat_sym_ent_l)) 
+		  in 
+		  
+		  [
+		   ([sym_ent_cur; sym_ent_top], 
+		    Camlline_symbol_v.let_is_mas_off_mat_equal_function);
+		   ([sym_ent_son; sym_ent_top], 
+		    Camlline_symbol_v.pipe_ast_tdot_s_arrow_true); 
+		   ([], Camlline_symbol_v.pipe_underscore_arrow_false);
+		   ([], Camlline_symbol_v.double_semicolon);
+		 ]
+		    
+	    | _ ->
+		Error_messages_v.print_fatal_error nam_cod 
+		  "couple_list_of_camlparagraph_endmarked_let_function Let_is_mss_off_mst_function"
+		  "Entity_symbol Sonentity|Selfentity"
+		  (Format.sprintf ">%s \"%s\"<" 
+		     (Entity_symbol_v.longname sym_ent_cur)
+		     (Entity_symbol_v.string_off sym_ent_cur))
+		  (Format.sprintf  "Check Path length = %i with Top entity >%s \"%s\"<"
+		     (List.length pat_sym_ent)  
+		     (Entity_symbol_v.longname sym_ent_top)
+		     (Entity_symbol_v.string_off sym_ent_top)) 
+	  end
+ 
+      | Camlparagraph_endmarked_let_function_symbol_t.Let_mss_off_mst_onlyson ->
+
+      begin
+	match sym_ent_cur with
+	| Entity_symbol_t.Entity_proper_symbol 
+	    (Entity_proper_symbol_t.Entity_proper_son_symbol 
+	       Entity_proper_son_symbol_t.Onlyson s) ->
+	      
+	      [
+	       ([sym_ent_cur; sym_ent_top], 
+		Camlline_symbol_v.let_mss_off_mst_equal_function);
+	       ([sym_ent_cur; sym_ent_top], 
+		Camlline_symbol_v.pipe_mst_tdot_mss_space_ass_arrow_ass);
+	       ([], 
+		Camlline_symbol_v.double_semicolon);
+	     ]
+ 
+      | _ ->
+	  Error_messages_v.print_fatal_error nam_cod 
+	    "couple_list_of_camlparagraph_endmarked_let_onlyson Let_mss_off_mst_onlyson"
+	    "Entity_symbol Onlyson"
+	    (Format.sprintf ">%s \"%s\"<" 
+	       (Entity_symbol_v.longname sym_ent_cur)
+	       (Entity_symbol_v.string_off sym_ent_cur))
+	     (Format.sprintf  "Check Path length = %i with Top entity >%s \"%s\"<"
+		(List.length pat_sym_ent)  
+	       (Entity_symbol_v.longname sym_ent_top)
+	       (Entity_symbol_v.string_off sym_ent_top)) 
+     end
+	
+  | Camlparagraph_endmarked_let_function_symbol_t.Let_is_mss_off_mst_onlyson ->
+      begin     
+	match sym_ent_cur with
+	| Entity_symbol_t.Entity_proper_symbol 
+	    (Entity_proper_symbol_t.Entity_proper_son_symbol 
+	       Entity_proper_son_symbol_t.Onlyson s) ->
+	      
+	      [
+	       ([sym_ent_cur; sym_ent_top], 
+		Camlline_symbol_v.let_is_mas_off_mat_equal_function);
+	       ([sym_ent_cur; sym_ent_top], 
+		Camlline_symbol_v.pipe_ast_tdot_s_arrow_true); 
+	       ([], Camlline_symbol_v.double_semicolon);
+	     ]
+		
+	| _ ->
+	    Error_messages_v.print_fatal_error nam_cod 
+	      "couple_list_of_camlparagraph_endmarked_let_onlyson Let_is_mss_off_mst_onlyson"
+	    "Entity_symbol Onlyson"
+	    (Format.sprintf ">%s \"%s\"<" 
+	       (Entity_symbol_v.longname sym_ent_cur)
+	       (Entity_symbol_v.string_off sym_ent_cur))
+	     (Format.sprintf  "Check Path length = %i with Top entity >%s \"%s\"<"
+		(List.length pat_sym_ent)  
+	       (Entity_symbol_v.longname sym_ent_top)
+	       (Entity_symbol_v.string_off sym_ent_top)) 
+      end
+ 
+  | Camlparagraph_endmarked_let_function_symbol_t.Let_make_equal_function_for_tag 
+  | Camlparagraph_endmarked_let_function_symbol_t.Let_make_equal_function_for_symbol
+  | Camlparagraph_endmarked_let_function_symbol_t.Let_make_tag_equal -> 
+      begin
+	match sym_ent_top with
+	| Entity_symbol_t.Entity_proper_symbol 
+	    (Entity_proper_symbol_t.Entity_proper_top_symbol _)
+	| Entity_symbol_t.Entity_proper_symbol 
+	    (Entity_proper_symbol_t.Selfentity _) ->
+	      
+	      couple_list_of_camlparagraph_endmarked_let_function_make_for_symbol 
+		tag_cap
+		
+	| _ ->
+	    Error_messages_v.print_fatal_error nam_cod 
+	      "couple_list_of_camlparagraph_endmarked_let_function Let_make_equal_function_for_symbol"
+	      "Entity_symbol Topentity"
+	      (Format.sprintf ">%s<" (Entity_symbol_v.longname sym_ent_cur))
+	      "Check"
+      end
+	
+  | Camlparagraph_endmarked_let_function_symbol_t.Let_make_nam_s_equal_for_symbol ->
+      begin
+	match sym_ent_top with
+	| Entity_symbol_t.Entity_proper_symbol 
+	    (Entity_proper_symbol_t.Entity_proper_top_symbol _)
+	| Entity_symbol_t.Entity_proper_symbol 
+	    (Entity_proper_symbol_t.Selfentity _) ->
+	      
+	      couple_list_of_camlparagraph_endmarked_let_function_make_nam_s_for_symbol 
+		tag_cap
+		
+	| _ ->
+	    Error_messages_v.print_fatal_error nam_cod 
+	      "couple_list_of_camlparagraph_endmarked_let_function Let_make_equal_function_for_symbol"
+	      "Entity_symbol Topentity"
+	      (Format.sprintf ">%s<" (Entity_symbol_v.longname sym_ent_cur))
+	      "Check"  
+      end
+	
+  | Camlparagraph_endmarked_let_function_symbol_t.Let_constrained_make_equal_function_for_formula ->
+      Utils_v.not_yet_implemented nam_cod "couple_list_of_camlparagraph_endmarked_let_function"
+      
+  | Camlparagraph_endmarked_let_function_symbol_t.Let_name_equal_function_for_formula ->
+      Error_messages_v.print_fatal_error nam_cod 
+	"couple_list_of_camlparagraph_endmarked_let_function"
+	"Camlparagraph_endmarked_let_function_symbol for Symbol"
+	"Camlparagraph_endmarked_let_function_symbol_t.Let_name_equal_function_for_formula"
+	"Check"  
+
+  | Camlparagraph_endmarked_let_function_symbol_t.Let_name_equal_function_for_symbol ->
+      begin
+	match sym_ent_top with
+	| Entity_symbol_t.Entity_proper_symbol 
+	    (Entity_proper_symbol_t.Entity_proper_top_symbol _)
+	| Entity_symbol_t.Entity_proper_symbol 
+	    (Entity_proper_symbol_t.Selfentity _) ->
+	      
+	      couple_list_of_camlparagraph_endmarked_let_function_name_tag 
+		tag_cap
+		
+	| _ ->
+	    Error_messages_v.print_fatal_error nam_cod 
+	      "couple_list_of_camlparagraph_endmarked_let_function Let_name_equal_function_for_symbol"
+	      "Entity_symbol Topentity"
+	      (Format.sprintf ">%s<" (Entity_symbol_v.longname sym_ent_cur))
+	      "Check"  
+      end
+
+  | Camlparagraph_endmarked_let_function_symbol_t.Let_print_function_for_symbol ->
+      Utils_v.not_yet_implemented nam_cod "Let_print_function_for_symbol"
+
+  | Camlparagraph_endmarked_let_function_symbol_t.Let_longname_equal_function_for_symbol ->
+      Utils_v.not_yet_implemented nam_cod "Let_longname_equal_function_for_symbol"
+
+  | Camlparagraph_endmarked_let_function_symbol_t.Let_string_off_function_for_symbol ->
+      Utils_v.not_yet_implemented nam_cod "Let_string_off_function_for_symbol"
+    end
+;;

@@ -1,0 +1,2 @@
+SUB_DIRECTORIES="parameterset_databases parameterset_containers parameterset_symbols parameterset_tags parameterset_values"
+CURRENT_AND_TEST=". unitary_tests"

@@ -1,0 +1,10 @@
+digraph dgn_lexeme_context {
+  size="14,14";
+  node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+  edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+  Title [label = "The Constructor Tree Context\nfor Nwchem_lexeme Domain" shape="record" color=lightblue, style=filled];
+  "nwchem\nlexeme\ncontext" -> {"nwchem\nlexeme\ncontext\ndatabase" "nwchem\nlexeme\ncontext\ndomain"};
+  "nwchem\nlexeme\ncontext\ndatabase" -> {"nwchem\nlexeme\ncontext\ndatabase\nconstructor\nof string"};
+  "nwchem\nlexeme\ncontext\ndomain" -> {"nwchem\nlexeme\ncontext\ndomain\nconstructor\nof string"};
+   }

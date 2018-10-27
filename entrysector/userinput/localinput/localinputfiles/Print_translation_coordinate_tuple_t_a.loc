@@ -1,0 +1,22 @@
+define Con_db1 
+       context
+	 database "db1points"
+         domain "elementary"
+	 end -- context
+       end -- define
+
+define Ctc_a	
+       external 
+         type [ "elementary" "body" "coordinate_tuple" "cartesian" "constructor" ]
+         external_name "T_A"
+         external_context Con_db1
+         end -- external
+       end -- define
+
+print Ctc_a 
+      units
+	length meter
+	end -- units
+      end -- print
+
+stop

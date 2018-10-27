@@ -1,0 +1,24 @@
+Measure_actual_action_u_any.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_actual_action_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_actual_action_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_actual_action_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_t.cmo
+Measure_actual_action_u_any.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_actual_action_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_actual_action_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_actual_action_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_t.cmx
+Measure_actual_length_u_any.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_actual_length_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_actual_length_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_actual_length_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_t.cmo
+Measure_actual_length_u_any.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_actual_length_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_actual_length_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_actual_length_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_t.cmx

@@ -1,0 +1,12 @@
+     builders operator_copy = datastructure entity;
+     builders operator_homothety_constructor:ofstring	 = datastructure entity;
+     builders operator_length_constructor:ofstring = datastructure entity;
+     builders operator_perimeter_constructor:ofstring = datastructure entity;
+     builders operator_print = datastructure entity;
+     builders operator_rotation_constructor:ofstring	 = datastructure entity;
+     builders operator_surface_constructor:ofstring = datastructure entity;
+     builders operator_translation_constructor:ofstring	 = datastructure entity;
+     builders operator_write = datastructure entity;
+     builders scale_factor_constructor:ofstring = datastructure entity;
+     builders target_figure_constructor:ofstring = datastructure entity;
+     builders target_measure_constructor:ofstring = datastructure entity; 

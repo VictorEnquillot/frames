@@ -1,0 +1,2 @@
+
+type group_for_formula_body_data_alone_tag = Group_for_formula_body_data_alone_symbol_t.group_for_formula_body_data_alone_symbol Tag_t.tag;;

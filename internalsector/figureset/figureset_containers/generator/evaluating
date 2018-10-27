@@ -1,0 +1,9 @@
+(** {6 Evaluating} *)
+
+let evaluate tag_ttt =
+  let tag_eun_l =
+    elementary_units_tag_list_off_this_tag
+      tag_ttt
+  in
+  List.map Elementary_units_container_v.evaluate tag_eun_l
+;;

@@ -1,0 +1,6 @@
+ = # this is a comment
+     target_name = triangle_perimeter_ratio
+     target_title = "triangles equilateral and scalene right surface ratio" 
+     property_name = triangle_perimeter_ratio 
+     model_list = { triangle_equilateral triangle_scalene_right }
+   end # target

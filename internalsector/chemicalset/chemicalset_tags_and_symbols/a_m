@@ -1,0 +1,26 @@
+mendeleev_marker_t.mli \
+ halfbridge_marker_t.mli \
+ atom_marker_t.mli \
+ block_marker_t.mli \
+ segment_marker_t.mli \
+ fragment_marker_t.mli \
+ grouping_marker_t.mli \
+ molecule_marker_t.mli \
+ molecule_polymer_marker_t.mli \
+ molecule_nonpolymer_marker_t.mli \
+ molecule_aminoacid_tlc_marker_t.mli \
+ molecule_aminoacid_marker_t.mli \
+  nucleicacid_marker_t.mli \
+   residue_embedded_marker_t.mli \
+   residue_nterminal_marker_t.mli \
+   residue_marker_t.mli \
+   cterminal_marker_t.mli \
+ sidegroup_marker_t.mli \
+ peptideca_embedded_marker_t.mli \
+ peptideca_nterminal_marker_t.mli \
+ peptideca_marker_t.mli \
+ polypeptide_marker_t.mli \
+ aggregate_marker_t.mli \
+ protein_marker_t.mli \
+ box_marker_t.mli \
+  chemicalset_marker_t.mli \

@@ -1,0 +1,8 @@
+let nam_dos = "moleculeset";;
+let nam_cat = "symbol";;
+let nam_enp = "molecule";;
+let idx_enp = 4;;
+
+let idx_dos = Domainset_symbol_v.domainset_index_of_domainset_name nam_dos +1;;
+let soi_dos = Sole_index_v.make idx_dos [];;
+let sym_dos = Domainset_symbol_v.make nam_dos;;

@@ -1,0 +1,2 @@
+
+type item_for_symbol_each_grandson_ofstring_tag = Item_for_symbol_each_grandson_ofstring_symbol_t.item_for_symbol_each_grandson_ofstring_symbol Tag_t.tag;;

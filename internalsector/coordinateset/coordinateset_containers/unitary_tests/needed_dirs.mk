@@ -1,0 +1,4 @@
+NEEDED_DIRS := \
+	$(COMMONSET_DIR) \
+        $(COORDINATESET_CONTAINERS_DIR) \
+    

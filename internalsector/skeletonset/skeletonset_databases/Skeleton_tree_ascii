@@ -1,0 +1,17 @@
+
+(*          |-           Skeleton_context_domain               *)
+(*          |                    / | \                         *)
+(*    Trio  |-           Skeleton_context_database             *)
+(*          |                    / | \                         *)
+(*          |-           Skeleton_context_databox              *)
+(*                                 |                           *)
+(*                           Skeleton_body                     *)
+(*      Skeleton_body_aopefset_anycenter ( | ..._ecppefset_anycenter) *)
+(*              "NWC"                                          *)
+(*          /                     |                \           *)
+(*    Skeleton_body_aopefset_onecenter Skeleton_body_aopefset_onecenter *)
+(*                     "H"                             "He"  .          *)
+
+(*    Skeleton_fence_aopef Skeleton_fence_aopefset ... *)
+(*       "H S 1 1 "      ...   "He S 1 1" ...          *)
+

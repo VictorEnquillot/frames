@@ -1,0 +1,8 @@
+(** {6 Typing} *)
+
+type camlline_for_any_uno_formula =
+  | Camlline_for_any_uno_camlfile_formula of Camlline_for_any_uno_camlfile_formula_t.camlline_for_any_uno_camlfile_formula
+  | Camlline_for_any_uno_camltype_formula of Camlline_for_any_uno_camltype_formula_t.camlline_for_any_uno_camltype_formula
+  | Camlline_for_any_uno_top_formula of Camlline_for_any_uno_top_formula_t.camlline_for_any_uno_top_formula
+  | Camlline_for_any_uno_son_formula of Camlline_for_any_uno_son_formula_t.camlline_for_any_uno_son_formula
+;;

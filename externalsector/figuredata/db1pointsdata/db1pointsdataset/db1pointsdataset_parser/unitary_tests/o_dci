@@ -1,0 +1,94 @@
+./runtest.byt
+
+ --- Creating  Module_name_stack_v.stack --- 
+
+ --- Creating  Module_name_stack_v.full_stack --- 
+
+ --- Creating  Parameters_general_register_v --- 
+
+ --- Creating  Cpu_by_module_name_n_function_name_register_v --- 
+
+ --- Creating  Debug_by_module_name_register_v --- 
+
+ --- Creating  Context_fullnameoffile_by_context_nameoffile_register_v --- 
+
+Testing Db1figure_parser_cluster_information_v with
+    Db1figure_parser_cluster_information_u_point_a_debug.ml
+1 2 3 
+Db1figure_parser_cluster_information_v.db1figure_bundle_coordinates_subtree_of_db1figure_lexer_symbol_stack: entering
+Db1figure_parser_cluster_information_v.db1figure_bundle_coordinates_subtree_of_db1figure_lexer_symbol_stack:  arg top  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_coordinates_units_length ""<
+Db1figure_parser_cluster_information_v.db1figure_bundle_coordinates_subtree_of_db1figure_lexer_symbol_stack:  rec top  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_coordinates_units_length ""<
+
+Db1figure_parser_cluster_information_v.db1figure_fence_cell_subtree_of_what_of_db1figure_lexer_symbol_stack: entering
+Db1figure_parser_cluster_information_v.db1figure_fence_cell_subtree_of_what_of_db1figure_lexer_symbol_stack:  arg top  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_coordinates_units_length ""<
+Db1figure_parser_cluster_information_v.db1figure_fence_cell_subtree_of_what_of_db1figure_lexer_symbol_stack:  pop cel  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_coordinates_units_length ""<
+
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack: entering
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack:  arg top  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_basic_word_lowercase_constructor "meter"<
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack:  rec pop tok  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_basic_word_lowercase_constructor "meter"<
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack:  rec pop tok  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_character_eol ""<
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack:  out tok  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_character_eol ""<
+Db1figure_parser_cluster_information_v.db1figure_bundle_coordinates_subtree_of_db1figure_lexer_symbol_stack:  rec top  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_coordinates_units_angle ""<
+
+Db1figure_parser_cluster_information_v.db1figure_fence_cell_subtree_of_what_of_db1figure_lexer_symbol_stack: entering
+Db1figure_parser_cluster_information_v.db1figure_fence_cell_subtree_of_what_of_db1figure_lexer_symbol_stack:  arg top  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_coordinates_units_angle ""<
+Db1figure_parser_cluster_information_v.db1figure_fence_cell_subtree_of_what_of_db1figure_lexer_symbol_stack:  pop cel  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_coordinates_units_angle ""<
+
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack: entering
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack:  arg top  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_basic_word_lowercase_constructor "radian"<
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack:  rec pop tok  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_basic_word_lowercase_constructor "radian"<
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack:  rec pop tok  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_character_eol ""<
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack:  out tok  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_character_eol ""<
+Db1figure_parser_cluster_information_v.db1figure_bundle_coordinates_subtree_of_db1figure_lexer_symbol_stack:  rec top  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_coordinates_kind ""<
+
+Db1figure_parser_cluster_information_v.db1figure_fence_cell_subtree_of_what_of_db1figure_lexer_symbol_stack: entering
+Db1figure_parser_cluster_information_v.db1figure_fence_cell_subtree_of_what_of_db1figure_lexer_symbol_stack:  arg top  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_coordinates_kind ""<
+Db1figure_parser_cluster_information_v.db1figure_fence_cell_subtree_of_what_of_db1figure_lexer_symbol_stack:  pop cel  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_coordinates_kind ""<
+
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack: entering
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack:  arg top  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_basic_word_lowercase_constructor "spherical"<
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack:  rec pop tok  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_basic_word_lowercase_constructor "spherical"<
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack:  rec pop tok  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_character_eol ""<
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack:  out tok  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_character_eol ""<
+Db1figure_parser_cluster_information_v.db1figure_bundle_coordinates_subtree_of_db1figure_lexer_symbol_stack:  rec top  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_figure_kind ""<
+4 5 
+Db1figure_parser_cluster_information_v.db1figure_bundle_figure_subtree_of_db1figure_lexer_symbol_stack: entering
+Db1figure_parser_cluster_information_v.db1figure_bundle_figure_subtree_of_db1figure_lexer_symbol_stack:  arg top  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_figure_kind ""<
+Db1figure_parser_cluster_information_v.db1figure_bundle_figure_subtree_of_db1figure_lexer_symbol_stack:  rec top  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_figure_kind ""<
+
+Db1figure_parser_cluster_information_v.db1figure_fence_cell_subtree_of_what_of_db1figure_lexer_symbol_stack: entering
+Db1figure_parser_cluster_information_v.db1figure_fence_cell_subtree_of_what_of_db1figure_lexer_symbol_stack:  arg top  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_figure_kind ""<
+Db1figure_parser_cluster_information_v.db1figure_fence_cell_subtree_of_what_of_db1figure_lexer_symbol_stack:  pop cel  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_figure_kind ""<
+
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack: entering
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack:  arg top  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_figure_kind ""<
+Db1figure_parser_cluster_information_v.db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack:  rec pop tok  sym_lex >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_figure_kind ""<
+Backtrace:
+Raised at file "format.ml", line 185, characters 41-52
+Called from file "format.ml", line 412, characters 8-33
+Called from file "format.ml", line 427, characters 6-24
+
+
+
+ --- Input syntax error ---
+ in module file  >Db1figure_parser_cluster_information_v<
+ and in function >db1figure_fence_token_leaf_list_of_what_of_db1figure_lexer_symbol_stack<
+   expecting :
+      Keyword word_lowercase.
+   and found :
+      Lexeme >Db1figure_lexer_symbol_t.Db1figure_lexer_keyword_figure_kind ""<.
+   cure :
+      Check db1figure file
+
+
+Testing results:
+Total: 5 tests performed.
+
+All tests succeeded.
+Fatal error: exception File "Error_messages_v.ml", line 62, characters 2-8: Assertion failed
+Raised at file "Error_messages_v.ml", line 62, characters 2-15
+Called from file "Db1figure_parser_cluster_information_v.ml", line 132, characters 1-93
+Called from file "Db1figure_parser_cluster_information_v.ml", line 229, characters 7-101
+Called from file "Db1figure_parser_cluster_information_v.ml", line 261, characters 26-44
+Called from file "Db1figure_parser_cluster_information_u_point_a_debug.ml", line 147, characters 21-90
+make: *** [testing] Erreur 2

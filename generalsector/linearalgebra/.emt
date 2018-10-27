@@ -1,0 +1,5 @@
+emacs Makefile \
+	configure \
+	test/debug \
+	test/toplevel \
+	test/Makefile

@@ -1,0 +1,31 @@
+digraph dgn {
+    size="14,14";
+
+    Title [label = "The Builder Tree\nSection Internal\nDomain Parameter\nDatabase Nwchem\nDatabox Try_ao", shape=box fontsize=24, color=lavender, style=filled];
+
+
+    edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+    node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+    Title -> "Context\nSector\nExternal" [ style="invis"];
+
+   "Context\nSector\nExternal" -> {"Context\nDomain\nParameter"};
+   "Context\nDomain\nParameter" -> { "Context\nDatabase\nMolpro\nMpr" "Context\nDatabase\nNwchem\nNwc" "Context\nDatabase\nG9x"};
+   "Context\nDatabase\nNwchem\nNwc" -> {"Context\nDatabox\nTry_ao" "Context\nDatabox\nCc_pvtz" "Context\nDatabox\nLanl2dz" "Context\nDatabox\n..."};
+
+    node [color="#40f0d0", style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+   "Context\nDatabox\nTry_ao" -> {	    
+        			    "Set Body\nTuple\nAopef\nhe s 1 1"
+        			    "Set Body\nTuple\nAopef\nhe s 2 1"
+        			    "Set Body\nTuple\nAopef\nhe p 2 1"
+        			    "Set Body\nTuple\nAopef\nhe p 2 2"
+        			    "Set Body\nTuple\nAopef\nhe p 3 1"
+   				    } ;
+
+    node [color="#40c0d0", style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+   "Set Body\nTuple\nAopef\nhe p 2 1" -> {"Set Fence\nAopef\nCoefficient\nhe p 2 1" "Set Fence\nAopef\nExponent\nhe p 2 1"};
+
+}
+

@@ -1,0 +1,12 @@
+type group_for_symbol_header_value =
+  | Group_for_symbol_header_constant_value of Group_for_symbol_header_constant_value_t.group_for_symbol_header_constant_value
+  | Group_for_symbol_header_current_son_top_value of Group_for_symbol_header_current_son_top_value_t.group_for_symbol_header_current_son_top_value
+  | Group_for_symbol_header_current_top_value of Group_for_symbol_header_current_top_value_t.group_for_symbol_header_current_top_value
+  | Group_for_symbol_header_son_value of Group_for_symbol_header_son_value_t.group_for_symbol_header_son_value
+  | Group_for_symbol_header_son_top_value of Group_for_symbol_header_son_top_value_t.group_for_symbol_header_son_top_value
+;;
+
+
+
+
+

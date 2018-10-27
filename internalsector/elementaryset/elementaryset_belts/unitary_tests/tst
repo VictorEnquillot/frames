@@ -1,0 +1,46 @@
+(** {6 Budenvelope} *)
+
+let ben_eul = budenvelope_of_tag tag_eul;;
+
+test_number 3 (
+( ben_eul :
+  (Elementary_fence_units_length_symbol_t.elementary_fence_units_length_symbol
+   Tag_t.tag, Measure_length_t.measure_length)
+  Doublet_t.doublet ) =
+  ((Elementary_fence_units_length_symbol_t.Bohr, [1; 1; 5; 6; 5; 6]),
+   (0.465248, Elementary_fence_units_length_symbol_t.Bohr))
+);;
+
+(** {6 Extracting Measure off Budenvelope} *)
+
+let mea_eul = measure_off_budenvelope ben_eul;;
+
+test_number 4 (
+( mea_eul : Measure_t.measure ) =
+Measure_t.Measure_length
+  (0.465248, Elementary_fence_units_length_symbol_t.Bohr)
+);;
+
+let can_mea = measure_canonical_off_budenvelope ben_eul;;
+
+test_number 5 (
+(can_mea : Measure_t.measure ) =
+  Measure_t.Measure_length
+   (2.46198639026108182e-11, Elementary_fence_units_length_symbol_t.Meter)
+);;
+
+(** {9 Closure : list of Readee} *)
+
+let clo_eul = closure_of_budenvelope ben_eul;;
+
+test_number 6 (
+(clo_eul : Readee_t.readee list ) =
+  [Readee_t.Readee_units
+    (Measure_t.Measure_length
+      (0.465248, Elementary_fence_units_length_symbol_t.Bohr))]
+);;
+
+test_number 7 (
+clo_eul = closure_of_tag tag_eul
+);;
+

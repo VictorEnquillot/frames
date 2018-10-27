@@ -1,0 +1,17 @@
+# ..atom_zerotied
+constructors atom_zerotied                  =   atom_zerotied_anion   atom_zerotied_cation   atom_zerotied_raregas   atom_zerotied_halfbridge
+
+# ...atom_zerotied_anion
+constructors atom_zerotied_anion            =   atom_zerotied_anion_minusone   atom_zerotied_anion_minustwo
+
+constructors atom_zerotied_anion_minusone   =   fm1   hm1   clm1   brm1   im1
+constructors atom_zerotied_anion_minustwo   =   om2   sm2
+
+constructors atom_zerotied_cation           =   atom_zerotied_cation_plusone   atom_zerotied_cation_plustwo   atom_zerotied_cation_plusthree
+
+constructors atom_zerotied_cation_plusone   =   hp1   kp1   lip1   nap1   nip1   cup1
+constructors atom_zerotied_cation_plustwo   =   mgp2   cap2   fep2   znp2   cup2
+constructors atom_zerotied_cation_plusthree =   fep3   nip3
+
+constructors atom_zerotied_raregas          =   ar   he   kr   ne   xe
+

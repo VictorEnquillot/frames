@@ -1,0 +1,62 @@
+  | "is_figure_context_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_context_symbol_off_figure_symbol
+  | "is_figure_field_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_field_symbol_off_figure_symbol
+  | "is_figure_context_database_constructor" ->
+     Figure_symbol_v.is_figure_context_database_constructor
+  | "is_figure_context_databox_constructor" ->
+     Figure_symbol_v.is_figure_context_databox_constructor
+  | "is_figure_context_domain_constructor" ->
+     Figure_symbol_v.is_figure_context_domain_constructor
+  | "is_figure_body_triangle_isosceles_acute_constructor" ->
+     Figure_symbol_v.is_figure_body_triangle_isosceles_acute_constructor
+  | "is_figure_body_triangle_isosceles_equilateral_constructor" ->
+     Figure_symbol_v.is_figure_body_triangle_isosceles_equilateral_constructor
+  | "is_figure_body_triangle_isosceles_obtuse_constructor" ->
+     Figure_symbol_v.is_figure_body_triangle_isosceles_obtuse_constructor
+  | "is_figure_body_triangle_isosceles_right_constructor" ->
+     Figure_symbol_v.is_figure_body_triangle_isosceles_right_constructor
+  | "is_figure_body_triangle_scalene_acute_constructor" ->
+     Figure_symbol_v.is_figure_body_triangle_scalene_acute_constructor
+  | "is_figure_body_triangle_scalene_obtuse_constructor" ->
+     Figure_symbol_v.is_figure_body_triangle_scalene_obtuse_constructor
+  | "is_figure_body_triangle_scalene_right_constructor" ->
+     Figure_symbol_v.is_figure_body_triangle_scalene_right_constructor
+  | "is_figure_body_segment_constructor" ->
+     Figure_symbol_v.is_figure_body_segment_constructor
+  | "is_figure_fence_point_constructor" ->
+     Figure_symbol_v.is_figure_fence_point_constructor
+  | "is_figure_context_database_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_context_database_symbol_off_figure_symbol
+  | "is_figure_context_databox_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_context_databox_symbol_off_figure_symbol
+  | "is_figure_context_domain_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_context_domain_symbol_off_figure_symbol
+  | "is_figure_body_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_body_symbol_off_figure_symbol
+  | "is_figure_body_triangle_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_body_triangle_symbol_off_figure_symbol
+  | "is_figure_body_triangle_isosceles_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_body_triangle_isosceles_symbol_off_figure_symbol
+  | "is_figure_body_triangle_isosceles_acute_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_body_triangle_isosceles_acute_symbol_off_figure_symbol
+  | "is_figure_body_triangle_isosceles_equilateral_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_body_triangle_isosceles_equilateral_symbol_off_figure_symbol
+  | "is_figure_body_triangle_isosceles_obtuse_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_body_triangle_isosceles_obtuse_symbol_off_figure_symbol
+  | "is_figure_body_triangle_isosceles_right_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_body_triangle_isosceles_right_symbol_off_figure_symbol
+  | "is_figure_body_triangle_scalene_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_body_triangle_scalene_symbol_off_figure_symbol
+  | "is_figure_body_triangle_scalene_acute_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_body_triangle_scalene_acute_symbol_off_figure_symbol
+  | "is_figure_body_triangle_scalene_obtuse_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_body_triangle_scalene_obtuse_symbol_off_figure_symbol
+  | "is_figure_body_triangle_scalene_right_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_body_triangle_scalene_right_symbol_off_figure_symbol
+  | "is_figure_body_segment_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_body_segment_symbol_off_figure_symbol
+  | "is_figure_fence_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_fence_symbol_off_figure_symbol
+  | "is_figure_fence_point_symbol_off_figure_symbol" ->
+     Figure_symbol_v.is_figure_fence_point_symbol_off_figure_symbol

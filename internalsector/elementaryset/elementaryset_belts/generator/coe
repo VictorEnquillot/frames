@@ -1,0 +1,14 @@
+(** {6 Coercing} *)
+
+let elementary_units_tag_off_elementary_tag tag_ele =
+  Tag_v.map_entity Elementary_symbol_v.elementary_units_symbol_off_elementary_symbol tag_ele
+;;
+
+let elementary_tag_of_elementary_units_tag tag_eun =
+  Tag_v.map_entity Elementary_symbol_v.elementary_symbol_of_elementary_units_symbol tag_eun
+;;
+
+let buldr_tag_off_elementary_tag tag_ele =
+  Tag_v.map_entity Elementary_symbol_v.buldr_symbol_off_elementary_symbol tag_ele
+;;
+

@@ -1,0 +1,29 @@
+let pre_tag_bod (s, i) = Input_symbol_v.is_input_body_symbol_off_input_symbol s;;
+let pre_tag_bty (s, i) = Input_symbol_v.is_input_body_box_type_constructor s;;
+let pre_tag_com (s, i) = Input_symbol_v.is_input_body_handle_command_symbol_off_input_symbol s;;
+let pre_tag_hcd (s, i) = Input_symbol_v.is_input_body_handle_command_define_constructor s;;
+let pre_tag_bvo (s, i) = Input_symbol_v.is_input_body_block_variable_operator s;;
+let pre_tag_hco (s, i) = Input_symbol_v.is_input_body_handle_cofactor s;;
+let pre_tag_kty (s, i) = Input_symbol_v.is_input_fence_keyword_type s;;
+let pre_tag_cto (s, i) = Input_symbol_v.is_input_fence_cell_target_operator_constructor s;;
+let pre_tag_hcp (s, i) = Input_symbol_v.is_input_body_handle_command_print_constructor s;;
+let pre_tag_vnc (s, i) = Input_symbol_v.is_input_fence_variable_name_context_constructor s;;
+
+let pre_tag_bty_sof sof (s, i) = (Input_symbol_v.input_body_box_type_constructor sof = s);;
+let pre_tag_net_sof sof (s, i) = (Input_symbol_v.input_fence_variable_name_entity_target_constructor sof = s);;
+let pre_tag_nee_sof sof (s, i) = (Input_symbol_v.input_fence_variable_name_entity_external_constructor sof = s);;
+let pre_tag_vnc_sof sof (s, i) = (Input_symbol_v.input_fence_variable_name_context_constructor sof = s);;
+let pre_tag_hvo_sof sof (s, i) = (Input_symbol_v.input_body_handle_variable_operator_constructor sof = s);;
+let pre_tag_hcd_sof sof (s, i) = (Input_symbol_v.input_body_handle_command_define_constructor sof = s);;
+let pre_tag_hcp_sof sof (s, i) = (Input_symbol_v.input_body_handle_command_print_constructor sof = s);;
+
+
+let tag_inp_cpr = List_v.only_element_of_predicate_off_list (pre_tag_hcd_sof "Ctc_a") tag_inp_l;;
+let tag_inp_cpr_st = Tree_v.subtree_of_node_predicate_off_tree (pre_tag_hcd_sof "Ctc_a") tag_inp_t;;
+
+let pre_tre_nee sof = Tree_v.has_node_of_node_predicate_off_tree (pre_tag_nee_sof sof);;
+
+let tag_inp_ope = List_v.only_element_of_predicate_off_list (pre_tre_nee "Hom_b_2") tag_inp_l;; 
+
+let tag_inp_poi_a_st = Tree_v.has_node_of_node_predicate_off_tree (pre_tre_nee "Poi_a") tag_inp_t;;
+

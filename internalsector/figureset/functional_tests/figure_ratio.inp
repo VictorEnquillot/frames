@@ -1,0 +1,60 @@
+# input for a Run
+# 1st Model
+   model =
+     model_name = triangle_equilateral_t
+     model_title = "a triangle equilateral"
+     database_name = db1
+     entity_what = triangle_isosceles_equilateral
+     entity_name = T
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+# 2nd model
+   model =
+     model_name = triangle_scalene_right_u
+     model_title = "a triangle scalene right" 
+     database_name = db1
+     entity_what = triangle_scalene_right
+     entity_name = u
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+   property =
+     property_name = perimeter_t
+     property_units_list = { meter } 
+     property_model_input = triangle_equilateral_t
+     property_what = perimeter
+     property_file = triangle_equilateral_perimeter.out 
+   end # property
+
+   property =
+     property_name = perimeter_u
+     property_units_list = { meter } 
+     property_model_input = triangle_scalene_right_u
+     property_what = perimeter
+     property_file = triangle_scalene_right_perimeter.out 
+   end # property
+
+   property =
+     property_name = perimeter_t_over_u
+     property_what = property_figureset_ratio
+     property_input_list = { perimeter_t perimeter_u }
+     property_file = triangle_perimeter_ratio.out
+   end # property
+
+# 1st target
+   target = 
+     domain_name = figure
+     target_name = perimeter_ratio_t_over_u
+     target_title = "triangles equilateral and scalene right surface ratio" 
+     target_property = perimeter_t_over_u
+   end # target
+
+# domain
+   domain =
+    domain_name = figure
+    target_list = { perimeter_ratio_t_over_u }
+   end # domain
+  

@@ -1,0 +1,11 @@
+ledit -x -h ./ocaml-history \
+ocaml \
+-I . \
+-I .. \
+-I ../../basics \
+-I ../../datastructures/ \
+unix.cma str.cma \
+../../datastructures/datastructures.cma \
+../linearalgebra.cma
+
+

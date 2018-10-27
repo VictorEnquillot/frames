@@ -1,0 +1,11 @@
+ builders basisfunction_set_centered_full = datastructure entity;
+     builders basisfunction_set_centered_c_indexed = datastructure entity;
+     builders basisfunction_set_centered_l_indexed = datastructure entity;
+     builders basisfunction_set_centered_n_indexed = datastructure entity;
+     builders basisfunction_centered_m_indexed:ofstring = datastructure entity;
+     builders basisfunction_planewave:ofstring = datastructure entity 
+builders basisfunction_domain_constructor:ofstring = datastructure entity;
+     builders basisfunction_database:ofstring = datastructure entity;
+     builders basisfunction_input_file:ofstring = datastructure entity 
+ builders basisfunction_set_periodic_bloch = datastructure entity;
+     builders basisfunction_periodic:ofstring = datastructure entity 

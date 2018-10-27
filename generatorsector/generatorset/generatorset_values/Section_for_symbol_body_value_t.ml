@@ -1,0 +1,9 @@
+(** {6 Typing} *)
+
+type section_for_symbol_body_value =
+  | Section_for_symbol_body_current_son_top_value of Section_for_symbol_body_current_son_top_value_t.section_for_symbol_body_current_son_top_value
+  | Section_for_symbol_body_son_top_value of Section_for_symbol_body_son_top_value_t.section_for_symbol_body_son_top_value
+  | Section_for_symbol_body_son_value of Section_for_symbol_body_son_value_t.section_for_symbol_body_son_value
+  | Section_for_symbol_body_top_value of Section_for_symbol_body_top_value_t.section_for_symbol_body_top_value
+;;
+

@@ -1,0 +1,7 @@
+	if Parameters_figureset_general_provider_v.provide "trace-store" = "true"
+	then
+	  Management_v.storing_of_register_name_of_value_name_of_key_name 
+	    nam_mod
+	    (name_of_value val_)
+	    (name_of_key key)
+	else ()

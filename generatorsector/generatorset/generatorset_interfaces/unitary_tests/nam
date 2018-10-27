@@ -1,0 +1,4 @@
+let nam_dos = "moleculeset";;
+let nam_cat = "symbol";;
+let nam_enp = "molecule_linear_diatomic";;
+let nam_usf = "implementation";;

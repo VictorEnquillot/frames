@@ -1,0 +1,12 @@
+ledit -x -h ./ocaml-history \
+ocaml \
+-I ../../tools \
+-I ../../basics \
+-I ../../quantum \
+-I ../../linearalgebra \
+-I ../ \
+unix.cma str.cma \
+../../tools/tools.cma \
+../../linearalgebra/linearalgebra.cma \
+../../quantum/quantum.cma \
+../functions.cma 

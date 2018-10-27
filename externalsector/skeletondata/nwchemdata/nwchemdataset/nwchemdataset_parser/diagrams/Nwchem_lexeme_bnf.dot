@@ -1,0 +1,32 @@
+digraph dgn_bnf_top {
+  size="14,14";
+  node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+  edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+  Title [label = "The Bnf Tree\nfor Nwchem_lexeme Domain" shape="record" color=lightblue, style=filled];
+
+
+
+
+"Basis_set_file"  -> {"Version" "empty_line" "Comment_block" "Basis_block"};
+"Version"  -> {"v" integer "dot" integer "dot" integer"eol"};
+"Comment_block"  -> {"Comment_line_emsl" "Comment_header" "Comment_dots" {"Comment_line_reference"} "sharp" "eol"};
+"Comment_line_emsl"  -> {"sharp" "space" "space" basis_set_name " EMSL Basis Set Exchange Library " "date" "eol"};
+"Comment_header"  -> {"# Elements References" "eol"};
+"Comment_dots"  -> {"# -------- ----------" "eol"};
+"Comment_line_reference"  -> {"sharp" "space" "Comment_elements" "semicolon" "space" "Author_name_list" "space" "Journal_reference" "dot" "eol"};
+"Comment_elements"  -> {"Comment_one_element" | "Comment_several_elements"};
+"Comment_one_element"  -> {"sharp" "space" "center_name" "space" "space" "space" "space" "space"};
+"Comment_several_elements" -> {"sharp" "space" "center_name" "space" '-' "space" "center_name"};
+"Author_name_list"  -> {"Author_name" | "Author_name" and "Author_name" | "Author_name" {',' "space" "Author_name"} ',' "space"};
+"Basis_body"  -> {"Basis_definition" { "Basis_for_a_center" } END};
+"Basis_definition"  -> BASIS "space" basis_set_local_name "space" PRINT"eol"};
+"Basis_for_a_center""  -> {"contraction_definition" "eol" \{ "Ao_block"\}};
+"contraction_definition"  -> {"#BASIS SET: " "left_parenthesis" "contraction_image" "right_parenthesis" "space" "arrow" "space" "left_bracket" "contraction_image" "right_bracket" "eol"};
+"contraction_image"  -> {integer "shell_name" \{"comma" integer "shell_name"\}};
+"Ao_block"  -> {"Ao_name_line" "contraction_values" "eol" "center_name" "shell_name" "eol" \{"contraction_block"\}};
+"Ao_name_line"  -> {"center_name" "space" "space" "space" "shell_name_extended" "eol"};
+"shell_name_extended"  -> {"shell_name" | SP};
+"contraction_block"  -> {contraction_values}};
+"contraction_values"  -> positive_float float | positive_float float float};
+   }

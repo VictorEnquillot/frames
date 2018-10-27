@@ -1,0 +1,26 @@
+v1.2.2
+
+#  try_ao  EMSL  Basis Set Exchange Library try_ao
+# Elements                             References
+# --------                             ----------
+# H  - Ne: T. H. Dunning Jr. and P. J. Hay, in Methods of Electronic Structure
+# 
+
+
+
+BASIS "ao basis" PRINT
+#BASIS SET: (6s) -> [2s]
+He    S
+     13.6267000              0.1752300        
+      1.9993500              0.8934830        
+He    S
+      0.3829930              1.0000000        
+He    P
+      2.2818700              0.2311520        
+      0.4652480              0.8667640        
+He    P
+      0.1243280              1.0000000
+END
+
+
+

@@ -1,0 +1,4 @@
+NEEDED_DIRS := \
+        $(ELEMENTARYSET_ENVELOPES_DIR) \
+ 
+

@@ -1,0 +1,15 @@
+   "Definition : for any Entity its B-Tree is the Tree of the Entity Tags necessary to build its value";
+   "Definition : the Context gathers entities at the top of the B-Tree of a Domain (Domain, Database, Datafile)";
+   "Definition : the Body gathers entities of the B-Tree of a Domain being neither Context nor Fence";
+   "Definition : the Fence is the Tag list of the Leaf entities of the B-Tree of a Domain";
+   "Definition : the Border is the Tag list of the father entities of the Fence of the Elementary Domain";
+   "Definition : a Builder (for an Entity of a Domain) is a son of its Builder-Subtree";
+   "Definition : a Containee is a Builder expressed in the lowest subtype compatible with the Datastructure of the Container";
+   "Definition : a Container is the Datastructure of the Containee of an Entity";
+   "Definition : a Containee is an element of the Datastructure of the Container of an Entity";
+   "Definition : a Building is the same Datastructure as Container filled with Builders"; 
+   "Definition : a Stalk is a type with only one constructor of nothing";
+   "Definition : a Bud type is a type with only one constructor of string";
+   "Definition : a Stem type has only constructor of string";
+   "Definition : a Branch type has only constructors of nothing";
+   "Definition : a Trunc type has only constructors of constructor";

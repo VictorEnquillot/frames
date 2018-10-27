@@ -1,0 +1,3 @@
+NEEDED_DIRS := \
+        $(ELEMENTARYSET_SYMBOLS_DIR) \
+ 

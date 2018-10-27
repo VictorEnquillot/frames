@@ -1,0 +1,41 @@
+test_number 4 (
+inf_tar_l 
+(* : Target_information_t.target_information list *)
+=
+  [Target_information_t.Target_figureset_information
+    {Target_figureset_information_t.target_name = "triangle_perimeter_ratio";
+     Target_figureset_information_t.target_title =
+      "triangles equilateral and scalene right surface ratio";
+     Target_figureset_information_t.model_figureset_name_list =
+      ["triangle_equilateral"; "triangle_scalene_right"];
+     Target_figureset_information_t.property_name =
+      "triangle_perimeter_ratio";
+     Target_figureset_information_t.property_units =
+      Units_t.Units_length Units_length_t.Meter;
+     Target_figureset_information_t.property_file =
+      "triangle_perimeter_ratio.out"};
+   Target_information_t.Target_figureset_information
+    {Target_figureset_information_t.target_name =
+      "triangle_scalene_right_surface";
+     Target_figureset_information_t.target_title =
+      "triangle scalene right surface";
+     Target_figureset_information_t.model_figureset_name_list =
+      ["triangle_scalene_right"];
+     Target_figureset_information_t.property_name = "triangle_surface";
+     Target_figureset_information_t.property_units =
+      Units_t.Units_length Units_length_t.Meter;
+     Target_figureset_information_t.property_file =
+      "surface_triangle_scalene_right_surface.out"};
+   Target_information_t.Target_figureset_information
+    {Target_figureset_information_t.target_name =
+      "triangle_equilateral_perimeter";
+     Target_figureset_information_t.target_title =
+      "triangle equilateral perimeter";
+     Target_figureset_information_t.model_figureset_name_list =
+      ["triangle_equilateral"];
+     Target_figureset_information_t.property_name = "triangle_perimeter";
+     Target_figureset_information_t.property_units =
+      Units_t.Units_length Units_length_t.Meter;
+     Target_figureset_information_t.property_file =
+      "triangle_equilateral_perimeter.out"}]
+);;

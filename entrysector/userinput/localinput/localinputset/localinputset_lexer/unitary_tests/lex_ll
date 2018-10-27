@@ -1,0 +1,13 @@
+let sym_lex_l = Input_lexical_analysis_v.input_lexeme_symbol_list_of_input_fullnameoffile fno_inp;;
+
+let sym_def = Input_lexeme_symbol_t.Input_lexeme_command_symbol Input_lexeme_command_symbol_t.Input_lexeme_define;;
+let sub_lex_ll = List_v.burst_left_included_of_predicate_of_list (fun e -> e = sym_def) sym_lex_l;;
+
+let len_lex_ll = List.length sub_lex_ll;;
+
+let sub_lex_l1 = List.nth sub_lex_ll 0;;
+
+test_number 2 (
+sub_lex_l1
+(* : Input_lexeme_symbol_t.input_lexeme_symbol list *)
+=

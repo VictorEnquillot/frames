@@ -1,0 +1,10 @@
+ledit -x -h ./ocaml-history ocaml \
+-I ../../../general/basics \
+-I ../../../general/datastructures \
+-I ../../figureset_symbols \
+-I ../ \
+unix.cma str.cma \
+../../../general/basics/basics.cma \
+../../../general/datastructures/datastructures.cma \
+../../figureset_symbols/figureset_symbols.cma \
+../figureset_tags.cma 

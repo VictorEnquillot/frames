@@ -1,0 +1,22 @@
+FIGURE_T_MLI :=  \
+   Figure_set_fence_point_symbol_t.mli \
+  Figure_set_fence_symbol_t.mli \
+   Figure_set_body_segment_symbol_t.mli \
+     Figure_set_body_triangle_scalene_right_symbol_t.mli \
+     Figure_set_body_triangle_scalene_obtuse_symbol_t.mli \
+     Figure_set_body_triangle_scalene_acute_symbol_t.mli \
+    Figure_set_body_triangle_scalene_symbol_t.mli \
+     Figure_set_body_triangle_isosceles_right_symbol_t.mli \
+     Figure_set_body_triangle_isosceles_obtuse_symbol_t.mli \
+     Figure_set_body_triangle_isosceles_equilateral_symbol_t.mli \
+     Figure_set_body_triangle_isosceles_acute_symbol_t.mli \
+    Figure_set_body_triangle_isosceles_symbol_t.mli \
+   Figure_set_body_triangle_symbol_t.mli \
+  Figure_set_body_symbol_t.mli \
+ Figure_set_symbol_t.mli \
+  Figure_context_sector_symbol_t.mli \
+  Figure_context_domain_symbol_t.mli \
+  Figure_context_databox_symbol_t.mli \
+  Figure_context_database_symbol_t.mli \
+ Figure_context_symbol_t.mli \
+Figure_symbol_t.mli \

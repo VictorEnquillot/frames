@@ -1,0 +1,2 @@
+
+type section_for_any_footer_constant_tag = Section_for_any_footer_constant_symbol_t.section_for_any_footer_constant_symbol Tag_t.tag;;

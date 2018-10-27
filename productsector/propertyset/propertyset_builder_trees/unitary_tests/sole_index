@@ -1,0 +1,5 @@
+
+let soi_pfi_t = 
+    Sole_index_v.sole_index_tree_of_tree_of_root_sole_index 
+      sym_pro_t 
+      [50];;

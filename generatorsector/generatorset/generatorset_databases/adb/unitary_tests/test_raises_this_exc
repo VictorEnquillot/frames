@@ -1,0 +1,2 @@
+test_raises_this_exc (Failure "Entity_name_not_found:constructors_string_by_entity_trail_provider_v.ml:build_n_store")
+Constructors_string_by_entity_trail_provider_v.provide tra_ent_flo;;

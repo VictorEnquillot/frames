@@ -1,0 +1,9 @@
+NEEDED_DIRS := \
+	$(QUANTUM_DIR) \
+	$(COMMONSET_DIR) \
+  
+
+
+
+
+

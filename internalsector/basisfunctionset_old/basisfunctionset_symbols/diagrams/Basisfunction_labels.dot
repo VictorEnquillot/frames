@@ -1,0 +1,3 @@
+  "Bf\ncontext" -> {"Bf\ncontext\ncreatedby" "Bf\ncontext\ndomain"};
+  "Bf\ncontext\ndomain" -> {"Bf\ncontext\ndomain\nconstructor\nof string"};
+  "Bf\ncontext\ncreatedby" -> {"Bf\ncontext\ndatabase\nof string" "Bf\ncontext\ninput\nfile\nof string"};

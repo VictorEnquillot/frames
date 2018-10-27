@@ -1,0 +1,36 @@
+constructors figure                          =   figure_context   figure_set
+
+constructors figure_context                  =   figure_context_database   figure_context_databox   figure_context_domain   figure_context_sector
+
+constructors figure_context_databox          =   figure_context_databox_constructor:ofstring
+constructors figure_context_database         =   figure_context_database_constructor:ofstring
+constructors figure_context_domain           =   figure_context_domain_constructor:ofstring
+constructors figure_context_sector           =   figure_context_sector_constructor:ofstring
+
+
+constructors figure_set                    =   figure_set_body   figure_set_fence
+
+constructors figure_set_body               =   figure_set_body_triangle   figure_set_body_segment
+
+constructors figure_set_body_triangle      =   figure_set_body_triangle_isosceles   figure_set_body_triangle_scalene
+
+constructors figure_set_body_triangle_isosceles  =   figure_set_body_triangle_isosceles_acute   figure_set_body_triangle_isosceles_equilateral   figure_set_body_triangle_isosceles_obtuse   figure_set_body_triangle_isosceles_right
+
+
+constructors figure_set_body_triangle_isosceles_equilateral= figure_set_body_triangle_isosceles_equilateral_constructor:ofstring
+constructors figure_set_body_triangle_isosceles_right      =  figure_set_body_triangle_isosceles_right_constructor:ofstring
+constructors figure_set_body_triangle_isosceles_acute      =  figure_set_body_triangle_isosceles_acute_constructor:ofstring
+constructors figure_set_body_triangle_isosceles_obtuse     =  figure_set_body_triangle_isosceles_obtuse_constructor:ofstring
+
+
+constructors figure_set_body_triangle_scalene         =   figure_set_body_triangle_scalene_acute   figure_set_body_triangle_scalene_obtuse   figure_set_body_triangle_scalene_right
+
+constructors figure_set_body_triangle_scalene_right   =  figure_set_body_triangle_scalene_right_constructor:ofstring
+constructors figure_set_body_triangle_scalene_acute   =  figure_set_body_triangle_scalene_acute_constructor:ofstring
+constructors figure_set_body_triangle_scalene_obtuse  =  figure_set_body_triangle_scalene_obtuse_constructor:ofstring
+
+constructors figure_set_body_segment             =   figure_set_body_segment_constructor:ofstring
+
+constructors figure_set_fence                    =   figure_set_fence_point
+
+constructors figure_set_fence_point              =   figure_set_fence_point_constructor:ofstring

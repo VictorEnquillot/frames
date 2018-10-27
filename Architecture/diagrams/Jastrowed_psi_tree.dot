@@ -1,0 +1,30 @@
+	digraph jastrowed_psi_tree {
+		size="14,14";
+		node [
+		     color=yellow, style=filled,
+		     fontsize=24, fontname="Palatino-Italic",fontcolor=black
+		     ];
+		edge [
+        	fontname = "Bitstream Vera Sans"
+        	fontsize = 12
+        	arrowsize="0.7"
+		dir = "down"
+	    ];
+	    
+	    Title [label = "The tree solution" shape="record" color=lightblue, style=filled];
+
+    		Title -> "jastrowed psi"  [style="invis"];
+
+		"jastrowed psi" -> "determinant";
+		"determinant" -> "orbitals";
+		"orbitals" -> "coefficients";
+		"orbitals" -> "\"jastrowed\" basis functions";
+		"\"jastrowed\" basis functions" -> "basis parameters";
+		"\"jastrowed\" basis functions" -> "jastrow" [label = "Extraction of Electrons coordinates\nfrom Jastrow"];
+		"jastrow" -> "jastrow parameters";
+		"jastrow" -> "electrons coordinates";
+
+		"jastrowed psi" -> "jastrow" [color=red style=dotted arrowsize="2" label = "Extraction of Jastrow\nfrom its Tag as usual\nExcept that it is not a Son Tag\nbut an \"Extracted\" Tag"];
+
+		}
+

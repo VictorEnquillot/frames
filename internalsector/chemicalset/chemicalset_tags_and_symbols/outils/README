@@ -1,0 +1,62 @@
+
+a category 
+  is either :
+
+   a symbol   
+   a marker 
+   a path
+   a formula 
+   a value ?
+
+an entity 
+   always defines a module for any of its category
+
+a module   
+   the name for a module = entity_category
+
+a constructor 
+   the name of a constructor ( a type constructor) is either
+   the name of a module  
+
+   | Module of Module_abbreviation_category_abbreviation.module 
+   | Module of Mac.module
+  
+  the name of a zero level constructor not being an entity.
+
+   | Constructor
+
+  the name of a basic type 
+
+   | Bool of bool
+   | Char of char
+   | Int of int
+   | Float of float
+   | String of string
+
+  the name of a data structure 
+
+   | Mixed of (Mac.module, Mac.module) Dbt_t.doublet 
+   | List of Mac.module list 
+   | Tree of Mac.module Tre_t.tree 
+
+a level for a constructor for an entity 
+  is either 
+    1 if it has a of 
+    0 if it has not
+   
+an entity_constructor_set 
+
+  is a list which contains all the names of the type constructors 
+  for this entity.
+
+  for energy : energy_kinetic energy_potential energy_total
+  these may have different levels
+     
+  energy_kinetic has level 1
+  energy_total   has level 0
+
+a level for an entity 
+  the level of an entity is one more than the highest levels of its constructors
+  listed in module_constructor_set.
+
+  energy has level 2 because energy_kinetic has level 1

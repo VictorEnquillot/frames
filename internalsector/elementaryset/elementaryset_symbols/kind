@@ -1,0 +1,18 @@
+let entity_kind_of_sole_index soi_any =
+  let nam_fun = "entity_kind_of_sole_index" in
+  
+  let len_soi = List.length soi_any in
+  match len_soi with
+  | 0 -> failwith ("Zero_length_sole_index:"^nam_cod^"."^nam_fun)
+  | 1 -> "domain"
+  | 2 -> "???"
+  | 3 -> "???"
+  | 4 -> "coordinate"
+  | 5 -> "measure"
+  | 6 -> "float"
+  | _ -> 
+      Error_messages_v.print_fatal_error nam_cod nam_fun
+	(Format.sprintf "sole_index %s had a length lower than 6" (Sole_index_v.name soi_any))
+	"it is NOT" "Check this may be wrong"
+;;
+

@@ -1,0 +1,157 @@
+(** {3 Nwchemdata_lexer_basic_word_numeric_negative_symbol_v} *)
+
+
+(** {6 Documenting_for_symbol} *)
+
+let documentation () = 
+[
+  "Needs: ";
+  "Current : LEXNWC:Nwchemdata_lexer_basic_word_numeric_negative_symbol_v";
+  "Needed-by: ";
+  "What-is-it: ";
+  "How-is-it-done: ";
+  "Example: ";
+]
+;;
+
+let nam_cod = Management_v.current_module_name (documentation ());;
+
+
+(** {6 Naming_for_symbol} *)
+
+let name = function
+  | Nwchemdata_lexer_basic_word_numeric_negative_symbol_t.Nwchemdata_lexer_basic_word_numeric_negative_integer _ -> "nwchemdata_lexer_basic_word_numeric_negative_integer"
+  | Nwchemdata_lexer_basic_word_numeric_negative_symbol_t.Nwchemdata_lexer_basic_word_numeric_negative_float _ -> "nwchemdata_lexer_basic_word_numeric_negative_float"
+;;
+
+
+(** {6 String_offing_for_symbol} *)
+
+let string_off = function
+  | Nwchemdata_lexer_basic_word_numeric_negative_symbol_t.Nwchemdata_lexer_basic_word_numeric_negative_integer s -> s
+  | Nwchemdata_lexer_basic_word_numeric_negative_symbol_t.Nwchemdata_lexer_basic_word_numeric_negative_float s -> s
+;;
+
+
+(** {6 Longnaming_for_symbol} *)
+
+let longname sym_dnn =
+  Format.sprintf "Nwchemdata_lexer_basic_word_numeric_negative_symbol_t.%s" (String.capitalize (name sym_dnn))
+;;
+
+
+(** {6 Fullnaming_for_symbol} *)
+
+let fullname sym_dnn =
+  Format.sprintf "%s \"%s\"" (longname sym_dnn) (string_off sym_dnn)
+;;
+
+
+(** {6 Extracting_topson_notleaf_for_symbol} *)
+
+
+(** {6 Extracting_grandson_notleaf_for_symbol} *)
+
+
+(** {6 Querying_topson_bare_for_symbol} *)
+
+
+(** {6 Querying_topson_ofstring_for_symbol} *)
+
+let is_nwchemdata_lexer_basic_word_numeric_negative_integer = function
+  | Nwchemdata_lexer_basic_word_numeric_negative_symbol_t.Nwchemdata_lexer_basic_word_numeric_negative_integer _ -> true
+  | _ -> false
+;;
+
+let is_nwchemdata_lexer_basic_word_numeric_negative_float = function
+  | Nwchemdata_lexer_basic_word_numeric_negative_symbol_t.Nwchemdata_lexer_basic_word_numeric_negative_float _ -> true
+  | _ -> false
+;;
+
+
+(** {6 Querying_topson_notleaf_for_symbol} *)
+
+
+(** {6 Querying_grandson_bare_for_symbol} *)
+
+
+(** {6 Querying_grandson_ofstring_for_symbol} *)
+
+
+(** {6 Querying_grandson_notleaf_for_symbol} *)
+
+
+(** {6 Upgrading_topson_notleaf_for_symbol} *)
+
+
+(** {6 Upgrading_grandson_notleaf_for_symbol} *)
+
+
+(** {6 Abbreviating_topson_bare_for_symbol} *)
+
+
+(** {6 Abbreviating_topson_ofstring_for_symbol} *)
+
+let nwchemdata_lexer_basic_word_numeric_negative_integer s = Nwchemdata_lexer_basic_word_numeric_negative_symbol_t.Nwchemdata_lexer_basic_word_numeric_negative_integer s;;
+
+let nwchemdata_lexer_basic_word_numeric_negative_float s = Nwchemdata_lexer_basic_word_numeric_negative_symbol_t.Nwchemdata_lexer_basic_word_numeric_negative_float s;;
+
+
+(** {6 Abbreviating_grandson_bare_for_symbol} *)
+
+
+(** {6 Abbreviating_grandson_ofstring_for_symbol} *)
+
+
+(** {6 Making_for_symbol_bare} *)
+
+let make_of_topson_bare nam =
+  let nam_low = String.lowercase nam in
+  match nam_low with
+  | _ ->
+  failwith "Not_a_topson_bare:Nwchemdata_lexer_basic_word_numeric_negative_symbol_v.ml:make_of_topson_bare"
+;;
+
+
+(** {6 Making_for_symbol_ofstring} *)
+
+let make_of_topson_ofstring nam s =
+  let nam_low = String.lowercase nam in
+  match nam_low with
+  | "nwchemdata_lexer_basic_word_numeric_negative_integer" -> nwchemdata_lexer_basic_word_numeric_negative_integer s
+  | "nwchemdata_lexer_basic_word_numeric_negative_float" -> nwchemdata_lexer_basic_word_numeric_negative_float s
+  | _ ->
+  failwith "Not_a_topson_ofstring:Nwchemdata_lexer_basic_word_numeric_negative_symbol_v.ml:make_of_topson_ofstring"
+;;
+
+
+(** {6 Making_for_symbol_notleaf} *)
+
+let make_of_topson_notleaf nam s =
+  failwith "Not_a_topson_notleaf:Nwchemdata_lexer_basic_word_numeric_negative_symbol_v.ml:make_of_topson_notleaf"
+;;
+
+
+(** {6 Making_for_symbol} *)
+
+let make nam s =
+  try make_of_topson_bare nam
+  with Failure "Not_a_topson_bare:Nwchemdata_lexer_basic_word_numeric_negative_symbol_v.ml:make_of_topson_bare" ->
+  try make_of_topson_ofstring nam s
+  with Failure "Not_a_topson_ofstring:Nwchemdata_lexer_basic_word_numeric_negative_symbol_v.ml:make_of_topson_ofstring" ->
+  try make_of_topson_notleaf nam s
+  with Failure "Not_a_topson_notleaf:Nwchemdata_lexer_basic_word_numeric_negative_symbol_v.ml:make_of_topson_notleaf" ->
+   let _ =
+      Error_messages_v.print_error nam_cod "make"
+      (Format.sprintf "strings \"%s\" and \"%s\" represent an existing Nwchemdata_lexer_basic_word_numeric_negative subtype" nam s)
+      "it does not exists"
+      "Check file Nwchemdata_lexer_basic_word_numeric_negative_symbol_v.ml"
+    in
+    failwith "Not_a_nwchemdata_lexer_basic_word_numeric_negative_symbol:Nwchemdata_lexer_basic_word_numeric_negative_symbol_v.ml:make"
+;;
+
+
+(** Nwchemdata_lexer_basic_word_numeric_negative_symbol_v at 17:56:3 on 23 Apr 2015. created by version v2.4 of generator *)
+
+
+

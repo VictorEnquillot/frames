@@ -1,0 +1,22 @@
+(* Input File *)
+
+let nam_inp = "Coordinate_tuple_print.inp";;
+let dir_inp ="/keep/sources/ocaml_top/setup/frames/inputset/files/";;
+let fno_inp = dir_inp ^ nam_inp;;
+Parameters_figureset_general_register_v.store "input-file" fno_inp;;
+
+let sym_ecr_ifi = Elementary_createdby_symbol_v.elementary_input_file fno_inp;;
+
+let soi_ele_ifi =
+    Elementary_tag_tree_by_input_fullnameoffile_provider_v.elementary_createdby_sole_index_of_input_fullnameoffile
+      fno_inp;;
+
+let tag_ecr_ifi = Tag_v.make sym_ecr_ifi soi_ele_ifi;;
+
+test_number 1 (
+(tag_ecr_ifi : Elementary_createdby_symbol_t.elementary_createdby_symbol Tag_t.tag ) =
+  (Elementary_createdby_symbol_t.Elementary_input_file
+    "/keep/sources/ocaml_top/setup/frames/inputset/files/Coordinate_tuple_print.inp",
+   [3; 4])
+);;
+

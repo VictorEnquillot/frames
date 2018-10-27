@@ -1,0 +1,23 @@
+(** {6 Filling Register} *)
+
+let fill_main_register () =
+  let nam_fun = "fill_main_register" in
+  let pro_cpu = Management_v.entering_of_module_name_of_function_name nam_mod nam_fun in
+
+  if (Register_v.is_empty main_register)
+  then 
+    begin
+      let nam_dba = Parameters_general_provider_v.provide "database-name" in
+      let nam_dbo = Parameters_general_provider_v.provide "databox-name" in
+      let tag_dbo = 
+        Dddd_context_databox_tag_by_database_name_n_databox_name_provider_v.provide 
+          (nam_dba, nam_dbo) 
+      in
+      ignore (Dddd_tag_all_list_by_dddd_context_databox_tag_provider_v.provide tag_dbo)
+    end
+  else ();
+
+  Management_v.exiting_of_process_times_of_module_name_of_function_name pro_cpu nam_mod nam_fun;
+;;
+
+

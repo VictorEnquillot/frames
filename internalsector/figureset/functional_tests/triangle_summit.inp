@@ -1,0 +1,40 @@
+# input for a Run
+# 1st Model
+   model =
+     model_name = triangle_equilateral_t
+     model_title = "a triangle equilateral"
+     database_name = db1
+     entity_what = triangle_isosceles_equilateral
+     entity_name = T
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+   property =
+     property_name = summit_t
+     property_units_list = { meter } 
+     property_model_input = triangle_equilateral_t
+     property_what = summit
+     property_file = triangle_equilateral_summit.out 
+   end # property
+
+   summit =
+     summit_name = summit_a
+     summit_center = center_a
+     summit_ratio = 2. 
+   end # summit
+
+# 1st target
+   target = 
+     domain_name = figure
+     target_name = triangle_equilateral_summit
+     target_title = "triangle equilateral summit"
+     target_property = summit_t
+   end # target
+
+# domain
+   domain =
+    domain_name = figure
+    target_list = { triangle_equilateral_summit }
+   end # domain
+  

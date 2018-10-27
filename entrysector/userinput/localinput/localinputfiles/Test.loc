@@ -1,0 +1,21 @@
+define Poi_t
+       target 
+         type [ "property" "operand" "body" "target" "created" "constructor" ]
+         target_operator Tra_bc
+         target_operand Poi_a
+         end -- target
+       end -- define
+
+
+define Tra_bc
+       operator 
+         type [ "operator" "set" "body" "creation" "transformation" "constructor" ]
+         operation "translation"
+         ondomain "figure"  
+         cofactor 
+           cofactor_entity Seg_bc
+           end -- cofactor	
+         end -- operator
+       end -- define
+
+stop

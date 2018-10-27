@@ -1,0 +1,36 @@
+ --- Fatal error ---
+ in module file  >File "Elementary_any_category_by_sole_index_extractor_v.ml", line 389, characters 39-46<
+ and in function >sole_index_n_elementary_symbol_included_of_string_predicate_of_sole_index<
+   expecting :
+      An element were stored for Predicate >is_elementary_context_database_symbol_off_elementary_symbol<
+      with a Sole_index inside path [1; 1; 1; 6; 5; 7].
+   and found :
+      NONE
+    Here is a dump of Elementary_symbol_by_sole_index_register_v:
+  [
+   
+  ]
+    Register length =0.
+   cure :
+      Check whether the Entity defined by Predicate:
+     >is_elementary_context_database_symbol_off_elementary_symbol<
+      has been stored when created
+
+
+Testing results:
+Total: 6 tests performed.
+
+All tests succeeded.
+Fatal error: exception File "Error_messages_v.ml", line 46, characters 2-8: Assertion failed
+Raised at file "Error_messages_v.ml", line 46, characters 2-15
+Called from file "Elementary_any_category_by_sole_index_extractor_v.ml", line 456, characters 4-106
+Called from file "Elementary_any_category_by_sole_index_extractor_v.ml", line 535, characters 16-77
+Called from file "Measure_by_elementary_fence_units_tag_provider_v.ml", line 85, characters 4-122
+Called from file "Measure_by_elementary_fence_units_tag_provider_v.ml", line 162, characters 15-28
+Called from file "Elementary_fence_units_length_belt_v.ml", line 29, characters 12-34
+Called from file "Elementary_border_parameter_aopef_exponent_belt_v.ml", line 57, characters 12-41
+Called from file "Elementary_border_parameter_aopef_exponent_belt_v.ml", line 99, characters 16-35
+Called from file "Elementary_border_envelope_v.ml", line 32, characters 12-33
+Called from file "list.ml", line 55, characters 20-23
+Called from file "Skeleton_envelope_v.ml", line 54, characters 6-55
+Called from file "Property_operand_external_envelope_u_skeleton_fence_centered_aopef_hes11_print_debug.ml", line 135, characters 14-57

@@ -1,0 +1,149 @@
+# The names of test files (normally there is no .mli file).
+UNITARY_TESTS_FILES_ML = \
+taggregate_symbol_implementation_naming_item_value_v.ml \
+taggregate_symbol_implementation_printing_item_value_v.ml \
+taggregate_symbol_interface_naming_item_value_v.ml \
+taggregate_symbol_interface_printing_item_value_v.ml \
+# taggregate_symbol_implementation_extracting_heading_caml_paragraph_value_v.ml \
+# taggregate_symbol_implementation_extracting_item_value_v.ml \
+# taggregate_symbol_type_modules_item_value_v.ml \
+# taggregate_symbol_implementation_heading_item_value_v.ml \
+# taggregate_symbol_implementation_querying_item_value_v.ml \
+# taggregate_symbol_implementation_upgrading_item_value_v.ml \
+# taggregate_symbol_implementation_including_item_value_v.ml \
+# taggregate_symbol_implementation_ending_item_value_v.ml \
+# taggregate_symbol_implementation_codefile_value_v.ml \
+# taggregate_symbol_type_typing_caml_line_value_v.ml \
+# taggregate_symbol_type_typing_caml_paragraph_value_v.ml\
+# taggregate_symbol_type_typing_item_value_v.ml \
+# taggregate_symbol_type_codefile_value_v.ml \
+# taggregate_symbol_interface_codefile_value_v.ml \
+# tatom_symbol_type_codefile_value_v.ml \
+# tpolyproline_symbol_type_codefile_value_v.ml \
+# tatom_symbol_type_codefile_value_v.ml \
+# tchemicalset_symbol_type_codefile_value_v.ml \
+# tpolypeptide_symbol_implementation_codefile_value_v.ml \
+# tresidue_symbol_implementation_codefile_value_v.ml \
+# tatom_zerotied_symbol_implementation_codefile_value_v.ml \
+# tatom_zerotied_cation_plus_three_symbol_implementation_codefile_value_v.ml \
+# tresidue_buried_fragmented_symbol_implementation_codefile_value_v.ml \
+# tatom_symbol_implementation_codefile_value_v.ml \
+# tatom_symbol_interface_codefile_value_v.ml \
+# tatom_onetied_symbol_interface_extracting_item_value_v.ml \
+# tatom_onetied_symbol_interface_extracting_item_value_v.ml \
+# tatom_onetied_symbol_interface_querying_item_value_v.ml \
+# tatom_onetied_symbol_interface_upgrading_item_value_v.ml \
+
+# tatom_zerotied_symbol_implementation_modules_item_value_v.ml \
+# tatom_symbol_implementation_modules_item_value_v.ml \
+# tresidue_symbol_implementation_modules_item_value_v.ml \
+# tsegment_buried_symbol_implementation_modules_item_value_v.ml \
+# taggregate_symbol_implementation_modules_item_value_v.ml \
+# tpolyproline_symbol_implementation_modules_item_value_v.ml \
+# tatom_symbol_type_modules_item_value_v.ml \
+# tpolyproline_symbol_type_modules_item_value_v.ml \
+# tpolyproline_symbol_type_typing_caml_paragraph_value_v.ml \
+# tpolypeptide_symbol_type_typing_caml_paragraph_value_v.ml \
+# tpolypeptide_symbol_type_typing_item_formula_v.ml \
+# tresidue_symbol_implementation_querying_item_value_v.ml \
+# tresidue_symbol_implementation_naming_item_value_v.ml \
+# tresidue_symbol_implementation_upgrading_item_value_v.ml \
+# tresidue_symbol_implementation_extracting_item_value_v.ml \
+# tatom_zerotied_symbol_implementation_upgrading_item_value_v.ml \
+# tatom_zerotied_symbol_implementation_querying_item_value_v.ml \
+# tatom_zerotied_symbol_implementation_naming_item_value_v.ml \
+# tatom_zerotied_symbol_implementation_extracting_item_value_v.ml \
+# tresidue_buried_fragmented_symbol_implementation_upgrading_caml_paragraph_value_v.ml \
+# tresidue_buried_fragmented_symbol_implementation_naming_caml_paragraph_value_v.ml \
+# tresidue_buried_fragmented_symbol_implementation_extracting_caml_paragraph_value_v.ml \
+# tresidue_buried_fragmented_symbol_implementation_querying_item_value_v.ml \
+# tresidue_buried_fragmented_symbol_implementation_naming_item_value_v.ml \
+# tresidue_buried_fragmented_symbol_implementation_extracting_item_value_v.ml \
+# tresidue_buried_fragmented_symbol_implementation_upgrading_item_value_v.ml \
+# tatom_zerotied_cation_plus_three_symbol_implementation_querying_item_value_v.ml \
+# tatom_zerotied_cation_plus_three_symbol_implementation_naming_item_value_v.ml \
+# tatom_zerotied_cation_plus_three_symbol_implementation_upgrading_item_value_v.ml \
+# tatom_zerotied_cation_plus_three_symbol_implementation_extracting_item_value_v.ml \
+# tsegment_buried_symbol_implementation_querying_item_value_v.ml \
+# tsegment_buried_symbol_implementation_naming_item_value_v.ml \
+# tsegment_buried_symbol_implementation_upgrading_item_value_v.ml \
+# tsegment_buried_symbol_implementation_extracting_item_value_v.ml \
+# tsegment_buried_symbol_implementation_extracting_heading_caml_paragraph_value_v.ml \
+# tabbreviation_argument_by_entity_symbol_provider_v.ml \
+# tabbreviation_argument_by_entitycategory_provider_v.ml \
+# tabbreviation_argument_by_entitycategorysuffix_provider_v.ml \
+# tabbreviation_module_of_entity_symbol_v.ml \
+# tabbreviation_module_dot_entitycategory_by_entitycategorysuffix_provider_v.ml \
+# tabbreviation_module_by_entitycategorysuffix_provider_v.ml \
+# tentitycategorytype_dot_entitycategory_by_entitycategorysuffix_provider_v.ml \
+# tatom_onetied_single_symbol_type_typing_caml_paragraph_value_v.ml \
+# tatom_onetied_single_symbol_extracting_item_formula_v.ml \
+# tatom_onetied_single_symbol_implementation_extracting_item_formula_v.ml \
+# tatom_onetied_single_symbol_implementation_extracting_item_value_v.ml \
+# tatom_onetied_single_symbol_implementation_upgrading_item_value_v.ml \
+# tatom_onetied_single_symbol_type_typing_item_formula_v.ml \
+# tatom_onetied_single_symbol_type_typing_item_value_v.ml \
+# tatom_symbol_entitycategorycodefile_v.ml \
+# tatom_symbol_implementation_extracting_item_value_v.ml \
+# tatom_symbol_implementation_extracting_top_caml_paragraph_formula_v.ml \
+# tatom_symbol_implementation_extracting_top_caml_paragraph_value_v.ml \
+# tatom_symbol_implementation_heading_item_value_v.ml \
+# tatom_symbol_implementation_naming_item_value_v.ml \
+# tatom_symbol_implementation_querying_item_value_v.ml \
+# tatom_symbol_type_typing_item_value_v.ml \
+# tatom_symbol_implementation_upgrading_item_value_v.ml \
+# tatom_symbol_type_typing_caml_paragraph_formula_v.ml \
+# tatom_symbol_type_typing_caml_paragraph_value_v.ml \
+# tatom_symbol_type_typing_type_definition_caml_line_value_v.ml \
+# tatom_symbol_type_typing_type_pipe_s_of_s_caml_line_value_v.ml \
+# tatom_onetied_conjugated_constructor_marker_tree_v.ml \
+# tatom_onetied_conjugated_entity_data_v.ml \
+# tatom_onetied_conjugated_entity_symbol_tree_v.ml \
+# tatom_onetied_conjugated_implementation_upgrading_caml_paragraph_formula_v.ml \
+# tatom_onetied_conjugated_implementation_upgrading_item_value_v.ml \
+# tatom_onetied_constructor_marker_tree_v.ml \
+# tatom_onetied_constructor_marker_tree_v.ml \
+# tatom_onetied_entity_symbol_tree_v.ml \
+# tatom_onetied_symbol_implementation_extracting_item_formula_v.ml \
+# tatom_onetied_symbol_implementation_extracting_item_value_v.ml \
+# tatom_onetied_symbol_implementation_querying_item_value_v.ml \
+# tatom_onetied_symbol_implementation_upgrading_item_value_v.ml \
+# tatom_onetied_symbol_implementation_upgrading_item_value_v.ml \
+# tatom_onetied_symbol_implementation_upgrading_item_value_v.ml \
+# tatom_onetied_symbol_implementation_querying_item_formula_v.ml \
+# tatom_onetied_single_constructor_marker_tree_v.ml \
+# tatom_onetied_single_entity_data_v.ml \
+# tatom_onetied_symbol_implementation_upgrading_item_formula_v.ml \
+# tpolypeptide_constructor_symbol_v.ml \
+# taggregate_constructor_symbol_v.ml \
+# tordinal_scope_provider_v.ml \
+# tordinal_entitycategorycodefile_v.ml \
+# tordinal_entitycategorysuffix_v.ml \
+# tstring_entitycategorycodefile_v.ml \
+# tparameter_value_provider_v.ml \
+# tentitycategorysuffix_v.ml \
+# tparameter_value_provider_v.ml \
+# tentity_data_provider_v.ml \
+# tconstructor_symbol_v.ml \
+# tgenerator_v.ml \
+# tconstructor_marker_tree_v.ml \
+# tlet_x_off_e_argument_caml_line_formula_v.ml \
+# tlet_x_off_e_argument_caml_line_value_v.ml \
+# tlet_x_off_e_implementation_caml_line_formula_v.ml \
+# tlet_x_off_e_implementation_caml_line_value_v.ml \
+# tlet_x_off_e_argument_caml_paragraph_formula_v.ml \
+# tlet_x_off_e_argument_caml_paragraph_value_v.ml \
+# tlet_x_off_e_implementation_caml_paragraph_formula_v.ml \
+# tlet_x_off_e_implementation_caml_paragraph_value_v.ml \
+# tmake_u_is_b_off_u_u_caml_line_value_v.ml \
+#tcodefile_formula_v.ml \
+#tconstructor_symbol_tree_v.ml \
+#tconstructor_symbol_translation_v.ml \
+
+#tatom_caml_code_value_v.ml \
+# titem_symbol_v.ml \
+# tcodefile_symbol_v.ml \
+#  tentitycategoryn_codefile_suffix_abbreviations_provider_v.ml \
+# tentity_external_n_codefile_list_provider_v.ml \
+ 
+

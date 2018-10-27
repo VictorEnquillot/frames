@@ -1,0 +1,599 @@
+Singlet_v.cmi: Singlet_t.cmo
+Either_or_v.cmi: Singlet_t.cmo Either_or_t.cmo
+Multiplicity_v.cmi: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    Multiplicity_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi
+Doublet_v.cmi: Doublet_t.cmo
+Pair_v.cmi: Pair_t.cmo
+Uno_v.cmi: Uno_t.cmo Singlet_t.cmo
+Duo_v.cmi: Duo_t.cmo Doublet_t.cmo
+Triplet_v.cmi: Triplet_t.cmo Doublet_t.cmo
+Trio_v.cmi: Triplet_t.cmo Trio_t.cmo Duo_t.cmo
+Quadruplet_v.cmi: Triplet_t.cmo Quadruplet_t.cmo Doublet_t.cmo
+Quintet_v.cmi: Trio_t.cmo Quintet_t.cmo Quatuor_t.cmo Duo_t.cmo
+Quatuor_v.cmi: Trio_t.cmo Quatuor_t.cmo Quadruplet_t.cmo Pair_t.cmo
+Sequential_index_v.cmi: Sequential_index_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi
+List_v.cmi: Trio_t.cmo Sequential_index_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi \
+    Duo_t.cmo
+Doublet_list_v.cmi: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi \
+    Doublet_list_t.cmo
+Triplet_list_v.cmi: Triplet_t.cmo Doublet_t.cmo
+Duo_list_v.cmi: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi \
+    Duo_t.cmo
+Trio_list_v.cmi: Trio_t.cmo Duo_t.cmo
+Tie_v.cmi: Tie_t.cmo
+Bond_v.cmi: Bond_t.cmo
+Tree_v.cmi: Tree_t.cmo
+Tree_edge_v.cmi: Tree_t.cmo Tree_edge_t.cmo
+Tree_bunch_v.cmi: Tree_t.cmo Tree_bunch_t.cmo
+Doublet_tree_v.cmi: Tree_t.cmo Doublet_tree_t.cmo Doublet_t.cmo \
+    Doublet_list_t.cmo
+Indexed_tree_v.cmi: Tree_t.cmo Indexed_tree_t.cmo Doublet_t.cmo
+Bridge_v.cmi: Tree_edge_t.cmo Pair_t.cmo Bridge_t.cmo
+Twig_v.cmi: Twig_t.cmo
+Brunk_v.cmi: Tree_t.cmo Brunk_t.cmo
+Chunk_v.cmi: Tree_t.cmo Chunk_t.cmo Brunk_t.cmo
+Tree_leafed_v.cmi: Tree_t.cmo Tree_leafed_t.cmo
+Tree_leafed_bunch_v.cmi: Tree_leafed_t.cmo Tree_leafed_bunch_t.cmo
+Capped_tree_v.cmi: Tree_t.cmo Doublet_t.cmo Capped_tree_t.cmo
+Tree_leafed_capped_v.cmi: Tree_t.cmo Tree_leafed_t.cmo \
+    Tree_leafed_capped_t.cmo
+Indexed_tree_leafed_v.cmi: Indexed_tree_t.cmo Indexed_tree_leafed_t.cmo \
+    Doublet_t.cmo
+Capped_indexed_tree_leafed_v.cmi: Tree_t.cmo Indexed_tree_t.cmo \
+    Indexed_tree_leafed_t.cmo Capped_indexed_tree_leafed_t.cmo
+Capped_list_v.cmi: Capped_list_t.cmo
+Booted_list_v.cmi: Booted_list_t.cmo
+Booted_twig_v.cmi: Twig_t.cmo Booted_twig_t.cmo Booted_list_t.cmo
+Capped_booted_list_v.cmi: Capped_list_t.cmo Capped_booted_list_t.cmo \
+    Booted_list_t.cmo
+Capped_booted_twig_v.cmi: Capped_booted_twig_t.cmo Capped_booted_list_t.cmo \
+    Booted_twig_t.cmo
+Capped_doublet_list_v.cmi: Doublet_list_t.cmo Capped_doublet_list_t.cmo
+Doubletcapped_doublet_list_v.cmi: Doubletcapped_doublet_list_t.cmo \
+    Doublet_t.cmo Doublet_list_t.cmo
+Cappedoption_list_v.cmi: Cappedoption_list_t.cmo Capped_list_t.cmo
+Cappedoption_booted_list_v.cmi: Cappedoption_booted_list_t.cmo \
+    Capped_booted_list_t.cmo Booted_list_t.cmo
+Marker_v.cmi: Sequential_index_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    Marker_t.cmo
+Trail_v.cmi: Trail_t.cmo Doublet_t.cmo
+Sextuplet_v.cmi: Triplet_t.cmo Sextuplet_t.cmo Quintuplet_t.cmo Doublet_t.cmo
+Sextuor_v.cmi: Trio_t.cmo Sextuor_t.cmo Duo_t.cmo
+Repeated_list_v.cmi: Repeated_list_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi
+Booted_repeated_list_v.cmi: Repeated_list_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi \
+    Booted_repeated_list_t.cmo
+Entity_index_v.cmi: Entity_index_t.cmo
+Sole_index_v.cmi: Tree_t.cmo Sole_index_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi
+Sole_indexed_tree_v.cmi: Tree_t.cmo Sole_indexed_tree_t.cmo Sole_index_t.cmo
+Tag_v.cmi: Tag_t.cmo Sole_index_t.cmo
+Mark_v.cmi: Vsepr_index_t.cmo Tag_t.cmo Sole_index_t.cmo Mark_t.cmo \
+    Doublet_t.cmo
+Extended_v.cmi: Extended_t.cmo
+Extended_by_v.cmi: Extended_by_t.cmo Doublet_t.cmo
+Singlet_formula_v.cmi: Sole_index_t.cmo Singlet_t.cmo
+List_doublet_v.cmi: List_doublet_t.cmo
+Float_tag_v.cmi: Tag_t.cmo Sole_index_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Float_symbol_t.cmo
+Float_positive_tag_v.cmi: Tag_t.cmo Sole_index_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Float_positive_p.cmo
+String_tag_v.cmi: Tag_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_symbol_t.cmo \
+    Sole_index_t.cmo
+Stack_v.cmi:
+Tuple_v.cmi: Uno_t.cmo Tuple_t.cmo Trio_t.cmo Singlet_t.cmo Quatuor_t.cmo \
+    Duo_t.cmo
+Tuple_list_v.cmi: Tuple_t.cmo Tuple_list_t.cmo
+Float_tuple_v.cmi: Uno_t.cmo Tuple_t.cmo Trio_t.cmo Duo_t.cmo
+Float_list_v.cmi: Tuple_t.cmo
+Option_v.cmi:
+Singlet_t.cmo:
+Singlet_t.cmx:
+Either_or_t.cmo:
+Either_or_t.cmx:
+Multiplicity_t.cmo:
+Multiplicity_t.cmx:
+Doublet_t.cmo:
+Doublet_t.cmx:
+Pair_t.cmo:
+Pair_t.cmx:
+Uno_t.cmo:
+Uno_t.cmx:
+Duo_t.cmo: Doublet_t.cmo
+Duo_t.cmx: Doublet_t.cmx
+Triplet_t.cmo:
+Triplet_t.cmx:
+Trio_t.cmo: Triplet_t.cmo
+Trio_t.cmx: Triplet_t.cmx
+Quadruplet_t.cmo:
+Quadruplet_t.cmx:
+Quintuplet_t.cmo:
+Quintuplet_t.cmx:
+Quintet_t.cmo:
+Quintet_t.cmx:
+Quatuor_t.cmo:
+Quatuor_t.cmx:
+Sequential_index_t.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi
+Sequential_index_t.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmx
+List_t.cmo:
+List_t.cmx:
+Doublet_list_t.cmo: Doublet_t.cmo
+Doublet_list_t.cmx: Doublet_t.cmx
+Triplet_list_t.cmo: Triplet_t.cmo
+Triplet_list_t.cmx: Triplet_t.cmx
+Quadruplet_list_t.cmo: Quadruplet_t.cmo
+Quadruplet_list_t.cmx: Quadruplet_t.cmx
+Duo_list_t.cmo: Duo_t.cmo
+Duo_list_t.cmx: Duo_t.cmx
+Trio_list_t.cmo: Trio_t.cmo
+Trio_list_t.cmx: Trio_t.cmx
+Tie_t.cmo:
+Tie_t.cmx:
+Bond_t.cmo: Pair_t.cmo
+Bond_t.cmx: Pair_t.cmx
+Tree_t.cmo:
+Tree_t.cmx:
+Tree_edge_t.cmo: Pair_t.cmo
+Tree_edge_t.cmx: Pair_t.cmx
+Tree_bunch_t.cmo: Tree_t.cmo Doublet_t.cmo
+Tree_bunch_t.cmx: Tree_t.cmx Doublet_t.cmx
+Doublet_tree_t.cmo: Tree_t.cmo Doublet_t.cmo
+Doublet_tree_t.cmx: Tree_t.cmx Doublet_t.cmx
+Indexed_tree_t.cmo: Tree_t.cmo Doublet_t.cmo
+Indexed_tree_t.cmx: Tree_t.cmx Doublet_t.cmx
+Bridge_t.cmo: Bond_t.cmo
+Bridge_t.cmx: Bond_t.cmx
+Twig_t.cmo:
+Twig_t.cmx:
+Brunk_t.cmo: Tree_t.cmo Doublet_t.cmo
+Brunk_t.cmx: Tree_t.cmx Doublet_t.cmx
+Chunk_t.cmo: Brunk_t.cmo
+Chunk_t.cmx: Brunk_t.cmx
+Tree_leafed_t.cmo:
+Tree_leafed_t.cmx:
+Tree_leafed_bunch_t.cmo: Tree_leafed_t.cmo Doublet_t.cmo
+Tree_leafed_bunch_t.cmx: Tree_leafed_t.cmx Doublet_t.cmx
+Capped_tree_t.cmo: Tree_t.cmo Doublet_t.cmo
+Capped_tree_t.cmx: Tree_t.cmx Doublet_t.cmx
+Tree_leafed_capped_t.cmo: Tree_leafed_t.cmo Doublet_t.cmo
+Tree_leafed_capped_t.cmx: Tree_leafed_t.cmx Doublet_t.cmx
+Indexed_tree_leafed_t.cmo: Tree_leafed_t.cmo Doublet_t.cmo
+Indexed_tree_leafed_t.cmx: Tree_leafed_t.cmx Doublet_t.cmx
+Capped_indexed_tree_leafed_t.cmo: Indexed_tree_leafed_t.cmo Doublet_t.cmo
+Capped_indexed_tree_leafed_t.cmx: Indexed_tree_leafed_t.cmx Doublet_t.cmx
+Tree_footed_capped_t.cmo: Triplet_t.cmo Tree_t.cmo
+Tree_footed_capped_t.cmx: Triplet_t.cmx Tree_t.cmx
+Capped_list_t.cmo: Doublet_t.cmo
+Capped_list_t.cmx: Doublet_t.cmx
+Booted_list_t.cmo: Doublet_t.cmo
+Booted_list_t.cmx: Doublet_t.cmx
+Booted_twig_t.cmo:
+Booted_twig_t.cmx:
+Capped_booted_list_t.cmo: Triplet_t.cmo
+Capped_booted_list_t.cmx: Triplet_t.cmx
+Capped_booted_twig_t.cmo: Doublet_t.cmo Booted_twig_t.cmo
+Capped_booted_twig_t.cmx: Doublet_t.cmx Booted_twig_t.cmx
+Capped_doublet_list_t.cmo: Doublet_t.cmo Doublet_list_t.cmo
+Capped_doublet_list_t.cmx: Doublet_t.cmx Doublet_list_t.cmx
+Doubletcapped_doublet_list_t.cmo: Doublet_t.cmo Doublet_list_t.cmo
+Doubletcapped_doublet_list_t.cmx: Doublet_t.cmx Doublet_list_t.cmx
+Cappedoption_list_t.cmo: Doublet_t.cmo
+Cappedoption_list_t.cmx: Doublet_t.cmx
+Cappedoption_booted_list_t.cmo: Doublet_t.cmo Booted_list_t.cmo
+Cappedoption_booted_list_t.cmx: Doublet_t.cmx Booted_list_t.cmx
+Marker_t.cmo: Doublet_t.cmo
+Marker_t.cmx: Doublet_t.cmx
+Trail_t.cmo: Doublet_list_t.cmo
+Trail_t.cmx: Doublet_list_t.cmx
+Sextuplet_t.cmo:
+Sextuplet_t.cmx:
+Sextuor_t.cmo: Sextuplet_t.cmo
+Sextuor_t.cmx: Sextuplet_t.cmx
+Septuplet_t.cmo:
+Septuplet_t.cmx:
+Octuplet_t.cmo:
+Octuplet_t.cmx:
+Nonuplet_t.cmo:
+Nonuplet_t.cmx:
+Decuplet_t.cmo:
+Decuplet_t.cmx:
+Repeated_list_t.cmo:
+Repeated_list_t.cmx:
+Booted_repeated_list_t.cmo: Repeated_list_t.cmo Doublet_t.cmo
+Booted_repeated_list_t.cmx: Repeated_list_t.cmx Doublet_t.cmx
+Axe_notation_t.cmo: Doublet_t.cmo
+Axe_notation_t.cmx: Doublet_t.cmx
+Vsepr_index_t.cmo:
+Vsepr_index_t.cmx:
+Entity_index_t.cmo: Vsepr_index_t.cmo Sequential_index_t.cmo
+Entity_index_t.cmx: Vsepr_index_t.cmx Sequential_index_t.cmx
+Sole_index_t.cmo:
+Sole_index_t.cmx:
+Sole_indexed_tree_t.cmo: Sole_index_t.cmo Doublet_tree_t.cmo
+Sole_indexed_tree_t.cmx: Sole_index_t.cmx Doublet_tree_t.cmx
+Tag_t.cmo: Sole_index_t.cmo Doublet_t.cmo
+Tag_t.cmx: Sole_index_t.cmx Doublet_t.cmx
+Mark_t.cmo: Vsepr_index_t.cmo Doublet_t.cmo
+Mark_t.cmx: Vsepr_index_t.cmx Doublet_t.cmx
+Extended_t.cmo:
+Extended_t.cmx:
+Extended_by_t.cmo: Doublet_t.cmo
+Extended_by_t.cmx: Doublet_t.cmx
+Singlet_formula_t.cmo: Tag_t.cmo Singlet_t.cmo
+Singlet_formula_t.cmx: Tag_t.cmx Singlet_t.cmx
+List_doublet_t.cmo: Doublet_t.cmo
+List_doublet_t.cmx: Doublet_t.cmx
+Float_tag_t.cmo: Tag_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Float_symbol_t.cmo
+Float_tag_t.cmx: Tag_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Float_symbol_t.cmx
+Float_positive_tag_t.cmo: Tag_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Float_positive_p.cmo
+Float_positive_tag_t.cmx: Tag_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Float_positive_p.cmx
+String_tag_t.cmo: Tag_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_symbol_t.cmo
+String_tag_t.cmx: Tag_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_symbol_t.cmx
+Singlet_v.cmo: Singlet_t.cmo Singlet_v.cmi
+Singlet_v.cmx: Singlet_t.cmx Singlet_v.cmi
+Either_or_v.cmo: Singlet_v.cmi Either_or_t.cmo Either_or_v.cmi
+Either_or_v.cmx: Singlet_v.cmx Either_or_t.cmx Either_or_v.cmi
+Multiplicity_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    Multiplicity_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi \
+    Multiplicity_v.cmi
+Multiplicity_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmx \
+    Multiplicity_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmx \
+    Multiplicity_v.cmi
+Doublet_v.cmo: Doublet_v.cmi
+Doublet_v.cmx: Doublet_v.cmi
+Pair_v.cmo: Pair_v.cmi
+Pair_v.cmx: Pair_v.cmi
+Uno_v.cmo: Singlet_v.cmi Uno_v.cmi
+Uno_v.cmx: Singlet_v.cmx Uno_v.cmi
+Duo_v.cmo: Doublet_v.cmi Duo_v.cmi
+Duo_v.cmx: Doublet_v.cmx Duo_v.cmi
+Triplet_v.cmo: Doublet_v.cmi Triplet_v.cmi
+Triplet_v.cmx: Doublet_v.cmx Triplet_v.cmi
+Trio_v.cmo: Triplet_v.cmi Duo_v.cmi Trio_v.cmi
+Trio_v.cmx: Triplet_v.cmx Duo_v.cmx Trio_v.cmi
+Quadruplet_v.cmo: Triplet_v.cmi Doublet_v.cmi Quadruplet_v.cmi
+Quadruplet_v.cmx: Triplet_v.cmx Doublet_v.cmx Quadruplet_v.cmi
+Quintuplet_v.cmo: Triplet_v.cmi Quadruplet_v.cmi Doublet_v.cmi
+Quintuplet_v.cmx: Triplet_v.cmx Quadruplet_v.cmx Doublet_v.cmx
+Quintet_v.cmo: Duo_v.cmi Quintet_v.cmi
+Quintet_v.cmx: Duo_v.cmx Quintet_v.cmi
+Quatuor_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    Trio_v.cmi Quadruplet_v.cmi Pair_v.cmi Quatuor_v.cmi
+Quatuor_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    Trio_v.cmx Quadruplet_v.cmx Pair_v.cmx Quatuor_v.cmi
+Sequential_index_v.cmo: Sequential_index_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    Sequential_index_v.cmi
+Sequential_index_v.cmx: Sequential_index_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmx \
+    Sequential_index_v.cmi
+List_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    Trio_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi \
+    Sequential_index_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Duo_v.cmi Doublet_v.cmi List_v.cmi
+List_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    Trio_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx \
+    Sequential_index_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Duo_v.cmx Doublet_v.cmx List_v.cmi
+Doublet_list_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Doublet_v.cmi Doublet_list_v.cmi
+Doublet_list_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmx \
+    List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Doublet_v.cmx Doublet_list_v.cmi
+Triplet_list_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    Triplet_v.cmi List_v.cmi Triplet_list_v.cmi
+Triplet_list_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    Triplet_v.cmx List_v.cmx Triplet_list_v.cmi
+Quadruplet_list_v.cmo: Quadruplet_v.cmi List_v.cmi
+Quadruplet_list_v.cmx: Quadruplet_v.cmx List_v.cmx
+Duo_list_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Duo_v.cmi Duo_list_v.cmi
+Duo_list_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmx \
+    List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Duo_v.cmx Duo_list_v.cmi
+Trio_list_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    Trio_v.cmi List_v.cmi Duo_list_v.cmi Trio_list_v.cmi
+Trio_list_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    Trio_v.cmx List_v.cmx Duo_list_v.cmx Trio_list_v.cmi
+Tie_v.cmo: Tie_t.cmo Tie_v.cmi
+Tie_v.cmx: Tie_t.cmx Tie_v.cmi
+Bond_v.cmo: Pair_v.cmi List_v.cmi Bond_t.cmo Bond_v.cmi
+Bond_v.cmx: Pair_v.cmx List_v.cmx Bond_t.cmx Bond_v.cmi
+Tree_v.cmo: Tree_t.cmo List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Doublet_list_v.cmi Tree_v.cmi
+Tree_v.cmx: Tree_t.cmx List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Doublet_list_v.cmx Tree_v.cmi
+Tree_edge_v.cmo: Tree_v.cmi Tree_t.cmo Pair_v.cmi Tree_edge_v.cmi
+Tree_edge_v.cmx: Tree_v.cmx Tree_t.cmx Pair_v.cmx Tree_edge_v.cmi
+Tree_bunch_v.cmo: Tree_v.cmi Tree_t.cmo Doublet_v.cmi Tree_bunch_v.cmi
+Tree_bunch_v.cmx: Tree_v.cmx Tree_t.cmx Doublet_v.cmx Tree_bunch_v.cmi
+Doublet_tree_v.cmo: Tree_v.cmi Doublet_v.cmi Doublet_tree_v.cmi
+Doublet_tree_v.cmx: Tree_v.cmx Doublet_v.cmx Doublet_tree_v.cmi
+Indexed_tree_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    Tree_v.cmi Doublet_v.cmi Indexed_tree_v.cmi
+Indexed_tree_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    Tree_v.cmx Doublet_v.cmx Indexed_tree_v.cmi
+Bridge_v.cmo: Tree_edge_v.cmi Pair_v.cmi Bond_v.cmi Bond_t.cmo Bridge_v.cmi
+Bridge_v.cmx: Tree_edge_v.cmx Pair_v.cmx Bond_v.cmx Bond_t.cmx Bridge_v.cmi
+Twig_v.cmo: Twig_t.cmo Doublet_v.cmi Twig_v.cmi
+Twig_v.cmx: Twig_t.cmx Doublet_v.cmx Twig_v.cmi
+Brunk_v.cmo: Tree_v.cmi List_v.cmi Doublet_v.cmi Brunk_v.cmi
+Brunk_v.cmx: Tree_v.cmx List_v.cmx Doublet_v.cmx Brunk_v.cmi
+Chunk_v.cmo: List_v.cmi Doublet_v.cmi Chunk_t.cmo Brunk_v.cmi Chunk_v.cmi
+Chunk_v.cmx: List_v.cmx Doublet_v.cmx Chunk_t.cmx Brunk_v.cmx Chunk_v.cmi
+Tree_leafed_v.cmo: Tree_v.cmi Tree_t.cmo Tree_leafed_t.cmo List_v.cmi \
+    Tree_leafed_v.cmi
+Tree_leafed_v.cmx: Tree_v.cmx Tree_t.cmx Tree_leafed_t.cmx List_v.cmx \
+    Tree_leafed_v.cmi
+Tree_leafed_bunch_v.cmo: Tree_leafed_v.cmi Doublet_v.cmi \
+    Tree_leafed_bunch_v.cmi
+Tree_leafed_bunch_v.cmx: Tree_leafed_v.cmx Doublet_v.cmx \
+    Tree_leafed_bunch_v.cmi
+Capped_tree_v.cmo: Tree_v.cmi Doublet_v.cmi Capped_tree_v.cmi
+Capped_tree_v.cmx: Tree_v.cmx Doublet_v.cmx Capped_tree_v.cmi
+Tree_leafed_capped_v.cmo: Tree_v.cmi Tree_leafed_v.cmi List_v.cmi \
+    Doublet_v.cmi Tree_leafed_capped_v.cmi
+Tree_leafed_capped_v.cmx: Tree_v.cmx Tree_leafed_v.cmx List_v.cmx \
+    Doublet_v.cmx Tree_leafed_capped_v.cmi
+Indexed_tree_leafed_v.cmo: Tree_leafed_v.cmi Doublet_v.cmi \
+    Indexed_tree_leafed_v.cmi
+Indexed_tree_leafed_v.cmx: Tree_leafed_v.cmx Doublet_v.cmx \
+    Indexed_tree_leafed_v.cmi
+Capped_indexed_tree_leafed_v.cmo: Tree_v.cmi List_v.cmi Indexed_tree_v.cmi \
+    Indexed_tree_leafed_v.cmi Doublet_v.cmi Capped_indexed_tree_leafed_v.cmi
+Capped_indexed_tree_leafed_v.cmx: Tree_v.cmx List_v.cmx Indexed_tree_v.cmx \
+    Indexed_tree_leafed_v.cmx Doublet_v.cmx Capped_indexed_tree_leafed_v.cmi
+Tree_footed_capped_v.cmo: Triplet_v.cmi Tree_v.cmi
+Tree_footed_capped_v.cmx: Triplet_v.cmx Tree_v.cmx
+Capped_list_v.cmo: List_v.cmi Doublet_v.cmi Capped_list_v.cmi
+Capped_list_v.cmx: List_v.cmx Doublet_v.cmx Capped_list_v.cmi
+Booted_list_v.cmo: List_v.cmi Doublet_v.cmi Booted_list_v.cmi
+Booted_list_v.cmx: List_v.cmx Doublet_v.cmx Booted_list_v.cmi
+Booted_twig_v.cmo: Twig_v.cmi Twig_t.cmo Booted_twig_t.cmo Booted_list_v.cmi \
+    Booted_twig_v.cmi
+Booted_twig_v.cmx: Twig_v.cmx Twig_t.cmx Booted_twig_t.cmx Booted_list_v.cmx \
+    Booted_twig_v.cmi
+Capped_booted_list_v.cmo: Triplet_v.cmi List_v.cmi Capped_list_v.cmi \
+    Booted_list_v.cmi Capped_booted_list_v.cmi
+Capped_booted_list_v.cmx: Triplet_v.cmx List_v.cmx Capped_list_v.cmx \
+    Booted_list_v.cmx Capped_booted_list_v.cmi
+Capped_booted_twig_v.cmo: Doublet_v.cmi Capped_booted_list_v.cmi \
+    Booted_twig_v.cmi Booted_list_v.cmi Capped_booted_twig_v.cmi
+Capped_booted_twig_v.cmx: Doublet_v.cmx Capped_booted_list_v.cmx \
+    Booted_twig_v.cmx Booted_list_v.cmx Capped_booted_twig_v.cmi
+Capped_doublet_list_v.cmo: Doublet_v.cmi Doublet_list_v.cmi \
+    Capped_doublet_list_v.cmi
+Capped_doublet_list_v.cmx: Doublet_v.cmx Doublet_list_v.cmx \
+    Capped_doublet_list_v.cmi
+Doubletcapped_doublet_list_v.cmo: Doublet_v.cmi Doublet_list_v.cmi \
+    Doubletcapped_doublet_list_v.cmi
+Doubletcapped_doublet_list_v.cmx: Doublet_v.cmx Doublet_list_v.cmx \
+    Doubletcapped_doublet_list_v.cmi
+Cappedoption_list_v.cmo: List_v.cmi Doublet_v.cmi Capped_list_v.cmi \
+    Cappedoption_list_v.cmi
+Cappedoption_list_v.cmx: List_v.cmx Doublet_v.cmx Capped_list_v.cmx \
+    Cappedoption_list_v.cmi
+Cappedoption_booted_list_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    Doublet_v.cmi Capped_booted_list_v.cmi Booted_list_v.cmi \
+    Cappedoption_booted_list_v.cmi
+Cappedoption_booted_list_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    Doublet_v.cmx Capped_booted_list_v.cmx Booted_list_v.cmx \
+    Cappedoption_booted_list_v.cmi
+Marker_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    List_v.cmi Doublet_v.cmi Marker_v.cmi
+Marker_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmx \
+    List_v.cmx Doublet_v.cmx Marker_v.cmi
+Trail_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Doublet_v.cmi Doublet_list_v.cmi Trail_v.cmi
+Trail_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Doublet_v.cmx Doublet_list_v.cmx Trail_v.cmi
+Sextuplet_v.cmo: Triplet_v.cmi Doublet_v.cmi Sextuplet_v.cmi
+Sextuplet_v.cmx: Triplet_v.cmx Doublet_v.cmx Sextuplet_v.cmi
+Sextuor_v.cmo: Trio_v.cmi Sextuplet_v.cmi Duo_v.cmi Sextuor_v.cmi
+Sextuor_v.cmx: Trio_v.cmx Sextuplet_v.cmx Duo_v.cmx Sextuor_v.cmi
+Septuplet_v.cmo:
+Septuplet_v.cmx:
+Octuplet_v.cmo:
+Octuplet_v.cmx:
+Nonuplet_v.cmo:
+Nonuplet_v.cmx:
+Decuplet_v.cmo:
+Decuplet_v.cmx:
+Repeated_list_v.cmo: List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi \
+    Repeated_list_v.cmi
+Repeated_list_v.cmx: List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmx \
+    Repeated_list_v.cmi
+Booted_repeated_list_v.cmo: Repeated_list_v.cmi List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmi \
+    Doublet_v.cmi Booted_repeated_list_v.cmi
+Booted_repeated_list_v.cmx: Repeated_list_v.cmx List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Index_p.cmx \
+    Doublet_v.cmx Booted_repeated_list_v.cmi
+Axe_notation_v.cmo: Doublet_v.cmi
+Axe_notation_v.cmx: Doublet_v.cmx
+Vsepr_index_v.cmo: Vsepr_index_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Integer_value_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Axe_notation_v.cmo
+Vsepr_index_v.cmx: Vsepr_index_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Integer_value_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Axe_notation_v.cmx
+Entity_index_v.cmo: Vsepr_index_v.cmo Sequential_index_v.cmi \
+    Entity_index_t.cmo Entity_index_v.cmi
+Entity_index_v.cmx: Vsepr_index_v.cmx Sequential_index_v.cmx \
+    Entity_index_t.cmx Entity_index_v.cmi
+Sole_index_v.cmo: Tree_v.cmi Tree_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmi \
+    List_v.cmi Sole_index_v.cmi
+Sole_index_v.cmx: Tree_v.cmx Tree_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Ordinal_p.cmx \
+    List_v.cmx Sole_index_v.cmi
+Sole_indexed_tree_v.cmo: Tree_v.cmi Sole_index_v.cmi List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Doublet_v.cmi Sole_indexed_tree_v.cmi
+Sole_indexed_tree_v.cmx: Tree_v.cmx Sole_index_v.cmx List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Doublet_v.cmx Sole_indexed_tree_v.cmi
+Tag_v.cmo: Sole_index_v.cmi List_v.cmi Doublet_v.cmi Tag_v.cmi
+Tag_v.cmx: Sole_index_v.cmx List_v.cmx Doublet_v.cmx Tag_v.cmi
+Mark_v.cmo: Vsepr_index_v.cmo Tag_v.cmi Doublet_v.cmi Mark_v.cmi
+Mark_v.cmx: Vsepr_index_v.cmx Tag_v.cmx Doublet_v.cmx Mark_v.cmi
+Extended_v.cmo: Extended_t.cmo Extended_v.cmi
+Extended_v.cmx: Extended_t.cmx Extended_v.cmi
+Extended_by_v.cmo: Extended_by_t.cmo Doublet_v.cmi Extended_by_v.cmi
+Extended_by_v.cmx: Extended_by_t.cmx Doublet_v.cmx Extended_by_v.cmi
+Singlet_formula_v.cmo: Tag_v.cmi Singlet_v.cmi Singlet_formula_v.cmi
+Singlet_formula_v.cmx: Tag_v.cmx Singlet_v.cmx Singlet_formula_v.cmi
+List_doublet_v.cmo: List_v.cmi Doublet_v.cmi List_doublet_v.cmi
+List_doublet_v.cmx: List_v.cmx Doublet_v.cmx List_doublet_v.cmi
+Float_tag_v.cmo: Tag_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Float_symbol_v.cmo \
+    Float_tag_v.cmi
+Float_tag_v.cmx: Tag_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Float_symbol_v.cmx \
+    Float_tag_v.cmi
+Float_positive_tag_v.cmo: Tag_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Float_positive_p.cmo \
+    Float_positive_tag_v.cmi
+Float_positive_tag_v.cmx: Tag_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Float_positive_p.cmx \
+    Float_positive_tag_v.cmi
+String_tag_v.cmo: Tag_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_symbol_v.cmo \
+    String_tag_v.cmi
+String_tag_v.cmx: Tag_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_symbol_v.cmx \
+    String_tag_v.cmi
+Stack_v.cmo: List_v.cmi Stack_v.cmi
+Stack_v.cmx: List_v.cmx Stack_v.cmi
+Version_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmo \
+    List_v.cmi
+Version_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Utilities_v.cmx \
+    List_v.cmx
+Tuple_t.cmo: Uno_t.cmo Trio_t.cmo Singlet_t.cmo Quatuor_t.cmo Duo_t.cmo
+Tuple_t.cmx: Uno_t.cmx Trio_t.cmx Singlet_t.cmx Quatuor_t.cmx Duo_t.cmx
+Tuple_v.cmo: Uno_v.cmi Tuple_t.cmo Trio_v.cmi Singlet_v.cmi Quatuor_v.cmi \
+    List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo \
+    Duo_v.cmi Tuple_v.cmi
+Tuple_v.cmx: Uno_v.cmx Tuple_t.cmx Trio_v.cmx Singlet_v.cmx Quatuor_v.cmx \
+    List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx \
+    Duo_v.cmx Tuple_v.cmi
+Tuple_list_t.cmo: Tuple_t.cmo
+Tuple_list_t.cmx: Tuple_t.cmx
+Tuple_list_v.cmo: Tuple_v.cmi Trio_list_v.cmi List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Float_value_v.cmo \
+    Duo_list_v.cmi Tuple_list_v.cmi
+Tuple_list_v.cmx: Tuple_v.cmx Trio_list_v.cmx List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Float_value_v.cmx \
+    Duo_list_v.cmx Tuple_list_v.cmi
+Float_tuple_t.cmo: Tuple_t.cmo
+Float_tuple_t.cmx: Tuple_t.cmx
+Float_tuple_v.cmo: Uno_v.cmi Tuple_v.cmi Tuple_t.cmo Trio_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi \
+    Singlet_v.cmi Quatuor_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Float_value_v.cmo \
+    Duo_v.cmi Float_tuple_v.cmi
+Float_tuple_v.cmx: Uno_v.cmx Tuple_v.cmx Tuple_t.cmx Trio_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx \
+    Singlet_v.cmx Quatuor_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Float_value_v.cmx \
+    Duo_v.cmx Float_tuple_v.cmi
+Float_list_t.cmo:
+Float_list_t.cmx:
+Float_list_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi \
+    List_v.cmi Float_tuple_v.cmi Float_list_v.cmi
+Float_list_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx \
+    List_v.cmx Float_tuple_v.cmx Float_list_v.cmi
+Float_tuple_list_t.cmo: Float_tuple_t.cmo
+Float_tuple_list_t.cmx: Float_tuple_t.cmx
+Float_tuple_list_v.cmo: Tuple_list_v.cmi List_v.cmi Float_tuple_v.cmi
+Float_tuple_list_v.cmx: Tuple_list_v.cmx List_v.cmx Float_tuple_v.cmx
+Tools_parser_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Tools_parser_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Option_v.cmo: Option_v.cmi
+Option_v.cmx: Option_v.cmi

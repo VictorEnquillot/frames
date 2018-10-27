@@ -1,0 +1,13 @@
+let nam_dom = "figure";;
+let tag_dom = Domain_tag_v.make_of_domain_name_of_sole_index_up nam_dom [];;
+let tag_ldo = Local_entity_domain_tag_from_domain_tag_translator_v.translate tag_dom;;
+
+test_number 1 (
+tag_ldo 
+(* : Local_entity_domain_symbol_t.local_entity_domain_symbol Tag_t.tag *)
+=
+(Local_entity_domain_symbol_t.Local_entity_domain_constructor
+   "(figure, [ 3 ])",
+ [3])
+);;
+

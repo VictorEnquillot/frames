@@ -1,0 +1,1083 @@
+File "Camlline_documenting_symbol_value_implementation_formula_u_1.ml", line 12, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_documenting_symbol_value_implementation_formula_u_1.cmx
+Camlline_documenting_symbol_value_implementation_formula_u_1
+File "Camlline_duo_function_formula_u_geometryset_symbol_geometryset_upgrading.ml", line 27, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Camlline_duo_function_formula_u_geometryset_symbol_geometryset_upgrading.cmx
+Camlline_duo_function_formula_u_geometryset_symbol_geometryset_upgrading
+File "Camlline_duo_function_upgradingformula_u_1.ml", line 10, characters 14-32:
+Error: Unbound module Target_data_v
+File "_none_", line 1:
+Error: Cannot find file Camlline_duo_function_upgradingformula_u_1.cmx
+Camlline_duo_function_upgradingformula_u_1
+File "Camlline_extracting_symbol_value_implementation_formula_u_1.ml", line 12, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_extracting_symbol_value_implementation_formula_u_1.cmx
+Camlline_extracting_symbol_value_implementation_formula_u_1
+File "Camlline_formula_u_chemicalset_symbol_atom_zerotied.ml", line 16, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_chemicalset_symbol_atom_zerotied.cmx
+Camlline_formula_u_chemicalset_symbol_atom_zerotied
+File "Camlline_formula_u_chemicalset_tag_atom_zerotied.ml", line 16, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_chemicalset_tag_atom_zerotied.cmx
+Camlline_formula_u_chemicalset_tag_atom_zerotied
+File "Camlline_formula_u_geometryset_formula_point_making.ml", line 38, characters 0-358:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_formula_point_making.cmx
+Camlline_formula_u_geometryset_formula_point_making
+File "Camlline_formula_u_geometryset_formula_point_typing.ml", line 38, characters 0-358:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_formula_point_typing.cmx
+Camlline_formula_u_geometryset_formula_point_typing
+File "Camlline_formula_u_geometryset_formula_triangle_isoceles_equilateral_typing.ml", line 38, characters 0-358:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_formula_triangle_isoceles_equilateral_typing.cmx
+Camlline_formula_u_geometryset_formula_triangle_isoceles_equilateral_typing
+File "Camlline_formula_u_geometryset_formula_triangle_isoceles_extracting.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_formula_triangle_isoceles_extracting.cmx
+Camlline_formula_u_geometryset_formula_triangle_isoceles_extracting
+File "Camlline_formula_u_geometryset_formula_triangle_isoceles_making.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_formula_triangle_isoceles_making.cmx
+Camlline_formula_u_geometryset_formula_triangle_isoceles_making
+File "Camlline_formula_u_geometryset_formula_triangle_isoceles_naming.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_formula_triangle_isoceles_naming.cmx
+Camlline_formula_u_geometryset_formula_triangle_isoceles_naming
+File "Camlline_formula_u_geometryset_formula_triangle_isoceles_typing.ml", line 38, characters 0-358:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_formula_triangle_isoceles_typing.cmx
+Camlline_formula_u_geometryset_formula_triangle_isoceles_typing
+File "Camlline_formula_u_geometryset_formula_vector_making.ml", line 38, characters 0-358:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_formula_vector_making.cmx
+Camlline_formula_u_geometryset_formula_vector_making
+File "Camlline_formula_u_geometryset_formula_x_making.ml", line 38, characters 0-358:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_formula_x_making.cmx
+Camlline_formula_u_geometryset_formula_x_making
+File "Camlline_formula_u_geometryset_formula_x_typing.ml", line 38, characters 0-358:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_formula_x_typing.cmx
+Camlline_formula_u_geometryset_formula_x_typing
+File "Camlline_formula_u_geometryset_symbol_geometryset_abbreviating.ml", line 30, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_geometryset_abbreviating.cmx
+Camlline_formula_u_geometryset_symbol_geometryset_abbreviating
+
+Testing Camlline_formula_v with
+   Camlline_formula_u_geometryset_symbol_geometryset_extracting_grandson.ml
+
+Testing results:
+Total: 46 tests performed.
+
+
+All tests succeeded.
+
+File "Camlline_formula_u_geometryset_symbol_geometryset_extracting_topson.ml", line 66, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_geometryset_extracting_topson.cmx
+Camlline_formula_u_geometryset_symbol_geometryset_extracting_topson
+File "Camlline_formula_u_geometryset_symbol_geometryset_fullnaming.ml", line 67, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_geometryset_fullnaming.cmx
+Camlline_formula_u_geometryset_symbol_geometryset_fullnaming
+File "Camlline_formula_u_geometryset_symbol_geometryset_longnaming.ml", line 67, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_geometryset_longnaming.cmx
+Camlline_formula_u_geometryset_symbol_geometryset_longnaming
+File "Camlline_formula_u_geometryset_symbol_geometryset_making_both.ml", line 40, characters 0-363:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_geometryset_making_both.cmx
+Camlline_formula_u_geometryset_symbol_geometryset_making_both
+File "Camlline_formula_u_geometryset_symbol_geometryset_making.ml", line 67, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_geometryset_making.cmx
+Camlline_formula_u_geometryset_symbol_geometryset_making
+File "Camlline_formula_u_geometryset_symbol_geometryset_making_topson_leaf.ml", line 40, characters 0-363:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_geometryset_making_topson_leaf.cmx
+Camlline_formula_u_geometryset_symbol_geometryset_making_topson_leaf
+File "Camlline_formula_u_geometryset_symbol_geometryset_making_topson_notleaf.ml", line 40, characters 0-363:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_geometryset_making_topson_notleaf.cmx
+Camlline_formula_u_geometryset_symbol_geometryset_making_topson_notleaf
+File "Camlline_formula_u_geometryset_symbol_geometryset_naming.ml", line 67, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_geometryset_naming.cmx
+Camlline_formula_u_geometryset_symbol_geometryset_naming
+File "Camlline_formula_u_geometryset_symbol_geometryset_typing.ml", line 66, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_geometryset_typing.cmx
+Camlline_formula_u_geometryset_symbol_geometryset_typing
+File "Camlline_formula_u_geometryset_symbol_geometryset_upgrading_grandson.ml", line 67, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_geometryset_upgrading_grandson.cmx
+Camlline_formula_u_geometryset_symbol_geometryset_upgrading_grandson
+File "Camlline_formula_u_geometryset_symbol_triangle_isoceles_abbreviating.ml", line 67, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_triangle_isoceles_abbreviating.cmx
+Camlline_formula_u_geometryset_symbol_triangle_isoceles_abbreviating
+File "Camlline_formula_u_geometryset_symbol_triangle_isoceles_making.ml", line 66, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_triangle_isoceles_making.cmx
+Camlline_formula_u_geometryset_symbol_triangle_isoceles_making
+File "Camlline_formula_u_geometryset_symbol_triangle_isoceles_naming.ml", line 66, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_triangle_isoceles_naming.cmx
+Camlline_formula_u_geometryset_symbol_triangle_isoceles_naming
+File "Camlline_formula_u_geometryset_symbol_triangle_isoceles_string_offing.ml", line 66, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_triangle_isoceles_string_offing.cmx
+Camlline_formula_u_geometryset_symbol_triangle_isoceles_string_offing
+File "Camlline_formula_u_geometryset_symbol_triangle_isoceles_typing.ml", line 27, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_triangle_isoceles_typing.cmx
+Camlline_formula_u_geometryset_symbol_triangle_isoceles_typing
+File "Camlline_formula_u_geometryset_symbol_triangle_making.ml", line 66, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_triangle_making.cmx
+Camlline_formula_u_geometryset_symbol_triangle_making
+File "Camlline_formula_u_geometryset_symbol_triangle_naming.ml", line 66, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_symbol_triangle_naming.cmx
+Camlline_formula_u_geometryset_symbol_triangle_naming
+File "Camlline_formula_u_geometryset_tag_triangle_isoceles_making.ml", line 37, characters 0-358:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_tag_triangle_isoceles_making.cmx
+Camlline_formula_u_geometryset_tag_triangle_isoceles_making
+File "Camlline_formula_u_geometryset_tag_triangle_isoceles_typing.ml", line 38, characters 0-358:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_geometryset_tag_triangle_isoceles_typing.cmx
+Camlline_formula_u_geometryset_tag_triangle_isoceles_typing
+File "Camlline_formula_u_moleculeset_formula_molecule_linear_diatomic_extracting.ml", line 29, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_moleculeset_formula_molecule_linear_diatomic_extracting.cmx
+Camlline_formula_u_moleculeset_formula_molecule_linear_diatomic_extracting
+File "Camlline_formula_u_moleculeset_formula_molecule_linear_diatomic_making.ml", line 29, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_moleculeset_formula_molecule_linear_diatomic_making.cmx
+Camlline_formula_u_moleculeset_formula_molecule_linear_diatomic_making
+File "Camlline_formula_u_moleculeset_formula_molecule_linear_diatomic.ml", line 29, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_moleculeset_formula_molecule_linear_diatomic.cmx
+Camlline_formula_u_moleculeset_formula_molecule_linear_diatomic
+File "Camlline_formula_u_moleculeset_formula_molecule_linear_diatomic_naming.ml", line 29, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_moleculeset_formula_molecule_linear_diatomic_naming.cmx
+Camlline_formula_u_moleculeset_formula_molecule_linear_diatomic_naming
+File "Camlline_formula_u_moleculeset_formula_molecule_linear_diatomic_typing.ml", line 29, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_moleculeset_formula_molecule_linear_diatomic_typing.cmx
+Camlline_formula_u_moleculeset_formula_molecule_linear_diatomic_typing
+File "Camlline_formula_u_moleculeset_symbol_molecule_linear_diatomic.ml", line 28, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_moleculeset_symbol_molecule_linear_diatomic.cmx
+Camlline_formula_u_moleculeset_symbol_molecule_linear_diatomic
+File "Camlline_formula_u_moleculeset_symbol_moleculeset.ml", line 28, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_formula_u_moleculeset_symbol_moleculeset.cmx
+Camlline_formula_u_moleculeset_symbol_moleculeset
+File "Camlline_heading_symbol_value_implementation_formula_u_1.ml", line 12, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_heading_symbol_value_implementation_formula_u_1.cmx
+Camlline_heading_symbol_value_implementation_formula_u_1
+File "Camlline_naming_symbol_value_implementation_formula_u_chemicalset_chemicalset.ml", line 12, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_naming_symbol_value_implementation_formula_u_chemicalset_chemicalset.cmx
+Camlline_naming_symbol_value_implementation_formula_u_chemicalset_chemicalset
+File "Camlline_naming_symbol_value_implementation_formula_u_geometryset_1.ml", line 12, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_naming_symbol_value_implementation_formula_u_geometryset_1.cmx
+Camlline_naming_symbol_value_implementation_formula_u_geometryset_1
+File "Camlline_naming_symbol_value_implementation_formula_u_geometryset_2.ml", line 12, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_naming_symbol_value_implementation_formula_u_geometryset_2.cmx
+Camlline_naming_symbol_value_implementation_formula_u_geometryset_2
+File "Camlline_naming_symbol_value_implementation_formula_u_geometryset_3.ml", line 12, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_naming_symbol_value_implementation_formula_u_geometryset_3.cmx
+Camlline_naming_symbol_value_implementation_formula_u_geometryset_3
+File "Camlline_querying_symbol_value_implementation_formula_u_1.ml", line 12, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_querying_symbol_value_implementation_formula_u_1.cmx
+Camlline_querying_symbol_value_implementation_formula_u_1
+File "Camlline_typing_symbol_type_implementation_formula_u_1.ml", line 12, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlline_typing_symbol_type_implementation_formula_u_1.cmx
+Camlline_typing_symbol_type_implementation_formula_u_1
+File "Camlline_typing_symbol_type_implementation_formula_u_2.ml", line 12, characters 14-71:
+Error: Unbound value Usagefile_symbol_v.is_implementation_off_usagefile_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_typing_symbol_type_implementation_formula_u_2.cmx
+Camlline_typing_symbol_type_implementation_formula_u_2
+File "Camlline_uno_module_documentingformula_u_1.ml", line 10, characters 14-32:
+Error: Unbound module Target_data_v
+File "_none_", line 1:
+Error: Cannot find file Camlline_uno_module_documentingformula_u_1.cmx
+Camlline_uno_module_documentingformula_u_1
+File "Camlline_upgrading_symbol_implementation_formula_u_chemicalset_chemicalset.ml", line 12, characters 14-71:
+Error: Unbound value Usagefile_symbol_v.is_implementation_off_usagefile_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_upgrading_symbol_implementation_formula_u_chemicalset_chemicalset.cmx
+Camlline_upgrading_symbol_implementation_formula_u_chemicalset_chemicalset
+File "Camlline_upgrading_symbol_value_implementation_formula_u_2.ml", line 12, characters 14-71:
+Error: Unbound value Usagefile_symbol_v.is_implementation_off_usagefile_symbol
+File "_none_", line 1:
+Error: Cannot find file Camlline_upgrading_symbol_value_implementation_formula_u_2.cmx
+Camlline_upgrading_symbol_value_implementation_formula_u_2
+File "Camlparagraph_formula_u_chemicalset_symbol_atom_zerotied.ml", line 16, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_chemicalset_symbol_atom_zerotied.cmx
+Camlparagraph_formula_u_chemicalset_symbol_atom_zerotied
+File "Camlparagraph_formula_u_chemicalset_symbol_cluster.ml", line 16, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_chemicalset_symbol_cluster.cmx
+Camlparagraph_formula_u_chemicalset_symbol_cluster
+File "Camlparagraph_formula_u_chemicalset_tag_atom_zerotied.ml", line 16, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_chemicalset_tag_atom_zerotied.cmx
+Camlparagraph_formula_u_chemicalset_tag_atom_zerotied
+File "Camlparagraph_formula_u_geometryset_formula_triangle_isoceles_making.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_geometryset_formula_triangle_isoceles_making.cmx
+Camlparagraph_formula_u_geometryset_formula_triangle_isoceles_making
+File "Camlparagraph_formula_u_geometryset_formula_triangle_isoceles_typing.ml", line 28, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_geometryset_formula_triangle_isoceles_typing.cmx
+Camlparagraph_formula_u_geometryset_formula_triangle_isoceles_typing
+File "Camlparagraph_formula_u_geometryset_symbol_geometryset.ml", line 40, characters 0-363:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_geometryset_symbol_geometryset.cmx
+Camlparagraph_formula_u_geometryset_symbol_geometryset
+File "Camlparagraph_formula_u_geometryset_symbol_triangle_abbreviating.ml", line 30, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_geometryset_symbol_triangle_abbreviating.cmx
+Camlparagraph_formula_u_geometryset_symbol_triangle_abbreviating
+File "Camlparagraph_formula_u_geometryset_symbol_triangle_isoceles_abbreviating.ml", line 27, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_geometryset_symbol_triangle_isoceles_abbreviating.cmx
+Camlparagraph_formula_u_geometryset_symbol_triangle_isoceles_abbreviating
+File "Camlparagraph_formula_u_geometryset_symbol_triangle_isoceles_making.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_geometryset_symbol_triangle_isoceles_making.cmx
+Camlparagraph_formula_u_geometryset_symbol_triangle_isoceles_making
+File "Camlparagraph_formula_u_geometryset_symbol_triangle_isoceles_naming.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_geometryset_symbol_triangle_isoceles_naming.cmx
+Camlparagraph_formula_u_geometryset_symbol_triangle_isoceles_naming
+File "Camlparagraph_formula_u_geometryset_symbol_triangle_isoceles_typing.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_geometryset_symbol_triangle_isoceles_typing.cmx
+Camlparagraph_formula_u_geometryset_symbol_triangle_isoceles_typing
+File "Camlparagraph_formula_u_geometryset_symbol_triangle_typing.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_geometryset_symbol_triangle_typing.cmx
+Camlparagraph_formula_u_geometryset_symbol_triangle_typing
+File "Camlparagraph_formula_u_geometryset_symbol_triangle_upgrading.ml", line 28, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_geometryset_symbol_triangle_upgrading.cmx
+Camlparagraph_formula_u_geometryset_symbol_triangle_upgrading
+File "Camlparagraph_formula_u_geometryset_tag_triangle_isoceles_typing.ml", line 193, characters 57-59:
+Error: Syntax error
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_geometryset_tag_triangle_isoceles_typing.cmx
+Camlparagraph_formula_u_geometryset_tag_triangle_isoceles_typing
+File "Camlparagraph_formula_u_moleculeset_formula_molecule_linear_diatomic.ml", line 28, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_moleculeset_formula_molecule_linear_diatomic.cmx
+Camlparagraph_formula_u_moleculeset_formula_molecule_linear_diatomic
+File "Camlparagraph_formula_u_moleculeset_formula_molecule.ml", line 27, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_moleculeset_formula_molecule.cmx
+Camlparagraph_formula_u_moleculeset_formula_molecule
+File "Camlparagraph_formula_u_moleculeset_formula_molecule_typing.ml", line 28, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_moleculeset_formula_molecule_typing.cmx
+Camlparagraph_formula_u_moleculeset_formula_molecule_typing
+File "Camlparagraph_formula_u_moleculeset_symbol_molecule_linear_diatomic.ml", line 22, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_moleculeset_symbol_molecule_linear_diatomic.cmx
+Camlparagraph_formula_u_moleculeset_symbol_molecule_linear_diatomic
+File "Camlparagraph_formula_u_moleculeset_symbol_molecule.ml", line 22, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_moleculeset_symbol_molecule.cmx
+Camlparagraph_formula_u_moleculeset_symbol_molecule
+File "Camlparagraph_formula_u_moleculeset_symbol_moleculeset.ml", line 16, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_formula_u_moleculeset_symbol_moleculeset.cmx
+Camlparagraph_formula_u_moleculeset_symbol_moleculeset
+File "Camlparagraph_for_symbol_let_argument_let_make_nam_s_equal_formula_u_geometryset_symbol_geometryset.ml", line 40, characters 0-363:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Camlparagraph_for_symbol_let_argument_let_make_nam_s_equal_formula_u_geometryset_symbol_geometryset.cmx
+Camlparagraph_for_symbol_let_argument_let_make_nam_s_equal_formula_u_geometryset_symbol_geometryset
+File "Category_formula_u_chemicalset.ml", line 19, characters 90-97:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Category_formula_u_chemicalset.cmx
+Category_formula_u_chemicalset
+
+Testing Category_formula_v with 
+   Category_formula_u_geometryset.ml
+
+Testing results:
+Total: 2 tests performed.
+
+
+All tests succeeded.
+
+File "Category_formula_u_moleculeset.ml", line 71, characters 53-54:
+Error: Syntax error: ')' expected
+File "Category_formula_u_moleculeset.ml", line 67, characters 14-15:
+Error: This '(' might be unmatched
+File "_none_", line 1:
+Error: Cannot find file Category_formula_u_moleculeset.cmx
+Category_formula_u_moleculeset
+File "Category_formula_u_moleculeset_moleculeset.ml", line 19, characters 90-97:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Category_formula_u_moleculeset_moleculeset.cmx
+Category_formula_u_moleculeset_moleculeset
+File "Contentfile_formula_u_1.ml", line 12, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Contentfile_formula_u_1.cmx
+Contentfile_formula_u_1
+File "Contentfile_formula_u_chemicalset_chemicalset.ml", line 13, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Contentfile_formula_u_chemicalset_chemicalset.cmx
+Contentfile_formula_u_chemicalset_chemicalset
+File "Contentfile_formula_u_geometryset_formula_triangle_isoceles.ml", line 21, characters 18-32:
+Error: Unbound module Formula_v
+File "_none_", line 1:
+Error: Cannot find file Contentfile_formula_u_geometryset_formula_triangle_isoceles.cmx
+Contentfile_formula_u_geometryset_formula_triangle_isoceles
+File "Contentfile_formula_u_geometryset_symbol_geometryset.ml", line 26, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Contentfile_formula_u_geometryset_symbol_geometryset.cmx
+Contentfile_formula_u_geometryset_symbol_geometryset
+File "Contentfile_formula_u_geometryset_tag_geometryset.ml", line 25, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Contentfile_formula_u_geometryset_tag_geometryset.cmx
+Contentfile_formula_u_geometryset_tag_geometryset
+File "Contentfile_formula_u_geometryset_tag_triangle_isoceles.ml", line 36, characters 0-358:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Contentfile_formula_u_geometryset_tag_triangle_isoceles.cmx
+Contentfile_formula_u_geometryset_tag_triangle_isoceles
+File "Contentfile_formula_u_moleculeset_formula_moleculeset.ml", line 28, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Contentfile_formula_u_moleculeset_formula_moleculeset.cmx
+Contentfile_formula_u_moleculeset_formula_moleculeset
+File "Contentfile_formula_u_moleculeset_symbol_moleculeset.ml", line 28, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Contentfile_formula_u_moleculeset_symbol_moleculeset.cmx
+Contentfile_formula_u_moleculeset_symbol_moleculeset
+File "Domainset_formula_u_any.ml", line 14, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Domainset_formula_u_any.cmx
+Domainset_formula_u_any
+File "Domainset_formula_u_chemicalset_chemicalset.ml", line 15, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Domainset_formula_u_chemicalset_chemicalset.cmx
+Domainset_formula_u_chemicalset_chemicalset
+File "Domainset_formula_u_geometryset_1.ml", line 14, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Domainset_formula_u_geometryset_1.cmx
+Domainset_formula_u_geometryset_1
+File "Domainset_formula_u_geometryset.ml", line 21, characters 14-63:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.dump
+File "_none_", line 1:
+Error: Cannot find file Domainset_formula_u_geometryset.cmx
+Domainset_formula_u_geometryset
+File "Domainset_formula_u_moleculeset_moleculeset.ml", line 14, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Domainset_formula_u_moleculeset_moleculeset.cmx
+Domainset_formula_u_moleculeset_moleculeset
+File "Entity_formula_u_chemicalset_symbol_atom_zerotied.ml", line 14, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Entity_formula_u_chemicalset_symbol_atom_zerotied.cmx
+Entity_formula_u_chemicalset_symbol_atom_zerotied
+File "Entity_formula_u_chemicalset_tag_atom_zerotied.ml", line 14, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Entity_formula_u_chemicalset_tag_atom_zerotied.cmx
+Entity_formula_u_chemicalset_tag_atom_zerotied
+File "Entity_formula_u_geometryset_formula_geometryset.ml", line 21, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Entity_formula_u_geometryset_formula_geometryset.cmx
+Entity_formula_u_geometryset_formula_geometryset
+File "Entity_formula_u_geometryset_symbol_geometryset.ml", line 33, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Entity_formula_u_geometryset_symbol_geometryset.cmx
+Entity_formula_u_geometryset_symbol_geometryset
+File "Entity_formula_u_geometryset_symbol_triangle_isoceles.ml", line 32, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Entity_formula_u_geometryset_symbol_triangle_isoceles.cmx
+Entity_formula_u_geometryset_symbol_triangle_isoceles
+File "Entity_formula_u_geometryset_tag_triangle_isoceles.ml", line 36, characters 0-358:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Entity_formula_u_geometryset_tag_triangle_isoceles.cmx
+Entity_formula_u_geometryset_tag_triangle_isoceles
+File "Entity_formula_u_moleculeset_formula_molecule_linear_diatomic.ml", line 21, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Entity_formula_u_moleculeset_formula_molecule_linear_diatomic.cmx
+Entity_formula_u_moleculeset_formula_molecule_linear_diatomic
+File "Entity_formula_u_moleculeset_formula_molecule.ml", line 22, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Entity_formula_u_moleculeset_formula_molecule.cmx
+Entity_formula_u_moleculeset_formula_molecule
+File "Entity_formula_u_moleculeset_moleculeset.ml", line 14, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Entity_formula_u_moleculeset_moleculeset.cmx
+Entity_formula_u_moleculeset_moleculeset
+File "Entity_formula_u_moleculeset_symbol_molecule_linear_diatomic.ml", line 29, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Entity_formula_u_moleculeset_symbol_molecule_linear_diatomic.cmx
+Entity_formula_u_moleculeset_symbol_molecule_linear_diatomic
+File "Entity_proper_formula_u_geometryset_symbol_geometryset.ml", line 21, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Entity_proper_formula_u_geometryset_symbol_geometryset.cmx
+Entity_proper_formula_u_geometryset_symbol_geometryset
+File "Group_formula_u_geometryset_symbol_geometryset.ml", line 40, characters 0-363:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Group_formula_u_geometryset_symbol_geometryset.cmx
+Group_formula_u_geometryset_symbol_geometryset
+File "Item_all_topsons_formula_u_geometryset_symbol_geometryset.ml", line 28, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_all_topsons_formula_u_geometryset_symbol_geometryset.cmx
+Item_all_topsons_formula_u_geometryset_symbol_geometryset
+File "Item_all_topsons_making_formula_u_geometryset_symbol_geometryset.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_all_topsons_making_formula_u_geometryset_symbol_geometryset.cmx
+Item_all_topsons_making_formula_u_geometryset_symbol_geometryset
+File "Item_all_topsons_naming_formula_u_geometryset_symbol_geometryset.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_all_topsons_naming_formula_u_geometryset_symbol_geometryset.cmx
+Item_all_topsons_naming_formula_u_geometryset_symbol_geometryset
+File "Item_all_topsons_typing_formula_u_geometryset_symbol_geometryset.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_all_topsons_typing_formula_u_geometryset_symbol_geometryset.cmx
+Item_all_topsons_typing_formula_u_geometryset_symbol_geometryset
+File "Item_each_grandson_leaf_abbreviating_grandson_formula_u_geometryset_symbol_geometryset.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_each_grandson_leaf_abbreviating_grandson_formula_u_geometryset_symbol_geometryset.cmx
+Item_each_grandson_leaf_abbreviating_grandson_formula_u_geometryset_symbol_geometryset
+File "Item_each_grandson_leaf_upgrading_grandson_formula_u_geometryset_symbol_geometryset.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_each_grandson_leaf_upgrading_grandson_formula_u_geometryset_symbol_geometryset.cmx
+Item_each_grandson_leaf_upgrading_grandson_formula_u_geometryset_symbol_geometryset
+File "Item_each_grandson_notleaf_upgrading_grandson_formula_u_geometryset_symbol_geometryset.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_each_grandson_notleaf_upgrading_grandson_formula_u_geometryset_symbol_geometryset.cmx
+Item_each_grandson_notleaf_upgrading_grandson_formula_u_geometryset_symbol_geometryset
+File "Item_each_topson_leaf_abbreviating_topson_formula_u_geometryset_symbol_geometryset.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_each_topson_leaf_abbreviating_topson_formula_u_geometryset_symbol_geometryset.cmx
+Item_each_topson_leaf_abbreviating_topson_formula_u_geometryset_symbol_geometryset
+File "Item_each_topson_notleaf_upgrading_topson_formula_u_geometryset_symbol_geometryset.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_each_topson_notleaf_upgrading_topson_formula_u_geometryset_symbol_geometryset.cmx
+Item_each_topson_notleaf_upgrading_topson_formula_u_geometryset_symbol_geometryset
+File "Item_formula_u_chemicalset_symbol_atom_zerotied.ml", line 17, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_chemicalset_symbol_atom_zerotied.cmx
+Item_formula_u_chemicalset_symbol_atom_zerotied
+File "Item_formula_u_chemicalset_tag_atom_zerotied.ml", line 16, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_chemicalset_tag_atom_zerotied.cmx
+Item_formula_u_chemicalset_tag_atom_zerotied
+File "Item_formula_u_documenting_chemicalset_atom_zerotied.ml", line 13, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_documenting_chemicalset_atom_zerotied.cmx
+Item_formula_u_documenting_chemicalset_atom_zerotied
+File "Item_formula_u_extracting_chemicalset_atom_zerotied.ml", line 12, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_extracting_chemicalset_atom_zerotied.cmx
+Item_formula_u_extracting_chemicalset_atom_zerotied
+File "Item_formula_u_geometryset_formula_triangle_isoceles_making.ml", line 28, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_geometryset_formula_triangle_isoceles_making.cmx
+Item_formula_u_geometryset_formula_triangle_isoceles_making
+File "Item_formula_u_geometryset_formula_triangle_isoceles_naming.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_geometryset_formula_triangle_isoceles_naming.cmx
+Item_formula_u_geometryset_formula_triangle_isoceles_naming
+File "Item_formula_u_geometryset_symbol_geometryset_extracting_grandson.ml", line 66, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_geometryset_symbol_geometryset_extracting_grandson.cmx
+Item_formula_u_geometryset_symbol_geometryset_extracting_grandson
+File "Item_formula_u_geometryset_symbol_geometryset_extracting_topson.ml", line 66, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_geometryset_symbol_geometryset_extracting_topson.cmx
+Item_formula_u_geometryset_symbol_geometryset_extracting_topson
+File "Item_formula_u_geometryset_symbol_geometryset.ml", line 30, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_geometryset_symbol_geometryset.cmx
+Item_formula_u_geometryset_symbol_geometryset
+File "Item_formula_u_geometryset_symbol_geometryset_typing.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_geometryset_symbol_geometryset_typing.cmx
+Item_formula_u_geometryset_symbol_geometryset_typing
+File "Item_formula_u_geometryset_symbol_triangle_abbreviating.ml", line 66, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_geometryset_symbol_triangle_abbreviating.cmx
+Item_formula_u_geometryset_symbol_triangle_abbreviating
+File "Item_formula_u_geometryset_symbol_triangle_isoceles_abbreviating.ml", line 66, characters 4-47:
+Error: Unbound constructor Entity_symbol_t.Entity_proper
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_geometryset_symbol_triangle_isoceles_abbreviating.cmx
+Item_formula_u_geometryset_symbol_triangle_isoceles_abbreviating
+File "Item_formula_u_geometryset_symbol_triangle_isoceles_documenting.ml", line 28, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_geometryset_symbol_triangle_isoceles_documenting.cmx
+Item_formula_u_geometryset_symbol_triangle_isoceles_documenting
+File "Item_formula_u_geometryset_symbol_triangle_isoceles_ending.ml", line 28, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_geometryset_symbol_triangle_isoceles_ending.cmx
+Item_formula_u_geometryset_symbol_triangle_isoceles_ending
+File "Item_formula_u_geometryset_symbol_triangle_isoceles_extracting.ml", line 30, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_geometryset_symbol_triangle_isoceles_extracting.cmx
+Item_formula_u_geometryset_symbol_triangle_isoceles_extracting
+File "Item_formula_u_geometryset_symbol_triangle_isoceles_heading.ml", line 37, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_geometryset_symbol_triangle_isoceles_heading.cmx
+Item_formula_u_geometryset_symbol_triangle_isoceles_heading
+File "Item_formula_u_geometryset_symbol_triangle_isoceles_making.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_geometryset_symbol_triangle_isoceles_making.cmx
+Item_formula_u_geometryset_symbol_triangle_isoceles_making
+File "Item_formula_u_geometryset_symbol_triangle_isoceles_typing.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_geometryset_symbol_triangle_isoceles_typing.cmx
+Item_formula_u_geometryset_symbol_triangle_isoceles_typing
+File "Item_formula_u_geometryset_tag_triangle_isoceles_making.ml", line 38, characters 0-358:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_geometryset_tag_triangle_isoceles_making.cmx
+Item_formula_u_geometryset_tag_triangle_isoceles_making
+File "Item_formula_u_heading_chemicalset_atom_zerotied.ml", line 12, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_heading_chemicalset_atom_zerotied.cmx
+Item_formula_u_heading_chemicalset_atom_zerotied
+File "Item_formula_u_making_chemicalset_atom_zerotied.ml", line 12, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_making_chemicalset_atom_zerotied.cmx
+Item_formula_u_making_chemicalset_atom_zerotied
+File "Item_formula_u_making_chemicalset_cluster.ml", line 13, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_making_chemicalset_cluster.cmx
+Item_formula_u_making_chemicalset_cluster
+File "Item_formula_u_moleculeset_formula_molecule_linear_diatomic.ml", line 29, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_moleculeset_formula_molecule_linear_diatomic.cmx
+Item_formula_u_moleculeset_formula_molecule_linear_diatomic
+File "Item_formula_u_moleculeset_formula_moleculeset.ml", line 28, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_moleculeset_formula_moleculeset.cmx
+Item_formula_u_moleculeset_formula_moleculeset
+File "Item_formula_u_moleculeset_formula_moleculeset_typing.ml", line 18, characters 14-71:
+Error: Unbound value Usagefile_symbol_v.is_implementation_off_usagefile_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_moleculeset_formula_moleculeset_typing.cmx
+Item_formula_u_moleculeset_formula_moleculeset_typing
+File "Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_abbreviating.ml", line 24, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_abbreviating.cmx
+Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_abbreviating
+File "Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_extracting.ml", line 24, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_extracting.cmx
+Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_extracting
+File "Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_making.ml", line 26, characters 14-71:
+Error: Unbound value Usagefile_symbol_v.is_implementation_off_usagefile_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_making.cmx
+Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_making
+File "Item_formula_u_moleculeset_symbol_molecule_linear_diatomic.ml", line 22, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_moleculeset_symbol_molecule_linear_diatomic.cmx
+Item_formula_u_moleculeset_symbol_molecule_linear_diatomic
+File "Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_naming.ml", line 24, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_naming.cmx
+Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_naming
+File "Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_typing.ml", line 23, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_typing.cmx
+Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_typing
+File "Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_upgrading.ml", line 24, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_upgrading.cmx
+Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_upgrading
+File "Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_value_alone.ml", line 24, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_value_alone.cmx
+Item_formula_u_moleculeset_symbol_molecule_linear_diatomic_value_alone
+File "Item_formula_u_moleculeset_symbol_moleculeset_making.ml", line 21, characters 14-71:
+Error: Unbound value Usagefile_symbol_v.is_implementation_off_usagefile_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_moleculeset_symbol_moleculeset_making.cmx
+Item_formula_u_moleculeset_symbol_moleculeset_making
+File "Item_formula_u_moleculeset_symbol_moleculeset.ml", line 29, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_moleculeset_symbol_moleculeset.cmx
+Item_formula_u_moleculeset_symbol_moleculeset
+File "Item_formula_u_moleculeset_symbol_moleculeset_typing.ml", line 30, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_moleculeset_symbol_moleculeset_typing.cmx
+Item_formula_u_moleculeset_symbol_moleculeset_typing
+File "Item_formula_u_naming_chemicalset_atom_zerotied.ml", line 12, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_naming_chemicalset_atom_zerotied.cmx
+Item_formula_u_naming_chemicalset_atom_zerotied
+File "Item_formula_u_querying_chemicalset_atom_zerotied.ml", line 13, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_querying_chemicalset_atom_zerotied.cmx
+Item_formula_u_querying_chemicalset_atom_zerotied
+File "Item_formula_u_typing_geometryset_1.ml", line 12, characters 14-71:
+Error: Unbound value Usagefile_symbol_v.is_implementation_off_usagefile_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_typing_geometryset_1.cmx
+Item_formula_u_typing_geometryset_1
+File "Item_formula_u_upgrading_chemicalset_atom_zerotied.ml", line 12, characters 14-71:
+Error: Unbound value Usagefile_symbol_v.is_implementation_off_usagefile_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_upgrading_chemicalset_atom_zerotied.cmx
+Item_formula_u_upgrading_chemicalset_atom_zerotied
+File "Item_formula_u_value_chemicalset_6.ml", line 12, characters 14-71:
+Error: Unbound value Usagefile_symbol_v.is_implementation_off_usagefile_symbol
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_value_chemicalset_6.cmx
+Item_formula_u_value_chemicalset_6
+File "Item_formula_u_value_chemicalset_atom_zerotied.ml", line 13, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Item_formula_u_value_chemicalset_atom_zerotied.cmx
+Item_formula_u_value_chemicalset_atom_zerotied
+File "Item_only_top_documenting_formula_u_geometryset_symbol_geometryset.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Item_only_top_documenting_formula_u_geometryset_symbol_geometryset.cmx
+Item_only_top_documenting_formula_u_geometryset_symbol_geometryset
+File "Section_formula_u_geometryset_symbol_geometryset.ml", line 40, characters 0-363:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Section_formula_u_geometryset_symbol_geometryset.cmx
+Section_formula_u_geometryset_symbol_geometryset
+File "Statustype_formula_u_1.ml", line 12, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Statustype_formula_u_1.cmx
+Statustype_formula_u_1
+
+Testing Item_formula_v with
+   Item_formula_u_geometryset_symbol_geometryset_extracting_topson.ml
+
+Generatorset_symbol_by_sole_index_provider_v.ml.provide: --- Fatal Error ---
+    expecting to find a Generatorset Symbol associated with sole_index [1; 1; 2; 7; 1; 2; 1; 7; 4].
+    and found Not Stored.
+cure :
+    Father's formula should have create this entry
+with :
+    Generatorset_symbol_by_sole_index_provider_v.store soi_x sym_x.
+    Here is a dump of generatorset_symbol_by_sole_index_register:
+ 
+    Register length =0 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Item_formula_v with
+   Item_formula_u_geometryset_symbol_geometryset_extracting_topson.ml
+
+Generatorset_symbol_by_sole_index_provider_v.ml.provide: --- Fatal Error ---
+    expecting to find a Generatorset Symbol associated with sole_index [1; 1; 2; 7; 1; 2; 1; 7; 4].
+    and found Not Stored.
+cure :
+    Father's formula should have create this entry
+with :
+    Generatorset_symbol_by_sole_index_provider_v.store soi_x sym_x.
+    Here is a dump of generatorset_symbol_by_sole_index_register:
+ 
+    Register length =0 
+
+
+
+Testing results:
+Fatal Error Total: 0 tests performed.
+Fatal error: exception Assert_failure("Error_messages_v.ml", 16, 2)
+
+Testing Camlline_formula_v with 
+   Camlline_formula_u_geometryset_symbol_geometryset_making.ml
+
+Testing results:
+Total: 2 tests performed.
+
+
+All tests succeeded.
+
+File "Test_register_for_category_formula.ml", line 29, characters 14-65:
+Error: Unbound value Tools_fgnr_v.register_entry_of_domainset_sole_index
+File "_none_", line 1:
+Error: Cannot find file Test_register_for_category_formula.cmx
+Test_register_for_category_formula
+
+Testing Generatorset_symbol_by_sole_index_provider_v with
+   Test_register_from_tags.ml
+
+
+********* Generatorset_symbol_by_sole_index_provider_v with
+   Test_register_from_tags.ml   Test number 1 failed ***********
+
+Testing results:
+Total: 1 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+
+Testing Generatorset_symbol_by_sole_index_provider_v with
+   Test_register_from_tags.ml
+
+
+********* Generatorset_symbol_by_sole_index_provider_v with
+   Test_register_from_tags.ml   Test number 8 failed ***********
+
+Testing results:
+Total: 8 tests performed.
+Fatal error: exception Failure("
+
+************** Test suit failed ************
+
+")
+File "Usagefile_formula_u_geometryset_formula_triangle_isoceles_naming.ml", line 29, characters 50-57:
+Error: This expression has type Domainset_formula_t.domainset_formula
+       but an expression was expected of type
+         (Category_symbol_t.category_symbol, 'a) Doublet_list_t.doublet_list
+           = (Category_symbol_t.category_symbol, 'a) Doublet_t.doublet list
+File "_none_", line 1:
+Error: Cannot find file Usagefile_formula_u_geometryset_formula_triangle_isoceles_naming.cmx
+Usagefile_formula_u_geometryset_formula_triangle_isoceles_naming
+File "Usagefile_formula_u_geometryset_tag_type_alone.ml", line 37, characters 0-358:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Usagefile_formula_u_geometryset_tag_type_alone.cmx
+Usagefile_formula_u_geometryset_tag_type_alone
+File "Usagefile_formula_u_geometryset_tag_value_alone.ml", line 37, characters 0-358:
+Error: This expression has type 'a list
+       but an expression was expected of type
+         Domainset_formula_t.domainset_formula
+File "_none_", line 1:
+Error: Cannot find file Usagefile_formula_u_geometryset_tag_value_alone.cmx
+Usagefile_formula_u_geometryset_tag_value_alone
+File "Usagefile_formula_u_type_chemicalset_0.ml", line 14, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Usagefile_formula_u_type_chemicalset_0.cmx
+Usagefile_formula_u_type_chemicalset_0
+File "Usagefile_formula_u_type_chemicalset_atom_zerotied.ml", line 13, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Usagefile_formula_u_type_chemicalset_atom_zerotied.cmx
+Usagefile_formula_u_type_chemicalset_atom_zerotied
+File "Usagefile_formula_u_type_chemicalset_chemicalset.ml", line 13, characters 0-56:
+Error: Unbound value Generatorset_symbol_by_sole_index_provider_v.store_force
+File "_none_", line 1:
+Error: Cannot find file Usagefile_formula_u_type_chemicalset_chemicalset.cmx
+Usagefile_formula_u_type_chemicalset_chemicalset
+File "Usagefile_formula_u_type_geometryset_1.ml", line 13, characters 43-50:
+Error: Unbound value tag_dos
+File "_none_", line 1:
+Error: Cannot find file Usagefile_formula_u_type_geometryset_1.cmx
+Usagefile_formula_u_type_geometryset_1

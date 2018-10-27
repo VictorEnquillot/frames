@@ -1,0 +1,25 @@
+let sym_ite = Item_symbol_v.make nam_ite;;
+let idx_ite = Item_symbol_v.list_index_of_item_symbol sym_ite;;
+let soi_ite = Sole_index_v.make idx_ite soi_usf;;
+let gss_ite = Generatorset_symbol_v.generatorset_symbol_of_item_symbol sym_ite;;
+Generatorset_symbol_by_sole_index_production_provider_v.store soi_ite gss_ite;;
+let tag_ite = Tag_v.make sym_ite soi_ite;;
+
+let sym_cap_l = Camlparagraph_symbol_list_by_item_tag_provider_v.provide tag_ite;;
+
+test_number 1 (
+sym_cap_l
+(*  : Camlparagraph_symbol_t.camlparagraph_symbol list *)
+  =
+[]
+);;
+
+(* Camlparagraph : 2 ??? *)
+
+let idx_cap = 2;;
+let sym_cap = List.nth sym_cap_l (idx_cap-1);;
+let soi_cap = Sole_index_v.make idx_cap soi_ite;;
+let gss_cap = Generatorset_symbol_v.generatorset_symbol_of_camlparagraph_symbol sym_cap;;
+Generatorset_symbol_by_sole_index_production_provider_v.store soi_cap gss_cap;;
+
+let tag_cap = Tag_v.make sym_cap soi_cap;;

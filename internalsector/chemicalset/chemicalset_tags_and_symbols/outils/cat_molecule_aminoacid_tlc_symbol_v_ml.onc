@@ -1,0 +1,14 @@
+let molecule_aminoacid_tlc_symbol_of_string str = 
+  let stc = String.capitalize (String.lowercase str) in
+  match stc with
+  | "Gly" -> gly
+  | "Pro" -> pro
+  | _ ->  
+      molecule_aminoacid_tlc_symbol_of_molecule_aminoacid_regular_tlc_symbol 
+	(molecule_aminoacid_regular_tlc_symbol_of_string stc)
+;;
+	
+let read ib =
+  let str = Scanf.bscanf ib "%s" (fun s -> s) in
+  Scanf.sscanf str "%3s" molecule_aminoacid_tlc_symbol_of_string
+;;

@@ -1,0 +1,46 @@
+
+running test Db1_entity_element_tag_list_by_db1_entity_cluster_tag_provider_u_any
+
+ --- Creating  Module_name_stack_v.stack --- 
+
+ --- Creating  Parameters_figureset_general_register_v --- 
+
+ --- Creating  Common_symbol_by_sole_index_register_v --- 
+
+ --- Creating  Local_database_fullnameofdirectory_list_by_domain_tag_register_v --- 
+
+ --- Creating  Local_database_nameofdirectory_list_by_domain_tag_register_v --- 
+
+ --- Creating  Creation_module_name_by_sole_index_register_v --- 
+
+ --- Creating  Db1_entity_symbol_by_sole_index_register_v --- 
+
+ --- Creating  Db1_entity_local_database_tag_by_domain_tag_register_v --- 
+
+ --- Creating  Db1_entity_component_tag_list_by_db1_entity_local_database_tag_register_v --- 
+
+ --- Creating  Db1_entity_cluster_tag_list_by_db1_entity_component_tag_register_v --- 
+
+ --- Creating  Db1_entity_element_tag_n_basic_as_string_list_list_by_db1_entity_cluster_tag_register_v --- 
+
+ --- Creating  Filename_by_db1_entity_component_tag_register_v --- 
+
+ --- Creating  Component_filename_list_by_db1_entity_local_database_tag_register_v --- 
+
+ --- Creating  String_by_db1_entity_local_database_tag_register_v --- 
+
+ --- Creating  String_list_by_db1_entity_cluster_tag_register_v --- 
+
+ --- Creating  String_list_by_db1_entity_component_tag_register_v --- 
+
+ --- Creating  String_by_db1_entity_local_database_tag_register_v --- 
+
+Testing Db1_entity_element_tag_list_by_db1_entity_cluster_tag_provider_v with
+   Db1_entity_element_tag_list_by_db1_entity_cluster_tag_provider_u_any.ml
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Testing results:
+Total: 31 tests performed.
+
+
+All tests succeeded.
+

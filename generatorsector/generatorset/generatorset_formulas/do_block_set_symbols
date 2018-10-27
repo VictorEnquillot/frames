@@ -1,0 +1,3 @@
+echo " "
+echo "type $1 ="
+egrep '^\(\* ' template_formula_v.ml | grep -w ${1} | awk '{print $4}' | sort

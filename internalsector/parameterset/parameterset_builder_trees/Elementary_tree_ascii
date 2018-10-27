@@ -1,0 +1,8 @@
+(*         |-           Elementary_context_sector   -|          *)
+(*         |                    / | \                | fixed    *)
+(*         |-           Elementary_context_domain   -| duo      *)
+(* Context |                    / | \                |          *)
+(* Quatuor |-           Elementary_context_database -|          *)
+(*         |                    / | \                | variable *)
+(*         |-           Elementary_context_databox  -| duo      *)
+(*         |                      |                             *)

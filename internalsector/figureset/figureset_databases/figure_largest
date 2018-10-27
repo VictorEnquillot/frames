@@ -1,0 +1,29 @@
+let figure_symbol_larger_list_of_input_fullnameoffile fno_inp = (* Not used *)
+  let nam_n_kin_ivn_l =
+    Input_variable_name_n_kind_list_by_input_fullnameoffile_provider_v.provide 
+      fno_inp 
+  in
+
+  let nam_n_kin_ivn_tar_l = 
+    Doublet_list_v.filter_if_right 
+      Input_symbol_v.is_input_keyword_target
+      nam_n_kin_ivn_l
+  in
+
+  let nam_ivn_tar_l = List.map Doublet_v.left_off_doublet nam_n_kin_ivn_tar_l in 
+
+  let sym_fig_ll = List.map
+      Figure_symbol_dependency_list_by_target_input_variable_name_provider_v.provide 
+      nam_ivn_tar_l 
+  in
+
+  let sym_fig_l =
+    if (List_v.are_tail_coinciding_of_list_of_list (List.nth sym_fig_ll 0) (List.nth sym_fig_ll 1)) &&
+      (List_v.are_included_of_small_list_of_big_list (List.nth sym_fig_ll 0) (List.nth sym_fig_ll 1))
+    then (List.nth sym_fig_ll 1)
+    else []
+  in
+
+  Tree_v.tree_off_list sym_fig_l
+;;
+

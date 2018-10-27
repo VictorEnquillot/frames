@@ -1,0 +1,55 @@
+cp $BNWC/Nwchemdata_as_set_body_node_aoset_numericalvalues_tag_list_by_databox_name_provider_v.ml  Db1pointsdata_as_set_body_sequence_float_tag_list_by_databox_name_provider_v.ml
+
+ms nwchem  db1points *ml
+ms Nwchem  Db1points *ml
+mw BNWC BDB1 *ml
+ms _nbo _cbo *ml
+ms _nwc _db1 *ml
+
+msrf _as_body_ _as_set_body_ *ml *mk
+msrf _as_fence_ _as_set_fence_ *ml *mk
+
+
+ms "(nam_dbo, nam_dba)" "(bna_dbo, bna_dba)"  *ml
+ms "by_basicname_sector_provider_v.provide nam_sec" "by_basicname_sector_provider_v.provide bna_sec" *ml
+ms "let build nam_dba " let build bna_dba " *ml
+ms "let build nam_dba" "let build bna_dba " *ml
+ms "string Duo_t.duo" "Basicname_t.basicname Duo_t.duo" *ml 
+ms "string Duo_t.duo" "Basicname_t.basicname Duo_t.duo" *ml 
+
+
+
+mscf sector_name basicname_sector  Context_sole_index_by_sector_name_provider_v.ml
+msrf Basicname_database_name Basicname_database *ml *mk
+msrf Basicname_databox_name_by Basicname_databox_by *ml *mk
+msrf Database_name_by Basicname_database_name_by *ml *mk
+msrf Databox_name_by Basicname_databox_name_by *ml *mk
+msrf Databox_name_n_database_name Basicname_databox_n_basicname_database *ml *mk
+msrf Databox_name_n_database_name_by Basicname_databox_n_basicname_database_by *ml *mk
+msrf _context_domain_name_ _context_basicname_domain *ml *mk
+msrf _context_name_trio_ _basicname_trio_ *ml *mk
+
+msrf by_coordinate_context_name       by_coordinate_basicname  *ml *mk
+msrf by_coordinate_context_name       by_coordinate_basicname *ml *mk
+msrf by_database_name                 by_basicname_database  *ml *mk
+msrf by_databox_name                  by_basicname_databox  *ml *mk
+msrf by_databox_name_n_database_name  by_basicname_databox_n_basicname_database  *ml *mk
+msrf by_domain_name_n_sector_name     by_basicname_domain_n_basicname_sector  *ml *mk
+msrf by_sector_name_                  by_basicname_sector_ *ml *mk
+
+msrf _context_basicname_domain _basicname_domain *ml *mk
+msrf _context_database_name_by _basicname_database_by *ml *mk
+msrf _context_databox_name_by_ _basicname_databox_by_ *ml *mk 
+msrf _context_domain_name      _basicname_domain *ml *mk
+msrf _context_name_quatuor     _basicname_quatuor *ml *mk
+msrf _context_name_quatuor     _basicname_quatuor *ml *mk
+msrf _context_sector_name      _basicname_sector *ml *mk
+msrf _context_sector_name_by   _basicname_by *ml *mk
+
+ms "by_basicname_databox_provider_v.provide nam_dbo" "by_basicname_databox_provider_v.provide bna_dbo" *ml
+
+ms "let build nam_dbo" "let build bna_dbo" *_by_basicname_databox_provider_v.ml  
+
+ms Db1pointsdata_basicname_databox_by_any_sole_index_provider_v Basicname_databox_by_any_sole_index_provider_v *ml
+dlw Db1pointsdata_basicname_databox_by_any_sole_index_provider_v *mk
+kef Db1pointsdata_basicname_databox_by_any_sole_index_provider_v.ml

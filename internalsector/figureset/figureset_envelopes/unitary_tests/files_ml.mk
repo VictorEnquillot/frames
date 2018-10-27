@@ -1,0 +1,32 @@
+FROM_FILES_V_ML := \
+Figure_envelope_u_any.ml \
+Figure_set_fence_envelope_u_any.ml \
+
+FROM_FILES_U_ML := \
+Coordinate_set_body_tuple_string_off_by_figure_set_fence_tag_provider_u_point_a.ml \
+Coordinate_set_body_tuple_string_off_by_figure_set_fence_tag_provider_u_point_bc_b.ml \
+Coordinate_set_body_tuple_string_off_by_figure_set_fence_tag_provider_u_point_bc_c.ml \
+Figure_bridge_by_figure_set_fence_tag_provider_u_point_bc_b.ml \
+Figure_bridge_by_figure_set_fence_tag_provider_u_point_bc_c.ml \
+Figure_envelope_u_debug.ml \
+Figure_envelope_u_point_a.ml \
+Figure_envelope_u_point_bc_b.ml \
+Figure_envelope_u_segment_bc.ml \
+Figure_name_by_figure_set_fence_tag_provider_u_point_a.ml \
+Figure_name_by_figure_set_fence_tag_provider_u_point_bc_b.ml \
+Figure_name_by_figure_set_fence_tag_provider_u_point_bc_c.ml \
+Figure_set_body_segment_envelope_u_debug.ml \
+Figure_set_body_segment_envelope_u_segment_s_debug.ml \
+Figure_set_body_triangle_envelope_u_debug.ml \
+Figure_set_body_triangle_isoceles_envelope_u_debug.ml \
+Figure_set_body_triangle_isosceles_envelope_u_debug.ml \
+Figure_set_fence_envelope_u_debug.ml \
+Figure_set_fence_envelope_u_point_a.ml \
+Figure_set_fence_envelope_u_point_bc_c.ml \
+Figure_set_fence_envelope_u_segment_bc.ml \
+Figure_set_fence_point_envelope_u_point_a_debug.ml \
+
+UNITARY_TESTS_FILES_ML := \
+$(FROM_FILES_V_ML) \
+$(FROM_FILES_U_ML) \
+

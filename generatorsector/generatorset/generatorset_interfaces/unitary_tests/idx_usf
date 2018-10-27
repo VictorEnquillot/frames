@@ -1,0 +1,1 @@
+let idx_usf = List_v.index_of_element_of_list sym_usf (Usagefile_symbol_list_by_contentfile_tag_provider_v.provide tag_cof) +1 ;;

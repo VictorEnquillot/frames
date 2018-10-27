@@ -1,0 +1,25 @@
+define Run 
+       end
+
+define R_name
+       end -- define
+
+define Title 
+       end -- set
+
+define Text 
+       end -- set
+
+define R_value
+       end -- define
+
+define R 
+       end -- define
+   
+define N
+       end -- define
+
+define Phi
+       end -- define
+
+stop

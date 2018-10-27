@@ -1,0 +1,8 @@
+test_number 2 (
+( sym_fig_ifi : Figure_symbol_t.figure_symbol ) =
+  Figure_symbol_t.Figure_context_symbol
+   (Figure_context_symbol_t.Figure_createdby_symbol
+     (Figure_createdby_symbol_t.Figure_inputfile_symbol
+       (Figure_inputfile_symbol_t.Figure_inputfile_constructor
+         "/keep/sources/ocaml_top/setup/frames/inputset/files/Point_homothety_n_translation.inp")))
+);;

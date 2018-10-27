@@ -1,0 +1,28 @@
+Calculation_name_by_units_canonical_provider_u_any.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_quantum_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Calculation_name_by_units_canonical_provider_v.cmo
+Calculation_name_by_units_canonical_provider_u_any.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_quantum_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Calculation_name_by_units_canonical_provider_v.cmx
+Units_actual_length_u_any.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_actual_length_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_actual_length_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmo
+Units_actual_length_u_any.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_actual_length_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_actual_length_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmx
+Units_canonical_quantum_u_any.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_quantum_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_quantum_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmo
+Units_canonical_quantum_u_any.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_quantum_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_quantum_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmx

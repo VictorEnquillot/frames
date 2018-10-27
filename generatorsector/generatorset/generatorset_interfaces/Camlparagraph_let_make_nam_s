@@ -1,0 +1,77 @@
+let doublet_list_for_each_pipe_camlline_in_let_make_function sym_ent_cur = 
+      match sym_ent_cur with
+      | Entity_symbol_t.Entity_fictive_symbol sym_enf ->
+	  begin
+	    match sym_enf with 
+	    | Entity_fictive_symbol_t.Entity_fictive_basicnullary_symbol sym_efb ->
+		begin
+		  match sym_efb with
+		  | Entity_fictive_basicnullary_symbol_t.String s ->
+		      
+		      (* Ex.:   | "Cluster_fromid" -> cluster_fromid s *)
+		      [
+		       ([sym_ent_cur], Camlline_symbol_v.pipe_ecstring_arrow_ec_space_sarg );
+		     ]
+			
+		  | _ ->
+		      Error_messages_v.print_fatal_error nam_cod 
+			"doublet_list_for_each_pipe_camlline_in_let_make_function_equal_function"
+			"Entity_fictive_basicnullary_symbol_t.String"
+			(Format.sprintf ">%s<" (Entity_symbol_v.fullname sym_ent_cur))
+			"Check or add it"	 
+		end	
+		  
+	    | Entity_fictive_symbol_t.Entity_fictive_nullary_symbol sym_enf ->
+		begin
+		  match sym_enf with
+		  | Entity_fictive_nullary_symbol_t.Sonnullary s 
+		  | Entity_fictive_nullary_symbol_t.Nonsonnullary s ->
+		      
+		      (* Ex.:  
+		        | Mp3_header_field_onebit_symbol_t.Error_protection -> 
+			 let for_das = Singlet_formula_v.make soi_hf1 [Basic_type_v.onebit] in
+			 Mp3_header_field_onebit_formula_t.Error_protection for_das
+		       *)
+		      let sym_ent_top = List_v.last_element_off_list pat_sym_ent in
+		      [
+		       ([sym_ent_cur], Camlline_symbol_v.pipe_ecstring_arrow_ec);
+		       ([sym_ent_cur], Camlline_symbol_v.let_for_das_equal_das_vdot_make_eit_builder_list_in);
+		       ([sym_ent_cur; sym_ent_top], Camlline_symbol_v.space_eft_tdot_ec_space_for_das );
+		     ]
+			
+		  | Entity_fictive_nullary_symbol_t.Empty -> []
+		end
+	  end
+	    
+      | Entity_symbol_t.Entity_proper_symbol sym_enp ->
+	  
+	  (* Ex.: 
+	     | Mp3_header_field_onebit_symbol_t.Version_symbol sym_ver ->
+	     let tag_ver = Tag_v.make sym_ver soi_hf1 in
+	     let for_ver = Version_formula_v.make tag_ver in
+	     mp3_header_field_onebit_formula_of_version_formula for_ver
+	   *)
+	  
+	  let sym_ent_top = 
+	    List_v.last_element_off_list pat_sym_ent 
+	  in
+	  [
+	   ([sym_ent_cur], 
+	    Camlline_symbol_v.pipe_ecstring_arrow_ec);
+	   ([sym_ent_cur; sym_ent_top], 
+	    Camlline_symbol_v.let_etc_equal_tag_vdot_make_space_esc_space_eit_space_in);
+	   ([sym_ent_cur], 
+	    Camlline_symbol_v.let_for_das_equal_das_vdot_make_eit_builder_list_in);
+	   ([sym_ent_cur; sym_ent_top], 
+	    Camlline_symbol_v.space_eft_tdot_ec_space_for_das );
+	 ]
+	    
+      | _ ->
+	  Error_messages_v.print_fatal_error nam_cod 
+	    "doublet_list_for_each_pipe_camlline_in_let_make_function_equal_function"
+	    "a Enity Symbol were entity_fictive|entity_proper"
+            (Format.sprintf ">%s<" (Entity_symbol_v.fullname sym_ent_cur))
+            "Check or add it to menu"	 
+    end
+;;
+

@@ -1,0 +1,25 @@
+(** {3 The Tag functionalities for a fragment.} *)
+
+(** {6 Making.} *)
+
+val make :
+Fragment_symbol_t.fragment_symbol ->
+  Fragment_state_t.fragment_state ->
+    Fragment_index_t.fragment_index ->
+      Fragment_tag_t.fragment_tag
+;;
+
+(** {6 Converting.} *)
+
+val print : Format.formatter ->
+  Fragment_tag_t.fragment_tag ->
+    unit
+;;
+
+val name :
+  Fragment_tag_t.fragment_tag ->
+    string
+;;
+
+(** created by ./do_entity_tag_v_mli fragment 07 octobre 2009. *)
+

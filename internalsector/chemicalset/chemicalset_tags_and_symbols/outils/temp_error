@@ -1,0 +1,6 @@
+ *) echo "Error: in script do_entity_without_constructor_set_name unkown entity >$1"\<
+ echo "Cure: check list in do_entity_without_constructor_set_name"
+ ;;
+ esac
+ echo $res
+}

@@ -1,0 +1,53 @@
+        digraph Frames {
+                size="40,15";
+                node [fontsize=50];
+                edge [arrowhead = "vee", arrowsize = "2.0", style="solid", taillabel = ""];
+
+  Title [
+  	label = "The Builder Tree\nDomain Skeleton\nDatabase Nwchem", shape=box, fontname=Courier, color=yellow, style=filled
+  ];
+
+  "Context Sector : Internal" -> {"Context Domain : Skeleton"};       
+  "Context Domain : Skeleton" -> {"Context Database : Molpro Nwchem G9x ..."};
+  {"Context Database : Molpro Nwchem G9x ..."} -> {"Context Databox : Cc_pvtz ... Try_ao ... 631g.."};
+
+  node [color=yellow, style=filled, fontsize=25, fontname="Palatino-Italic", fontcolor=black];
+
+  "Body\nEcppefSet\nAnyCenter\nPseudo Potential" [color=grey];
+  "Body\nAopefSet\nShellOrdinal\nHe S 2" [color=lightyellow];
+  "Body\nAopefSet\nShellOrdinal\nNe S 2" [color=lightyellow];
+
+
+  Title -> "Context Sector : Internal" [ style="invis"];
+
+  "Context Databox : Cc_pvtz ... Try_ao ... 631g.."  -> { "Body\nAopefSet\nAnyCenter" "Body\nEcppefSet\nAnyCenter\nPseudo Potential"}; 
+
+  "Body\nAopefSet\nAnyCenter"  -> { "Body\nAopefSet\nOneCenter\nHe" "Body\nAopefSet\nOneCenter\nNe"} [color=red arrowsize="2" label = "Repeat on\nall Shell"];
+   
+  "Body\nAopefSet\nOneCenter\nHe" -> { "Body\nAopefSet\nShellSymmetry\nHe S" "Body\nAopefSet\nShellSymmetry\nHe P"} [color=red arrowsize="2" label = "Repeat on\nall Shells"];
+
+  { rank = same; "Body\nAopefSet\nShellSymmetry\nNe S" "Body\nAopefSet\nShellSymmetry\nNe P"};
+
+  "Body\nAopefSet\nOneCenter\nNe" -> { "Body\nAopefSet\nShellSymmetry\nNe S" "Body\nAopefSet\nShellSymmetry\nNe P"} [color=red arrowsize="2" label = "Repeat on\nall ShellSymmetry S P D ..."];
+
+  "Body\nAopefSet\nShellSymmetry\nHe S" -> { "Body\nAopefSet\nShellOrdinal\nHe S 1" "Body\nAopefSet\nShellOrdinal\nHe S 2"} [color=red arrowsize="2" label = "Repeat on\nall ShellOrdinal 1 2 ... "];
+
+  "Body\nAopefSet\nShellSymmetry\nNe S" -> { "Body\nAopefSet\nShellOrdinal\nNe S 1" "Body\nAopefSet\nShellOrdinal\nNe S 2"} [color=red arrowsize="2" label = "Repeat on\nall ShellOrdinal 1 2 ... "];
+
+  node [color=bisque2, style=filled, fontsize=25, fontname="Palatino-Italic", fontcolor=black];
+
+  "Body\nAopefSet\nShellOrdinal\nHe S 1" -> { "Fence\nAopef\nHe S 1 1" "Fence\nAopef\nHe S 1 2" } [color=red arrowsize="2" label = "Repeat on\nall Aopef"];
+
+  "Body\nAopefSet\nShellOrdinal\nNe S 1" -> { "Fence\nAopef\nNe S 1 1" "Fence\nAopef\nNe S 1 2" } [color=red arrowsize="2" label = "Repeat on\nall Aopef"];
+
+  node [color=lightblue, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+ 
+  "Fence\nAopef\nHe S 1 1" -> { "Parameter\nBody\nTuple\nAopef" } [color=blue arrowsize="3" label = "Transdomain"];
+
+  "Fence\nAopef\nHe S 1 2" -> { "Parameter\nBody\nTuple\nAopef " } [color=blue arrowsize="3" label = "Transdomain"];
+
+  "Fence\nAopef\nNe S 1 1" -> { "Parameter\nBody\nTuple\nAopef  " } [color=blue arrowsize="3" label = "Transdomain"];
+
+  "Fence\nAopef\nNe S 1 2" -> { "Parameter\nBody\nTuple\nAopef   " } [color=blue arrowsize="3" label = "Transdomain"];
+
+}

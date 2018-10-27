@@ -1,0 +1,11 @@
+     builders context_domain_constructor:ofstring = datastructure entity; 
+     builders context_component_triangle_constructor:ofstring = datastructure entity;
+     builders context_component_vector_constructor:ofstring = datastructure entity;
+     builders context_component_vertex_constructor:ofstring = datastructure entity;
+     builders context_database_constructor:ofstring = datastructure entity;
+     builders context_element_coordinates_kind_constructor:of_string = datastructure entity;
+     builders context_element_coordinates_units_angle_constructor:of_string = datastructure entity;
+     builders context_element_coordinates_units_length_constructor:of_string = datastructure entity;
+     builders context_element_label_constructor:of_string = datastructure entity;
+     builders context_element_vertex_constructor:of_string = datastructure entity;
+     builders context_float_constructor:ofstring = datastructure entity;

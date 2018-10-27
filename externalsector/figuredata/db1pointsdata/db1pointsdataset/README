@@ -1,0 +1,15 @@
+1. D1FIG : Db1_entity_tag_tree
+
+          This tree is a Complete representation of all the Db1 Data and of their Building relation.
+          This tree needs only the knowledge of Db1_entity_local_database_tag
+
+   let tag_den_t = Db1_entity_tag_tree_by_db1_entity_local_database_tag_provider_v.provide tag_eld;;
+
+2. Float for Coordinate need to be ended.
+
+3. Other kind of Data need to be implemented. Color for instance
+
+  type domain_entity_data_symbol =
+   | Domain_entity_data_coordinate_symbol of Coordinate_symbol 
+   | Domain_entity_data_color_symbol of Color_symbol 
+;;

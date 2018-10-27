@@ -1,0 +1,8 @@
+let build_n_store fno_inp =
+  let tag_pro_t = build fno_inp in
+  let nam_mod = Management_v.current_module_name (documentation ()) in
+  if Parameters_general_provider_v.provide "trace-store" = "true"
+  then Property_tag_tree_by_input_fullnameoffile_register_v.store_verbose nam_mod fno_inp tag_pro_t
+  else Property_tag_tree_by_input_fullnameoffile_register_v.store fno_inp tag_pro_t;
+  tag_pro_t
+;;

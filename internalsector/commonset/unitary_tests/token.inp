@@ -1,0 +1,34 @@
+# 
+|- 
+||/- 
+|/= 
+||= 
+|=soft 
+||/=soft 
+|/=soft 
+||=soft 
++* 
+-* 
+/+* 
+/-* 
+- 
+~ 
+~' 
+bot 
+/\ 
+\\\/ 
+<=> 
+-> 
+/\/\ 
+* 
+, 
+( 
+) 
+T 
+F 
+ 
+ 
+|= (~ bachelor) 
+|= bachelor <-> ((male /\ adult) /\ (~ married)) 
+|= (~ bachelor) -> ( male * male) 
+|= (~ bachelor) -> (adult * adult)  

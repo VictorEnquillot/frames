@@ -1,0 +1,9 @@
+
+#0  Pc : 187156  Error_messages_v char 316
+#1  Pc : 371152  Camlparagraph_tag_v char 3578
+#2  Pc : 579596  Entity_symbol_list_camlline_symbol_doublet_list_by_camlparagraph_tag_provider_v char 2544
+#3  Pc : 579300  Entity_symbol_list_camlline_symbol_doublet_list_by_camlparagraph_tag_provider_v char 3533
+#4  Pc : 580624  Camlline_symbol_list_by_camlparagraph_tag_provider_v char 1402
+#5  Pc : 580576  Camlline_symbol_list_by_camlparagraph_tag_provider_v char 1722
+#6  Pc : 583488  Camlparagraph_formula_v char 766
+#7  Pc : 598316  Camlparagraph_formula_u_geometryset_symbol_triangle_isoceles_typing char 6448

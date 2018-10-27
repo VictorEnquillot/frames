@@ -1,0 +1,50 @@
+r
+b
+bt
+up
+print sym_lex_s
+up
+print lex_s
+up
+r
+b
+bt
+up
+r
+b
+bt
+r
+b
+bt
+r
+b
+bt
+up
+print sym_lex_cur
+r
+b
+bt
+r
+b
+bt
+up
+r
+b
+bt
+r
+b
+bt
+up
+print sym_ien_tl
+
+r
+b
+bt
+up
+print sof_lex
+r
+b
+bt
+r
+b
+bt

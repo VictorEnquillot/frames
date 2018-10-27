@@ -1,0 +1,8 @@
+NEEDED_DIRS := \
+	$(BASICS_DIR) \
+	$(DATASTRUCTURES_DIR) \
+	$(FILES_DIR) \
+	$(CHEMICALSET_TAGS_DIR) \
+	$(CHEMICALSET_DATABASES_DIR) \
+	$(realpath ..) \
+    

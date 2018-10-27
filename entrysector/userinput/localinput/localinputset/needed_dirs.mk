@@ -1,0 +1,8 @@
+NEEDED_DIRS := \
+        $(DATASTRUCTURES_DIR) \
+        $(FILES_DIR) \
+	$(COMMONSET_DIR) \
+	$(INPUTSET_COMMON_DIR) \
+	$(INPUTSET_LEXER_DIR) \
+ 
+

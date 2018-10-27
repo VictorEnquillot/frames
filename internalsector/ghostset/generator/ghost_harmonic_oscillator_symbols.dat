@@ -1,0 +1,8 @@
+constructors ghost                      =   coordinate
+
+# coordinate
+constructors coordinate                 =   coordinate_current   coordinate_previous   coordinate_anteprevious   coordinate_spherical 
+
+constructors coordinate_current         =   x_current
+constructors coordinate_previous        =   x_previous
+constructors coordinate_anteprevious    =   x_anteprevious

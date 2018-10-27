@@ -1,0 +1,34 @@
+# kind     type                         = constructor_basename list
+#          
+# --------------------------------------------------------------------------------------------
+
+# logic  Constructor_Tree  Root
+constructors   logic                    =   bethtree   formula   signedformula   signedformula_list  turnstile   token   
+
+# formula
+constructors   formula                  =   formula_atomic   formula_composite
+
+# formula_atomic
+constructors   formula_atomic           =   formula_true   formula_false   variable:ofstring   
+
+# signedformula
+constructors   signedformula            =   signedformula_constructor
+
+# signedformula_list
+constructors   signedformula_list       =   signedformula_list_constructor
+
+# bethtree
+constructors   bethtree                 =   bethtree_constructor
+
+# token
+constructors   token                    =   connective leftparenthesis  rightparenthesis   
+
+# connective                         
+constructors   connective               =   negation   conjunction   disjunction    implication   equivalence 
+
+# turnstile
+constructors   turnstile                =   turnstile_true   turnstile_false
+
+
+
+

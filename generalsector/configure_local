@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# The directory where we run a configure script.
+SUB_DIRECTORIES="basics datastructures files functions generator integrals linearalgebra miscellaneous polynomials quantum symbolsgeneral units" 
+
+# The directory where we just configure .depend and .depend-rebuild.
+CURRENT_AND_TEST=". unitary_tests"

@@ -1,0 +1,124 @@
+define Run 
+       as word "triangle_t_properties"
+       end
+
+set title "input for Run : " Run 
+       end -- set
+
+set debug all end -- set 
+set trace for provider except this end  -- set
+
+define Tr 
+       as triangle_isosceles_equilateral "T" 
+       from domain figure	    
+       from database "db1"
+       end -- define
+
+define P_a 
+       as point "A"
+       from domain figure
+       from database "db1"
+       end -- define Point
+
+define R_name
+       as string "ratio"
+       end -- define
+
+define R_value
+       as float 2.5
+       end -- define
+
+define R 
+       as float_value R_name R_value
+       end 
+   
+define H_a                              -- entity value by default 
+       as homothety "homothety_a"
+       from domain property 
+       on domain figure                 -- applied on 
+       needs center P_a 
+       needs ratio R
+       end -- define
+
+define Tr_ha                            -- Tr transformed by H_a
+       by applying H_a 
+            on Tr
+	    end -- apply
+       end -- define
+
+define Tr_hb                            -- Tr transformed by H_a
+       by applying ( 
+       	    homothety "homothety_b"
+       	    from domain property 
+       	    on domain figure            -- applied on 
+       	    needs center P_a            -- parameter
+       	    needs ratio R
+            )	  
+            on Tr
+	    end -- applying
+       end -- define
+
+define S 
+       as surface 
+       from domain property
+       on domain figure
+       end -- define
+       
+define S_t 
+       by applying S
+            on Tr
+            end -- applying
+       end -- define
+
+define Phi
+       as coordinate_spherical "phi"    -- type Coordinate / Elementaryset
+       end -- define
+
+define Phi_a 
+       by extracting Phi                -- it is not a Property
+            off P_a                     -- extracting from Value-Tree of P_a
+            end -- extracting
+       end -- define
+
+define Umd                      
+       as units                         -- type Units / Elementaryset
+            length meter
+            angle degree
+            end -- units
+       end -- define
+
+define Vec_sym 
+       as vector "BC"
+       from domain figure
+       with category symbol
+       end -- define
+
+print Vec_sym
+      end -- print
+
+print S_t 
+      units
+	length meter
+        end -- units
+      end -- print
+
+print Phi_a 
+      units Umd
+      end -- print
+
+print Tr_ha                        -- Units internal specified by set units .... end
+      
+      end -- print
+
+
+define F_t 
+       as file F_name
+       end -- define
+
+write T_ha 
+      to F_t
+      end -- write 
+
+print statistics
+      end -- print
+

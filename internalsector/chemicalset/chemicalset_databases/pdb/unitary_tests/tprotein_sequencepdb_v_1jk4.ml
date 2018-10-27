@@ -1,0 +1,317 @@
+(** {3 1jk4 Protein_sequencepdb} *)
+
+open Make_test_v;;
+
+testing "1jk4 Protein_sequencepdb_v";;
+
+(* toplevel 
+   #use "tprotein_sequencepdb_v_1jk4.ml";; 
+*)
+
+
+Pdr_v.clear ();;
+let sym_enp = Entrypdb_symbol_t.ProteinID "1jk4";;
+
+let reg_pkp = Pdr_v.store_of_entrypdb_symbol sym_enp;;
+let val_pkp_l = Entrypdb_data_v.clusterpdb_data_list_off_entrypdb_symbol sym_enp;;
+
+let str_rcp_l = Pdr_v.retrieve (Packpdb_symbol_v.make "SEQRES")
+let dat_psp = Protein_sequencepdb_v.data sym_enp;;
+
+test_number 1 (
+List.length val_pkp_l
+(* : Clusterpdb_data_t.clusterpdb_data list *)
+=
+35
+);;
+
+test_number 2 (
+dat_psp (* : Protein_sequencepdb_t.protein_sequencepdb *)
+=
+  [
+[
+Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Leu);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Arg);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Gln);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Cys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Leu);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_proline_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Pro);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Cys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_glycine_tlc_symbol
+     Protein_sequencepdb_t.Csp_t.Ats_t.Gly;
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_proline_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Pro);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_glycine_tlc_symbol
+     Protein_sequencepdb_t.Csp_t.Ats_t.Gly;
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_glycine_tlc_symbol
+     Protein_sequencepdb_t.Csp_t.Ats_t.Gly;
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Lys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_glycine_tlc_symbol
+     Protein_sequencepdb_t.Csp_t.Ats_t.Gly;
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Arg);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Cys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Phe);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_glycine_tlc_symbol
+     Protein_sequencepdb_t.Csp_t.Ats_t.Gly;
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_proline_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Pro);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Ser);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Ile);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Cys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Cys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_glycine_tlc_symbol
+     Protein_sequencepdb_t.Csp_t.Ats_t.Gly;
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Asp);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Glu);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Leu);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_glycine_tlc_symbol
+     Protein_sequencepdb_t.Csp_t.Ats_t.Gly;
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Cys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Phe);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Val);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_glycine_tlc_symbol
+     Protein_sequencepdb_t.Csp_t.Ats_t.Gly;
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Thr);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Ala);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Glu);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Ala);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Leu);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Arg);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Cys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Gln);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Glu);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Glu);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Asn);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Tyr);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Leu);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_proline_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Pro);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Ser);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_proline_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Pro);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Cys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Gln);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Ser);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_glycine_tlc_symbol
+     Protein_sequencepdb_t.Csp_t.Ats_t.Gly;
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Gln);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Lys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_proline_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Pro);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Cys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_glycine_tlc_symbol
+     Protein_sequencepdb_t.Csp_t.Ats_t.Gly;
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Ser);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_glycine_tlc_symbol
+     Protein_sequencepdb_t.Csp_t.Ats_t.Gly;
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_glycine_tlc_symbol
+     Protein_sequencepdb_t.Csp_t.Ats_t.Gly;
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Arg);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Cys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Ala);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Ala);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Ala);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_glycine_tlc_symbol
+     Protein_sequencepdb_t.Csp_t.Ats_t.Gly;
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Ile);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Cys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Cys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Asn);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Asp);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Glu);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Ser);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Cys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Val);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Thr);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Glu);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_proline_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Pro);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Glu);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Cys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Arg);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Glu);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_glycine_tlc_symbol
+     Protein_sequencepdb_t.Csp_t.Ats_t.Gly;
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Val);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_glycine_tlc_symbol
+     Protein_sequencepdb_t.Csp_t.Ats_t.Gly;
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Phe);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_proline_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Pro);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Arg);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Arg);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Val)
+];
+
+   [
+Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Cys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Tyr);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Phe);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Gln);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Asn);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Cys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_proline_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Pro);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_nonglycine_tlc_symbol
+     (Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_regular_tlc_symbol
+       Protein_sequencepdb_t.Csp_t.Ats_t.Lys);
+    Protein_sequencepdb_t.Csp_t.Ats_t.Aminoacid_glycine_tlc_symbol
+     Protein_sequencepdb_t.Csp_t.Ats_t.Gly
+]
+
+]
+);;

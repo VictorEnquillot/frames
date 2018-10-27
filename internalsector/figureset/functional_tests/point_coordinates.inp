@@ -1,0 +1,38 @@
+# input
+   model =
+     model_name = center_a
+     model_title = "a point"
+     database_name = db1 
+     entity_what = point
+     entity_name = a
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+# output
+   coordinates =
+     coordinates_name = coordinates_a_2
+     coordinates_units_list = { meter degree }
+     coordinates_what = spherical
+   end # coordinates
+
+   property =	
+     property_name = coordinates_a 
+     property_title = "the coordinates of Center A"  
+     property_units_list = { meter radian } 
+     property_file = center_a_coordinates.out 
+     property_what = coordinates_a_2
+     property_model_input = center_a
+   end # property
+
+   target = 
+     domain_name = figure
+     target_name = center_a_coordinates
+     target_title = "Coordinates for Center A"
+     target_property = coordinates_a
+   end # target
+
+   domain =
+    domain_name = figure
+    target_list = { center_a_coordinates }
+   end # domain

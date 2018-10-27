@@ -1,0 +1,38 @@
+digraph dgn {
+    size="14,14";
+
+    Title [label = "The BNF Tree\nfor an Localinput\nDefine block" fontsize=24, shape="record", color=lightblue, style=filled];
+
+
+    edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+    node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+   "<handle_command_block_define>";
+
+    node [color=lightblue, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+"context";
+
+
+  "<handle_command_block_define>" -> {"define"};
+
+    node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+  "<handle_command_block_define>" -> {"<define_block>"};
+
+    node [color=lightblue, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+  "<handle_command_block_define>" -> {"end_define"};
+    node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+  "<define_block>"         -> {"context"};
+  "<define_block>"         -> {"<context_block>"};
+  "<context_block>"          -> {"domain" "database" "databox"};
+
+  
+  node [color=lightblue, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+  "<context_block>"        -> {"end_context"};
+  "domain"                 -> {"prototype"};
+  "database"               -> {"nwchem"};
+  "databox"               -> {"cc_pvtz"};
+}
+

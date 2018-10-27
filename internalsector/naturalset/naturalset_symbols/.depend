@@ -1,0 +1,56 @@
+Operation_symbol_t.cmo :
+Operation_symbol_t.cmx :
+Token_symbol_t.cmo : Operation_symbol_t.cmo
+Token_symbol_t.cmx : Operation_symbol_t.cmx
+Expression_atomic_digit_symbol_t.cmo :
+Expression_atomic_digit_symbol_t.cmx :
+Expression_atomic_symbol_t.cmo : Expression_atomic_digit_symbol_t.cmo
+Expression_atomic_symbol_t.cmx : Expression_atomic_digit_symbol_t.cmx
+Expression_symbol_t.cmo : Expression_atomic_symbol_t.cmo
+Expression_symbol_t.cmx : Expression_atomic_symbol_t.cmx
+Natural_symbol_t.cmo : Token_symbol_t.cmo Expression_symbol_t.cmo
+Natural_symbol_t.cmx : Token_symbol_t.cmx Expression_symbol_t.cmx
+Operation_symbol_v.cmo : Operation_symbol_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmo
+Operation_symbol_v.cmx : Operation_symbol_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmx
+Token_symbol_v.cmo : Token_symbol_t.cmo Operation_symbol_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmo
+Token_symbol_v.cmx : Token_symbol_t.cmx Operation_symbol_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmx
+Expression_atomic_digit_symbol_v.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmo \
+    Expression_atomic_digit_symbol_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmo
+Expression_atomic_digit_symbol_v.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmx \
+    Expression_atomic_digit_symbol_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmx
+Expression_atomic_symbol_v.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmo \
+    Expression_atomic_symbol_t.cmo Expression_atomic_digit_symbol_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmo
+Expression_atomic_symbol_v.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmx \
+    Expression_atomic_symbol_t.cmx Expression_atomic_digit_symbol_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmx
+Expression_symbol_v.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmo \
+    Expression_symbol_t.cmo Expression_atomic_symbol_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmo
+Expression_symbol_v.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmx \
+    Expression_symbol_t.cmx Expression_atomic_symbol_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmx
+Natural_symbol_v.cmo : Token_symbol_v.cmo Natural_symbol_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmo \
+    Expression_symbol_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmo
+Natural_symbol_v.cmx : Token_symbol_v.cmx Natural_symbol_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Management_v.cmx \
+    Expression_symbol_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Error_messages_v.cmx

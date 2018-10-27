@@ -1,0 +1,15 @@
+(** {6 Building_and_storing_proper_sons} *)
+
+let build_n_store sym_gba soi_gro =
+  let sym_cal_l = Group_for_formula_body_builder_alone_interface_v.make sym_gba in
+  let soi_cal_l =               (* Sole_index_datastructure_of_datastructure_of_sole_index *)
+    Sole_index_v.son_sole_index_list_of_int_of_length_of_sole_index
+      1 (List.length sym_cal_l)
+      soi_gro
+  in
+
+  let gss_of_sym = Generatorset_symbol_v.generatorset_symbol_of_camlline_symbol in
+  Tools_fgnr_v.store_builder_gss_datastructure gss_of_sym sym_cal_l soi_cal_l;
+  
+  List.map2 Tag_v.make sym_cal_l soi_cal_l
+;;

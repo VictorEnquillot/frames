@@ -1,0 +1,17 @@
+ #use "textended_by_v.ml";; 
+ext_2u;;
+Exb_v.count ext_2u;;
+Exb_v.basic_off_extended_by ext_2u;;
+Exb_v.map (fun s -> 10.) ext_2u;;
+Exb_v.extension_off_extended_by exb;;
+Exb_v.extension_off_extended_by ext_2u;;
+Exb_v.map (fun s -> 10.) ext_2u;;
+Exb_v.map (fun i -> i) (fun s -> 10.) ext_2u;;
+Exb_v.name (fun s -> s) ext_2u ;;
+ (
+Exb_v.name (fun i -> Format.sprintf "%i" i) (fun s -> s) ext_2u 
+=
+"x2a"
+);;
+Exb_v.name (fun i -> Format.sprintf "%i" i) (fun s -> s) ext_2u 
+;;

@@ -1,0 +1,5 @@
+  let fin = Database_filename_by_category_trail_provider_v.provide tra_cat in
+  Format.fprintf Format.std_formatter "%i records read from Database file :@.   >%s<@." 
+    (List.length result) 
+    (Filename_p.fullname fin) 
+    ;

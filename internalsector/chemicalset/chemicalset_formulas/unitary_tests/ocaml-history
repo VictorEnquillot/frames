@@ -1,0 +1,3151 @@
+#use "tacg_buried_aminoacid_leftextended_symbol_list_v.ml";; 
+ Bals_v.buried_aminoacid_leftextended_symbol_list_off_largest_embedded_sequence seq_plp;;
+#use "tacg_buried_aminoacid_leftextended_symbol_list_v.ml";; 
+#use "tsac_buried_aminoacid_leftextended_symbol_list_v.ml";; 
+seq_lxa;;
+#use "tacg_buried_aminoacid_leftextended_symbol_list_v.ml";; 
+seq_lxa;;
+#use "tacg_buried_aminoacid_leftextended_symbol_list_v.ml";; 
+ seq_lxa;;
+seq_lxa ;;
+smb_alx ;;
+let s= buried_aminoacid_leftextended_symbol_of_polyglycinenonglycineended_symbol seq_lem;;
+#use "tacg_buried_aminoacid_leftextended_symbol_list_v.ml";; 
+s = smb_alx;;
+#use "tacg_buried_aminoacid_leftextended_symbol_list_v.ml";; 
+s = smb_alx;;
+#use "tacg_buried_aminoacid_leftextended_symbol_list_v.ml";; 
+#use "tsac_polypeptide_symbol_formula_constrained_v.ml";;
+llt ;;
+#use "tsac_polypeptide_symbol_formula_constrained_v.ml";;
+frc_smb_plp;;
+(
+    Psfc_v.capped_leafed_tree_of_polypeptide_symbol smb_plp
+  =
+frc_smb_plp
+);;
+Psfc_v.name frc_smb_plp;;
+#use "tsac_polypeptide_symbol_formula_constrained_v.ml";;
+#use "tsac_polypeptide_symbol_formula_v.ml";;
+frm_smb_plp ;;
+#use "tsac_polypeptide_symbol_formula_v.ml";;
+Psf_v.name frm_smb_plp;;
+#use "tsac_polypeptide_symbol_formula_v.ml";;
+smb_frx_l;;
+#use "tsac_polypeptide_symbol_formula_v.ml";;
+#use "tacg_polypeptide_symbol_formula_v.ml";;
+#use "tacg_polypeptide_symbol_formula_constrained_v.ml";;
+smb_xbn_l ;;
+frc_smb_plp;;
+#use "tacg_polypeptide_symbol_formula_constrained_v.ml";;
+smb_ctx;;
+#use "tacg_polypeptide_symbol_formula_constrained_v.ml";;
+smb_ctx;;
+#use "tacg_polypeptide_symbol_formula_constrained_v.ml";;
+seq_ctg ;;
+smb_ctx;;
+#use "tacg_polypeptide_symbol_formula_constrained_v.ml";;
+seq_ctg ::
+;;
+seq_ctg;;
+#use "tacg_polypeptide_symbol_formula_constrained_v.ml";;
+#use "tgac_polypeptide_symbol_formula_constrained_v.ml";;
+seq_ctg;;
+#use "tgac_polypeptide_symbol_formula_constrained_v.ml";;
+smb_xbn_l ;;
+#use "tgac_polypeptide_symbol_formula_constrained_v.ml";;
+smb_ctx;;
+smb_frx_lt;;
+frc_smb_plp;;
+#use "tgac_polypeptide_symbol_formula_constrained_v.ml";;
+#use "tgac_polypeptide_symbol_formula_v.ml";;
+frm_smb_plp;;
+Psf_v.name frm_smb_plp;;
+smb_frx_l;;
+smb_blk_l ;;
+smb_atm_l;;
+#use "tgac_polypeptide_symbol_formula_v.ml";;
+#use "tsac_polypeptide_symbol_formula_v.ml";;
+#use "tpac_polypeptide_symbol_formula_v.ml";;
+frm_smb_plp;;
+Psf_v.name frm_smb_plp;;
+smb_atm_l ;;
+smb_blk_l ;;
+smb_frx_l;;
+#use "tpac_polypeptide_symbol_formula_v.ml";;
+#use "tpti_polypeptide_symbol_formula_v.ml";;
+frm_smb_plp;;
+smb_plp;;
+#use "tpti_polypeptide_symbol_formula_v.ml";;
+frm_smb_plp;;
+Psf_v.name frm_smb_plp;;
+#use "tpti_polypeptide_symbol_formula_v.ml";;
+#use "tacg_polypeptide_symbol_formula_v.ml";;
+#use "tacg_polypeptide_symbol_formula_constrained_v.ml";;
+#use "tagc_polypeptide_symbol_formula_constrained_v.ml";;
+smb_xbn_l;;
+seq_ctg;;
+smb_ctx;;
+#use "tagc_polypeptide_symbol_formula_constrained_v.ml";;
+smb_ctx;;
+#use "tagc_polypeptide_symbol_formula_constrained_v.ml";;
+smb_frx_lt;;
+frc_smb_plp;;
+#use "tagc_polypeptide_symbol_formula_constrained_v.ml";;
+#use "tapg_protein_symbol_formula_v.ml";; 
+smb_plp_l;;
+ #use "tpeptideca_embedded_symbol_formula_constrained_v.ml";; 
+let smb_peg = Pes_v.make_of_aminoacid_glycine_symbol Aas_t.Glycine;;
+let frc_smb_pce = Pesfc_v.retrieve smb_pce;;
+Pes_v.make_of_aminoacid_regular_symbol Aas_t.Alanine;;
+let smb_pen = Pes_v.make_of_aminoacid_nonclycine_symbol Aas_t.Proline;;
+ #use "tpeptideca_embedded_symbol_formula_constrained_v.ml";; 
+let smb_pen = Pes_v.make_of_aminoacid_nonclycine_symbol Aas_t.Proline;;
+Aas_t.Proline;;
+Pes_v.make_of_aminoacid_nonglycine_symbol;;
+ #use "tpeptideca_embedded_symbol_formula_constrained_v.ml";; 
+Pes_v.make_of_aminoacid_nonglycine_symbol;;
+let smb_per = Pes_v.make_of_aminoacid_regular_symbol Aas_t.Alanine;;
+let smb_pen = Pes_v.make_of_aminoacid_nonglycine_symbol Aas_t.Proline;;
+let smb_peg = Pes_v.make_of_aminoacid_glycine_symbol Aas_t.Glycine;;
+ #use "tpeptideca_embedded_symbol_formula_constrained_v.ml";; 
+frc_smb_peg ;;
+Pesfc_v.name frc_smb_peg;;
+ #use "tpeptideca_embedded_symbol_formula_constrained_v.ml";; 
+frc_smb_pep   ;;
+Pesfc_v.name frc_smb_pep;;
+frc_smb_per;;
+Pesfc_v.name frc_smb_per;;
+ #use "tpeptideca_embedded_symbol_formula_constrained_v.ml";; 
+ #use "tpeptideca_nterminal_symbol_formula_constrained_v.ml";; 
+frc_smb_png ;;
+Pnsfc_v.name frc_smb_png;;
+frc_smb_pnp ;;
+Pnsfc_v.name frc_smb_pnp ;;
+frc_smb_pnr   ;;
+Pnsfc_v.name frc_smb_pnr;;
+#use "tglycine_sidechain_symbol_formula_constrained_v.ml";; 
+smb_sdc;;
+let smb_sdc = Sds_v.make smb_ama;;
+(
+try Ssfc_v.retrieve smb_sdc;;
+with Failure "Glycine:Scs_v.sidechain_symbol_of_aminoacid_symbol" -> true
+);;
+#use "tglycine_sidechain_symbol_formula_constrained_v.ml";; 
+(
+try Ssfc_v.retrieve smb_sdc
+with Failure "Glycine:Scs_v.sidechain_symbol_of_aminoacid_symbol" -> true
+);;
+#use "tglycine_sidechain_symbol_formula_constrained_v.ml";; 
+test_raises_some_failure Sds_v.make smb_ama;;
+test_raises_some_failure (Sds_v.make smb_ama);;
+test_raises_some_failure Sds_v.make smb_ama;;
+#use "tglycine_sidechain_symbol_formula_constrained_v.ml";; 
+ #use "talanine_residue_embedded_symbol_formula_constrained_v.ml";; 
+smb_rse;;
+ #use "talanine_residue_embedded_symbol_formula_constrained_v.ml";; 
+smb_rse;;
+frc_smb_rse;;
+ #use "talanine_residue_embedded_symbol_formula_constrained_v.ml";; 
+smb_pce;;
+smb_sdc;;
+ #use "talanine_residue_embedded_symbol_formula_constrained_v.ml";; 
+Resfc_v.name frc_smb_rse ;;
+ #use "talanine_residue_embedded_symbol_formula_v.ml";; 
+smb_rse ;;
+frm_smb_rse;;
+ #use "talanine_residue_embedded_symbol_formula_v.ml";; 
+frm_smb_rse;;
+ #use "talanine_residue_embedded_symbol_formula_v.ml";; 
+frm_smb_rse;;
+smb_pce;;
+ (
+Resf_v.peptideca_embedded_symbol_off_residue_embedded_symbol smb_rse
+=
+smb_pce 
+);;
+smb_sdc;;
+Resf_v.name frm_smb_rse ;;
+ #use "talanine_residue_embedded_symbol_formula_v.ml";; 
+ #use "tglycine_residue_embedded_symbol_formula_constrained_v.ml";; 
+let  smb_rse = Rfsc_v.retrieve_of_aminoacid_symbol smb_ama;;
+let smb_rse = Refsc_v.retrieve_of_aminoacid_symbol smb_ama;;
+ #use "tglycine_residue_embedded_symbol_formula_constrained_v.ml";; 
+Resfc_v.retrieve_of_aminoacid_symbol smb_ama;;
+let smb_rse = Res_t.Aminoacid_symbol smb_ama;;
+let smb_rse = Res_v.make Aas_v.glycine;;
+module Res_v = Residue_embedded_symbol_v;;
+let smb_rse = Res_v.make Aas_v.glycine;;
+module Aas_t = Aminoacid_symbol_t
+module Aas_v = Aminoacid_symbol_v
+module Psfc_t = Peptideca_symbol_formula_constrained_t
+module Psfc_v = Peptideca_symbol_formula_constrained_v
+module Res_t = Residue_embedded_symbol_t
+module Res_v = Residue_embedded_symbol_v
+module Rsfc_t = Residue_symbol_formula_constrained_t
+module Rsfc_v = Residue_symbol_formula_constrained_v
+module Resfc_v = Residue_embedded_symbol_formula_constrained_v
+let smb_rse = Res_v.make Aas_v.glycine;;
+Resfc_v.retrieve smb_rse;;
+ #use "tglycine_residue_embedded_symbol_formula_constrained_v.ml";; 
+ #use "talanine_sidechain_symbol_formula_constrained_v.ml";; 
+let smb_ama = Aas_v.alanine;;
+let smb_sdc = Scs_v.sidechain_symbol_of_aminoacid_symbol smb_ama;;
+let frc_smb_sdc = Ssfc_v.retrieve smb_sdc;;
+Ssfc_v.name frc_smb_sdc ;;
+(
+Ssfc_v.sidechain_symbol_formula_constrained_of_aminoacid_symbol smb_ama
+ (* : Sidechain_symbol_formula_constrained_t.sidechain_symbol_formula_constrained *)
+=
+frc_smb_sdc
+);;
+ #use "tproline_sidechain_symbol_formula_constrained_v.ml";; 
+frc_smb_sdc;;
+Ssfc_v.name frc_smb_sdc ;;
+ #use "tproline_sidechain_symbol_formula_constrained_v.ml";; 
+frc_smb_sdc;;
+ #use "tproline_sidechain_symbol_formula_constrained_v.ml";; 
+Ssfc_v.name frc_smb_sdc ;;
+ #use "tproline_sidechain_symbol_formula_constrained_v.ml";; 
+ #use "ttyrosine_sidechain_symbol_formula_constrained_v.ml";; 
+smb_sdc;;
+frc_smb_sdc;;
+Ssfc_v.name frc_smb_sdc ;;
+ #use "ttyrosine_sidechain_symbol_formula_constrained_v.ml";; 
+ #use "tglycine_sidechain_symbol_formula_constrained_v.ml";; 
+let smb_ama = Aas_v.glycine;;
+let smb_sdc = Scs_v.make smb_ama;;
+module Aas_t = Aminoacid_symbol_t
+module Aas_v = Aminoacid_symbol_v
+module Scs_t = Sidechain_symbol_t
+module Scs_v = Sidechain_symbol_v
+module Ssfc_t = Sidechain_symbol_formula_constrained_t
+module Ssfc_v = Sidechain_symbol_formula_constrained_v
+(* Sidechain Symbol *)
+let smb_ama = Aas_v.glycine;;
+let smb_sdc = Scs_v.make smb_ama;;
+let frc_smb_sdc = Sfsc_v.retrieve smb_sdc;;
+let frc_smb_sdc = Ssfc_v.retrieve smb_sdc;;
+Ssfc_v.name frc_smb_sdc ;;
+ #use "tglycine_sidechain_symbol_formula_constrained_v.ml";; 
+   #use "tblock_symbol_formula_v.ml";; 
+frm_smb_blk_coo ;;
+   #use "tblock_symbol_formula_v.ml";; 
+#use "ttryptophan_sidegroup_symbol_formula_constrained_v.ml";; 
+smb_sdc;;
+frc_smb_sdc;;
+Ssfc_v.name frc_smb_sdc ;;
+#use "ttryptophan_sidegroup_symbol_formula_constrained_v.ml";; 
+#use "ttryptophan_sidegroup_symbol_formula_v.ml";; 
+smb_sdc;;
+#use "ttryptophan_sidegroup_symbol_formula_v.ml";; 
+frm_smb_sdc;;
+let frm_smb_sdc = Ssf_v.make smb_sdc;;
+#use "ttryptophan_sidegroup_symbol_formula_v.ml";; 
+smb_sdg;;
+#use "ttryptophan_sidegroup_symbol_formula_v.ml";; 
+frm_smb_sdg;;
+#use "ttryptophan_sidegroup_symbol_formula_v.ml";; 
+Ssf_v.name frm_smb_sdg ;;
+smb_frg_l;;
+smb_blk_l ;;
+smb_atm_l;;
+ #use "talanine_sidegroup_symbol_formula_v.ml";; 
+smb_sdg;;
+frm_smb_sdg;;
+Ssf_v.name frm_smb_sdg ;;
+smb_frg_l;;
+ #use "talanine_sidegroup_symbol_formula_v.ml";; 
+smb_blk_l;;
+testi 5;;
+smb_atm_l;;
+smb_frg_l;;
+ #use "ttrp_backbone_atom_recordpdb_keypdb_and_semipath_v.ml";;
+#use "tacg_buried_aminoacid_leftextended_symbol_list_v.ml";; 
+let smb_plp = Pls_t.Acg;;
+let seq_plp = Psq_v.make smb_plp;;
+#use "tagc_polypeptide_symbol_formula_v.ml";; 
+ #use "tagc_polypeptide_symbol_formula_constrained_v.ml";; 
+seq_plp;;
+let seq_plp = Psq_v.make smb_plp;;
+ #use "tagc_polypeptide_symbol_formula_constrained_v.ml";; 
+ #use "tacg_buried_aminoacid_leftextended_symbol_list_v.ml";; 
+Bals_v.shortname_list smb_bal_l;;
+ #use "t1try_polypeptide_symbol_formula_v.ml";; 
+ #use "t1try_polypeptide_sequence_v.ml";; 
+ #use "ttryptophan_sidegroup_symbol_formula_constrained_v.ml";; 
+ #use "ttryptophan_sidegroup_symbol_formula_v.ml";; 
+ #use "t1try_polypeptide_sequence_v.ml";; 
+Psq_v.name seq_plp;;
+smb_ntl;;
+ #use "t1try_polypeptide_sequence_v.ml";;  #use "t0tab_polypeptide_sequence_v.ml";; 
+ #use "t0tab_polypeptide_sequence_v.ml";; 
+Psq_v.name seq_plp;;
+seq_ntr;;
+ #use "t0tab_polypeptide_sequence_v.ml";; 
+seq_ntg;;
+seq_ngr
+;;
+ #use "t0tab_polypeptide_sequence_v.ml";; 
+seq_rem;;
+seq_lem;;
+seq_ctg;;
+ #use "t0tab_polypeptide_sequence_v.ml";; 
+ #use "t0tab_a_polypeptide_sequence_v.ml";; 
+ #use "t0tab_d_polypeptide_sequence_v.ml";; 
+ #use "t0tab_a_polypeptide_symbol_formula_v.ml";; 
+smb_plp;;
+Psf_v.make_of_formula_constrained frc_smb_plp;;
+(
+Psf_v.make_of_formula_constrained frc_smb_plp
+  =
+frm_smb_plp
+);;
+Psf_v.name frm_smb_plp;;
+ (
+smb_frx_t
+=
+frm_smb_plp
+);;
+smb_frx_l ;;
+ #use "t0tab_a_polypeptide_symbol_formula_v.ml";; 
+ #use "t0tab_d_polypeptide_symbol_formula_v.ml";; 
+Psf_v.name frm_smb_plp;;
+ #use "t0tab_d_polypeptide_symbol_formula_v.ml";; 
+#use "t0tab_d_polypeptide_sequence_v.ml";; 
+Psq_v.name seq_plp
+;;
+(
+seq_ntr
+(* : Polypeptide_sequence_t.polypeptide_sequence *
+    Polypeptide_sequence_t.polypeptide_sequence *)
+=
+ [Aas_v.alanine; Aas_v.glycine; Aas_v.proline; Aas_v.glycine; Aas_v.alanine;
+]
+);;
+seq_ntr
+;;
+#use "t0tab_d_polypeptide_sequence_v.ml";; 
+seq_ntg;;
+seq_ngr;;
+seq_rem;;
+seq_lem;;
+seq_ctg;;
+#use "t0tab_d_polypeptide_sequence_v.ml";; 
+#use "ttryptophan_sidegroup_symbol_formula_v.ml";; 
+frm_smb_sdg;;
+Ssf_v.name frm_smb_sdg ;;
+smb_frg_l;;
+smb_blk_l ;;
+smb_atm_l;;
+#use "ttryptophan_sidegroup_symbol_formula_v.ml";; 
+ #use "ttryptophan_sidegroup_symbol_formula_constrained_v.ml";; 
+frc_smb_sdc;;
+ #use "ttryptophan_sidegroup_symbol_formula_constrained_v.ml";; 
+frc_smb_sdc;;
+Ssfc_v.name frc_smb_sdc ;;
+ #use "ttryptophan_sidegroup_symbol_formula_constrained_v.ml";; 
+module Sqi_v = Sequential_index_v;;
+#use "sequential_index_t.ml";;
+ #use "tblock_marker_formula_v.ml";; 
+frm_mrk_blk_coo ;;
+(
+Bmf_v.atom_marker_list_off_block_marker_formula frm_mrk_blk_coo
+  =
+frm_mrk_blk_coo
+);;
+Bmf_v.name frm_mrk_blk_coo;;
+ #use "tblock_marker_formula_v.ml";; 
+Bmf_v.atom_marker_list_off_block_marker_formula frm_mrk_blk_coo;;
+frm_mrk_blk_coo;;
+let frm_mrk_blk_ch3 = Bmf_v.make mrk_blk_ch3;;
+ #use  "block_marker_formula_constrained_v.ml";; 
+capped_list_off_block_marker_formula_constrained;;
+capped_list_off_block_marker;;
+make_pair;;
+ #use  "tblock_marker_formula_constrained_v.ml";; 
+frm_mrk_blk_coo;;
+let mrk_blk_coo = Blm_v.make Bls_v.carboxyl Bli_v.u;;
+let frc_mrk_blk_coo = Bmfc_v.retrieve mrk_blk_coo;;
+Bmfc_v.core_atom_marker_off_block_marker_formula_constrained frc_mrk_blk_coo;;
+Bmfc_v.name frc_mrk_blk_coo;;
+Bmfc_v.leaf_atom_marker_list_off_block_marker_formula_constrained frc_mrk_blk_coo;;
+Bmfc_v.leaf_atom_marker_list_off_block_marker_formula_constrained frc_mrk_blk_ch3;;
+let mrk_blk_ch3 = Blm_v.make Bls_v.methyl Bli_v.t;;
+let frc_mrk_blk_ch3 = Bmfc_v.retrieve mrk_blk_ch3;;
+let mrk_blk_co = Blm_v.make Bls_v.carbonyl Bli_v.d;;
+let frc_mrk_blk_co = Bmfc_v.make mrk_blk_co;;
+Blm_v.make Bls_v.methyl Bli_v.t;;
+Bls_v.carbonyl;;
+Bls_v.carboxyl;;
+ #use  "tblock_marker_formula_constrained_v.ml";; 
+frc_mrk_blk_co;;
+Bmfc_v.core_atom_marker_off_block_marker_formula_constrained frc_mrk_blk_co;;
+Bmfc_v.core_atom_marker_off_block_marker_formula_constrained frc_mrk_blk_co
+;;
+Bmfc_v.leaf_atom_marker_list_off_block_marker_formula_constrained frc_mrk_blk_co;;
+ #use  "tblock_marker_formula_constrained_v.ml";; 
+frm_mrk_blk_coo;;
+ #use  "tblock_marker_formula_constrained_v.ml";; 
+frc_mrk_blk_ch3;;
+Bmfc_v.core_atom_marker_off_block_marker_formula_constrained frc_mrk_blk_ch3;;
+Bmfc_v.leaf_atom_marker_list_off_block_marker_formula_constrained frc_mrk_blk_ch3;;
+ #use  "tblock_marker_formula_constrained_v.ml";; 
+let mrk_blk_coo = Blm_v.make Bls_v.carboxyl Bli_v.u;;
+let frm_mrk_blk_coo = Bmf_v.make mrk_blk_coo;;
+ #use  "tblock_marker_formula_v.ml";; 
+let mrk_blk_coo = Blm_v.make Bls_v.carboxyl Bli_v.u;;
+let frm_mrk_blk_coo = Bmf_v.make mrk_blk_coo;;
+Bmf_v.atom_marker_list_off_block_marker_formula frm_mrk_blk_coo
+  =
+frm_mrk_blk_coo;;
+ #use  "tblock_marker_formula_v.ml";; 
+Bmf_v.name frm_mrk_blk_coo;;
+frm_mrk_blk_co;;
+ #use  "tblock_marker_formula_v.ml";; 
+Bmf_v.name frm_mrk_blk_co;;
+frm_mrk_blk_ch3;;
+Bmf_v.name frm_mrk_blk_ch3
+=
+;;
+Bmf_v.name frm_mrk_blk_ch3;;
+ #use  "tblock_marker_formula_v.ml";; 
+#use "tblock_symbol_formula_constrained_v.ml";; 
+frc_smb_blk_coo;;
+Bsfc_v.core_atom_symbol_off_block_symbol_formula_constrained frc_smb_blk_coo;;
+#use "tblock_symbol_formula_constrained_v.ml";; 
+Bsfc_v.core_atom_symbol_off_block_symbol_formula_constrained frc_smb_blk_coo;;
+Bsfc_v.leaf_atom_symbol_list_off_block_symbol_formula_constrained frc_smb_blk_coo;;
+frc_smb_blk_co;;
+Bsfc_v.core_atom_symbol_off_block_symbol_formula_constrained frc_smb_blk_co;;
+#use "tblock_symbol_formula_constrained_v.ml";; 
+Bsfc_v.leaf_atom_symbol_list_off_block_symbol_formula_constrained frc_smb_blk_co;;
+frc_smb_blk_ch3;;
+Bsfc_v.core_atom_symbol_off_block_symbol_formula_constrained frc_smb_blk_ch3;;
+Bsfc_v.leaf_atom_symbol_list_off_block_symbol_formula_constrained frc_smb_blk_ch3
+;;
+#use "tblock_symbol_formula_v.ml";; 
+frm_smb_blk_coo;;
+#use "tblock_symbol_formula_v.ml";; 
+Bsf_v.name frm_smb_blk_coo;;
+frm_smb_blk_co;;
+Bsf_v.name frm_smb_blk_co;;
+frm_smb_blk_ch3;;
+Bsf_v.name frm_smb_blk_ch3;;
+#use "tsegment_marker_formula_constrained_v.ml";; 
+smb_gly_n;;
+mrk_gly_n ;;
+frc_gly_n;;
+Smfc_v.name frc_gly_n;;
+#use "tsegment_marker_formula_constrained_v.ml";; 
+Smfc_v.oneone_block_marker_list_off_segment_marker mrk_gly_n;;
+frc_gly_e;;
+Smfc_v.name frc_gly_e;;
+Smfc_v.zeroone_block_marker_option_off_segment_marker mrk_gly_e;;
+Smfc_v.oneone_block_marker_list_off_segment_marker mrk_gly_e;;
+#use "tsegment_marker_formula_constrained_v.ml";; 
+mrk_gly_n ;;
+#use "tsegment_marker_formula_constrained_v.ml";; 
+frc_gly_n;;
+Smfc_v.zeroone_block_marker_option_off_segment_marker mrk_gly_n;;
+mrk_gly_e;;
+#use "tsegment_marker_formula_v.ml";; 
+frm_gly_n;;
+Ssf_v.name frm_gly_n ;;
+smb_atm_l_1;;
+#use "tsegment_marker_formula_v.ml";; 
+Smf_v.name frm_gly_n ;;
+#use "tsegment_marker_formula_v.ml";; 
+frm_gly_e;;
+#use "tsegment_marker_formula_v.ml";; 
+ (
+mrk_atm_l_n
+  =
+[Ats_v.ssth_n; 
+ Ats_v.slf_h; 
+ Ats_v.fo_c;
+ Ats_v.slf_h;
+]
+);;
+mrk_atm_l_n
+;;
+ (
+mrk_atm_l_n
+  =
+[(Ats_v.ssth_n, Ati_v.spc); 
+ (Ats_v.slf_h, Ati_v.spi); 
+ (Ats_v.slf_h, Ati_v.spl); 
+ (Ats_v.fo_c, Ati_v.spc); ;
+ (Ats_v.slf_h, Ati_v.spi); 
+ (Ats_v.slf_h, Ati_v.spl); 
+]
+);;
+(
+mrk_atm_l_n
+  =
+[(Ats_v.ssth_n, Ati_v.spc); 
+ (Ats_v.slf_h, Ati_v.spi); 
+ (Ats_v.slf_h, Ati_v.spl); 
+ (Ats_v.fo_c, Ati_v.spc);
+ (Ats_v.slf_h, Ati_v.spi); 
+ (Ats_v.slf_h, Ati_v.spl); 
+]
+);;
+#use "tsegment_marker_formula_v.ml";; 
+(
+mrk_atm_l_n
+  =
+[(Ats_v.ssth_n, Ati_v.spc); 
+ (Ats_v.slf_h, Ati_v.spi); 
+ (Ats_v.slf_h, Ati_v.spl); 
+ (Ats_v.fo_c, Ati_v.spc);
+ (Ats_v.slf_h, Ati_v.spi); 
+ (Ats_v.slf_h, Ati_v.spl); 
+]
+);;
+ (
+mrk_atm_l_n
+  =
+[(Ats_v.ssth_n, Ati_v.spc); 
+ (Ats_v.slf_h, Ati_v.spi); 
+ (Ats_v.slf_h, Ati_v.spl); 
+ (Ats_v.fo_c, Ati_v.spc);
+ (Ats_v.slf_h, Ati_v.stl); 
+ (Ats_v.slf_h, Ati_v.str); 
+]
+);;
+ (
+mrk_atm_l_n
+  =
+[(Ats_v.ssth_n, Ati_v.spc); 
+ (Ats_v.slf_h, Ati_v.spi); 
+ (Ats_v.slf_h, Ati_v.spl); 
+ (Ats_v.fo_c, Ati_v.stc);
+ (Ats_v.slf_h, Ati_v.stl); 
+ (Ats_v.slf_h, Ati_v.str); 
+]
+);;
+frm_gly_e;;
+#use "tsegment_marker_formula_v.ml";; 
+mrk_atm_l_e;;
+#use "tsegment_marker_formula_v.ml";;  #use "tsegment_symbol_formula_constrained_v.ml";; 
+smb_gly_e;;
+mrk_atm_l_e;;
+#use "tsegment_marker_formula_v.ml";; 
+mrk_atm_l_e;;
+#use "tsegment_marker_formula_v.ml";; 
+ mrk_blk_l_n;;
+frm_gly_e;;
+#use "tsegment_marker_formula_v.ml";; 
+frm_gly_e;;
+smb_gly_e;;
+#use "tsegment_symbol_formula_constrained_v.ml";; 
+frc_gly_e ;;
+q
+#use "tsegment_symbol_formula_constrained_v.ml";; 
+#use "tsegment_symbol_formula_v.ml";; 
+smb_seg_2;;
+#use "tsegment_symbol_formula_v.ml";; 
+frm_gly_n;;
+Ssf_v.name frm_gly_n;;
+(
+smb_blk_l_n
+=
+frm_gly_n 
+);;
+(
+smb_atm_l_n
+  =
+[Ats_v.ssth_n; 
+ Ats_v.slf_h; 
+ Ats_v.fo_c;
+ Ats_v.slf_h;
+]
+);;
+frm_gly_e;;
+Ssf_v.name frm_gly_e;;
+#use "tsegment_symbol_formula_v.ml";; 
+smb_atm_l_e;;
+#use "tsegment_symbol_formula_v.ml";; 
+#use "tsegment_symbol_formula_constrained_v.ml";; 
+frc_gly_e;;
+Ssfc_v.name frc_gly_e;;
+#use "tsegment_symbol_formula_constrained_v.ml";; 
+#use "tsegment_segment_formula_v.ml";; 
+#use "tsegment_marker_formula_v.ml";; 
+Smf_v.name frm_gly_e ;;
+mrk_atm_l_e;;
+#use "tsegment_marker_formula_v.ml";; 
+mrk_atm_l_e;;
+#use "tsegment_marker_formula_v.ml";; 
+Ats_v.nlf_o;;
+ #use "tsegment_marker_formula_constrained_v.ml";; 
+frc_gly_e;;
+ #use "tsegment_marker_formula_constrained_v.ml";; 
+Smfc_v.name frc_gly_e;;
+ #use "tsegment_marker_formula_constrained_v.ml";; 
+ #use "tsegment_marker_formula_v.ml";; 
+mrk_atm_l_e ;;
+(
+mrk_atm_l_e (* : Atom_marker_t.atom_marker list *) 
+=
+[(Ats_v.snth_c, Ati_v.ptc);
+ (Ats_v.nlf_o, Ati_v.ptb);
+ (Ats_v.snth_n, Ati_v.ptc);
+ (Ats_v.slf_h, Ati_v.ptb);
+ (Ats_v.fo_c, Ati_v.stc);
+ (Ats_v.slf_h, Ati_v.stl);
+ (Ats_v.slf_h, Ati_v.str);
+]
+);;
+(Ats_v.snth_c, Ati_v.ptc)
+=
+(Atom_marker_t.Ats_t.Core_atom_symbol
+   (Atom_marker_t.Ats_t.Threetied_atom_symbol
+     (Atom_marker_t.Ats_t.Nonsigma_threetied_atom_symbol
+       (Atom_marker_t.Ats_t.Singlenonsigma_threetied_atom_symbol
+         Atom_marker_t.Ats_t.Snth_C))),
+  Atom_marker_t.Ati_t.Sci_t.Planar_index
+   (Atom_marker_t.Ati_t.Sci_t.Planar_trigonal_index
+     Atom_marker_t.Ati_t.Sci_t.Pt_c));;
+(Ats_v.nlf_o, Ati_v.ptb)
+=
+ (Atom_marker_t.Ats_t.Leaf_atom_symbol
+   (Atom_marker_t.Ats_t.Double_leaf_atom_symbol Atom_marker_t.Ats_t.Dlf_O),
+  Atom_marker_t.Ati_t.Sci_t.Planar_index
+   (Atom_marker_t.Ati_t.Sci_t.Planar_trigonal_index
+     Atom_marker_t.Ati_t.Sci_t.Pt_b));;
+mrk_atm_l_e;;
+ #use "tsegment_marker_formula_v.ml";; 
+mrk_atm_l_e ;;
+ #use "tsegment_marker_formula_v.ml";; 
+ (
+mrk_atm_l_e (* : Atom_marker_t.atom_marker list *) 
+=
+[(Ats_v.snth_c, Ati_v.ptc);
+ (Ats_v.nlf_o, Ati_v.ptb);
+ (Ats_v.snth_n, Ati_v.ptc);
+ (Ats_v.slf_h, Ati_v.ptb);
+ (Ats_v.fo_c, Ati_v.stc);
+ (Ats_v.slf_h, Ati_v.stl);
+ (Ats_v.slf_h, Ati_v.str);
+]
+);;
+mrk_atm_l_e;;
+List.nth mrk_atm_l_e 2;;
+ #use "tsegment_marker_formula_v.ml";; 
+ (
+mrk_atm_l_e (* : Atom_marker_t.atom_marker list *) 
+=
+[(Ats_v.snth_c, Ati_v.ptc);
+ (Ats_v.nlf_o, Ati_v.ptb);
+ (Ats_v.snth_n, Ati_v.ptc);
+ (Ats_v.slf_h, Ati_v.ptb);
+ (Ats_v.fo_c, Ati_v.stc);
+ (Ats_v.slf_h, Ati_v.stl);
+ (Ats_v.slf_h, Ati_v.str);
+]
+);;
+ #use "tsegment_marker_formula_v.ml";; 
+#use "tclosed_fragment_marker_formula_constrained_v.ml";; 
+let mrk_blk_cbl_frz = Fmfc_v.block_marker_capped_leafbooted_list_of_zerozero_fragment_marker mrk_fzz;;
+#use "tclosed_fragment_marker_formula_constrained_v.ml";; 
+mrk_blk_sgl;;
+#use "tclosed_fragment_marker_formula_constrained_v.ml";; 
+mrk_flc ;;
+mrk_frx_sh_sb2_fl_lxb;;
+mrk_blk_cbl_sh_sb2_fl_lxb ;;
+frc_mrk_flc;;
+let frc_mrk_flc = Fmfc_v.retrieve mrk_flc;;
+#use "fragment_marker_formula_constrained_v.ml";; 
+let mrk_frg = mrk_flc;;
+  let (smb_frg, idx_frg) = mrk_frg ;;
+  match smb_frg with 
+ | Frs_t.Zerozero_fragment_symbol smb ->
+     let mrk = Mrk_v.make smb idx_frg in
+     retrieve_of_zerozero_fragment_marker mrk
+| _ -> failwith ""
+;;
+retrieve_of_zerozero_block_marker mrk;;
+retrieve_of_zerozero_block_marker;;
+#use "tclosed_fragment_marker_formula_constrained_v.ml";; 
+frc_mrk_flc ;;
+Fmfc_v.block_marker_biforkbooted_list_of_onebifork_fragment_marker;;
+#use "fragment_marker_formula_constrained_v.ml";; 
+Fsfc_v.block_symbol_biforkbooted_list_of_onebifork_fragment_symbol;;
+ block_marker_biforkbooted_list_of_onebifork_fragment_marker;;
+mrk_fbf;;
+let mrk_fbf = Mrk_v.make smb_fbf idx_frg;;
+#use "tburied_fragment_marker_formula_constrained_v.ml";; 
+mrk_fbf;;
+.block_marker_biforkbooted_list_of_onebifork_fragment_marker;;
+block_marker_biforkbooted_list_of_onebifork_fragment_marker;;
+#use "tburied_fragment_marker_formula_constrained_v.ml";; 
+mrk_blk_cbl_fbf ;;
+mrk_blk_cbl_frf_b;;
+ mrk_blk_cbl_ftf ;;
+mrk_blk_cbl_frf_t ::
+mrk_blk_cbl_frf_t ;;
+mrk_sb_fb_lxb;;
+#use "tburied_fragment_marker_formula_constrained_v.ml";; 
+mrk_blk_cbl_sb_fb_lxb ;;
+mrk_sb2_fb_lxb 
+;;
+mrk_blk_cbl_sb2_fb_lxb ;;
+ #use "tfragment_marker_formula_v.ml";; 
+frm_mrk_frg_1;;
+ #use "tfragment_marker_formula_v.ml";; 
+frm_mrk_frg_1;;
+ #use "tfragment_marker_formula_v.ml";; 
+#use "tfragment_marker_formula_v.ml";; 
+#use "fragment_marker_formula_v.ml";; 
+let mrk_frg =  mrk_frg_2 ;;
+let mrk_frg =  mrk_frg_1 ;;
+ let frc_mrk_frg = Fmfc_v.retrieve mrk_frg ;;
+make_of_formula_constrained;;
+#use "fragment_marker_formula_v.ml";; 
+let (smb_frg, idx_frg) = mrk_frg;;
+ make_of_formula_constrained mrk_frg ;;
+ make_of_formula_constrained;;
+mrk_frg ;;
+                               ^^^^^^^
+ mrk_frg ;;
+mrk_frg ;;
+#use "fragment_marker_formula_v.ml";; 
+#use "tfragment_marker_formula_v.ml";; 
+frm_mrk_frg_1;;
+Fmf_v.name frm_mrk_frg_1 ;;
+(
+mrk_blk_l_1
+=
+frm_mrk_frg_1 
+);;
+ (
+mrk_atm_l_1 (* : Atom_marker_t.atom_marker list *) 
+=
+[(Ats_v.snth_c, Ati_v.ptc);
+ (Ats_v.slf_h, Ati_v.stl);
+ (Ats_v.ssth_n, Ati_v.ptc);
+ (Ats_v.slf_h, Ati_v.stl);
+ (Ats_v.snth_c, Ati_v.ptc);]
+);;
+mrk_atm_l_1 ;;
+#use "tfragment_marker_formula_v.ml";; 
+frm_mrk_frg_1;;
+#use "tfragment_marker_formula_v.ml";; 
+Fmf_v.name frm_mrk_frg_1 ;;
+#use "tfragment_marker_formula_v.ml";; 
+mrk_atm_l_1;;
+#use "tfragment_marker_formula_v.ml";; 
+mrk_atm_l_1;;
+#use "tfragment_marker_formula_v.ml";; 
+frm_mrk_frg_2::
+frm_mrk_frg_2;;
+#use "tfragment_marker_formula_v.ml";; 
+mrk_atm_l_2;;
+#use "tfragment_marker_formula_v.ml";; 
+#use "tgrouping_symbol_formula_v.ml";; 
+frm_smb_grp_1;;
+Gsf_v.name frm_smb_grp_1 ;;
+#use "tgrouping_symbol_formula_v.ml";; 
+smb_frg_l_1;;
+smb_blk_l_1;;
+#use "tgrouping_symbol_formula_v.ml";; 
+smb_atm_l_1;;
+#use "tgrouping_symbol_formula_v.ml";; 
+smb_atm_l_1;;
+#use "tgrouping_symbol_formula_v.ml";; 
+#use "tguanidine_grouping_symbol_formula_v.ml";; 
+frm_smb_grp;;
+#use "tguanidine_grouping_symbol_formula_v.ml";; 
+frm_smb_grp;;
+#use "tguanidine_grouping_symbol_formula_v.ml";; 
+smb_atm_l;;
+#use "tguanidine_grouping_symbol_formula_v.ml";; 
+smb_atm_l;;
+#use "tguanidine_grouping_symbol_formula_v.ml";; 
+#use "tbenzyl_grouping_symbol_formula_v.ml";; 
+frm_smb_grp;;
+Gsf_v.name frm_smb_grp;;
+smb_frg_l;;
+smb_blk_l ;;
+smb_atm_l;;
+#use "tbenzyl_grouping_symbol_formula_v.ml";; 
+smb_atm_l;;
+#use "tbenzyl_grouping_symbol_formula_v.ml";; 
+Ats_v.snth_n;;
+Ats_v.snth_c; 
+;;
+#use "tbenzyl_grouping_symbol_formula_v.ml";; 
+#use "tleaf_grouping_symbol_formula_v.ml";; 
+#use "tleaf_grouping_marker_formula_v.ml";; 
+#use "tleaf_grouping_marker_formula_constrained_v.ml";; 
+#use "grouping_marker_formula_constrained_v.ml";; 
+carboxyl;;
+#use "grouping_marker_formula_constrained_v.ml";; 
+Frs_v.carboxyl_l;;
+carboxyl;;
+#use "grouping_symbol_formula_constrained_v.ml";; 
+Frs_v.amine_l;;
+Frs_v.carboxyl_l;;
+#use "tleaf_grouping_marker_formula_constrained_v.ml";; 
+Gmfc_v.amine;;
+#use "tleaf_grouping_marker_formula_constrained_v.ml";; 
+retrieve_of_leaf_fragment_symbol Frs_v.carboxyl_l ;;
+Gmfc_v.retrieve_of_leaf_fragment_symbol Frs_v.carboxyl_l ;;
+methyl;;
+Gmfc_v.methyl;;
+#use "tleaf_grouping_marker_formula_constrained_v.ml";; 
+Gmfc_v.retrieve_of_leaf_fragment_symbol Frs_v.carboxyl_l;;
+#use "tleaf_grouping_symbol_formula_constrained_v.ml";; 
+Gsfc_v.amine;;
+#use "tleaf_grouping_symbol_formula_constrained_v.ml";; 
+let a = Gsfc_v.amine;;
+ Gsfc_v.amine;;
+Gsfc_v.carboxyl;;
+#use "tleaf_grouping_symbol_formula_constrained_v.ml";; 
+make_pyramidal_of_buried_of_leaf_of_leaf Frs_v.b_ndcd Frs_v.nsh2_l Frs_v.nsh2_l;;
+Gmfc_v.make_pyramidal_of_buried_of_leaf_of_leaf Frs_v.b_ndcd Frs_v.nsh2_l Frs_v.nsh2_l;;
+#use "tleaf_grouping_marker_formula_constrained_v.ml";; 
+#use "grouping_marker_formula_constrained_v.ml";; 
+make_pyramidal_of_buried_of_leaf_of_leaf Frs_v.b_ndcd Frs_v.nsh2_l Frs_v.nsh2_l;;
+ make_pyramidal_of_buried_of_leaf_of_leaf Frs_v.b_nsh_cc Frs_v.nsh2_l Frs_v.nsh2_l;;
+make_pyramidal;;make_pyramidal_of_buried_of_leaf_of_leaf;;
+make_pyramidal_of_buried_of_leaf_of_leaf;;
+#use "tleaf_grouping_marker_formula_constrained_v.ml";; 
+Gmfc_v.make_planar_of_buried_of_leaf_of_leaf Frs_v.b_cch_r5bc Frs_v.hbc_l Frs_v.l_cch_r5bc ;;
+#use "tleaf_grouping_marker_formula_constrained_v.ml";; 
+Gmfc_v.make_planar_of_buried_of_leaf_of_leaf Frs_v.b_cch_r5bc Frs_v.hbc_l Frs_v.l_cch_r5bc ;;
+#use "grouping_marker_formula_constrained_v.ml";; 
+make_planar_of_buried_of_leaf_of_leaf Frs_v.b_cch_r5bc Frs_v.hbc_l Frs_v.l_cch_r5bc ;;
+make_planar_of_buried_of_leaf_of_leaf;;
+#use "tguanidine_grouping_symbol_formula_v.ml";; 
+#use "tguanidine_grouping_marker_formula_v.ml";; 
+#use "tguanidine_grouping_marker_formula_constrianed_v.ml";; 
+#use "tguanidine_grouping_marker_formula_constrained_v.ml";; 
+frc_mrk_grp;;
+#use "tguanidinium_grouping_marker_formula_constrained_v.ml";; 
+frc_mrk_grp;;
+#use "tguanidinium_grouping_marker_formula_constrained_v.ml";; 
+frc_mrk_grp;;
+#use "tguanidinium_grouping_marker_formula_constrained_v.ml";; 
+Gmfc_v.make_planar_of_buried_of_leaf_of_leaf Frs_v.b_cch_r5bc Frs_v.hbc_l Frs_v.l_cch_r5bc ;;
+#use "tguanidine_grouping_marker_formula_constrained_v.ml";; 
+frc_mrk_grp;;
+#use "tguanidine_grouping_marker_formula_constrained_v.ml";; 
+#use "tbenzyl_grouping_marker_formula_constrained_v.ml";; 
+ make_planar_of_buried_of_leaf_of_leaf Frs_v.c_h_2cc_b Frs_v.hbc_l Frs_v.cch_r5bc_l;;
+ Gmfc_v.make_planar_of_buried_of_leaf_of_leaf Frs_v.c_h_2cc_b Frs_v.hbc_l Frs_v.cch_r5bc_l;;
+#use "tbenzyl_grouping_marker_formula_constrained_v.ml";; 
+ Gmfc_v.make_planar_of_buried_of_leaf_of_leaf Frs_v.c_h_2cc_b Frs_v.hbc_l Frs_v.cch_r5bc_l;;
+#use "tbenzyl_grouping_marker_formula_constrained_v.ml";; 
+Gmfc_v.retrieve_of_grouping_bridged_marker;;
+#use "tbenzyl_grouping_marker_formula_constrained_v.ml";; 
+make_planar_of_buried_of_leaf_of_leaf Frs_v.cch_r4cc_b Frs_v.hbc_l Frs_v.hbc_l;;
+Gmfc_v.make_planar_of_buried_of_leaf_of_leaf Frs_v.cch_r4cc_b Frs_v.hbc_l Frs_v.hbc_l;;
+#use "tindolec3_grouping_marker_formula_constrained_v.ml";; 
+#use "tmetheneindole_grouping_symbol_formula_constrained_v.ml";; 
+#use "tmetheneindole_grouping_symbol_formula_v.ml";; 
+frm_smb_grp;;
+Gsf_v.name frm_smb_grp ;;
+smb_frg_l ;;
+smb_blk_l;;
+smb_atm_l;;
+#use "tmetheneindole_grouping_symbol_formula_v.ml";; 
+#use "grouping_marker_formula_constrained_v.ml";; 
+ make_planar_of_buried_of_leaf_of_leaf Frs_v.c_h_2cc_b Frs_v.hbc_l Frs_v.cch_r5bc_l;;
+#use "tbenzyl_grouping_marker_formula_constrained_v.ml";; 
+ frc_mrk_grp ;;
+#use "tbenzyl_grouping_marker_formula_constrained_v.ml";; 
+#use "tguanidine_grouping_marker_formula_constrained_v.ml";; 
+#use "tguanidinium_grouping_marker_formula_constrained_v.ml";; 
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";; 
+let benzole = Gmfc_v.make_planar_of_buried_of_leaf_of_leaf Frs_v.cch_r4cc_b Frs_v.hbc_l Frs_v.hbc_l;;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";; 
+ benzole;;
+let a = benzole;;
+let b = benzole;;
+a=b;;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";; 
+b;;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";; 
+benzole;;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";; 
+mrk_frb;;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";; let mrk_frb = Mrk_v.make Frs_v.cch_nch_cc_b Fri_v.ptc;;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";;  mrk_frb;;
+ mrk_frb;;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";;  mrk_frb;;
+mrk_frb ;;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";;
+mrk_benzole_b;;
+frc_mrk_benzole;;
+frc_mrk_benzole = benzole;;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";;
+Ltr_v.make_node 
+	mrk_frb [frc_mrk_benzole; hbc_l];;
+Ltr_v.make_node mrk_frb   [frc_mrk_benzole; hbc_l];;
+Ltr_v.make_node;;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";;
+Ltr_v.make_node mrk_frb   [frc_mrk_benzole; hbc_l];;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";;
+    Fragment_marker_t.Fri_t.Sci_t.Pt_b))])
+0 - : 
+let hbc_l = Ltr_v.make_leaf Frs_v.hbc_l;;
+Frs_v.hbc_l;;
+let hbc_l idx = Ltr_v.make_leaf (Mrk_v.make Frs_v.hbc_l idx);;
+frc_mrk_indole;;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";;
+frc_mrk_indole;;
+indole
+(* : (Fragment_marker_t.buried_fragment_marker,
+   Fragment_marker_t.leaf_fragment_marker)
+   Leafed_tree_t.leafed_tree *)
+  =
+frc_mrk_indole;;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";;
+mrk_frb_pyr;;
+mrk_indole_b;;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";;
+mrk_frb_pyr;;
+rk_frb_ben;;
+mrk_frb_ben;;
+mrk_benzole_b;;
+frc_mrk_benzole;;
+mrk_frb_ben;;
+mrk_frb_pyr;;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";;
+mrk_frb_mtc;;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";;
+frc_mrk_metheneindole;;
+#use "tmetheneindole_grouping_marker_formula_constrained_v.ml";;
+make_planar_of_buried_of_leaf_of_leaf Frs_v.c_h_2cc_b Frs_v.hbc_l Frs_v.cch_r5bc_l;;
+Gmfc_v.make_planar_of_buried_of_leaf_of_leaf Frs_v.c_h_2cc_b Frs_v.hbc_l Frs_v.cch_r5bc_l;;
+ #use "tgrouping_marker_formula_v.ml";; 
+frm_mrk_grp_1;;
+let frm_mrk_grp_1 = Fmf_v.make mrk_grp_1;;
+let mrk_grp_1 = Mrk_v.make smb_grp_1 idx_grp;;
+ #use "tgrouping_marker_formula_v.ml";; 
+let frm_mrk_grp_1 = Gmf_v.make mrk_grp_1;;
+let mrk_frg_l_1 = 
+  Gmf_v.fragment_marker_list_off_grouping_marker_formula 
+    frm_mrk_grp_1;;
+let mrk_atm_l_1 = 
+  Gmf_v.atom_marker_list_off_grouping_marker_formula 
+    frm_mrk_grp_1;;
+ #use "tgrouping_marker_formula_v.ml";; 
+frm_mrk_grp_1;;
+Gmf_v.name frm_mrk_grp_1 ;;
+mrk_atm_l_1;;
+(
+mrk_atm_l_1 (* : Atom_marker_t.atom_marker list *) 
+=
+[
+ (Ats_v.ssth_n, Ati_v.spc);
+ (Ats_v.slf_h, Ati_v.spl);
+ (Ats_v.slf_h, Ati_v.spr);
+]
+);;
+frm_mrk_grp_2;;
+let smb_grp_2 = Grs_v.benzyl idx_grp;;
+let mrk_grp_2 = Mrk_v.make smb_grp_2 idx_grp;;
+let frm_mrk_grp_2 = Gmf_v.make mrk_grp_2;;
+let smb_grp_2 = Grs_v.benzyl;;
+let mrk_grp_2 = Mrk_v.make smb_grp_2 idx_grp;;let frm_mrk_grp_2 = Gmf_v.make mrk_grp_2;;
+mrk_atm_l_2::
+;;
+ #use "tgrouping_marker_formula_v.ml";; 
+mrk_frg_l_1;;
+(
+mrk_frg_l_1
+=
+[Frs_v.amine]
+;;;;
+[Frs_v.amine];;
+(
+mrk_frg_l_1
+=
+[Frs_v.amine]
+;;
+ (
+mrk_frg_l_1
+=
+[Frs_v.amine]
+);;
+Frs_v.amine;;
+(
+mrk_frg_l_1
+=
+[Frm_v.amine]
+);;
+mrk_frg_l_1;;
+mrk_blk_l_1;;
+ (
+mrk_blk_l_1
+=
+[Mrk_v.make Bls_v.amine Bli_v.cauda]
+);;
+ #use "tgrouping_marker_formula_v.ml";; 
+ #use "tgrouping_marker_formula_v.ml";; mrk_frg_l_2;;
+ #use "tgrouping_marker_formula_v.ml";; 
+mrk_frg_l_2;;
+Grs_v.benzyl;;
+mrk_blk_l_2;;
+ #use "tgrouping_marker_formula_v.ml";; 
+mrk_blk_l_2;;
+frm_mrk_grp_2;;
+(
+mrk_frg_l_2
+=
+[
+Mrk_v.make Frs_v.cch_r4cc Fri_v.ptc;
+Mrk_v.make Frs_v.hbc Fri_v.pto;
+Mrk_v.make Frs_v.hbc Fri_v.ptb;
+]
+);;
+ #use "tgrouping_marker_formula_v.ml";; 
+frm_mrk_grp_2;;
+mrk_frg_l_2;;
+ (
+mrk_frg_l_2
+=
+[
+Mrk_v.make Frs_v.cch_r4cc Fri_v.ptc;
+Mrk_v.make Frs_v.hbc Fri_v.pto;
+Mrk_v.make Frs_v.hbc Fri_v.ptb;
+]
+);;
+ #use "tgrouping_marker_formula_v.ml";; 
+mrk_blk_l_2;;
+ #use "tgrouping_marker_formula_v.ml";; 
+mrk_blk_l_2;;
+ #use "tgrouping_marker_formula_v.ml";; 
+mrk_blk_l_2;;
+mrk_blk(_l_2;;
+mrk_blk_l_2
+=
+[
+Mrk_v.make Bls_v.osos_cch_ Bli_v.four;
+Mrk_v.make Bls_v.osos_cch_ Bli_v.three;
+Mrk_v.make Bls_v.osos_cch_ Bli_v.two;
+Mrk_v.make Bls_v.osos_cch_ Bli_v.one;
+Mrk_v.make Bls_v.bls_cc Bli_v.cauda;
+Mrk_v.make Bls_v.hbc Bli_v.cauda;
+]
+);;
+(
+mrk_blk_l_2
+=
+[
+Mrk_v.make Bls_v.osos_cch_ Bli_v.four;
+Mrk_v.make Bls_v.osos_cch_ Bli_v.three;
+Mrk_v.make Bls_v.osos_cch_ Bli_v.two;
+Mrk_v.make Bls_v.osos_cch_ Bli_v.one;
+Mrk_v.make Bls_v.bls_cc Bli_v.cauda;
+Mrk_v.make Bls_v.hbc Bli_v.cauda;
+]
+);;
+mrk_atm_l_2
+;;
+Gmf_v.name frm_mrk_grp_2 ;;
+mrk_atm_l_2
+;;
+(
+mrk_atm_l_2
+  =
+[(Atom_marker_t.Ats_t.Core_atom_symbol
+   (Atom_marker_t.Ats_t.Threetied_atom_symbol
+     (Atom_marker_t.Ats_t.Nonsigma_threetied_atom_symbol
+       (Atom_marker_t.Ats_t.Singlenonsigma_threetied_atom_symbol
+         Atom_marker_t.Ats_t.Snth_C))),
+  Atom_marker_t.Ati_t.Sci_t.Planar_index
+   (Atom_marker_t.Ati_t.Sci_t.Planar_trigonal_index
+     Atom_marker_t.Ati_t.Sci_t.Pt_c));
+ (Atom_marker_t.Ats_t.Leaf_atom_symbol
+   (Atom_marker_t.Ats_t.Single_leaf_atom_symbol Atom_marker_t.Ats_t.Slf_H),
+  Atom_marker_t.Ati_t.Sci_t.Planar_index
+   (Atom_marker_t.Ati_t.Sci_t.Planar_trigonal_index
+     Atom_marker_t.Ati_t.Sci_t.Pt_b));
+ (Atom_marker_t.Ats_t.Core_atom_symbol
+   (Atom_marker_t.Ats_t.Threetied_atom_symbol
+     (Atom_marker_t.Ats_t.Nonsigma_threetied_atom_symbol
+       (Atom_marker_t.Ats_t.Singlenonsigma_threetied_atom_symbol
+         Atom_marker_t.Ats_t.Snth_C))),
+  Atom_marker_t.Ati_t.Sci_t.Planar_index
+   (Atom_marker_t.Ati_t.Sci_t.Planar_trigonal_index
+     Atom_marker_t.Ati_t.Sci_t.Pt_c));
+ (Atom_marker_t.Ats_t.Leaf_atom_symbol
+   (Atom_marker_t.Ats_t.Single_leaf_atom_symbol Atom_marker_t.Ats_t.Slf_H),
+  Atom_marker_t.Ati_t.Sci_t.Planar_index
+   (Atom_marker_t.Ati_t.Sci_t.Planar_trigonal_index
+     Atom_marker_t.Ati_t.Sci_t.Pt_b));
+ (Atom_marker_t.Ats_t.Core_atom_symbol
+   (Atom_marker_t.Ats_t.Threetied_atom_symbol
+     (Atom_marker_t.Ats_t.Nonsigma_threetied_atom_symbol
+       (Atom_marker_t.Ats_t.Singlenonsigma_threetied_atom_symbol
+         Atom_marker_t.Ats_t.Snth_C))),
+  Atom_marker_t.Ati_t.Sci_t.Planar_index
+   (Atom_marker_t.Ati_t.Sci_t.Planar_trigonal_index
+     Atom_marker_t.Ati_t.Sci_t.Pt_c));
+ (Atom_marker_t.Ats_t.Leaf_atom_symbol
+   (Atom_marker_t.Ats_t.Single_leaf_atom_symbol Atom_marker_t.Ats_t.Slf_H),
+  Atom_marker_t.Ati_t.Sci_t.Planar_index
+   (Atom_marker_t.Ati_t.Sci_t.Planar_trigonal_index
+     Atom_marker_t.Ati_t.Sci_t.Pt_b));
+ (Atom_marker_t.Ats_t.Core_atom_symbol
+   (Atom_marker_t.Ats_t.Threetied_atom_symbol
+     (Atom_marker_t.Ats_t.Nonsigma_threetied_atom_symbol
+       (Atom_marker_t.Ats_t.Singlenonsigma_threetied_atom_symbol
+         Atom_marker_t.Ats_t.Snth_C))),
+  Atom_marker_t.Ati_t.Sci_t.Planar_index
+   (Atom_marker_t.Ati_t.Sci_t.Planar_trigonal_index
+     Atom_marker_t.Ati_t.Sci_t.Pt_c));
+ (Atom_marker_t.Ats_t.Leaf_atom_symbol
+   (Atom_marker_t.Ats_t.Single_leaf_atom_symbol Atom_marker_t.Ats_t.Slf_H),
+  Atom_marker_t.Ati_t.Sci_t.Planar_index
+   (Atom_marker_t.Ati_t.Sci_t.Planar_trigonal_index
+     Atom_marker_t.Ati_t.Sci_t.Pt_b));
+ (Atom_marker_t.Ats_t.Core_atom_symbol
+   (Atom_marker_t.Ats_t.Threetied_atom_symbol
+     (Atom_marker_t.Ats_t.Nonsigma_threetied_atom_symbol
+       (Atom_marker_t.Ats_t.Singlenonsigma_threetied_atom_symbol
+         Atom_marker_t.Ats_t.Snth_C))),
+  Atom_marker_t.Ati_t.Sci_t.Spherical_index
+   (Atom_marker_t.Ati_t.Sci_t.Spherical_tetrahedral_index
+     Atom_marker_t.Ati_t.Sci_t.St_c));
+ (Atom_marker_t.Ats_t.Core_atom_symbol
+   (Atom_marker_t.Ats_t.Closed_atom_symbol
+     (Atom_marker_t.Ats_t.Halfbridge_atom_symbol
+       Atom_marker_t.Ats_t.Hbs_t.Hbc)),
+  Atom_marker_t.Ati_t.Sci_t.Linear_index Atom_marker_t.Ati_t.Sci_t.Ln_c);
+ (Atom_marker_t.Ats_t.Core_atom_symbol
+   (Atom_marker_t.Ats_t.Closed_atom_symbol
+     (Atom_marker_t.Ats_t.Halfbridge_atom_symbol
+       Atom_marker_t.Ats_t.Hbs_t.Hbc)),
+  Atom_marker_t.Ati_t.Sci_t.Linear_index Atom_marker_t.Ati_t.Sci_t.Ln_c)]
+);;
+mrk_blk_l_2;;
+Bls_v.hbc;;
+Bls_v.hbc = Block_marker_t.Bls_t.Oneend_block_symbol
+   (Block_marker_t.Bls_t.Onezero_block_symbol
+     (Block_marker_t.Bls_t.Onezerohalfbridge_block_symbol
+       Block_marker_t.Bls_t.Hbs_t.Hbc));;
+#use "tgrouping_marker_formula_v.ml";; 
+#use "tleaf_grouping_marker_formula_constrained_v.ml";; 
+ #use "tleaffragment_grouping_marker_formula_constrained_v.ml";; 
+#use "tindolec3_grouping_marker_formula_constrained_v.ml";; 
+ benzole;;
+#use "tindolec3_grouping_marker_formula_constrained_v.ml";; 
+#use "tbenzole_grouping_marker_formula_constrained_v.ml";; 
+#use "tleaf_fragment_grouping_marker_formula_constrained_v.ml";; 
+ amide;;
+dietheneamine;;
+#use "tleaf_fragment_grouping_marker_formula_constrained_v.ml";; 
+etheneacid;;
+(
+etheneacid = 
+Gmfc_v.retrieve_of_leaf_fragment_symbol Frs_v.etheneacid_l
+);;
+ etheneamide;;
+);;dietheneamine;;
+dietheneamine;;
+ #use "tleaf_block_grouping_marker_formula_constrained_v.ml";; 
+carboxyl;;
+Gmfc_v.hydroxyl;;
+Gmfc_v.nsh2;;
+Gmfc_v.thiol;;
+ #use "tleaf_block_grouping_marker_formula_constrained_v.ml";; 
+ #use "tleaf_block_grouping_formula_constrained_v.ml";; 
+amine;;
+ #use "tleaf_block_grouping_formula_constrained_v.ml";; 
+ #use "tleaf_fragment_grouping_formula_constrained_v.ml";; 
+etheneacid;;
+amide 
+;;
+ #use "tleaf_fragment_grouping_formula_constrained_v.ml";; 
+#use "tblock_formula_constrained_v.ml";; 
+module Atm_t = Atom_marker_t
+module Atm_v = Atom_marker_v
+module Ats_t = Atom_symbol_t
+module Ats_v = Atom_symbol_v
+module Bls_t = Block_symbol_t
+module Bls_v = Block_symbol_v
+module Bfc_t = Block_formula_constrained_t
+module Bfc_v = Block_formula_constrained_v
+module Ord_p = Ordinal_p
+(** Coo- *)
+let frc_blk_coo = Bfc_v.retrieve Bls_v.carboxyl;; 
+Bfc_v.core_atom_marker_off_block_formula_constrained frc_blk_coo;;
+Bfc_v.core_symbol_marker_off_block_formula_constrained frc_blk_coo
+;;
+Bfc_v.core_atom_symbol_off_block_formula_constrained frc_blk_coo;;
+Bfc_v.leaf_atom_marker_list_off_block_formula_constrained frc_blk_coo;;
+ (
+Bfc_v.leaf_atom_marker_list_off_block_formula_constrained frc_blk_coo
+(* : Atom_marker_t.leaf_atom_marker list *) =
+[(Atom_marker_t.Ats_t.Nonsigma_leaf_atom_symbol Atom_marker_t.Ats_t.Nlf_O,
+  Atom_marker_t.Ati_t.Sci_t.Planar_index
+    (Atom_marker_t.Ati_t.Sci_t.Planar_trigonal_index
+       Atom_marker_t.Ati_t.Sci_t.Pt_b));
+ (Atom_marker_t.Ats_t.Nonsigma_leaf_atom_symbol Atom_marker_t.Ats_t.Nlf_O,
+  Atom_marker_t.Ati_t.Sci_t.Planar_index
+    (Atom_marker_t.Ati_t.Sci_t.Planar_trigonal_index
+       Atom_marker_t.Ati_t.Sci_t.Pt_o))]
+);;
+#use "tblock_formula_constrained_v.ml";; 
+frc_blk_co;;
+Bfc_v.core_atom_marker_off_block_formula_constrained frc_blk_co;;
+Bfc_v.core_atom_symbol_off_block_formula_constrained frc_blk_co;;
+Bfc_v.leaf_atom_marker_list_off_block_formula_constrained frc_blk_co;;
+#use "tblock_formula_constrained_v.ml";; 
+frc_blk_ch3;;
+Bfc_v.core_atom_symbol_off_block_formula_constrained frc_blk_ch3;;
+ (
+Bfc_v.leaf_atom_marker_list_off_block_formula_constrained frc_blk_ch3
+(* : Atom_marker_t.leaf_atom_marker list *)
+  =
+[(Atom_marker_t.Ats_t.Single_leaf_atom_symbol Atom_marker_t.Ats_t.Slf_H,
+  Atom_marker_t.Ati_t.Sci_t.Spherical_index
+   (Atom_marker_t.Ati_t.Sci_t.Spherical_tetrahedral_index
+     Atom_marker_t.Ati_t.Sci_t.St_l));
+ (Atom_marker_t.Ats_t.Single_leaf_atom_symbol Atom_marker_t.Ats_t.Slf_H,
+  Atom_marker_t.Ati_t.Sci_t.Spherical_index
+   (Atom_marker_t.Ati_t.Sci_t.Spherical_tetrahedral_index
+     Atom_marker_t.Ati_t.Sci_t.St_r));
+ (Atom_marker_t.Ats_t.Single_leaf_atom_symbol Atom_marker_t.Ats_t.Slf_H,
+  Atom_marker_t.Ati_t.Sci_t.Spherical_index
+   (Atom_marker_t.Ati_t.Sci_t.Spherical_tetrahedral_index
+     Atom_marker_t.Ati_t.Sci_t.St_o))]
+);;
+Bfc_v.leaf_atom_marker_list_off_block_formula_constrained frc_blk_ch3
+(* : Atom_marker_t.leaf_atom_marker list *);;
+#use "tblock_formula_constrained_v.ml";; 
+ #use "tfragment_formula_constrained_v.ml";; 
+Ffc.retrieve_of_halfbridge_symbol;;
+ #use "tfragment_formula_constrained_v.ml";; 
+Ffc.retrieve_of_halfbridge_symbol;;
+Ffc_v.retrieve Frs_v.methyl;;
+(
+ Ffc_v.retrieve Frs_v.methyl
+(* : Fragment_formula_constrained_t.fragment_formula_constrained *)
+ =
+Fragment_formula_constrained_t.Leafbooted_list
+ ([],
+  Fragment_formula_constrained_t.Bls_t.Onesinglezero_block_symbol
+   Fragment_formula_constrained_t.Bls_t.Osz_C_h_3)
+);;
+Fsf_v.block_symbol_list_off_fragment_formula Frs_v.methyl;;
+Fsf_v.block_symbol_list_off_fragment_symbol Frs_v.methyl;;
+Ffc_v.retrieve Frs_v.hbc 
+;;
+Fsf_v.name (Ffc_v.retrieve Frs_v.hbc);;
+Ffc_v.retrieve Frs_v.ethcar ;;
+ Ffc_v.retrieve Frs_v.methenesmethyl;;
+ #use "tfragment_formula_constrained_v.ml";; 
+ Ffc_v.retrieve Frs_v.methenesmethyl;;
+ #use "tfragment_formula_constrained_v.ml";; 
+Ffc_v.retrieve Frs_v.methenol;;
+Ffc_v.retrieve Frs_v.metheneamine;;
+Ffc_v.retrieve Frs_v.methene;;
+ #use "tfragment_grouping_formula_constrained_v.ml";; 
+ #use "tleaf_fragment_grouping_marker_formula_constrained_v.ml";;
+Frs_v.ethcar;;
+ #use "tbenzole_grouping_formula_constrained_v.ml";; 
+ Gfc_v.retrieve Grs_v.benzole;;
+ Grs_v.benzole;;
+ Gfc_v.retrieve Grs_v.benzole;;
+Gfc_v.retrieve ;;
+ #use "tbenzole_grouping_formula_constrained_v.ml";; 
+ Gfc_v.retrieve Grs_v.benzole;;
+#use "tmetheneindole_grouping_formula_constrained_v.ml";; 
+Gfc_v.metheneindole;;
+#use "tmetheneindole_grouping_formula_constrained_v.ml";; 
+#use "tblock_formula_constrained_v.ml";; 
+Bfc_v.leaf_atom_marker_list_off_block_formula_constrained frc_blk_coo;;
+#use "tblock_formula_constrained_v.ml";; 
+Bfc_v.leaf_atom_marker_list_off_block_formula_constrained frc_blk_coo;;
+Bfc_v.leaf_atom_marker_list_off_block_formula_constrained frc_blk_co;;
+#use "tblock_formula_constrained_v.ml";; 
+Bfc_v.leaf_atom_marker_list_off_block_formula_constrained frc_blk_ch3;;
+#use "tblock_formula_constrained_v.ml";; 
+#use "tgrouping_formula_constrained_v.ml";; 
+#use "tguanidine_grouping_formula_constrained_v.ml";; 
+ #use "tpolyfragment_grouping_formula_constrained_v.ml";; 
+module Gfc_t = Grouping_formula_constrained_t
+module Gfc_v = Grouping_formula_constrained_v
+;;
+Gfc_v.ethcaracidmethyllamine;;
+Gfc_v.ethcaracidmethylramine;;
+Gfc_v.ethineacidlamine;;
+Gfc_v.ethineacidramine;;
+Gfc_v.guanidine;;
+Gfc_v.guanidinium;;
+ #use "tpolyfragment_grouping_formula_constrained_v.ml";; 
+#use "tbridged_grouping_formula_constrained_v.ml";;
+module Gfc_t = Grouping_formula_constrained_t
+module Gfc_v = Grouping_formula_constrained_v
+;;
+Gfc_v.benzyl;;
+Gfc_v.benzole;;
+Gfc_v.dimethone;;
+Gfc_v.dimethonecarbonhydroxyldimethone;;
+Gfc_v.indole;;
+Gfc_v.metheneimidazole;;
+Gfc_v.metheneindole
+;;
+Gfc_v.methenephenol;;
+Gfc_v.phenol;;
+#use "tbridged_grouping_formula_constrained_v.ml";;
+Gfc_v.dimethonecarbonhydroxyldimethone;;
+Gfc_v.dimethone;;
+#use "tbridged_grouping_formula_constrained_v.ml";;
+Gfc_v.dimethone;;
+#use "tbridged_grouping_formula_constrained_v.ml";;
+#use "tmetheneindole_grouping_formula_constrained_v.ml";; 
+Gfc_v.metheneindole;;
+Gfc_v.benzole;;
+Gfc_v.indole;;
+Gfc_v.metheneindole;;
+Gfc_v.name Gfc_v.benzole;;
+Gfc_v.name Gfc_v.indole;;
+Gfc_v.name Gfc_v.metheneindole;;
+#use "tmetheneindole_grouping_formula_constrained_v.ml";; 
+#use "tbridged_grouping_formula_constrained_v.ml";; 
+Gfc_v.name Gfc_v.dimethone;;
+#use "tbridged_grouping_formula_constrained_v.ml";; 
+Gfc_v.name Gfc_v.dimethonecarbonhydroxyldimethone;;
+#use "tbridged_grouping_formula_constrained_v.ml";; 
+Gfc_v.name Gfc_v.metheneimidazole::
+Gfc_v.name Gfc_v.metheneimidazole;;
+#use "tbridged_grouping_formula_constrained_v.ml";; 
+Gfc_v.name Gfc_v.methenephenol;;
+*Gfc_v.name Gfc_v.phenol;;
+Gfc_v.name Gfc_v.phenol;;
+#use "tbridged_grouping_formula_constrained_v.ml";; 
+#use "t0tab_a_polypeptide_sequence_v.ml";; 
+#use "t0tab_d_polypeptide_sequence_v.ml";; 
+#use "t0tab_d_polypeptide_formula_v.ml";; 
+module Clt_v = Capped_leafed_tree_v
+module Cts_v = Cterminal_symbol_v
+module Pls_t = Fragment_symbol_t
+module Pfc_v = Polypeptide_symbol_t
+module Pfc_v = Polypeptide_formula_constrained_v
+;;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.retrieve smb_plp;;
+Psf_v.name frc_plp;;
+Pfc_v.name frc_plp;;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+let psq = Psq_v.make smb_plp;;
+Psq_v.name psq;;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+#use "t0tab_d_polypeptide_formula_constrained_v.ml";; 
+Psq_v.name (Psq_v.make smb_plp);;
+Pfc_v.retrieve smb_plp;;
+Pfc_v.name frc_plp;;
+#use "tblock_formula_constrained_v.ml";;
+Bfc_v.leaf_atom_marker_list_off_block_formula_constrained frc_blk_coo;;
+Bfc_v.leaf_atom_marker_list_off_block_formula_constrained frc_blk_co;;
+Bfc_v.leaf_atom_marker_list_off_block_formula_constrained frc_blk_ch3;;
+#use "tblock_formula_constrained_v.ml";;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.retrieve smb_plp;;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp;;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+#use "t0tab_d_polypeptide_formula_constrained_v.ml";; 
+#use "tblock_formula_v.ml";; 
+let smb_blk_coo = Bls_v.carboxylate;;
+let frm_blk_coo = Bsf_v.make smb_blk_coo;;
+Bsf_v.atom_symbol_list_off_block_formula frm_blk_coo;;
+#use "tblock_formula_v.ml";; 
+frm_blk_coo;;
+#use "tblock_formula_v.ml";; 
+Bsf_v.atom_symbol_list_off_block_formula frm_blk_coo;;
+Bsf_v.atom_symbol_doublet_list_off_block_formula frm_blk_coo
+  =
+frm_blk_coo;;
+Bsf_v.name frm_blk_coo;;
+frm_blk_co;;
+Bsf_v.name frm_blk_co;;
+frm_blk_ch3;;
+Bsf_v.name frm_blk_ch3;;
+#use "tblock_formula_v.ml";; 
+#use "tsegment_formula_v.ml";; 
+frm_gly_n;;
+Sgf_v.name frm_gly_n;;
+Sgf_v.atom_symbol_doublet_list_off_segment_formula frm_gly_n ;;
+(
+Sgf_v.atom_symbol_list_off_segment_formula frm_gly_n 
+  =
+[Ats_v.ssth_n; 
+ Ats_v.slf_h; 
+ Ats_v.fo_c;
+ Ats_v.slf_h;
+]
+);;
+#use "tsegment_formula_v.ml";; 
+frm_gly_e;;
+Sgf_v.name frm_gly_e;;
+Sgf_v.atom_symbol_doublet_list_off_segment_formula frm_gly_e;;
+#use "tsegment_formula_v.ml";; 
+#use "tfragment_formula_v.ml";; 
+frm_frg_a;;
+let smb_frg_ch3 = Frs_v.methyl;; 
+let frm_frg_ch3 = Fsf_v.make smb_frg_ch3;;
+#use "tfragment_formula_v.ml";; 
+let smb_frg_ch3 = Frs_v.methyl;; 
+let frm_frg_ch3 = Frf_v.make smb_frg_ch3;;
+(
+ frm_frg_ch3 (* : Fragment_formula_t.fragment_formula *)
+=
+  [Bls_v.metyl; Sci_v.tail)]
+);;
+ (
+ frm_frg_ch3 (* : Fragment_formula_t.fragment_formula *)
+=
+  [(Bls_v.metyl; Sci_v.tail)]
+);;
+(
+ frm_frg_ch3 (* : Fragment_formula_t.fragment_formula *)
+=
+  [(Bls_v.methyl; Sci_v.tail)]
+);;
+#use "tfragment_formula_v.ml";; 
+Frf_v.name frm_frg_ch3;;
+Sgf_v.atom_symbol_doublet_list_off_fragment_formula frm_frg_ch3;;
+Frf_v.atom_symbol_doublet_list_off_fragment_formula frm_frg_ch3;;
+(
+Frf_v.atom_symbol_doublet_list_off_fragment_formula frm_frg_ch3
+(* : (Atom_symbol_t.atom_symbol, Stereochemical_index_t.stereochemical_index)
+    Doublet_list_t.doublet_list *)
+=
+[
+ (Ats_v.fo_c, Sci_v.head);
+ (Ats_v.slf_h, Sci_v.sto);
+ (Ats_v.slf_h, Sci_v.str);
+ (Ats_v.slf_h, Sci_v.stl);
+]
+);;
+#use "tfragment_formula_v.ml";; 
+frm_frg_a;;
+Frf_v.name frm_frg_a;;
+Frf_v.atom_symbol_doublet_list_off_fragment_formula frm_frg_a;;
+#use "tfragment_formula_v.ml";; 
+#use "tblock_formula_v.ml";; 
+#use "tblock_formula_constrainedv.ml";; 
+#use "tblock_formula_constrained_v.ml";; 
+frc_blk_coo;;
+#use "tblock_formula_constrained_v.ml";; 
+frc_blk_co;;
+#use "tblock_formula_constrained_v.ml";; 
+frc_blk_ch3;;
+#use "tblock_formula_constrained_v.ml";; 
+#use "tblock_formula_v.ml";; 
+frm_blk_coo;;
+#use "tblock_formula_v.ml";; 
+Bsf_v.name frm_blk_coo;;
+#use "tblock_formula_v.ml";; 
+frm_blk_co;;
+Bsf_v.name frm_blk_co;;
+frm_blk_ch3;;
+Bsf_v.name frm_blk_ch3
+;;
+#use "tblock_formula_v.ml";; 
+#use "tsegment_formula_v.ml";; 
+Sgf_v.atom_symbol_doublet_list_off_segment_formula frm_gly_n;;
+#use "tsegment_formula_v.ml";; 
+Sgf_v.atom_symbol_doublet_list_off_segment_formula frm_gly_n;;
+#use "tsegment_formula_v.ml";; 
+Sgf_v.atom_symbol_doublet_list_off_segment_formula frm_gly_e;;
+#use "tsegment_formula_v.ml";; 
+#use "tfragment_formula_v.ml";; 
+Frf_v.atom_symbol_doublet_list_off_fragment_formula frm_frg_ch3;;
+#use "tfragment_formula_v.ml";; 
+Frf_v.atom_symbol_doublet_list_off_fragment_formula frm_frg_a;;
+#use "tfragment_formula_v.ml";; 
+Frf_v.atom_symbol_list_off_fragment_formula frm_frg_a;;
+Frf_v.atom_symbol_doublet_list_off_fragment_formula frm_frg_a;;
+#use "tfragment_formula_v.ml";; 
+Frf_v.atom_symbol_doublet_list_off_fragment_formula frm_frg_a;;
+#use "tfragment_formula_v.ml";; 
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.retrieve smb_plp;;
+Mfc_v.name frc_plp;;
+Pfc_v.name frc_plp;;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+#use "t0tab_d_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.retrieve smb_plp;;
+#use "t0tab_d_polypeptide_formula_constrained_v.ml";; 
+Mfc_v.name frc_plp;;
+Pfc_v.name frc_plp;;
+#use "t0tab_d_polypeptide_formula_constrained_v.ml";; 
+#use "tmolecule_formula_v.ml";; 
+frm_water;;
+let smb_water = Mos_v.water;;
+let frm_water = Mof_v.make smb_water;;frm_water;;
+Mof_v.name frm_water;;
+#use "tmolecule_formula_v.ml";; 
+frm_trp;;
+Mof_v.name frm_trp;;
+#use "tmolecule_formula_v.ml";; 
+frm_trp;;
+Mof_v.name frm_trp;;
+#use "tmolecule_formula_v.ml";; 
+Mof_v.name frm_trp;;
+#use "tmolecule_formula_v.ml";; 
+ #use "t0tab_a_polypeptide_formula_v.ml";; 
+frm_plp ;;
+Plf_v.name frm_plp;;
+ #use "t0tab_a_polypeptide_formula_v.ml";; 
+ #use "t0tab_d_polypeptide_formula_v.ml";; 
+(
+Psq_v.name (Psq_v.make smb_plp)
+=
+"AGPGA"
+);;
+frc_plp;;
+frc_plp;;let frm_plp = Pfc_v.make smb_plp;;
+let frm_plp = Pfc_v.make smb_plp;;
+frm_plp;;
+Plf_v.name frm_plp;;
+ #use "t0tab_d_polypeptide_formula_v.ml";; 
+ #use "tblock_formula_constrained_v.ml";; 
+Bfc_v.leaf_atom_marker_list_off_block_formula_constrained frc_blk_coo;;
+ #use "tblock_formula_constrained_v.ml";; 
+#use "tmolecule_formula_v.ml";; 
+frm_ala;;
+Mof_v.name frm_ala;;
+#use "tmolecule_formula_v.ml";; 
+#use "tmolecule_formula_constrained_v.ml";; 
+frc_water;;
+Mfc_v.name frc_gua;;
+frc_gua;;
+Mfc_v.name frc_trp;;
+frc_trp
+;;
+Mfc_v.name frc_ala
+;;
+frc_ala;;
+Mfc_v.name frc_wate;;
+Mfc_v.name frc_water;;
+frc_water;;
+Mfc_v.name frc_benzene;;
+frc_benzene;;
+#use "tmolecule_formula_v.ml";; 
+frm_benzene;;
+Mof_v.name frm_benzene;;
+#use "tmolecule_formula_path_v.ml";; 
+Itr_v.map;;
+let itr_pth = 
+  Itr_v.map 
+    (fun s -> Frf_v.make s)
+    (fun i -> i)
+    itr
+;;
+module Frf_v = Fragment_formula_v;;
+Frf_v.make;;
+let itr_pth = 
+  Itr_v.map 
+    (fun s -> Frf_v.make s)
+    (fun i -> i)
+    itr
+;;
+frm_water;;
+Fragment_formula_t.fragment_formula;;
+#use "tmolecule_formula_path_v.ml";; 
+frm_water;;
+#use "tmolecule_formula_path_v.ml";; 
+itr = frm_water;;
+#use "tmolecule_formula_path_v.ml";; 
+Frf_v.make Frs_v.water ;;
+Frf_v.make Frs_v.water =  [(Bls_v.water, Sci_v.tail)];;
+Blf_v.make Bls_v.water ;;
+q
+ #use "t0tab_e_polypeptide_formula_constrained_v.ml";; 
+frc_plp ;;
+Pfc_v.name frc_plp;;
+ #use "t0tab_e_polypeptide_formula_v.ml";; 
+frm_plp ;;
+Plf_v.name frm_plp;;
+ #use "t0tab_e_polypeptide_formula_v.ml";; 
+ #use "tfake_a_molecule_formula_constrained_v.ml";; 
+frc_fake_a;;
+Mfc_v.name frc_fake_a;;
+ #use "tfake_a_molecule_formula_constrained_v.ml";; 
+Frs_v.methine_b;;
+ #use "tfake_a_molecule_formula_constrained_v.ml";; 
+Mfc_v.name frc_fake_a;;
+ #use "tfake_a_molecule_formula_constrained_v.ml";; 
+#use "tleafblock_grouping_formula_constrained_v.ml";; 
+amine;;
+amine Sci_v.stc;;
+#use "tleafblock_grouping_formula_constrained_v.ml";; 
+amine Sci_v.stc ;;
+carboxylate Sci_v.stc;;
+thiol Sci_v.stc;;
+nsh2 Sci_v.stc;;
+methyl Sci_v.stc;;
+hydroxyl Sci_v.stc;;
+#use "tleafblock_grouping_formula_constrained_v.ml";; 
+amine Sci_v.stc ;;
+carboxylate Sci_v.stc;;
+#use "tleaffragment_grouping_formula_constrained_v.ml";; 
+amide Sci_v.stc;;
+#use "tleaffragment_grouping_formula_constrained_v.ml";; 
+amide Sci_v.stc;;
+etheneacid Sci_v.stc;;
+#use "tleaffragment_grouping_formula_constrained_v.ml";; 
+#use "tpolyfragment_grouping_formula_constrained_v.ml";; 
+Gfc_v.ethcaracidmethyllamine Sci_v.stc;;
+Gfc_v.ethcaracidmethylramine Sci_v.stc;;
+Gfc_v.guanidinium Sci_v.stc;;
+Gfc_v.guanidine Sci_v.stc;;
+Gfc_v.ethineacidramine Sci_v.stc;;
+Gfc_v.ethineacidlamine Sci_v.stc;;
+#use "tpolyfragment_grouping_formula_constrained_v.ml";; 
+ #use "tbridged_grouping_formula_constrained_v.ml";; 
+Gfc_v.name (Gfc_v.phenol Sci_v.stc);;
+ #use "tbridged_grouping_formula_constrained_v.ml";; 
+Gfc_v.name (Gfc_v.phenol Sci_v.stc);;
+#use "tleaffragment_grouping_formula_constrained_v.ml";; 
+Gfc_v.name (amide Sci_v.stc);;
+Gfc_v.name (etheneacid Sci_v.stc);;
+Gfc_v.benzyl Sci_v.stc;;
+Gfc_v.phenol Sci_v.stc ;;
+Gfc_v.name Gfc_v.methenephenol Sci_v.stc ;;
+Gfc_v.name (Gfc_v.methenephenol Sci_v.stc) ;;
+Gfc_v.methenephenol Sci_v.stc ;;
+Gfc_v.name (Gfc_v.metheneindole Sci_v.stc) ;;
+Gfc_v.metheneindole Sci_v.stc;;
+Gfc_v.name (Gfc_v.metheneimidazole Sci_v.stc) ;;
+Gfc_v.metheneimidazole Sci_v.stc ;;
+Gfc_v.name (Gfc_v.indole Sci_v.stc);;
+Gfc_v.indole Sci_v.stc ;;
+Gfc_v.name (Gfc_v.dimethonecarbonhydroxyldimethone Sci_v.stc) ;;
+Gfc_v.dimethonecarbonhydroxyldimethone Sci_v.stc ;;
+Gfc_v.name (Gfc_v.dimethone Sci_v.stc) ;;
+Gfc_v.dimethone Sci_v.stc ;;
+Gfc_v.name Gfc_v.benzale Sci_v.stc ;;
+Gfc_v.name (Gfc_v.benzale Sci_v.stc) 
+;;
+#use "tleaffragment_grouping_formula_constrained_v.ml";; 
+ #use "tbridged_grouping_formula_constrained_v.ml";; 
+Gfc_v.benzyl Sci_v.stc ;;
+Gfc_v.name (Gfc_v.benzyl Sci_v.stc) ;;
+Gfc_v.benzale Sci_v.stc;;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+frc_plp Sci_v.stc ;;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+ #use "tfake_a_molecule_formula_constrained_v.ml";; 
+frc_fake_a;;
+ #use "tfake_a_molecule_formula_constrained_v.ml";; 
+ #use "tmolecule_formula_constrained_v.ml";; 
+frc_ala ;;
+ #use "tmolecule_formula_constrained_v.ml";; 
+frc_trp;;
+frc_benzene;;
+frc_gua;;
+ #use "tmolecule_formula_constrained_v.ml";; 
+Mfc_v.name frc_trp;;
+ #use "tmolecule_formula_constrained_v.ml";; 
+#use "tfake_a_molecule_formula_constrained_v.ml";; 
+Mfc_v.name frc_fake_a;;
+#use "tfake_a_molecule_formula_constrained_v.ml";; 
+frc_fake_a;;
+#use "tfake_a_molecule_formula_constrained_v.ml";; 
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+frc_plp;;
+Pfc_v.name frc_plp;;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+#use "t0tab_b_polypeptide_formula_constrained_v.ml";; 
+Psq_v.name (Psq_v.make smb_plp);;
+frc_plp;;
+frc_plp;;let frc_plp = Pfc_v.retrieve smb_plp;;
+let frc_plp = Pfc_v.retrieve smb_plp;;
+#use "t0tab_c_polypeptide_formula_constrained_v.ml";; 
+Psq_v.name (Psq_v.make smb_plp);;
+frc_plp;;
+Pfc_v.name frc_plp;;
+#use "t0tab_c_polypeptide_formula_constrained_v.ml";; 
+#use "t0tab_d_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.retrieve smb_plp;;
+#use "t0tab_d_polypeptide_formula_constrained_v.ml";; 
+#use "t0tab_e_polypeptide_formula_constrained_v.ml";; 
+frc_plp;;
+Pfc_v.name frc_plp;;
+#use "t0tab_e_polypeptide_formula_constrained_v.ml";; 
+ #use "tmolecule_formula_v.ml";; 
+ #use "tpolyfragment_grouping_formula_constrained_v.ml";; 
+ #use "tpolyfragment_grouping_formula_v.ml";; 
+module Gfc_t = Grouping_formula_t
+module Gfc_v = Grouping_formula_constrained_v
+module Grf_v = Grouping_formula_v
+module Sci_v = Stereochemical_index_v
+;;
+let frc_grp = Gfc_v.ethcaracidmethyllamine Sci_v.stc;;let frm_grp = Grf_v.make smb_grp Sci_v.stc;;
+frm_grp ;;
+Grf_v.make smb_grp;;
+ #use "grouping_formula_v.ml";; 
+make smb_grp;;
+let smb_grp = Grs_v.ethcaracidmethyllamine;;
+make smb_grp;;
+make;;
+frc_grp ;;
+let ilt = 
+    Gfc_v.indexed_leafed_tree_off_grouping_formula_constrained 
+      frc_grp ;;
+Ilt_v.indexed_tree_off_indexed_leafed_tree 
+    Frs_v.fragment_symbol_of_buried_fragment_symbol
+    Frs_v.fragment_symbol_of_leaf_fragment_symbol
+    ilt;;
+let make_of_formula_constrained frc_grp =
+  let ilt = 
+    Gfc_v.indexed_leafed_tree_off_grouping_formula_constrained 
+      frc_grp in
+  Ilt_v.indexed_tree_off_indexed_leafed_tree 
+    Frs_v.fragment_symbol_of_buried_fragment_symbol
+    Frs_v.fragment_symbol_of_leaf_fragment_symbol
+    ilt
+;;
+let make_of_formula_constrained frc_grp =
+  let ilt = 
+    Gfc_v.indexed_leafed_tree_off_grouping_formula_constrained 
+      frc_grp in
+  Ilt_v.indexed_tree_off_indexed_leafed_tree 
+    Frs_v.fragment_symbol_of_buried_fragment_symbol
+    Frs_v.fragment_symbol_of_leaf_fragment_symbol
+    ilt
+;;
+let make smb_grp sci =
+  let frc_grp = Gfc_v.retrieve smb_grp sci in
+  make_of_formula_constrained frc_grp 
+;;
+  #use "tpolyfragment_grouping_formula_v.ml";; 
+frm_grp ;;
+let smb_grp = Grs_v.ethcaracidmethyllamine;;
+module Grs_v = Grouping_symbol_v
+module Gfc_t = Grouping_formula_t
+module Gfc_v = Grouping_formula_constrained_v
+module Grf_v = Grouping_formula_v
+module Sci_v = Stereochemical_index_v
+;;
+let smb_grp = Grs_v.ethcaracidmethyllamine;;let frc_grp = Gfc_v.ethcaracidmethyllamine Sci_v.stc;;
+let frm_grp = Grf_v.make smb_grp Sci_v.stc;;
+  #use "tpolyfragment_grouping_formula_v.ml";; 
+Gfc_v.ethcaracidmethylramine Sci_v.stc;;
+Gfc_v.ethineacidlamine Sci_v.stc;;
+Gfc_v.ethineacidramine Sci_v.stc;;
+Gfc_v.guanidine Sci_v.stc;;
+Gfc_v.guanidinium Sci_v.stc;;
+  #use "tpolyfragment_grouping_formula_v.ml";; 
+#use "t0tab_e_polypeptide_formula_constrained_v.ml";; 
+#use "polypeptide_formula_constrained_v.ml";; 
+let clit = 
+    capped_indexed_leafed_tree_of_polypeptide_regular_symbol smb_plr;;
+#use "polypeptide_regular_formula_constrained_v.ml";; 
+let clit = 
+    capped_indexed_leafed_tree_of_polypeptide_regular_symbol smb_plr;;
+ #use "tpolypeptide_regular_formula_constrained_v.ml";; 
+frc_plr;;
+ #use "tpolypeptide_regular_formula_constrained_v.ml";; 
+ #use "t0tab_a_polypeptide_formula_v.ml";; 
+ Plf_v.make ;;
+frm_plp;;
+Plf_v.name frm_plp ;;
+ #use "t0tab_a_polypeptide_formula_v.ml";; 
+ #use "t0tab_d_polypeptide_formula_v.ml";; 
+Psq_v.name (Psq_v.make smb_plp)
+=;;
+Psq_v.name (Psq_v.make smb_plp);;
+ #use "tfake_a_molecule_formula_v.ml";; 
+Mof_v.name frm_fake_a;;
+frm_fake_a;;
+ #use "tfake_a_molecule_formula_v.ml";; 
+#use "tmolecule_formula_v.ml";; 
+frm_water;;
+frm_ala;;
+frm_trp;;
+frm_benzene;;
+frm_gua;;
+Mof_v.name frm_gua;;
+Mof_v.name frm_water;;
+Mof_v.name frm_ala;;
+#use "tmolecule_formula_v.ml";; 
+Mof_v.name frm_trp;;
+#use "tmolecule_formula_v.ml";; 
+Mof_v.name frm_benzene;;
+Mof_v.name frm_gua;;
+#use "tmolecule_formula_v.ml";; 
+  #use "tmolecule_formula_path_v.ml";; 
+frm_water;;
+  #use "tmolecule_formula_path_v.ml";; 
+frm_water;;
+itr 
+= 
+frm_water;;
+itr_pth ;;
+ (
+itr_pth  
+=
+Molecule_formula_t.Itr_t.Leaf [(Bls_v.water, Sci_v.tail)]
+);;
+Frf_v.make Frs_v.water 
+  =  
+[(Bls_v.water, Sci_v.tail)];;
+itr_pth;;
+ (
+Frf_v.make Frs_v.water 
+  =  
+[(Bls_v.water, Sci_v.tail)]
+);;
+(
+itr_pth  
+=
+Tree_t.Leaf [(Bls_v.water, Sci_v.head)]
+);;
+itr_pth  ;;
+(
+itr_pth  
+=
+Tree_t.Leaf ([(Bls_v.water, Sci_v.tail)],Sci_v.head) 
+);;
+ #use "tfake_a_molecule_formula_path_v.ml";; 
+frm_fake_a;;
+let nod = (Molecule_formula_t.Frs_t.Leaf_fragment_symbol
+       (Molecule_formula_t.Frs_t.Onezero_block_symbol
+         (Molecule_formula_t.Frs_t.Bls_t.Onesinglezero_block_symbol
+           Molecule_formula_t.Frs_t.Bls_t.Osz_C_h_3)),
+      Molecule_formula_t.Sci_t.Spherical_index
+       (Molecule_formula_t.Sci_t.Spherical_tetrahedral_index
+         Molecule_formula_t.Sci_t.St_l));;
+let itr_pth = Tree_v.path_of_node_of_tree nod itr;;
+ #use "tfake_a_molecule_formula_path_v.ml";; 
+pth_ch3_1;;
+ #use "tfake_a_molecule_formula_path_v.ml";; 
+nod_ch3_1;;
+ #use "talanine_molecule_formula_path_v.ml";; 
+frc_alanine;;
+frm_alanine;;
+Itr_v.make_of_leaf_of_index ;;
+let nod_ch3 = Itr_v.make_of_leaf_of_index Frs_v.methyl_l Sci_v.stl;;
+Frs_v.carboxyl_l;;
+Frs_v.carboxyl_h;;
+ #use "talanine_molecule_formula_path_v.ml";; 
+frc_alanine;;
+frm_alanine;;
+itr ;;
+(
+itr 
+= 
+frm_alanine
+);;
+ #use "talanine_molecule_formula_path_v.ml";; 
+let nod_ch3 = Itr_v.make_of_leaf_of_index Frs_v.methyl Sci_v.stl;;
+ #use "talanine_molecule_formula_path_v.ml";; 
+Frs_v.amine_r;;
+Bls_v.amine_r;;
+Frs_v.amine;;
+Frs_v.carboxyl_r;;
+Tree_v.path_of_node_of_tree;;
+Tree_v.path_of_node_of_tree ch3 itr;;
+ #use "talanine_molecule_formula_path_v.ml";; 
+Tree_v.path_of_node_of_tree ch3 itr;;
+ ch3;;
+Tree_v.path_of_node_of_tree nh2 itr;;
+ #use "talanine_molecule_formula_path_v.ml";; 
+itr
+;;
+itr_pth ;;
+ #use "talanine_molecule_formula_path_v.ml";; 
+Tree_v.path_of_node_of_tree cooh itr;;
+#use "tala_hb3_atom_path_off_formula_v.ml";;
+frm_alanine;;
+(
+frf_ch3
+(* : Fragment_formula_t.fragment_formula *)
+=
+[mrb_ch3]
+);;
+#use "tala_hb3_atom_path_off_formula_v.ml";;
+mrf_ohcoch;;
+frm_alanine;;
+nod_nh2;;
+#use "tala_hb3_atom_path_off_formula_v.ml";;
+frm_alanine
+;;
+nod_ch3;;
+frm_alanine
+;;
+#use "tala_hb3_atom_path_off_formula_v.ml";;
+frm_alanine;;
+q
+ #use "tmolecule_formula_constrained_v.ml";; 
+frc_ala ;;
+ #use "tmolecule_formula_constrained_v.ml";; 
+frc_trp;;
+Mfc_v.name frc_trp;;
+Mfc_v.name frc_ala;;
+frc_ala ;;
+frm_ala;;
+ #use "tmolecule_formula_v.ml";; 
+frm_ala;;
+Mof_v.name frm_ala;;
+frm_trp;;
+Mof_v.name frm_trp;;
+ #use "tala_hb3_atom_path_off_formula_v.ml";;
+#use "t0tab_a_polypeptide_path_off_formula_v.ml";; 
+Frs_v.peptideca_regular_nterminal;;
+#use "t0tab_a_polypeptide_path_off_formula_v.ml";; 
+Frs_v.peptideca_regular_embedded;;
+Frs_v.peptideca_regular_embedded_b;;
+#use "t0tab_a_polypeptide_path_off_formula_v.ml";; 
+Frs_v.peptideca_regular_embedded_b;;
+#use "t0tab_a_polypeptide_path_off_formula_v.ml";; 
+ddd
+;;
+d
+#use "t0tab_a_polypeptide_path_off_formula_v.ml";; 
+Sgs_v.ccocnch_c_h_2_b;;
+module Sgs_v = Segment_symbol_v
+;;
+Sgs_v.ccocnch_c_h_2_b;;
+#use "t0tab_a_polypeptide_path_off_formula_v.ml";; 
+Frs_v.carboxyl;;
+Frs_v.carboxyl_l;;
+#use "t0tab_a_polypeptide_path_off_formula_v.ml";; 
+ #use "talanine_molecule_formula_path_v.ml";; 
+frc_alanine;;
+ #use "talanine_molecule_formula_path_v.ml";; 
+itr_pth ;;
+ #use "talanine_molecule_formula_path_v.ml";; 
+ #use "t1tab_a_polypeptide_path_off_formula_v.ml";; 
+Psq_v.name (Psq_v.make smb_plp);;
+Plf_v.name frm_plp;;
+frm_plp ;;
+ #use "t1tab_a_polypeptide_path_off_formula_v.ml";; 
+Frs_v.peptideca_regular_embedded_b;;
+Frs_v.carboxyl_l;;
+Frs_v.carboxyl;;
+Frs_v.carboxyl_l;;
+ #use "t1tab_a_polypeptide_path_off_formula_v.ml";; 
+Frs_v.methyl_l;;
+Frs_v.methyl;;
+ #use "t1tab_a_polypeptide_path_off_formula_v.ml";; 
+Frs_v.peptideca_regular_nterminal;;
+ #use "t1tab_a_polypeptide_path_off_formula_v.ml";; 
+Plf_v.name frm_plp;;
+ #use "t1tab_a_polypeptide_path_off_formula_v.ml";; 
+Tree_v.path_of_node_of_tree mrf_ch3 frm_plp;;
+mrf_ch3;;
+frm_plp;;
+mrf_ch3;;
+mrf_ch3= (Frs_v.methyl, Sci_v.stl);;
+(Frs_v.methyl, Sci_v.stl);;
+let chs_frm_alanine = 
+  Tree_v.map Csm_v.chemicalset_marker_of_fragment_marker frm_alanine
+;;
+let chs_frm_allet chs_frm_plp =  = 
+  Tree_v.map Csm_v.chemicalset_marker_of_fragment_marker frm_plp
+;;
+let chs_frm_plp = 
+  Tree_v.map Csm_v.chemicalset_marker_of_fragment_marker frm_plp
+;;
+Tree_v.path_of_node_of_tree (Frs_v.methyl, Sci_v.stl) frm_plp;;
+ #use "t1tab_a_polypeptide_path_off_formula_v.ml";; 
+ #use "tpolypeptide_regular_formula_constrained_v.ml";; 
+Prfc_v.name frc_plr ;;
+ #use "tpolypeptide_regular_formula_constrained_v.ml";; 
+frc_plr;;
+ #use "tpolypeptide_regular_formula_constrained_v.ml";; 
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp;;
+frc_plp;;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+#use "t0tab_b_polypeptide_formula_constrained_v.ml";; 
+#use "t0tab_c_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp (* : string *);;
+frc_plp;;
+#use "t0tab_c_polypeptide_formula_constrained_v.ml";; 
+#use "t0tab_d_polypeptide_formula_constrained_v.ml";; 
+#use "t0tab_e_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp ;;
+frc_plp ;;
+#use "t0tab_e_polypeptide_formula_constrained_v.ml";; 
+#use "t0tab_a_polypeptide_formula_v.ml";; 
+Psq_v.name (Psq_v.make smb_plp);;
+Plf_v.name frm_plp;;
+frm_plp ;;
+#use "t0tab_a_polypeptide_formula_v.ml";; 
+ #use "t1tab_a_polypeptide_path_off_formula_v.ml";; 
+Tree_v.path_list_of_node_of_tree (Frs_v.methyl, Sci_v.stl) frm_plp  
+;;
+ #use "t1tab_a_polypeptide_path_off_formula_v.ml";; 
+ #use "t1tab_b_polypeptide_path_off_formula_v.ml";; 
+Plf_v.name frm_plp (* : string *);;
+frm_plp ;;
+ #use "t1tab_b_polypeptide_path_off_formula_v.ml";; 
+ frm_plp;;
+Frs_v.methenol;;
+ #use "t1tab_b_polypeptide_path_off_formula_v.ml";; 
+Tree_v.path_of_node_of_tree (Frs_v.methyl, Sci_v.stl) frm_plp  ;;
+ (
+Tree_v.path_of_node_of_tree (Frs_v.methyl, Sci_v.stl) frm_plp  
+(* : (Polypeptide_formula_t.Mlf_t.Frs_t.fragment_symbol,
+     Polypeptide_formula_t.Mlf_t.Sci_t.stereochemical_index)
+    Doublet_t.doublet list *)
+=
+[
+ (Frs_v.methyl, Sci_v.stl);
+ (Frs_v.peptideca_regular_nterminal, Sci_v.head)
+]
+);;
+ (
+Tree_v.path_of_node_of_tree (Frs_v.methenol, Sci_v.stl) frm_plp  
+(* : (Polypeptide_formula_t.Mlf_t.Frs_t.fragment_symbol,
+     Polypeptide_formula_t.Mlf_t.Sci_t.stereochemical_index)
+    Doublet_t.doublet list *)
+=
+[
+ (Frs_v.methenol, Sci_v.stl);
+ (peptideca_regular_embedded_b, Sci_v.str);
+ (Frs_v.peptideca_regular_nterminal, Sci_v.head);
+]
+);;
+ #use "t1tab_b_polypeptide_path_off_formula_v.ml";; 
+ #use "t1tab_c_polypeptide_path_off_formula_v.ml";; 
+Plf_v.name frm_plp ;;
+frm_plp;;
+Sgs_v.glycine_embedded_b;;
+ #use "t1tab_c_polypeptide_path_off_formula_v.ml";; 
+frm_plp;;
+#use "talanine_molecule_formula_path_v.ml";; 
+let mrk_t = Mlf_v.chemicalset_marker_tree_off_molecule_formula frm_alanine;;
+let mrk_t = Mof_v.chemicalset_marker_tree_off_molecule_formula frm_alanine;;
+#use "talanine_molecule_formula_path_v.ml";; 
+Itr_v.make_of_leaf_of_index mrk_ch3 ;;
+let pth_ch3 = Tree_v.path_of_node_of_tree mrk_ch3 smb_itr;;
+let pth_cooh = Tree_v.path_of_node_of_tree mrk_cooh mrk_t;;
+#use "talanine_molecule_formula_path_v.ml";; 
+let chs_mrk_cooh = Chs_v.chemicalset_marker_of_fragment_marker mrk_cooh;;
+#use "talanine_molecule_formula_path_v.ml";; 
+let pth_cooh = Tree_v.path_of_node_of_tree chs_mrk_cooh mrk_t;;
+let pth_ch3 = Tree_v.path_of_node_of_tree chs_mrk_ch3 mrk_t;;
+let pth_nh2 = Tree_v.path_of_node_of_tree chs_mrk_nh2 mrk_t;;
+let chs_mrk_cooh = Chs_v.chemicalset_marker_of_fragment_marker mrk_cooh;;
+let chs_mrk_ch3 = Chs_v.chemicalset_marker_of_fragment_marker mrk_ch3;;
+#use "talanine_molecule_formula_path_v.ml";; let chs_mrk_nh2 = Chs_v.chemicalset_marker_of_fragment_marker mrk_nh2;;
+let chs_mrk_nh2 = Chs_v.chemicalset_marker_of_fragment_marker mrk_nh2;;
+#use "talanine_molecule_formula_path_v.ml";; 
+let mrk_cooh = Mrk_v.make Frs_v.carboxyl_r Sci_v.head;;
+let mrk_ch3 = Mrk_v.make Frs_v.methyl, Sci_v.str;;
+let mrk_nh2 = Mrk_v.make Frs_v.amine, Sci_v.stl;;
+let chs_mrk_cooh = Chs_v.chemicalset_marker_of_fragment_marker mrk_cooh;;
+let chs_mrk_ch3 = Chs_v.chemicalset_marker_of_fragment_marker mrk_ch3;;
+let chs_mrk_nh2 = Chs_v.chemicalset_marker_of_fragment_marker mrk_nh2;;
+let mrk_ch3 = Mrk_v.make Frs_v.methyl Sci_v.str;;
+let mrk_nh2 = Mrk_v.make Frs_v.amine Sci_v.stl;;
+#use "talanine_molecule_formula_path_v.ml";; 
+let mrk_nh2 = Mrk_v.make Frs_v.amine Sci_v.stl;;
+let chs_mrk_nh2 = Chs_v.chemicalset_marker_of_fragment_marker mrk_nh2;;
+let pth_cooh = Tree_v.path_of_node_of_tree chs_mrk_cooh mrk_t;;
+#use "talanine_molecule_formula_path_v.ml";; 
+let chs_mrk_ch3 = Chs_v.chemicalset_marker_of_fragment_marker mrk_ch3;;
+let mrk_ch3 = Mrk_v.make Frs_v.methyl Sci_v.str;;
+let chs_mrk_ch3 = Chs_v.chemicalset_marker_of_fragment_marker mrk_ch3;;
+#use "talanine_molecule_formula_path_v.ml";; 
+ (
+frm_alanine
+(* : Molecule_formula_t.molecule_formula *)
+=
+Tree_t.Node ( mrk_cooh, [nod_ch3; nod_nh2] )
+);;
+#use "talanine_molecule_formula_path_v.ml";; 
+let pth_t = Tre_v.map (fun n -> Tre_v.path_of_node_of_tree n mrk_t) mrk_t ;;
+#use "talanine_molecule_formula_path_v.ml";; 
+Mof_v.chemicalset_marker_list_tree_off_molecule_formula frm_alanine;;
+Mof_v.chemicalset_marker_list_tree_off_molecule_formula frm_alanine = pht_t;;
+Mof_v.chemicalset_marker_list_tree_off_molecule_formula frm_alanine = pth_t;;
+#use "talanine_molecule_formula_path_v.ml";; 
+Tre_v.list_off_tree chs_mrk_t;;
+Tre_v.list_off_tree pth_t;;
+#use "talanine_molecule_formula_path_v.ml";; 
+ #use "t1tab_a_polypeptide_path_off_formula_v.ml";; 
+ #use "t1tab_a_polypeptide_semipath_off_formula_v.ml";; 
+smb_plp;;
+ frm_plp;;
+pth_sdg_2;;
+ #use "t1tab_a_polypeptide_semipath_off_formula_v.ml";; 
+   #use "t0tab_a_polypeptide_formula_v.ml";; 
+  #use "t0tab_a_polypeptide_formula_v.ml";; 
+frm_plp ;;
+  #use "t0tab_a_polypeptide_formula_v.ml";; 
+#use "tfake_a_molecule_formula_v.ml";; 
+frm_fake_a;;
+#use "tfake_a_molecule_formula_v.ml";; 
+#use "tmolecule_formula_v.ml";; 
+frm_water;;
+#use "tmolecule_formula_v.ml";; 
+frm_ala;;
+frm_trp;;
+frm_benzene;;
+frm_gua;;
+#use "tmolecule_formula_v.ml";; 
+#use "twater_molecule_formula_path_v.ml";; 
+frm_water;;
+#use "twater_molecule_formula_path_v.ml";; 
+#use "talanine_molecule_fragment_path_off_formula_v.ml";; 
+pth_frg_t  ;;
+ Mof_v.fragment_path_tree_off_molecule_formula ;;
+pth_frg_ohcoch;;
+pth_frg_ch3;;
+pth_frg_t ;;
+#use "molecule_formula_v.ml";; 
+let fragment_path_tree_off_molecule_formula frm_mol =
+  let mrk_frg_t = fragment_marker_tree_off_molecule_formula frm_mol in
+  Tre_v.map (fun n -> Tre_v.path_of_node_of_tree n mrk_frg_t) mrk_frg_t 
+;;
+let frm_mol = frm_alanine;;
+let mrk_frg_t = fragment_marker_tree_off_molecule_formula frm_mol;;
+Tre_v.map (fun n -> Tre_v.path_of_node_of_tree n mrk_frg_t) mrk_frg_t ;;
+#use "talanine_molecule_fragment_path_off_formula_v.ml";; 
+(
+pth_frg_l
+(* : Chemicalset_marker_t.chemicalset_marker list list *)
+=
+[pth_frg_ohcoch; pth_frg_ch3; pth_frg_nh2]
+);;
+#use "talanine_molecule_fragment_path_off_formula_v.ml";; 
+pth_frg_ohcoch;;
+pth_frg_t ;;
+let t = Tre_v.make_node
+  pth_frg_ohcoch 
+   [
+    Tre_v.make_leaf pth_frg_ch3 ;
+    Tre_v.make_leaf pth_frg_nh2
+   ]
+);;
+let t = Tre_v.make_node
+  pth_frg_ohcoch 
+   [
+    Tre_v.make_leaf pth_frg_ch3 ;
+    Tre_v.make_leaf pth_frg_nh2
+   ];;
+t = Tre_v.make_node
+  pth_frg_ohcoch 
+   [
+    Tre_v.make_leaf pth_frg_ch3 ;
+    Tre_v.make_leaf pth_frg_nh2
+   ];;
+#use "t1tab_c_polypeptide_path_off_formula_v.ml";; 
+#use "t1tab_c_polypeptide_fragment_path_off_formula_v.ml";; 
+ frm_plp ;;
+#use "t1tab_c_polypeptide_fragment_path_off_formula_v.ml";; 
+(Fgs_v.peptideca_regular_nterminal, Sci_v.head)= (Polypeptide_formula_t.Mlf_t.Frm_t.Frs_t.Head_fragment_symbol
+    (Polypeptide_formula_t.Mlf_t.Frm_t.Frs_t.Zerofork_fragment_symbol
+      (Polypeptide_formula_t.Mlf_t.Frm_t.Frs_t.Zerobifork_fragment_symbol
+        Polypeptide_formula_t.Mlf_t.Frm_t.Frs_t.Zbf_N_h_2C_h_)),
+   Polypeptide_formula_t.Mlf_t.Frm_t.Sci_t.Sequential_index
+    Polypeptide_formula_t.Mlf_t.Frm_t.Sci_t.Head);;
+#use "t1tab_c_polypeptide_fragment_path_off_formula_v.ml";; 
+frm_plp;;
+#use "t1tab_c_polypeptide_fragment_path_off_formula_v.ml";; 
+let extended_carboxyl_ll =
+  Fgs_t.Leaf_fragment_symbol
+    (Fgs_t.Buried_segment_extends_leaf_fragment_symbol
+       ([Sgs_v.glycine_embedded_b], Fgs_v.carboxyl_l) )
+;;
+let extended_carboxyl_l =
+(Fgs_t.Leaf_fragment_symbol
+     (Fgs_t.Buried_segment_extends_leaf_fragment_symbol
+       ([Fgs_t.Sgs_t.Oneone_segment_symbol
+          Fgs_t.Sgs_t.Oo_CcocNch_C_h_2],
+        Fgs_t.Onezero_fragment_symbol
+         Fgs_t.Oz_CdodO_h_)), Sci_v.str)
+;;
+extended_carboxyl_ll = extended_carboxyl_l;;
+#use "t1tab_c_polypeptide_fragment_path_off_formula_v.ml";; 
+extended_carboxyl_ll =  extended_carboxyl_l;;
+#use "t1tab_c_polypeptide_fragment_path_off_formula_v.ml";; 
+extended_carboxyl_ll =  extended_carboxyl_l;;
+Tree_v.path_of_node_of_tree (Fgs_v.methenol, Sci_v.stl) frm_plp  ;;
+Tree_v.path_of_node_of_tree (extended_carboxyl_l) frm_plp  ;;
+#use "t1tab_c_polypeptide_fragment_path_off_formula_v.ml";; 
+#use "t1tab_a_polypeptide_fragment_path_off_formula_v.ml";; 
+ frm_plp ;;
+#use "t1tab_a_polypeptide_fragment_path_off_formula_v.ml";; 
+frm_plp ;;
+#use "t1tab_a_polypeptide_fragment_path_off_formula_v.ml";; 
+exit
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+(
+Tree_v.path_of_node_of_tree mrf_ch3 frm_plp  
+(* : (Polypeptide_formula_t.Mlf_t.Fgs_t.fragment_symbol,
+     Polypeptide_formula_t.Mlf_t.Sci_t.stereochemical_index)
+    Doublet_t.doublet list *)
+=
+[
+ mrf_ch3;
+ (peptideca_regular_embedded, Sci_v.str);
+ (Fgs_v.peptideca_regular_nterminal, Sci_v.head);
+ (Fgs_v.methyl, Sci_v.stl);
+ (Fgs_v.peptideca_regular_nterminal, Sci_v.head)
+]
+);;
+mtp_sdg_2;;
+ (
+Tree_v.path_of_node_of_tree mrf_ch3 frm_plp  
+(* : (Polypeptide_formula_t.Mlf_t.Fgs_t.fragment_symbol,
+     Polypeptide_formula_t.Mlf_t.Sci_t.stereochemical_index)
+    Doublet_t.doublet list *)
+=
+[ mtp_sdg_2 @ mtp_sdg_1]
+);;
+(
+Tree_v.path_of_node_of_tree mrf_ch3 frm_plp  
+(* : (Polypeptide_formula_t.Mlf_t.Fgs_t.fragment_symbol,
+     Polypeptide_formula_t.Mlf_t.Sci_t.stereochemical_index)
+    Doublet_t.doublet list *)
+=
+[mtp_sdg_2; mtp_sdg_1]
+);;
+mtp_sdg_2;;
+Tree_v.path_of_node_of_tree mrf_ch3 frm_plp  ;;
+ (
+Tree_v.path_of_node_of_tree mrf_ch3 frm_plp  
+(* : (Polypeptide_formula_t.Mlf_t.Fgs_t.fragment_symbol,
+     Polypeptide_formula_t.Mlf_t.Sci_t.stereochemical_index)
+    Doublet_t.doublet list *)
+=
+[mtp_sdg_2 @ mtp_sdg_1]
+);;
+(
+Tree_v.path_of_node_of_tree mrf_ch3 frm_plp  
+(* : (Polypeptide_formula_t.Mlf_t.Fgs_t.fragment_symbol,
+     Polypeptide_formula_t.Mlf_t.Sci_t.stereochemical_index)
+    Doublet_t.doublet list *)
+=
+[
+ mrf_ch3;
+ mrf_conhch;
+ (Fgs_v.peptideca_regular_nterminal, Sci_v.head);
+ mrf_ch3;
+ (Fgs_v.peptideca_regular_nterminal, Sci_v.head)
+]
+);;
+ (
+Tree_v.path_list_of_node_of_tree mrf_ch3 frm_plp  
+(* : (Polypeptide_formula_t.Mlf_t.Fgs_t.fragment_symbol,
+     Polypeptide_formula_t.Mlf_t.Sci_t.stereochemical_index)
+    Doublet_t.doublet list list *)
+=
+[pth_sdg_2; pth_sdg_1]
+);;
+(
+Tree_v.path_list_of_node_of_tree mrf_ch3 frm_plp  
+(* : (Polypeptide_formula_t.Mlf_t.Fgs_t.fragment_symbol,
+     Polypeptide_formula_t.Mlf_t.Sci_t.stereochemical_index)
+    Doublet_t.doublet list list *)
+=
+[mtp_sdg_2; mtp_sdg_1]
+);;
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+[
+ mrf_ch3;
+ mrf_conhch;
+ mrf_nh2ch;
+ mrf_ch3;
+ mrf_nh2ch;
+]= mtp_sdg_2 @ mtp_sdg_1;;
+#use "moletree_path_v.ml";; 
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+let mrk_frg_l = Mtp_v.fragment_marker_list_off_moletree_path mtp_sdg_2;;
+(
+mrk_frg_l 
+(* : Fragment_marker_t.fragment_marker list *)
+ =
+mtp_sdg_2
+);;
+let smb_frg_l = Mtp_v.fragment_symbol_list_off_moletree_path mtp_sdg_2;;
+ (
+smb_frg_l 
+(* : Fragment_symbol_t.fragment_symbol list *)
+ =
+[smb_ch3; smb_conhch; smb_nh2ch]
+);;
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+sci_frg_l ;;
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+#use "polypeptide_formula_v.ml";; 
+let fragment_marker_list_tree_off_polypeptide_formula frm_plp =
+  let mrk_frg_t = fragment_marker_tree_off_polypeptide_formula frm_plp in
+  let nd_t = Tre_v.node_and_depth_tree_of_tree mrk_frg_t in
+  Tre_v.map (fun n -> Tre_v.path_of_node_of_tree n nd_t) nd_t
+;;
+fragment_marker_list_tree_off_polypeptide_formula frm_plp;;
+let fragment_marker_list_list_off_polypeptide_formula frm_plp =
+  let mrk_frg_t = fragment_marker_list_tree_off_polypeptide_formula frm_plp in
+  Tre_v.list_off_tree mrk_frg_t
+;;
+let mtp_l = Plf_v.fragment_marker_list_list_off_polypeptide_formula frm_plp;;
+let mtp_l = fragment_marker_list_list_off_polypeptide_formula frm_plp;;
+mtp_nh2ch;;
+fragment_marker_list_tree_off_polypeptide_formula;;
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+;; let nd_t = Plf_v.fragment_marker_depthed_list_tree_off_polypeptide_formula frm_plp;;
+let nd_t = Plf_v.fragment_marker_depthed_list_tree_off_polypeptide_formula frm_plp;;
+Tre_v.map (fun (n, i) -> n ) nd_t;;
+Tree_v.map (fun (n, i) -> n ) nd_t;;
+ Tre_v.map (fun (List.map (n, i) l -> n ) l ) nd_t;;
+Tre_v.map (fun (List.map (n, i) -> n ) ) nd_t;;
+Tre_v.map (fun (List.map (fun (n, i) -> n )) ) nd_t;;
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+mrd_frg_t;;
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+Tre_v.map (fun n_l -> List.map (fun (n,i) -> n) n_l)  mrd_frg_t;;
+Tree_v.map (fun n_l -> List.map (fun (n,i) -> n) n_l)  mrd_frg_t;;
+Tree_v.map (fun n_l -> Doublet_list_v.left_list_off_doublet_list n_l)  mrd_frg_t;;
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+mrk_frg_lt;;
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+Tree_v.find_of_node_of_depth_of_tree mrf_ch3 2 frm_plp  ;;
+Tree_v.find_of_node_of_depth_of_tree mrf_ch3 2 mrk_frg_lt;;
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+mtp_t;;
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+mtp_t;;
+ ( 
+mtp_t
+(* : Moletree_path_t.moletree_path Tree_t.tree *) 
+=
+  [
+   [mrf_nh2ch];
+   [mrf_conhch; mrf_nh2ch];
+   [mrf_cooh; mrf_conhch; mrf_nh2ch];
+   [mrf_ch3; mrf_conhch; mrf_nh2ch];
+   [mrf_ch3; mrf_nh2ch];
+]
+);;
+( 
+mtp_t
+(* : Moletree_path_t.moletree_path Tree_t.tree *) 
+=
+  [
+   [mrf_nh2ch];
+   [mrf_conhch; mrf_nh2ch];
+   [mrf_cooh; mrf_conhch; mrf_nh2ch];
+   [mrf_ch3; mrf_conhch; mrf_nh2ch];
+   [mrf_ch3; mrf_nh2ch];
+]
+);;
+( 
+mtp_t
+(* : Moletree_path_t.moletree_path Tree_t.tree *) 
+=
+Tree_t.Node
+ ([mrf_nh2ch],
+ [Tree_t.Node
+    ([mrf_conhch; mrf_nh2ch],
+     [
+      Tree_t.Leaf [mrf_cooh; mrf_conhch; mrf_nh2ch];
+      Tree_t.Leaf [mrf_ch3; mrf_conhch; mrf_nh2ch];
+     ]
+    );
+  Tree_t.Leaf [mrf_ch3; mrf_nh2ch]
+   ])
+);;
+mtp_l;;
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+let moletree_path_of_fragment_marker_of_depth_of_polypeptide_formula mrk_frg dep frm_plp =
+  let mtp_t = moletree_path_tree_off_polypeptide_formula frm_plp in
+  Tre_v.find_of_node_of_depth_of_tree mrk_frg dep mtp_t
+;;
+#use "polypeptide_formula_v.ml";; 
+let moletree_path_of_fragment_marker_of_depth_of_polypeptide_formula mrk_frg dep frm_plp =
+  let mtp_t = moletree_path_tree_off_polypeptide_formula frm_plp in
+  Tre_v.find_of_node_of_depth_of_tree mrk_frg dep mtp_t
+;;
+moletree_path_of_fragment_marker_of_depth_of_polypeptide_formula mrf_ch3 3 frm_plp;;
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+moletree_path_of_fragment_marker_of_depth_of_polypeptide_formula mrf_ch3 3 frm_plp;;
+let moletree_path_of_fragment_marker_of_depth_of_polypeptide_formula mrk_frg dep frm_plp =
+  let mkd_lt = fragment_marker_depthed_list_tree_off_polypeptide_formula frm_plp in
+  Tre_v.find_of_node_of_depth_of_tree mrk_frg dep mkd_lt
+;;
+;;let mkd_lt = fragment_marker_depthed_list_tree_off_polypeptide_formula frm_plp;;
+let mkd_lt = fragment_marker_depthed_list_tree_off_polypeptide_formula frm_plp;;
+ Tre_v.find_of_node_of_depth_of_tree mrk_frg dep mkd_lt;;
+ Tre_v.find_of_node_of_depth_of_tree mrf_ch3 2  mkd_lt;;
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+Plf_v. moletree_path_of_fragment_marker_of_depth_of_polypeptide_formula mrf_ch3 2 frm_plp;;
+Plf_v. moletree_path_of_fragment_marker_of_depth_of_polypeptide_formula mrf_ch3 2 frm_plp = mtp_sdg_1;;
+ ( 
+Plf_v.moletree_path_of_fragment_marker_of_depth_of_polypeptide_formula mrf_ch3 3 frm_plp
+=
+mtp_sdg_2
+);;
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+mtp_sdg_1;;
+#use "polypeptide_formula_v.ml";; 
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+#use "polypeptide_formula_v.ml";; 
+backbone_depth_of_moletree_path mtp_sdg_2;;
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+#use "polypeptide_formula_v.ml";; 
+backbone_depth_of_moletree_path mtp_sdg_2;;
+backbone_depth_of_moletree_path mtp_sdg_1;;
+#use "polypeptide_formula_v.ml";; 
+backbone_residue_number_of_moletree_path mtp_sdg_1;;
+backbone_residue_number_of_moletree_path mtp_sdg_2;;
+#use "t1tab_a_polypeptide_moletree_path_off_formula_v.ml";; 
+#use "tfragment_formula_v.ml";; 
+Frf_v.name frm_frg_ch3;;
+Frf_v.name frm_frg_a;;
+ #use "t1tab_a_molecule_formula_v.ml";;
+mkd_frg_lt;;
+mkd_frg_lt = chs_mrk_t;;
+ #use "tblock_formula_constrained_v.ml";; 
+frc_blk_coo;;
+ #use "tblock_formula_constrained_v.ml";; 
+frc_blk_co;;
+frc_blk_ch3;;
+ #use "tblock_formula_constrained_v.ml";; 
+#use "tsegment_formula_constrained_v.ml";; 
+smb_gly_n;;
+(
+smb_gly_n (* : Segment_symbol_t.segment_symbol *)
+=
+Segment_symbol_t.Head_segment_symbol
+ (Segment_symbol_t.Zeroone_segment_symbol Segment_symbol_t.Zo_N_h_2C_h_2)
+);;  
+ #use "tsegment_formula_constrained_v.ml";; 
+let frc_gly_n = Sfc_v.retrieve smb_gly_n;;
+let smb_gly_e = Sgs_v.glycine_buried;;
+let frc_gly_e = Sfc_v.retrieve smb_gly_e;;
+let frc_gly_n = Sfc_v.retrieve smb_gly_n;;
+#use "tsegment_formula_constrained_v.ml";; 
+frc_gly_n;;
+#use "tsegment_formula_constrained_v.ml";; 
+Sfc_v.name frc_gly_n;;
+#use "tsegment_formula_constrained_v.ml";; 
+Sfc_v.zeroone_block_symbol_option_off_segment_symbol smb_gly_n ;;
+Sfc_v.zeroone_block_symbol_off_segment_symbol smb_gly_n ;;
+Sfc_v.oneone_block_symbol_list_off_oneone_segment_symbol smb_gly_n;;
+Sfc_v.oneone_block_symbol_list_of_oneone_segment_symbol smb_gly_n;;
+smb_gly_n;;
+Sfc_v.zeroone_block_symbol_off_segment_symbol smb_gly_n ;;
+Sfc_v.zeroone_oneone_block_symbol_capped_list_of_zeroone_segment_symbol smb_gly_n ;;
+#use "tsegment_formula_constrained_v.ml";; 
+Sfc_v.block_symbol_list_of_segment_symbol smb_gly_n ;;
+#use "tsegment_formula_constrained_v.ml";; 
+Sfc_v.block_symbol_list_of_segment_symbol smb_gly_n ;;
+(
+Sfc_v.block_symbol_list_of_segment_symbol smb_gly_n 
+(* : Block_symbol_t.block_symbol list *)
+=
+[Bls_v.zos_n_h_2; Bls_v.osos_c_h_2]
+);;
+#use "tsegment_formula_constrained_v.ml";; 
+Sfc_v.block_symbol_list_off_segment_symbol smb_gly_e;;
+Sfc_v.block_symbol_list_of_segment_symbol smb_gly_e;;
+ (
+Sfc_v.block_symbol_list_of_segment_symbol smb_gly_e
+(* : Block_symbol_t.oneone_block_symbol list *)
+=
+[Bls_v.osos_ccoc; Bls_v.osos_nch_; Bls_v.osos_c_h_2]
+);;
+#use "tsegment_formula_constrained_v.ml";; 
+frc_gly_e;;
+Sfc_v.name frc_gly_e;;
+#use "tstereochemical_index_v.ml";; 
+#use "tsegment_formula_constrained_v.ml";; 
+Sfc_v.name frc_gly_e;;
+#use "tsegment_formula_constrained_v.ml";; 
+frc_gly_e;;
+#use "segment_formula_constrained_v.ml";; 
+let smb_blk_l = oneone_block_symbol_list_of_buried_segment_symbol smb_gly_e;;
+let smb_blk_l = oneone_block_symbol_list_of_buried_segment_symbol smb_gly_b;;
+#use "tsegment_formula_constrained_v.ml";; 
+let smb_blk_l = oneone_block_symbol_list_of_buried_segment_symbol smb_gly_b;;
+#use "tsegment_formula_constrained_v.ml";; 
+let smb_blk_l = oneone_block_symbol_list_of_buried_segment_symbol smb_gly_bb;;
+Sci_v.head_to_tail_indexed_list_of_list smb_blk_l;;
+Sci_v.head_to_tail_indexed_list_of_list ["a"; "b"; "c"];;
+Sci_v.head_to_tail_list_off_list ["a"; "b"; "c"];;
+#use "tsegment_formula_constrained_v.ml";; 
+ #use "tfragment_formula_constrained_v.ml";; 
+frc_smb_frg_1 ;;
+ #use "tfragment_formula_constrained_v.ml";; 
+Ffc_v.retrieve Fgs_v.zz_c_h_3ccoc2;;
+ #use "tsegment_formula_constrained_v.ml";; 
+frc_gly_b;;
+ #use "tsegment_formula_constrained_v.ml";; 
+Sfc_v.block_symbol_list_of_segment_symbol smb_gly_b;;
+ (
+Sfc_v.block_symbol_list_of_segment_symbol smb_gly_b
+(* : Block_symbol_t.oneone_block_symbol list *)
+=
+[Bls_v.osos_ccoc; Bls_v.osos_nch_; Bls_v.osos_c_h_2]
+);;
+ (
+Sfc_v.name frc_gly_b
+=
+"(Osos_Ccoc,head); (Osos_Nch_,two); (Osos_C_h_2,tail)"
+);;
+frc_gly_b;;
+ #use "tsegment_formula_constrained_v.ml";; 
+frc_gly_h;;
+ #use "tsegment_formula_constrained_v.ml";; 
+ #use "segment_formula_constrained_v.ml";; 
+let smb = smb_gly_b;;
+let smb_blk_l = oneone_block_symbol_list_of_buried_segment_symbol smb;;
+let smb = smb_gly_bb;;
+let smb_blk_l = oneone_block_symbol_list_of_buried_segment_symbol smb;;
+Sci_v.head_to_tail_indexed_list_of_list smb_blk_l;;
+ #use "tsegment_formula_constrained_v.ml";; 
+frc_gly_h;;
+ #use "tsegment_formula_constrained_v.ml";; 
+Sfc_v.retrieve smb_gly_h;;
+ #use "tsegment_formula_constrained_v.ml";; 
+Sfc_v.name frc_gly_h;;
+ #use "tsegment_formula_constrained_v.ml";; 
+Sfc_v.name frc_gly_b;;
+ #use "tsegment_formula_constrained_v.ml";; 
+ #use "tglycine_polypeptide_sidegroup_formula_constrained_v.ml";; 
+ #use "ttryptophan_polypeptide_sidegroup_formula_constrained_v.ml";; 
+smb_sdc;;
+frc_smb_sd;;
+let frc_smb_sdc = Ssfc_v.retrieve smb_sdc;;
+Ssfc_v.retrieve smb_sdc;;
+Ssfc_v.retrieve;;
+ #use "ttryptophan_polypeptide_sidegroup_formula_constrained_v.ml";; 
+frc_smb_sdc;;
+Ssfc_v.name frc_smb_sdc ;;
+(
+Ssfc_v.polypeptide_sidegroup_formula_constrained_of_molecule_aminoacid_symbol smb_ama
+ (* : Polypeptide_sidegroup_formula_constrained_t.polypeptide_sidegroup_formula_constrained *)
+=
+frc_smb_sdc
+);;
+ #use "tglycine_polypeptide_sidegroup_formula_constrained_v.ml";; 
+let smb_sdg = Sgs_v.make smb_ama;;
+let smb_sdg = Pss_v.make smb_ama;;
+ #use "tglycine_polypeptide_sidegroup_formula_constrained_v.ml";; 
+let smb_sdg = Pss_v.make smb_ama;;
+ #use "tglycine_polypeptide_sidegroup_formula_constrained_v.ml";; 
+ #use "ttryptophan_polypeptide_sidegroup_formula_constrained_v.ml";; 
+#use "ttyrosine_polypeptide_sidegroup_formula_constrained_v.ml";; 
+smb_sdc;;
+frc_smb_sdc;;
+Psfc_v.name frc_smb_sdc ;;
+#use "ttyrosine_polypeptide_sidegroup_formula_constrained_v.ml";; 
+(
+Psfc_v.polypeptide_sidegroup_formula_constrained_of_molecule_aminoacid_symbol_of_index smb_ama sci
+ (* : Polypeptide_sidegroup_formula_constrained_t.polypeptide_sidegroup_formula_constrained *)
+=
+frc_smb_sdc sci
+);;
+#use "ttyrosine_polypeptide_sidegroup_formula_constrained_v.ml";; 
+Psfc_v.polypeptide_sidegroup_formula_constrained_of_molecule_aminoacid_symbol_of_index;;
+Psfc_v.polypeptide_sidegroup_formula_constrained_of_molecule_aminoacid_symbol_of_index smb_ama sci;;
+#use "ttyrosine_polypeptide_sidegroup_formula_constrained_v.ml";; 
+ #use "talanine_polypeptide_sidegroup_formula_v.ml";; 
+let smb_ama = Aas_v.alanine;;
+let smb_psg = Pss_v.make smb_ama;;
+let frm_smb_psg = Psf_v.make smb_psg;;
+ #use "talanine_polypeptide_sidegroup_formula_v.ml";; 
+ #use "polypeptide_sidegroup_formula_v.ml";; 
+let fragment_symbol_tree_off_polypeptide_sidegroup_formula frm_psg = 
+  Ilt_v.map
+    Dbt_v.left_off_doublet 
+    frm_psg
+;;
+ #use "talanine_polypeptide_sidegroup_formula_v.ml";; 
+frm_smb_psg;;
+Psf_v.name frm_smb_psg ;;
+smb_frg_t;;
+ #use "ttryptophan_polypeptide_sidegroup_formula_v.ml";; 
+let smb_frg_t = Ssf_v.fragment_symbol_tree_off_polypeptide_sidegroup_formula frm_smb_sdg;;
+let frm_smb_sdg = Ssf_v.make smb_sdg;;
+ #use "ttryptophan_polypeptide_sidegroup_formula_v.ml";; 
+smb_frg_t;;
+let smb_ama = Aas_v.tryptophan;;
+let smb_psg = Pss_v.make smb_ama;;
+let sci = Sci_v.stl;;let frm_smb_psg = Psf_v.make smb_psg sci;;
+let smb_frg_t = Psf_v.fragment_symbol_tree_off_polypeptide_sidegroup_formula frm_smb_psg;;
+frm_smb_psg;;
+Ssf_v.name frm_smb_psg ;;
+ #use "ttryptophan_polypeptide_sidegroup_formula_v.ml";; 
+(
+smb_psg (* : Polypeptide_sidegroup_symbol_t.polypeptide_sidegroup_symbol *)
+=
+Polypeptide_sidegroup_symbol_t.MetheneIndol
+);;
+ (
+smb_psg (* : Polypeptide_sidegroup_symbol_t.polypeptide_sidegroup_symbol *)
+=
+Polypeptide_sidegroup_symbol_t.MetheneIndole
+);;
+frm_smb_psg ;;
+Ssf_v.name frm_smb_psg ;;
+Ssf_v.name frm_smb_psg;;
+Psf_v.name frm_smb_psg ;;
+smb_frg_t;;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+(
+Psq_v.name (Psq_v.make smb_plp)
+=
+"VAAWG"
+);;
+let smb_plp = Pls_v.polypeptide_symbol_of_polypeptide_regular_symbol smb_plr;;
+let smb_plr = Pls_t.Tab_a;;
+let smb_plp = Pls_v.polypeptide_symbol_of_polypeptide_regular_symbol smb_plr;;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+  #use "tpolygycine_formula_constrained_v.ml";; 
+#use "tpolyglycine_formula_constrained_v.ml";; 
+Psq_v.name (Psq_v.make smb_plp);;
+let smb_plp = Pls_v.polyglycine_symbol_of_count Idx_p.three;;
+(Psq_v.make smb_plp);;
+Ilt_v.make_of_node_of_indexed_leafed_tree_list_of_index
+;;
+#use "tpolyglycine_formula_constrained_v.ml";; 
+Psq_v.name (Psq_v.make smb_plp);;
+let smb_plp = Pls_v.polyglycine_symbol_of_count Idx_p.three;;
+#use "tpolyglycine_formula_constrained_v.ml";; 
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+let sci = Sci_v.cnt;;
+let glfc sci = 
+    largest_grouping_formula_constrained_of_polypeptide_regular_symbol_of_index smb_plr sci;;
+#use "polypeptide_regular_formula_constrained_v.ml";; 
+let glfc sci = 
+    largest_grouping_formula_constrained_of_polypeptide_regular_symbol_of_index smb_plr sci;;
+let smb_ama = 
+    Psq_v.nterminal_molecule_aminoacid_symbol_off_polypeptide_regular_symbol 
+      smb_plr;;
+let smb_amf = 
+let smb_amf = Mas_v.molecule_aminoacid_fragmented_symbol_off_molecule_aminoacid_fragmented_symbol smb_ama;;
+Mas_v.molecule_aminoacid_fragmented_symbol_off_molecule_aminoacid_fragmented_symbol;;
+Mas_v.molecule_aminoacid_fragmented_symbol_off_molecule_aminoacid_symbol;;
+let smb_amf = Mas_v.molecule_aminoacid_fragmented_symbol_off_molecule_aminoacid_symbol smb_ama;;
+cap_of_largest_grouping_of_fragmented_nterminal smb_amf glfc sci;;
+ match smb_ama with 
+  | Mas_t.Molecule_aminoacid_fragmented_symbol smb_amf -> 
+      cap_of_largest_grouping_of_fragmented_nterminal smb_amf glfc sci
+  | Mas_t.Molecule_aminoacid_segmented_symbol smb_ams -> 
+      cap_of_largest_grouping_of_segmented_nterminal smb_ams glfc sci
+;;
+let cpt =capped_leafed_tree_of_polypeptide_regular_symbol smb_plr sci;;
+let capped_leafed_tree_of_polypeptide_regular_symbol smb_plr sciPsq_v.name (Psq_v.make smb_plp)
+;;
+Psq_v.name (Psq_v.make smb_plp);;
+let smb_plr = Pls_t.Tab_e;;
+let smb_plp = Pls_v.polypeptide_symbol_of_polypeptide_regular_symbol smb_plr;;let frc_plr = Prfc_v.retrieve smb_plr;;
+Psq_v.name (Psq_v.make smb_plp);;
+module Sci_v = Stereochemical_index_v
+(* Polypeptide Regular Symbol *)
+let smb_plr = Pls_t.Tab_e;;
+let smb_plp = Pls_v.polypeptide_symbol_of_polypeptide_regular_symbol smb_plr;;
+(* Polypeptide Regular Formula Constrained *)
+let sci = Sci_v.cnt;;
+Prfc_v.capped_leafed_tree_of_polypeptide_regular_formula_constrained frc_plr sci;;
+capped_leafed_tree_of_polypeptide_regular_formula_constrained  cpt;;
+capped_leafed_tree_of_polypeptide_regular_formula_constrained capped_leafed_tree_of_polypeptide_regular_formula_constrained capped_leafed_tree_of_polypeptide_regular_formula_constrained 
+#use "tpolyglycine_formula_constrained_v.ml";;
+Psq_v.name (Psq_v.make smb_plp);;
+Pfc_v.name frc_plp;;
+frc_plp;;
+ #use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp ;;
+ #use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+frc_plp;;
+#use "t0tab_c_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp ;;
+frc_plp;;
+#use "t0tab_e_polypeptide_formula_constrained_v.ml";; 
+*)Pfc_v.name frc_plp ;;
+Pfc_v.name frc_plp ;;
+frc_plp ;;
+ #use "tpolypeptide_regular_formula_constrained_v.ml";;  
+Prfc_v.name frc_plr ;;
+frc_plr;;
+ #use "tfake_4_molecule_formula_constrained_v.ml";; 
+frc_fake_4
+(* : Molecule_f
+frc_fake_4
+frc_fake_4;;
+ #use "t0tab_d_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.retrieve smb_plp;;
+Pfc_v.name frc_plp ;;
+ #use "t0tab_d_polypeptide_formula_constrained_v.ml";; 
+#use "t0tab_f_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp ;;
+Psq_v.name (Psq_v.make smb_plp);;
+ #use "tfake_4_molecule_formula_constrained_v.ml";; 
+frc_fake_4;;
+Mffc_v.name frc_fake_4;;
+ #use "tmolecule_formula_v.ml";; 
+frm_water;;
+Mof_v.name frm_water;;
+ #use "tmolecule_formula_v.ml";; 
+ (
+Mof_v.name frm_water
+  =
+"(Zz_O_h_2,head)"
+);;
+frm_ala;;
+ (
+Mof_v.name frm_ala
+(* : string *)
+  =
+"{(Zbf_O_h_CdodC_h_,head)[(Osz_C_h_3,str) (Osz_N_h_2,stl)]}"
+);;
+frm_trp;;
+Mof_v.name frm_trp;;
+ (
+Mof_v.name frm_trp
+(* : string *)
+  =
+"{(Zbf_O_h_CdodC_h_,head)[{(Obf_Cch_Nch_Cc,str)[{(Obf_Cch_Nch_Cc,pto)[{(Obf_Cch_r4Cc,pto)[(Hbc,pto) (Hbc,ptb)]} (Hbc,ptb)]} (Hbc,ptb)]} (Osz_N_h_2,stl)]}"
+);;
+frm_benzene;;
+frm_gua;;
+ #use "tmolecule_formula_v.ml";; 
+Mof_v.name frm_gua;;
+ #use "tmolecule_formula_v.ml";; 
+ #use "t0tab_a_polypeptide_path_off_formula_v.ml";; 
+Plf_v.name frm_plp (* : string *)
+;;
+ #use "t0tab_a_polypeptide_path_off_formula_v.ml";; 
+#use "t1tab_a_molecule_formula_v.ml";;
+Plf_v.name frm_plp ;;
+#use "t1tab_a_molecule_formula_v.ml";;
+ mkd_frg_lt;;
+frm_plp ;;
+#use "t1tab_a_molecule_formula_v.ml";;
+(* : string *);;
+Plf_v.name frm_plp ;;
+#use "t1tab_a_molecule_formula_v.ml";;
+frm_plp;;
+mrf_cooh;;
+(
+mrf_cooh
+=
+(Fgs_t.Leaf_fragment_symbol
+  (Fgs_t.Onezero_fragment_symbol Fgs_t.Oz_CdodO_h_),
+ Sci_v.str)
+);;
+frm_plp ;;
+#use "t1tab_a_molecule_formula_v.ml";;
+(
+mrf_conhch
+=
+(Fgs_t.Buried_fragment_symbol
+   (Fgs_t.Buried_segment_extends_buried_fragment_symbol
+      (Fgs_t.Sgs_t.Oneone_segment_symbol
+         Fgs_t.Sgs_t.Oo_CcocNch_C_h_2,
+       Fgs_t.Onefork_fragment_symbol
+         (Fgs_t.Onebifork_fragment_symbol
+            Fgs_t.Obf_CcocNch_C_h_))),
+ Sci_v.str)
+);;
+#use "t1tab_a_molecule_formula_v.ml";;
+(
+chs_mrk_t
+(* : Chemicalset_marker_t.chemicalset_marker Tree_t.tree *)
+=
+Tree_t.Node
+  (cmf_nh2ch,
+   [Tree_t.Node 
+      (cmf_conhch,
+       [Tree_t.Leaf cmf_cooh;
+        Tree_t.Leaf cmf_ch3;]
+      );
+    Tree_t.Leaf cmf_ch3
+  ])
+);;
+#use "t1tab_a_molecule_formula_v.ml";;
+mkd_frg_lt;;
+cmf_nh2ch;;
+#use "t1tab_a_molecule_formula_v.ml";;
+cmf_nh2ch;;
+#use "t1tab_a_molecule_formula_v.ml";;
+Psq_v.name (Psq_v.make smb_plp)
+=
+"VAAWG"
+);;
+Pfc_v.name frc_plp ;;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp ;;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+frc_plp;;
+#use "t0tab_c_polypeptide_formula_constrained_v.ml";; 
+frc_plp;;
+#use "t0tab_d_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.retrieve smb_plp;;
+#use "t0tab_d_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp;;
+Pfc_v.retrieve smb_plp;;
+#use "t0tab_d_polypeptide_formula_constrained_v.ml";; 
+ (
+Pfc_v.name frc_plp 
+(* : string *)
+  =
+"((Zbf_N_h_2C_h_,head),{((P0_Oo_CcocNch_C_h_2,Obf_CcocNch_C_h_),str)[{((P0_Oo_CcocNch_C_h_2,Obf_CcocNch_C_h_),str)[((P0_Oo_CcocNch_C_h_2,Oz_CdodO_h_),str) {(Osbss_C_h_,stl)[(Osz_C_h_3,str) (Osz_C_h_3,stl)]}]} {(Osbss_C_h_,stl)[(Oz_C_h_2C_h_3,str) (Osz_C_h_3,stl)]}]}{(Obf_C_h_2C_h_,stl)[(Osz_C_h_3,str) (Osz_C_h_3,str)]})"
+);;
+Pfc_v.name frc_plp ;;
+frc_plp ;;
+#use "t0tab_d_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp ;;
+#use "t0tab_e_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp ;;
+frc_plp ;;
+#use "t0tab_e_polypeptide_formula_constrained_v.ml";; 
+#use "t0tab_f_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp ;;
+#use "t0tab_f_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp ;;
+frc_plp ;;
+ #use "tpolypeptide_regular_formula_constrained_v.ml";; 
+Prfc_v.name frc_plr ;;
+frc_plr;;
+#use "t0tab_a_polypeptide_formula_v.ml";; 
+Psq_v.name (Psq_v.make smb_plp);;
+Plf_v.name frm_plp ;;
+frm_plp;;
+#use "t0tab_a_polypeptide_formula_v.ml";; 
+ #use "tmolecule_formula_constrained_v.ml";; 
+module Mfc_v = Molecule_formula_constrained_v
+module Mos_v = Molecule_symbol_v
+(** Molecule_linear : Water *)
+let frc_water = Mfc_v.retrieve Mos_v.water;; 
+let frc_ala = Mfc_v.retrieve Mos_v.alanine;;
+let frc_trp = Mfc_v.retrieve Mos_v.tryptophan;;
+(** Molecule_bridged : Benzene *)
+let frc_benzene = Mfc_v.retrieve Mos_v.benzene;;
+(** Molecule Nonbridged : Guanidine *)
+let frc_gua = Mfc_v.retrieve Mos_v.guanidine;;
+frc_water;;
+(
+Mfc_v.name frc_water
+(* : string *)
+= 
+"Zz_O_h_2"
+);;
+Mfc_v.name frc_water
+;;
+frc_water;;
+Mfc_v.name frc_ala;;
+frc_ala ;;
+frc_trp;;
+frc_benzene;;
+frc_gua;;
+ #use "tmolecule_formula_constrained_v.ml";; 
+Mfc_v.name frc_trp;;
+frc_trp;;
+Mfc_v.name frc_benzene;;
+frc_benzene;;
+Mfc_v.name frc_gua;;
+frc_gua;;
+#use "tfake_4_molecule_formula_constrained_v.ml";; 
+#use "tfake_4_molecule_formula_v.ml";; 
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp;;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+frc_plp;;
+#use "t0tab_a_polypeptide_formula_constrained_v.ml";; 
+#use "t0tab_d_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp;;
+Pfc_v.retrieve smb_plp;;
+#use "t0tab_d_polypeptide_formula_constrained_v.ml";; 
+#use "t0tab_e_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp ;;
+#use "t0tab_e_polypeptide_formula_constrained_v.ml";; 
+frc_plp;;
+#use "t0tab_e_polypeptide_formula_constrained_v.ml";; 
+#use "t0tab_f_polypeptide_formula_constrained_v.ml";; 
+Pfc_v.name frc_plp ;;
+frc_plp ;;
+ #use "tpolypeptide_regular_formula_constrained_v.ml";; 
+Prfc_v.name frc_plr 
+;;
+frc_plr;;
+#use "t1tab_a_molecule_formula_v.ml";;
+Plf_v.name frm_plp ;;
+#use "t1tab_a_molecule_formula_v.ml";;
+Plf_v.name frm_plp ;;
+#use "t1tab_a_molecule_formula_v.ml";;
+frm_plp;;
+Sgs_v.peptideca_glycine_buried_b = 
+Polypeptide_formula_t.Fgm_t.Frs_t.Sgs_t.Polysegment_symbol
+  (Polypeptide_formula_t.Fgm_t.Frs_t.Sgs_t.Idx_p.Index 0,
+   Polypeptide_formula_t.Fgm_t.Frs_t.Sgs_t.Oneone_segment_symbol
+     Polypeptide_formula_t.Fgm_t.Frs_t.Sgs_t.Oo_CcocNch_C_h_2);;
+Sgs_v.peptideca_glycine_buried_b = 
+Sgs_t.Polysegment_symbol
+  (Sgs_t.Idx_p.Index 0,
+   Sgs_t.Oneone_segment_symbol
+     Sgs_t.Oo_CcocNch_C_h_2);;
+Sgs_v.peptideca_glycine_buried_b = 
+Sgs_t.Polysegment_symbol
+  (Idx_p.Index 0,
+   Sgs_t.Oneone_segment_symbol
+     Sgs_t.Oo_CcocNch_C_h_2);;
+#use "t1tab_a_molecule_formula_v.ml";;
+Sgs_v.peptideca_glycine_buried_b = 
+Sgs_t.Polysegment_symbol
+  (Idx_p.make 0,
+   Sgs_t.Oneone_segment_symbol
+     Sgs_t.Oo_CcocNch_C_h_2);;
+#use "t1tab_a_molecule_formula_v.ml";;
+Sgs_v.peptideca_glycine_buried_b = 
+Sgs_t.Polysegment_symbol
+  (Idx_p.make 0,
+   Sgs_t.Oneone_segment_symbol
+     Sgs_t.Oo_CcocNch_C_h_2);;
+Sgs_v.peptideca_glycine_buried_b;;
+Fgs_v.peptideca_regular_embedded_b =
+Fgs_t.Onefork_fragment_symbol
+  (Fgs_t.Onebifork_fragment_symbol
+     Fgs_t.Obf_CcocNch_C_h_);;
+Sgs_v.peptideca_glycine_buried_b;;
+Sgs_v.peptideca_glycine_buried_b = 
+   Sgs_t.Oneone_segment_symbol
+     Sgs_t.Oo_CcocNch_C_h_2);;
+Sgs_v.peptideca_glycine_buried_b = 
+   Sgs_t.Oneone_segment_symbol
+     Sgs_t.Oo_CcocNch_C_h_2;;
+#use "t1tab_a_molecule_formula_v.ml";;
+(
+frm_plp 
+(* : Polypeptide_formula_t.polypeptide_formula *) 
+  = 
+Tree_t.Node
+  (mrf_nh2ch,
+   [Tree_t.Node 
+      (mrf_conhch,
+       [Tree_t.Leaf mrf_cooh;
+        Tree_t.Leaf mrf_ch3;]
+      );
+    Tree_t.Leaf mrf_ch3
+  ])
+);;
+mrf_conhch;;
+#use "t1tab_a_molecule_formula_v.ml";;
+mrf_cooh;;
+#use "t1tab_a_molecule_formula_v.ml";;
+ mkd_frg_lt;;
+#use "t1tab_a_molecule_formula_v.ml";;
+ #use "t0tab_a_polypeptide_formula_v.ml";; 
+Plf_v.name frm_plp;;
+frm_plp;;
+#use "t1tab_a_molecule_formula_v.ml";;
+#use "t1tab_b_polypeptide_formula_v.ml";;
+ mrf_sdg_3;;
+#use "t1tab_b_polypeptide_formula_v.ml";;
+mrf_sdg_3;;
+#use "t1tab_b_polypeptide_formula_v.ml";;
+mrf_sdg_3;;
+(
+mrf_sdg_3
+=
+(Fragment_symbol_t.Leaf_fragment_symbol
+  (Fragment_symbol_t.Onezero_fragment_symbol Fragment_symbol_t.Oz_C_h_2O_h_),
+ Sci_v.stl)
+);;
+#use "t1tab_b_polypeptide_formula_v.ml";;
+#use "tblock_formula_constrained_v.ml";;
+frc_blk_co ;;
+#use "tblock_formula_constrained_v.ml";;
+Bfc_v.core_atom_symbol_off_block_formula_constrained frc_blk_co;;
+#use "tblock_formula_constrained_v.ml";;
+Bfc_v.leaf_atom_marker_list_off_block_formula_constrained frc_blk_co;;
+#use "tblock_formula_constrained_v.ml";;
+#use "tblock_formula_v.ml";;
+frm_blk_co ;;
+#use "tblock_formula_v.ml";;
+Bsf_v.name frm_blk_co;;
+#use "tblock_formula_v.ml";;
+#use "twater_formula_v.ml";;
+#use "twater_molecule_formula_v.ml";;
+frm_mol;;
+(
+frm_mol
+(* : Molecule_formula_t.molecule_formula *)
+=
+Molecule_formula_t.Tre_t.Leaf
+(Fgs_v.water_c, Sci_v.head));;
+#use "twater_molecule_formula_v.ml";;
+(
+Frf_v.make Fgs_v.water 
+  =  
+[(Bls_v.water, Sci_v.tail)]
+);;
+mrk_chs_frg_ll ;;
+let mrk_frg_ll = fragment_marker_list_list_off_molecule_formula frm_mol;;
+let mrk_frg_ll = Mof_v.fragment_marker_list_list_off_molecule_formula frm_mol;;
+(
+mrk_chs_frg_ll
+(* : Chemicalset_marker_t.chemicalset_marker list list *)
+=
+[[(Fgs_v.water, Sci_v.head)]]
+);;
+#use "twater_molecule_formula_v.ml";;
+mrk_frg_ll;;
+Mof_v.fragment_marker_depthed_list_list_off_molecule_formula frm_mol;;
+(
+Mof_v.fragment_marker_depthed_list_list_off_molecule_formula frm_mol
+(* : (Fragment_marker_t.fragment_marker * int) list list *) 
+=
+[[(Fgs_v.water, Sci_v.head), 1)]]
+);;
+[[(Fgs_v.water, Sci_v.head), 1)]]
+#use "twater_molecule_formula_v.ml";;
+let block_marker_list_off_fragment_marker (s, i) =
+  Fgf_v.block_marker_list_off_fragment_symbol s
+;;
+let a_l =
+  List.map 
+    (List.map 
+       block_marker_list_off_fragment_marker) mrk_frg_ll
+;;
+#use "twater_molecule_formula_v.ml";;
+let b_l =
+  List.map 
+    (List.map 
+       block_marker_list_add_of_fragment_marker) mrk_frg_ll
+;;
+mrk_atm_l = Fgf_v.atom_marker_list_off_fragment_symbol Fgs_v.water;;
+Fgf_v.atom_marker_list_off_fragment_symbol Fgs_v.water;;
+(
+Fgf_v.atom_marker_list_off_fragment_symbol Fgs_v.water;;            
+(* : Atom_marker_t.atom_marker list *)
+ =
+ [
+  (Chs_t.Atom_symbol Ats_v.sstw_o, Sci_v.pbc);
+  (Chs_t.Atom_symbol Ats_v.slf_h, Sci_v.pbi);
+  (Chs_t.Atom_symbol Ats_v.slf_h, Sci_v.pbo);
+]
+);;
+(
+Fgf_v.atom_marker_list_off_fragment_symbol Fgs_v.water            
+(* : Atom_marker_t.atom_marker list *)
+ =
+ [
+  (Chs_t.Atom_symbol Ats_v.sstw_o, Sci_v.pbc);
+  (Chs_t.Atom_symbol Ats_v.slf_h, Sci_v.pbi);
+  (Chs_t.Atom_symbol Ats_v.slf_h, Sci_v.pbo);
+]
+);;
+#use "twater_molecule_formula_v.ml";;
+let atom_marker_list_add_of_fragment_marker (s, i) =
+  let mrk_atm_l = Fgf_v.atom_marker_list_off_fragment_symbol s in
+  let mrk_chs_atm_l =
+    List.map Chm_v.chemicalset_marker_of_atom_marker mrk_atm_l in 
+  mrk_chs_atm_l @ [Chm_v.chemicalset_marker_of_fragment_marker (s,i)]
+;;
+mrk_chs_atm_lll;;
+let mrk_chs_atm_lll =
+  List.map 
+    (List.map 
+       atom_marker_list_add_of_fragment_marker) mrk_frg_ll
+;;
+let mrk_atm_l = Blf_v.atom_marker_list_off_block_symbol Bls_v.water;;
+(
+Fgf_v.atom_marker_list_off_block_symbol Bls_v.water            
+(* : Atom_marker_t.atom_marker list *)
+ =
+ [
+  (Ats_v.sstw_o, Sci_v.pbc);
+  (Ats_v.slf_h, Sci_v.pbi);
+  (Ats_v.slf_h, Sci_v.pbo);
+]
+);;
+Blf_v.atom_marker_list_off_block_symbol Bls_v.water    ;;
+ (
+Blf_v.atom_marker_list_off_block_symbol Bls_v.water            
+(* : Atom_marker_t.atom_marker list *)
+ =
+ [
+  (Ats_v.sstw_o, Sci_v.pbc);
+  (Ats_v.slf_h, Sci_v.pbi);
+  (Ats_v.slf_h, Sci_v.pbo);
+]
+);;
+let atom_marker_list_add_of_block_marker (s, i) =
+  let mrk_atm_l = Blf_v.atom_marker_list_off_block_symbol s in
+  let mrk_chs_atm_l =
+    List.map Chm_v.chemicalset_marker_of_atom_marker mrk_atm_l in 
+  mrk_chs_atm_l @ [Chm_v.chemicalset_marker_of_block_marker (s,i)]
+;;
+#use "twater_molecule_formula_v.ml";;
+let block_marker_list_add_of_fragment_marker (s, i) =
+  let mrk_blk_l = Fgf_v.block_marker_list_off_fragment_symbol s in
+  let mrk_chs_blk_l =
+    List.map Chm_v.chemicalset_marker_of_block_marker mrk_blk_l in 
+  mrk_chs_blk_l @ [Chm_v.chemicalset_marker_of_fragment_marker (s,i)]
+;;
+let mrk_chs_blk_ll =
+  List.map 
+    block_marker_list_add_of_fragment_marker mrk_frg_l
+;;
+mrk_chs_blk_l = List.flatten mrk_chs_blk_ll;;
+testi 5 (
+mrk_chs_blk_l
+(* : Chemicalset_marker_t.chemicalset_marker list list list *)
+=
+ [
+  (Chs_t.Block_symbol Bls_v.water, Sci_v.tail);
+  (Chs_t.Fragment_symbol Fgs_v.water, Sci_v.head);
+]
+);;
+let block_marker_list_off_molecule_formula frm_mol =
+  let mrk_frg_l =
+    fragment_marker_list_off_molecule_formula frm_mol in
+  let mrk_blk_ll = List.map 
+      Fgf_v.block_marker_list_off_fragment_symbol mrk_frg_l in
+  List.flatten mrk_blk_ll
+;;
+#use "molecule_formula_v.ml";;
+let block_marker_list_off_molecule_formula frm_mol =
+  let mrk_frg_l =
+    fragment_marker_list_off_molecule_formula frm_mol in
+  let mrk_blk_ll = List.map 
+      Fgf_v.block_marker_list_off_fragment_symbol mrk_frg_l in
+  List.flatten mrk_blk_ll
+;;
+let fragment_marker_list_off_molecule_formula frm_mol =
+  let mrk_frg_ll = fragment_marker_list_list_off_molecule_formula frm_mol in
+  List.flatten mrk_frg_ll
+;;
+ Mof_v.fragment_marker_list_off_molecule_formula frm_mol;;
+#use "twater_molecule_formula_v.ml";;
+ Mof_v.fragment_marker_list_off_molecule_formula frm_mol;;
+#use "twater_molecule_formula_v.ml";;
+let fragment_marker_list_off_molecule_formula frm_mol =
+  let mrk_frg_ll = fragment_marker_list_list_off_molecule_formula frm_mol in
+  List.flatten mrk_frg_ll
+;;
+#use "molecule_formula_v.ml";;
+let fragment_marker_list_off_molecule_formula frm_mol =
+  let mrk_frg_ll = fragment_marker_list_list_off_molecule_formula frm_mol in
+  List.flatten mrk_frg_ll
+;;
+let fragment_marker_list_off_molecule_symbol smb_mol =
+  let frm_mol = make smb_mol in
+  fragment_marker_list_off_molecule_formula frm_mol
+;;
+let fragment_chemicalset_marker_list_off_molecule_symbol smb_mol =
+  let frm_mol = make smb_mol in
+  fragment_chemicalset_marker_list_off_molecule_formula frm_mol
+;;
+let block_marker_list_off_molecule_formula frm_mol =
+  let mrk_frg_l =
+    fragment_marker_list_off_molecule_formula frm_mol in
+  let mrk_blk_ll = List.map 
+      Fgf_v.block_marker_list_off_fragment_symbol mrk_frg_l in
+  List.flatten mrk_blk_ll
+;;
+#use "tblock_none_singlesinglesinglesingle_tetrahedral_formula_v.ml";;
+#use "tblock_formula_v.ml";; 
+let for_blo = Block_formula_v.make sym_blo;;
+#use "tblock_formula_v.ml";; 

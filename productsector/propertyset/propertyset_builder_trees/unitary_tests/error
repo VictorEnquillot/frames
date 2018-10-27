@@ -1,0 +1,37 @@
+All tests succeeded.
+Fatal error: exception File "Error_messages_v.ml", line 46, characters 2-8: Assertion failed
+Raised at file "Error_messages_v.ml", line 46, characters 2-15
+Called from file "Check_is_box_name_by_name_provider_v.ml", line 37, characters 15-24
+Called from file "Box_nameoffile_by_box_name_n_base_name_provider_v.ml", line 22, characters 2-54
+Called from file "Box_nameoffile_by_box_name_n_base_name_provider_v.ml", line 43, characters 15-24
+Called from file "Check_consistency_by_box_name_n_base_name_provider_v.ml", line 18, characters 9-87
+Called from file "Check_consistency_by_box_name_n_base_name_provider_v.ml", line 27, characters 15-24
+Called from file "Check_consistency_by_context_name_quatuor_provider_v.ml", line 38, characters 2-81
+Called from file "Check_consistency_by_context_name_quatuor_provider_v.ml", line 70, characters 15-24
+Called from file "Context_sole_index_by_context_name_quatuor_provider_v.ml", line 26, characters 2-99
+Called from file "Context_sole_index_by_context_name_quatuor_provider_v.ml", line 59, characters 15-24
+Called from file "Context_sole_index_by_basicname_quatuor_provider_v.ml", line 30, characters 15-24
+Called from file "Localinput_as_context_databox_tag_by_basicname_inputbox_provider_v.ml", line 29, characters 4-106
+Called from file "Localinput_as_context_databox_tag_by_basicname_inputbox_provider_v.ml", line 47, characters 15-24
+Called from file "Localinput_as_context_tag_quatuor_by_basicname_inputbox_provider_v.ml", line 39, characters 20-102
+Called from file "Localinput_as_context_tag_quatuor_by_basicname_inputbox_provider_v.ml", line 50, characters 15-24
+Called from file "Localinput_tag_tree_by_basicname_inputbox_provider_v.ml", line 42, characters 4-92
+Called from file "Localinput_tag_tree_by_basicname_inputbox_provider_v.ml", line 76, characters 15-28
+Called from file "Localinput_tag_tree_by_basicname_inputbox_provider_v.ml", line 104, characters 15-44
+Called from file "Localinput_as_set_body_handle_command_tag_subtree_list_by_basicname_inputbox_provider_v.ml", line 31, characters 4-79
+Called from file "Localinput_as_set_body_handle_command_tag_subtree_list_by_basicname_inputbox_provider_v.ml", line 52, characters 15-28
+Called from file "Localinput_as_set_body_handle_command_tag_subtree_list_by_basicname_inputbox_provider_v.ml", line 80, characters 15-44
+Called from file "Localinput_as_set_body_handle_command_creation_define_tag_subtree_list_by_basicname_inputbox_provider_v.ml", line 21, characters 4-114
+Called from file "Localinput_as_set_body_handle_command_creation_define_tag_subtree_list_by_basicname_inputbox_provider_v.ml", line 47, characters 15-40
+Called from file "Localinput_as_set_body_handle_command_creation_define_tag_subtree_by_basicname_variable_n_basicname_inputbox_provider_v.ml", line 22, characters 4-129
+Called from file "Localinput_as_set_body_handle_command_creation_define_tag_subtree_by_basicname_variable_n_basicname_inputbox_provider_v.ml", line 56, characters 15-40
+Called from file "Localinput_set_body_box_type_string_list_by_basicname_variable_n_basicname_inputbox_provider_v.ml", line 25, characters 4-156
+Called from file "Localinput_set_body_box_type_string_list_by_basicname_variable_n_basicname_inputbox_provider_v.ml", line 55, characters 13-37
+Called from file "Localinput_set_body_box_type_string_list_by_basicname_variable_n_basicname_inputbox_provider_v.ml", line 83, characters 15-55
+Called from file "Property_as_operand_target_symbol_by_localinput_set_fence_variable_name_entity_target_tag_provider_v.ml", line 30, characters 4-132
+Called from file "Property_as_operand_target_symbol_by_localinput_set_fence_variable_name_entity_target_tag_provider_v.ml", line 51, characters 15-24
+Called from file "Property_symbol_subtree_by_localinput_set_fence_variable_name_entity_tag_provider_v.ml", line 133, characters 3-128
+Called from file "Property_symbol_subtree_by_localinput_set_fence_variable_name_entity_tag_provider_v.ml", line 163, characters 13-26
+Called from file "Property_symbol_subtree_by_localinput_set_fence_variable_name_entity_tag_provider_v.ml", line 191, characters 15-44
+Called from file "test.ml", line 162, characters 2-110
+make: *** [testing] Erreur 2

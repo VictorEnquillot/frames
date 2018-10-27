@@ -1,0 +1,44 @@
+let nam_dba = "nwchem";;
+let nam_bas = "cc_pvtz";;
+
+Parameters_general_register_v.store "database-name" nam_dba;;
+Parameters_general_register_v.store "basisset-name" nam_bas;;
+
+open Son_elementary_tag_list_by_father_elementary_tag_provider_v;;
+
+let tag_ele_t = Elementary_tag_tree_by_parameters_general_provider_v.provide ();;
+
+let tag_ele_l = Elementary_tag_all_list_by_parameters_general_provider_v.provide ();;
+
+let tag_edo = Elementary_domain_tag_by_unit_provider_v.provide ();;
+
+test_number 1 (
+(tag_edo : Elementary_domain_symbol_t.elementary_domain_symbol Tag_t.tag ) =
+  (Elementary_domain_symbol_t.Elementary_domain_constructor "elementary",
+   [6])
+);;
+
+let tag_ele_dba = Elementary_as_database_tag_by_database_name_provider_v.provide nam_dba;;
+
+test_number 2 (
+(tag_ele_dba : Elementary_symbol_t.elementary_symbol Tag_t.tag ) =
+ (Elementary_symbol_t.Elementary_context_symbol
+    (Elementary_context_symbol_t.Elementary_database_symbol
+      (Elementary_database_symbol_t.Elementary_database_constructor "nwchem")),
+   [5; 6])
+);;
+
+(* Domain *)
+
+let tag_ele_fat = List.find 
+    (fun t -> Elementary_symbol_v.is_elementary_domain_symbol_off_elementary_symbol 
+	(Tag_v.entity_off_tag t) ) 
+    tag_ele_l;;
+
+test_number 3 (
+(tag_ele_fat : Elementary_symbol_t.elementary_symbol Tag_t.tag ) =
+  (Elementary_symbol_t.Elementary_context_symbol
+    (Elementary_context_symbol_t.Elementary_domain_symbol
+      (Elementary_domain_symbol_t.Elementary_domain_constructor "elementary")),
+   [6])
+);;

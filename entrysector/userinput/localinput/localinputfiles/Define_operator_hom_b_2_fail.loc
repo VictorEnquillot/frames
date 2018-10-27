@@ -1,0 +1,11 @@
+define Hom_b_2
+       operator 
+         type [ "operator" "set" "body" "creation" "transformation" "constructor"  ]
+	 cofactor 
+            basic 2.0 
+            external Cen_b 
+	    end -- cofactor
+         end -- operator
+       end -- define
+
+stop

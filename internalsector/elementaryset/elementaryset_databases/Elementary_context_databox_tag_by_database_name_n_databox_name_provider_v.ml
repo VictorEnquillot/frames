@@ -1,0 +1,68 @@
+(** {3 Elementary_context_databox_tag_by_database_name_n_databox_name_provider_v} *)
+
+(** {6 Documenting} *)
+
+let documentation () = 
+  [
+   "Current : DELE:Elementary_context_databox_tag_by_database_name_n_databox_name_provider_v";
+   "Needs : DELE:Elementary_context_databox_figuredata_tag_by_database_name_n_databox_name_provider_v";
+   "Needs : DELE:Elementary_context_databox_skeletondata_tag_by_database_name_n_databox_name_provider_v";
+   "Needed-by :"; 
+   "What-is-it : the Elementary as context_databox_tag from Database and Databox_name";
+   "Author : François Colonna 18 february 2016. Use Global";
+  ]
+;;
+
+let nam_mod = Management_v.current_module_name (documentation ()) ;;
+ 
+(** {6 Building} *)
+
+let build (nam_dba, nam_dbo) =
+
+  let soi_dfi_glo = 
+    Global_databox_sole_index_by_database_name_n_databox_name_provider_v.provide
+      (nam_dba, nam_dbo)
+  in
+  let soi_dom_glo = [List_v.last_element_off_list soi_dfi_glo] in
+  let nam_dom = 
+    Context_name_by_databaseset_global_sole_index_provider_v.provide
+      soi_dom_glo
+  in
+  match nam_dom with 
+  | "figure" ->
+      let tag_edf = 
+	Elementary_context_databox_figuredata_tag_by_database_name_n_databox_name_provider_v.provide
+	  (nam_dba, nam_dbo)
+      in
+      Tag_v.map_entity (* Coerce Up *)
+	Elementary_context_databox_symbol_v.elementary_context_databox_symbol_of_elementary_context_databox_figuredata_symbol
+	tag_edf
+
+  | "skeleton" ->
+      let tag_eds = 
+	Elementary_context_databox_skeletondata_tag_by_database_name_n_databox_name_provider_v.provide
+	  (nam_dba, nam_dbo)
+      in
+      Tag_v.map_entity (* Coerce Up *)
+	Elementary_context_databox_symbol_v.elementary_context_databox_symbol_of_elementary_context_databox_skeletondata_symbol
+	tag_eds
+
+  | _ -> 
+      Error_messages_v.print_fatal_error __LOC__ "build"
+	"Domain data name were figure|skeleton"
+	nam_dom
+	"Check or add it"
+;;
+
+
+(** {6 Providing} *)
+
+let provide key =
+  let nam_fun = "provide" in
+  let pro_cpu = Management_v.entering_of_module_name_of_function_name nam_mod nam_fun in
+  let result = build key in
+  Management_v.exiting_of_process_times_of_module_name_of_function_name pro_cpu nam_mod nam_fun;
+  result
+;;
+
+(* done with do_provider_without_register.sh Elementary_context_databox_tag_by_database_name_n_databox_name_provider_v.ml on mercredi 25 mai 2016, 10:04:04 (UTC+0200) *)

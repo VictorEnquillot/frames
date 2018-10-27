@@ -1,0 +1,11 @@
+let sym_enp_l = Entity_proper_symbol_list_by_domainset_tag_provider_v.provide tag_dos;;
+
+let sym_enp = List.find (fun e -> Entity_proper_symbol_v.string_off e = nam_enp) sym_enp_l;;
+let idx_enp = (List_v.index_of_element_of_list sym_enp sym_enp_l) + 1;; 
+let soi_enp = Sole_index_v.make idx_enp soi_cat;;
+let gss_enp = Generatorset_symbol_v.generatorset_symbol_of_entity_proper_symbol sym_enp;;
+Generatorset_symbol_by_sole_index_provider_v.store soi_enp gss_enp;;
+let tag_enp = Tag_v.make sym_enp soi_enp;;
+
+let sym_ent = Entity_symbol_v.entity_symbol_of_entity_proper_symbol sym_enp;;
+let tag_ent = Tag_v.make sym_ent soi_enp;;

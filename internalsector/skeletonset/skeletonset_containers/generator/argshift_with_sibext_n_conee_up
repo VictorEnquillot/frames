@@ -1,0 +1,28 @@
+args=$*
+argnumber=$#
+
+script=`basename $0`
+
+this=$1
+shift;ttt=$1
+shift;sibext_1=$1
+shift;sib_1=$1
+shift;sibext_2=$1
+shift;sib_2=$1
+shift;conee_up=$1
+shift;cnn_up=$1
+shift;conee_1=$1
+shift;cnn_1=$1
+
+last=10
+
+sibling_1=${this}_${sibext_1}
+sibling_2=${this}_${sibext_2}
+sibling_3=${this}_${sibext_3}
+
+if [ $# -ne $last ] 
+then 
+    echo "number of arguments is $# instead of $last for $0 ${this}"
+    exit
+fi
+

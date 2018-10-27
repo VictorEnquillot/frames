@@ -1,0 +1,14 @@
+set debug 
+      module "Input_parser_define_v"
+      end -- debug
+    end -- set 
+
+define P_a 
+          figure_point "A"
+       end -- define
+
+provide tag 
+        for P_a
+        end -- provide
+
+stop

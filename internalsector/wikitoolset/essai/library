@@ -1,0 +1,3 @@
+ocamlc -I ./ -a -o essai.cma \
+unix.cma -cclib -lunix str.cma -cclib -lstr \
+read_record_list_v.cmo 

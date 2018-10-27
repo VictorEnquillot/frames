@@ -1,0 +1,17 @@
+FILES_MLI := \
+word_word_word_string_tetraplet_list_by_category_trail_provider_v.mli \
+type_kind_word_word_string_triplet_list_by_category_trail_provider_v.mli \
+type_kind_by_entity_trail_provider_v.mli \
+entity_name_n_constructors_string_doublet_list_by_category_trail_provider_v.mli \
+entity_name_list_by_category_trail_provider_v.mli \
+constructors_string_by_entity_trail_provider_v.mli \
+constructor_list_by_entity_trail_provider_v.mli \
+word_tree_by_category_trail_provider_v.mli \
+description_word_word_string_triplet_list_by_category_trail_provider_v.mli \
+# record_kind_by_entity_trail_provider_v.mli \
+# word_n_word_list_list_by_category_trail_provider_v.mli \
+#   \
+
+
+  
+

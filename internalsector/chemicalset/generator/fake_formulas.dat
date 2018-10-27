@@ -1,0 +1,21 @@
+# Atoms
+
+builders z_h_s = list string
+builders z_f_s = list string
+builders z_s_s = list string
+builders z_o_b = list string
+builders z_n_b = list string
+builders z_o_d = list string
+builders z_n_t = list string
+
+# Blocks
+builders z_h2_z = list onetied_single_atom
+builders z_sh_z = list onetied_single_atom
+builders z_fh_z = list onetied_single_atom
+
+builders z_o2_z = list onetied_double_atom
+
+builders z_n2_z = list onetied_triple_atom
+builders z_co_z = list onetied_triple_atom
+
+builders z_no_z = list onetied_biconjugated_atom

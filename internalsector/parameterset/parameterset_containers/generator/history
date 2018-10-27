@@ -1,0 +1,69 @@
+#!/bin/bash
+
+# Elementary_border are Parameter or Coordinate : Elementary_entities 
+
+cp $FELE/Elementary_border_*parameter*container*ml .
+
+cp -p $FELE/generator/do_container_as_uno_border_bud_1containee_v.sh generator/
+cp    $FELE/generator/template_container_as_uno_border_bud_1containee_v.ml generator/
+
+cp -p $FELE/generator/do_container_from_symbol_this_t.sh .
+
+cp -p $FELE/generator/do_container_as_uno_border_bud_1containee_t.sh generator/
+cp    $FELE/generator/template_container_as_uno_border_bud_1containee_t.ml generator/
+
+cp -p $FELE/generator/do_container_as_uno_border_trunc_2sibling_1containee_v.sh generator/
+cp    $FELE/generator/template_container_as_uno_border_trunc_2sibling_1containee_v.ml generator/
+
+cp -p $FELE/generator/do_container_as_doublet_body_bud_2containee_t.sh generator/
+cp    $FELE/generator/template_container_as_doublet_body_bud_2containee_t.ml generator/
+
+cp -p $FELE/generator/do_container_as_triplet_body_bud_3containee_t.sh generator/
+cp    $FELE/generator/template_container_as_triplet_body_bud_3containee_t.ml generator/
+
+cp -p $FELE/generator/do_container_as_doublet_body_bud_2containee_v.sh generator/
+cp    $FELE/generator/template_container_as_doublet_body_bud_2containee_v.ml generator/
+
+cp -p $FELE/generator/do_container_as_triplet_body_bud_3containee_v.sh generator/
+cp    $FELE/generator/template_container_as_triplet_body_bud_3containee_v.ml generator/
+
+cp -p $FELE/generator/do_container_as_tuple_body_trunc_2sibling_1containee_v.sh generator/
+cp    $FELE/generator/template_container_as_tuple_body_trunc_2sibling_1containee_v.ml generator/
+
+cp -p $FELE/generator/do_container_as_list_context_bud_1containee_t.sh generator/
+cp    $FELE/generator/template_container_as_list_context_bud_1containee_t.ml generator/
+
+cp -p $FELE/generator/do_container_as_list_context_bud_1containee_v.sh generator/
+cp    $FELE/generator/template_container_as_list_context_bud_1containee_v.ml generator/
+
+cp -p $FELE/generator/do_container_as_list_context_trunc_4sibling_1containee_v.sh generator/
+cp    $FELE/generator/template_container_as_list_context_trunc_4sibling_1containee_v.ml generator/
+
+cp -p $FELE/generator/do_container_as_list_top_trunc_4sibling_1containee_v.sh generator/
+cp    $FELE/generator/template_container_as_list_top_trunc_4sibling_1containee_v.ml generator/
+
+
+modify_string.pl Elementary_fence_units Units *ml
+modify_string.pl elementary_fence_units units *ml
+modify_string.pl Elementary_symbol_v Parameter_symbol_v *ml
+modify_string.pl elementary_symbol parameter_symbol *ml
+modify_string.pl Elementary_border_parameter Parameter_fence *ml
+modify_string.pl elementary_border_parameter parameter_fence *ml
+
+modify_string.pl parameter_aopef  parameter_fence_aopef *ml
+modify_string.pl parameter_ecppef  parameter_fence_ecppef *ml
+modify_strings_and_rename_files.sh Parameter_aopef   Parameter_fence_aopef *ml *mk
+modify_strings_and_rename_files.sh Parameter_ecppef  Parameter_fence_ecppef *ml *mk
+
+modify_strings_and_rename_files.sh Parameter_ecppef  Elementary_border_parameter Parameter_fence *ml
+
+modify_string.pl Son_elementary_tag_list_by_father_elementary_tag Parameter_son_tag_list_by_parameter_father_tag *ml
+modify_string.pl _tag_t.units _t.units *ml
+modify_string.pl length_tag_v length_v *ml
+modify_string.pl "_tag Uno" " Uno" *ml
+
+
+modify_word.pl FELE FPAR *ml
+modify_word.pl nam_cod nam_mod *ml
+
+

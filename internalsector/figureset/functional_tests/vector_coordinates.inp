@@ -1,0 +1,39 @@
+# input
+   model =
+     model_name = vector_bc
+     model_title = "the vector BC"
+     database_name = db1
+     entity_what = vector
+     entity_name = bc
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+# output
+   coordinates =
+     coordinates_name = coordinates_bc
+     coordinates_units_list = { meter degree }
+     coordinates_what = spherical
+   end # coordinates
+
+   property =	
+     property_name = coordinates_of_vector_bc 
+     property_title = "the coordinates of Vector BC"  
+     property_units_list = { meter radian } 
+     property_file = vector_bc_coordinates.out 
+     property_what = coordinates_bc
+     property_model_input = vector_bc
+   end # property
+
+   target = 
+     domain_name = figure
+     target_name = vector_bc_coordinates
+     target_title = "Coordinates for Vector BC"
+     target_property = coordinates_of_vector_bc
+   end # target
+
+# domain
+   domain =
+    domain_name = figure
+    target_list = { vector_bc_coordinates }
+   end # domain

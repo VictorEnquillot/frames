@@ -1,0 +1,63 @@
+#!/bin/bash
+
+modify_strings_and_rename_files.sh nwchemdata_body nwchemdata_set_body *ml *mk
+modify_strings_and_rename_files.sh nwchemdata_fence nwchemdata_set_fence *ml *mk
+modify_strings_and_rename_files.sh comment_author_name_many comment_authorname_many *ml *mk
+modify_strings_and_rename_files.sh comment_author_name_two comment_authorname_two *ml *mk
+modify_strings_and_rename_files.sh comment_author_name comment_authorname_one *ml *mk
+
+modify_strings_and_rename_files.sh  angular_function angularfunction *ml *mk
+modify_strings_and_rename_files.sh  angular_momentum angularmomentum *ml *mk
+modify_strings_and_rename_files.sh  aocomment_emsl comment_aoemsl  *ml *mk
+modify_strings_and_rename_files.sh  body_variable_shell_name  body_variable_shellname_usual  *ml *mk
+modify_strings_and_rename_files.sh  body_variable_shell_name_extended  body_variable_shellname_extended  *ml *mk
+modify_strings_and_rename_files.sh  set_body_variable_shell_relativistic_name  set_body_variable_shellname_relativistic  *ml *mk
+modify_strings_and_rename_files.sh  body_variable_shell_name_relativistic  body_variable_shellname_relativistic  *ml *mk
+modify_strings_and_rename_files.sh  center_and_shell_name centerandshellname *ml *mk
+modify_strings_and_rename_files.sh  comment_author_name comment_authorname_one *ml *mk
+modify_strings_and_rename_files.sh  comment_author_name_many comment_authorname_many *ml *mk
+modify_strings_and_rename_files.sh  comment_author_name_two comment_authorname_two *ml *mk
+modify_strings_and_rename_files.sh  comment_element_line comment_elementline  *ml *mk
+modify_strings_and_rename_files.sh  contraction_coefficient_column contraction_coefficientcolumn *ml *mk
+modify_strings_and_rename_files.sh  dashed_line  dashedline *ml *mk
+modify_strings_and_rename_files.sh  dataname_file datanamefile *ml *mk
+modify_strings_and_rename_files.sh  general_contraction_shell_set general_contraction_shellset  *ml *mk
+modify_strings_and_rename_files.sh  journal_reference journalreference *ml *mk
+modify_strings_and_rename_files.sh  nwchemdata_body nwchemdata_set_body *ml *mk
+modify_strings_and_rename_files.sh  nwchemdata_fence nwchemdata_set_fence *ml *mk
+modify_strings_and_rename_files.sh  positive_integer_n_shell_name positiveintegerandshellname *ml *mk
+modify_strings_and_rename_files.sh  variable_radial_function variable_radialfunction *ml *mk
+modify_strings_and_rename_files.sh  variable_ao_singles_at_c variable_aos_at_c *ml *mk
+modify_strings_and_rename_files.sh  variable_shell_extended_name variable_shellname_extended *ml *mk
+modify_strings_and_rename_files.sh  dataname_local_name localname_dataname  *ml *mk
+modify_strings_and_rename_files.sh  numerical_values numericalvalues *ml *mk
+modify_strings_and_rename_files.sh  ecpset_local_name localname_ecpset  *ml *mk
+modify_strings_and_rename_files.sh  electron_number electronnumber *ml *mk
+modify_strings_and_rename_files.sh  non_negative nonnegative *ml *mk
+modify_strings_and_rename_files.sh  general_contraction  generalcontraction *ml *mk
+modify_strings_and_rename_files.sh  body_variable_angular_spherical_function  body_variable_angularfunction_spherical *ml *mk
+modify_strings_and_rename_files.sh  mendeleiev_symbol  mendeleievsymbol *ml *mk
+
+modify_strings_and_rename_files.sh and _n_ *ml *mk
+# modify_word.pl  variable_ao variable_ao_single  *ml *mk
+ao_single_contracted ao_contracted *ml *mk
+
+# done    "Author : François Colonna 04 décembre 2016 at 18:11:37+01:00";
+
+modify_strings_and_rename_files.sh  chemdata_body chemdata_set_body  *ml *mk
+modify_strings_and_rename_files.sh  chemdata_fence chemdata_set_fence  *ml *mk
+
+modify_word.pl is_nwchemdata_body_variable_center_name is_nwchemdata_set_body_variable_centername_constructor *ml
+modify_word.pl is_nwchemdata_body_variable_  is_nwchemdata_set_body_variable_centername_constructor *ml
+
+modify_word.pl nwchemdata_set_fence_float_positive  nwchemdata_fence_float_positive_constructor *ml
+modify_word.pl nwchemdata_set_fence_float_non_negative nwchemdata_set_fence_float_nonnegative_constructor *ml
+
+modify_string.pl is_nwchemdata_body_variable_shell_name is_nwchemdata_set_body_variable_shellname_symbol_off_nwchemdata_symbol *ml
+
+modify_string.pl "numerical_values nam_" "numericalvalues_constructor nam_" *ml 
+modify_string.pl "numerical_values_block nam" "numericalvalues_block_constructor nam" *ml
+modify_string.pl "ecpset_electron_number nam_" "ecpset_electronnumber_constructor nam_" *ml
+modify_string.pl "_block nam_" "_block_constructor nam_" *ml
+modify_string.pl "data_context_version_" "data_set_body_variable_version_" *ml
+

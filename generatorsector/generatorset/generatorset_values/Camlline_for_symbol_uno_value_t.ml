@@ -1,0 +1,8 @@
+(** {6 Typing} *)
+
+type camlline_for_symbol_uno_value =
+  | Camlline_for_symbol_uno_builder_value of Camlline_for_symbol_uno_builder_value_t.camlline_for_symbol_uno_builder_value
+  | Camlline_for_symbol_uno_current_value of Camlline_for_symbol_uno_current_value_t.camlline_for_symbol_uno_current_value
+  | Camlline_for_symbol_uno_son_value of Camlline_for_symbol_uno_son_value_t.camlline_for_symbol_uno_son_value
+  | Camlline_for_symbol_uno_top_value of Camlline_for_symbol_uno_top_value_t.camlline_for_symbol_uno_top_value
+;;

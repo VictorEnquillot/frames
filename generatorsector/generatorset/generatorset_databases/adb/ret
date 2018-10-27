@@ -1,0 +1,59 @@
+let retrieve tra_cle =
+  try Register_v.retrieve builder_basename_list_by_constructor_leaf_trail_register tra_cle
+  with Failure ("Not_stored:Register_v.ml:retrieve") ->
+    let str_reg = 
+      Register_v.string_of_register 
+	Trail_v.name 
+	(List_v.name_with_separator Utilities_v.identity "; ")
+	"\n" 
+	builder_basename_list_by_constructor_leaf_trail_register
+    in
+    let nam_ent = Trail_v.value_of_key_off_trail "entity" tra_cle in
+    let tra_cle = List.tl tra_cle in
+    let nam_fil = Filename_p.name
+        (Database_filename_by_category_trail_provider_v.provide tra_cle) 
+    in
+    Error_messages_v.print_fatal_error 
+      nam_cod 
+      "retrieve"
+      (Format.sprintf "key >%s<@.    were already stored"
+         (Trail_v.name tra_cle)) 
+      (Format.sprintf "no such key in register dumped below:@.        %s" str_reg) 
+      (Format.sprintf "check entry >%s< in file:@.       >%s<" nam_ent nam_fil)
+;;  
+
+let store tra_cle str_l =
+  try Register_v.store 
+      builder_basename_list_by_constructor_leaf_trail_register 
+      tra_cle str_l
+  with Failure ("Already_stored:Register_v.ml:store") ->
+    let str_old_l = retrieve tra_cle in
+    if str_old_l <> str_l
+    then
+      begin
+	let nam_ent = Trail_v.value_of_key_off_trail "entity" tra_cle in
+	let tra_cle = List.tl tra_cle in
+	let nam_fil = 
+          Filename_p.name
+            (Database_filename_by_category_trail_provider_v.provide tra_cle) 
+	in
+	Error_messages_v.print_fatal_error 
+	  nam_cod 
+          "store"
+          (Format.sprintf "for key >%s<@.    already stored value >%s< equal new one"
+             (Trail_v.name tra_cle)
+ 	     (List_v.name_with_separator Utilities_v.identity "; " str_l) )
+     
+	  (Format.sprintf "this value >%s<"
+ 	     (List_v.name_with_separator Utilities_v.identity "; " str_old_l) )
+
+	  (Format.sprintf "check for duplicated entry >%s< in file:@.       >%s<" nam_ent nam_fil)
+      end
+    else 
+      Error_messages_v.print_warning
+	nam_cod 
+        "store"
+        (Format.sprintf "for key >%s<@.    already stored value >%s<"
+           (Trail_v.name tra_cle)
+           (List_v.name_with_separator Utilities_v.identity "; " str_old_l) )
+;;

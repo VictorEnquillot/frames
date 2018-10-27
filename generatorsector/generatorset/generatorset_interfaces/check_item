@@ -1,0 +1,10 @@
+  let sym_ite = Camlparagraph_tag_v.item_symbol_off_camlparagraph_tag tag_cap in
+  if (sym_ite <> Item_symbol_v.making)
+  then
+    Error_messages_v.print_fatal_error nam_cod 
+      "doublet_list_for_each_pipe_camlline_in_let_make_function"
+      "Item_symbol were making"
+      (Item_symbol_v.name sym_ite)
+      "Check"
+  else
+    begin

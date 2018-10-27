@@ -1,0 +1,91 @@
+define Run 
+       as word "triangle_t_properties"
+       end
+
+define Title 
+       as string 
+             "input for Run : " Run
+             end -- string 
+       end -- set
+
+set debug all end -- set 
+set trace for provider except this end  -- set
+
+define Tr 
+       as triangle_isosceles_equilateral "T" 
+       from domain figure	    
+       from database "db1"
+       end -- define
+
+define P_a 
+       as point "A"
+       from domain figure
+       from database "db1"
+       end -- define Point
+
+define R_name
+       as string 
+             "ratio"
+             end -- string 
+       end -- define
+
+define R_value
+       as float - 2.5
+             end -- float
+       end -- define
+
+define R 
+       as float_value R_name R_value
+       end 
+   
+define X 
+       by evaluating 
+             ( (R_value * 4.5) + cos (Pi / 2) )
+             end --evaluating
+       end -- define
+
+define Phi
+       as coordinate_spherical "phi"    -- type Coordinate / Elementaryset
+       end -- define
+
+define Phi_a 
+       by extracting Phi                -- it is not a Property
+            off P_a                     -- extracting from Value-Tree of P_a
+            end -- extracting
+       end -- define
+
+define U_length                      
+       as units meter                  -- type Units / Elementaryset
+       end -- define
+
+define U_angle                      
+       as units degree                 -- type Units / Elementaryset
+       end -- define
+
+define Vec_sym 
+       as vector "BC"
+       from domain figure
+       with category symbol
+       end -- define
+
+print Vec_sym
+      units 
+        degree
+        meter
+        end -- units
+      end -- print
+
+print Phi_a 
+      units 
+        U_length 
+        U_angle
+        end -- units
+      end -- print
+
+define F_t 
+       as file F_name
+       end -- define
+
+write Tr 
+      to F_t
+      end -- write 

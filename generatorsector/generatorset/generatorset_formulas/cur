@@ -1,0 +1,5 @@
+  let sym_ent_cur = 
+    Tools_fgnr_v.entity_current_symbol_of_camlline_dectup_of_sole_index 
+      dec_cct 
+      soi_cal 
+  in

@@ -1,0 +1,42 @@
+        digraph Frames {
+                size="40,15";
+                node [fontsize=50];
+                edge [arrowhead = "vee", arrowsize = "2.0", style="solid", taillabel = ""];
+
+        Title [
+            label = "External Sector Hierarchy", shape=box, fontname=Courier, fontsize=90, color=yellow, style=filled
+            ];
+
+	    "Externalsector\nEXS" [color=green, style=filled];
+	    "Figuredata\nFIGD"[color=lavender, style=filled] ;
+	    "Skeletondata\nSKED"  [color=grey, style=filled];
+
+    		Title -> "Externalsector\nEXS"  [style="invis"];
+
+		"Externalsector\nEXS" -> "Figuredata\nFIGD";
+		"Externalsector\nEXS" -> "Skeletondata\nSKED";
+
+		node [color=lightpink, style=filled];
+		"Figuredata\nFIGD" -> "Db1pointsdata\nDB1";
+		"Db1pointsdata\nDB1" -> "Db1pointsdataset\nDB1S";
+		"Db1pointsdataset\nDB1S" -> "Db1pointsdataset\nSymbols\nSDB1";
+		"Db1pointsdataset\nDB1S" -> "Db1pointsdataset\nTags\nTDB1";
+		"Db1pointsdataset\nDB1S" -> "Db1pointsdataset\nBuilder_trees\nBDB1";
+		"Db1pointsdataset\nDB1S" -> "Db1pointsdataset\nContainers\nCDB1";
+		"Db1pointsdataset\nDB1S" -> "Db1pointsdataset\nEnvelopes\nEDB1";
+
+
+		node [color=lightblue2, style=filled];
+		"Figuredata\nFIGD" -> "Db2pointsdata\nDB2";
+		"Db2pointsdata\nDB2" -> "Db2pointsdataset\nDB2S";
+		"Db2pointsdataset\nDB2S" -> "Db2pointsdataset\nSymbols\nSDB2";
+		"Db2pointsdataset\nDB2S" -> "Db2pointsdataset\nTags\nTDB2";
+		"Db2pointsdataset\nDB2S" -> "Db2pointsdataset\nBuilder_trees\nBDB2";
+		"Db2pointsdataset\nDB2S" -> "Db2pointsdataset\nContainers\nCDB2";
+		"Db2pointsdataset\nDB2S" -> "Db2pointsdataset\nEnvelopes\nEDB2";
+
+
+		node [color=grey, style=filled];
+		"Skeletondata\nSKED" -> "Molprodata\nMPR";
+		"Skeletondata\nSKED" -> "Nwchemdata\nNWC";
+}

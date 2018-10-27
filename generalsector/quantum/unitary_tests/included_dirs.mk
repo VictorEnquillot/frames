@@ -1,0 +1,9 @@
+INCLUDED_DIRS := \
+	$(BASICS_DIR) \
+	$(DATASTRUCTURES_DIR) \
+	$(QUANTUM_DIR) \
+	$(COMMONSET_DIR) \
+ 
+
+
+

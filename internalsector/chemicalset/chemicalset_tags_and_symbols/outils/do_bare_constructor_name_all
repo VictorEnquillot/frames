@@ -1,0 +1,28 @@
+bare_constructor ()
+{
+case ${1} in
+     analytic_wavefunction ) res="Analytic";;
+     dipole ) res="Di";;
+     diffusion_monte_carlo ) res="Dmc";;
+     energy_kinetic_rotation ) res="Rotation";;
+     energy_kinetic_translation ) res="Translation";;
+     energy_kinetic_total ) res="Total";;
+     energy_total ) res="Total";;
+     frames ) res="Fr";;
+     g9x ) res="G9";;
+     hexadecapole ) res="Hx";;
+     molpro ) res="Mp";;
+     mcscf ) res="McScf";;	
+     ci ) res="Ci";;	
+     csf ) res="Csf";;	
+     monopole ) res="Mo";;
+     octupole ) res="Oc";;
+     quadrupole ) res="Qu";;
+     slater_determinant ) res="Slater_determinant";;
+     turbomole ) res="Tu";;
+     variational_monte_carlo ) res="Vmc";;
+     valence_bond ) res="Vb";;
+     *) res="not_defined or not bare add it to do_bare_constructor_name";;
+esac
+echo "$res"
+}

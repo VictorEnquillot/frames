@@ -1,0 +1,110 @@
+(** {3 This_container_v.}  *)
+
+(** {6 Documenting} *)
+
+let documentation () = 
+  [
+   "Current : FFIG:This_container_v";
+   "Needs : FFIG:Buldr_tag_v";
+   "Needed-by : FFIG:Elementary_coordinate_tuple_container_v";
+   "What-is-it : This_container is Uno of Buldr_tag";
+ ]
+;;
+
+let nam_mod = Management_v.current_module_name (documentation ());;
+
+(** {6 Naming} *)
+
+let name con_ttt =
+  Uno_v.name 
+    Buldr_tag_v.name
+    con_ttt
+;;
+
+let string_off con_ttt =
+  Uno_v.name 
+    Buldr_tag_v.string_off
+    con_ttt
+;;
+
+let longname con_ttt =
+  Uno_v.name 
+    Buldr_tag_v.longname
+    con_ttt
+;;
+
+let fullname con_ttt =
+  Uno_v.name 
+    Buldr_tag_v.fullname
+    con_ttt
+;;
+
+(** {6 Builder Tag Containers} *)
+
+let builder_tag_list tag_ttt =
+  let tag_fig = This_tag_v.figure_tag_of_this_tag tag_ttt in
+
+  let tag_fig_bui_l =
+    Figure_any_category_by_sole_index_extractor_v.son_figure_tag_list_of_string_predicate_of_father_tag 
+      "is_buldr_symbol_off_figure_symbol"
+      tag_fig
+  in
+
+  List.map Buldr_tag_v.figure_tag_of_buldr_tag tag_fig_bui_l
+;;
+
+let container_of_tag tag_ttt =
+  let tag_bui_l = builder_tag_list tag_ttt in
+  Uno_v.uno_of_list tag_bui_l
+;;
+
+let builder_tag_tuple tag_ecp =
+  let tag_eun_d = container_of_tag tag_ecp in
+  Tuple_v.tuple_of_uno tag_eun_d
+;;
+
+(** {6 Extracting Individual Builder Tag off Tag} *)
+
+let buldr_tag_off_this_tag tag_ttt =
+  let tag_eun_u = container_of_tag tag_ttt in
+  Uno_v.element_off_uno tag_eun_u
+;;
+
+let buldr_tag_uno_off_this_tag tag_ttt =
+  container_of_tag tag_ttt
+;;
+
+(** {6 Fence Tag of Tag (Self) } *)
+
+let fence_list tag_ttt =
+  let tag_fig = figure_tag tag_ttt in
+  Fnc_tag_fence_by_figure_tag_provider_v.provide tag_fig
+;;
+
+let fence_tuple tag_ttt =
+  let fen_l = fence_list tag_ttt in
+  Tuple_v.tuple_of_list fen_l
+;;
+
+let fence_tuple_list tag_ttt =
+  let fen_l = fence_list tag_ttt in
+  Tuple_list_v.make fen_l
+;;
+
+(** {6 Deepfence Tag off Tag (Builder) } *)
+
+let deepfence_list tag_ttt =
+  let tag_fig = figure_tag tag_ttt in
+  Deepfn_tag_deepfence_by_figure_tag_provider_v.provide tag_fig
+;;
+
+let deepfence_tuple tag_ttt =
+  let dfe_l = deepfence_list tag_ttt in
+  Tuple_v.tuple_of_list dfe_l
+;;
+
+let deepfence_tuple_list tag_ttt =
+  let dfe_l = deepfence_list tag_ttt in
+  Tuple_list_v.make dfe_l
+;;
+

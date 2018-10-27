@@ -1,0 +1,1 @@
+type camlparagraph_for_value_tag = Camlparagraph_for_value_symbol_t.camlparagraph_for_value_symbol Tag_t.tag;;

@@ -1,0 +1,66 @@
+#!/bin/bash
+
+# Elementary_border are Parameter or Coordinate : Elementary_entities 
+
+cp $VELE/Envelopee_[tv].ml .
+cp $VELE/Elementary_*parameter*envelope*ml .
+
+cp -p $VELE/generator/do_envelope_as_list_border_trunc_units_v.sh generator/
+cp -p $VELE/generator/do_envelope_as_list_t.sh generator/
+
+cp    $VELE/generator/template_envelope_as_list_t.ml generator/
+cp    $VELE/generator/template_envelope_as_list_border_trunc_units_v.ml generator/
+
+
+modify_strings_and_rename_files.sh Envelopee Parameter_envelopee *ml 
+
+modify_strings_and_rename_files.sh Elementary_border_parameter Parameter *ml 
+modify_strings_and_rename_files.sh elementary_border_parameter parameter *ml 
+
+# modify_strings_and_rename_files.sh Elementary_border_parameter Parameter_fence *ml 
+# modify_strings_and_rename_files.sh elementary_border_parameter parameter_fence *ml 
+
+#modify_strings_and_rename_files.sh Elementary_body_parameter Parameter_body *ml 
+#modify_strings_and_rename_files.sh elementary_body_parameter parameter_body *ml 
+
+
+modify_word.pl VELE VPAR *ml
+modify_word.pl nam_cod nam_mod *ml
+
+modify_string.pl Envelopee_t.envelopee  Parameter_envelopee_t.parameter_envelopee *ml
+
+
+cp $DELE/Measure_actual_by_elementary_fence_units_actual_tag_provider_v.ml .
+cp $DELE/Measure_actual_by_elementary_fence_units_tag_provider_v.ml .
+cp $DELE/Measure_by_elementary_fence_units_actual_tag_provider_v.ml .
+cp $DELE/Measure_by_elementary_fence_units_canonical_tag_provider_v.ml .
+cp $DELE/Measure_by_elementary_fence_units_tag_provider_v.ml .
+cp $DELE/Measure_canonical_by_calculation_name_n_elementary_fence_units_actual_tag_provider_v.ml .
+cp $DELE/Measure_canonical_by_elementary_fence_units_actual_tag_provider_v.ml .
+cp $DELE/Measure_canonical_by_elementary_fence_units_canonical_tag_provider_v.ml .
+cp $DELE/Measure_canonical_list_by_calculation_name_n_elementary_fence_units_actual_tag_provider_v.ml .
+
+modify_strings_and_rename_files.sh  Measure_actual_by_elementary_fence_units_actual_tag Measure_actual_by_paramter_fence_aopef_coefficient_tag
+
+modify_strings_and_rename_files.sh  arameter_aopef  arameter_set_fence_aopef *ml *mk
+modify_strings_and_rename_files.sh  arameter_ecppef  arameter_set_fence_ecppef *ml *mk
+modify_strings_and_rename_files.sh  arameter_fence  arameter_set_fence *ml *mk
+
+modify_strings_and_rename_files.sh  chemdata_body  chemdata_set_body *ml *mk
+modify_strings_and_rename_files.sh  chemdata_fence  chemdata_set_fence *ml *mk
+
+# 28 december 2016
+
+cp $VCOO/Measure_list_by_coordinate_set_body_tuple_tag_provider_v.ml  .
+
+modify_strings_and_rename_files.sh _coordinate _parameter  *ml
+ms _cbt _pbt *ml
+ms db1points nwchem *ml
+ms Db1points Nwchem *ml
+
+ms Nwchemdata_set_body_sequence_float_tag_by_parameter_set_body_tuple_tag_provider_v Nwchemdata_set_body_node_aoset_numericalvalues_tag_by_parameter_set_body_tuple_aopef_tag *ml
+
+ms body_sequence_float   body_node_aoset_numericalvalues
+
+cp $VCOO/Measure_by_coordinate_set_fence_tag_provider_v.ml .
+msrf coordinate parameter *ml

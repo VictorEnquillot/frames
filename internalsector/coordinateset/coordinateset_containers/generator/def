@@ -1,0 +1,7 @@
+   "Definition : a Building is the same Datastructure as a Container but filled with Builders"; 
+   "Definition : a Containee is a Builder expressed in the lowest subtype compatible with the Datastructure of the Container";
+   "Definition : a Container is the Datastructure of the Containee of an Entity";
+   "Definition : a Containee is an element of the Datastructure of the Container of an Entity";
+   "Definition : a fence Container contains an Uno of its Tag";
+   "Definition : a non-fence Bud Container is a Datastructure of Containee Tag";
+   "Definition : a Bud is a type with only one constructor of string";

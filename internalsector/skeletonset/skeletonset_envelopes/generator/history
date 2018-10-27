@@ -1,0 +1,35 @@
+msrf keleton_as_body keleton_as_set_body *ml *mk
+msrf keleton_as_fence keleton_as_set_fence *ml *mk
+msrf keleton_body keleton_set_body *ml *mk
+msrf keleton_fence keleton_set_fence *ml *mk
+
+ms Envelopee Parameter_envelopee *ml
+ms envelopee parameter_envelopee *ml
+
+cp $VFIG/Figure_bridge_by_figure_set_fence_tag_register_v.ml Skeleton_bridge_by_skeleton_set_fence_tag_register_v.ml 
+cp $VFIG/Figure_bridge_by_figure_set_fence_tag_provider_v.ml Skeleton_bridge_by_skeleton_set_fence_tag_provider_v.ml 
+cp $VFIG/Figure_set_fence_envelope_t.ml Skeleton_set_fence_envelope_t.ml
+cp $VFIG/Figure_set_fence_envelope_v.ml Skeleton_set_fence_envelope_v.ml
+
+cp $VFIG/Figure_set_fence_point_envelope_t.ml Skeleton_set_fence_centered_aopef_envelope_t.ml
+cp $VFIG/Figure_set_fence_point_envelope_v.ml Skeleton_set_fence_centered_aopef_envelope_v.ml
+
+cp $VFIG/Figure_set_fence_point_envelope_t.ml Skeleton_set_fence_centered_ecppef_envelope_t.ml
+cp $VFIG/Figure_set_fence_point_envelope_v.ml Skeleton_set_fence_centered_ecppef_envelope_v.ml
+
+ms figure skeleton Skeleton_*ml
+ms Figure Skeleton Skeleton_*ml
+
+ms coordinate parameter Skeleton_*ml
+ms Coordinate Parameter Skeleton_*ml
+
+ms COO PAR *ml
+ms FIG SKE *ml
+
+ms _set_fence_point _set_fence_centered_aopef *ml
+
+ms arameter_set_fence_centered arameter_set_fence *ml
+
+cp $VCOO/Coordinate_envelope_[tv].ml .
+msrf coordinate skeleton Coordinate*ml
+msrf Coordinate Skeleton Coordinate*ml

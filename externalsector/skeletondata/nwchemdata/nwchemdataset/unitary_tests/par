@@ -1,0 +1,4 @@
+let nam_bas = "lanl2dz";;
+let nam_dba = "gaussian_nwchem";;
+Parameters_general_register_v.store "basisset-name" nam_bas;;
+Parameters_general_register_v.store "database-name" nam_dba;;

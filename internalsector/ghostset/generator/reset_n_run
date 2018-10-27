@@ -1,0 +1,3 @@
+cp KEEP/geometryset_symbols.set .
+cp KEEP/geometryset_formulas.set .
+geometryset_generate_symbols_tv.byt

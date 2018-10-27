@@ -1,0 +1,4 @@
+Register_v.delete Common_symbol_by_sole_index_register_v.register;;
+Register_v.delete Figure_symbol_by_sole_index_register_v.register;;
+Register_v.delete Input_filename_by_domain_tag_register_v.register;;
+Register_v.delete Model_information_list_by_target_tag_register_v.register;;

@@ -1,0 +1,5 @@
+
+    Error_messages_v.print_fatal_error __LOC__ "provide_without_trace"
+      (Format.sprintf "Word_capitalized >%s< were stored in register Input_fence_variable_name_symbol_by_word_capitalized_register_v " wor_cap)
+      "It is NOT"
+      "Check function Input_parser_tools_v.input_symbol_as_fence_variable_name_of_word_capitalized"

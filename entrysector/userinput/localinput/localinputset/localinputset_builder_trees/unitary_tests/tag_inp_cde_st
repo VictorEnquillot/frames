@@ -1,0 +1,50 @@
+( tag_inp_cde_st : Input_symbol_t.input_symbol Tag_t.tag Tree_t.tree ) =
+  Tree_t.Inner
+   ((Input_symbol_t.Input_command_symbol
+      Input_command_symbol_t.Input_command_define,
+     [4; 26]),
+   [Tree_t.Leaf
+     (Input_symbol_t.Input_variable_symbol
+       (Input_variable_symbol_t.Input_variable_name "Poi_a"),
+      [1; 4; 26]);
+    Tree_t.Inner
+     ((Input_symbol_t.Input_keyword_symbol
+        Input_keyword_symbol_t.Input_keyword_external,
+       [2; 4; 26]),
+     [Tree_t.Inner
+       ((Input_symbol_t.Input_keyword_symbol
+          Input_keyword_symbol_t.Input_keyword_type,
+         [1; 2; 4; 26]),
+       [Tree_t.Leaf
+         (Input_symbol_t.Input_constant_symbol
+           (Input_constant_symbol_t.Input_constant_string "figure"),
+          [1; 1; 2; 4; 26]);
+        Tree_t.Leaf
+         (Input_symbol_t.Input_constant_symbol
+           (Input_constant_symbol_t.Input_constant_string "point"),
+          [2; 1; 2; 4; 26]);
+        Tree_t.Leaf
+         (Input_symbol_t.Input_constant_symbol
+           (Input_constant_symbol_t.Input_constant_string "constructor"),
+          [3; 1; 2; 4; 26])]);
+      Tree_t.Inner
+       ((Input_symbol_t.Input_keyword_symbol
+          Input_keyword_symbol_t.Input_keyword_name,
+         [2; 2; 4; 26]),
+       [Tree_t.Leaf
+         (Input_symbol_t.Input_basic_symbol
+           (Input_basic_symbol_t.Input_basic_string "T_A"),
+          [1; 2; 2; 4; 26])]);
+      Tree_t.Inner
+       ((Input_symbol_t.Input_keyword_symbol
+          Input_keyword_symbol_t.Input_keyword_context,
+         [3; 2; 4; 26]),
+       [Tree_t.Leaf
+         (Input_symbol_t.Input_basic_symbol
+           (Input_basic_symbol_t.Input_basic_string "Con_db1"),
+          [1; 3; 2; 4; 26])])]);
+    Tree_t.Leaf
+     (Input_symbol_t.Input_keyword_symbol
+       Input_keyword_symbol_t.Input_keyword_end,
+      [3; 4; 26])])
+);;

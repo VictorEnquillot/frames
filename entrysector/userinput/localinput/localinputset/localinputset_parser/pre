@@ -1,0 +1,332 @@
+  | "is_input_body_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_symbol_off_input_symbol
+  | "is_input_context_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_context_symbol_off_input_symbol
+  | "is_input_fence_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_symbol_off_input_symbol
+  | "is_input_body_handle_cofactor" ->
+     Input_symbol_v.is_input_body_handle_cofactor
+  | "is_input_body_list_variable_name_external" ->
+     Input_symbol_v.is_input_body_list_variable_name_external
+  | "is_input_body_list_variable_type" ->
+     Input_symbol_v.is_input_body_list_variable_type
+  | "is_input_fence_keyword_command_define" ->
+     Input_symbol_v.is_input_fence_keyword_command_define
+  | "is_input_fence_keyword_command_print" ->
+     Input_symbol_v.is_input_fence_keyword_command_print
+  | "is_input_fence_keyword_command_read" ->
+     Input_symbol_v.is_input_fence_keyword_command_read
+  | "is_input_fence_keyword_command_set" ->
+     Input_symbol_v.is_input_fence_keyword_command_set
+  | "is_input_fence_keyword_command_title" ->
+     Input_symbol_v.is_input_fence_keyword_command_title
+  | "is_input_fence_keyword_command_write" ->
+     Input_symbol_v.is_input_fence_keyword_command_write
+  | "is_input_fence_keyword_variable_kind_context" ->
+     Input_symbol_v.is_input_fence_keyword_variable_kind_context
+  | "is_input_fence_keyword_variable_kind_external" ->
+     Input_symbol_v.is_input_fence_keyword_variable_kind_external
+  | "is_input_fence_keyword_variable_kind_operator" ->
+     Input_symbol_v.is_input_fence_keyword_variable_kind_operator
+  | "is_input_fence_keyword_variable_kind_target" ->
+     Input_symbol_v.is_input_fence_keyword_variable_kind_target
+  | "is_input_fence_keyword_word_category" ->
+     Input_symbol_v.is_input_fence_keyword_word_category
+  | "is_input_fence_keyword_word_cofactor" ->
+     Input_symbol_v.is_input_fence_keyword_word_cofactor
+  | "is_input_fence_keyword_word_cofactor_basic" ->
+     Input_symbol_v.is_input_fence_keyword_word_cofactor_basic
+  | "is_input_fence_keyword_word_cofactor_entity" ->
+     Input_symbol_v.is_input_fence_keyword_word_cofactor_entity
+  | "is_input_fence_keyword_word_context" ->
+     Input_symbol_v.is_input_fence_keyword_word_context
+  | "is_input_fence_keyword_word_cpu" ->
+     Input_symbol_v.is_input_fence_keyword_word_cpu
+  | "is_input_fence_keyword_word_createdby" ->
+     Input_symbol_v.is_input_fence_keyword_word_createdby
+  | "is_input_fence_keyword_word_database" ->
+     Input_symbol_v.is_input_fence_keyword_word_database
+  | "is_input_fence_keyword_word_datafile" ->
+     Input_symbol_v.is_input_fence_keyword_word_datafile
+  | "is_input_fence_keyword_word_debug" ->
+     Input_symbol_v.is_input_fence_keyword_word_debug
+  | "is_input_fence_keyword_word_domain" ->
+     Input_symbol_v.is_input_fence_keyword_word_domain
+  | "is_input_fence_keyword_word_end" ->
+     Input_symbol_v.is_input_fence_keyword_word_end
+  | "is_input_fence_keyword_word_external_context" ->
+     Input_symbol_v.is_input_fence_keyword_word_external_context
+  | "is_input_fence_keyword_word_file" ->
+     Input_symbol_v.is_input_fence_keyword_word_file
+  | "is_input_fence_keyword_word_module" ->
+     Input_symbol_v.is_input_fence_keyword_word_module
+  | "is_input_fence_keyword_word_name" ->
+     Input_symbol_v.is_input_fence_keyword_word_name
+  | "is_input_fence_keyword_word_operator" ->
+     Input_symbol_v.is_input_fence_keyword_word_operator
+  | "is_input_fence_keyword_word_statistics" ->
+     Input_symbol_v.is_input_fence_keyword_word_statistics
+  | "is_input_fence_keyword_word_stop" ->
+     Input_symbol_v.is_input_fence_keyword_word_stop
+  | "is_input_fence_keyword_word_type" ->
+     Input_symbol_v.is_input_fence_keyword_word_type
+  | "is_input_fence_keyword_word_units" ->
+     Input_symbol_v.is_input_fence_keyword_word_units
+  | "is_input_body_block_define_constructor" ->
+     Input_symbol_v.is_input_body_block_define_constructor
+  | "is_input_body_block_operator_cofactor_constructor" ->
+     Input_symbol_v.is_input_body_block_operator_cofactor_constructor
+  | "is_input_body_block_print_constructor" ->
+     Input_symbol_v.is_input_body_block_print_constructor
+  | "is_input_body_block_read_constructor" ->
+     Input_symbol_v.is_input_body_block_read_constructor
+  | "is_input_body_block_set_constructor" ->
+     Input_symbol_v.is_input_body_block_set_constructor
+  | "is_input_body_block_set_alternative_constructor" ->
+     Input_symbol_v.is_input_body_block_set_alternative_constructor
+  | "is_input_body_block_title_constructor" ->
+     Input_symbol_v.is_input_body_block_title_constructor
+  | "is_input_body_block_variable_context_constructor" ->
+     Input_symbol_v.is_input_body_block_variable_context_constructor
+  | "is_input_body_block_variable_external_constructor" ->
+     Input_symbol_v.is_input_body_block_variable_external_constructor
+  | "is_input_body_block_variable_operator_constructor" ->
+     Input_symbol_v.is_input_body_block_variable_operator_constructor
+  | "is_input_body_block_variable_target_constructor" ->
+     Input_symbol_v.is_input_body_block_variable_target_constructor
+  | "is_input_body_block_write_constructor" ->
+     Input_symbol_v.is_input_body_block_write_constructor
+  | "is_input_body_box_type_constructor" ->
+     Input_symbol_v.is_input_body_box_type_constructor
+  | "is_input_body_box_units_constructor" ->
+     Input_symbol_v.is_input_body_box_units_constructor
+  | "is_input_body_handle_command_define_constructor" ->
+     Input_symbol_v.is_input_body_handle_command_define_constructor
+  | "is_input_body_handle_command_print_constructor" ->
+     Input_symbol_v.is_input_body_handle_command_print_constructor
+  | "is_input_body_handle_command_read_constructor" ->
+     Input_symbol_v.is_input_body_handle_command_read_constructor
+  | "is_input_body_handle_command_set_constructor" ->
+     Input_symbol_v.is_input_body_handle_command_set_constructor
+  | "is_input_body_handle_command_title_constructor" ->
+     Input_symbol_v.is_input_body_handle_command_title_constructor
+  | "is_input_body_handle_command_write_constructor" ->
+     Input_symbol_v.is_input_body_handle_command_write_constructor
+  | "is_input_body_handle_variable_context_constructor" ->
+     Input_symbol_v.is_input_body_handle_variable_context_constructor
+  | "is_input_body_handle_variable_external_constructor" ->
+     Input_symbol_v.is_input_body_handle_variable_external_constructor
+  | "is_input_body_handle_variable_operator_constructor" ->
+     Input_symbol_v.is_input_body_handle_variable_operator_constructor
+  | "is_input_body_handle_variable_target_constructor" ->
+     Input_symbol_v.is_input_body_handle_variable_target_constructor
+  | "is_input_context_domain_constructor" ->
+     Input_symbol_v.is_input_context_domain_constructor
+  | "is_input_context_file_constructor" ->
+     Input_symbol_v.is_input_context_file_constructor
+  | "is_input_fence_basic_float_constructor" ->
+     Input_symbol_v.is_input_fence_basic_float_constructor
+  | "is_input_fence_basic_integer_constructor" ->
+     Input_symbol_v.is_input_fence_basic_integer_constructor
+  | "is_input_fence_basic_word_anycase_constructor" ->
+     Input_symbol_v.is_input_fence_basic_word_anycase_constructor
+  | "is_input_fence_basic_word_capitalized_constructor" ->
+     Input_symbol_v.is_input_fence_basic_word_capitalized_constructor
+  | "is_input_fence_basic_word_lowercase_constructor" ->
+     Input_symbol_v.is_input_fence_basic_word_lowercase_constructor
+  | "is_input_fence_basic_word_uppercase_constructor" ->
+     Input_symbol_v.is_input_fence_basic_word_uppercase_constructor
+  | "is_input_fence_cell_category_constructor" ->
+     Input_symbol_v.is_input_fence_cell_category_constructor
+  | "is_input_fence_cell_cofactor_basic_constructor" ->
+     Input_symbol_v.is_input_fence_cell_cofactor_basic_constructor
+  | "is_input_fence_cell_cofactor_entity_constructor" ->
+     Input_symbol_v.is_input_fence_cell_cofactor_entity_constructor
+  | "is_input_fence_cell_context_constructor" ->
+     Input_symbol_v.is_input_fence_cell_context_constructor
+  | "is_input_fence_cell_createdby_constructor" ->
+     Input_symbol_v.is_input_fence_cell_createdby_constructor
+  | "is_input_fence_cell_database_constructor" ->
+     Input_symbol_v.is_input_fence_cell_database_constructor
+  | "is_input_fence_cell_datafile_constructor" ->
+     Input_symbol_v.is_input_fence_cell_datafile_constructor
+  | "is_input_fence_cell_domain_constructor" ->
+     Input_symbol_v.is_input_fence_cell_domain_constructor
+  | "is_input_fence_cell_external_context_constructor" ->
+     Input_symbol_v.is_input_fence_cell_external_context_constructor
+  | "is_input_fence_cell_external_variable_constructor" ->
+     Input_symbol_v.is_input_fence_cell_external_variable_constructor
+  | "is_input_fence_cell_file_constructor" ->
+     Input_symbol_v.is_input_fence_cell_file_constructor
+  | "is_input_fence_cell_function_constructor" ->
+     Input_symbol_v.is_input_fence_cell_function_constructor
+  | "is_input_fence_cell_module_constructor" ->
+     Input_symbol_v.is_input_fence_cell_module_constructor
+  | "is_input_fence_cell_name_constructor" ->
+     Input_symbol_v.is_input_fence_cell_name_constructor
+  | "is_input_fence_cell_target_operand_constructor" ->
+     Input_symbol_v.is_input_fence_cell_target_operand_constructor
+  | "is_input_fence_cell_target_operator_constructor" ->
+     Input_symbol_v.is_input_fence_cell_target_operator_constructor
+  | "is_input_fence_variable_kind_context_constructor" ->
+     Input_symbol_v.is_input_fence_variable_kind_context_constructor
+  | "is_input_fence_variable_kind_entity_external_constructor" ->
+     Input_symbol_v.is_input_fence_variable_kind_entity_external_constructor
+  | "is_input_fence_variable_kind_entity_target_constructor" ->
+     Input_symbol_v.is_input_fence_variable_kind_entity_target_constructor
+  | "is_input_fence_variable_kind_operator_constructor" ->
+     Input_symbol_v.is_input_fence_variable_kind_operator_constructor
+  | "is_input_fence_variable_name_context_constructor" ->
+     Input_symbol_v.is_input_fence_variable_name_context_constructor
+  | "is_input_fence_variable_name_entity_external_constructor" ->
+     Input_symbol_v.is_input_fence_variable_name_entity_external_constructor
+  | "is_input_fence_variable_name_entity_target_constructor" ->
+     Input_symbol_v.is_input_fence_variable_name_entity_target_constructor
+  | "is_input_fence_variable_name_operator_constructor" ->
+     Input_symbol_v.is_input_fence_variable_name_operator_constructor
+  | "is_input_body_block_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_block_symbol_off_input_symbol
+  | "is_input_body_block_define_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_block_define_symbol_off_input_symbol
+  | "is_input_body_block_operator_cofactor_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_block_operator_cofactor_symbol_off_input_symbol
+  | "is_input_body_block_print_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_block_print_symbol_off_input_symbol
+  | "is_input_body_block_read_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_block_read_symbol_off_input_symbol
+  | "is_input_body_block_set_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_block_set_symbol_off_input_symbol
+  | "is_input_body_block_set_alternative_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_block_set_alternative_symbol_off_input_symbol
+  | "is_input_body_block_title_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_block_title_symbol_off_input_symbol
+  | "is_input_body_block_variable_context_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_block_variable_context_symbol_off_input_symbol
+  | "is_input_body_block_variable_external_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_block_variable_external_symbol_off_input_symbol
+  | "is_input_body_block_variable_operator_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_block_variable_operator_symbol_off_input_symbol
+  | "is_input_body_block_variable_target_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_block_variable_target_symbol_off_input_symbol
+  | "is_input_body_block_write_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_block_write_symbol_off_input_symbol
+  | "is_input_body_box_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_box_symbol_off_input_symbol
+  | "is_input_body_box_type_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_box_type_symbol_off_input_symbol
+  | "is_input_body_box_units_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_box_units_symbol_off_input_symbol
+  | "is_input_body_handle_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_handle_symbol_off_input_symbol
+  | "is_input_body_handle_command_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_handle_command_symbol_off_input_symbol
+  | "is_input_body_handle_command_define_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_handle_command_define_symbol_off_input_symbol
+  | "is_input_body_handle_command_print_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_handle_command_print_symbol_off_input_symbol
+  | "is_input_body_handle_command_read_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_handle_command_read_symbol_off_input_symbol
+  | "is_input_body_handle_command_set_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_handle_command_set_symbol_off_input_symbol
+  | "is_input_body_handle_command_title_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_handle_command_title_symbol_off_input_symbol
+  | "is_input_body_handle_command_write_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_handle_command_write_symbol_off_input_symbol
+  | "is_input_body_handle_variable_kind_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_handle_variable_kind_symbol_off_input_symbol
+  | "is_input_body_handle_variable_context_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_handle_variable_context_symbol_off_input_symbol
+  | "is_input_body_handle_variable_external_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_handle_variable_external_symbol_off_input_symbol
+  | "is_input_body_handle_variable_operator_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_handle_variable_operator_symbol_off_input_symbol
+  | "is_input_body_handle_variable_target_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_handle_variable_target_symbol_off_input_symbol
+  | "is_input_body_list_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_body_list_symbol_off_input_symbol
+  | "is_input_context_domain_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_context_domain_symbol_off_input_symbol
+  | "is_input_context_file_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_context_file_symbol_off_input_symbol
+  | "is_input_fence_basic_numerical_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_basic_numerical_symbol_off_input_symbol
+  | "is_input_fence_basic_float_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_basic_float_symbol_off_input_symbol
+  | "is_input_fence_basic_integer_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_basic_integer_symbol_off_input_symbol
+  | "is_input_fence_basic_word_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_basic_word_symbol_off_input_symbol
+  | "is_input_fence_basic_word_anycase_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_basic_word_anycase_symbol_off_input_symbol
+  | "is_input_fence_basic_word_capitalized_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_basic_word_capitalized_symbol_off_input_symbol
+  | "is_input_fence_basic_word_lowercase_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_basic_word_lowercase_symbol_off_input_symbol
+  | "is_input_fence_basic_word_uppercase_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_basic_word_uppercase_symbol_off_input_symbol
+  | "is_input_fence_cell_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_symbol_off_input_symbol
+  | "is_input_fence_cell_category_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_category_symbol_off_input_symbol
+  | "is_input_fence_cell_cofactor_basic_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_cofactor_basic_symbol_off_input_symbol
+  | "is_input_fence_cell_cofactor_entity_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_cofactor_entity_symbol_off_input_symbol
+  | "is_input_fence_cell_context_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_context_symbol_off_input_symbol
+  | "is_input_fence_cell_createdby_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_createdby_symbol_off_input_symbol
+  | "is_input_fence_cell_database_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_database_symbol_off_input_symbol
+  | "is_input_fence_cell_datafile_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_datafile_symbol_off_input_symbol
+  | "is_input_fence_cell_domain_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_domain_symbol_off_input_symbol
+  | "is_input_fence_cell_external_context_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_external_context_symbol_off_input_symbol
+  | "is_input_fence_cell_external_variable_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_external_variable_symbol_off_input_symbol
+  | "is_input_fence_cell_file_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_file_symbol_off_input_symbol
+  | "is_input_fence_cell_function_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_function_symbol_off_input_symbol
+  | "is_input_fence_cell_module_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_module_symbol_off_input_symbol
+  | "is_input_fence_cell_name_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_name_symbol_off_input_symbol
+  | "is_input_fence_cell_target_operand_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_target_operand_symbol_off_input_symbol
+  | "is_input_fence_cell_target_operator_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_cell_target_operator_symbol_off_input_symbol
+  | "is_input_fence_keyword_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_keyword_symbol_off_input_symbol
+  | "is_input_fence_keyword_command_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_keyword_command_symbol_off_input_symbol
+  | "is_input_fence_keyword_variable_kind_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_keyword_variable_kind_symbol_off_input_symbol
+  | "is_input_fence_keyword_word_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_keyword_word_symbol_off_input_symbol
+  | "is_input_fence_variable_kind_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_variable_kind_symbol_off_input_symbol
+  | "is_input_fence_variable_kind_context_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_variable_kind_context_symbol_off_input_symbol
+  | "is_input_fence_variable_kind_entity_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_variable_kind_entity_symbol_off_input_symbol
+  | "is_input_fence_variable_kind_entity_external_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_variable_kind_entity_external_symbol_off_input_symbol
+  | "is_input_fence_variable_kind_entity_target_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_variable_kind_entity_target_symbol_off_input_symbol
+  | "is_input_fence_variable_kind_operator_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_variable_kind_operator_symbol_off_input_symbol
+  | "is_input_fence_variable_name_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_variable_name_symbol_off_input_symbol
+  | "is_input_fence_variable_name_context_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_variable_name_context_symbol_off_input_symbol
+  | "is_input_fence_variable_name_entity_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_variable_name_entity_symbol_off_input_symbol
+  | "is_input_fence_variable_name_entity_external_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_variable_name_entity_external_symbol_off_input_symbol
+  | "is_input_fence_variable_name_entity_target_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_variable_name_entity_target_symbol_off_input_symbol
+  | "is_input_fence_variable_name_operator_symbol_off_input_symbol" ->
+     Input_symbol_v.is_input_fence_variable_name_operator_symbol_off_input_symbol

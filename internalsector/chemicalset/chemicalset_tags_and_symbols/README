@@ -1,0 +1,16 @@
+The Index problem :
+
+There is no need to upgrade index to Set and Any.
+There are only a few types for an index :
+
+type entity_index =
+| Linear of linear_index 
+| Spherical of spherical_index
+
+and linear_index =
+  | Core
+  | First
+  | Second
+  | Third
+  | Fourth
+  | Ordinal of

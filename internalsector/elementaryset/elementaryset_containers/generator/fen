@@ -1,0 +1,40 @@
+let elementary_tag tag_ttt = Tag_v.map_entity (* Coerce Up *)
+    Elementary_symbol_v.elementary_symbol_of_this_symbol
+    tag_ttt
+;;
+
+  let tag_ele = elementary_tag tag_ttt in
+
+(** {6 Fence Tag off Tag} *)
+
+let fence_list tag_ttt =
+  let tag_ele = elementary_tag tag_ttt in
+  Elementary_coordinate_tag_fence_by_elementary_tag_provider_v.provide tag_ele
+;;
+
+let fence_tuple tag_ttt =
+  let fen_l = fence_list tag_ttt in
+  Tuple_v.tuple_of_list fen_l
+;;
+
+let fence_tuple_list tag_ttt =
+  let fen_l = fence_list tag_ttt in
+  Tuple_list_v.make fen_l
+;;
+
+(** {6 Deepfence Tag off Tag} *)
+
+let deepfence_list tag_ttt =
+  let tag_ele = elementary_tag tag_ttt in
+  Elementary_units_tag_deepfence_by_elementary_tag_provider_v.provide tag_ele
+;;
+
+let deepfence_tuple tag_ttt =
+  let dfe_l = deepfence_list tag_ttt in
+  Tuple_v.tuple_of_list dfe_l
+;;
+
+let deepfence_tuple_list tag_ttt =
+  let dfe_l = deepfence_list tag_ttt in
+  Tuple_list_v.make dfe_l
+;;

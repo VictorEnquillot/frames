@@ -1,0 +1,8 @@
+BASICNAMES_REGISTERS_V_MLI := \
+Database_ordinal_by_basicname_database_register_v.mli \
+Databox_ordinal_by_basicname_databox_register_v.mli \
+Domain_ordinal_by_basicname_domain_register_v.mli \
+Inputbase_ordinal_by_basicname_inputbase_register_v.mli \
+Inputbox_ordinal_by_basicname_inputbox_register_v.mli \
+Sector_ordinal_by_basicname_sector_register_v.mli \
+ 

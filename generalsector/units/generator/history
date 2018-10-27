@@ -1,0 +1,53 @@
+Lost Elementary_fence_units_*symbol*ml
+GIT :
+fra
+mkdir -p elementaryset/elementaryset_symbols
+cd elementaryset/elementaryset_symbols
+git checkout ce631814e825a01e53cc915dbd4e8562eaf1f7a3 Calcu\*ml Elementary\*ml generator Makefile \*.mk
+
+OVH :
+
+/homez.792/willforg/backup/asus/keep/sources/ocaml_top/setup/frames/elementaryset/elementaryset_symbols
+
+mv $GES/units $GES/units_systems
+mkdir $GES/units
+
+cp -R /home/colonna/sources/ocaml_top/setup/frames/elementaryset/elementaryset_symbols/* .
+
+keep_file Elementary_fence_basic*ml
+keep_file Elementary_fence_color*ml
+keep_file Elementary_border*ml  (coordinateset, parameterset)
+keep_file Elementary_body*ml
+
+grep Elementary_fence_units files_elementary_mli*mk
+
+modify_strings_and_rename_files.sh Elementary_fence_units Units *ml *mk
+modify_strings_and_rename_files.sh elementary_fence_units units *ml *mk
+
+modify_string.pl "_symbol =" " =" *ml
+modify_string.pl "_symbol of" " of" *ml
+modify_string.pl "e_symbol" "e" *ml
+modify_string.pl "h_symbol" "h" *ml
+modify_string.pl "l_symbol" "l" *ml
+modify_string.pl "m_symbol" "m" *ml
+modify_string.pl "n_symbol" "n" *ml
+modify_string.pl "s_symbol" "s" *ml
+modify_string.pl "y_symbol" "y" *ml
+
+modify_string.pl "sym_" "" *ml
+
+modify_string.pl "ecc" "ucc" *ml
+modify_string.pl "euc" "uca" *ml
+modify_string.pl "ecq" "ucq" *ml
+
+modify_string.pl "nam_cod" "nam_mod" *ml
+
+modify_string.pl "SFIG" "UNI" *ml
+modify_string.pl "Needs: " "Needs :" *ml
+modify_string.pl "Needed-by: " "Needed-by :" *ml
+modify_string.pl "What-is-it: " "What-is-it :" *ml
+modify_string.pl "Improve: " "Improve :" *ml
+modify_string.pl "How-is-it-done: " "How-is-it-done :" *ml
+
+
+

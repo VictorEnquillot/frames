@@ -1,0 +1,28 @@
+let sym_efn_l = Entity_fictive_nullary_symbol_list_by_domainset_symbol_provider_v.provide sym_dos;;
+
+let sym_cal = Tag_v.symbol_off_tag tag_cal;;
+let soi_cal = Tag_v.sole_index_off_tag tag_cal;;
+let sym_ctb = Camlline_symbol_v.camlline_for_formula_duo_top_builder_symbol_off_camlline_symbol sym_cal;;
+
+let tag_ctb = Tag_v.make sym_ctb soi_cal;;
+let dec_ctb = 
+    Camlline_for_formula_duo_top_builder_tag_v.camlline_for_formula_duo_top_builder_dectup_off_camlline_for_formula_duo_top_builder_tag 
+      tag_ctb;;
+
+(* BT builders *)
+
+let tri_ent_top = Decuplet_v.right_triplet_off_decuplet dec_ctb;;
+
+test_raises_this_exc (Failure "Not_a_set:Tools_fgnr_v.ml:builder_symbol_of_entity_tritup") Tools_fgnr_v.builder_symbol_of_entity_tritup tri_ent_top;;
+
+let sym_ent_bui = Tools_fgnr_v.builder_symbol_of_entity_tritup tri_ent_top;;
+
+let sym_ent_top = Triplet_v.left_off_triplet tri_ent_top;;
+
+let sym_ent_l = 
+    Camlline_for_formula_duo_top_builder_interface_v.make
+      sym_ctb
+      sym_ent_top
+      sym_ent_bui 
+;;
+

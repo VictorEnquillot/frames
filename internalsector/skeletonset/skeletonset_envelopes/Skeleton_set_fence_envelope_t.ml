@@ -1,0 +1,1 @@
+type skeleton_set_fence_envelope = Parameter_envelopee_tuple_t.parameter_envelopee_tuple list;;

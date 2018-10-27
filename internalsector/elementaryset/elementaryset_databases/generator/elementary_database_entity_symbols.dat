@@ -1,0 +1,63 @@
+constructors figure                     =   elementary_database_entity 
+
+constructors elementary_database_entity                 =   elementary_database_entity_context   elementary_database_entity_body   elementary_database_entity_closure
+
+constructors elementary_database_entity_context         =   elementary_database_entity_database   elementary_database_entity_domain
+
+constructors elementary_database_entity_domain          =   elementary_database_entity_domain_constructor:ofstring
+
+constructors elementary_database_entity_database        =   elementary_database_entity_database_constructor:ofstring
+
+constructors elementary_database_entity_body            =   coordinate   coordinate_tuple
+
+constructors coordinate                 =   coordinate_heterogeneous   coordinate_homogeneous
+
+constructors coordinate_homogeneous     =   coordinate_cartesian   coordinate_linear   coordinate_planar
+
+constructors coordinate_heterogeneous   =   coordinate_cylindrical   coordinate_polar   coordinate_spherical 
+   
+constructors coordinate_cartesian       =   cartesian_x:ofstring   cartesian_y:ofstring   cartesian_z:ofstring
+constructors coordinate_planar          =   planar_x:ofstring   planar_y:ofstring
+constructors coordinate_linear          =   linear_x:ofstring
+
+constructors coordinate_cylindrical     =   cylindrical_rho:ofstring   cylindrical_phi:ofstring   cylindrical_zed:ofstring
+constructors coordinate_spherical       =   spherical_rho:ofstring   spherical_phi:ofstring   spherical_theta:ofstring   
+constructors coordinate_polar           =   polar_rho:ofstring   polar_theta:ofstring   
+
+constructors coordinate_tuple           =   coordinate_tuple_heterogeneous   coordinate_tuple_homogeneous
+
+constructors coordinate_tuple_heterogeneous  =   coordinate_tuple_cylindrical   coordinate_tuple_polar   coordinate_tuple_spherical 
+
+constructors coordinate_tuple_homogeneous    =   coordinate_tuple_cartesian   coordinate_tuple_linear   coordinate_tuple_planar
+
+constructors coordinate_tuple_cartesian      =   coordinate_tuple_cartesian_constructor:ofstring
+constructors coordinate_tuple_cylindrical    =   coordinate_tuple_cylindrical_constructor:ofstring
+constructors coordinate_tuple_linear         =   coordinate_tuple_linear_constructor:ofstring
+constructors coordinate_tuple_planar         =   coordinate_tuple_planar_constructor:ofstring
+constructors coordinate_tuple_polar          =   coordinate_tuple_polar_constructor:ofstring
+constructors coordinate_tuple_spherical      =   coordinate_tuple_spherical_constructor:ofstring
+
+constructors elementary_database_entity_closure         =   color   units 
+
+constructors color                      =   black   blue   green   orange   pink   red   white   yellow
+
+constructors units                      =   units_action   units_angle   units_charge   units_energy   units_length   units_mass   units_temperature   units_time   units_none
+
+constructors units_action               =   planck_constant
+
+constructors units_angle                =   degree  radian
+
+constructors units_charge               =   coulomb  electron
+
+constructors units_energy               =   atomic_units_energy   calorie   electron_volt   joule   kilocalorie   kilojoule
+
+constructors units_length               =   angstrom   bohr   centimeter   decameter   decimeter   foot   inch   kilometer   light_year   meter   millimeter   nanometer   yard
+
+constructors units_mass                 =   atomic_units_mass   gram
+
+constructors units_temperature          =   celsius   kelvin
+
+constructors units_time                 =   femtosecond   nanosecond   picosecond   second
+
+
+

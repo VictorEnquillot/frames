@@ -1,0 +1,120 @@
+#use "t1try_sequencepdb_translation_v.ml";; 
+#use "t0tab_sequencepdb_translation_v.ml";; 
+let smb_plp = Pls_v.make "PAB_A";;
+let smb_plp = Pls_v.make "TAB_A";;
+#use "t0tab_sequencepdb_translation_v.ml";; 
+smb_plp ;;
+let smb_plp = Pls_v.make "TAB_A";;
+#use "t0tab_sequencepdb_translation_v.ml";; 
+csq;;
+#use "t0tab_sequencepdb_translation_v.ml";; 
+smb_plp_b;;
+csq_b ;;
+seq_plp_b;;
+#use "t0tab_sequencepdb_translation_v.ml";; 
+#use "tacg_sequencepdb_translation_v.ml";; 
+csq,,
+csq;;
+seq_plp;;
+#use "tacg_sequencepdb_translation_v.ml";; 
+#use "t0tab_sequencepdb_translation_v.ml";; 
+#use "t1try_sequencepdb_translation_v.ml";; 
+csq;;
+seq_plp;;
+List.hd seq_plp;;
+#use "t0tab_sequencepdb_translation_v.ml";;
+ #use "t1try_polypeptide_sequence_provider_from_pdb_v.ml";; 
+smb_plp;;
+ #use "t1try_polypeptide_sequence_provider_from_pdb_v.ml";; 
+#use "t0tab_polypeptide_sequence_provider_from_pdb_v.ml";; 
+Psp_v.provide smb_plp_a;;
+#use "t0tab_polypeptide_sequence_provider_from_pdb_v.ml";; 
+Psp_v.chain_sequencepdb_of_polypeptide_symbol smb_plp_b;;
+Psp_v.provide smb_plp_b;;
+#use "t0tab_polypeptide_sequence_provider_from_pdb_v.ml";; 
+Psp_v.chain_sequencepdb_of_polypeptide_symbol smb_plp_c;;
+Psp_v.provide smb_plp_c;;
+(* Chain D *)
+let smb_plr_d = Pls_t.Tab_d;;
+let smb_plp_d = Pls_v.polypeptide_symbol_of_polypeptide_regular_symbol smb_plr_d;;
+Psp_v.chain_sequencepdb_of_polypeptide_symbol smb_plp_d;;
+Psp_v.provide smb_plp_d;;
+#use "t0tab_polypeptide_sequence_provider_from_pdb_v.ml";; 
+Psp_v.chain_sequencepdb_of_polypeptide_symbol smb_plp_e;;
+Psp_v.provide smb_plp_e;;
+ #use "t0tab_b_polypeptide_sequence_v.ml";; 
+Psq_v.name seq_plp;;
+smb_ntl;;
+ #use "t0tab_b_polypeptide_sequence_v.ml";; 
+Psq_v.cterminal_glycines_off_polypeptide_sequence seq_plp;;
+Psq_v.largest_embedded_sequence_off_polypeptide_sequence seq_plp;;
+Psq_v.reduced_embedded_sequence_off_polypeptide_sequence seq_plp;;
+Psq_v.glycine_nterminals_remainder_off_polypeptide_sequence seq_plp;;
+Psq_v.glycine_nterminals_off_polypeptide_sequence seq_plp;;
+ #use "t0tab_b_polypeptide_sequence_v.ml";; 
+Psq_v.nterminal_molecule_aminoacid_symbol_remainder_list_off_polypeptide_sequence seq_plp;;
+(
+Psq_v.nterminal_molecule_aminoacid_symbol_remainder_list_off_polypeptide_sequence seq_plp
+(* : Polypeptide_sequence_t.polypeptide_sequence *
+    Polypeptide_sequence_t.polypeptide_sequence *)
+=
+ [Aas_v.proline]
+);;
+ #use "t0tab_b_polypeptide_sequence_v.ml";; 
+ #use "t0tab_f_polypeptide_sequence_v.ml";; 
+Psq_v.name seq_plp;;
+Psq_v.nterminal_molecule_aminoacid_symbol_off_polypeptide_sequence seq_plp;;
+Psq_v.nterminal_molecule_aminoacid_symbol_remainder_list_off_polypeptide_sequence seq_plp;;
+ #use "t0tab_f_polypeptide_sequence_v.ml";; 
+Psq_v.glycine_nterminals_off_polypeptide_sequence seq_plp;;
+Psq_v.glycine_nterminals_remainder_off_polypeptide_sequence seq_plp;;
+Psq_v.reduced_embedded_sequence_off_polypeptide_sequence seq_plp;;
+Psq_v.largest_embedded_sequence_off_polypeptide_sequence seq_plp;;
+ #use "t0tab_f_polypeptide_sequence_v.ml";; 
+Psq_v.largest_embedded_sequence_off_polypeptide_sequence seq_plp;;
+Psq_v.cterminal_glycines_off_polypeptide_sequence seq_plp;;
+ #use "t0tab_f_polypeptide_sequence_v.ml";; 
+Psq_v.largest_embedded_sequence_off_polypeptide_sequence seq_plp;;
+(
+Psq_v.largest_embedded_sequence_off_polypeptide_sequence seq_plp
+(* : Polypeptide_sequence_t.polypeptide_sequence *
+    Polypeptide_sequence_t.polypeptide_sequence *)
+=
+[Aas_v.glycine; Aas_v.alanine; Aas_v.glycine; Aas_v.serine]
+);;
+ #use "t0tab_f_polypeptide_sequence_v.ml";; 
+ #use "t0tab_a_polypeptide_sequence_v.ml";; 
+Psq_v.name seq_plp;;
+(
+Psq_v.nterminal_molecule_aminoacid_symbol_remainder_list_off_polypeptide_sequence seq_plp
+(* : Polypeptide_sequence_t.polypeptide_sequence *
+    Polypeptide_sequence_t.polypeptide_sequence *)
+=
+ [Aas_v.valine; Aas_v.alanine; Aas_v.alanine; Aas_v.tryptophan; Aas_v.glycine;]
+);;
+ (
+Psq_v.nterminal_molecule_aminoacid_symbol_remainder_list_off_polypeptide_sequence seq_plp
+(* : Polypeptide_sequence_t.polypeptide_sequence *
+    Polypeptide_sequence_t.polypeptide_sequence *)
+=
+ [Aas_v.valine; Aas_v.alanine; Aas_v.alanine; Aas_v.tryptophan; Aas_v.glycine;]
+);;
+Psq_v.nterminal_molecule_aminoacid_symbol_remainder_list_off_polypeptide_sequence seq_plp;;
+ #use "t0tab_a_polypeptide_sequence_v.ml";; 
+Psq_v.nterminal_molecule_aminoacid_symbol_remainder_list_off_polypeptide_sequence seq_plp;;
+Psq_v.glycine_nterminals_off_polypeptide_sequence seq_plp;;
+Psq_v.glycine_nterminals_remainder_off_polypeptide_sequence seq_plp;;
+ #use "t0tab_a_polypeptide_sequence_v.ml";; 
+Psq_v.reduced_embedded_sequence_off_polypeptide_sequence seq_plp;;
+Psq_v.largest_embedded_sequence_off_polypeptide_sequence seq_plp;;
+Psq_v.cterminal_glycines_off_polypeptide_sequence seq_plp;;
+ #use "t0tab_a_polypeptide_sequence_v.ml";; 
+#use "tpolyglycine_sequence_v.ml";;
+seq_ntr;;
+seq_ngr;;
+seq_rem;;
+seq_lem;;
+seq_ctg;;
+#use "tpolyglycine_sequence_v.ml";;
+seq_ntg;;
+#use "tpolyglycine_sequence_v.ml";;

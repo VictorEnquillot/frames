@@ -1,0 +1,89 @@
+constructors  figure                         =   localinput_lexer 
+
+constructors  localinput_lexer                    =   localinput_lexer_basic   localinput_lexer_command   localinput_lexer_keyword   localinput_lexer_token   localinput_lexer_variable_kind      
+
+constructors  localinput_lexer_basic              =   localinput_lexer_basic_boolean   localinput_lexer_basic_float   localinput_lexer_basic_integer   localinput_lexer_basic_string   localinput_lexer_basic_word
+
+constructors  localinput_lexer_basic_boolean      =   localinput_lexer_basic_boolean_constructor:ofstring   
+constructors  localinput_lexer_basic_float        =   localinput_lexer_basic_float_constructor:ofstring   
+constructors  localinput_lexer_basic_integer      =   localinput_lexer_basic_integer_constructor:ofstring   
+constructors  localinput_lexer_basic_word         =   localinput_lexer_basic_word_bare   localinput_lexer_basic_word_doublequoted
+constructors  localinput_lexer_basic_string       =   localinput_lexer_basic_string_bare   localinput_lexer_basic_string_doublequoted
+
+constructors  localinput_lexer_basic_string_bare          =   localinput_lexer_basic_string_bare_constructor:ofstring
+constructors  localinput_lexer_basic_string_doublequoted  =   localinput_lexer_basic_string_doublequoted_constructor:ofstring
+
+constructors  localinput_lexer_basic_word_bare    =   localinput_lexer_basic_word_bare_anycase   localinput_lexer_basic_word_bare_capitalized   localinput_lexer_basic_word_bare_lowercase   localinput_lexer_basic_word_bare_uppercase
+
+constructors  localinput_lexer_basic_word_bare_anycase     =   localinput_lexer_basic_word_bare_anycase_constructor:ofstring
+constructors  localinput_lexer_basic_word_bare_capitalized =   localinput_lexer_basic_word_bare_capitalized_constructor:ofstring
+constructors  localinput_lexer_basic_word_bare_lowercase   =   localinput_lexer_basic_word_bare_lowercase_constructor:ofstring
+constructors  localinput_lexer_basic_word_bare_uppercase   =   localinput_lexer_basic_word_bare_uppercase_constructor:ofstring
+
+constructors  localinput_lexer_basic_word_doublequoted     =   localinput_lexer_basic_word_doublequoted_anycase   localinput_lexer_basic_word_doublequoted_capitalized   localinput_lexer_basic_word_doublequoted_lowercase   localinput_lexer_basic_word_doublequoted_uppercase
+
+constructors  localinput_lexer_basic_word_doublequoted_anycase     =   localinput_lexer_basic_word_doublequoted_anycase_constructor:ofstring
+constructors  localinput_lexer_basic_word_doublequoted_capitalized =   localinput_lexer_basic_word_doublequoted_capitalized_constructor:ofstring
+constructors  localinput_lexer_basic_word_doublequoted_lowercase   =   localinput_lexer_basic_word_doublequoted_lowercase_constructor:ofstring
+constructors  localinput_lexer_basic_word_doublequoted_uppercase   =   localinput_lexer_basic_word_doublequoted_uppercase_constructor:ofstring
+
+constructors  localinput_lexer_command             =   localinput_lexer_command_define   localinput_lexer_command_print   localinput_lexer_command_read   localinput_lexer_command_set   localinput_lexer_command_stop   localinput_lexer_command_title   localinput_lexer_command_write
+
+constructors  localinput_lexer_command_define      =   localinput_lexer_command_define_constructor:ofstring
+constructors  localinput_lexer_command_print       =   localinput_lexer_command_print_constructor:ofstring
+constructors  localinput_lexer_command_read        =   localinput_lexer_command_read_constructor:ofstring
+constructors  localinput_lexer_command_set         =   localinput_lexer_command_set_constructor:ofstring
+constructors  localinput_lexer_command_stop        =   localinput_lexer_command_stop_constructor:ofstring
+constructors  localinput_lexer_command_title       =   localinput_lexer_command_title_constructor:ofstring
+constructors  localinput_lexer_command_write       =   localinput_lexer_command_write_constructor:ofstring
+
+constructors  localinput_lexer_keyword             =   localinput_lexer_keyword_basiced   localinput_lexer_keyword_blocknamed   localinput_lexer_keyword_defvarnamed   localinput_lexer_keyword_nextvarnamed   localinput_lexer_keyword_nextstringed   localinput_lexer_keyword_unnamed
+
+constructors  localinput_lexer_keyword_basiced     =   localinput_lexer_keyword_basiced_cofactor_basic
+constructors  localinput_lexer_keyword_basiced_cofactor_basic   =   localinput_lexer_keyword_basiced_cofactor_basic_constructor:ofstring
+
+
+constructors  localinput_lexer_keyword_blocknamed      =   localinput_lexer_keyword_blocknamed_end
+constructors  localinput_lexer_keyword_blocknamed_end  =   localinput_lexer_keyword_blocknamed_end_constructor:ofstring
+
+constructors  localinput_lexer_keyword_defvarnamed            =   localinput_lexer_keyword_defvarnamed_cofactor   localinput_lexer_keyword_defvarnamed_type   localinput_lexer_keyword_defvarnamed_units
+
+constructors  localinput_lexer_keyword_defvarnamed_cofactor   =   localinput_lexer_keyword_defvarnamed_cofactor_constructor:ofstring
+constructors  localinput_lexer_keyword_defvarnamed_type             =   localinput_lexer_keyword_defvarnamed_type_constructor:ofstring
+constructors  localinput_lexer_keyword_defvarnamed_units            =   localinput_lexer_keyword_defvarnamed_units_constructor:ofstring
+
+
+constructors  localinput_lexer_keyword_nextstringed    =   localinput_lexer_keyword_nextstringed_category   localinput_lexer_keyword_nextstringed_database   localinput_lexer_keyword_nextstringed_databox   localinput_lexer_keyword_nextstringed_domain   localinput_lexer_keyword_nextstringed_external_name   localinput_lexer_keyword_nextstringed_file   localinput_lexer_keyword_nextstringed_function   localinput_lexer_keyword_nextstringed_module   localinput_lexer_keyword_nextstringed_ondomain   localinput_lexer_keyword_nextstringed_operation   localinput_lexer_keyword_nextstringed_sector
+
+constructors  localinput_lexer_keyword_nextstringed_category       =   localinput_lexer_keyword_nextstringed_category_constructor:ofstring
+constructors  localinput_lexer_keyword_nextstringed_database       =   localinput_lexer_keyword_nextstringed_database_constructor:ofstring
+constructors  localinput_lexer_keyword_nextstringed_databox        =   localinput_lexer_keyword_nextstringed_databox_constructor:ofstring
+constructors  localinput_lexer_keyword_nextstringed_domain         =   localinput_lexer_keyword_nextstringed_domain_constructor:ofstring
+constructors  localinput_lexer_keyword_nextstringed_external_name  =   localinput_lexer_keyword_nextstringed_external_name_constructor:ofstring
+constructors  localinput_lexer_keyword_nextstringed_file           =   localinput_lexer_keyword_nextstringed_file_constructor:ofstring
+constructors  localinput_lexer_keyword_nextstringed_function       =   localinput_lexer_keyword_nextstringed_function_constructor:ofstring
+constructors  localinput_lexer_keyword_nextstringed_module         =   localinput_lexer_keyword_nextstringed_module_constructor:ofstring
+constructors  localinput_lexer_keyword_nextstringed_ondomain       =   localinput_lexer_keyword_nextstringed_ondomain_constructor:ofstring
+constructors  localinput_lexer_keyword_nextstringed_operation      =   localinput_lexer_keyword_nextstringed_operation_constructor:ofstring
+constructors  localinput_lexer_keyword_nextstringed_sector         =   localinput_lexer_keyword_nextstringed_sector_constructor:ofstring
+
+
+constructors  localinput_lexer_keyword_nextvarnamed   =   localinput_lexer_keyword_nextvarnamed_cofactor_entity   localinput_lexer_keyword_nextvarnamed_external_context   localinput_lexer_keyword_nextvarnamed_external_variable   localinput_lexer_keyword_nextvarnamed_target_operand   localinput_lexer_keyword_nextvarnamed_target_operator
+
+constructors  localinput_lexer_keyword_nextvarnamed_cofactor_entity  =   localinput_lexer_keyword_nextvarnamed_cofactor_entity_constructor:ofstring
+constructors  localinput_lexer_keyword_nextvarnamed_external_context =   localinput_lexer_keyword_nextvarnamed_external_context_constructor:ofstring
+constructors  localinput_lexer_keyword_nextvarnamed_external_variable=   localinput_lexer_keyword_nextvarnamed_external_variable_constructor:ofstring
+constructors  localinput_lexer_keyword_nextvarnamed_target_operand   =   localinput_lexer_keyword_nextvarnamed_target_operand_constructor:ofstring
+constructors  localinput_lexer_keyword_nextvarnamed_target_operator  =   localinput_lexer_keyword_nextvarnamed_target_operator_constructor:ofstring
+
+constructors  localinput_lexer_keyword_unnamed       =   localinput_lexer_keyword_unnamed_cpu   localinput_lexer_keyword_unnamed_debug   localinput_lexer_keyword_unnamed_statistics   localinput_lexer_keyword_unnamed_trace
+
+constructors localinput_lexer_token                    =   localinput_lexer_token_ampersand   localinput_lexer_token_back_quote   localinput_lexer_token_bang   localinput_lexer_token_colon   localinput_lexer_token_divide   localinput_lexer_token_dot   localinput_lexer_token_doublequote   localinput_lexer_token_exclamation_mark   localinput_lexer_token_l_bracket   localinput_lexer_token_l_curly   localinput_lexer_token_l_parenthesis   localinput_lexer_token_minus   localinput_lexer_token_pipe   localinput_lexer_token_plus   localinput_lexer_token_question_mark   localinput_lexer_token_quote   localinput_lexer_token_r_bracket   localinput_lexer_token_r_curly   localinput_lexer_token_r_parenthesis   localinput_lexer_token_semicolon   localinput_lexer_token_times   localinput_lexer_token_white_space
+
+constructors localinput_lexer_variable_kind            =   localinput_lexer_variable_kind_context   localinput_lexer_variable_kind_external   localinput_lexer_variable_kind_operator   localinput_lexer_variable_kind_target
+
+constructors  localinput_lexer_variable_kind_context   =   localinput_lexer_variable_kind_context_constructor:ofstring
+constructors  localinput_lexer_variable_kind_external  =   localinput_lexer_variable_kind_external_constructor:ofstring                
+constructors  localinput_lexer_variable_kind_operator  =   localinput_lexer_variable_kind_operator_constructor:ofstring
+constructors  localinput_lexer_variable_kind_target    =   localinput_lexer_variable_kind_target_constructor:ofstring
+ 

@@ -1,0 +1,35 @@
+	digraph property_labels {
+		size="14,14";
+		node [color=lightblue, style=filled];
+		"Property\nLabels Tree" [style = filled, color = yellow, 
+		fontsize=24, fontname="Palatino-Italic",fontcolor=black];
+
+		"Target" [color = yellow];
+		"Operand\nExternal" [color = yellow];	 
+		"Operator" [color = yellow];
+
+		"Command" -> "Debug\nSet\nTitle\nTrace";
+
+		"Property\nLabels" -> "Context";
+		"Property\nLabels" -> "Body";
+		"Body" -> "Command";
+		"Body" -> "Target";	
+		"Target" -> "Created"; 	
+		"Created" -> "Created\nElementary\n(String)";
+		"Created" -> "Created\nFigure\n(String)";
+		"Created" -> "Created\nPrototype\n(String)";
+		"Target" -> "Measured"; 	
+		"Measured" -> "Measured\nBasic\n(String)";
+		"Measured" -> "Measured\nElementary\n(String)";
+		"Target" -> "Unit";
+		"Unit" -> "Unit\n(String)";
+		"Property\nLabels" -> "Fence";
+		"Fence" -> "Operand\nExternal";
+		"Operand\nExternal" -> "Elementary\n(Elementary Tag)";
+		"Operand\nExternal" -> "Figure\n(Figure Tag)";
+		"Operand\nExternal" -> "Prototype\n(Prototype Tag)";
+		"Fence" -> "Operator";
+		"Operator" -> "Operator_Unit\n(Operator_Unit Tag)";
+		"Operator" -> "Operator_Creation\n(Operator_Creation Tag)";
+		}
+

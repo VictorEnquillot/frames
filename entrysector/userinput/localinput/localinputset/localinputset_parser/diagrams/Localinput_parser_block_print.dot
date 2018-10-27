@@ -1,0 +1,41 @@
+digraph dgn {
+    size="14,14";
+
+
+    edge [fontname = "Bitstream Vera Sans" fontsize = 12 arrowsize="0.7" dir = down];
+
+    node [color=yellow, style=filled, fontsize=24, fontname="Palatino-Italic", fontcolor=black];
+
+    Title [label = "BNF Tree\nfor Print\napplied to Poi_a\n" fontsize=24, shape="record", color=lightblue, style=filled];
+
+
+    "<handle_command_print>";
+
+    "print" [color=lightblue];
+    "<block_print>";
+
+    "<localinput_block>\nfor inputbox" -> {"<handle_command_define>" "<handle_command_print>" "stop"};
+
+subgraph cluster_0 {
+  "define" [color=lightblue];
+  "<handle_command_define>"       -> {"define" "<block_define>"};
+}
+
+subgraph cluster_1 {
+  "Poi_a" [color=green] ;
+
+  "<box_units>";    
+  "units" [color=lightblue];
+
+  "Uni_len" [color=green] ;
+  "Uni_ang" [color=green] ;
+  "end_print" [color=lightblue];
+
+
+  "<handle_command_print>"      -> {"print" "<block_print>"};
+  "<block_print>"               -> { "Poi_a" "<box_units>" "end_print"};  
+  "<box_units>"                 -> {"units" "Uni_len" "Uni_ang"}; 
+}
+    "stop" [color=lightblue];
+}
+

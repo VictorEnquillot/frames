@@ -1,0 +1,65 @@
+let nam_cod = "Camlline_datastructure_camltype_value_u_moleculeset_formula_molecule_linear_diatomic_typing.ml";;
+let nam_dos = "geometryset";;
+let nam_cat = "ssssss";;
+let nam_cof = "xxx_alone";;
+let nam_ite = "xxxing";;
+let nam_ent = "ttttttttt";;
+let nam_usf = "implementation";;
+
+let sym_dos = Domainset_symbol_v.make nam_dos;;
+let idx_dos = Domainset_symbol_v.list_index_of_domainset_symbol sym_dos;;
+let soi_dos = Sole_index_v.make idx_dos [];;
+let gss_dos = Generatorset_symbol_v.generatorset_symbol_of_domainset_symbol sym_dos;;
+Generatorset_symbol_by_sole_index_provider_v.store soi_dos gss_dos;;
+let tag_dos = Tag_v.make sym_dos soi_dos;;
+let for_dos = Domainset_formula_v.retrieve tag_dos;;
+
+let sel_cat = (fun c -> Category_symbol_v.name c = nam_cat);;
+let tag_cat = Doublet_list_v.find_if_left sel_cat for_dos;;
+let for_cat = Category_formula_v.retrieve tag_cat;;
+
+let tag_ent_l = Category_formula_v.entity_tag_list_off_category_formula for_cat;;
+let sel_ent = (fun e -> Entity_symbol_v.string_off e = nam_ent)
+let tag_ent = Doublet_list_v.find_if_left sel_ent tag_ent_l;;
+let for_ent = Entity_formula_v.retrieve tag_ent;;
+
+let sel_cof = (fun c -> Contentfile_symbol_v.name c = nam_cof);;
+let tag_cof = Doublet_list_v.find_if_left sel_cof for_ent;;
+let for_cof = Contentfile_formula_v.retrieve tag_cof;;
+
+let sel_usf = (fun u -> Usagefile_symbol_v.name u = nam_usf);;
+let tag_usf = Doublet_list_v.find_if_left sel_usf for_cof;;
+let for_usf = Usagefile_formula_v.retrieve tag_usf;;
+
+let sel_ite = (fun i -> Item_symbol_v.name i = nam_ite);;
+let tag_ite = Doublet_list_v.find_if_left sel_ite for_usf;; 
+let for_ite = Item_formula_v.retrieve tag_ite;;
+
+----------------------------------------------------------------
+(* Camlparagraph : Type_definition_for_formula *)
+
+let nam_cap = "type_definition_for_formula"
+let sel_cap = (fun c -> Camlparagraph_symbol_v.name c = nam_cap);;
+let tag_cap = Doublet_list_v.find_if_left sel_cap for_ite;;
+let for_cap = Camlparagraph_formula_v.retrieve tag_cap;;
+
+(* Camlline : Type_mst_equal *)
+
+let nam_cal = "type_mst_equal"
+let sel_cal = (fun c -> Camlline_symbol_v.name c = nam_cal);;
+let tag_cal = Doublet_list_v.find_if_left sel_cal for_cap;;
+let for_cal = Camlline_formula_v.retrieve tag_cal;;
+
+(* Camlparagraph : 2 Let_make_nam_s_equal_for_symbol *)
+
+let idx_cap = 2;;
+let tag_cap = List.nth for_ite (idx_cap-1);;
+let for_cap = Camlparagraph_formula_v.retrieve tag_cap;;
+
+(* Camlline : 1 Let_make_nam_s_equal *)
+
+let idx_cal = 1;;
+let tag_cal = List.nth for_cap (idx_cal-1);;
+let for_cal = Camlline_formula_v.retrieve tag_cal;;
+
+-----------------------------------------------------------------

@@ -1,0 +1,31 @@
+define H_a                              -- entity value by default 
+          from 
+	     domain property 
+       	     end -- from
+       needs 
+          center P_a 
+          ratio R
+          end -- needs 
+       end -- define
+
+define Tr_ha                            -- Tr transformed by H_a
+       by applying H_a 
+            on Tr
+	    end -- applying
+       end -- define
+
+define Tr_hb                            -- Tr transformed by H_a
+       by applying ( 
+       	    homothety "homothety_b"
+       	    from domain property end 
+       	    needs 
+	      center P_a                -- parameter
+       	      ratio R 
+              end
+            )	  
+            on Tr
+	    end -- applying
+       end -- define
+
+print Tr_hb
+      end 

@@ -1,0 +1,5 @@
+let closure_units_as_list tag_ttt = 
+  let ele_tag_l = This_container_v.deepfence_as_list tag_ttt in
+  let dfe_ttt_l = List.map elementary_units_tag_off_elementary_tag ele_tag_l in
+  List.flatten (List.map Buldr_envelope_v.closure_units_as_list dfe_ttt_l)
+;;

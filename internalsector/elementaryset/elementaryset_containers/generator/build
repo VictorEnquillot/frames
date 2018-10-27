@@ -1,0 +1,17 @@
+let build tag_ttt =
+  let tag_ele = Tag_v.map_entity (* Coerce Up *)
+      Elementary_symbol_v.elementary_symbol_of_this_symbol
+      tag_ttt
+  in
+
+  let tag_ele_son_l =
+    Elementary_any_category_by_sole_index_extractor_v.son_elementary_tag_list_of_string_predicate_of_father_tag 
+      "is_builder_symbol_off_elementary_symbol"
+      tag_ele
+  in
+
+  List.map 
+    (Tag_v.map_entity (* Coerce Down *)
+       Elementary_symbol_v.builder_symbol_off_elementary_symbol)
+    tag_ele_son_l
+;;

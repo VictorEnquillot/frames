@@ -1,0 +1,1 @@
+  if debug () then Format.fprintf Format.std_formatter "%s.%s: input sym_lex_cur >%s<@." nam_mod nam_fun (Input_lexer_symbol_v.fullname (Stack.top sym_lex_s)); 

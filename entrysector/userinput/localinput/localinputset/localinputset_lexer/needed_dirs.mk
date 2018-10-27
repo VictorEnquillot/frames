@@ -1,0 +1,3 @@
+NEEDED_DIRS := \
+	$(CONTEXTSET_DIR) \
+ 

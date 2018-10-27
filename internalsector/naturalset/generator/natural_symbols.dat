@@ -1,0 +1,27 @@
+# kind         type                     = constructor_basename list
+#       
+# --------------------------------------------------------------------------------------------
+
+# natural  Constructor_Tree  Root
+constructors   natural                  =   expression   token
+
+# expression
+constructors   expression               =   expression_atomic   expression_composite
+
+# expression_atomic
+constructors   expression_atomic        =   expression_atomic_digit   variable:ofstring
+
+# digit
+constructors   expression_atomic_digit  =   zero   one   two   three   four   five   six   seven   eight   nine
+
+# token
+constructors   token                    =   operation   leftparenthesis   rightparenthesis
+
+# operation                      
+constructors   operation                =   successor   addition   multiplication
+
+
+
+
+
+

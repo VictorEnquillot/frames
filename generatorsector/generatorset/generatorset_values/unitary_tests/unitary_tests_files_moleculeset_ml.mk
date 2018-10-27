@@ -1,0 +1,58 @@
+DO_MOLECULESET_FORMULA_ML := \
+Do_moleculeset_formulas_files_mli_mk.ml \
+Do_moleculeset_formulas_tv.ml \
+ 
+DO_MOLECULESET_SYMBOL_ML := \
+Do_moleculeset_symbols_files_mli_mk.ml \
+Do_moleculeset_symbols_tv.ml \
+ 
+DO_MOLECULESET_TAG_ML := \
+Do_moleculeset_tags_files_mli_mk.ml \
+Do_moleculeset_tags_tv.ml \
+ 
+MOLECULESET_SYMBOL_ML := \
+Camlline_datastructure_camltype_value_u_moleculeset_symbol_molecule_linear_diatomic_typing.ml \
+Camlline_value_u_moleculeset_symbol_molecule_typing.ml \
+Camlline_value_u_moleculeset_symbol_moleculeset_upgrading.ml \
+Camlline_value_u_moleculeset_symbol_molecule_linear_abbreviating.ml \
+Camlline_value_u_moleculeset_symbol_molecule_linear_typing.ml \
+Camlline_value_u_moleculeset_symbol_vector_upgrading.ml \
+Camlparagraph_endmarked_type_value_u_moleculeset_symbol_molecule_typing.ml \
+Camlparagraph_endmarked_type_value_u_moleculeset_symbol_molecule_linear_diatomic_typing.ml \
+Item_value_u_moleculeset_symbol_molecule_abbreviating.ml \
+Item_value_u_moleculeset_symbol_molecule_naming.ml \
+Item_value_u_moleculeset_symbol_molecule_typing.ml \
+Item_value_u_moleculeset_symbol_molecule_typing.ml \
+Item_value_u_moleculeset_symbol_molecule_upgrading.ml \
+Item_value_u_moleculeset_symbol_molecule_linear_diatomic_typing.ml \
+Item_value_u_moleculeset_symbol_moleculeset_abbreviating.ml \
+Item_value_u_moleculeset_symbol_moleculeset_making.ml \
+Item_value_u_moleculeset_symbol_moleculeset_upgrading.ml \
+Item_value_u_moleculeset_symbol_molecule_linear_typing.ml \
+Item_value_u_moleculeset_symbol_molecule_linear_upgrading.ml \
+Usagefile_value_u_moleculeset_symbol_molecule_type_alone.ml \
+Usagefile_value_u_moleculeset_symbol_molecule_value_alone.ml \
+Usagefile_value_u_moleculeset_symbol_moleculeset_type_alone.ml \
+Usagefile_value_u_moleculeset_symbol_moleculeset_value_alone.ml \
+Usagefile_value_u_moleculeset_symbol_molecule_linear_type_alone.ml \
+ 
+MOLECULESET_FORMULA_ML := \
+Camlline_datastructure_camltype_value_u_moleculeset_formula_molecule_linear_diatomic_typing.ml \
+Camlline_datastructure_camltype_value_u_moleculeset_formula_molecule_typing.ml \
+Camlline_value_u_moleculeset_formula_molecule_typing.ml \
+Camlline_value_u_moleculeset_formula_moleculeset_typing.ml \
+Camlline_value_u_moleculeset_formula_molecule_linear_typing.ml \
+Camlparagraph_value_u_moleculeset_formula_making_molecule_linear_diatomic.ml \
+Camlparagraph_value_u_moleculeset_formula_molecule_linear_diatomic_typing.ml \
+Item_value_u_moleculeset_formula_molecule_typing.ml \
+Item_value_u_moleculeset_formula_molecule_linear_diatomic_typing.ml \
+Item_value_u_moleculeset_formula_molecule_making.ml \
+Usagefile_value_u_moleculeset_formula_molecule_value_alone.ml \
+ 
+FILES_INACTIVE := \
+ 
+UNITARY_TESTS_FILES_MOLECULESET_ML := \
+$(DO_MOLECULESET_SYMBOL_ML) \
+$(DO_MOLECULESET_TAG_ML) \
+# $(MOLECULESET_FORMULA_ML) \
+# $(MOLECULESET_SYMBOL_ML) \

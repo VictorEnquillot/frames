@@ -1,0 +1,56 @@
+digraph Frames {
+                size="40,15";
+                edge [arrowhead = "vee", arrowsize = "2.0", style="solid", taillabel = ""];
+
+  Title [
+  	label = "The Cross Domain Builder Tree\nDomain Figure\nDomain Coordinate\nData Values", fontsize=30, shape=box, fontname=Courier, color=yellow, style=filled
+  ];
+
+
+
+style="setlinewidth(5)"
+
+  "Figure\nContainers" [style = filled, color = yellow];
+  "Figure\nBody\nTriangle" [style = filled, color = yellow];
+  "Figure\nBody\nSegment"  [style = filled, color = yellow];
+  "Figure\nFence\nPoint"  [style = filled, color = yellow];
+  "Figure\nFence\nPoint "  [style = filled, color = yellow];
+  "Figure\nFence\nPoint  "  [style = filled, color = yellow];
+  "Figure\nFence\nPoint   "  [style = filled, color = yellow];
+
+  "Coordinate\nBody\nTuple " [style = filled, color = lightskyblue];
+  "Coordinate\nBody\nTuple  " [style = filled, color = lightskyblue];
+  "Coordinate\nBody\nTuple   " [style = filled, color = lightskyblue];
+  "Coordinate\nFence " [style = filled, color = lavender];
+  "Coordinate\nFence  " [style = filled, color = lavender];
+  "Coordinate\nFence   " [style = filled, color = lavender];
+
+  "Readee \n(Data Values)" [style = filled, color = beige];
+  "Readee  \n(Data Values)" [style = filled, color = beige];
+  "Readee   \n(Data Values)" [style = filled, color = beige];
+
+  Title -> "Figure\nContainers" [style="invis"];
+
+  "Figure\nContainers" -> "Figure\nBody\nTriangle";
+  "Figure\nContainers" -> "Figure\nBody\nSegment";
+  "Figure\nContainers" -> "Figure\nFence\nPoint";
+
+  "Figure\nBody\nTriangle" -> "Figure\nFence\nPoint " [color=red, label="Triplet", fontsize=24];
+  "Figure\nBody\nSegment" -> "Figure\nFence\nPoint  " [color=blue, label="Doublet", fontsize=24];
+
+  "Figure\nFence\nPoint" -> "Figure\nFence\nPoint   " [color=green, label="Singlet", fontsize=24];
+
+  "Figure\nFence\nPoint " -> "Coordinate\nBody\nTuple "  [color=green, label="Singlet", fontsize=24];
+  "Figure\nFence\nPoint  " -> "Coordinate\nBody\nTuple  "  [color=green, label="Singlet", fontsize=24];
+  "Figure\nFence\nPoint   " -> "Coordinate\nBody\nTuple   " [color=green, label="Singlet", fontsize=24];
+
+  "Coordinate\nBody\nTuple " -> "Coordinate\nFence ";
+  "Coordinate\nBody\nTuple  " -> "Coordinate\nFence  ";
+  "Coordinate\nBody\nTuple   " -> "Coordinate\nFence   ";
+
+  "Coordinate\nFence " -> "Readee \n(Data Values)";
+  "Coordinate\nFence  " -> "Readee  \n(Data Values)";
+  "Coordinate\nFence   " -> "Readee   \n(Data Values)";
+		
+}
+

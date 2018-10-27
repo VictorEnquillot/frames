@@ -1,0 +1,5 @@
+ledit -x -h .toplevel-history \
+ocaml -I . -I ../ -I ../../tools \
+unix.cma str.cma \
+../../tools/tools.cma \
+../polynomials.cma 

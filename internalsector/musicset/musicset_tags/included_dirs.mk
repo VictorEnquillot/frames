@@ -1,0 +1,5 @@
+INCLUDED_DIRS := \
+        $(BASICS_DIR) \
+        $(DATASTRUCTURES_DIR) \
+        $(MUSICSET_SYMBOLS_DIR) \
+ 

@@ -1,0 +1,11 @@
+  let sym_ent_son = 
+    Tools_fgnr_v.entity_topson_symbol_of_camlline_dectup_of_sole_index 
+      dec_ctb 
+      soi_cal
+  in 
+  let tri_ent_top = Decuplet_v.right_triplet_off_decuplet dec_ctb in
+  let tri_ent_son = Triplet_v.reset_of_left_off_triplet sym_ent_son tri_ent_top in
+  let sym_ent_bui = 
+    Tools_ignr_2_v.mainbuilder_symbol_of_entity_tritup 
+      tri_ent_son
+  in 

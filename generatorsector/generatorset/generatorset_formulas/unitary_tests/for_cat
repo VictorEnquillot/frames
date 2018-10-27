@@ -1,0 +1,44 @@
+[(Entity_proper_symbol_t.Entity_proper_top_symbol
+   (Entity_proper_top_symbol_t.Top_has_no_leaf_son "geometryset"),
+  [1; 7; 5]);
+ (Entity_proper_symbol_t.Entity_proper_top_symbol
+   (Entity_proper_top_symbol_t.Top_has_no_leaf_son "triangle"),
+  [2; 7; 5]);
+ (Entity_proper_symbol_t.Entity_proper_top_symbol
+   (Entity_proper_top_symbol_t.Top_has_some_leaf_son "triangle_isoceles"),
+  [3; 7; 5]);
+ (Entity_proper_symbol_t.Entity_proper_top_symbol
+   (Entity_proper_top_symbol_t.Top_has_some_leaf_son "triangle_scalene"),
+  [4; 7; 5]);
+ (Entity_proper_symbol_t.Entity_proper_top_symbol
+   (Entity_proper_top_symbol_t.Top_has_some_leaf_son "vector"),
+  [5; 7; 5]);
+ (Entity_proper_symbol_t.Entity_proper_top_symbol
+   (Entity_proper_top_symbol_t.Top_has_some_leaf_son "point"),
+  [6; 7; 5]);
+ (Entity_proper_symbol_t.Entity_proper_top_symbol
+   (Entity_proper_top_symbol_t.Top_has_some_leaf_son "coordinate"),
+  [7; 7; 5]);
+ (Entity_proper_symbol_t.Entity_proper_top_symbol
+   (Entity_proper_top_symbol_t.Top_has_no_leaf_son "coordinate_3d"),
+  [8; 7; 5]);
+ (Entity_proper_symbol_t.Entity_proper_top_symbol
+   (Entity_proper_top_symbol_t.Top_has_some_leaf_son
+     "coordinate_cartesian_3d"),
+  [9; 7; 5]);
+ (Entity_proper_symbol_t.Entity_proper_top_symbol
+   (Entity_proper_top_symbol_t.Top_has_some_leaf_son "coordinate_cylindrical"),
+  [10; 7; 5]);
+ (Entity_proper_symbol_t.Entity_proper_top_symbol
+   (Entity_proper_top_symbol_t.Top_has_some_leaf_son "coordinate_spherical"),
+  [11; 7; 5]);
+ (Entity_proper_symbol_t.Entity_proper_top_symbol
+   (Entity_proper_top_symbol_t.Top_has_no_leaf_son "coordinate_2d"),
+  [12; 7; 5]);
+ (Entity_proper_symbol_t.Entity_proper_top_symbol
+   (Entity_proper_top_symbol_t.Top_has_some_leaf_son
+     "coordinate_cartesian_2d"),
+  [13; 7; 5]);
+ (Entity_proper_symbol_t.Entity_proper_top_symbol
+   (Entity_proper_top_symbol_t.Top_has_some_leaf_son "coordinate_polar"),
+  [14; 7; 5])]

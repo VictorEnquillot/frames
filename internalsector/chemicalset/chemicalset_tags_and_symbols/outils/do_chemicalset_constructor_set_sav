@@ -1,0 +1,17 @@
+echo "
+aggregate \
+atom \
+block \
+box \
+cluster \
+cterminal_subunit \
+fragment \
+grouping \
+mendeleev \
+molecule_aminoacid \
+molecule \
+peptideca \
+polypeptide_sidegroup \
+residue \
+segment \
+"

@@ -1,0 +1,19 @@
+define Poi_h_bis
+       target	
+         type [	"property" "set" "body" "target" "explicit" "created" "constructor"]
+         operator 
+           ( operator 
+               type [ "operator" "set" "body" "creation" "transformation" "constructor" ]
+	       center Cen_b 
+               scale_factor 2.0
+           )
+         operand 
+	   ( external 
+               type [ "figure" "set" "fence" "point" "constructor" ]
+	       external_name "T_A"
+               external_context Con_db1
+           )
+	 end -- target
+       end -- define
+
+stop

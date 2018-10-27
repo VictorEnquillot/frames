@@ -1,0 +1,38 @@
+    let wws_trl_old = retrieve tra_cat in
+    if wws_trl <> wws_trl_old
+    then
+      begin
+        let nam_ent = Trail_v.value_of_key_off_trail "category" tra_cat in
+        let tra_cat = Trail_v.trail_of_key_off_trail "category" tra_cat in
+        let nam_fil = 
+          Filename_p.name
+            (Database_filename_by_category_trail_provider_v.provide tra_cat) 
+        in
+        Error_messages_v.print_fatal_error 
+          nam_cod 
+          "store"
+          (Format.sprintf "for key >%s<@.    already stored value >%s< equal new one"
+             (Trail_v.name tra_cat)
+             (Triplet_list_v.name_with_separator
+		Utilities_v.identity Utilities_v.identity Utilities_v.identity 
+		";\n   " 
+		wws_trl_old) 
+	  )
+           (Format.sprintf "this value >%s<"
+             (Triplet_list_v.name_with_separator 
+	      Utilities_v.identity Utilities_v.identity Utilities_v.identity 
+	      ";\n   " 
+	      wws_trl_old) 
+	  )
+          (Format.sprintf "check for duplicated entry >%s< in file:@.       >%s<" nam_ent nam_fil)
+
+      end
+    else 
+      Error_messages_v.print_warning nam_cod "store"
+        (Format.sprintf "for category key >%s<@.    already stored value >%s<"
+          (Trail_v.name tra_cat)
+           (Triplet_list_v.name_with_separator
+	      Utilities_v.identity Utilities_v.identity Utilities_v.identity 
+	      ";\n   " 
+	      wws_trl_old) 
+	)

@@ -1,0 +1,8 @@
+INCLUDED_DIRS = \
+	$(BASICS_DIR) \
+	$(DATASTRUCTURES_DIR) \
+	$(CHEMICALSET_SYMBOLS_DIR) \
+	$(realpath ..) \
+    
+
+

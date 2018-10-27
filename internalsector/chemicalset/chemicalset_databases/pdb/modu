@@ -1,0 +1,10 @@
+module Cal_v = Capped_list_v
+module Cpk_v = Clusterpdb_keypdb_v
+module Cps_v = Clusterpdb_symbol_v
+module Dbl_v = Doublet_v
+module Epd_v = Entrypdb_data_v
+module Fpt_v = Fieldpdb_tools_v
+module Lst_v = List_v
+module Residuepdb_symbol_t = Recordpdb_symbol_t
+module Rps_v = Recordpdb_symbol_v
+

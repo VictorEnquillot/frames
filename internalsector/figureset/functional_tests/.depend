@@ -1,0 +1,22 @@
+Figureset_run.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/basics/String_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/figureset/figureset_properties/Property_figureset_tag_list_by_domain_tag_provider_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/commonset/Parameters_figureset_general_register_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/commonset/Parameters_figureset_general_provider_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/inputset/Input_parser_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/inputset/Input_filename_by_domain_tag_register_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/files/Filename_p.cmi \
+    /keep/sources/ocaml_top/setup/frames/general/files/Fileio_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Doublet_list_v.cmi \
+    /keep/sources/ocaml_top/setup/frames/commonset/Domain_tag_v.cmo
+Figureset_run.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/basics/String_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/figureset/figureset_properties/Property_figureset_tag_list_by_domain_tag_provider_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/commonset/Parameters_figureset_general_register_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/commonset/Parameters_figureset_general_provider_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/inputset/Input_parser_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/inputset/Input_filename_by_domain_tag_register_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/files/Filename_p.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/files/Fileio_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/datastructures/Doublet_list_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/commonset/Domain_tag_v.cmx

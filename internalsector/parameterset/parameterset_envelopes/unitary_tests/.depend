@@ -1,0 +1,42 @@
+test.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Uno_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_quantum_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tuple_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tag_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_measure_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_builder_trees/Parameter_tag_all_list_by_basicname_databox_n_basicname_database_provider_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_symbols/Parameter_symbol_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_tags/Parameter_set_fence_tag_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_symbols/Parameter_set_fence_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_envelopes/Parameter_set_fence_envelope_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_symbols/Parameter_set_fence_aopef_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_symbols/Parameter_set_fence_aopef_coefficient_symbol_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_v.cmo
+test.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Uno_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/units/Units_canonical_quantum_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tuple_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Tag_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/readee/Readee_measure_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_builder_trees/Parameter_tag_all_list_by_basicname_databox_n_basicname_database_provider_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_symbols/Parameter_symbol_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_tags/Parameter_set_fence_tag_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_symbols/Parameter_set_fence_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_envelopes/Parameter_set_fence_envelope_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_symbols/Parameter_set_fence_aopef_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/parameterset/parameterset_symbols/Parameter_set_fence_aopef_coefficient_symbol_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/measure/Measure_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Make_test_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/List_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/datastructures/Doublet_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/internalsector/contextset/Basicname_v.cmx

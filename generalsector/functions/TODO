@@ -1,0 +1,6 @@
+2. take off radial_fonction should be a fonction on R+
+* R+ is radius_p
+
+ val f : radius_p -> float
+
+* radial_fonction -> fonction_on_rp ?

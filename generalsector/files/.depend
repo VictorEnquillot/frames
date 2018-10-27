@@ -1,0 +1,84 @@
+Directoryname_t.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Noslash_string_p.cmi
+Directoryname_t.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Noslash_string_p.cmx
+Directoryname_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Noslash_string_p.cmi
+Directoryname_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Noslash_string_p.cmx
+Directorypath_t.cmo: Directoryname_t.cmo
+Directorypath_t.cmx: Directoryname_t.cmx
+Directorypath_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi \
+    Directorypath_t.cmo Directoryname_v.cmo
+Directorypath_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx \
+    Directorypath_t.cmx Directoryname_v.cmx
+Filecontentsymbol_t.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Noslash_string_p.cmi
+Filecontentsymbol_t.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Noslash_string_p.cmx
+Filecontentsymbol_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Noslash_string_p.cmi
+Filecontentsymbol_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Noslash_string_p.cmx
+Filedirectory_t.cmo: Directoryname_t.cmo
+Filedirectory_t.cmx: Directoryname_t.cmx
+Fileextension_t.cmo:
+Fileextension_t.cmx:
+Fileextension_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi \
+    Fileextension_t.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Fileextension_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx \
+    Fileextension_t.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+File_format_symbol_t.cmo:
+File_format_symbol_t.cmx:
+File_format_symbol_v.cmo: File_format_symbol_t.cmo
+File_format_symbol_v.cmx: File_format_symbol_t.cmx
+File_format_t.cmo:
+File_format_t.cmx:
+Fileformat_t.cmo:
+Fileformat_t.cmx:
+Fileformat_v.cmo: Fileformat_t.cmo
+Fileformat_v.cmx: Fileformat_t.cmx
+Filename_symbol_t.cmo:
+Filename_symbol_t.cmx:
+File_symbol_t.cmo:
+File_symbol_t.cmx:
+File_symbol_v.cmo: File_symbol_t.cmo
+File_symbol_v.cmx: File_symbol_t.cmx
+Filetools_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi
+Filetools_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx
+File_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+File_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+Filename_p.cmo: Fileextension_v.cmo Fileextension_t.cmo \
+    Filecontentsymbol_v.cmo Filecontentsymbol_t.cmo File_v.cmo \
+    Directorypath_v.cmo Directorypath_t.cmo
+Filename_p.cmx: Fileextension_v.cmx Fileextension_t.cmx \
+    Filecontentsymbol_v.cmx Filecontentsymbol_t.cmx File_v.cmx \
+    Directorypath_v.cmx Directorypath_t.cmx
+Fileio_v.cmo: Filename_p.cmo \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmo
+Fileio_v.cmx: Filename_p.cmx \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/Error_messages_v.cmx
+File_format_v.cmo: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmi \
+    File_v.cmo File_format_t.cmo
+File_format_v.cmx: \
+    /home/colonna/sources/ocaml_top/setup/frames/generalsector/basics/String_v.cmx \
+    File_v.cmx File_format_t.cmx
+read_by_scanf.cmo:
+read_by_scanf.cmx:

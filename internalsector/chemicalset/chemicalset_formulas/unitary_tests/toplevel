@@ -1,0 +1,10 @@
+ledit -x -h ./ocaml-history ocaml \
+-I ../../../general/basics \
+-I ../../../general/datastructures \
+-I ../../chemicalset_symbols \
+-I ../../chemicalset_tags \
+-I ../../chemicalset_marks \
+-I ../../chemicalset_interfaces \
+-I ../ \
+-I ./ \
+../chemicalset_formulas.cma

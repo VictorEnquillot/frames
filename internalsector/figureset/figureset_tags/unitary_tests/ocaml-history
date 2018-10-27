@@ -1,0 +1,87 @@
+  #use "ttriangle_symbol_v.ml";; 
+module Trs_t = Triangle_symbol_t
+module Trs_v = Triangle_symbol_v
+let smb_ioo = Trs_t.Isoceles_oblique_obtuse;;
+let smb_iso = Trs_t.Isoceles_oblique smb_ioo;;
+let smb_tri = Trs_t.Isoceles smb_iso;;
+let nam_tri = Trs_v.name smb_tri;;
+smb_tri ;;
+smb_ioo;;
+let smb_iso = Trs_t.Isoceles_oblique_obtuse;;
+let smb_tri = Trs_t.Isoceles smb_iso;;
+  #use "ttriangle_symbol_v.ml";; 
+  #use "ttriangle_formula_v.ml";; 
+Trf_v.retrieve tag_tri
+;;
+  #use "ttriangle_formula_v.ml";; 
+  #use "ttriangle_value_v.ml";; 
+testi 3 (
+Trv_v.make frm_tri
+=
+;;
+Trv_v.make frm_tri;;
+  #use "ttriangle_value_v.ml";; 
+Trv_v.make frm_tri;;
+  #use "ttriangle_value_v.ml";; 
+#use "triangle_value_v.ml";;
+  let tag_sum = Trf_v.summit_tag_off_triangle_formula frm_tri;;
+ let tag_bas = Trf_v.basis_tag_off_triangle_formula frm_tri ;;
+let val_sum = Pov_v.make tag_sum ;;
+  #use "ttriangle_value_v.ml";; 
+  #use "tvector_value_v.ml";; 
+  #use "tvector_tag_v.ml";; 
+tag_vec ;;
+exit
+  #use "tvector_tag_v.ml";; 
+tag_tri 
+(* : Tree_ca;;
+tag_tri 
+tag_tri;;
+  #use "tvector_tag_v.ml";; 
+let tag_tri = Tag_v.make smb_tri 1 [];;
+Tag_v.make;;
+  #use "tvector_tag_v.ml";; 
+tag_tri;;
+tag_vec ;;
+  #use  "tgeometryset_symbol_provider_v.ml";; 
+smb_gsp;;
+  #use  "tgeometryset_symbol_provider_v.ml";; 
+gss_tri;;
+Gsp_v.retrieve tci_tri ;;
+gss_vec;;
+gss_poi;;
+tci_tri;;
+tci_vec;;
+ #use "triangle_tag_u_any.ml";; 
+sym_tirtag_tir ;;
+let nam_tir = Triangle_tag_v.name tag_tir;;
+ #use "triangle_tag_u_any.ml";; 
+open Make_test_v;;
+testing "Vector_tag_v with
+   vector_tag_u_any.ml";;
+let nam_dos = "geometryset";;
+let idx_dos = 1;;
+let soi_dos = Sole_index_v.make idx_dos [];;
+let nam_v3d = "vector_3d";;
+let sym_v3d = Vector_symbol_v.make nam_v3d "T";;
+let idx_v3d = 1;;
+let soi_v3d = Sole_index_v.make idx_v3d soi_dos;;
+let tag_v3d = Vector_tag_v.make sym_v3d soi_v3d;;
+let nam_v3d = Vector_tag_v.name tag_v3d;;sym_v3d;;
+tag_v3d ;;
+sym_v3d;;
+ #use "point_tag_u_any.ml";; 
+   vector_tag_u_any.ml";;
+   #use "vector_tag_u_any.ml";;
+  #use "point_tag_u_any.ml";; 
+tag_psu;;
+  #use "point_tag_u_any.ml";; 
+#load " ../../../general/datastructures";;
+#load " ../../../general/datastructures.cma";;
+  #use "triangle_tag_u_any.ml";; 
+ 
+   #use "Triangle_tag_u_any.ml";; 
+ #load "../../geometryset_symbols/geometryset_symbols.cma";;
+   #use "Triangle_tag_u_any.ml";; 
+nam_tir;;
+ #use "Triangle_tag_u_any.ml";; 

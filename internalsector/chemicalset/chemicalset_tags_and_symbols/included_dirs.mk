@@ -1,0 +1,6 @@
+INCLUDED_DIRS = \
+	$(DATASTRUCTURES_DIR) \
+	$(UNITS_DIR) \
+  
+
+

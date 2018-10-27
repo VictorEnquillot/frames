@@ -1,0 +1,22 @@
+Natural_symbol_u_any.cmo : \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Natural_symbol_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Natural_symbol_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Make_test_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_symbol_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_atomic_symbol_t.cmo \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_atomic_digit_symbol_t.cmo
+Natural_symbol_u_any.cmx : \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Natural_symbol_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Natural_symbol_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Make_test_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_symbol_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_atomic_symbol_t.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_atomic_digit_symbol_t.cmx
+Expression_symbol_u_any.cmo : \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Make_test_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_symbol_v.cmo \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_symbol_t.cmo
+Expression_symbol_u_any.cmx : \
+    /keep/sources/ocaml_top/setup/frames/general/basics/Make_test_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_symbol_v.cmx \
+    /keep/sources/ocaml_top/setup/frames/naturalset/naturalset_symbols/Expression_symbol_t.cmx

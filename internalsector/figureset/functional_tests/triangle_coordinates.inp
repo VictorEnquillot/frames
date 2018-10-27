@@ -1,0 +1,39 @@
+# input
+   model =
+     model_name = triangle_u
+     model_title = "the triangle U"
+     database_name = db1
+     entity_what = triangle
+     entity_name = u
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+# output
+   coordinates =
+     coordinates_name = coordinates_u
+     coordinates_units_list = { meter degree }
+     coordinates_what = spherical
+   end # coordinates
+
+   property =	
+     property_name = coordinates_of_triangle_u 
+     property_title = "the coordinates of Triangle U"  
+     property_units_list = { meter radian } 
+     property_file = triangle_u_coordinates.out 
+     property_what = coordinates_u
+     property_model_input = triangle_u
+   end # property
+
+   target = 
+     domain_name = figure
+     target_name = triangle_u_coordinates
+     target_title = "Coordinates for Triangle U"
+     target_property = coordinates_of_triangle_u
+   end # target
+
+# domain
+   domain =
+    domain_name = figure
+    target_list = { triangle_u_coordinates }
+   end # domain

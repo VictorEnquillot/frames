@@ -1,0 +1,12 @@
+(** {6 Storing Sons.} *)
+
+let store_sons sym_cal_l soi_cal_l =
+  let gss_cal_l = List.map 
+      Generatorset_symbol_v.generatorset_symbol_of_calup_symbol
+      sym_cal_l
+  in
+
+  List.iter2 
+    Generatorset_symbol_by_sole_index_provider_v.store
+    soi_cal_l gss_cal_l;
+;;

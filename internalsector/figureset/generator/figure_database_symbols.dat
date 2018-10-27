@@ -1,0 +1,28 @@
+constructors   figure                        =   database_entity 
+
+constructors   database_entity               =   local_database   local_figure   local_measure  
+
+constructors   local_database                =   local_database_db1   local_database_db2
+
+constructors   local_database_db1            =   local_databasedb1_constructor:ofstring
+
+constructors   local_database_db2            =   local_databasedb2_constructor:ofstring
+
+constructors   local_figure                  =   local_figure_db1   local_figure_db2
+
+constructors   local_figure_db1              =   triangle_db1   vector_db1   vertex_db1  
+
+constructors   triangle_db1                  =   triangledb1_constructor:ofstring
+
+constructors   vector_db1                    =   vectordb1_constructor:ofstring
+
+constructors   vertex_db1                    =   vertexdb1_constructor:ofstring
+
+constructors   local_figure_db2              =   triangle_db2   basis_db2   summit_db2  
+
+constructors   triangle_db2                  =   triangledb2_constructor:ofstring
+
+constructors   basis_db2                     =   basisdb2_constructor:ofstring
+
+constructors   summit_db2                    =   summitdb2_constructor:ofstring
+

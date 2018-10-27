@@ -1,0 +1,16 @@
+
+# ..onetied_atom  ( A- )
+constructors   atom_onetied                                      =   atom_onetied_single   atom_onetied_conjugated   atom_onetied_double   atom_onetied_triple
+
+# ...atom_onetied_single
+constructors   atom_onetied_single                               =   z_h_s   z_f_s   z_s_s
+
+# ...atom_onetied_conjugated_ax1en
+constructors   atom_onetied_conjugated_ax1en                     =   z_o_c
+
+# ...atom_onetied_double
+constructors   atom_onetied_double                               =   z_o_d
+
+# ...atom_onetied_triple
+constructors   atom_onetied_triple                               =   z_c_t   z_n_t    z_o_t   z_s_t
+

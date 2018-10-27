@@ -1,0 +1,4 @@
+mv /keep/sources/ocaml_top/setup/frames/figureset/figureset_symbols/files_mli.mk a
+echo "SECTION_T_MLI := \\" > files_section_t_mli.mk
+grep Section a >> files_section_t_mli.mk
+echo "" >> files_section_t_mli.mk

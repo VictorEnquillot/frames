@@ -1,0 +1,7 @@
+# The sub-directories where we run a configure script.
+SUB_DIRECTORIES="db1pointsdata db2geometrydata"
+
+# The directory where we just configure .depend and .depend-rebuild.
+CURRENT_AND_TEST="."
+
+# created by /code/sources/ocaml_top/setup/utilities/do_configure_local_for_any_set.sh > configure_local

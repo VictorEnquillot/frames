@@ -1,0 +1,4 @@
+let select_path_of_head_name nam_ent pat_sym_ent_l =
+  List.filter (fun p -> Entity_symbol_v.string_off (List.hd p) = nam_ent) pat_sym_ent_l
+;;
+

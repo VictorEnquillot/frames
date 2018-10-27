@@ -1,0 +1,23 @@
+let documentation () = 
+  [
+   "Current : VELE:This_envelope_v";
+   "Needs : VELE:Measure_by_elementary_units_tag_provider_v";
+   "Needs : VELE:This_container_v";
+   "Needs : VELE:Buld_envelope_v";
+   "Needs : VELE:Clsur_envelope_v";
+   "Definition : a Measure couples a float and an Elementary_units_symbol";
+   "Definition : a Boundary is a generalization of a Measure, a Color, a Basic type";
+   "Definition : here a Boundary_units is a Measure";
+   "Definition : a Container is a Datastructure of Builder Tags";
+   "Definition : here a Builder is an Elementary_units_tag";
+   "Definition : an Envelope has the same Datastructure as a Container";
+   "Definition : an Envelope is a Datastructure of Closure (here Closure_units)";
+   "Definition : a Closure_units is a list of Boundary_units (i.e. Measure)";
+   "Definition : a Fence is a list leaves of Builder-Tree expressed in Elementary_tag";
+   "Definition : a Deepfence is the flatten list of all Fence of Fence expressed in Elementary_tag";
+   "What-is-it : This_envelope is a Datstr of Closure_units";
+   "How-is-it-done : by recursively expressing its Builder Tags (Container) as a Closure_units Datastructure";
+   "How-is-it-done : using deepfence_as_list Container function";
+   "How-is-it-done : terminal Value (Measure) is got from Database using Measure_by_elementary_units_tag_provider_v";
+ ]
+;;

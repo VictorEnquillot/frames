@@ -1,0 +1,4 @@
+type camlline_for_formula_duo_localset_builder_value =
+  | Let_dss_of_sym_equal_localset_symbol_vdot_localset_symbol_of_eb_symbol_in of string
+  | List_dot_iter2_localset_symbol_by_sole_index_register_vdot_store_soi_ab_l_dss_ab_l_semicolon of string
+;;

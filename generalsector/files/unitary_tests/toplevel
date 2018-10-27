@@ -1,0 +1,8 @@
+ledit -x -h .toplevel-history ocaml \
+-I ../../basics \
+-I ../../datastructures \
+-I ../ \
+unix.cma str.cma \
+../../basics/basics.cma \
+../../datastructures/datastructures.cma \
+../files.cma

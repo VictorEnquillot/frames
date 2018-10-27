@@ -1,0 +1,114 @@
+FILES_MLI :=  \
+     codefile_suffix_t.mli \
+     codefile_suffix_v.mli \
+parameter_symbol_t.mli \
+parameter_symbol_v.mli \
+parameter_value_t.mli \
+parameter_value_v.mli \
+parameter_value_provider_v.mli \
+   key_t.mli \
+   key_v.mli \
+   key_list_t.mli \
+   entity_data_t.mli \
+   entity_data_v.mli \
+   entity_data_provider_v.mli \
+   entity_external_symbol_t.mli \
+   entity_external_symbol_v.mli \
+   entity_symbol_t.mli \
+   entity_symbol_v.mli \
+   entity_symbol_tree_t.mli \
+   entity_symbol_tree_v.mli \
+   constructor_symbol_t.mli \
+   constructor_symbol_v.mli \
+    category_symbol_t.mli \
+    category_symbol_v.mli \
+    entitycategory_t.mli \
+    entitycategory_v.mli \
+scope_t.mli \
+scope_v.mli \
+  scope_provider_v.mli \
+     codefile_symbol_t.mli \
+     codefile_symbol_v.mli \
+     entitycategorycodefile_t.mli \
+     entitycategorycodefile_v.mli \
+     entitycategorysuffix_t.mli \
+     entitycategorysuffix_v.mli \
+     entitycategorycodefile_marker_t.mli \
+     entitycategorycodefile_marker_v.mli \
+     entitycategorycodefile_path_t.mli \
+     entitycategorycodefile_path_v.mli \
+datastructure_entitycategorycodefile_tree_t.mli \
+datastructure_entitycategorycodefile_tree_v.mli \
+  abbreviation_argument_v.mli \
+  abbreviation_module_v.mli \
+  abbreviation_module_by_entity_symbol_provider_v.mli \
+  abbreviation_module_by_entitycategory_provider_v.mli \
+  abbreviation_module_by_entitycategorysuffix_provider_v.mli \
+  abbreviation_moduletype_by_entitycategorycodefile_provider_v.mli \
+  abbreviation_moduletype_by_entitycategorysuffix_provider_v.mli \
+  abbreviation_module_dot_entitycategory_by_entitycategorysuffix_provider_v.mli \
+  abbreviation_module_dot_entitycategory_by_entitycategorycodefile_provider_v.mli \
+  entitycategorytype_dot_entitycategory_by_entitycategory_provider_v.mli \
+  entitycategorytype_dot_entitycategory_by_entitycategorysuffix_provider_v.mli \
+  entitycategorytype_dot_entitycategory_by_entitycategorycodefile_provider_v.mli \
+  abbreviation_argument_by_entity_symbol_provider_v.mli \
+  abbreviation_argument_by_entitycategory_provider_v.mli \
+  abbreviation_argument_by_entitycategorysuffix_provider_v.mli \
+  abbreviation_module_by_entitycategorycodefile_provider_v.mli \
+ codefile_filename_provider_v.mli \
+ target_value_t.mli \
+ target_value_v.mli \
+ target_value_provider_v.mli \
+   constructor_symbol_t.mli \
+   constructor_symbol_v.mli \
+   constructor_symbol_tree_t.mli \
+   constructor_symbol_tree_v.mli \
+   constructor_marker_t.mli \
+   constructor_marker_v.mli \
+   constructor_symbol_tree_provider_v.mli \
+   constructor_marker_tree_t.mli \
+   constructor_marker_tree_v.mli \
+   constructor_marker_tree_provider_v.mli \
+   item_symbol_t.mli \
+   item_symbol_v.mli \
+   key_list_v.mli \
+constructor_path_t.mli \
+constructor_path_v.mli \
+constructor_path_tree_t.mli \
+constructor_path_tree_v.mli \
+constructor_path_tree_provider_v.mli \
+    caml_paragraph_context_t.mli \
+    caml_paragraph_context_v.mli \
+      caml_line_symbol_t.mli \
+      caml_line_symbol_v.mli \
+    caml_paragraph_symbol_t.mli \
+    caml_paragraph_symbol_v.mli \
+    caml_paragraph_symbol_tree_t.mli \
+    caml_paragraph_symbol_tree_v.mli \
+    caml_paragraph_formula_t.mli \
+    caml_paragraph_modules_definitions_datastructure_formula_v.mli \
+    caml_paragraph_marker_t.mli \
+    caml_paragraph_marker_v.mli \
+    caml_paragraph_marker_tree_t.mli \
+    caml_paragraph_marker_tree_v.mli \
+      caml_line_value_t.mli \
+      caml_line_value_v.mli \
+       caml_paragraph_value_t.mli \
+       caml_paragraph_value_v.mli \
+       caml_paragraph_value_tree_t.mli \
+       caml_paragraph_value_tree_v.mli \
+      caml_paragraph_value_provider_v.mli \
+        item_formula_t.mli \
+        item_datastructure_formula_v.mli \
+       item_formula_v.mli \
+         item_value_t.mli \
+         item_value_v.mli \
+         item_value_provider_v.mli \
+     codefile_formula_t.mli \
+     codefile_formula_v.mli \
+     codefile_value_t.mli \
+     codefile_value_v.mli \
+#     entitycategory_n_codefile_suffix_t.mli \
+#     entitycategory_n_codefile_suffix_v.mli \
+#     entity_external_n_codefile_list_provider_v.mli \
+  

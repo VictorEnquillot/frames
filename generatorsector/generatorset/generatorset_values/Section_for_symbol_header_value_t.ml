@@ -1,0 +1,11 @@
+(** {6 Typing} *)
+
+type section_for_symbol_header_value =
+  | Section_for_symbol_header_constant_value of Section_for_symbol_header_constant_value_t.section_for_symbol_header_constant_value
+  | Section_for_symbol_header_son_value of Section_for_symbol_header_son_value_t.section_for_symbol_header_son_value
+  | Section_for_symbol_header_son_top_value of Section_for_symbol_header_son_top_value_t.section_for_symbol_header_son_top_value
+  | Section_for_symbol_header_current_son_top_value of Section_for_symbol_header_current_son_top_value_t.section_for_symbol_header_current_son_top_value
+
+  | Section_for_symbol_header_current_top_value of Section_for_symbol_header_current_top_value_t.section_for_symbol_header_current_top_value
+;;
+

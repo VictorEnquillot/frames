@@ -1,0 +1,68 @@
+let units_block_subtree_list_of_input_lexer_symbol_stack__ sym_lex_s =
+
+(* <units_block> ::                                   *)
+(*                    | <entity_local_variable_identifier_block>  *)
+(*                    | angle "radian"                *)
+(*                    | energy "kilojoule"            *)
+(*                    | length "meter"                *)
+(*                    | temperature "kelvin"          *)
+(*                    | time "second"                 *)
+(*                    end                             *)
+
+  let rec apply acc_tl lex_s =
+    let sym_lex_cur = Stack.pop lex_s in       (* angle | length | ... *)  
+    
+    match sym_lex_cur with
+    | Input_lexer_symbol_t.Input_lexer_basic_symbol
+	(Input_lexer_basic_symbol_t.Input_lexer_basic_word_capitalized _ ) ->
+
+	  let sym_inp_t = 
+	    Input_parser_tools_v.entity_local_variable_identifier_block_subtree_of_input_lexer_symbol
+	      sym_lex_cur  
+	  in
+	  apply (acc_tl @ [sym_inp_t]) lex_s 
+	    
+    | Input_lexer_symbol_t.Input_lexer_keyword_symbol
+	(Input_lexer_keyword_symbol_t.Input_lexer_keyword_unary_symbol
+	   Input_lexer_keyword_unary_symbol_t.Input_lexer_angle) ->
+	     
+	     let str =
+	       Input_parser_tools_v.string_inside_double_quote_of_input_lexer_symbol_stack 
+		 sym_lex_s 
+	     in
+	     let sym_inp = Input_symbol_v.input_units_angle str in
+	     let sym_inp_t = Tree_v.make_of_leaf sym_inp in
+	     apply (acc_tl @ [sym_inp_t]) lex_s
+	       
+    | Input_lexer_symbol_t.Input_lexer_keyword_symbol
+	(Input_lexer_keyword_symbol_t.Input_lexer_keyword_unary_symbol
+	   Input_lexer_keyword_unary_symbol_t.Input_lexer_length) ->
+	     
+	     let str =
+	       Input_parser_tools_v.string_inside_double_quote_of_input_lexer_symbol_stack 
+		 sym_lex_s 
+	     in
+	     let sym_inp = Input_symbol_v.input_units_length str in
+	     let sym_inp_t = Tree_v.make_of_leaf sym_inp in
+	     apply (acc_tl @ [sym_inp_t]) lex_s
+	       
+    | Input_lexer_symbol_t.Input_lexer_keyword_symbol
+	(Input_lexer_keyword_symbol_t.Input_lexer_keyword_constant_symbol
+	   Input_lexer_keyword_constant_symbol_t.Input_lexer_end) ->
+             
+	     let sym_inp = Input_symbol_v.input_fence_keyword_end in
+             let sym_inp_t = Tree_v.make_of_leaf sym_inp in
+	     acc_tl @ [sym_inp_t]
+	       
+    | _ ->
+	let nam_mod = Management_v.current_module_name (documentation ()) in 
+	let nam_fun = "units_block_subtree_list_of_input_lexer_symbol_stack" in
+	Error_messages_v.print_syntax_error nam_mod nam_fun
+	  "Lexeme \"angle\" | \"length\" | \"energy\" ... after keyword >units<"
+	  (Format.sprintf "Lexeme >%s<" (Input_lexer_symbol_v.fullname sym_lex_cur))
+	  "Check input file"
+  in
+  
+  apply [] sym_lex_s 
+
+;;

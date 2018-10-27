@@ -1,0 +1,429 @@
+(** {3 The functionalities for a Mark for a Block_onetied.} *)
+
+let nam_cod = "block_onetied_mark_v.ml";;
+
+
+(** {6 Aliasing} *)
+
+
+
+(** {6 Naming} *)
+
+
+let name mark_bl1 =
+  Mark_v.name Block_onetied_symbol_v.name mark_bl1
+;;
+
+
+(** {6 Upgrading} *)
+
+
+let block_onetied_mark_of_block_onetied_onetied_mark mark_b11 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_onetied_onetied_symbol mark_b11
+;;
+
+let block_onetied_mark_of_block_single_single_mark mark_bss = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_single_symbol mark_bss
+;;
+
+let block_onetied_mark_of_block_single_single_ax2_mark mark_ssa = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_single_ax2_symbol mark_ssa
+;;
+
+let block_onetied_mark_of_block_single_single_ax2e0_bent_mark mark_sab = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_single_ax2e0_bent_symbol mark_sab
+;;
+
+let block_onetied_mark_of_block_single_single_ax2e2_bent_mark mark_sab = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_single_ax2e2_bent_symbol mark_sab
+;;
+
+let block_onetied_mark_of_block_single_single_ax2e3_linear_mark mark_sal = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_single_ax2e3_linear_symbol mark_sal
+;;
+
+let block_onetied_mark_of_block_single_single_ax3_mark mark_ssa = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_single_ax3_symbol mark_ssa
+;;
+
+let block_onetied_mark_of_block_single_single_ax3e0_trigonalplanar_mark mark_sat = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_single_ax3e0_trigonalplanar_symbol mark_sat
+;;
+
+let block_onetied_mark_of_block_single_single_ax3e1_trigonalpyramidal_mark mark_sat = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_single_ax3e1_trigonalpyramidal_symbol mark_sat
+;;
+
+let block_onetied_mark_of_block_single_single_ax3e2_tshaped_mark mark_sat = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_single_ax3e2_tshaped_symbol mark_sat
+;;
+
+let block_onetied_mark_of_block_single_single_ax4_mark mark_ssa = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_single_ax4_symbol mark_ssa
+;;
+
+let block_onetied_mark_of_block_single_single_ax4e0_tetrahedral_mark mark_sat = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_single_ax4e0_tetrahedral_symbol mark_sat
+;;
+
+let block_onetied_mark_of_block_single_single_ax4e1_seesaw_mark mark_sas = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_single_ax4e1_seesaw_symbol mark_sas
+;;
+
+let block_onetied_mark_of_block_single_conjugated_mark mark_bsc = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_conjugated_symbol mark_bsc
+;;
+
+let block_onetied_mark_of_block_single_conjugated_ax3e0_trigonalplanar_mark mark_cat = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_conjugated_ax3e0_trigonalplanar_symbol mark_cat
+;;
+
+let block_onetied_mark_of_block_single_double_mark mark_bsd = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_double_symbol mark_bsd
+;;
+
+let block_onetied_mark_of_block_single_double_ax3_mark mark_sda = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_double_ax3_symbol mark_sda
+;;
+
+let block_onetied_mark_of_block_single_double_ax3e0_trigonalplanar_mark mark_dat = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_double_ax3e0_trigonalplanar_symbol mark_dat
+;;
+
+let block_onetied_mark_of_block_single_triple_mark mark_bst = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_triple_symbol mark_bst
+;;
+
+let block_onetied_mark_of_block_single_triple_ax2_mark mark_sta = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_triple_ax2_symbol mark_sta
+;;
+
+let block_onetied_mark_of_block_single_triple_ax2e0_linear_mark mark_tal = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_triple_ax2e0_linear_symbol mark_tal
+;;
+
+let block_onetied_mark_of_block_onetied_forktied_mark mark_b1f = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_onetied_forktied_symbol mark_b1f
+;;
+
+let block_onetied_mark_of_block_onetied_biforktied_mark mark_b1b = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_onetied_biforktied_symbol mark_b1b
+;;
+
+let block_onetied_mark_of_block_single_singlesingle_mark mark_bss = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_singlesingle_symbol mark_bss
+;;
+
+let block_onetied_mark_of_block_single_singlesingle_ax3_mark mark_ssa = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_singlesingle_ax3_symbol mark_ssa
+;;
+
+let block_onetied_mark_of_block_single_singlesingle_ax3e1_trigonalpyramidal_mark mark_sat = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_singlesingle_ax3e1_trigonalpyramidal_symbol mark_sat
+;;
+
+let block_onetied_mark_of_block_single_singledouble_mark mark_bss = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_singledouble_symbol mark_bss
+;;
+
+let block_onetied_mark_of_block_single_singledouble_ax3e0_trigonalplanar_mark mark_sat = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_singledouble_ax3e0_trigonalplanar_symbol mark_sat
+;;
+
+let block_onetied_mark_of_block_onetied_triforktied_mark mark_b1t = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_onetied_triforktied_symbol mark_b1t
+;;
+
+let block_onetied_mark_of_block_single_singlesinglesingle_mark mark_bss = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_singlesinglesingle_symbol mark_bss
+;;
+
+let block_onetied_mark_of_block_single_singlesinglesingle_ax4_mark mark_ssa = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_singlesinglesingle_ax4_symbol mark_ssa
+;;
+
+let block_onetied_mark_of_block_single_singlesinglesingle_ax4e1_tetrahedral_mark mark_sat = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_symbol_of_block_single_singlesinglesingle_ax4e1_tetrahedral_symbol mark_sat
+;;
+
+
+(** {6 Abbreviating} *)
+
+
+
+(** {6 Making} *)
+
+
+let make sym_bl1 soi_bl1 =
+  Mark_v.make sym_bl1 soi_bl1
+;;
+
+
+(** {6 Extracting} *)
+
+
+let block_onetied_onetied_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_onetied_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_single_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_single_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_single_ax2_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_single_ax2_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_single_ax2e0_bent_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_single_ax2e0_bent_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_single_ax2e2_bent_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_single_ax2e2_bent_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_single_ax2e3_linear_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_single_ax2e3_linear_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_single_ax3_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_single_ax3_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_single_ax3e0_trigonalplanar_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_single_ax3e0_trigonalplanar_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_single_ax3e1_trigonalpyramidal_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_single_ax3e1_trigonalpyramidal_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_single_ax3e2_tshaped_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_single_ax3e2_tshaped_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_single_ax4_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_single_ax4_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_single_ax4e0_tetrahedral_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_single_ax4e0_tetrahedral_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_single_ax4e1_seesaw_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_single_ax4e1_seesaw_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_conjugated_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_conjugated_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_conjugated_ax3e0_trigonalplanar_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_conjugated_ax3e0_trigonalplanar_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_double_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_double_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_double_ax3_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_double_ax3_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_double_ax3e0_trigonalplanar_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_double_ax3e0_trigonalplanar_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_triple_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_triple_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_triple_ax2_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_triple_ax2_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_triple_ax2e0_linear_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_triple_ax2e0_linear_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_onetied_forktied_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_forktied_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_onetied_biforktied_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_biforktied_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_singlesingle_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_singlesingle_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_singlesingle_ax3_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_singlesingle_ax3_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_singlesingle_ax3e1_trigonalpyramidal_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_singlesingle_ax3e1_trigonalpyramidal_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_singledouble_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_singledouble_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_singledouble_ax3e0_trigonalplanar_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_singledouble_ax3e0_trigonalplanar_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_onetied_triforktied_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_onetied_triforktied_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_singlesinglesingle_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_singlesinglesingle_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_singlesinglesingle_ax4_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_singlesinglesingle_ax4_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let block_single_singlesinglesingle_ax4e1_tetrahedral_mark_off_block_onetied_mark mark_bl1 = 
+  Mark_v.map_left Block_onetied_symbol_v.block_single_singlesinglesingle_ax4e1_tetrahedral_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+
+(** {6 Querying} *)
+
+
+let is_block_onetied_onetied_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_onetied_onetied_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_single_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_single_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_single_ax2_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_single_ax2_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_single_ax2e0_bent_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_single_ax2e0_bent_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_single_ax2e2_bent_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_single_ax2e2_bent_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_single_ax2e3_linear_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_single_ax2e3_linear_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_single_ax3_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_single_ax3_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_single_ax3e0_trigonalplanar_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_single_ax3e0_trigonalplanar_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_single_ax3e1_trigonalpyramidal_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_single_ax3e1_trigonalpyramidal_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_single_ax3e2_tshaped_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_single_ax3e2_tshaped_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_single_ax4_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_single_ax4_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_single_ax4e0_tetrahedral_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_single_ax4e0_tetrahedral_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_single_ax4e1_seesaw_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_single_ax4e1_seesaw_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_conjugated_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_conjugated_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_conjugated_ax3e0_trigonalplanar_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_conjugated_ax3e0_trigonalplanar_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_double_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_double_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_double_ax3_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_double_ax3_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_double_ax3e0_trigonalplanar_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_double_ax3e0_trigonalplanar_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_triple_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_triple_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_triple_ax2_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_triple_ax2_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_triple_ax2e0_linear_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_triple_ax2e0_linear_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_onetied_forktied_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_onetied_forktied_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_onetied_biforktied_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_onetied_biforktied_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_singlesingle_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_singlesingle_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_singlesingle_ax3_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_singlesingle_ax3_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_singlesingle_ax3e1_trigonalpyramidal_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_singlesingle_ax3e1_trigonalpyramidal_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_singledouble_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_singledouble_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_singledouble_ax3e0_trigonalplanar_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_singledouble_ax3e0_trigonalplanar_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_onetied_triforktied_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_onetied_triforktied_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_singlesinglesingle_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_singlesinglesingle_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_singlesinglesingle_ax4_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_singlesinglesingle_ax4_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+let is_block_single_singlesinglesingle_ax4e1_tetrahedral_mark_off_block_onetied_mark mark_bl1 =
+  Mark_v.map_left Block_onetied_symbol_v.is_block_single_singlesinglesingle_ax4e1_tetrahedral_symbol_off_block_onetied_symbol mark_bl1
+;;
+
+
+(** created by ./generator block_onetied implementation mark at 15:11 13 Mar 2012. *)
+
+
+

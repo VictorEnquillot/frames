@@ -1,0 +1,10 @@
+     builders parameter_set_body_tuple_aopef_constructor:ofstring = datastructure entity;
+     builders parameter_set_body_tuple_ecppef_constructor:ofstring = datastructure entity
+     builders parameter_context_database_constructor:ofstring = datastructure entity;
+     builders parameter_context_databox_constructor:ofstring = datastructure entity;
+     builders parameter_context_domain_constructor:ofstring = datastructure entity;
+     builders parameter_context_sector_constructor:ofstring = datastructure entity;
+     builders parameter_set_fence_aopef_coefficient_constructor:ofstring = datastructure entity;
+     builders parameter_set_fence_aopef_exponent_constructor:ofstring = datastructure entity;
+     builders parameter_set_fence_ecppef_coefficient_constructor:ofstring = datastructure entity;
+     builders parameter_set_fence_ecppef_exponent_constructor:ofstring = datastructure entity;

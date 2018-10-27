@@ -1,0 +1,216 @@
+define Run 
+       as word "triangle_t_properties"
+       end
+
+set title "input for Run : " Run 
+       end
+
+set debug all end
+set trace for provider end
+set cpu for provider except "Figure_tag_all_by" end
+
+define help 
+       end -- define
+
+define Tr 
+       as entity 
+       	    triangle_isosceles_equilateral 
+	    named "T"
+            in figure 
+            from database "db1"
+            end -- entity
+       end -- define
+
+define P_a 
+       as entity 
+             point 
+	     named "A"  
+             in figure
+             from database "db1"
+             end -- entity
+       end -- define Point
+
+define R 
+       as float 2.5
+       end 
+   
+define H_a 
+       as entity 
+             homothety 
+               in property 
+	       of figure
+       	       with  
+	         center P_a 
+       	         ratio R
+               end -- homothety
+             end -- entity
+       end -- define
+
+define H_b 
+       as substitute 
+             P_a 
+	     for P_b 
+             in H_a 
+             end -- substitute
+       end -- define
+
+define Tha 
+       as apply 
+            H_a on Tr
+	  end -- apply
+       end -- define
+
+define S 
+       as entity 
+             surface 
+             in property 
+	     of figure
+	  end -- entity
+       end -- define
+       
+define S_t 
+       as apply 
+            S on Tr
+            with units_length meter   
+           end
+       end
+
+define F_name 
+       as string Run ".inp"
+       end
+
+define F 
+       as entity 
+            file 
+	    named F_name
+          end -- entity
+       end -- define
+
+print S_t 
+      end -- print
+
+write S_t 
+      to F
+      end
+
+define Phi
+       as entity 
+             coordinate_spherical 
+	     named "phi"
+             in property 
+	     of figure
+	  end -- entity
+       end -- define
+
+define Phi_a 
+       as apply 
+            Phi on P_a
+            with units_length meter
+            with units_angle degree
+           end -- apply
+       end -- define
+
+print statistics
+      end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+define model triangle_t =
+     type = input_entity_model  			      
+     title = "a triangle equilateral"
+     entity = triangle_t
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+
+# 2nd Model
+   model =
+     model_name = center_a
+     model_title = "a point for an homothety"
+     database_name = db1
+     entity_what = point
+     entity_name = a
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+# 3rd Model
+   model =
+     model_name = vector_bc
+     model_title = "a vector for a translation"
+     database_name = db1
+     entity_what = vector
+     entity_name = bc
+     coordinate_units_list = { meter }
+     coordinate_what = cartesian
+   end # model
+
+   property =	
+     property_name = homothety_t_a_2 
+     property_title = "an homothety of Center A and ratio 2. applied to T"  
+     property_units_list = { meter radian } 
+     property_file = triangle_equilateral_homothety.out 
+     property_what = homothety_a_2
+     property_entity_output = Th
+     property_model_input = triangle_equilateral_t
+   end # property
+
+   property =
+     property_name = translation_t_bc
+     property_title = "a translation of Vector BC applied to T"  
+     property_units_list = { meter } 
+     property_entity_output = Tbc
+     property_model_input = triangle_equilateral_t
+     property_file = triangle_equilateral_translation.out 
+     property_what = translation_bc
+   end # property
+
+# Operator is independant of what it is applied to.
+
+   homothety =
+     homothety_name = homothety_a_2
+     homothety_center = center_a
+     homothety_ratio = 2. 
+   end # homothety
+
+   translation =
+     translation_name = translation_bc
+     translation_vector = vector_bc
+   end # translation
+
+# 1st target
+   target = 
+     domain_name = figure
+     target_name = triangle_equilateral_homothety
+     target_title = "triangle equilateral homothety"
+     target_property = homothety_t_a_2
+   end # target
+
+# 2st target
+   target = 
+     domain_name = figure
+     target_name = triangle_equilateral_translation
+     target_title = "triangle equilateral translation" 
+     target_property = translation_t_bc
+   end # target
+
+# domain
+   domain =
+    domain_name = figure
+    target_list = { triangle_equilateral_homothety triangle_equilateral_translation }
+   end # domain

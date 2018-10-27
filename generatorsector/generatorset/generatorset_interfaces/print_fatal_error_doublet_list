@@ -1,0 +1,11 @@
+      Error_messages_v.print_fatal_error nam_cod "build"
+
+	(Format.sprintf "Entity name >%s< exists at Right of Doublet_list" nam_ent)
+
+	(Format.sprintf "Doublet_list is:@.      %s" 
+	   (Doublet_list_v.name_with_separator Utils_v.identity Utils_v.identity ";\n "
+	   filtered_dol)
+	)
+
+	"Check"
+

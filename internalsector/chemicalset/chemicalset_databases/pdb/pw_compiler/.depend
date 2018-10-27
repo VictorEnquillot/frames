@@ -1,0 +1,20 @@
+pdb_type_specs.cmo: pdb_type_specs.cmi 
+pdb_type_specs.cmx: pdb_type_specs.cmi 
+mode_flags.cmo: mode_flags.cmi 
+mode_flags.cmx: mode_flags.cmi 
+pdb_parse_spec.cmo: pdb_type_specs.cmi mode_flags.cmi 
+pdb_parse_spec.cmx: pdb_type_specs.cmx mode_flags.cmx 
+pdb_print_spec.cmo: pdb_type_specs.cmi 
+pdb_print_spec.cmx: pdb_type_specs.cmx 
+main.cmo: pdb_print_spec.cmo pdb_parse_spec.cmo mode_flags.cmi 
+main.cmx: pdb_print_spec.cmx pdb_parse_spec.cmx mode_flags.cmx 
+pdb_type_specs.cmo: pdb_type_specs.cmi 
+pdb_type_specs.cmx: pdb_type_specs.cmi 
+mode_flags.cmo: mode_flags.cmi 
+mode_flags.cmx: mode_flags.cmi 
+pdb_parse_spec.cmo: pdb_type_specs.cmi mode_flags.cmi 
+pdb_parse_spec.cmx: pdb_type_specs.cmx mode_flags.cmx 
+pdb_print_spec.cmo: pdb_type_specs.cmi 
+pdb_print_spec.cmx: pdb_type_specs.cmx 
+main.cmo: pdb_print_spec.cmo pdb_parse_spec.cmo mode_flags.cmi 
+main.cmx: pdb_print_spec.cmx pdb_parse_spec.cmx mode_flags.cmx 

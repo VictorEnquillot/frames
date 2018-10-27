@@ -1,0 +1,2 @@
+
+type group_for_symbol_body_son_tag = Group_for_symbol_body_son_symbol_t.group_for_symbol_body_son_symbol Tag_t.tag;;

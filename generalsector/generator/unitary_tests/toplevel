@@ -1,0 +1,9 @@
+ledit -x -h .ocaml-history ocaml \
+-I ../../general/basics \
+-I ../../general/tools \
+-I ../ \
+-I ./ \
+unix.cma \
+../../general/basics/basics.cma \
+../../general/tools/tools.cma \
+../generator.cma

@@ -1,0 +1,10 @@
+  if not (Entity_symbol_v.is_entity_proper sym_ent)
+  then
+    Error_messages_v.print_fatal_error nam_cod "build"
+      (Format.sprintf "node >%s< were an Entity_proper" 
+	 (Entity_symbol_v.string_off sym_ent)
+      )
+      "it is NOT"
+      "Check"
+  else
+    begin

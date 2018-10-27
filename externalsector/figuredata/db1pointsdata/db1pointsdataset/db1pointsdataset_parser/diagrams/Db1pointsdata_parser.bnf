@@ -1,0 +1,81 @@
+# [http://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_Form Wikipedia]
+#
+#  a Block ends with an end.
+#  a Cell does not ends with
+#
+#  a variable_name is always substituable by the variable_kind_block it defines.
+#  an entity belongs to any external domain (figure, chemical, elementary ...).
+#  a property belongs to the property domain (operator, target)
+#
+# les mots clés et symboles terminaux ainsi.
+#
+# Dans les règles lexicales les trois points ..., situés entre deux caractères a et b,
+#                 indiquent l'ensemble des caractères entre a et b dans l'ordre du code ASCII.
+#
+# http://www.enseignement.polytechnique.fr/informatique/ARCHIVES/IF/poly/main004.html
+#
+# Principles of Compiler Design by Aho and Ullman
+# /keep/documents/TEXT/COMPILATION/Compilers_Principles_Techniques_and_Tools_by_Aho_Lam_Sethi_Ullman.djvu
+# http://caml.inria.fr/pub/docs/manual-ocaml/lex.html
+# http://www.enseignement.polytechnique.fr/informatique/ARCHIVES/IF/poly/main004.html
+#
+# Les Tokens sont des abstractions lexicales obtenues
+#     par application d'Expressions Regulières sur les Lexèmes
+#
+#  les keywords terminaux sont représentés tel-quels (Token == Lexeme).
+#  > < encadrent les pre-terminaux (Tokens)
+#  < > encadrent les non-terminaux. <non-terminal> ::= production
+#
+#  " " encadrent les symboles terminaux d’un seul caractère.
+#  ( ) servent au groupement.
+#  |   signifie l'alternative.
+#  [ ] indiquent une partie optionnelle.
+#  { } indiquent une partie qui peut être répétée un nombre quelconque de fois.
+#      tandis qu'un symbole + en exposant des accolades indique une partie répétée au moins une fois.
+#
+# ------------------------------------------------------------------------------
+
+ <databox_name>                       ::= <cluster_information> <cluster_vertex> 
+
+ <cluster_information>                ::= <bundle_coordinates> <bundle_figure> 
+
+
+ <bundle_coordinates>                 ::= <cell_coordinates_units_length> eol
+                                         [<cell_coordinates_units_angle> eol] 
+                                          <cell_coordinates_kind> eol
+
+
+ <bundle_figure>                      ::= <cell_figure_kind> eol
+					   <cell_figure_name> eol
+                                           
+
+ <cell_coordinates_units_angle>       ::= coordinates_units_angle >units_angle<
+
+ <cell_coordinates_units_length>      ::= coordinates_units_length >units_length<
+                                      
+ <cell_coordinates_kind>              ::= coordinates_kind  >coordinates_kind_name<
+
+ <cell_figure_kind>                   ::= figure_kind >figure_kind< 
+
+ <cell_figure_name>                   ::= figure_name >figure_name< 
+
+ <cluster_vertex>                     ::= { <record_vertex> }
+
+ <record_vertex>                      ::= vertex >vertex_name< <float_sequence>
+
+ <float_sequence>                     ::= float eol| float float eol| float float float eol
+
+# Tokens defined by regular expressions Definitions
+
+ >figure_kind<                        ::= triangle | segment | point
+
+ >vertex_name<                        ::= >figure_name< underscore word_uppercase
+
+ >figure_name<                        ::= word_uppercase                    
+
+ >coordinates_kind_name<              ::= cartesian | cylindrical | polar | spherical 
+
+ >units_angle<                        ::= degree | radian
+
+ >units_length<                       ::= angstrom | bohr | meter
+
