@@ -5,17 +5,16 @@
 #  ii. test using Code_makefile.mk
 # iii. test using Test_makefile.mk
 
-ifndef SUP
-$(error variable "SUP" is not defined. Check this file "Mk/Makefile")
+ifndef FRA
+$(error variable "FRA" is not defined. Check this file "Mk/Makefile")
 endif
 
 # Define the Mk directory from local path.
-ifndef SUP
-$(error variable "SUP" is not defined. Check this file "Mk/Makefile")
+ifndef FRA
+$(error variable "FRA" is not defined. Check this file "Mk/Makefile")
 endif
 
-SETUP_DIR :=$(SUP)
-MAKEFILES_DIR := $(SETUP_DIR)/Mk
+MAKEFILES_DIR := $(FRA)/Mk
 
 # Define variables depending on local directory.
 FULL_CODE_DIR := $(realpath .)

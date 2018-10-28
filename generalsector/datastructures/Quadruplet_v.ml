@@ -138,9 +138,9 @@ let name_capitalized nam_l namml nammr nam_r tet =
   let mir = middle_right_off_quadruplet tet in
   let rig = right_off_quadruplet tet in
   Format.sprintf "(%s, %s, %s, %s)"
-  (String.capitalize (nam_l lef))
-  (String.capitalize (namml mil))
-  (String.capitalize (nammr mir))
-  (String.capitalize (nam_r rig))
+  (String.capitalize_ascii (nam_l lef))
+  (String.capitalize_ascii (namml mil))
+  (String.capitalize_ascii (nammr mir))
+  (String.capitalize_ascii (nam_r rig))
 ;;
 

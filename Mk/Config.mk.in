@@ -1,0 +1,107 @@
+######################################################################
+#                                                                    #
+#                             Caml                                   #
+#                                                                    #
+#          Pierre Weis, projet Cristal, INRIA Rocquencourt           #
+#                                                                    #
+#  Copyright 1997-2005,                                              #
+#  Institut National de Recherche en Informatique et en Automatique. #
+#  All rights reserved. This file is distributed under the terms of  #
+#  the Q Public License.                                             #
+#                                                                    #
+######################################################################
+
+# Revised by FCC 21st jan 2009 : $(CODE_INCLUDED_I_DIRS)
+# Revised by FCC 3rd  mar 2012 : introduced "_" in Eenvironment variables
+
+# This Makefile is a generic configuration Makefile for Caml applications.
+# This Makefile independent of the software to be built and
+# defines basic Unix commands and tools for Caml compilation.
+
+# This Makefile should be included at the beginning of the Makefile that handles
+# a set of Caml files (to build a library or an application).
+# Simply write at the beginning of your Makefile:
+# include path_to_Config.mk/Config.mk
+
+PACKAGE=FRAMES_WORK
+CAMLPACKAGE=FRAMES_WORK
+
+# Where are the source files of the project on the development machine ?
+# This directory is set up using the configure script.
+SRC_ROOTDIR=`pwd`/../SOURCE/$(PACKAGE)
+
+# Basic auxilliary commands
+CPCONFIG=-pRf
+CP=cp $(CPCONFIG)
+RM=rm -f
+MV=mv -f
+TOUCH=touch
+CHMOD=chmod -R ug+w
+SHELL=/bin/sh
+MKDIR=mkdir -p
+LN=ln -sf
+
+# The Caml compilers default configurations.
+CODE_INCLUDED_I_DIRS=
+CAMLBYT_INCLUDES=$(CODE_INCLUDED_I_DIRS)
+CAMLBIN_INCLUDES=$(CODE_INCLUDED_I_DIRS)
+CAMLBYT_CONFIG=-warn-error A -annot -g $(CAMLBYT_INCLUDES)
+CAMLBIN_CONFIG=-warn-error A $(CAMLBIN_INCLUDES)
+CAMLBYT_LIBRCONFIG=$(CAMLBYT_INCLUDES) -a
+CAMLBIN_LIBRCONFIG=$(CAMLBIN_INCLUDES) -a
+CAMLYAC_CONFIG=-v
+CAMLLEX_CONFIG=
+
+# The Caml compilers and auxilliaries commands.
+CAMLBYT=ocamlc $(CAMLBYT_CONFIG)
+CAMLBIN=ocamlopt $(CAMLBIN_CONFIG)
+CAMLYAC=ocamlyacc $(CAMLYAC_CONFIG)
+CAMLLEX=ocamllex $(CAMLLEX_CONFIG)
+CAMLBYT_LIBR=ocamlc $(CAMLBYT_LIBRCONFIG)
+CAMLBIN_LIBR=ocamlopt $(CAMLBIN_LIBRCONFIG)
+
+# Tools: dependancies generation.
+CAMLDEP = ocamldep $(CODE_INCLUDED_I_DIRS)
+
+CAMLDOC = ocamldoc
+CAMLDOC_HTMFLAGS = -html $(CAMLDOC_FLAGS) -d $(DOCHTMDIR)
+CAMLDOC_TEXFLAGS = -latex $(CAMLDOC_FLAGS) -o $(DOCTEXDIR)/$(CAMLPACKAGE).tex
+CAMLHTMDOC = $(CAMLDOC) $(CODE_INCLUDED_I_DIRS) $(CAMLDOC_HTMFLAGS)
+CAMLTEXDOC = $(CAMLDOC) $(CODE_INCLUDED_I_DIRS) $(CAMLDOC_TEXFLAGS)
+CAMLDOC_SUBDIR = doc_src
+
+# Tools: the moca program generator
+MOCACCONFIG =
+MOCAC = mocac $(MOCACCONFIG)
+
+# Tools: defining some macros for linking.
+WITHBYT_UNIX=unix.cma -cclib -lunix
+WITHBYT_STR=str.cma -cclib -lstr
+WITHBYT_GRAPHICS=graphics.cma -cclib -lgraphics
+
+WITHBIN_UNIX=$(WITHBYT_UNIX:.cma=.cmxa)
+WITHBIN_STR=$(WITHBYT_STR:.cma=.cmxa)
+WITHBIN_GRAPHICS=$(WITHBYT_GRAPHICS:.cma=.cmxa)
+
+# Tools: documentation generation.
+CAMLDOC=ocamldoc
+CAMLDOC_HTMLFLAGS=-html -d doc -v -colorize-code
+CAMLDOC_LATEXFLAGS=-latex -d doc -v
+
+# Tools: Htmlc file generator.
+# Configuration of Htmlc to generate Web pages:
+# where are include files
+HTMLC_CONF_INCLUDES=-I $(SRC_ROOTDIR)/Data/Includes
+# where is the configuration file for Htmlc.
+HTMLC_CONF_ENV=-env $(SRC_ROOTDIR)/Data/config.ml
+
+HTMLC_CONF_CONFIG=-lang en $(HTMLC_CONF_ENV)
+
+# Additional flags to set in Makefiles
+HTMLC_FLAGS=-I Includes
+HTMLC_CONF_FLAGS=
+
+# Basic compilation tools
+HTMLC_CONF=$(HTMLC_CONF_CONFIG) $(HTMLC_CONF_INCLUDES) $(HTMLC_CONF_FLAGS)
+
+HTMLC=htmlc $(HTMLC_CONF) $(HTMLC_FLAGS)

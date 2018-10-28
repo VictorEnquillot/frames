@@ -161,7 +161,7 @@ let value_of_key_off_trail key tra =
 	try 
 	  Doublet_list_v.filter_if_left (fun l -> l = key) tra 
 	with
-	  Failure "Not_found:Doublet_list_v.filter_if_left" ->
+	  Failure s ->
 	    Error_messages_v.print_fatal_error nam_mod "value_of_key_off_trail"
 	      (Format.sprintf "key >%s< does exist in trail" key)
 	      (Format.sprintf "trail is:@.   %s" (name tra))

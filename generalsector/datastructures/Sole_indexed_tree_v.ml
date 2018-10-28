@@ -28,7 +28,7 @@ let node_of_sole_index_of_tree sid tre =
   let nni_l = Tree_v.node_filter_of_node_predicate_off_tree (fun (n, i) -> i = sid) nni_t in
   let nni = 
     try List_v.element_off_one_element_list nni_l
-    with Failure "Only_one_element:List_v.element_off_one_element_list" ->
+    with Failure s -> 
       Error_messages_v.print_fatal_error nam_mod
 	"node_of_sole_index_of_tree"
 	"Inner is unique" "Inner is not unique" "check"

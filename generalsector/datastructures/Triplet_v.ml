@@ -149,6 +149,6 @@ let name nam_l nam_m nam_r tri =
 
 let name_capitalized nam_l nam_m nam_r tri =
   Format.sprintf "(%s)" 
-    (String.capitalize (name_bare nam_l nam_m nam_r tri))
+    (String.capitalize_ascii (name_bare nam_l nam_m nam_r tri))
 ;;
 

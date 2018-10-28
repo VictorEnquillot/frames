@@ -1,0 +1,15 @@
+*.cm[aiox]
+*.[oa]
+*.byt
+*.bin
+*.modules
+*.dif
+.depend
+.depend-rebuild
+.gitignore
+_darcs
+*.cvs
+.cvsignore
+*~
+[a-z]
+[A-Z]

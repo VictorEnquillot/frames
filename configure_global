@@ -1,0 +1,64 @@
+# common features 
+# set -x 
+
+initialize_by_copy () {
+  rm -f .depend
+  touch .depend
+  sleep 1
+  cp -f ${FRA}/Makefile Makefile 
+  cp -p ${FRA}/configure configure
+#  cp -pf ${FRA}/.gitignore ./.gitignore
+}
+
+initialize_rebuild () {
+  touch ./.depend-rebuild
+  sleep 1
+}
+
+for i in $CURRENT_AND_TEST
+do
+    if [ -d $i ]
+    then
+	(cd $i; initialize_by_copy)
+	echo "initialize_by_copy done for >$i<"
+    else
+        echo "";	
+	echo "in >$PWD< sub-directory >$i< does NOT exist. Check";
+        echo "";	
+        echo "";	
+	exit
+    fi
+done
+
+for i in $SUB_DIRECTORIES
+do
+    echo "Running configure_global in >$PWD/$i<"
+    x=`directory_empty $i`
+    if [ $x = "Y" ]
+    then
+	echo "directory >$PWD/$i< is empty."
+    else
+	if [ -f $i/configure_local ]
+	then
+	    (cd $i; initialize_by_copy ; ./configure)
+	else
+	    echo "";	
+	    echo "in $PWD NO >$i/configure_local< file."
+	    echo "";	
+	fi
+    fi
+done
+
+for i in $CURRENT_AND_TEST
+do
+    if [ -d $i ]
+    then
+	(cd $i; initialize_rebuild)
+    else
+	echo "";	
+	echo "in >$PWD< sub-directory >$i< does NOT exist. Check"
+	echo "";	
+        echo "";	
+	exit
+    fi
+done

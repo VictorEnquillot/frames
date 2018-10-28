@@ -1,0 +1,8 @@
+# g9xdata directories
+
+G9XDATASET_LEXER_DIR := $(G9XDATASET_DIR)/g9xdataset_lexer
+G9XDATASET_SYMBOLS_DIR := $(G9XDATASET_DIR)/g9xdataset_symbols
+G9XDATASET_TAGS_DIR := $(G9XDATASET_DIR)/g9xdataset_tags
+G9XDATASET_PARSER_DIR := $(G9XDATASET_DIR)/g9xdataset_parser
+G9XDATASET_BUILDER_TREES_DIR := $(G9XDATASET_DIR)/g9xdataset_builder_trees
+

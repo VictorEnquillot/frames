@@ -1,0 +1,24 @@
+#######################################################################
+#                                                                     #
+#                                 MK                                  #
+#                                                                     #
+#                          Generic makefiles                          #
+#                                                                     #
+#             projets Estime & Cristal, INRIA-Rocquencourt            #
+#                                                                     #
+#  Copyright 2005-2007 INRIA.                                         #
+#  Institut National de Recherche en Informatique et en Automatique.  #
+#  All rights reserved. This file is distributed only by permission.  #
+#                                                                     #
+#  Francois Clement <Francois.Clement@inria.fr>                       #
+#  Pierre Weis <Pierre.Weis@inria.fr>                                 #
+#                                                                     #
+#######################################################################
+
+# $Id: Makefile_user,v 1.1 2007-05-09 17:53:45 weis Exp $
+
+MAKEFILESDIR = top
+
+include $(MAKEFILESDIR)/user/Subdirs.mk
+
+SUBDIRS = top

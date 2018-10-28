@@ -152,9 +152,9 @@ let name_capitalized nam qui =
   let mir = middle_right_off_quintet qui in
   let rig = right_off_quintet qui in
   Format.sprintf "(%s, %s, %s, %s, %s)"
-  (String.capitalize (nam lef))
-  (String.capitalize (nam mil))
-  (String.capitalize (nam mid))
-  (String.capitalize (nam mir))
-  (String.capitalize (nam rig))
+  (String.capitalize_ascii (nam lef))
+  (String.capitalize_ascii (nam mil))
+  (String.capitalize_ascii (nam mid))
+  (String.capitalize_ascii (nam mir))
+  (String.capitalize_ascii (nam rig))
 ;;

@@ -72,8 +72,7 @@ let current_index_off_sole_index soi =
 
 let father_sole_index_off_sole_index soi =
   try List.tl soi
-  with Failure "tl" ->
-    failwith "List_too_short:List_v.father_sole_index_off_sole_index"
+  with Failure s -> failwith s
 ;;
 
 let father_index_off_sole_index soi =
@@ -83,8 +82,7 @@ let father_index_off_sole_index soi =
 
 let grandfather_sole_index_off_sole_index soi =
   try List.tl (List.tl soi)
-  with Failure "tl" ->
-    failwith "List_too_short:List_v.grandfather_sole_index_off_sole_index"
+  with Failure s -> failwith s
 ;;
 
 let son_sole_index_list_of_length_of_sole_index len soi =
@@ -130,8 +128,7 @@ let rec sole_index_tree_off_sole_index_list_of_sole_index soi_l soi =
 
 let head_index soi =
   try List.hd soi
-  with Failure "hd" ->
-    failwith "Empty_Sole_index:Sole_index_v.head_index"
+  with Failure s -> failwith s
 ;;
 
 (** {6 Naming.}*)

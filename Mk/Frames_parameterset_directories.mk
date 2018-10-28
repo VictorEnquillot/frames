@@ -1,0 +1,13 @@
+# parameterset directories content
+
+PARAMETERSET_BUILDER_TREES_DIR := $(PARAMETERSET_DIR)/parameterset_builder_trees
+PARAMETERSET_DATABASES_DIR := $(PARAMETERSET_DIR)/parameterset_databases
+PARAMETERSET_CONTAINERS_DIR := $(PARAMETERSET_DIR)/parameterset_containers
+PARAMETERSET_SYMBOLS_DIR := $(PARAMETERSET_DIR)/parameterset_symbols
+PARAMETERSET_TAGS_DIR := $(PARAMETERSET_DIR)/parameterset_tags
+PARAMETERSET_READEES_DIR := $(PARAMETERSET_DIR)/parameterset_readees
+PARAMETERSET_ENVELOPES_DIR := $(PARAMETERSET_DIR)/parameterset_envelopes
+PARAMETERSET_OPERATIONS_DIR := $(PARAMETERSET_DIR)/parameterset_operations
+PARAMETERSET_VALUES_DIR := $(PARAMETERSET_DIR)/parameterset_values
+
+

@@ -151,8 +151,7 @@ let duo_of_left_off_duo_list lft = function
       failwith ("Empty_duo_list:"^nam_mod^":duo_of_left_off_duo_list")
   | duo_l -> 
       try find_if_left (fun l -> l = lft) duo_l 
-      with Failure ("Not_found:duo_list.ml:find_if_left") ->
-	failwith ("Not_found:"^nam_mod^":duo_of_left_off_duo_list")
+      with Failure s -> failwith s
 ;;
 
 let duo_of_right_off_duo_list rgt = function
@@ -160,8 +159,7 @@ let duo_of_right_off_duo_list rgt = function
       failwith ("Empty_duo_list:"^nam_mod^":duo_of_right_off_duo_list")
   | duo_l -> 
       try find_if_right (fun r -> r = rgt) duo_l 
-      with Failure ("Not_found:Duo_list_v.find_if_right") ->
-	failwith ("Not_found:"^nam_mod^":duo_of_right_off_duo_list")
+      with Failure s -> failwith s
 ;;
 
 let right_of_left_off_duo_list lft = function
@@ -174,8 +172,7 @@ let right_of_left_off_duo_list lft = function
   | duo_l ->
       let d = 
 	try duo_of_left_off_duo_list lft duo_l 
-	with Failure "Not_found:Duo_list_v.duo_of_left_off_duo_list" ->
-	  failwith ("Not_found:"^nam_mod^":right_of_left_off_duo_list")
+	with Failure s -> failwith s
       in
       Duo_v.right_off_duo d
 ;;
@@ -190,8 +187,7 @@ let left_of_right_off_duo_list rgt = function
   | duo_l -> 
       let d = 
 	try duo_of_right_off_duo_list rgt duo_l
-	with Failure "Not_found:Duo_list_v.duo_of_right_off_duo_list" ->
-	  failwith ("Not_found:"^nam_mod^":left_of_right_off_duo_list")
+	with Failure s -> failwith s
       in
       Duo_v.left_off_duo d
 ;;

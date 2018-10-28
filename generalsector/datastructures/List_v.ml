@@ -173,15 +173,13 @@ let index_of_element_of_list ele ele_l =
 ;;
 
 let int_ordinal_of_element_of_list ele ele_l =
-  try index_of_element_of_list ele ele_l +1
-  with Failure "Not_found:List_v.index_of_element_of_list" ->
-    failwith "Not_found:List_v.int_ordinal_of_element_of_list"
+  try index_of_element_of_list ele ele_l +1 with
+  | Failure s -> failwith s 
 ;;
 
 let ordinal_of_element_of_list ele ele_l =
   try  Ordinal_p.ordinal (int_ordinal_of_element_of_list ele ele_l)
-  with Failure "Not_found:List_v.int_ordinal_of_element_of_list" ->
-    failwith "Not_found:List_v.ordinal_of_element_of_list"
+  with Failure s -> failwith s 
 ;;
 
 let ultimate_element_off_list = last_element_off_list;;
@@ -436,8 +434,7 @@ let drop_last_elements_of_int_of_list i lis =
   in
   let tai = 
     try drop_first_elements_of_int_of_list sta rev  
-    with Failure ("List_exhausted:List_v.drop_first_elements_of_int_of_list") ->
-      failwith "List_exhausted:List_v.drop_last_elements_of_int_of_list"
+    with Failure s -> failwith s
   in
   List.rev tai
 ;;
@@ -445,13 +442,11 @@ let drop_last_elements_of_int_of_list i lis =
 let sublist_of_int_of_length_of_list i len lis =
   let hea_l = 
     try drop_first_elements_of_int_of_list i lis 
-    with Failure ("List_exhausted:List_v.drop_first_elements_of_int_of_list") ->
-      failwith "List_exhausted:List_v.sublist_of_int_of_length_of_list"
+    with Failure s -> failwith s
   in
   let j = (List.length lis) - (len+i) in
   try drop_last_elements_of_int_of_list j hea_l
-  with Failure ("List_exhausted:List_v.drop_last_elements_of_int_of_list") ->
-    failwith "List_exhausted:List_v.sublist_of_int_of_length_of_list"
+  with Failure s -> failwith s
 ;;
 
 let sublist_of_int_of_int_of_list i j lis =
@@ -546,8 +541,7 @@ let sublist_included_of_predicate_of_length_of_list pre len lis =
 let left_half_off_list lis =
   let hlf = (List.length lis)/2 in
   let pre e = try index_of_element_of_list e lis = (hlf-1) 
-  with Failure "Not_found:List_v.index_of_element_of_list" ->
-    failwith "Not_found:List_v.left_half_off_list"
+  with Failure s -> failwith s
   in
   left_list_included_of_predicate_of_list pre lis
 ;; 
@@ -555,8 +549,7 @@ let left_half_off_list lis =
 let right_half_off_list lis =
   let hlf = (List.length lis)/2 in
   let pre e = try index_of_element_of_list e lis = (hlf-1) 
-  with Failure "Not_found:List_v.index_of_element_of_list" ->
-    failwith "Not_found:List_v.right_half_off_list"
+  with Failure s -> failwith s
   in
   right_list_excluded_of_predicate_of_list pre lis
 ;; 
@@ -1350,7 +1343,7 @@ let rec list_list_off_list = function
   | h :: t_l -> 
       let head = 
 	try (List.hd (list_list_off_list t_l))
-	with Failure "hd" -> []
+	with Failure _ -> []
       in
       (h :: head) :: (list_list_off_list t_l) 
 ;;

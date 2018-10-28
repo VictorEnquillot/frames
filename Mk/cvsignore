@@ -1,0 +1,9 @@
+*.cm*
+*.o
+*.bin
+*.byt
+.depend
+.depend-rebuild
+.cvsignore
+Config.mk
+LICENSE

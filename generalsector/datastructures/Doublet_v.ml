@@ -136,7 +136,7 @@ let as_string nam_l nam_r dou =
 
 let name_capitalized nam_l nam_r dou =
   Format.sprintf "(%s)" 
-    (String.capitalize (name_bare  nam_l nam_r dou))
+    (String.capitalize_ascii (name_bare  nam_l nam_r dou))
 ;;
 
 (* Formula *)

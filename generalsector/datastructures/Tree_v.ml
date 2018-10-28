@@ -126,8 +126,7 @@ let subtree_filter_of_node_predicate_off_tree pre tre =
 
 let first_subtree_of_node_predicate_off_tree p tre =
   try List.hd (subtree_list_of_node_predicate_off_tree p tre)
-  with Failure "hd" ->
-    failwith ("Not_found:"^nam_mod^".first_subtree_of_node_predicate_off_tree")
+  with Failure s -> failwith s
 ;;
 
 let subtree_of_node_predicate_off_tree pre tre =
@@ -279,8 +278,7 @@ let rec father_list_off_tree = function
 let noroot_node_list_off_tree tre =
   let n_l = node_list_off_tree tre in
   try List.tl n_l
-  with Failure "tl" ->
-    failwith "Tree seems to have only one node:Tree_v.noroot_node_list_off_tree"
+  with Failure s -> failwith s
 ;; (* all nodes except top *)
 
 let rec noleaf_node_list_off_tree = function
@@ -617,8 +615,7 @@ let path_of_node_off_tree nod tre =
 
 let father_of_node_of_tree nod tre =
   try List.nth (path_of_node_off_tree nod tre) 1
-  with Failure "nth" -> 
-    failwith "Root_has_no_father:Tree_v.father_of_node_of_tree"
+  with Failure s -> failwith s
 ;;
 
 let leaf_path_list_off_tree tre =
@@ -638,10 +635,7 @@ let only_subtree_of_tree_predicate_of_depth_off_tree pre dep tre =
   let t_l = subtree_list_of_depth_off_tree dep tre in
   try List_v.only_element_of_predicate_off_list pre t_l
   with 
-  | Failure "Not_only_element:List_v.only_element_of_predicate_off_list" ->
-      failwith ("Too_many_subtrees:"^nam_mod^".only_subtree_of_tree_predicate_of_depth_off_tree")
-  | Failure "No_element:List_v.only_element_of_predicate_off_list" ->
-      failwith ("No_subtree:"^nam_mod^".only_subtree_of_tree_predicate_of_depth_off_tree")
+  | Failure s -> failwith s
 ;;
 
 let first_subtree_of_tree_predicate_of_depth_off_tree pre dep tre =
@@ -800,8 +794,7 @@ let first_inhomogeneous_node_off_tree tre =
       not (has_homogeneous_topson_tree_list_of_node_of_tree n tre)
     ) 
     tre
-  with Failure ("Not_found:Tree_v.node_find_of_node_predicate_off_tree") ->
-    failwith ("Not_found:"^nam_mod^".first_inhomogeneous_node_off_tree")
+  with Failure s -> failwith s
 ;;
 
 let first_inhomogeneous_subtree_off_tree tre =
@@ -810,8 +803,7 @@ let first_inhomogeneous_subtree_off_tree tre =
       not (has_homogeneous_topson_tree_list_of_tree tre)
     ) 
     tre
-  with Failure ("Not_found:Tree_v.subtree_find_of_predicate_off_tree") ->
-    failwith ("Not_found:"^nam_mod^".first_inhomogeneous_subtree_off_tree")
+  with Failure s -> failwith s
 ;;
 
 let first_inhomogeneous_node_n_son_node_off_tree tre =

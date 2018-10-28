@@ -2,4 +2,4 @@
 
 # the general configure script
 . configure_local $1
-. $SUP/configure_global
+. $FRA/configure_global

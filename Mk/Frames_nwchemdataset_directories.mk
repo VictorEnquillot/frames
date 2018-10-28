@@ -1,0 +1,9 @@
+# nwchem directories
+
+NWCHEMDATASET_LEXER_DIR := $(NWCHEMDATASET_DIR)/nwchemdataset_lexer
+NWCHEMDATASET_SYMBOLS_DIR := $(NWCHEMDATASET_DIR)/nwchemdataset_symbols
+NWCHEMDATASET_TAGS_DIR := $(NWCHEMDATASET_DIR)/nwchemdataset_tags
+NWCHEMDATASET_PARSER_DIR := $(NWCHEMDATASET_DIR)/nwchemdataset_parser
+NWCHEMDATASET_BUILDER_TREES_DIR := $(NWCHEMDATASET_DIR)/nwchemdataset_builder_trees
+
+

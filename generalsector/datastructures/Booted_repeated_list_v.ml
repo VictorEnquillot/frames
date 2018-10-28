@@ -61,7 +61,7 @@ let count brl =
 let is_embedded_extension_empty_or_equal_of_entension_of_booted_repeated_list ext brl =
 let x = try extension_off_booted_repeated_list brl
 with 
-  Failure "Extension_undefined_list_empty:Booted_repeated_list_v.extension_off_booted_repeated_list" -> ext
+  Failure s -> ext
 in
 x = ext 
 ;;

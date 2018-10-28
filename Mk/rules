@@ -1,0 +1,25 @@
+Si la cible est le nom d'un fichier appartenant au répertoire rep,
+   Alors 
+       Si la règle comporte des prérequis, 
+           Alors
+               make compare les dates de dernière modification de la cible et des prérequis. 
+               Si au moins un des prérequis est plus jeune que la cible, 
+                cela signifie que, depuis la dernière mise à jour de la cible, 
+                les prérequis ont été modifiés. 
+                   Alors 
+                       la commande est exécutée pour remettre à jour la cible.
+           Sinon (si la règle ne comporte aucun prérequis)
+               la cible est considérée inconditionnellement
+                à jour et la commande associée n'est JAMAIS exécutée
+                (En général on cherche rarement à tomber dans ce cas;
+                on y tombe souvent par erreur.)
+   Sinon (si la cible ne correspond à aucun nom de fichier appartenant au répertoire rep, 
+       Si la règle comporte des prérequis 
+           Alors
+               make interprète tout de même la cible
+                comme un fichier qui n'existe pas encore ou qui a été effacé
+                et qu'il faut remettre à jour. 
+               La commande associée à la règle est exécutée.
+           Sinon (si la règle ne comporte aucun prérequis)
+               make interprète la cible comme .PHONY, et donc 
+                exécute inconditionnellement la commande de la règle

@@ -1,0 +1,13 @@
+# moleculeset directories
+
+MOLECULESET_DATABASES_DIR := $(MOLECULESET_DIR)/moleculeset_databases
+MOLECULESET_CONTAINERS_DIR := $(MOLECULESET_DIR)/moleculeset_containers
+MOLECULESET_BUILDER_TREES_DIR := $(MOLECULESET_DIR)/moleculeset_builder_trees
+MOLECULESET_SYMBOLS_DIR := $(MOLECULESET_DIR)/moleculeset_symbols
+MOLECULESET_TAGS_DIR := $(MOLECULESET_DIR)/moleculeset_tags
+MOLECULESET_VALUES_DIR := $(MOLECULESET_DIR)/moleculeset_values
+
+# alien_databases dir
+MOLECULESET_DATABASES_ADB_DIR := $(MOLECULESET_DATABASES_DIR)/adb
+
+

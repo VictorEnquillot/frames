@@ -151,8 +151,7 @@ let doublet_of_left_off_doublet_list lft = function
       failwith ("Empty_doublet_list:"^nam_mod^":doublet_of_left_off_doublet_list")
   | dol -> 
       try find_if_left (fun l -> l = lft) dol 
-      with Failure ("Not_found:doublet_list.ml:find_if_left") ->
-	failwith ("Not_found:"^nam_mod^":doublet_of_left_off_doublet_list")
+      with Failure s ->	failwith s
 ;;
 
 let doublet_of_right_off_doublet_list rgt = function
@@ -160,8 +159,7 @@ let doublet_of_right_off_doublet_list rgt = function
       failwith ("Empty_doublet_list:"^nam_mod^":doublet_of_right_off_doublet_list")
   | dol -> 
       try find_if_right (fun r -> r = rgt) dol 
-      with Failure ("Not_found:Doublet_list_v.find_if_right") ->
-	failwith ("Not_found:"^nam_mod^":doublet_of_right_off_doublet_list")
+      with Failure s -> failwith s
 ;;
 
 let right_of_left_off_doublet_list lft = function
@@ -174,8 +172,7 @@ let right_of_left_off_doublet_list lft = function
   | dol ->
       let d = 
 	try doublet_of_left_off_doublet_list lft dol 
-	with Failure "Not_found:Doublet_list_v.doublet_of_left_off_doublet_list" ->
-	  failwith ("Not_found:"^nam_mod^":right_of_left_off_doublet_list")
+	with Failure s -> failwith s
       in
       Doublet_v.right_off_doublet d
 ;;
@@ -190,8 +187,7 @@ let left_of_right_off_doublet_list rgt = function
   | dol -> 
       let d = 
 	try doublet_of_right_off_doublet_list rgt dol
-	with Failure "Not_found:Doublet_list_v.doublet_of_right_off_doublet_list" ->
-	  failwith ("Not_found:"^nam_mod^":left_of_right_off_doublet_list")
+	with Failure s -> failwith s
       in
       Doublet_v.left_off_doublet d
 ;;
