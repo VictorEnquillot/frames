@@ -147,16 +147,17 @@ let open_out_channel fin mdn her =
   let nof = fin in
   try open_out nof 
   with 
-  | Sys_error("Bad file descriptor") -> 
-      begin
+  | Sys_error s ->
+      match s with
+      | "Bad file descriptor" -> 
+	  begin
 	Format.fprintf Format.err_formatter 
 	  "@.@[<hov>%s.%s: --- Fatal Error ---@.\
         file >%s< has a bad file descriptor@]@."
 	mdn her fin;
         assert false;
-      end
-
-  | Sys_error msg -> 
+	  end
+       | msg -> 
       begin
 	Format.fprintf Format.err_formatter
 	  "@.%s.%s: --- Fatal Error ---@.\

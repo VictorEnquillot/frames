@@ -35,9 +35,12 @@ let name_of_value val_str =
 let retrieve_without_trace key =
   let nam_fun = "retrieve_without_trace" in
   try Register_v.retrieve register key 
-  with Failure ("Not_stored:register_v.retrieve") ->
+  with Failure s ->
+    match s with
+    | "Not_stored:register_v.retrieve" ->
     Utilities_v.failwith_of_message_of_code_name_of_function_name
-      "Not_stored:" nam_reg nam_fun
+	  "Not_stored:" nam_reg nam_fun
+    | _ -> failwith s
 ;;  
 
 (** {6 Retrieving with Trace} *)
@@ -93,16 +96,22 @@ let error_message_already_stored_value_of_key_of_value key val_ =
 
 let store_without_trace key val_ =
   try Register_v.store register key val_
-  with Failure ("Already_stored:Register_v.store") ->
+  with Failure s ->
+    match s with
+    | "Already_stored:Register_v.store" ->
     error_message_already_stored_value_of_key_of_value key val_
+    | _ -> failwith s
 ;;
 
 (** {6 Storing with Trace} *)
 
 let store_with_trace nam_mod key val_ =
   try Register_v.store_verbose register key val_ nam_mod nam_reg name_of_key name_of_value
-  with Failure ("Already_stored:Register_v.store") ->
+  with Failure s ->
+    match s with
+    | "Already_stored:Register_v.store" ->
     error_message_already_stored_value_of_key_of_value key val_
+    | _ -> failwith s
 ;;
 
 (** {6 Storing} *)

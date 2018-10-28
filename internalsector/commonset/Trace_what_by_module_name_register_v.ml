@@ -41,8 +41,11 @@ let key_list () =
 
 let retrieve key =
   try Register_v.retrieve register key 
-  with Failure ("Not_stored:Register_v.retrieve") ->
-    failwith ("Not_stored:Trace_what_by_module_name_register_v.retrieve")
+  with Failure s ->
+    match s with
+    | "Not_stored:Register_v.retrieve" ->
+	failwith ("Not_stored:Trace_what_by_module_name_register_v.retrieve")
+    | _ -> failwith s
 ;;  
 
 let dump () = Register_v.dump name_of_key name_of_value register;;
@@ -82,8 +85,11 @@ let store key val_ =
   then
     begin
       try Register_v.store register key val_
-      with Failure ("Already_stored:Register_v.store") ->
-	error_message_already_stored_value_of_key_of_value key val_
+      with Failure s ->
+	match s with
+	| "Already_stored:Register_v.store" ->
+	    error_message_already_stored_value_of_key_of_value key val_
+	| _ -> failwith s
     end
   else 
     begin
@@ -106,8 +112,11 @@ let store key val_ =
 
 let store_verbose nam_reg key val_ =
   try Register_v.store_verbose register key val_ nam_reg nam_reg name_of_key name_of_value
-  with Failure ("Already_stored:Register_v.store_verbose") ->
-    error_message_already_stored_value_of_key_of_value key val_
+  with Failure s ->
+	match s with
+	| "Already_stored:Register_v.store_verbose" ->
+	    error_message_already_stored_value_of_key_of_value key val_
+	| _ -> failwith s
 ;;
 
 let store_force key val_ =

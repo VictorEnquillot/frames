@@ -66,17 +66,18 @@ let open_out_channel fln mdn her =
   let nam_fil = fln in
   try open_out nam_fil 
   with 
-  | Sys_error("Bad file descriptor") -> 
-      begin
-	Format.fprintf Format.err_formatter 
+  | Sys_error s ->
+      match s with
+      | "Bad file descriptor" -> 
+	  begin
+	    Format.fprintf Format.err_formatter 
 	  "@.@[<hov>%s.%s: --- Fatal Error ---@.\
         file >%s< has a bad file descriptor@]@."
 	mdn her fln;
         assert false;
-      end
-
-  | Sys_error msg -> 
-      begin
+	  end
+      | msg -> 
+	  begin
 	Format.fprintf Format.err_formatter
 	  "@.%s.%s: --- Fatal Error ---@.\
 	When opening file >%s<@.\
@@ -86,7 +87,7 @@ let open_out_channel fln mdn her =
         ignore (open_out nam_fil); 
         open_out_gen [Open_creat] 0 nam_fil
 *)
-      end
+	  end
 ;;
 
 

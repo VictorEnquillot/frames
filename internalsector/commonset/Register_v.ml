@@ -185,6 +185,6 @@ let print nam_key nam_val reg =
 let only_key_of_value reg v =
   let key_l = key_list_of_value reg v in
   try List_v.element_off_one_element_list key_l
-  with Failure "Several_elements:List_v.element_off_one_element_list" ->
-    failwith "Several_key_for_value:Register_v.only_key_of_value"
+  with Failure s ->
+    failwith s
 ;;

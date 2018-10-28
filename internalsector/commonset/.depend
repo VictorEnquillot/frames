@@ -1,0 +1,57 @@
+Cpu_v.cmo :
+Cpu_v.cmx :
+Global_parameters_provider_v.cmo : Management_v.cmi \
+    Global_parameters_register_v.cmo \
+    /home/enquillot/sources/ocaml/frames/generalsector/basics/Error_messages_v.cmo
+Global_parameters_provider_v.cmx : Management_v.cmx \
+    Global_parameters_register_v.cmx \
+    /home/enquillot/sources/ocaml/frames/generalsector/basics/Error_messages_v.cmx
+Global_parameters_register_v.cmo : \
+    /home/enquillot/sources/ocaml/frames/generalsector/basics/Utilities_v.cmo \
+    Register_v.cmi Register_t.cmo Management_v.cmi \
+    /home/enquillot/sources/ocaml/frames/generalsector/basics/Error_messages_v.cmo
+Global_parameters_register_v.cmx : \
+    /home/enquillot/sources/ocaml/frames/generalsector/basics/Utilities_v.cmx \
+    Register_v.cmx Register_t.cmx Management_v.cmx \
+    /home/enquillot/sources/ocaml/frames/generalsector/basics/Error_messages_v.cmx
+Management_v.cmo : \
+    /home/enquillot/sources/ocaml/frames/generalsector/basics/Utilities_v.cmo \
+    Trace_what_by_module_name_register_v.cmo \
+    /home/enquillot/sources/ocaml/frames/generalsector/basics/String_v.cmi \
+    /home/enquillot/sources/ocaml/frames/generalsector/datastructures/Stack_v.cmi \
+    Module_name_stack_v.cmi \
+    /home/enquillot/sources/ocaml/frames/generalsector/datastructures/List_v.cmi \
+    /home/enquillot/sources/ocaml/frames/generalsector/basics/Error_messages_v.cmo \
+    Cpu_v.cmo Management_v.cmi
+Management_v.cmx : \
+    /home/enquillot/sources/ocaml/frames/generalsector/basics/Utilities_v.cmx \
+    Trace_what_by_module_name_register_v.cmx \
+    /home/enquillot/sources/ocaml/frames/generalsector/basics/String_v.cmx \
+    /home/enquillot/sources/ocaml/frames/generalsector/datastructures/Stack_v.cmx \
+    Module_name_stack_v.cmx \
+    /home/enquillot/sources/ocaml/frames/generalsector/datastructures/List_v.cmx \
+    /home/enquillot/sources/ocaml/frames/generalsector/basics/Error_messages_v.cmx \
+    Cpu_v.cmx Management_v.cmi
+Management_v.cmi :
+Module_name_stack_v.cmo : Module_name_stack_v.cmi
+Module_name_stack_v.cmx : Module_name_stack_v.cmi
+Module_name_stack_v.cmi :
+Register_t.cmo :
+Register_t.cmx :
+Register_v.cmo : \
+    /home/enquillot/sources/ocaml/frames/generalsector/datastructures/List_v.cmi \
+    /home/enquillot/sources/ocaml/frames/generalsector/basics/Error_messages_v.cmo \
+    /home/enquillot/sources/ocaml/frames/generalsector/datastructures/Doublet_v.cmi \
+    /home/enquillot/sources/ocaml/frames/generalsector/datastructures/Doublet_list_v.cmi \
+    Register_v.cmi
+Register_v.cmx : \
+    /home/enquillot/sources/ocaml/frames/generalsector/datastructures/List_v.cmx \
+    /home/enquillot/sources/ocaml/frames/generalsector/basics/Error_messages_v.cmx \
+    /home/enquillot/sources/ocaml/frames/generalsector/datastructures/Doublet_v.cmx \
+    /home/enquillot/sources/ocaml/frames/generalsector/datastructures/Doublet_list_v.cmx \
+    Register_v.cmi
+Register_v.cmi : Register_t.cmo
+Trace_what_by_module_name_register_v.cmo : Register_v.cmi Register_t.cmo \
+    /home/enquillot/sources/ocaml/frames/generalsector/basics/Error_messages_v.cmo
+Trace_what_by_module_name_register_v.cmx : Register_v.cmx Register_t.cmx \
+    /home/enquillot/sources/ocaml/frames/generalsector/basics/Error_messages_v.cmx

@@ -57,11 +57,14 @@ let current_module_name str_l =
   let len_cur = String.length cur_str in
   let nam_mod = try 
     String.sub cur_str len_tok (len_cur-len_tok) 
-  with Invalid_argument "String.sub" ->
+  with Invalid_argument s ->
+    match s with
+    | "String.sub" ->
     Error_messages_v.print_fatal_error nam_mod "current_module_name"
       (Format.sprintf "documentation line >%s< were more than %i characters long" cur_str len_tok)
       (Format.sprintf "line length is %i" (String.length cur_str))
-      "Please correct documentation line"
+	  "Please correct documentation line"
+    | _ -> failwith s
   in
   let idx_sem = try 
     String.index nam_mod ':' 
@@ -75,11 +78,14 @@ let current_module_name str_l =
 
   try
     String.sub nam_mod (idx_sem+1) (len_nam-(idx_sem+1)) 
-  with Invalid_argument "String.sub" ->
+  with Invalid_argument s ->
+    match s with
+    | "String.sub" ->
     Error_messages_v.print_fatal_error nam_mod "current_module_name"
       (Format.sprintf "module name >%s< were more than %i characters long" nam_mod (idx_sem+1))
       (Format.sprintf "line length is %i" len_nam)
       "Please correct module name"
+    | _ -> failwith s
 ;;
 
 let current_file_name str_l =
@@ -109,11 +115,14 @@ let current_register_name str_l =
   let len_cur = String.length cur_str in
   let nam_mod = try 
     String.sub cur_str len_tok (len_cur-len_tok) 
-  with Invalid_argument "String.sub" ->
+  with Invalid_argument s ->
+    match s with
+    | "String.sub" ->
     Error_messages_v.print_fatal_error nam_mod "current_register_name"
       (Format.sprintf "documentation line >%s< were more than %i characters long" cur_str len_tok)
       (Format.sprintf "line length is %i" (String.length cur_str))
-      "Please correct documentation line"
+	  "Please correct documentation line"
+    | _ -> failwith s
   in
   let idx_sem = try 
     String.index nam_mod ':' 
@@ -127,11 +136,14 @@ let current_register_name str_l =
 
   try
     String.sub nam_mod (idx_sem+1) (len_nam-(idx_sem+1)) 
-  with Invalid_argument "String.sub" ->
+  with Invalid_argument s ->
+    match s with
+    | "String.sub" ->
     Error_messages_v.print_fatal_error nam_mod "current_register_name"
       (Format.sprintf "register name >%s< were more than %i characters long" nam_mod (idx_sem+1))
       (Format.sprintf "line length is %i" len_nam)
       "Please correct register name"
+    | _ -> failwith s
 ;;
 
 let previous_module_name_of_module_name nam_mod =
@@ -221,7 +233,7 @@ let index_for_exiting_level_of_current_module_name nam_mod =
 
 let string_for_exiting_level_of_current_module_name nam_mod =
   let ind_top = index_for_exiting_level_of_current_module_name nam_mod in
-  Bytes.sub points 0 ind_top 
+  Bytes.to_string (Bytes.sub points 0 ind_top) 
 ;;
 
 let index_for_entering_level_of_current_module_name nam_mod =
@@ -236,7 +248,7 @@ let index_for_entering_level_of_current_module_name nam_mod =
 
 let string_for_entering_level_of_current_module_name nam_mod =
   let ind_top = index_for_entering_level_of_current_module_name nam_mod in
-  Bytes.sub points 0 ind_top
+  Bytes.to_string (Bytes.sub points 0 ind_top)
 ;;
 
 let entering_of_module_name_of_function_name nam_mod nam_fun =

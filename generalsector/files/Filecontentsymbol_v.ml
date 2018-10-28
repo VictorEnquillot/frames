@@ -52,12 +52,12 @@ let extract_off_string str =
 
   let no_path = 
     try String_v.head_of_string_of_char rvs '/' 
-    with Failure "Not_found_char:String_v.head_of_string_of_char" -> rvs
+    with Failure s -> rvs
   in
   
   let no_extension = 
     try String_v.truncate_head_of_string_of_char no_path '.' 
-    with Failure "Not_found:String_v.truncate_head_of_string_of_char" -> no_path
+    with Failure s -> no_path
   in
 
   make (String_v.reverse_of_string no_extension)

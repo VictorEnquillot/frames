@@ -92,7 +92,9 @@ let write_of_string_list_of_filename str_l fna =
 let open_out_channel_of_string_of_string_of_fullname nam_cod nam_fun nof =
   try open_out nof
   with 
-    | Sys_error("Bad file descriptor") -> 
+  | Sys_error s ->
+      match s with
+      | "Bad file descriptor" -> 
 	begin
 	  Format.fprintf Format.err_formatter 
 	    "@.@[<hov>%s.%s: --- Fatal Error ---\
@@ -100,14 +102,14 @@ let open_out_channel_of_string_of_string_of_fullname nam_cod nam_fun nof =
 	    nam_cod nam_fun nof; assert false;
 	end
 	  
-    | Sys_error msg -> 
-      begin
+      | msg -> 
+	  begin
 	Format.fprintf Format.err_formatter
 	  "@.%s.%s: --- Fatal Error ---@.\
 	When opening file >%s<@.\
 	with message >%s<@." nam_cod ("open_out_channel in "^nam_fun) nof msg;
 	assert false;
-      end
+	  end
 ;;
 
 let open_out_channel_n_warn_of_filename fna nam_cod nam_fun =
@@ -118,7 +120,9 @@ let open_out_channel_n_warn_of_filename fna nam_cod nam_fun =
   
   try open_out nof
   with 
-  | Sys_error("Bad file descriptor") -> 
+  | Sys_error s ->
+      match s with
+      | "Bad file descriptor" -> 
       begin
 	Format.fprintf Format.err_formatter 
 	  "@.@[<hov>%s.%s: --- Fatal Error ---@.\
@@ -127,7 +131,7 @@ let open_out_channel_n_warn_of_filename fna nam_cod nam_fun =
           assert false;
       end
 	
-  | Sys_error msg -> 
+  | msg -> 
       begin
 	Format.fprintf Format.err_formatter
 	  "@.%s.%s: --- Fatal Error ---@.\

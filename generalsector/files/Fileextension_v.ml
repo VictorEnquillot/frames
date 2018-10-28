@@ -66,7 +66,7 @@ let extract_off_string str =
   in
   let sst = 
     try String.sub rvs 0 dot_idx 
-    with Invalid_argument ("String.sub") -> ""
+    with Invalid_argument s -> ""
   in
   let s = String_v.reverse_of_string sst in
   make s
