@@ -4,17 +4,17 @@ The code is divided in 6 Sectors : General Generator Entry Product Internal Exte
 
 * Sectors are divided in Domains or Sets
 
-** General   : stores basic OCaml code 
+  * General   : stores basic OCaml code 
 
-** Generator : generates OCaml code from <domain>_symbols.dat files and <domain>_formulas.dat files 
+  * Generator : generates OCaml code from <domain>_symbols.dat files and <domain>_formulas.dat files 
 
-** Entry : Userinput
+  * Entry : Userinput
 
-** Product : Property Operator
+  * Product : Property Operator
 
-** Internal : Figure Skeleton
+  * Internal : Figure Skeleton
 
-** External : Figure Skeleton
+  * External : Figure Skeleton
 
 * Domains are divided in Entities
 
