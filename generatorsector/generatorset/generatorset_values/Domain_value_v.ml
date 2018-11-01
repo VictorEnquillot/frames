@@ -9,6 +9,7 @@ let documentation () =
    "Needed-by : VGNR:Domain_value_v";
    "What-is-it : It upgrades Value type as Symbol type";
    "Remark : It is a Node and Stem type";
+   "Author : François Colonna 31 octobre 2018 at 10:39:50+01:00";
  ]
 ;;
 
@@ -27,65 +28,19 @@ let make sym_dom soi_dom =
   let tag_dom = Tag_v.make sym_dom soi_dom in
   let val_cat_l = category_value_list_off_domain_tag tag_dom in
   match sym_dom with
-  | Domain_symbol_t.Chemical ->
-      Domain_value_t.Chemical val_cat_l
-
-  | Domain_symbol_t.Music ->
-      Domain_value_t.Music val_cat_l
-
-  | Domain_symbol_t.Fake ->
-      Domain_value_t.Fake val_cat_l
-
-  | Domain_symbol_t.Natural ->
-      Domain_value_t.Natural val_cat_l
-
-  | Domain_symbol_t.Generator ->
-      Domain_value_t.Generator val_cat_l
-
-  | Domain_symbol_t.Figure ->
-      Domain_value_t.Figure val_cat_l
-
-  | Domain_symbol_t.Logic ->
-      Domain_value_t.Logic val_cat_l
-
   | Domain_symbol_t.Common -> Domain_value_t.Common val_cat_l
-
-  | Domain_symbol_t.Database _ -> Domain_value_t.Database val_cat_l
-
+  | Domain_symbol_t.Database -> Domain_value_t.Database val_cat_l
   | Domain_symbol_t.Elementary -> Domain_value_t.Elementary val_cat_l
-
-  | Domain_symbol_t.Input _ -> Domain_value_t.Input val_cat_l
-
+  | Domain_symbol_t.Figure -> Domain_value_t.Figure val_cat_l
+  | Domain_symbol_t.General -> Domain_value_t.General val_cat_l
+  | Domain_symbol_t.Generator -> Domain_value_t.Generator val_cat_l
+  | Domain_symbol_t.Localinput -> Domain_value_t.Localinput val_cat_l
   | Domain_symbol_t.Operator -> Domain_value_t.Operator val_cat_l
-
+  | Domain_symbol_t.Primitive -> Domain_value_t.Primitive val_cat_l
   | Domain_symbol_t.Property -> Domain_value_t.Property val_cat_l
-
- (*  | Domain_symbol_t.Forcefield -> *)
- (*      Domain_value_t.Forcefield val_cat_l *)
-
- (* | Domain_symbol_t.Model -> *)
- (*      Domain_value_t.Model val_cat_l *)
-
- (*  | Domain_symbol_t.Molecule -> *)
- (*      Domain_value_t.Molecule val_cat_l *)
-
- (*  | Domain_symbol_t.Physical -> *)
- (*      Domain_value_t.Physical val_cat_l *)
-
- (*  | Domain_symbol_t.Primitive -> *)
- (*      Domain_value_t.Primitive val_cat_l *)
-
- (*  | Domain_symbol_t.Prototype -> *)
- (*      Domain_value_t.Prototype val_cat_l *)
-
- (*  | Domain_symbol_t.Simulation -> *)
- (*      Domain_value_t.Simulation val_cat_l *)
-
- (*  | Domain_symbol_t.Wavefunction -> *)
- (*      Domain_value_t.Wavefunction val_cat_l *)
-
- (*  | Domain_symbol_t.Wikitool -> *)
- (*      Domain_value_t.Wikitool val_cat_l *)
+  | Domain_symbol_t.Prototype -> Domain_value_t.Prototype val_cat_l
+  | Domain_symbol_t.Skeleton -> Domain_value_t.Skeleton val_cat_l
+  | Domain_symbol_t.Wavefunction -> Domain_value_t.Wavefunction val_cat_l
 ;;
 
 (** {6 Retrieving} *)
@@ -100,50 +55,19 @@ let retrieve tag_dom =
 
 let category_value_list_off_domain_value val_dom =
   match val_dom with
-  | Domain_value_t.Chemical val_cat_l ->
-      val_cat_l
-  | Domain_value_t.Generator val_cat_l ->
-      val_cat_l
-  | Domain_value_t.Figure val_cat_l ->
-      val_cat_l
-  | Domain_value_t.Logic val_cat_l ->
-      val_cat_l
-  | Domain_value_t.Music val_cat_l ->
-     val_cat_l
-  | Domain_value_t.Natural val_cat_l ->
-     val_cat_l
-  | Domain_value_t.Fake val_cat_l ->     val_cat_l
-
- | Domain_value_t.Common val_cat_l ->      val_cat_l
-
-  | Domain_value_t.Database val_cat_l ->      val_cat_l
-
-  | Domain_value_t.Elementary val_cat_l ->      val_cat_l
-
-  | Domain_value_t.Input val_cat_l ->      val_cat_l
-
-  | Domain_value_t.Operator val_cat_l ->      val_cat_l
-
-  | Domain_value_t.Property val_cat_l ->      val_cat_l
-
-  (* | Domain_value_t.Forcefield val_cat_l -> *)
-  (*     val_cat_l *)
-  (* | Domain_value_t.Model val_cat_l -> *)
-  (*     val_cat_l *)
-  (* | Domain_value_t.Molecule val_cat_l -> *)
-  (*    val_cat_l *)
-  (* | Domain_value_t.Physical val_cat_l -> *)
-  (*    val_cat_l *)
-  (* | Domain_value_t.Primitive val_cat_l -> *)
-  (*    val_cat_l *)
-  (* | Domain_value_t.Prototype val_cat_l -> *)
-  (*    val_cat_l *)
-  (* | Domain_value_t.Simulation val_cat_l -> *)
-  (*    val_cat_l *)
-  (* | Domain_value_t.Wavefunction val_cat_l -> *)
-  (*    val_cat_l *)
-  (* | Domain_value_t.Wikitool val_cat_l -> *)
-  (*    val_cat_l *)
+  |  Domain_value_t.Common  val_cat_l -> val_cat_l
+  |  Domain_value_t.Database  val_cat_l -> val_cat_l
+  |  Domain_value_t.Elementary  val_cat_l -> val_cat_l
+  |  Domain_value_t.Figure  val_cat_l -> val_cat_l
+  |  Domain_value_t.General val_cat_l -> val_cat_l
+  |  Domain_value_t.Generator val_cat_l -> val_cat_l
+  |  Domain_value_t.Localinput  val_cat_l -> val_cat_l
+  |  Domain_value_t.Operator  val_cat_l -> val_cat_l
+  |  Domain_value_t.Primitive  val_cat_l -> val_cat_l
+  |  Domain_value_t.Property  val_cat_l -> val_cat_l
+  |  Domain_value_t.Prototype  val_cat_l -> val_cat_l
+  |  Domain_value_t.Skeleton  val_cat_l -> val_cat_l
+  |  Domain_value_t.Wavefunction  val_cat_l -> val_cat_l
 ;;
 
 let string_list_off_domain_value val_dom =

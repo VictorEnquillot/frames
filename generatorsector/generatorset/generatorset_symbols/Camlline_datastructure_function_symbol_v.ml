@@ -1,8 +1,5 @@
 (** {3 The Symbol for a Camlline_datastructure_function.}  *)
 
-(** {6 Aliasing} *)
-
-
 (** {6 Typing} *)
 
 let name = function
@@ -15,7 +12,7 @@ let name = function
 ;;
 
 let longname sym_cdf = 
-  "Camlline_datastructure_function_symbol_t." ^ (String.capitalize (name sym_cdf))
+  "Camlline_datastructure_function_symbol_t." ^ (String.capitalize_ascii (name sym_cdf))
 ;;
 
 let string_off sym_cdf = "";;

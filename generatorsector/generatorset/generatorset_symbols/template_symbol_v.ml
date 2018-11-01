@@ -47,7 +47,7 @@ let string_off = function
 (* section_for_any_header_top : let_longname_argument_equal *)
 (* group_for_any_header_top : let_longname_argument_equal *)
 let longname sym_top =
-  Format.sprintf "Top_symbol_t.%s" (String.capitalize (name sym_top))
+  Format.sprintf "Top_symbol_t.%s" (String.capitalize_ascii (name sym_top))
 ;;
 
 
@@ -942,7 +942,7 @@ let typing_for_symbol = top_symbol_of_top_for_symbol_symbol Top_for_symbol_symbo
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_bare:Top_symbol_v.ml:make_of_topson_bare"
@@ -952,7 +952,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Top_symbol_v.ml:make_of_topson_ofstring"

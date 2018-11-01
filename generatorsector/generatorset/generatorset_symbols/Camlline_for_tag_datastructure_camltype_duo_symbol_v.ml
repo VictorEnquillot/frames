@@ -34,7 +34,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_dcd =
-  Format.sprintf "Camlline_for_tag_datastructure_camltype_duo_symbol_t.%s" (String.capitalize (name sym_dcd))
+  Format.sprintf "Camlline_for_tag_datastructure_camltype_duo_symbol_t.%s" (String.capitalize_ascii (name sym_dcd))
 ;;
 
 
@@ -96,7 +96,7 @@ let lpar_a_b_tag_rpar = Camlline_for_tag_datastructure_camltype_duo_symbol_t.Lpa
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "lpar_a_b_tag_rpar" -> lpar_a_b_tag_rpar
   | _ ->
@@ -107,7 +107,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Camlline_for_tag_datastructure_camltype_duo_symbol_v.ml:make_of_topson_ofstring"
@@ -123,22 +123,39 @@ let make_of_topson_notleaf nam s =
 
 (** {6 Making_for_symbol} *)
 
-let make nam s =
+let make nam str =
   try make_of_topson_bare nam
-  with Failure "Not_a_topson_bare:Camlline_for_tag_datastructure_camltype_duo_symbol_v.ml:make_of_topson_bare" ->
-  try make_of_topson_ofstring nam s
-  with Failure "Not_a_topson_ofstring:Camlline_for_tag_datastructure_camltype_duo_symbol_v.ml:make_of_topson_ofstring" ->
-  try make_of_topson_notleaf nam s
-  with Failure "Not_a_topson_notleaf:Camlline_for_tag_datastructure_camltype_duo_symbol_v.ml:make_of_topson_notleaf" ->
-   let _ =
-      Error_messages_v.print_error nam_cod "make"
-      (Format.sprintf "strings \"%s\" and \"%s\" represent an existing Camlline_for_tag_datastructure_camltype_duo subtype" nam s)
-      "it does not exists"
-      "Check file camlline_for_tag_datastructure_camltype_duo_symbol_v.ml"
-    in
-    failwith "Not_a_valid_camlline_for_tag_datastructure_camltype_duo_symbol:Camlline_for_tag_datastructure_camltype_duo_symbol_v.ml:make"
+  with Failure s1 ->
+    match s1 with
+    | "Not_a_topson_bare:Camlline_for_tag_datastructure_camltype_duo_symbol_v.ml:make_of_topson_bare" ->
+	begin
+	  try make_of_topson_ofstring nam str
+	  with Failure s2 ->
+	    match s2 with
+	    | "Not_a_topson_ofstring:Camlline_for_tag_datastructure_camltype_duo_symbol_v.ml:make_of_topson_ofstring" ->
+		begin
+		  try make_of_topson_notleaf nam str
+		  with Failure s3 ->
+		    match s3 with
+		    | "Not_a_topson_notleaf:Camlline_for_tag_datastructure_camltype_duo_symbol_v.ml:make_of_topson_notleaf" ->
+			begin
+			  let _ =
+			    Error_messages_v.print_error nam_cod "make"
+			      (Format.sprintf "strings \"%s\" and \"%s\" represent an existing Figure_set_fence_point subtype" nam str)
+			      "it does not exists"
+			      "Check file Camlline_for_tag_datastructure_camltype_duo_symbol_v.ml"
+			  in
+			  failwith "Not_a_figure_set_fence_point_symbol:Camlline_for_tag_datastructure_camltype_duo_symbol_v.ml:make"
+			end
+		    | _ -> failwith s3
+		end
+	    | _ -> failwith s2
+		  
+	end
+    | _ -> failwith s1
 ;;
 
+(** modified Failures at lundi 29 octobre 2018, 09:39:40 (UTC+0100) *)
 
 (** created by version v1.11 of ./generator camlline_for_tag_datastructure_camltype_duo implementation_for_symbol symbol at 9:15 6 May 2013. *)
 

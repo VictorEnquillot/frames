@@ -20,7 +20,7 @@ let string_off = function
 
 let longname sym_enf = 
   Format.sprintf "Entity_fictive_nullary_symbol_t.%s" 
-    (String.capitalize (name sym_enf))
+    (String.capitalize_ascii (name sym_enf))
 ;;
 
 let fullname sym_enf =
@@ -95,11 +95,19 @@ let entity_fictive_symbol_of_entity_fictive_nullary_symbol sym_efn =
 let make nam s =
   try entity_fictive_symbol_of_entity_fictive_basicnullary_symbol 
       (Entity_fictive_basicnullary_symbol_v.make nam s)
-  with Failure "Not_Entity_fictive_basicnullary_symbol:Entity_fictive_basicnullary_symbol_v.ml:make" ->
-    try entity_fictive_symbol_of_entity_fictive_nullary_symbol 
-	(Entity_fictive_nullary_symbol_v.make nam s)
-    with Failure "Not_Entity_fictive_symbol:Entity_fictive_symbol_v.ml:make" ->
-      failwith ("Entity_fictive_symbol:"^nam_cod^":make")
+  with Failure s1 ->
+    match s1 with
+    | "Not_Entity_fictive_basicnullary_symbol:Entity_fictive_basicnullary_symbol_v.ml:make" ->
+	begin
+	  try entity_fictive_symbol_of_entity_fictive_nullary_symbol 
+	      (Entity_fictive_nullary_symbol_v.make nam s)
+	  with Failure s2 ->
+	    match s2 with
+	    | "Not_Entity_fictive_symbol:Entity_fictive_symbol_v.ml:make" ->
+		failwith ("Entity_fictive_symbol:"^nam_cod^":make")
+	    | _ -> failwith s2
+	end
+    | _ -> failwith s1
 ;;
 
 (** {6 Listing} *)

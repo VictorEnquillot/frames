@@ -55,7 +55,7 @@ let interface_for_formula = Usagefile_for_formula_symbol_t.Interface_for_formula
 (** {6 Making} *)
 
 let make nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "implementation_for_formula" -> implementation_for_formula
   | "interface_for_formula" -> interface_for_formula

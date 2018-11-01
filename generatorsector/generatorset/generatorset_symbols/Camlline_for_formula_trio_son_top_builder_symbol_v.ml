@@ -40,7 +40,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_stb =
-  Format.sprintf "Camlline_for_formula_trio_son_top_builder_symbol_t.%s" (String.capitalize (name sym_stb))
+  Format.sprintf "Camlline_for_formula_trio_son_top_builder_symbol_t.%s" (String.capitalize_ascii (name sym_stb))
 ;;
 
 
@@ -124,7 +124,7 @@ let pipe_et_formula_tdot_es_tag_ab_l_arrow_tag_ab_l = Camlline_for_formula_trio_
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "et_formula_tdot_es_lpar_sarg_comma_tag_ab_l_rpar" -> et_formula_tdot_es_lpar_sarg_comma_tag_ab_l_rpar
   | "et_formula_tdot_es_tag_ab_l" -> et_formula_tdot_es_tag_ab_l
@@ -138,7 +138,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Camlline_for_formula_trio_son_top_builder_symbol_v.ml:make_of_topson_ofstring"
@@ -154,21 +154,38 @@ let make_of_topson_notleaf nam s =
 
 (** {6 Making_for_symbol} *)
 
-let make nam s =
+let make nam str =
   try make_of_topson_bare nam
-  with Failure "Not_a_topson_bare:Camlline_for_formula_trio_son_top_builder_symbol_v.ml:make_of_topson_bare" ->
-  try make_of_topson_ofstring nam s
-  with Failure "Not_a_topson_ofstring:Camlline_for_formula_trio_son_top_builder_symbol_v.ml:make_of_topson_ofstring" ->
-  try make_of_topson_notleaf nam s
-  with Failure "Not_a_topson_notleaf:Camlline_for_formula_trio_son_top_builder_symbol_v.ml:make_of_topson_notleaf" ->
-   let _ =
-      Error_messages_v.print_error nam_cod "make"
-      (Format.sprintf "strings \"%s\" and \"%s\" represent an existing Camlline_for_formula_trio_son_top_builder subtype" nam s)
-      "it does not exists"
-      "Check file camlline_for_formula_trio_son_top_builder_symbol_v.ml"
-    in
-    failwith "Not_a_valid_camlline_for_formula_trio_son_top_builder_symbol:Camlline_for_formula_trio_son_top_builder_symbol_v.ml:make"
+  with Failure s1 ->
+    match s1 with
+    | "Not_a_topson_bare:Camlline_for_formula_trio_son_top_builder_symbol_v.ml:make_of_topson_bare" ->
+	begin
+	  try make_of_topson_ofstring nam str
+	  with Failure s2 ->
+	    match s2 with
+	    | "Not_a_topson_ofstring:Camlline_for_formula_trio_son_top_builder_symbol_v.ml:make_of_topson_ofstring" ->
+		begin
+		  try make_of_topson_notleaf nam str
+		  with Failure s3 ->
+		    match s3 with
+		    | "Not_a_topson_notleaf:Camlline_for_formula_trio_son_top_builder_symbol_v.ml:make_of_topson_notleaf" ->
+			begin
+			  let _ =
+			    Error_messages_v.print_error nam_cod "make"
+			      (Format.sprintf "strings \"%s\" and \"%s\" represent an existing Figure_set_fence_point subtype" nam str)
+			      "it does not exists"
+			      "Check file Camlline_for_formula_trio_son_top_builder_symbol_v.ml"
+			  in
+			  failwith "Not_a_figure_set_fence_point_symbol:Camlline_for_formula_trio_son_top_builder_symbol_v.ml:make"
+			end
+		    | _ -> failwith s3
+		end
+	    | _ -> failwith s2
+	end
+    | _ -> failwith s1
 ;;
+
+(** modified Failures at lundi 29 octobre 2018, 10:55:32 (UTC+0100) *)
 
 
 (** created by version v1.11 of ./generator camlline_for_formula_trio_son_top_builder implementation_for_symbol symbol at 9:15 6 May 2013. *)

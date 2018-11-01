@@ -46,7 +46,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_ght =
-  Format.sprintf "Group_for_any_header_top_symbol_t.%s" (String.capitalize (name sym_ght))
+  Format.sprintf "Group_for_any_header_top_symbol_t.%s" (String.capitalize_ascii (name sym_ght))
 ;;
 
 
@@ -151,7 +151,7 @@ let let_string_off_argument_equal = Group_for_any_header_top_symbol_t.Let_string
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "camlfile_title" -> camlfile_title
   | "item_title" -> item_title
@@ -168,7 +168,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Group_for_any_header_top_symbol_v.ml:make_of_topson_ofstring"

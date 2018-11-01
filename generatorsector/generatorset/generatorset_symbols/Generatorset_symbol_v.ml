@@ -43,7 +43,7 @@ let string_off = function
   | Generatorset_symbol_t.Item_symbol s -> Item_symbol_v.string_off s
   | Generatorset_symbol_t.Kind_symbol s -> Kind_symbol_v.string_off s
   | Generatorset_symbol_t.Section_symbol s -> Section_symbol_v.string_off s
-   | Generatorset_symbol_t.Usagefile_symbol s -> Usagefile_symbol_v.string_off s
+  | Generatorset_symbol_t.Usagefile_symbol s -> Usagefile_symbol_v.string_off s
 ;;
 
 let fullname sym_ges =

@@ -43,14 +43,14 @@ let abbreviation_module_of_entity_external_constrained_symbol sym_exc =
   let abb_arg = 
     Abbreviation_argument_v.abbreviation_argument_of_entity_external_constrained_symbol sym_exc
   in
-  String.capitalize abb_arg
+  String.capitalize_ascii abb_arg
 ;;
 
 let abbreviation_module_of_entity_external_datastructure_symbol sym_exd =
   let abb_arg = 
     Abbreviation_argument_v.abbreviation_argument_of_entity_external_datastructure_symbol sym_exd
   in
-  String.capitalize abb_arg
+  String.capitalize_ascii abb_arg
 ;;
 
 let abbreviation_module_of_entity_fictive_basicnullary_symbol = function
@@ -101,11 +101,11 @@ let abbreviation_module_of_entity_proper_with_sons = function
   | "ribonucleotide_purinic" -> "rpu"
   | "ribonucleotide_pyrimidic" -> "rpy"
   | s -> 
-      String.capitalize (Abbreviation_default_v.abbreviation_default_module_of_string s)
+      String.capitalize_ascii (Abbreviation_default_v.abbreviation_default_module_of_string s)
 ;;
 
 let abbreviation_module_of_entity_proper_with_one_son s =
-  String.capitalize (Abbreviation_default_v.abbreviation_default_module_of_string s)
+  String.capitalize_ascii (Abbreviation_default_v.abbreviation_default_module_of_string s)
 ;;
 
 let abbreviation_module_of_entity_external_tool_symbol = function
@@ -179,8 +179,8 @@ let abbreviation_module_of_constructor_symbol = function
       let str = Item_interface_symbol_v.name sym_cnt in
       let abb = String_v.first_characters_string_of_underscored_string str in
       match String.length abb with
-      | 1 -> (String.capitalize abb) ^ (String.sub str 1 1)
-      | _ -> (String.capitalize abb) 
+      | 1 -> (String.capitalize_ascii abb) ^ (String.sub str 1 1)
+      | _ -> (String.capitalize_ascii abb) 
 ;;
 (** xaa_yaa_zaa -> Xyz  *)
 

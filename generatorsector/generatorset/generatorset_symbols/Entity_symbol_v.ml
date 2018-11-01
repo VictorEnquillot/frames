@@ -27,7 +27,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_ent =
-  Format.sprintf "Entity_symbol_t.%s" (String.capitalize (name sym_ent))
+  Format.sprintf "Entity_symbol_t.%s" (String.capitalize_ascii (name sym_ent))
 ;;
 
 (** {6 Fullnaming_for_symbol} *)
@@ -264,21 +264,32 @@ let make nam s =
   try entity_symbol_of_entity_proper_symbol 
       (Entity_proper_symbol_v.make nam s)
   with 
-  | Failure "Not_Entity_proper_symbol:Entity_proper_symbol_v.ml:make" ->
-      
-      try entity_symbol_of_entity_fictive_symbol 
-	  (Entity_fictive_symbol_v.make nam s)
-      with 
-      | Failure "Not_Entity_fictive_symbol:Entity_fictive_symbol_v.ml:make" 
-      | Failure "Not_Entity_fictive_nullary_symbol:Entity_fictive_nullary_symbol_v.ml:make" ->
-	  
-	  try entity_symbol_of_entity_external_symbol 
-	      (Entity_external_symbol_v.make nam s)
-	  with Failure "Not_Entity_external_symbol:Entity_external_symbol_v.ml:make" ->
-	    
-	    Error_messages_v.print_fatal_error nam_cod "make"
-	      (Format.sprintf "strings %s %s represent an existing entity_symbol" nam s)
-	      "it does not exists" "Check" 
+  | Failure s1 ->
+      match s1 with
+      | "Not_Entity_proper_symbol:Entity_proper_symbol_v.ml:make" ->
+      begin
+	try entity_symbol_of_entity_fictive_symbol 
+	    (Entity_fictive_symbol_v.make nam s)
+	with 
+	| Failure s2 ->
+	    match s2 with
+	    | "Not_Entity_fictive_symbol:Entity_fictive_symbol_v.ml:make" 
+	    | "Not_Entity_fictive_nullary_symbol:Entity_fictive_nullary_symbol_v.ml:make" ->
+		begin
+		  try entity_symbol_of_entity_external_symbol 
+		      (Entity_external_symbol_v.make nam s)
+		  with Failure s3 ->
+		    match s3 with
+		    | "Not_Entity_external_symbol:Entity_external_symbol_v.ml:make" ->
+			Error_messages_v.print_fatal_error nam_cod "make"
+			  (Format.sprintf "strings %s %s represent an existing entity_symbol" nam s)
+			  "it does not exists" "Check"
+		    | _ -> failwith s3
+		end
+	    | _ -> failwith s2
+      end
+      | _ -> failwith s1
+		  
 ;;
 
 (** {6 Listing} *)

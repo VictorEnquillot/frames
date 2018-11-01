@@ -2,7 +2,8 @@ INCLUDED_DIRS = \
 	$(BASICS_DIR) \
 	$(DATASTRUCTURES_DIR) \
 	$(FILES_DIR) \
-	$(realpath .) \
+	$(COMMONSET_DIR) \
+	$(CONTEXTSET_DIR) \
   
 
 

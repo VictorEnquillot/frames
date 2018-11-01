@@ -21,7 +21,7 @@ let string_off = function
 
 let longname sym_exd = 
   Format.sprintf "Entity_external_datastructure_symbol_t.%s" 
-    (String.capitalize (name sym_exd))
+    (String.capitalize_ascii (name sym_exd))
 ;;
 
 let fullname sym_exd =
@@ -31,7 +31,7 @@ let fullname sym_exd =
 (** {6 Querying} *)
 
 let is_recursive str = 
-  let low_str = String.lowercase str in
+  let low_str = String.lowercase_ascii str in
   match low_str with 
   | "list_caml"
   | "list_frames"
@@ -40,7 +40,7 @@ let is_recursive str =
 ;;
 
 let is_tuple str = 
-  let low_str = String.lowercase str in
+  let low_str = String.lowercase_ascii str in
   match low_str with 
   | "couple_caml" 
   | "doublet" 
@@ -54,7 +54,7 @@ let is_tuple str =
 ;;
 
 let is_tuple_recursive str = 
-  let low_str = String.lowercase str in
+  let low_str = String.lowercase_ascii str in
   match low_str with 
   | "capped_list"
   | "capped_tree"
@@ -78,7 +78,7 @@ let tuple_recursive s = Entity_external_datastructure_symbol_t.Tuple_recursive s
 (** {6 Making} *)
 
 let make str = 
-  let low_str = String.lowercase str in
+  let low_str = String.lowercase_ascii str in
   match low_str with
   | s when is_recursive str ->
 

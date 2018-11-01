@@ -54,7 +54,7 @@ let pipe_es_space_of_space_string = Camlline_for_any_uno_camltype_son_symbol_t.P
 (** {6 Making} *)
 
 let make nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "pipe_es_any_space_of_space_es_any_tdot_es_any" -> pipe_es_any_space_of_space_es_any_tdot_es_any
   | "pipe_es_space_of_space_string" -> pipe_es_space_of_space_string

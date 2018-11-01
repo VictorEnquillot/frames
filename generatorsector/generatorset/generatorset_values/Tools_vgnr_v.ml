@@ -15,21 +15,21 @@ let abbreviation_categorized_argument sym_cat sym_ent =
 ;;
 
 let uppercase_abbreviation_domain sym_dos = 
-  String.uppercase (Domain_symbol_v.abbreviation sym_dos)
+  String.uppercase_ascii (Domain_symbol_v.abbreviation sym_dos)
 ;;
 
 let uppercase_initial_category sym_cat = 
   let nam_cat = Category_symbol_v.name sym_cat in
   let str_one = String.sub nam_cat 0 1 in
-  String.uppercase str_one
+  String.uppercase_ascii str_one
 ;;
 
 let category_name sym_cat =
-  String.lowercase (Category_symbol_v.name sym_cat) 
+  String.lowercase_ascii (Category_symbol_v.name sym_cat) 
 ;;
 
 let category_name_capitalized sym_cat =
-  String.capitalize (category_name sym_cat)
+  String.capitalize_ascii (category_name sym_cat)
 ;;
 
 let entity_name sym_ent = 
@@ -37,14 +37,14 @@ let entity_name sym_ent =
   | Entity_symbol_t.Entity_fictive_symbol
       (Entity_fictive_symbol_t.Entity_fictive_basicnullary_symbol _) ->
 
-      String.lowercase (Entity_symbol_v.name sym_ent) 
+      String.lowercase_ascii (Entity_symbol_v.name sym_ent) 
 	  
   | _ ->
-      String.lowercase (Entity_symbol_v.string_off sym_ent) 
+      String.lowercase_ascii (Entity_symbol_v.string_off sym_ent) 
 ;;
 
 let entity_name_capitalized sym_ent =
-  String.capitalize (entity_name sym_ent)
+  String.capitalize_ascii (entity_name sym_ent)
 ;;
 
 let module_name_of_string str =
@@ -56,13 +56,13 @@ let module_name_of_string str =
 ;;
 
 let module_name sym_cat sym_ent =
-  String.lowercase (Format.sprintf "%s_%s" 
+  String.lowercase_ascii (Format.sprintf "%s_%s" 
     (Entity_symbol_v.string_off sym_ent) 
     (Category_symbol_v.name sym_cat))
 ;;
 
 let module_name_capitalized sym_cat sym_ent =
-  String.capitalize (module_name sym_cat sym_ent)
+  String.capitalize_ascii (module_name sym_cat sym_ent)
 ;;
 
 let module_suffix sym_cof =
@@ -106,11 +106,11 @@ let module_name_suffixed_extended sym_cat sym_ent sym_cof sym_usf =
 ;;
 
 let module_name_capitalized_suffixed sym_cat sym_ent sym_cof =
-  String.capitalize (module_name_suffixed sym_cat sym_ent sym_cof)
+  String.capitalize_ascii (module_name_suffixed sym_cat sym_ent sym_cof)
 ;;
 
 let module_name_capitalized_suffixed_extended sym_cat sym_ent sym_cof sym_usf =
-  String.capitalize (module_name_suffixed_extended sym_cat sym_ent sym_cof sym_usf)
+  String.capitalize_ascii (module_name_suffixed_extended sym_cat sym_ent sym_cof sym_usf)
 ;;
 
 let uno_off_list nam_cod nam_fun sym_cal sym_ent_l =
@@ -118,24 +118,25 @@ let uno_off_list nam_cod nam_fun sym_cal sym_ent_l =
     try 
       List_v.element_off_one_element_list sym_ent_l
     with 
-    | Failure "Empty_list:list_v.ml:element_off_one_element_list" ->
-
-      Error_messages_v.print_fatal_error 
+    | Failure s ->
+	match s with
+	| "Empty_list:list_v.ml:element_off_one_element_list" ->
+	    Error_messages_v.print_fatal_error 
 	("Tools_vgnr_v.ml in "^nam_cod) nam_fun
 	  "exactly 1 elements in list"
 	  "Empty list"
 	  (Format.sprintf "check Formula for @.   >%s<@.    in module@.   >Camlparagraph_for_..._proformula_v.ml<"
 	     (Camlline_symbol_v.name sym_cal))
 
-    | Failure "Several_elements:list_v.ml:element_off_one_element_list" ->
-
-      Error_messages_v.print_fatal_error 
-	("Tools_vgnr_v.ml in "^nam_cod) nam_fun
-	"exactly 1 elements in list"
-	(Format.sprintf "%s" 
+	| "Several_elements:list_v.ml:element_off_one_element_list" ->
+	    Error_messages_v.print_fatal_error 
+	      ("Tools_vgnr_v.ml in "^nam_cod) nam_fun
+	      "exactly 1 elements in list"
+	      (Format.sprintf "%s" 
 	   (List_v.name_with_separator Entity_symbol_v.string_off ";" sym_ent_l))
-	(Format.sprintf "check number of Entity_symbol in Formula for @.   >%s<@.    in module@.   >camlparagraph_proformula_v.ml<"
-	   (Camlline_symbol_v.name sym_cal))
+	      (Format.sprintf "check number of Entity_symbol in Formula for @.   >%s<@.    in module@.   >camlparagraph_proformula_v.ml<"
+		 (Camlline_symbol_v.name sym_cal))
+	| _ -> failwith s
   in
   a
 ;;
@@ -210,7 +211,7 @@ let datastructure_tdot_datastructure_of_camlline_symbol sym_cal =
   let str_cal = Camlline_symbol_v.string_off sym_cal in
 
   Format.sprintf "%s_t.%s" 
-    (String.capitalize str_cal) str_cal 
+    (String.capitalize_ascii str_cal) str_cal 
 ;;
 ****)
 let entity_tag_tdot_entity_tag_of_entity_symbol sym_ent =
@@ -286,14 +287,14 @@ gives :
     argument_module_name_list_of_arguments_string 
       str_arg 
   in
-  let nam_mod_cap_l = List.map String.capitalize nam_mod_low_l in
+  let nam_mod_cap_l = List.map String.capitalize_ascii nam_mod_low_l in
   let nam_typ_l =
     List.map2 (fun c l -> c ^ "_t." ^ l)
       nam_mod_cap_l nam_mod_low_l 
   in
   let str = List_v.name_with_separator Utilities_v.identity ", " nam_typ_l in
-  Bytes.set str 0 '('; 
-  Bytes.set str ((String.length str) -1) ')';
+  Bytes.set (Bytes.of_string str) 0 '('; 
+  Bytes.set (Bytes.of_string str) ((String.length str) -1) ')';
   str 
 ;;
 
@@ -304,11 +305,11 @@ let constructor_name_of_entity_symbol_of_arguments_string sym_ent str_arg =
   in
   let str = List_v.name_with_separator Utilities_v.identity "_" nam_mod_l in
   let nam_con =
-    String_v.cut_first_character_of_string 
-      (String_v.cut_last_character_of_string str) 
+    String_v.cut_first_character_off_string 
+      (String_v.cut_last_character_off_string str) 
   in
   let nam_ent = Entity_symbol_v.name sym_ent in
-  (String.capitalize nam_ent) ^"_"^ nam_con
+  (String.capitalize_ascii nam_ent) ^"_"^ nam_con
 ;;
 
 let make_pipe_datastructure_camltype sym_ent_l =

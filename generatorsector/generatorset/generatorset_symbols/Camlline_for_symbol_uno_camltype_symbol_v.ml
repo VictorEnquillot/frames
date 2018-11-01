@@ -51,7 +51,7 @@ let pipe_es = Camlline_for_symbol_uno_camltype_symbol_t.Pipe_es;;
 (** {6 Making} *)
 
 let make nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "pipe_es" -> pipe_es
   | _ ->

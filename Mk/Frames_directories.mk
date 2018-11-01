@@ -1,5 +1,6 @@
 # Frames directory content :
 
+GENERATORSECTOR_DIR := $(FRAMES_DIR)/generatorsector
 GENERALSECTOR_DIR := $(FRAMES_DIR)/generalsector
 
 ENTRYSECTOR_DIR := $(FRAMES_DIR)/entrysector
@@ -8,6 +9,7 @@ INTERNALSECTOR_DIR := $(FRAMES_DIR)/internalsector
 PRODUCTSECTOR_DIR := $(FRAMES_DIR)/productsector
 
 # sectors
+include $(MAK)/Frames_generatorsector_directories.mk
 include $(MAK)/Frames_generalsector_directories.mk
 
 include $(MAK)/Frames_entrysector_directories.mk

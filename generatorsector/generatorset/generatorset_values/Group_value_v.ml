@@ -80,7 +80,7 @@ let fullnameoffile nam_dir tag_gro =
     (Item_symbol_v.name sym_ite) (Group_symbol_v.name sym_gro) 
     suf_mod ext_caf
   in 
-  nam_dir ^ (String.capitalize nam_fil)
+  nam_dir ^ (String.capitalize_ascii nam_fil)
 ;;
 
 let oc_of_fullnameoffile nof = 

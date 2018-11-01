@@ -36,7 +36,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_ddb =
-  Format.sprintf "Camlline_for_formula_duo_localset_data_symbol_t.%s" (String.capitalize (name sym_ddb))
+  Format.sprintf "Camlline_for_formula_duo_localset_data_symbol_t.%s" (String.capitalize_ascii (name sym_ddb))
 ;;
 
 
@@ -106,7 +106,7 @@ let list_dot_iter2_localset_symbol_by_sole_index_register_vdot_store_soi_ad_l_ds
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "let_dss_of_sym_equal_localset_symbol_vdot_localset_symbol_of_ed_symbol_in" -> let_dss_of_sym_equal_localset_symbol_vdot_localset_symbol_of_ed_symbol_in
   | "list_dot_iter2_localset_symbol_by_sole_index_register_vdot_store_soi_ad_l_dss_ad_l_semicolon" -> list_dot_iter2_localset_symbol_by_sole_index_register_vdot_store_soi_ad_l_dss_ad_l_semicolon
@@ -118,7 +118,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Camlline_for_formula_duo_localset_data_symbol_v.ml:make_of_topson_ofstring"

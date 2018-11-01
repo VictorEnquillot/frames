@@ -54,7 +54,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_dtb =
-  Format.sprintf "Camlline_for_formula_duo_top_builder_symbol_t.%s" (String.capitalize (name sym_dtb))
+  Format.sprintf "Camlline_for_formula_duo_top_builder_symbol_t.%s" (String.capitalize_ascii (name sym_dtb))
 ;;
 
 
@@ -187,7 +187,7 @@ let let_tag_ab_l_equal_eb_tag_list_off_et_formula_for_at_in = Camlline_for_formu
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "eb_tag_list_off_et_formula_for_at" -> eb_tag_list_off_et_formula_for_at
   | "let_eb_tag_list_off_et_formula_equal_function" -> let_eb_tag_list_off_et_formula_equal_function
@@ -208,7 +208,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Camlline_for_formula_duo_top_builder_symbol_v.ml:make_of_topson_ofstring"

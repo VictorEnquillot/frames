@@ -26,8 +26,11 @@ let store tra_cat fin =
       database_filename_by_category_trail_register 
       tra_cat 
       fin
-  with Failure ("Not_stored:Register_v.ml:store") ->
-    failwith ("Not_stored:"^nam_cod^":store")
+  with Failure s ->
+    match s with
+    | "Not_stored:Register_v.ml:store" ->
+	failwith ("Not_stored:"^nam_cod^":store")
+    | _ -> failwith s
 ;;
 
 let is_stored tra_cat =
@@ -38,8 +41,11 @@ let retrieve tra_cat =
   try Register_v.retrieve 
       database_filename_by_category_trail_register 
       tra_cat
-  with Failure ("Not_stored:Register_v.ml:retrieve") ->
-    failwith ("Not_stored:"^nam_cod^":retrieve")
+  with Failure s ->
+    match s with
+    | "Not_stored:Register_v.ml:retrieve" ->
+	failwith ("Not_stored:"^nam_cod^":retrieve")
+    | _ -> failwith s
 ;;  
 
 let nameoffile_of_category_trail tra_cat =
@@ -62,8 +68,8 @@ let nameoffile_of_category_trail tra_cat =
 
 let build tra_cat =
   let nam_dir_fra =
-    Frames_directories_v.frames_directory_name_of_environment_variable "FRA"
-  in
+    Frames_fullnameofdirectory_by_unit_provider_v.provide ();
+   in
   if not (Sys.file_exists nam_dir_fra)
   then 
     Error_messages_v.print_fatal_error nam_cod 

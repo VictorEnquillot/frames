@@ -19,9 +19,9 @@ SRCROOTDIR=`cd ..; pwd`
 # The file to generate (only one file)
 GENERATED=Config.mk
 
-/bin/rm -f $GENERATED ./.cvsignore
+/bin/rm -f $GENERATED ./.gitignore
 
-cp -pf cvsignore ./.cvsignore
+cp -pf gitignore ./.gitignore
 
 echo "#" > $GENERATED
 echo "# Warning: this file has been generated." >> $GENERATED

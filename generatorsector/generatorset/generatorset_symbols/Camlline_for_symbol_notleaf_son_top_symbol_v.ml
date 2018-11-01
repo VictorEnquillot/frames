@@ -66,7 +66,7 @@ let try_et_symbol_of_es_symbol = Camlline_for_symbol_notleaf_son_top_symbol_t.Tr
 (** {6 Making} *)
 
 let make nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "let_es_equal_et_symbol_of_es_symbol_space_es_symbol_vdot_es" -> let_es_equal_et_symbol_of_es_symbol_space_es_symbol_vdot_es
   | "let_es_symbol_arg_equal_et_symbol_tdot_es_symbol_space_arg" -> let_es_symbol_arg_equal_et_symbol_tdot_es_symbol_space_arg

@@ -34,7 +34,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_fie =
-  Format.sprintf "Figure_set_body_triangle_isosceles_equilateral_symbol_t.%s" (String.capitalize (name sym_fie))
+  Format.sprintf "Figure_set_body_triangle_isosceles_equilateral_symbol_t.%s" (String.capitalize_ascii (name sym_fie))
 ;;
 
 
@@ -96,7 +96,7 @@ let figure_set_body_triangle_isosceles_equilateral_constructor s = Figure_set_bo
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_bare:Figure_set_body_triangle_isosceles_equilateral_symbol_v.ml:make_of_topson_bare"
@@ -106,7 +106,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "figure_set_body_triangle_isosceles_equilateral_constructor" -> figure_set_body_triangle_isosceles_equilateral_constructor s
   | _ ->

@@ -34,7 +34,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_smd =
-  Format.sprintf "Section_for_formula_body_top_main_data_symbol_t.%s" (String.capitalize (name sym_smd))
+  Format.sprintf "Section_for_formula_body_top_main_data_symbol_t.%s" (String.capitalize_ascii (name sym_smd))
 ;;
 
 
@@ -96,7 +96,7 @@ let builder_stem_sole_index_data_list = Section_for_formula_body_top_main_data_s
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "builder_stem_sole_index_data_list" -> builder_stem_sole_index_data_list
   | _ ->
@@ -107,7 +107,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Section_for_formula_body_top_main_data_symbol_v.ml:make_of_topson_ofstring"

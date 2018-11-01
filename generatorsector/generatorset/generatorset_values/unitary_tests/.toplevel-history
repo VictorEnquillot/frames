@@ -1802,3 +1802,4 @@ rm /keep/sources/ocaml_top/setup/frames/geometryset/geometryset_formulas/Triangl
  #use "Do_databaseset_symbols_tv.ml";;
  #use "Do_dgn_symbols_tv.ml";;
 #use "Do_dgn_symbols_files_mli_mk.ml";;
+#use "Do_figureset_symbols_tv.ml";;

@@ -55,7 +55,7 @@ let interface_for_symbol = Usagefile_for_symbol_symbol_t.Interface_for_symbol;;
 (** {6 Making} *)
 
 let make nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "implementation_for_symbol" -> implementation_for_symbol
   | "interface_for_symbol" -> interface_for_symbol

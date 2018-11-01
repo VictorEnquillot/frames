@@ -89,7 +89,7 @@ let fullnameoffile nam_dir tag_cal =
       (Camlline_symbol_v.name sym_cal) 
       suf_mod ext_caf
   in 
-  nam_dir ^ (String.capitalize nam_fil)
+  nam_dir ^ (String.capitalize_ascii nam_fil)
 ;;
 
 let write_of_oc_of_camlline_value oc val_cal =

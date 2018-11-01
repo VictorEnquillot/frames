@@ -22,6 +22,7 @@ $(ITEM_T_MLI) \
 $(SECTION_T_MLI) \
 $(USAGEFILE_T_MLI) \
  \
+Domain_symbol_t.mli \
 Generatorset_symbol_t.mli \
  
 FILES_V_MLI:=$(subst symbol_t,symbol_v,$(FILES_T_MLI))

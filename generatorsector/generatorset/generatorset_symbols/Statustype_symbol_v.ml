@@ -24,7 +24,7 @@ let name = function
 
 let longname sym_sta = 
   Format.sprintf "Statustype_symbol_t.%s" 
-    (String.capitalize (name sym_sta))
+    (String.capitalize_ascii (name sym_sta))
 ;;
 
 (** {6 Abbreviating} *)

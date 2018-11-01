@@ -24,7 +24,7 @@ let name = function
 ;;
 
 let longname sym_cdc = 
-  "Camlline_datastructure_camltype_duo_symbol_t." ^ (String.capitalize (name sym_cdc));;
+  "Camlline_datastructure_camltype_duo_symbol_t." ^ (String.capitalize_ascii (name sym_cdc));;
 
 let string_off sym_cdc = "";;
 

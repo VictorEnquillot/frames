@@ -16,7 +16,7 @@ let string_off = function
 
 let longname sym_efn = 
   Format.sprintf "Entity_fictive_nullary_symbol_t.%s" 
-    (String.capitalize (name sym_efn))
+    (String.capitalize_ascii (name sym_efn))
 ;;
 
 let fullname sym_efn =

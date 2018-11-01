@@ -4,25 +4,25 @@ ledit -x -h ./.toplevel-history ocaml \
 -I $BAS \
 -I $FIL \
 -I $DAT \
--I $COM \
--I $COMDBA \
--I $DGEN/adb \
--I $SGEN \
--I $TGEN \
--I $IGEN \
--I $FGEN \
+-I $COMS \
+-I $CONS \
+-I $DGTR/adb \
+-I $SGTR \
+-I $TGTR \
+-I $IGTR \
+-I $FGTR \
 -I ../ \
 unix.cma str.cma \
 $BAS/basics.cma \
 $FIL/files.cma \
 $DAT/datastructures.cma \
-$COM/commonset.cma \
-$COMDBA/databaseset_common.cma \
-$DGEN/adb/adb.cma \
-$SGEN/generatorset_symbols.cma \
-$TGEN/generatorset_tags.cma \
-$IGEN/generatorset_interfaces.cma \
-$FGEN/generatorset_formulas.cma \
-$VGEN/generatorset_values.cma \
+$COMS/commonset.cma \
+$CONS/contextset.cma \
+$DGTR/adb/adb.cma \
+$SGTR/generatorset_symbols.cma \
+$TGTR/generatorset_tags.cma \
+$IGTR/generatorset_interfaces.cma \
+$FGTR/generatorset_formulas.cma \
+$VGTR/generatorset_values.cma \
  
 

@@ -71,7 +71,7 @@ let fullnameoffile nam_dir tag_cof =
     (Contentfile_symbol_v.name sym_cof) 
     suf_mod 
   in 
-  nam_dir ^ (String.capitalize nam_fil)
+  nam_dir ^ (String.capitalize_ascii nam_fil)
 ;;
 
 let oc_of_fullnameoffile nof = 

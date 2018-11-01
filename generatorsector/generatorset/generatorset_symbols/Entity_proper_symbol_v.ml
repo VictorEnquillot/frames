@@ -21,7 +21,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_ent =
-  Format.sprintf "Entity_proper_symbol_t.%s" (String.capitalize (name sym_ent))
+  Format.sprintf "Entity_proper_symbol_t.%s" (String.capitalize_ascii (name sym_ent))
 ;;
 
 (** {6 Fullnaming_for_symbol} *)

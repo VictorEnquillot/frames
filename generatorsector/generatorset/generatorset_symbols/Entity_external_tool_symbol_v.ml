@@ -12,7 +12,7 @@ let name = function
 
 let longname sym_ext = 
   Format.sprintf "Entity_external_tool_symbol_t.%s" 
-    (String.capitalize (name sym_ext))
+    (String.capitalize_ascii (name sym_ext))
 ;;
 
 let string_off sym_ext = "";; 

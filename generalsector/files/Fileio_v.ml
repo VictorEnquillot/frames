@@ -89,7 +89,7 @@ let write_of_string_list_of_filename str_l fna =
   close_out oc
 ;; 
 
-let open_out_channel_of_string_of_string_of_fullname nam_cod nam_fun nof =
+let open_out_channel_of_string_of_string_of_fullnameoffile nam_cod nam_fun nof =
   try open_out nof
   with 
   | Sys_error s ->

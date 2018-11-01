@@ -51,7 +51,7 @@ let abbreviation_argument_of_entity_external_constrained_symbol = function
 ;;
 
 let abbreviation_argument_of_entity_external_datastructure_recursive str =
-  let low_str = String.lowercase str in
+  let low_str = String.lowercase_ascii str in
   match low_str with 
   | "list_caml" -> "lic"
   | "list_frames" -> "lif"
@@ -63,7 +63,7 @@ let abbreviation_argument_of_entity_external_datastructure_recursive str =
 ;;
 
 let abbreviation_argument_of_entity_external_datastructure_tuple str =
-  let low_str = String.lowercase str in
+  let low_str = String.lowercase_ascii str in
   match low_str with 
   | "couple_caml" -> "coc"
   | "doublet" -> "dou"
@@ -80,7 +80,7 @@ let abbreviation_argument_of_entity_external_datastructure_tuple str =
 ;;
 
 let abbreviation_argument_of_entity_external_datastructure_tuple_recursive str =
-  let low_str = String.lowercase str in
+  let low_str = String.lowercase_ascii str in
   match low_str with 
   | "capped_list" -> "cal"
   | "capped_tree" -> "cat"

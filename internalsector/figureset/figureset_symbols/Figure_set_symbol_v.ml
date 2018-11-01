@@ -40,7 +40,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_fse =
-  Format.sprintf "Figure_set_symbol_t.%s" (String.capitalize (name sym_fse))
+  Format.sprintf "Figure_set_symbol_t.%s" (String.capitalize_ascii (name sym_fse))
 ;;
 
 
@@ -478,7 +478,7 @@ let figure_set_fence_point_constructor s = figure_set_symbol_of_figure_set_fence
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_bare:Figure_set_symbol_v.ml:make_of_topson_bare"
@@ -488,7 +488,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Figure_set_symbol_v.ml:make_of_topson_ofstring"

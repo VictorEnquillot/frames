@@ -36,7 +36,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_shs =
-  Format.sprintf "Section_for_symbol_header_son_symbol_t.%s" (String.capitalize (name sym_shs))
+  Format.sprintf "Section_for_symbol_header_son_symbol_t.%s" (String.capitalize_ascii (name sym_shs))
 ;;
 
 
@@ -106,7 +106,7 @@ let let_is_topson_ofstring = Section_for_symbol_header_son_symbol_t.Let_is_topso
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "let_is_topson_bare" -> let_is_topson_bare
   | "let_is_topson_ofstring" -> let_is_topson_ofstring
@@ -118,7 +118,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Section_for_symbol_header_son_symbol_v.ml:make_of_topson_ofstring"

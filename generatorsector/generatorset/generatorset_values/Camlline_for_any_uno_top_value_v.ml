@@ -62,10 +62,10 @@ let string_of sym_cuf soi_cal =
 	(abbreviation_argument sym_ent)  
 
   | Camlline_for_any_uno_top_symbol_t.Sprintf_for_any_longname ->
-   (*  Format.sprintf "Geometry_symbol_t.%s" (String.capitalize (name sym_geo)) *)
+   (*  Format.sprintf "Geometry_symbol_t.%s" (String.capitalize_ascii (name sym_geo)) *)
 
       Format.sprintf 
-	"  Format.sprintf \"%s_t.%%s\" (String.capitalize (name sym_%s))" 
+	"  Format.sprintf \"%s_t.%%s\" (String.capitalize_ascii (name sym_%s))" 
 	(module_name_capitalized sym_cat sym_ent)  
 	(abbreviation_argument sym_ent)  
 
@@ -96,7 +96,7 @@ let string_of sym_cuf soi_cal =
 
   | Camlline_for_any_uno_top_symbol_t.Lpar_string_dot_capitalize_lpar_name_ac_at_rpar_rpar ->
 
-      Format.sprintf "  (String.capitalize (name %s) )"
+      Format.sprintf "  (String.capitalize_ascii (name %s) )"
 	(abbreviation_categorized_argument sym_cat sym_ent)
 
   | Camlline_for_any_uno_top_symbol_t.Let_retrieve_tag_top_equal ->

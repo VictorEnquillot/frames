@@ -89,7 +89,7 @@ let fullnameoffile nam_dir tag_eee =
     (Entity_symbol_v.name sym_eee) 
     suf_mod ext_caf
   in 
-  nam_dir ^ (String.capitalize nam_fil)
+  nam_dir ^ (String.capitalize_ascii nam_fil)
 ;;
 
 let oc_of_fullnameoffile nof = 

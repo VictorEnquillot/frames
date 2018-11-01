@@ -13,7 +13,7 @@ let name = function
 
 let longname sym_cdf = 
   Format.sprintf "Entity_external_datastructure_symbol_t.%s" 
-    (String.capitalize (name sym_cdf))
+    (String.capitalize_ascii (name sym_cdf))
 ;;
 
 let string_off = function

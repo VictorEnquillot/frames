@@ -41,7 +41,7 @@ let nam_mod_low_l =
   argument_module_name_list_of_arguments_string 
     str_arg 
 in
-let nam_mod_cap_l = List.map String.capitalize nam_mod_low_l in
+let nam_mod_cap_l = List.map String.capitalize_ascii nam_mod_low_l in
   let nam_typ_l =
     List.map2 (fun c l -> c ^ "_t." ^ l)
       nam_mod_cap_l nam_mod_low_l 
@@ -63,12 +63,12 @@ let constructor_name_of_entity_symbol_of_arguments_string sym_ent str_arg =
       (String_v.cut_last_character_of_string str) 
   in
   let nam_ent = Entity_symbol_v.name sym_ent in
-  (String.capitalize nam_ent) ^"_"^ nam_con
+  (String.capitalize_ascii nam_ent) ^"_"^ nam_con
 ;;
 
 let datastructure_module_name_of_entity_symbol sym_ent =
   let nam_sym = Entity_symbol_v.name sym_ent in
-  (String.capitalize nam_sym) ^ "_t." ^  nam_sym
+  (String.capitalize_ascii nam_sym) ^ "_t." ^  nam_sym
 ;;
 (***
   let (sym_exd, sym_enf_l) =

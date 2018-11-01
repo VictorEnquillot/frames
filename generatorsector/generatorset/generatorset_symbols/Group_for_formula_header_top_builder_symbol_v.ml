@@ -44,7 +44,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_gtb =
-  Format.sprintf "Group_for_formula_header_top_builder_symbol_t.%s" (String.capitalize (name sym_gtb))
+  Format.sprintf "Group_for_formula_header_top_builder_symbol_t.%s" (String.capitalize_ascii (name sym_gtb))
 ;;
 
 
@@ -142,7 +142,7 @@ let let_map_for_formula = Group_for_formula_header_top_builder_symbol_t.Let_map_
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "let_builder_tag_list_off_top_formula" -> let_builder_tag_list_off_top_formula
   | "let_builder_tag_list_off_top_tag" -> let_builder_tag_list_off_top_tag
@@ -158,7 +158,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Group_for_formula_header_top_builder_symbol_v.ml:make_of_topson_ofstring"

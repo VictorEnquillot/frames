@@ -38,7 +38,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_bst =
-  Format.sprintf "Section_for_formula_body_son_top_symbol_t.%s" (String.capitalize (name sym_bst))
+  Format.sprintf "Section_for_formula_body_son_top_symbol_t.%s" (String.capitalize_ascii (name sym_bst))
 ;;
 
 
@@ -115,7 +115,7 @@ let symbol_of_formula_topson_pattern_ofstring = Section_for_formula_body_son_top
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "symbol_of_formula_topson_pattern_bare" -> symbol_of_formula_topson_pattern_bare
   | "symbol_of_formula_topson_pattern_notleaf" -> symbol_of_formula_topson_pattern_notleaf
@@ -128,7 +128,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Section_for_formula_body_son_top_symbol_v.ml:make_of_topson_ofstring"

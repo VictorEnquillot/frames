@@ -30,7 +30,7 @@ let make sym_ccp soi_cal =
   | Camlline_constant_pervasive_symbol_t.Item_title ->
       let sym_ite = Generatorset_symbol_by_sole_index_provider_v.item_symbol_off_sole_index soi_cal in
       let nam_ite = Item_symbol_v.name sym_ite in
-      let str = Format.sprintf "(** {6 %s} *)" (String.capitalize nam_ite) in
+      let str = Format.sprintf "(** {6 %s} *)" (String.capitalize_ascii nam_ite) in
       Camlline_constant_pervasive_value_t.Item_title str
   
   | Camlline_constant_pervasive_symbol_t.Double_semicolon ->

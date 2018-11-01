@@ -66,7 +66,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_sla =
-  Format.sprintf "Camlparagraph_for_symbol_let_argument_symbol_t.%s" (String.capitalize (name sym_sla))
+  Format.sprintf "Camlparagraph_for_symbol_let_argument_symbol_t.%s" (String.capitalize_ascii (name sym_sla))
 ;;
 
 
@@ -241,7 +241,7 @@ let let_top_symbol_of_topson_notleaf_symbol = Camlparagraph_for_symbol_let_argum
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "let_documentation_for_symbol" -> let_documentation_for_symbol
   | "let_es_symbol_off_et_symbol_datastructure_argument" -> let_es_symbol_off_et_symbol_datastructure_argument
@@ -268,7 +268,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Camlparagraph_for_symbol_let_argument_symbol_v.ml:make_of_topson_ofstring"

@@ -11,6 +11,7 @@ let documentation () =
    "What-is-it : the Camlline_tag Datastructure expressing the Current formula";
    "What-is-it : It upgrades Formula type as Symbol type";
    "Remark : It is a Stem type";
+   "Author : François Colonna 30 octobre 2018 at 09:51:12+01:00";
  ]
 ;;
 
@@ -20,59 +21,19 @@ let nam_cod = Management_v.current_module_name (documentation ());;
 
 let symbol_of_formula for_dom =
   match for_dom with
-  | Domain_formula_t.Chemical _ ->      Domain_symbol_t.Chemical
-
-  | Domain_formula_t.Generator _ ->      Domain_symbol_t.Generator
-
-  | Domain_formula_t.Figure _ ->      Domain_symbol_t.Figure
-
-  | Domain_formula_t.Logic _ ->      Domain_symbol_t.Logic
-
-  | Domain_formula_t.Natural _ ->      Domain_symbol_t.Natural
-
-  | Domain_formula_t.Fake _ ->      Domain_symbol_t.Fake
-
-  | Domain_formula_t.Music _ ->      Domain_symbol_t.Music
-
-  | Domain_formula_t.Common _ ->      Domain_symbol_t.Common
-
-  | Domain_formula_t.Database _ ->      Domain_symbol_t.Database ""
-
-  | Domain_formula_t.Input _ ->      Domain_symbol_t.Input ""
-
-  | Domain_formula_t.Elementary _ ->      Domain_symbol_t.Elementary
-
-  | Domain_formula_t.Operator _ ->      Domain_symbol_t.Operator
-
-  | Domain_formula_t.Property _ ->      Domain_symbol_t.Property
-
-  (* | Domain_formula_t.Forcefield -> *)
-  (*     Domain_symbol_t.Forcefield *)
-
-  (* | Domain_formula_t.Model -> *)
-  (*     Domain_symbol_t.Model *)
-
-  (* | Domain_formula_t.Molecule -> *)
-  (*     Domain_symbol_t.Molecule *)
-
-  (* | Domain_formula_t.Physical -> *)
-  (*     Domain_symbol_t.Physical *)
-
-  (* | Domain_formula_t.Primitive -> *)
-  (*     Domain_symbol_t.Primitive *)
-
-  (* | Domain_formula_t.Prototype -> *)
-  (*     Domain_symbol_t.Prototype *)
-
-  (* | Domain_formula_t.Simulation -> *)
-  (*     Domain_symbol_t.Simulation *)
-
-  (* | Domain_formula_t.Wavefunction -> *)
-  (*     Domain_symbol_t.Wavefunction *)
-
-  (* | Domain_formula_t.Wikitool -> *)
-  (*     Domain_symbol_t.Wikitool *)
-
+  | Domain_formula_t.Common _ -> Domain_symbol_t.Common
+  | Domain_formula_t.Database _ -> Domain_symbol_t.Database
+  | Domain_formula_t.Elementary _ -> Domain_symbol_t.Elementary
+  | Domain_formula_t.Figure _ -> Domain_symbol_t.Figure
+  | Domain_formula_t.General _ ->	Domain_symbol_t.General
+  | Domain_formula_t.Generator _ -> Domain_symbol_t.Generator
+  | Domain_formula_t.Localinput _ -> Domain_symbol_t.Localinput
+  | Domain_formula_t.Operator _ -> Domain_symbol_t.Operator
+  | Domain_formula_t.Primitive _ -> Domain_symbol_t.Primitive
+  | Domain_formula_t.Property _ -> Domain_symbol_t.Property
+  | Domain_formula_t.Prototype _ -> Domain_symbol_t.Prototype
+  | Domain_formula_t.Skeleton _ -> Domain_symbol_t.Skeleton
+  | Domain_formula_t.Wavefunction _ -> Domain_symbol_t.Wavefunction
 ;;
 
 (** {6 Naming_for_formula} *)
@@ -117,66 +78,20 @@ let build_n_store sym_dom soi_dom =
 let make sym_dom soi_dom =
   let tag_cat_l = build_n_store sym_dom soi_dom in
 
-  match sym_dom with 
-  | Domain_symbol_t.Generator ->
-      Domain_formula_t.Generator tag_cat_l
-
-  | Domain_symbol_t.Figure ->
-      Domain_formula_t.Figure tag_cat_l
-
-  | Domain_symbol_t.Logic ->
-      Domain_formula_t.Logic tag_cat_l
-
-  | Domain_symbol_t.Natural ->
-      Domain_formula_t.Natural tag_cat_l
-
-  | Domain_symbol_t.Fake ->
-      Domain_formula_t.Fake tag_cat_l
-
-  | Domain_symbol_t.Common ->
-      Domain_formula_t.Common tag_cat_l
-
-  | Domain_symbol_t.Music ->
-      Domain_formula_t.Music tag_cat_l
-
-  | Domain_symbol_t.Chemical -> Domain_formula_t.Chemical tag_cat_l
-
-  | Domain_symbol_t.Database _ -> Domain_formula_t.Database tag_cat_l
-
+  match sym_dom with
+  | Domain_symbol_t.Common -> Domain_formula_t.Common tag_cat_l
+  | Domain_symbol_t.Database -> Domain_formula_t.Database tag_cat_l
   | Domain_symbol_t.Elementary -> Domain_formula_t.Elementary tag_cat_l
-
-  | Domain_symbol_t.Input _ -> Domain_formula_t.Input tag_cat_l
-
+  | Domain_symbol_t.Figure -> Domain_formula_t.Figure tag_cat_l
+  | Domain_symbol_t.General -> Domain_formula_t.General tag_cat_l
+  | Domain_symbol_t.Generator -> Domain_formula_t.Generator tag_cat_l
+  | Domain_symbol_t.Localinput -> Domain_formula_t.Localinput tag_cat_l
   | Domain_symbol_t.Operator -> Domain_formula_t.Operator tag_cat_l
-
+  | Domain_symbol_t.Primitive -> Domain_formula_t.Primitive tag_cat_l
   | Domain_symbol_t.Property -> Domain_formula_t.Property tag_cat_l
-
-  (* | Domain_symbol_t.Forcefield -> *)
-  (*     Domain_formula_t.Forcefield tag_cat_l *)
-
-  (* | Domain_symbol_t.Model -> *)
-  (*     Domain_formula_t.Model tag_cat_l *)
-
-  (* | Domain_symbol_t.Molecule -> *)
-  (*     Domain_formula_t.Molecule tag_cat_l *)
-
-  (* | Domain_symbol_t.Physical -> *)
-  (*     Domain_formula_t.Physical tag_cat_l *)
-
-  (* | Domain_symbol_t.Primitive -> *)
-  (*     Domain_formula_t.Primitive tag_cat_l *)
-
-  (* | Domain_symbol_t.Prototype -> *)
-  (*     Domain_formula_t.Prototype tag_cat_l *)
-
-  (* | Domain_symbol_t.Simulation -> *)
-  (*     Domain_formula_t.Simulation tag_cat_l *)
-
-  (* | Domain_symbol_t.Wavefunction -> *)
-  (*     Domain_formula_t.Wavefunction tag_cat_l *)
-
-  (* | Domain_symbol_t.Wikitool -> *)
-  (*     Domain_formula_t.Wikitool tag_cat_l *)
+  | Domain_symbol_t.Prototype -> Domain_formula_t.Prototype tag_cat_l
+  | Domain_symbol_t.Skeleton -> Domain_formula_t.Skeleton tag_cat_l
+  | Domain_symbol_t.Wavefunction -> Domain_formula_t.Wavefunction tag_cat_l
 ;;
 
 (** {6 Retrieving} *)
@@ -191,59 +106,19 @@ let retrieve tag_dom =
 
 let category_tag_list_off_domain_formula for_dom =
   match for_dom with
-  | Domain_formula_t.Common tag_cat_l ->      tag_cat_l
-
-  | Domain_formula_t.Chemical tag_cat_l ->      tag_cat_l
-
-  | Domain_formula_t.Generator tag_cat_l ->      tag_cat_l
-
-  | Domain_formula_t.Figure tag_cat_l ->      tag_cat_l
-
-  | Domain_formula_t.Logic tag_cat_l ->      tag_cat_l
-
-  | Domain_formula_t.Fake tag_cat_l ->      tag_cat_l
-
-  | Domain_formula_t.Natural tag_cat_l ->      tag_cat_l
-
-  | Domain_formula_t.Music tag_cat_l ->      tag_cat_l
-
-  | Domain_formula_t.Database tag_cat_l ->      tag_cat_l
-
-  | Domain_formula_t.Elementary tag_cat_l ->      tag_cat_l
-
-  | Domain_formula_t.Input tag_cat_l ->      tag_cat_l
-
-  | Domain_formula_t.Operator tag_cat_l ->      tag_cat_l
-
-  | Domain_formula_t.Property tag_cat_l ->      tag_cat_l
-
-
-  (* | Domain_formula_t.Forcefield tag_cat_l -> *)
-  (*     tag_cat_l *)
-
-  (* | Domain_formula_t.Model tag_cat_l -> *)
-  (*     tag_cat_l *)
-
-  (* | Domain_formula_t.Molecule tag_cat_l -> *)
-  (*     tag_cat_l *)
-
-  (* | Domain_formula_t.Physical tag_cat_l -> *)
-  (*     tag_cat_l *)
-
-  (* | Domain_formula_t.Primitive tag_cat_l -> *)
-  (*     tag_cat_l *)
-
-  (* | Domain_formula_t.Prototype tag_cat_l -> *)
-  (*     tag_cat_l *)
-
-  (* | Domain_formula_t.Simulation tag_cat_l -> *)
-  (*     tag_cat_l *)
-
-  (* | Domain_formula_t.Wavefunction tag_cat_l -> *)
-  (*     tag_cat_l *)
-
-  (* | Domain_formula_t.Wikitool tag_cat_l -> *)
-  (*     tag_cat_l *)
+  |  Domain_formula_t.Common  tag_cat_l -> tag_cat_l
+  |  Domain_formula_t.Database  tag_cat_l -> tag_cat_l
+  |  Domain_formula_t.Elementary  tag_cat_l -> tag_cat_l
+  |  Domain_formula_t.Figure  tag_cat_l -> tag_cat_l
+  |  Domain_formula_t.General tag_cat_l -> tag_cat_l
+  |  Domain_formula_t.Generator tag_cat_l -> tag_cat_l
+  |  Domain_formula_t.Localinput  tag_cat_l -> tag_cat_l
+  |  Domain_formula_t.Operator  tag_cat_l -> tag_cat_l
+  |  Domain_formula_t.Primitive  tag_cat_l -> tag_cat_l
+  |  Domain_formula_t.Property  tag_cat_l -> tag_cat_l
+  |  Domain_formula_t.Prototype  tag_cat_l -> tag_cat_l
+  |  Domain_formula_t.Skeleton  tag_cat_l -> tag_cat_l
+  |  Domain_formula_t.Wavefunction  tag_cat_l -> tag_cat_l
 ;;
 
 let category_tag_list_off_domain_tag tag_dom =

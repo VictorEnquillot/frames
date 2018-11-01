@@ -1,8 +1,8 @@
-let name = "v2.4";;
+let name = "v2.5";;
 
 let attributes = 
 [
- "2nd of July 2013";
+ "31st of October 2018";
  "Symbols and Formulas (for List) work";
  "Only Symbols have a Domain global type (to store Symbols by Sole_index) : type domain_symbol =";
  "Formulas are not Stored";

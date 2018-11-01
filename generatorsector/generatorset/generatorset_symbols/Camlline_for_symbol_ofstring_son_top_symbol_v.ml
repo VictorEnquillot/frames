@@ -57,7 +57,7 @@ let pipe_et_symbol_tdot_es_space_sarg_arrow_sarg = Camlline_for_symbol_ofstring_
 (** {6 Making} *)
 
 let make nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "let_es_space_sarg_equal_et_symbol_tdot_es_space_sarg" -> let_es_space_sarg_equal_et_symbol_tdot_es_space_sarg
   | "pipe_et_symbol_tdot_es_space_sarg_arrow" -> pipe_et_symbol_tdot_es_space_sarg_arrow

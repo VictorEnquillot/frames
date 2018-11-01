@@ -71,7 +71,7 @@ let string_of sym_cuf soi_cal =
 
       let sym_cof = Contentfile_symbol_v.type_alone in
       let str = "\"%s\"" in
-      Format.sprintf "  Format.sprintf \"%s.%s@.    (String.capitalize (name %s) )" 
+      Format.sprintf "  Format.sprintf \"%s.%s@.    (String.capitalize_ascii (name %s) )" 
 	str
 	(module_name_capitalized_suffixed sym_cat sym_ent sym_cof)
 	(abbreviation_categorized_argument sym_cat sym_ent)

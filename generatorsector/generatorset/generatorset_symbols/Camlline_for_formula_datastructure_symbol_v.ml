@@ -44,7 +44,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_ffd =
-  Format.sprintf "Camlline_for_formula_datastructure_symbol_t.%s" (String.capitalize (name sym_ffd))
+  Format.sprintf "Camlline_for_formula_datastructure_symbol_t.%s" (String.capitalize_ascii (name sym_ffd))
 ;;
 
 
@@ -187,7 +187,7 @@ let das_vdot_name_nam_a_nam_b_nam_c_for_at = camlline_for_formula_datastructure_
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_bare:Camlline_for_formula_datastructure_symbol_v.ml:make_of_topson_bare"
@@ -197,7 +197,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Camlline_for_formula_datastructure_symbol_v.ml:make_of_topson_ofstring"

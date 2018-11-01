@@ -132,7 +132,7 @@ let fullnameoffile nam_dir tag_sss =
     (Item_symbol_v.name sym_ite) (Section_symbol_v.name sym_sss) 
     suf_mod ext_caf
   in 
-  nam_dir ^ (String.capitalize nam_fil)
+  nam_dir ^ (String.capitalize_ascii nam_fil)
 ;;
 
 let oc_of_fullnameoffile nof = 

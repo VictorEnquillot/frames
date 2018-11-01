@@ -1,4 +1,5 @@
 (** {3 Entity_builder_leaf_symbol_list_by_entity_proper_tritup_provider_v} *)
+(** "Author : François Colonna 30 octobre 2018 at 09:29:31+01:00"; *)
 
 (** {6 Documenting} *)
 
@@ -74,20 +75,20 @@ let build tri_enp =
   | Domain_symbol_t.Generator -> 
 
       [Entity_fictive_basicnullary_symbol_v.make "string" ""]
-	
-  | Domain_symbol_t.Chemical
-  | Domain_symbol_t.Fake
-  | Domain_symbol_t.Figure
-  | Domain_symbol_t.Common
-  | Domain_symbol_t.Database _
+
+  | Domain_symbol_t.Common 
+  | Domain_symbol_t.Database
   | Domain_symbol_t.Elementary
-  | Domain_symbol_t.Input _
+  | Domain_symbol_t.Figure
+  | Domain_symbol_t.General
+  | Domain_symbol_t.Localinput
   | Domain_symbol_t.Operator
+  | Domain_symbol_t.Primitive
   | Domain_symbol_t.Property
-  | Domain_symbol_t.Logic
-  | Domain_symbol_t.Music
-  | Domain_symbol_t.Natural ->
-      
+  | Domain_symbol_t.Prototype
+  | Domain_symbol_t.Skeleton
+  | Domain_symbol_t.Wavefunction ->
+	
       entity_builder_data_symbol_list_of_entity_proper_tritup tri_enp
 
   (* | _ -> *)

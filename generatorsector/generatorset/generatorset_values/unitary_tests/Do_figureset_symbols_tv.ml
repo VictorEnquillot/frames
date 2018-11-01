@@ -1,3 +1,5 @@
+(**   "Author : François Colonna 31 octobre 2018 at 11:58:44+01:00"; *)
+
 let nam_cod = "Do_figureset_symbols_tv.ml";;
 
 (* toplevel 
@@ -14,7 +16,7 @@ let nam_set = nam_dom ^ "set";;
 let nam_dir_set = nam_dir_fra ^ nam_set ^ "/";;
 let nam_dir_cat = nam_dir_set ^ nam_set ^ "_" ^ nam_cat ^ "s/";;
 
-let sym_dom = Domain_symbol_v.make nam_dom "";;
+let sym_dom = Domain_symbol_v.make nam_dom;;
 let idx_dom = Domain_symbol_v.list_index_of_domain_symbol sym_dom;;
 let soi_dom = Sole_index_v.make idx_dom [];;
 

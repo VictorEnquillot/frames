@@ -17,7 +17,7 @@ let name = function
 
 let longname sym_exc = 
   Format.sprintf "Entity_external_constrained_symbol_t.%s" 
-    (String.capitalize (name sym_exc))
+    (String.capitalize_ascii (name sym_exc))
 ;;
 
 let string_off sym_ent = "";;

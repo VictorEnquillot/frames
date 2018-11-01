@@ -60,7 +60,7 @@ let space_let_ac_at_equal_et_symbol_vdot_es_in = Camlline_for_symbol_bare_son_to
 (** {6 Making} *)
 
 let make nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "let_es_equal_et_symbol_tdot_es" -> let_es_equal_et_symbol_tdot_es
   | "pipe_et_symbol_tdot_es_arrow" -> pipe_et_symbol_tdot_es_arrow

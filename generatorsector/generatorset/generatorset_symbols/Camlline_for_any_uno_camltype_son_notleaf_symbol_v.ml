@@ -34,7 +34,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_csn =
-  Format.sprintf "Camlline_for_any_uno_camltype_son_notleaf_symbol_t.%s" (String.capitalize (name sym_csn))
+  Format.sprintf "Camlline_for_any_uno_camltype_son_notleaf_symbol_t.%s" (String.capitalize_ascii (name sym_csn))
 ;;
 
 
@@ -96,7 +96,7 @@ let pipe_es_any_constructor_of_es_any_tdot_es_any = Camlline_for_any_uno_camltyp
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "pipe_es_any_constructor_of_es_any_tdot_es_any" -> pipe_es_any_constructor_of_es_any_tdot_es_any
   | _ ->
@@ -107,7 +107,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Camlline_for_any_uno_camltype_son_notleaf_symbol_v.ml:make_of_topson_ofstring"

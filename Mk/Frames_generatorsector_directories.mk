@@ -1,4 +1,6 @@
 # generatorsector directories
 
-GENERATORSECTOR_DIR := $(FRAMES_DIR)/generatorsector
+include $(MAK)/Frames_generatorset_directories.mk
+
+GENERATORSET_DIR := $(GENERATORSECTOR_DIR)/generatorset
 

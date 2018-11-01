@@ -58,7 +58,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_iot =
-  Format.sprintf "Item_for_formula_only_top_symbol_t.%s" (String.capitalize (name sym_iot))
+  Format.sprintf "Item_for_formula_only_top_symbol_t.%s" (String.capitalize_ascii (name sym_iot))
 ;;
 
 
@@ -205,7 +205,7 @@ let string_offing_for_formula = Item_for_formula_only_top_symbol_t.String_offing
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "builder_tag_listing_off_tag" -> builder_tag_listing_off_tag
   | "building_and_storing_basic_sons" -> building_and_storing_basic_sons
@@ -228,7 +228,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Item_for_formula_only_top_symbol_v.ml:make_of_topson_ofstring"

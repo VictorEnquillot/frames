@@ -40,7 +40,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_gst =
-  Format.sprintf "Group_for_symbol_body_current_son_top_symbol_t.%s" (String.capitalize (name sym_gst))
+  Format.sprintf "Group_for_symbol_body_current_son_top_symbol_t.%s" (String.capitalize_ascii (name sym_gst))
 ;;
 
 
@@ -124,7 +124,7 @@ let upgrade_grandson_symbol = Group_for_symbol_body_current_son_top_symbol_t.Upg
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "if_not_is_topson_begin_leaf_end" -> if_not_is_topson_begin_leaf_end
   | "if_not_is_topson_begin_notleaf_end" -> if_not_is_topson_begin_notleaf_end
@@ -138,7 +138,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Group_for_symbol_body_current_son_top_symbol_v.ml:make_of_topson_ofstring"

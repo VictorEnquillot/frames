@@ -126,7 +126,7 @@ let make sym_ccf soi_cal =
       Camlline_constant_function_value_t.Let_count_increment_in "  let count = Integer_v.increment count in"
 
   | Camlline_constant_function_symbol_t.Let_nam_low_equal_string_lowercase_nam_in ->
-      Camlline_constant_function_value_t.Let_nam_low_equal_string_lowercase_nam_in "  let nam_low = String.lowercase nam in"
+      Camlline_constant_function_value_t.Let_nam_low_equal_string_lowercase_nam_in "  let nam_low = String.lowercase_ascii nam in"
 
   | Camlline_constant_function_symbol_t.Map ->
       Camlline_constant_function_value_t.Map "  map" 

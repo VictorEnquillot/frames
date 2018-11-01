@@ -119,9 +119,9 @@ let record_for_entity_basename_begining nam_ent_beg rcd =
 let is_not_comment_nor_empty_of_record rcd = 
   (not (String_v.is_empty_of_string rcd ))
     &&
-  (String_v.first_character_of_string 
+  (String_v.first_character_off_string 
      (String_v.trim_head_of_string rcd) 
-     <> "#")
+     <> '#')
 ;;
 
 let select_of_domain_basename_of_record nam_dom rcd =

@@ -28,7 +28,7 @@ let name = function
 
 let longname sym_kin = 
   Format.sprintf "Kind_symbol_t.%s" 
-    (String.capitalize (name sym_kin))
+    (String.capitalize_ascii (name sym_kin))
 ;;
 
 let string_off sym_cat = "";;

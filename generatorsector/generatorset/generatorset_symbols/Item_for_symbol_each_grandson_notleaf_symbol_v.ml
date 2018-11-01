@@ -38,7 +38,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_ign =
-  Format.sprintf "Item_for_symbol_each_grandson_notleaf_symbol_t.%s" (String.capitalize (name sym_ign))
+  Format.sprintf "Item_for_symbol_each_grandson_notleaf_symbol_t.%s" (String.capitalize_ascii (name sym_ign))
 ;;
 
 
@@ -115,7 +115,7 @@ let upgrading_grandson_notleaf_for_symbol = Item_for_symbol_each_grandson_notlea
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "extracting_grandson_notleaf_for_symbol" -> extracting_grandson_notleaf_for_symbol
   | "querying_grandson_notleaf_for_symbol" -> querying_grandson_notleaf_for_symbol
@@ -128,7 +128,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Item_for_symbol_each_grandson_notleaf_symbol_v.ml:make_of_topson_ofstring"

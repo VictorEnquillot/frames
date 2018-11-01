@@ -57,7 +57,7 @@ let val_print_colon = Camlline_constant_value_symbol_t.Val_print_colon;;
 (** {6 Making} *)
 
 let make nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "format_formatter_arrow" -> format_formatter_arrow
   | "val_name_colon" -> val_name_colon

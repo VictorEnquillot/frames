@@ -42,7 +42,7 @@ let string_off = function
 (** {6 Longnaming_for_symbol} *)
 
 let longname sym_ftt =
-  Format.sprintf "Camlline_for_tag_trio_symbol_t.%s" (String.capitalize (name sym_ftt))
+  Format.sprintf "Camlline_for_tag_trio_symbol_t.%s" (String.capitalize_ascii (name sym_ftt))
 ;;
 
 
@@ -133,7 +133,7 @@ let lpar_a_b_c_tag_rpar_triplet_list = Camlline_for_tag_trio_symbol_t.Lpar_a_b_c
 (** {6 Making_for_symbol_bare} *)
 
 let make_of_topson_bare nam =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | "lpar_a_b_c_tag_rpar" -> lpar_a_b_c_tag_rpar
   | "lpar_a_b_c_tag_rpar_tree_footed_capped" -> lpar_a_b_c_tag_rpar_tree_footed_capped
@@ -148,7 +148,7 @@ let make_of_topson_bare nam =
 (** {6 Making_for_symbol_ofstring} *)
 
 let make_of_topson_ofstring nam s =
-  let nam_low = String.lowercase nam in
+  let nam_low = String.lowercase_ascii nam in
   match nam_low with
   | _ ->
   failwith "Not_a_topson_ofstring:Camlline_for_tag_trio_symbol_v.ml:make_of_topson_ofstring"
@@ -166,18 +166,33 @@ let make_of_topson_notleaf nam s =
 
 let make nam s =
   try make_of_topson_bare nam
-  with Failure "Not_a_topson_bare:Camlline_for_tag_trio_symbol_v.ml:make_of_topson_bare" ->
-  try make_of_topson_ofstring nam s
-  with Failure "Not_a_topson_ofstring:Camlline_for_tag_trio_symbol_v.ml:make_of_topson_ofstring" ->
-  try make_of_topson_notleaf nam s
-  with Failure "Not_a_topson_notleaf:Camlline_for_tag_trio_symbol_v.ml:make_of_topson_notleaf" ->
-   let _ =
-      Error_messages_v.print_error nam_cod "make"
-      (Format.sprintf "strings \"%s\" and \"%s\" represent an existing Camlline_for_tag_trio subtype" nam s)
-      "it does not exists"
-      "Check file camlline_for_tag_trio_symbol_v.ml"
-    in
-    failwith "Not_a_valid_camlline_for_tag_trio_symbol:Camlline_for_tag_trio_symbol_v.ml:make"
+  with Failure s1 ->
+    match s1 with
+    | "Not_a_topson_bare:Camlline_for_tag_trio_symbol_v.ml:make_of_topson_bare" ->
+	begin
+	  try make_of_topson_ofstring nam s
+	  with Failure s2 ->
+	    match s2 with
+	    | "Not_a_topson_ofstring:Camlline_for_tag_trio_symbol_v.ml:make_of_topson_ofstring" ->
+		begin
+		  try make_of_topson_notleaf nam s
+		  with Failure s3 ->
+		    match s3 with
+		    | "Not_a_topson_notleaf:Camlline_for_tag_trio_symbol_v.ml:make_of_topson_notleaf" ->
+			begin
+			  let _ =
+			    Error_messages_v.print_error nam_cod "make"
+			      (Format.sprintf "strings \"%s\" and \"%s\" represent an existing Camlline_for_tag_trio subtype" nam s)
+			      "it does not exists"
+			      "Check file camlline_for_tag_trio_symbol_v.ml"
+			  in
+			  failwith "Not_a_valid_camlline_for_tag_trio_symbol:Camlline_for_tag_trio_symbol_v.ml:make"
+			end
+		    | _ -> failwith s3
+		end
+	    | _ -> failwith s2
+	end
+    | _ -> failwith s1
 ;;
 
 
