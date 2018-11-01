@@ -6,7 +6,7 @@ The code is divided in 6 Sectors : General Generator Entry Product Internal Exte
 
   * General   : stores basic OCaml code 
 
-  * Generator : generates OCaml code from _domain__symbols.dat files and _domain__formulas.dat files 
+  * Generator : generates OCaml code from __domain___symbols.dat files and __domain___formulas.dat files 
 
   * Entry : Userinput
 
