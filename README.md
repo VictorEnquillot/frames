@@ -2,14 +2,16 @@
 
 The code is divided in Sectors : Entry Product Internal External
 
-Sections are divided in Domains or Sets
+Sectors are divided in Domains or Sets
 
-Entry : Userinput
+* Generator : generates OCaml code from <domain>_symbols.dat files and <domain>_formulas.dat files 
 
-Product : Property Operator
+* Entry : Userinput
 
-Internal : Figure Skeleton
+* Product : Property Operator
 
-External : Figure Skeleton
+* Internal : Figure Skeleton
+
+* External : Figure Skeleton
 
 Domains are divided in : Symbols Tags Containers Values 
