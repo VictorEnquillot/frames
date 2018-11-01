@@ -1,17 +1,23 @@
 # Frames is an attempt to implement the IRP method in OCaml
 
-The code is divided in Sectors : Entry Product Internal External
+The code is divided in 6 Sectors : General Generator Entry Product Internal External
 
-Sectors are divided in Domains or Sets
+* Sectors are divided in Domains or Sets
 
-* Generator : generates OCaml code from <domain>_symbols.dat files and <domain>_formulas.dat files 
+** General   : stores basic OCaml code 
 
-* Entry : Userinput
+** Generator : generates OCaml code from <domain>_symbols.dat files and <domain>_formulas.dat files 
 
-* Product : Property Operator
+** Entry : Userinput
 
-* Internal : Figure Skeleton
+** Product : Property Operator
 
-* External : Figure Skeleton
+** Internal : Figure Skeleton
 
-Domains are divided in : Symbols Tags Containers Values 
+** External : Figure Skeleton
+
+* Domains are divided in Entities
+
+* Entities are divided in Categories
+
+* Categories : Symbols Tags Formulas Values 
